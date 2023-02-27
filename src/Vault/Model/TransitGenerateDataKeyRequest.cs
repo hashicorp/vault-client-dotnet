@@ -116,20 +116,20 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Bits == input.Bits ||
                     this.Bits.Equals(input.Bits)
-                ) && 
+                ) &&
                 (
                     this.Context == input.Context ||
                     (this.Context != null &&
                     this.Context.Equals(input.Context))
-                ) && 
+                ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
                     this.KeyVersion.Equals(input.KeyVersion)
-                ) && 
+                ) &&
                 (
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&

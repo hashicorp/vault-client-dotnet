@@ -107,17 +107,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
-                ) && 
+                ) &&
                 (
                     this.IssuerRef == input.IssuerRef ||
                     (this.IssuerRef != null &&
                     this.IssuerRef.Equals(input.IssuerRef))
-                ) && 
+                ) &&
                 (
                     this.RequireMatchingCertificateAlgorithms == input.RequireMatchingCertificateAlgorithms ||
                     this.RequireMatchingCertificateAlgorithms.Equals(input.RequireMatchingCertificateAlgorithms)

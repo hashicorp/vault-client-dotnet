@@ -97,12 +97,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Ciphertext == input.Ciphertext ||
                     (this.Ciphertext != null &&
                     this.Ciphertext.Equals(input.Ciphertext))
-                ) && 
+                ) &&
                 (
                     this.HashFunction == input.HashFunction ||
                     (this.HashFunction != null &&

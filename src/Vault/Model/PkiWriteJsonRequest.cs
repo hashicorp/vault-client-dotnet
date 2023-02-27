@@ -22,13 +22,13 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiWriteJsonRequest
+    /// PKIWriteJSONRequest
     /// </summary>
-    [DataContract(Name = "PkiWriteJsonRequest")]
-    public partial class PkiWriteJsonRequest : IEquatable<PkiWriteJsonRequest>, IValidatableObject
+    [DataContract(Name = "PKIWriteJSONRequest")]
+    public partial class PKIWriteJSONRequest : IEquatable<PKIWriteJSONRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiWriteJsonRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIWriteJSONRequest" /> class.
         /// </summary>
         /// <param name="crlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
         /// <param name="enableAiaUrlTemplating">Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URL validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters. (default to false).</param>
@@ -40,7 +40,7 @@ namespace Vault.Model
         /// <param name="ocspServers">Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1..</param>
         /// <param name="revocationSignatureAlgorithm">Which x509.SignatureAlgorithm name to use for signing CRLs. This parameter allows differentiation between PKCS#1v1.5 and PSS keys and choice of signature hash algorithm. The default (empty string) value is for Go to select the signature algorithm. This can fail if the underlying key does not support the requested signature algorithm, which may not be known at modification time (such as with PKCS#11 managed RSA keys). (default to &quot;&quot;).</param>
         /// <param name="usage">Comma-separated list (or string slice) of usages for this issuer; valid values are \&quot;read-only\&quot;, \&quot;issuing-certificates\&quot;, \&quot;crl-signing\&quot;, and \&quot;ocsp-signing\&quot;. Multiple values may be specified. Read-only is implicit and always set..</param>
-        public PkiWriteJsonRequest(List<string> crlDistributionPoints = default(List<string>), bool enableAiaUrlTemplating = false, string issuerName = default(string), string issuerRef = "default", List<string> issuingCertificates = default(List<string>), string leafNotAfterBehavior = "err", List<string> manualChain = default(List<string>), List<string> ocspServers = default(List<string>), string revocationSignatureAlgorithm = "", List<string> usage = default(List<string>))
+        public PKIWriteJSONRequest(List<string> crlDistributionPoints = default(List<string>), bool enableAiaUrlTemplating = false, string issuerName = default(string), string issuerRef = "default", List<string> issuingCertificates = default(List<string>), string leafNotAfterBehavior = "err", List<string> manualChain = default(List<string>), List<string> ocspServers = default(List<string>), string revocationSignatureAlgorithm = "", List<string> usage = default(List<string>))
         {
             this.CrlDistributionPoints = crlDistributionPoints;
             this.EnableAiaUrlTemplating = enableAiaUrlTemplating;
@@ -134,7 +134,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiWriteJsonRequest {\n");
+            sb.Append("class PKIWriteJSONRequest {\n");
             sb.Append("  CrlDistributionPoints: ").Append(CrlDistributionPoints).Append("\n");
             sb.Append("  EnableAiaUrlTemplating: ").Append(EnableAiaUrlTemplating).Append("\n");
             sb.Append("  IssuerName: ").Append(IssuerName).Append("\n");
@@ -165,69 +165,69 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiWriteJsonRequest);
+            return this.Equals(input as PKIWriteJSONRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiWriteJsonRequest instances are equal
+        /// Returns true if PKIWriteJSONRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiWriteJsonRequest to be compared</param>
+        /// <param name="input">Instance of PKIWriteJSONRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiWriteJsonRequest input)
+        public bool Equals(PKIWriteJSONRequest input)
         {
             if (input == null)
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CrlDistributionPoints == input.CrlDistributionPoints ||
                     this.CrlDistributionPoints != null &&
                     input.CrlDistributionPoints != null &&
                     this.CrlDistributionPoints.SequenceEqual(input.CrlDistributionPoints)
-                ) && 
+                ) &&
                 (
                     this.EnableAiaUrlTemplating == input.EnableAiaUrlTemplating ||
                     this.EnableAiaUrlTemplating.Equals(input.EnableAiaUrlTemplating)
-                ) && 
+                ) &&
                 (
                     this.IssuerName == input.IssuerName ||
                     (this.IssuerName != null &&
                     this.IssuerName.Equals(input.IssuerName))
-                ) && 
+                ) &&
                 (
                     this.IssuerRef == input.IssuerRef ||
                     (this.IssuerRef != null &&
                     this.IssuerRef.Equals(input.IssuerRef))
-                ) && 
+                ) &&
                 (
                     this.IssuingCertificates == input.IssuingCertificates ||
                     this.IssuingCertificates != null &&
                     input.IssuingCertificates != null &&
                     this.IssuingCertificates.SequenceEqual(input.IssuingCertificates)
-                ) && 
+                ) &&
                 (
                     this.LeafNotAfterBehavior == input.LeafNotAfterBehavior ||
                     (this.LeafNotAfterBehavior != null &&
                     this.LeafNotAfterBehavior.Equals(input.LeafNotAfterBehavior))
-                ) && 
+                ) &&
                 (
                     this.ManualChain == input.ManualChain ||
                     this.ManualChain != null &&
                     input.ManualChain != null &&
                     this.ManualChain.SequenceEqual(input.ManualChain)
-                ) && 
+                ) &&
                 (
                     this.OcspServers == input.OcspServers ||
                     this.OcspServers != null &&
                     input.OcspServers != null &&
                     this.OcspServers.SequenceEqual(input.OcspServers)
-                ) && 
+                ) &&
                 (
                     this.RevocationSignatureAlgorithm == input.RevocationSignatureAlgorithm ||
                     (this.RevocationSignatureAlgorithm != null &&
                     this.RevocationSignatureAlgorithm.Equals(input.RevocationSignatureAlgorithm))
-                ) && 
+                ) &&
                 (
                     this.Usage == input.Usage ||
                     this.Usage != null &&

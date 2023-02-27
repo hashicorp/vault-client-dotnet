@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ServiceAccountNames == input.ServiceAccountNames ||
                     this.ServiceAccountNames != null &&

@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)

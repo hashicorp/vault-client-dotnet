@@ -41,7 +41,8 @@ namespace Vault.Model
         public KubernetesWriteCredentialsRequest(bool clusterRoleBinding = default(bool), string kubernetesNamespace = default(string), int ttl = default(int))
         {
             // to ensure "kubernetesNamespace" is required (not null)
-            if (kubernetesNamespace == null) {
+            if (kubernetesNamespace == null)
+            {
                 throw new ArgumentNullException("kubernetesNamespace is a required property for KubernetesWriteCredentialsRequest and cannot be null");
             }
             this.KubernetesNamespace = kubernetesNamespace;
@@ -115,16 +116,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClusterRoleBinding == input.ClusterRoleBinding ||
                     this.ClusterRoleBinding.Equals(input.ClusterRoleBinding)
-                ) && 
+                ) &&
                 (
                     this.KubernetesNamespace == input.KubernetesNamespace ||
                     (this.KubernetesNamespace != null &&
                     this.KubernetesNamespace.Equals(input.KubernetesNamespace))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

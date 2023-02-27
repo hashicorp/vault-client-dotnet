@@ -106,17 +106,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Data == input.Data ||
                     (this.Data != null &&
                     this.Data.Equals(input.Data))
-                ) && 
+                ) &&
                 (
                     this.Options == input.Options ||
                     (this.Options != null &&
                     this.Options.Equals(input.Options))
-                ) && 
+                ) &&
                 (
                     this._Version == input._Version ||
                     this._Version.Equals(input._Version)

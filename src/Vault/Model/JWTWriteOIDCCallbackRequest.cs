@@ -112,22 +112,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientNonce == input.ClientNonce ||
                     (this.ClientNonce != null &&
                     this.ClientNonce.Equals(input.ClientNonce))
-                ) && 
+                ) &&
                 (
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
-                ) && 
+                ) &&
                 (
                     this.IdToken == input.IdToken ||
                     (this.IdToken != null &&
                     this.IdToken.Equals(input.IdToken))
-                ) && 
+                ) &&
                 (
                     this.State == input.State ||
                     (this.State != null &&

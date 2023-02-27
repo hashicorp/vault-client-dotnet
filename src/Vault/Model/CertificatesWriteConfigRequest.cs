@@ -106,15 +106,15 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DisableBinding == input.DisableBinding ||
                     this.DisableBinding.Equals(input.DisableBinding)
-                ) && 
+                ) &&
                 (
                     this.EnableIdentityAliasMetadata == input.EnableIdentityAliasMetadata ||
                     this.EnableIdentityAliasMetadata.Equals(input.EnableIdentityAliasMetadata)
-                ) && 
+                ) &&
                 (
                     this.OcspCacheSize == input.OcspCacheSize ||
                     this.OcspCacheSize.Equals(input.OcspCacheSize)

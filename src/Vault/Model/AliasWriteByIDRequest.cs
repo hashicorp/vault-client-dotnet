@@ -116,22 +116,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CanonicalId == input.CanonicalId ||
                     (this.CanonicalId != null &&
                     this.CanonicalId.Equals(input.CanonicalId))
-                ) && 
+                ) &&
                 (
                     this.EntityId == input.EntityId ||
                     (this.EntityId != null &&
                     this.EntityId.Equals(input.EntityId))
-                ) && 
+                ) &&
                 (
                     this.MountAccessor == input.MountAccessor ||
                     (this.MountAccessor != null &&
                     this.MountAccessor.Equals(input.MountAccessor))
-                ) && 
+                ) &&
                 (
                     this.Name == input.Name ||
                     (this.Name != null &&

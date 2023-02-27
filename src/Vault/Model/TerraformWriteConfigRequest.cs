@@ -41,7 +41,8 @@ namespace Vault.Model
         public TerraformWriteConfigRequest(string address = "https://app.terraform.io", string basePath = "/api/v2/", string token = default(string))
         {
             // to ensure "token" is required (not null)
-            if (token == null) {
+            if (token == null)
+            {
                 throw new ArgumentNullException("token is a required property for TerraformWriteConfigRequest and cannot be null");
             }
             this.Token = token;
@@ -117,17 +118,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Address == input.Address ||
                     (this.Address != null &&
                     this.Address.Equals(input.Address))
-                ) && 
+                ) &&
                 (
                     this.BasePath == input.BasePath ||
                     (this.BasePath != null &&
                     this.BasePath.Equals(input.BasePath))
-                ) && 
+                ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&

@@ -107,16 +107,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DefaultReportMonths == input.DefaultReportMonths ||
                     this.DefaultReportMonths.Equals(input.DefaultReportMonths)
-                ) && 
+                ) &&
                 (
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
-                ) && 
+                ) &&
                 (
                     this.RetentionMonths == input.RetentionMonths ||
                     this.RetentionMonths.Equals(input.RetentionMonths)

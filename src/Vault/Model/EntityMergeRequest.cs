@@ -116,23 +116,23 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ConflictingAliasIdsToKeep == input.ConflictingAliasIdsToKeep ||
                     this.ConflictingAliasIdsToKeep != null &&
                     input.ConflictingAliasIdsToKeep != null &&
                     this.ConflictingAliasIdsToKeep.SequenceEqual(input.ConflictingAliasIdsToKeep)
-                ) && 
+                ) &&
                 (
                     this.Force == input.Force ||
                     this.Force.Equals(input.Force)
-                ) && 
+                ) &&
                 (
                     this.FromEntityIds == input.FromEntityIds ||
                     this.FromEntityIds != null &&
                     input.FromEntityIds != null &&
                     this.FromEntityIds.SequenceEqual(input.FromEntityIds)
-                ) && 
+                ) &&
                 (
                     this.ToEntityId == input.ToEntityId ||
                     (this.ToEntityId != null &&

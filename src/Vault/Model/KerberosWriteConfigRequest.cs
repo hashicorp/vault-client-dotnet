@@ -116,20 +116,20 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AddGroupAliases == input.AddGroupAliases ||
                     this.AddGroupAliases.Equals(input.AddGroupAliases)
-                ) && 
+                ) &&
                 (
                     this.Keytab == input.Keytab ||
                     (this.Keytab != null &&
                     this.Keytab.Equals(input.Keytab))
-                ) && 
+                ) &&
                 (
                     this.RemoveInstanceName == input.RemoveInstanceName ||
                     this.RemoveInstanceName.Equals(input.RemoveInstanceName)
-                ) && 
+                ) &&
                 (
                     this.ServiceAccount == input.ServiceAccount ||
                     (this.ServiceAccount != null &&

@@ -216,69 +216,69 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DisplayName == input.DisplayName ||
                     (this.DisplayName != null &&
                     this.DisplayName.Equals(input.DisplayName))
-                ) && 
+                ) &&
                 (
                     this.EntityAlias == input.EntityAlias ||
                     (this.EntityAlias != null &&
                     this.EntityAlias.Equals(input.EntityAlias))
-                ) && 
+                ) &&
                 (
                     this.ExplicitMaxTtl == input.ExplicitMaxTtl ||
                     (this.ExplicitMaxTtl != null &&
                     this.ExplicitMaxTtl.Equals(input.ExplicitMaxTtl))
-                ) && 
+                ) &&
                 (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
+                ) &&
                 (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
-                ) && 
+                ) &&
                 (
                     this.NoDefaultPolicy == input.NoDefaultPolicy ||
                     this.NoDefaultPolicy.Equals(input.NoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.NoParent == input.NoParent ||
                     this.NoParent.Equals(input.NoParent)
-                ) && 
+                ) &&
                 (
                     this.NumUses == input.NumUses ||
                     this.NumUses.Equals(input.NumUses)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     (this.Period != null &&
                     this.Period.Equals(input.Period))
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.Renewable == input.Renewable ||
                     this.Renewable.Equals(input.Renewable)
-                ) && 
+                ) &&
                 (
                     this.RoleName == input.RoleName ||
                     (this.RoleName != null &&
                     this.RoleName.Equals(input.RoleName))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     (this.Ttl != null &&
                     this.Ttl.Equals(input.Ttl))
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

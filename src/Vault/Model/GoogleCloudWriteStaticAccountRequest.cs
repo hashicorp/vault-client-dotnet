@@ -117,22 +117,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Bindings == input.Bindings ||
                     (this.Bindings != null &&
                     this.Bindings.Equals(input.Bindings))
-                ) && 
+                ) &&
                 (
                     this.SecretType == input.SecretType ||
                     (this.SecretType != null &&
                     this.SecretType.Equals(input.SecretType))
-                ) && 
+                ) &&
                 (
                     this.ServiceAccountEmail == input.ServiceAccountEmail ||
                     (this.ServiceAccountEmail != null &&
                     this.ServiceAccountEmail.Equals(input.ServiceAccountEmail))
-                ) && 
+                ) &&
                 (
                     this.TokenScopes == input.TokenScopes ||
                     this.TokenScopes != null &&

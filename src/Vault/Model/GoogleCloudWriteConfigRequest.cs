@@ -106,16 +106,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Credentials == input.Credentials ||
                     (this.Credentials != null &&
                     this.Credentials.Equals(input.Credentials))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

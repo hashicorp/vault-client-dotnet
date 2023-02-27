@@ -96,13 +96,13 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.EntityIds == input.EntityIds ||
                     this.EntityIds != null &&
                     input.EntityIds != null &&
                     this.EntityIds.SequenceEqual(input.EntityIds)
-                ) && 
+                ) &&
                 (
                     this.GroupIds == input.GroupIds ||
                     this.GroupIds != null &&

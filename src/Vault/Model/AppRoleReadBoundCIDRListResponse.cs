@@ -87,7 +87,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.BoundCidrList == input.BoundCidrList ||
                     this.BoundCidrList != null &&

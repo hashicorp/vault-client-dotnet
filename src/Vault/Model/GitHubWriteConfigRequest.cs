@@ -52,7 +52,8 @@ namespace Vault.Model
         public GitHubWriteConfigRequest(string baseUrl = default(string), int maxTtl = default(int), string organization = default(string), long organizationId = default(long), List<string> tokenBoundCidrs = default(List<string>), int tokenExplicitMaxTtl = default(int), int tokenMaxTtl = default(int), bool tokenNoDefaultPolicy = default(bool), int tokenNumUses = default(int), int tokenPeriod = default(int), List<string> tokenPolicies = default(List<string>), int tokenTtl = default(int), string tokenType = "default-service", int ttl = default(int))
         {
             // to ensure "organization" is required (not null)
-            if (organization == null) {
+            if (organization == null)
+            {
                 throw new ArgumentNullException("organization is a required property for GitHubWriteConfigRequest and cannot be null");
             }
             this.Organization = organization;
@@ -228,66 +229,66 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.BaseUrl == input.BaseUrl ||
                     (this.BaseUrl != null &&
                     this.BaseUrl.Equals(input.BaseUrl))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Organization == input.Organization ||
                     (this.Organization != null &&
                     this.Organization.Equals(input.Organization))
-                ) && 
+                ) &&
                 (
                     this.OrganizationId == input.OrganizationId ||
                     this.OrganizationId.Equals(input.OrganizationId)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

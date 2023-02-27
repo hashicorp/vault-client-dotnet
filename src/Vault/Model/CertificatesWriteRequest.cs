@@ -383,153 +383,153 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedCommonNames == input.AllowedCommonNames ||
                     this.AllowedCommonNames != null &&
                     input.AllowedCommonNames != null &&
                     this.AllowedCommonNames.SequenceEqual(input.AllowedCommonNames)
-                ) && 
+                ) &&
                 (
                     this.AllowedDnsSans == input.AllowedDnsSans ||
                     this.AllowedDnsSans != null &&
                     input.AllowedDnsSans != null &&
                     this.AllowedDnsSans.SequenceEqual(input.AllowedDnsSans)
-                ) && 
+                ) &&
                 (
                     this.AllowedEmailSans == input.AllowedEmailSans ||
                     this.AllowedEmailSans != null &&
                     input.AllowedEmailSans != null &&
                     this.AllowedEmailSans.SequenceEqual(input.AllowedEmailSans)
-                ) && 
+                ) &&
                 (
                     this.AllowedMetadataExtensions == input.AllowedMetadataExtensions ||
                     this.AllowedMetadataExtensions != null &&
                     input.AllowedMetadataExtensions != null &&
                     this.AllowedMetadataExtensions.SequenceEqual(input.AllowedMetadataExtensions)
-                ) && 
+                ) &&
                 (
                     this.AllowedNames == input.AllowedNames ||
                     this.AllowedNames != null &&
                     input.AllowedNames != null &&
                     this.AllowedNames.SequenceEqual(input.AllowedNames)
-                ) && 
+                ) &&
                 (
                     this.AllowedOrganizationalUnits == input.AllowedOrganizationalUnits ||
                     this.AllowedOrganizationalUnits != null &&
                     input.AllowedOrganizationalUnits != null &&
                     this.AllowedOrganizationalUnits.SequenceEqual(input.AllowedOrganizationalUnits)
-                ) && 
+                ) &&
                 (
                     this.AllowedUriSans == input.AllowedUriSans ||
                     this.AllowedUriSans != null &&
                     input.AllowedUriSans != null &&
                     this.AllowedUriSans.SequenceEqual(input.AllowedUriSans)
-                ) && 
+                ) &&
                 (
                     this.BoundCidrs == input.BoundCidrs ||
                     this.BoundCidrs != null &&
                     input.BoundCidrs != null &&
                     this.BoundCidrs.SequenceEqual(input.BoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
-                ) && 
+                ) &&
                 (
                     this.DisplayName == input.DisplayName ||
                     (this.DisplayName != null &&
                     this.DisplayName.Equals(input.DisplayName))
-                ) && 
+                ) &&
                 (
                     this.Lease == input.Lease ||
                     this.Lease.Equals(input.Lease)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.OcspCaCertificates == input.OcspCaCertificates ||
                     (this.OcspCaCertificates != null &&
                     this.OcspCaCertificates.Equals(input.OcspCaCertificates))
-                ) && 
+                ) &&
                 (
                     this.OcspEnabled == input.OcspEnabled ||
                     this.OcspEnabled.Equals(input.OcspEnabled)
-                ) && 
+                ) &&
                 (
                     this.OcspFailOpen == input.OcspFailOpen ||
                     this.OcspFailOpen.Equals(input.OcspFailOpen)
-                ) && 
+                ) &&
                 (
                     this.OcspQueryAllServers == input.OcspQueryAllServers ||
                     this.OcspQueryAllServers.Equals(input.OcspQueryAllServers)
-                ) && 
+                ) &&
                 (
                     this.OcspServersOverride == input.OcspServersOverride ||
                     this.OcspServersOverride != null &&
                     input.OcspServersOverride != null &&
                     this.OcspServersOverride.SequenceEqual(input.OcspServersOverride)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.RequiredExtensions == input.RequiredExtensions ||
                     this.RequiredExtensions != null &&
                     input.RequiredExtensions != null &&
                     this.RequiredExtensions.SequenceEqual(input.RequiredExtensions)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
-                ) && 
+                ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&

@@ -136,32 +136,32 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ConnectionUri == input.ConnectionUri ||
                     (this.ConnectionUri != null &&
                     this.ConnectionUri.Equals(input.ConnectionUri))
-                ) && 
+                ) &&
                 (
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
-                ) && 
+                ) &&
                 (
                     this.PasswordPolicy == input.PasswordPolicy ||
                     (this.PasswordPolicy != null &&
                     this.PasswordPolicy.Equals(input.PasswordPolicy))
-                ) && 
+                ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&
                     this.Username.Equals(input.Username))
-                ) && 
+                ) &&
                 (
                     this.UsernameTemplate == input.UsernameTemplate ||
                     (this.UsernameTemplate != null &&
                     this.UsernameTemplate.Equals(input.UsernameTemplate))
-                ) && 
+                ) &&
                 (
                     this.VerifyConnection == input.VerifyConnection ||
                     this.VerifyConnection.Equals(input.VerifyConnection)

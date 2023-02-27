@@ -146,35 +146,35 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ApiToken == input.ApiToken ||
                     (this.ApiToken != null &&
                     this.ApiToken.Equals(input.ApiToken))
-                ) && 
+                ) &&
                 (
                     this.BaseUrl == input.BaseUrl ||
                     (this.BaseUrl != null &&
                     this.BaseUrl.Equals(input.BaseUrl))
-                ) && 
+                ) &&
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&
                     this.MethodId.Equals(input.MethodId))
-                ) && 
+                ) &&
                 (
                     this.OrgName == input.OrgName ||
                     (this.OrgName != null &&
                     this.OrgName.Equals(input.OrgName))
-                ) && 
+                ) &&
                 (
                     this.PrimaryEmail == input.PrimaryEmail ||
                     this.PrimaryEmail.Equals(input.PrimaryEmail)
-                ) && 
+                ) &&
                 (
                     this.Production == input.Production ||
                     this.Production.Equals(input.Production)
-                ) && 
+                ) &&
                 (
                     this.UsernameFormat == input.UsernameFormat ||
                     (this.UsernameFormat != null &&

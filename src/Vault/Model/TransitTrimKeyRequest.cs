@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MinAvailableVersion == input.MinAvailableVersion ||
                     this.MinAvailableVersion.Equals(input.MinAvailableVersion)

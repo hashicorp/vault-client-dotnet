@@ -136,27 +136,27 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowPlaintextBackup == input.AllowPlaintextBackup ||
                     this.AllowPlaintextBackup.Equals(input.AllowPlaintextBackup)
-                ) && 
+                ) &&
                 (
                     this.AutoRotatePeriod == input.AutoRotatePeriod ||
                     this.AutoRotatePeriod.Equals(input.AutoRotatePeriod)
-                ) && 
+                ) &&
                 (
                     this.DeletionAllowed == input.DeletionAllowed ||
                     this.DeletionAllowed.Equals(input.DeletionAllowed)
-                ) && 
+                ) &&
                 (
                     this.Exportable == input.Exportable ||
                     this.Exportable.Equals(input.Exportable)
-                ) && 
+                ) &&
                 (
                     this.MinDecryptionVersion == input.MinDecryptionVersion ||
                     this.MinDecryptionVersion.Equals(input.MinDecryptionVersion)
-                ) && 
+                ) &&
                 (
                     this.MinEncryptionVersion == input.MinEncryptionVersion ||
                     this.MinEncryptionVersion.Equals(input.MinEncryptionVersion)

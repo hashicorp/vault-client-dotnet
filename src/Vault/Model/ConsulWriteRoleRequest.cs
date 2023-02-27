@@ -211,69 +211,69 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ConsulNamespace == input.ConsulNamespace ||
                     (this.ConsulNamespace != null &&
                     this.ConsulNamespace.Equals(input.ConsulNamespace))
-                ) && 
+                ) &&
                 (
                     this.ConsulPolicies == input.ConsulPolicies ||
                     this.ConsulPolicies != null &&
                     input.ConsulPolicies != null &&
                     this.ConsulPolicies.SequenceEqual(input.ConsulPolicies)
-                ) && 
+                ) &&
                 (
                     this.ConsulRoles == input.ConsulRoles ||
                     this.ConsulRoles != null &&
                     input.ConsulRoles != null &&
                     this.ConsulRoles.SequenceEqual(input.ConsulRoles)
-                ) && 
+                ) &&
                 (
                     this.Lease == input.Lease ||
                     this.Lease.Equals(input.Lease)
-                ) && 
+                ) &&
                 (
                     this.Local == input.Local ||
                     this.Local.Equals(input.Local)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.NodeIdentities == input.NodeIdentities ||
                     this.NodeIdentities != null &&
                     input.NodeIdentities != null &&
                     this.NodeIdentities.SequenceEqual(input.NodeIdentities)
-                ) && 
+                ) &&
                 (
                     this.Partition == input.Partition ||
                     (this.Partition != null &&
                     this.Partition.Equals(input.Partition))
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.Policy == input.Policy ||
                     (this.Policy != null &&
                     this.Policy.Equals(input.Policy))
-                ) && 
+                ) &&
                 (
                     this.ServiceIdentities == input.ServiceIdentities ||
                     this.ServiceIdentities != null &&
                     input.ServiceIdentities != null &&
                     this.ServiceIdentities.SequenceEqual(input.ServiceIdentities)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

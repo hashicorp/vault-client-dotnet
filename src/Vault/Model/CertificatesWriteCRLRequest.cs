@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Crl == input.Crl ||
                     (this.Crl != null &&
                     this.Crl.Equals(input.Crl))
-                ) && 
+                ) &&
                 (
                     this.Url == input.Url ||
                     (this.Url != null &&

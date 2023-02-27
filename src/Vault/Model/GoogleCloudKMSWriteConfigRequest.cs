@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Credentials == input.Credentials ||
                     (this.Credentials != null &&
                     this.Credentials.Equals(input.Credentials))
-                ) && 
+                ) &&
                 (
                     this.Scopes == input.Scopes ||
                     this.Scopes != null &&

@@ -96,11 +96,11 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MaxVersion == input.MaxVersion ||
                     this.MaxVersion.Equals(input.MaxVersion)
-                ) && 
+                ) &&
                 (
                     this.MinVersion == input.MinVersion ||
                     this.MinVersion.Equals(input.MinVersion)

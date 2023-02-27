@@ -116,20 +116,20 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CasRequired == input.CasRequired ||
                     this.CasRequired.Equals(input.CasRequired)
-                ) && 
+                ) &&
                 (
                     this.CustomMetadata == input.CustomMetadata ||
                     (this.CustomMetadata != null &&
                     this.CustomMetadata.Equals(input.CustomMetadata))
-                ) && 
+                ) &&
                 (
                     this.DeleteVersionAfter == input.DeleteVersionAfter ||
                     this.DeleteVersionAfter.Equals(input.DeleteVersionAfter)
-                ) && 
+                ) &&
                 (
                     this.MaxVersions == input.MaxVersions ||
                     this.MaxVersions.Equals(input.MaxVersions)

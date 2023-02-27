@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Policy == input.Policy ||
                     (this.Policy != null &&

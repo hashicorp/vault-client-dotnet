@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Ip == input.Ip ||
                     (this.Ip != null &&

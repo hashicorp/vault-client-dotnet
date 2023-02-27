@@ -230,78 +230,78 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CfApiAddr == input.CfApiAddr ||
                     (this.CfApiAddr != null &&
                     this.CfApiAddr.Equals(input.CfApiAddr))
-                ) && 
+                ) &&
                 (
                     this.CfApiMutualTlsCertificate == input.CfApiMutualTlsCertificate ||
                     (this.CfApiMutualTlsCertificate != null &&
                     this.CfApiMutualTlsCertificate.Equals(input.CfApiMutualTlsCertificate))
-                ) && 
+                ) &&
                 (
                     this.CfApiMutualTlsKey == input.CfApiMutualTlsKey ||
                     (this.CfApiMutualTlsKey != null &&
                     this.CfApiMutualTlsKey.Equals(input.CfApiMutualTlsKey))
-                ) && 
+                ) &&
                 (
                     this.CfApiTrustedCertificates == input.CfApiTrustedCertificates ||
                     this.CfApiTrustedCertificates != null &&
                     input.CfApiTrustedCertificates != null &&
                     this.CfApiTrustedCertificates.SequenceEqual(input.CfApiTrustedCertificates)
-                ) && 
+                ) &&
                 (
                     this.CfClientId == input.CfClientId ||
                     (this.CfClientId != null &&
                     this.CfClientId.Equals(input.CfClientId))
-                ) && 
+                ) &&
                 (
                     this.CfClientSecret == input.CfClientSecret ||
                     (this.CfClientSecret != null &&
                     this.CfClientSecret.Equals(input.CfClientSecret))
-                ) && 
+                ) &&
                 (
                     this.CfPassword == input.CfPassword ||
                     (this.CfPassword != null &&
                     this.CfPassword.Equals(input.CfPassword))
-                ) && 
+                ) &&
                 (
                     this.CfUsername == input.CfUsername ||
                     (this.CfUsername != null &&
                     this.CfUsername.Equals(input.CfUsername))
-                ) && 
+                ) &&
                 (
                     this.IdentityCaCertificates == input.IdentityCaCertificates ||
                     this.IdentityCaCertificates != null &&
                     input.IdentityCaCertificates != null &&
                     this.IdentityCaCertificates.SequenceEqual(input.IdentityCaCertificates)
-                ) && 
+                ) &&
                 (
                     this.LoginMaxSecondsNotAfter == input.LoginMaxSecondsNotAfter ||
                     this.LoginMaxSecondsNotAfter.Equals(input.LoginMaxSecondsNotAfter)
-                ) && 
+                ) &&
                 (
                     this.LoginMaxSecondsNotBefore == input.LoginMaxSecondsNotBefore ||
                     this.LoginMaxSecondsNotBefore.Equals(input.LoginMaxSecondsNotBefore)
-                ) && 
+                ) &&
                 (
                     this.PcfApiAddr == input.PcfApiAddr ||
                     (this.PcfApiAddr != null &&
                     this.PcfApiAddr.Equals(input.PcfApiAddr))
-                ) && 
+                ) &&
                 (
                     this.PcfApiTrustedCertificates == input.PcfApiTrustedCertificates ||
                     this.PcfApiTrustedCertificates != null &&
                     input.PcfApiTrustedCertificates != null &&
                     this.PcfApiTrustedCertificates.SequenceEqual(input.PcfApiTrustedCertificates)
-                ) && 
+                ) &&
                 (
                     this.PcfPassword == input.PcfPassword ||
                     (this.PcfPassword != null &&
                     this.PcfPassword.Equals(input.PcfPassword))
-                ) && 
+                ) &&
                 (
                     this.PcfUsername == input.PcfUsername ||
                     (this.PcfUsername != null &&

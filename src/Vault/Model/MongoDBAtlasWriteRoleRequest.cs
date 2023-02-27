@@ -46,7 +46,8 @@ namespace Vault.Model
         public MongoDBAtlasWriteRoleRequest(List<string> cidrBlocks = default(List<string>), List<string> ipAddresses = default(List<string>), int maxTtl = default(int), string organizationId = default(string), string projectId = default(string), List<string> projectRoles = default(List<string>), List<string> roles = default(List<string>), int ttl = default(int))
         {
             // to ensure "roles" is required (not null)
-            if (roles == null) {
+            if (roles == null)
+            {
                 throw new ArgumentNullException("roles is a required property for MongoDBAtlasWriteRoleRequest and cannot be null");
             }
             this.Roles = roles;
@@ -165,45 +166,45 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CidrBlocks == input.CidrBlocks ||
                     this.CidrBlocks != null &&
                     input.CidrBlocks != null &&
                     this.CidrBlocks.SequenceEqual(input.CidrBlocks)
-                ) && 
+                ) &&
                 (
                     this.IpAddresses == input.IpAddresses ||
                     this.IpAddresses != null &&
                     input.IpAddresses != null &&
                     this.IpAddresses.SequenceEqual(input.IpAddresses)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.OrganizationId == input.OrganizationId ||
                     (this.OrganizationId != null &&
                     this.OrganizationId.Equals(input.OrganizationId))
-                ) && 
+                ) &&
                 (
                     this.ProjectId == input.ProjectId ||
                     (this.ProjectId != null &&
                     this.ProjectId.Equals(input.ProjectId))
-                ) && 
+                ) &&
                 (
                     this.ProjectRoles == input.ProjectRoles ||
                     this.ProjectRoles != null &&
                     input.ProjectRoles != null &&
                     this.ProjectRoles.SequenceEqual(input.ProjectRoles)
-                ) && 
+                ) &&
                 (
                     this.Roles == input.Roles ||
                     this.Roles != null &&
                     input.Roles != null &&
                     this.Roles.SequenceEqual(input.Roles)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

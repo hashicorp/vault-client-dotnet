@@ -106,17 +106,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&
                     this.MethodId.Equals(input.MethodId))
-                ) && 
+                ) &&
                 (
                     this.SettingsFileBase64 == input.SettingsFileBase64 ||
                     (this.SettingsFileBase64 != null &&
                     this.SettingsFileBase64.Equals(input.SettingsFileBase64))
-                ) && 
+                ) &&
                 (
                     this.UsernameFormat == input.UsernameFormat ||
                     (this.UsernameFormat != null &&

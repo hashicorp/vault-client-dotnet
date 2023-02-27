@@ -4733,7 +4733,7 @@ namespace Vault.Api
     public interface IAuthAsync : IApiAccessor
     {
         #region Asynchronous Operations
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4753,7 +4753,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteCertificateAsync(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4772,7 +4772,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteClientAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4791,7 +4791,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4810,7 +4810,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteIdentityWhiteListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4829,7 +4829,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteRoleTagBlackListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4848,7 +4848,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteRoleTagDenyListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4868,7 +4868,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigDeleteSecurityTokenServiceAccountAsync(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4887,7 +4887,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigListCertificatesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4906,7 +4906,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigListSecurityTokenServiceAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4926,7 +4926,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadCertificateAsync(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4945,7 +4945,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadClientAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4964,7 +4964,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadIdentityAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -4983,7 +4983,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5002,7 +5002,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadIdentityWhiteListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5021,7 +5021,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadRoleTagBlackListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5040,7 +5040,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadRoleTagDenyListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5060,7 +5060,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadSecurityTokenServiceAccountAsync(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5079,7 +5079,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigRotateRootAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5100,7 +5100,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteCertificateAsync(string certName, AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5120,7 +5120,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteClientAsync(AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5140,7 +5140,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteIdentityAsync(AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5160,7 +5160,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteIdentityAccessListAsync(AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5180,7 +5180,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteIdentityWhiteListAsync(AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5200,7 +5200,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteRoleTagBlackListAsync(AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5220,7 +5220,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteRoleTagDenyListAsync(AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5241,7 +5241,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteSecurityTokenServiceAccountAsync(string accountId, AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5261,7 +5261,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSDeleteAuthRoleAsync(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5281,7 +5281,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSDeleteIdentityAccessListForAsync(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5301,7 +5301,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSDeleteIdentityWhiteListForAsync(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5321,7 +5321,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSDeleteRoleTagBlackListForAsync(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5341,7 +5341,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSDeleteRoleTagDenyListForAsync(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5360,7 +5360,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5379,7 +5379,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListAuthRoles2Async(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5398,7 +5398,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5417,7 +5417,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListIdentityWhiteListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5436,7 +5436,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListRoleTagBlackListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5455,7 +5455,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListRoleTagDenyListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5475,7 +5475,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSLoginAsync(AWSLoginRequest aWSLoginRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5495,7 +5495,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadAuthRoleAsync(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5515,7 +5515,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadIdentityAccessListForAsync(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5535,7 +5535,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadIdentityWhiteListForAsync(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5555,7 +5555,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadRoleTagBlackListForAsync(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5575,7 +5575,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadRoleTagDenyListForAsync(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5596,7 +5596,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteAuthRoleAsync(string role, AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5617,7 +5617,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteAuthRoleTagAsync(string role, AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5637,7 +5637,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteIdentityAccessListTidySettingsAsync(AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5657,7 +5657,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteIdentityWhiteListTidySettingsAsync(AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5677,7 +5677,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteRoleTagBlackListForAsync(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5697,7 +5697,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteRoleTagBlackListTidySettingsAsync(AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5717,7 +5717,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteRoleTagDenyListForAsync(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5737,7 +5737,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteRoleTagDenyListTidySettingsAsync(AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -5757,7 +5757,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudDeleteAuthRoleAsync(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -5776,7 +5776,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -5795,7 +5795,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudListAuthRoles2Async(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Authenticates an RAM entity with Vault.
         /// </summary>
@@ -5815,7 +5815,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudLoginAsync(AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -5835,7 +5835,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudReadAuthRoleAsync(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -5856,7 +5856,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudWriteAuthRoleAsync(string role, AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5876,7 +5876,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteBindSecretIDAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5896,7 +5896,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteBoundCIDRListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5916,7 +5916,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeletePeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5936,7 +5936,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeletePoliciesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5956,7 +5956,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteRoleAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5976,7 +5976,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteSecretIDAccessorDestroyAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -5996,7 +5996,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteSecretIDBoundCIDRsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6016,7 +6016,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteSecretIDDestroyAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6036,7 +6036,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteSecretIDNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6056,7 +6056,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteSecretIDTTLAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6076,7 +6076,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteTokenBoundCIDRsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6096,7 +6096,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteTokenMaxTTLAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6116,7 +6116,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6136,7 +6136,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleDeleteTokenTTLAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6155,7 +6155,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleListRolesResponse)</returns>
         Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6175,7 +6175,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleListSecretIDResponse)</returns>
         Task<VaultResponse<AppRoleListSecretIDResponse>> AppRoleListSecretIDAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6195,7 +6195,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleLoginAsync(AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6215,7 +6215,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadBindSecretIDResponse)</returns>
         Task<VaultResponse<AppRoleReadBindSecretIDResponse>> AppRoleReadBindSecretIDAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6235,7 +6235,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadBoundCIDRListResponse)</returns>
         Task<VaultResponse<AppRoleReadBoundCIDRListResponse>> AppRoleReadBoundCIDRListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6255,7 +6255,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadLocalSecretIDsResponse)</returns>
         Task<VaultResponse<AppRoleReadLocalSecretIDsResponse>> AppRoleReadLocalSecretIDsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6275,7 +6275,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadPeriodResponse)</returns>
         Task<VaultResponse<AppRoleReadPeriodResponse>> AppRoleReadPeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6295,7 +6295,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadPoliciesResponse)</returns>
         Task<VaultResponse<AppRoleReadPoliciesResponse>> AppRoleReadPoliciesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6315,7 +6315,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadRoleResponse)</returns>
         Task<VaultResponse<AppRoleReadRoleResponse>> AppRoleReadRoleAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6335,7 +6335,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadRoleIDResponse)</returns>
         Task<VaultResponse<AppRoleReadRoleIDResponse>> AppRoleReadRoleIDAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6355,7 +6355,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadSecretIDBoundCIDRsResponse)</returns>
         Task<VaultResponse<AppRoleReadSecretIDBoundCIDRsResponse>> AppRoleReadSecretIDBoundCIDRsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6375,7 +6375,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadSecretIDNumUsesResponse)</returns>
         Task<VaultResponse<AppRoleReadSecretIDNumUsesResponse>> AppRoleReadSecretIDNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6395,7 +6395,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadSecretIDTTLResponse)</returns>
         Task<VaultResponse<AppRoleReadSecretIDTTLResponse>> AppRoleReadSecretIDTTLAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6415,7 +6415,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadTokenBoundCIDRsResponse)</returns>
         Task<VaultResponse<AppRoleReadTokenBoundCIDRsResponse>> AppRoleReadTokenBoundCIDRsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6435,7 +6435,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadTokenMaxTTLResponse)</returns>
         Task<VaultResponse<AppRoleReadTokenMaxTTLResponse>> AppRoleReadTokenMaxTTLAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6455,7 +6455,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadTokenNumUsesResponse)</returns>
         Task<VaultResponse<AppRoleReadTokenNumUsesResponse>> AppRoleReadTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6475,7 +6475,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleReadTokenTTLResponse)</returns>
         Task<VaultResponse<AppRoleReadTokenTTLResponse>> AppRoleReadTokenTTLAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Trigger the clean-up of expired SecretID entries.
         /// </summary>
@@ -6494,7 +6494,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleTidySecretIDAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6515,7 +6515,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteBindSecretIDAsync(string roleName, AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6536,7 +6536,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteBoundCIDRListAsync(string roleName, AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6557,7 +6557,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleWriteCustomSecretIDResponse)</returns>
         Task<VaultResponse<AppRoleWriteCustomSecretIDResponse>> AppRoleWriteCustomSecretIDAsync(string roleName, AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6578,7 +6578,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWritePeriodAsync(string roleName, AppRoleWritePeriodRequest appRoleWritePeriodRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6599,7 +6599,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWritePoliciesAsync(string roleName, AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6620,7 +6620,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteRoleAsync(string roleName, AppRoleWriteRoleRequest appRoleWriteRoleRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6641,7 +6641,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteRoleIDAsync(string roleName, AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6662,7 +6662,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleWriteSecretIDResponse)</returns>
         Task<VaultResponse<AppRoleWriteSecretIDResponse>> AppRoleWriteSecretIDAsync(string roleName, AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6683,7 +6683,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteSecretIDAccessorDestroyAsync(string roleName, AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6704,7 +6704,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleWriteSecretIDAccessorLookupResponse)</returns>
         Task<VaultResponse<AppRoleWriteSecretIDAccessorLookupResponse>> AppRoleWriteSecretIDAccessorLookupAsync(string roleName, AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6725,7 +6725,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteSecretIDBoundCIDRsAsync(string roleName, AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6746,7 +6746,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteSecretIDDestroyAsync(string roleName, AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6767,7 +6767,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleWriteSecretIDLookupResponse)</returns>
         Task<VaultResponse<AppRoleWriteSecretIDLookupResponse>> AppRoleWriteSecretIDLookupAsync(string roleName, AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6788,7 +6788,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteSecretIDNumUsesAsync(string roleName, AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6809,7 +6809,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteSecretIDTTLAsync(string roleName, AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6830,7 +6830,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteTokenBoundCIDRsAsync(string roleName, AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6851,7 +6851,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteTokenMaxTTLAsync(string roleName, AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6872,7 +6872,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteTokenNumUsesAsync(string roleName, AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6893,7 +6893,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AppRoleWriteTokenTTLAsync(string roleName, AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6912,7 +6912,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureDeleteAuthConfigAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6932,7 +6932,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureDeleteAuthRoleAsync(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6951,7 +6951,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6971,7 +6971,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureLoginAsync(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6990,7 +6990,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureReadAuthConfigAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7010,7 +7010,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureReadAuthRoleAsync(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7030,7 +7030,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureWriteAuthConfigAsync(AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7051,7 +7051,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureWriteAuthRoleAsync(string name, AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -7071,7 +7071,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CentrifyLoginAsync(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
         /// </summary>
@@ -7090,7 +7090,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CentrifyReadConfigAsync(string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
         /// </summary>
@@ -7110,7 +7110,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CentrifyWriteConfigAsync(CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -7130,7 +7130,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesDeleteAsync(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -7150,7 +7150,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesDeleteCRLAsync(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -7169,7 +7169,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesListAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7188,7 +7188,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesListCRLsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7208,7 +7208,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesLoginAsync(CertificatesLoginRequest certificatesLoginRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -7228,7 +7228,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesReadAsync(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -7248,7 +7248,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesReadCRLAsync(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7267,7 +7267,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesReadConfigAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -7288,7 +7288,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesWriteAsync(string name, CertificatesWriteRequest certificatesWriteRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -7309,7 +7309,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesWriteCRLAsync(string name, CertificatesWriteCRLRequest certificatesWriteCRLRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7329,7 +7329,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CertificatesWriteConfigAsync(CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7348,7 +7348,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryDeleteConfigAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7368,7 +7368,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryDeleteRoleAsync(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7387,7 +7387,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7407,7 +7407,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryLoginAsync(CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7426,7 +7426,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryReadConfigAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7446,7 +7446,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryReadRoleAsync(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7466,7 +7466,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryWriteConfigAsync(CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7487,7 +7487,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CloudFoundryWriteRoleAsync(string role, CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read/write/delete a single teams mapping
         /// </summary>
@@ -7507,7 +7507,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubDeleteMapTeamAsync(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -7527,7 +7527,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubDeleteMapUserAsync(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7547,7 +7547,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubLoginAsync(GitHubLoginRequest gitHubLoginRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7566,7 +7566,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubReadConfigAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read/write/delete a single teams mapping
         /// </summary>
@@ -7586,7 +7586,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubReadMapTeamAsync(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read mappings for teams
         /// </summary>
@@ -7606,7 +7606,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubReadMapTeamsAsync(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -7626,7 +7626,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubReadMapUserAsync(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read mappings for users
         /// </summary>
@@ -7646,7 +7646,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubReadMapUsersAsync(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7666,7 +7666,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubWriteConfigAsync(GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read/write/delete a single teams mapping
         /// </summary>
@@ -7687,7 +7687,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubWriteMapTeamAsync(string key, GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -7708,7 +7708,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GitHubWriteMapUserAsync(string key, GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
         /// </summary>
@@ -7728,7 +7728,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudDeleteRoleAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -7747,7 +7747,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -7766,7 +7766,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudListRoles2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7786,7 +7786,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudLoginAsync(GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure credentials used to query the GCP IAM API to verify authenticating service accounts
         /// </summary>
@@ -7805,7 +7805,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadAuthConfigAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
         /// </summary>
@@ -7825,7 +7825,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadRoleAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure credentials used to query the GCP IAM API to verify authenticating service accounts
         /// </summary>
@@ -7845,7 +7845,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteAuthConfigAsync(GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
         /// </summary>
@@ -7866,7 +7866,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteRoleAsync(string name, GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Add or remove labels for an existing &#39;gce&#39; role
         /// </summary>
@@ -7887,7 +7887,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteRoleLabelsAsync(string name, GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Add or remove service accounts for an existing &#x60;iam&#x60; role
         /// </summary>
@@ -7908,7 +7908,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteRoleServiceAccountsAsync(string name, GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete an existing role.
         /// </summary>
@@ -7928,7 +7928,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTDeleteRoleAsync(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -7947,7 +7947,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
         /// </summary>
@@ -7967,7 +7967,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTLoginAsync(JWTLoginRequest jWTLoginRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current JWT authentication backend configuration.
         /// </summary>
@@ -7986,7 +7986,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTReadConfigAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Callback endpoint to complete an OIDC login.
         /// </summary>
@@ -8005,7 +8005,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTReadOIDCCallbackAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read an existing role.
         /// </summary>
@@ -8025,7 +8025,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTReadRoleAsync(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the JWT authentication backend.
         /// </summary>
@@ -8045,7 +8045,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTWriteConfigAsync(JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Request an authorization URL to start an OIDC login flow.
         /// </summary>
@@ -8065,7 +8065,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTWriteOIDCAuthURLAsync(JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Callback endpoint to handle form_posts.
         /// </summary>
@@ -8085,7 +8085,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTWriteOIDCCallbackAsync(JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -8106,7 +8106,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> JWTWriteRoleAsync(string name, JWTWriteRoleRequest jWTWriteRoleRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8126,7 +8126,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosDeleteGroupAsync(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8145,7 +8145,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8165,7 +8165,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosLoginAsync(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8184,7 +8184,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosReadConfigAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8204,7 +8204,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosReadGroupAsync(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8223,7 +8223,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosReadLDAPConfigAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8243,7 +8243,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosWriteConfigAsync(KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8264,7 +8264,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosWriteGroupAsync(string name, KerberosWriteGroupRequest kerberosWriteGroupRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8284,7 +8284,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KerberosWriteLDAPConfigAsync(KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -8304,7 +8304,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesDeleteAuthRoleAsync(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -8323,7 +8323,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
         /// </summary>
@@ -8343,7 +8343,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesLoginAsync(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configures the JWT Public Key and Kubernetes API information.
         /// </summary>
@@ -8362,7 +8362,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesReadAuthConfigAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -8382,7 +8382,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesReadAuthRoleAsync(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configures the JWT Public Key and Kubernetes API information.
         /// </summary>
@@ -8402,7 +8402,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesWriteAuthConfigAsync(KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -8423,7 +8423,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesWriteAuthRoleAsync(string name, KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -8443,7 +8443,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPDeleteGroupAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -8463,7 +8463,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPDeleteUserAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -8482,7 +8482,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -8501,7 +8501,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -8522,7 +8522,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPLoginAsync(string username, LDAPLoginRequest lDAPLoginRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the LDAP server to connect to, along with its options.
         /// </summary>
@@ -8541,7 +8541,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadAuthConfigAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -8561,7 +8561,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadGroupAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -8581,7 +8581,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadUserAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the LDAP server to connect to, along with its options.
         /// </summary>
@@ -8601,7 +8601,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteAuthConfigAsync(LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -8622,7 +8622,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteGroupAsync(string name, LDAPWriteGroupRequest lDAPWriteGroupRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -8643,7 +8643,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteUserAsync(string name, LDAPWriteUserRequest lDAPWriteUserRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
         /// </summary>
@@ -8662,7 +8662,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIDeleteConfigAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -8682,7 +8682,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIDeleteRoleAsync(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -8701,7 +8701,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Authenticates to Vault using OCI credentials
         /// </summary>
@@ -8722,7 +8722,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCILoginWithRoleAsync(string role, OCILoginWithRoleRequest oCILoginWithRoleRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
         /// </summary>
@@ -8741,7 +8741,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIReadConfigAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -8761,7 +8761,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIReadRoleAsync(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
         /// </summary>
@@ -8781,7 +8781,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIWriteConfigAsync(OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -8802,7 +8802,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OCIWriteRoleAsync(string role, OCIWriteRoleRequest oCIWriteRoleRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete an existing role.
         /// </summary>
@@ -8822,7 +8822,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteAuthRoleAsync(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -8841,7 +8841,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListAuthRolesAsync(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
         /// </summary>
@@ -8861,7 +8861,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCLoginAsync(OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current JWT authentication backend configuration.
         /// </summary>
@@ -8880,7 +8880,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadAuthConfigAsync(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read an existing role.
         /// </summary>
@@ -8900,7 +8900,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadAuthRoleAsync(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Callback endpoint to complete an OIDC login.
         /// </summary>
@@ -8919,7 +8919,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadCallbackAsync(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the JWT authentication backend.
         /// </summary>
@@ -8939,7 +8939,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteAuthConfigAsync(OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -8960,7 +8960,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteAuthRoleAsync(string name, OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Request an authorization URL to start an OIDC login flow.
         /// </summary>
@@ -8980,7 +8980,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteAuthURLAsync(OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Callback endpoint to handle form_posts.
         /// </summary>
@@ -9000,7 +9000,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteCallbackAsync(OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9020,7 +9020,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaDeleteGroupAsync(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -9040,7 +9040,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaDeleteUserAsync(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9059,7 +9059,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -9078,7 +9078,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -9099,7 +9099,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaLoginAsync(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
         /// </summary>
@@ -9118,7 +9118,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaReadConfigAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9138,7 +9138,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaReadGroupAsync(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -9158,7 +9158,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaReadUserAsync(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9178,7 +9178,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaVerifyAsync(string nonce, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
         /// </summary>
@@ -9198,7 +9198,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaWriteConfigAsync(OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9219,7 +9219,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaWriteGroupAsync(string name, OktaWriteGroupRequest oktaWriteGroupRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -9240,7 +9240,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OktaWriteUserAsync(string name, OktaWriteUserRequest oktaWriteUserRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9260,7 +9260,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusDeleteUserAsync(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9279,7 +9279,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -9299,7 +9299,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusLoginAsync(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -9320,7 +9320,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusLoginWithUsernameAsync(string urlusername, RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the RADIUS server to connect to, along with its options.
         /// </summary>
@@ -9339,7 +9339,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusReadConfigAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9359,7 +9359,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusReadUserAsync(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the RADIUS server to connect to, along with its options.
         /// </summary>
@@ -9379,7 +9379,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusWriteConfigAsync(RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9400,7 +9400,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RadiusWriteUserAsync(string name, RadiusWriteUserRequest radiusWriteUserRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9420,7 +9420,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenDeleteRoleAsync(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
         /// </summary>
@@ -9439,7 +9439,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenListAccessorsAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint lists configured roles.
         /// </summary>
@@ -9458,7 +9458,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenListRolesAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -9477,7 +9477,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenReadLookupAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -9496,7 +9496,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenReadLookupSelfAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9516,7 +9516,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenReadRoleAsync(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will renew the given token and prevent expiration.
         /// </summary>
@@ -9536,7 +9536,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRenewAsync(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
         /// </summary>
@@ -9556,7 +9556,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRenewAccessorAsync(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will renew the token used to call it and prevent expiration.
         /// </summary>
@@ -9576,7 +9576,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRenewSelfAsync(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will delete the given token and all of its child tokens.
         /// </summary>
@@ -9596,7 +9596,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRevokeAsync(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will delete the token associated with the accessor and all of its child tokens.
         /// </summary>
@@ -9616,7 +9616,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRevokeAccessorAsync(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will delete the token and orphan its child tokens.
         /// </summary>
@@ -9636,7 +9636,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRevokeOrphanAsync(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will delete the token used to call it and all of its child tokens.
         /// </summary>
@@ -9655,7 +9655,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenRevokeSelfAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
@@ -9674,7 +9674,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenTidyAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// The token create path is used to create new tokens.
         /// </summary>
@@ -9695,7 +9695,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteCreateAsync(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// The token create path is used to create new orphan tokens.
         /// </summary>
@@ -9716,7 +9716,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteCreateOrphanAsync(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
         /// </summary>
@@ -9738,7 +9738,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteCreateWithRoleAsync(string roleName, TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -9758,7 +9758,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteLookupAsync(TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
         /// </summary>
@@ -9778,7 +9778,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteLookupAccessorAsync(TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -9798,7 +9798,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteLookupSelfAsync(TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9819,7 +9819,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TokenWriteRoleAsync(string roleName, TokenWriteRoleRequest tokenWriteRoleRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9839,7 +9839,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> UserpassDeleteUserAsync(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9858,7 +9858,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -9879,7 +9879,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> UserpassLoginAsync(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9899,7 +9899,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> UserpassReadUserAsync(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -9920,7 +9920,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> UserpassWriteUserAsync(string username, UserpassWriteUserRequest userpassWriteUserRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Reset user&#39;s password.
         /// </summary>
@@ -9941,7 +9941,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> UserpassWriteUserPasswordAsync(string username, UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update the policies associated with the username.
         /// </summary>
@@ -9986,7 +9986,7 @@ namespace Vault.Api
         public Auth(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");
-            
+
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;

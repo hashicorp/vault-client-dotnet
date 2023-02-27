@@ -121,26 +121,26 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Compressed == input.Compressed ||
                     this.Compressed.Equals(input.Compressed)
-                ) && 
+                ) &&
                 (
                     this.CompressionType == input.CompressionType ||
                     (this.CompressionType != null &&
                     this.CompressionType.Equals(input.CompressionType))
-                ) && 
+                ) &&
                 (
                     this.Encoding == input.Encoding ||
                     (this.Encoding != null &&
                     this.Encoding.Equals(input.Encoding))
-                ) && 
+                ) &&
                 (
                     this.Path == input.Path ||
                     (this.Path != null &&
                     this.Path.Equals(input.Path))
-                ) && 
+                ) &&
                 (
                     this.Value == input.Value ||
                     (this.Value != null &&

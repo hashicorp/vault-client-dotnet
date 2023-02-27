@@ -97,12 +97,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.RoleId == input.RoleId ||
                     (this.RoleId != null &&
                     this.RoleId.Equals(input.RoleId))
-                ) && 
+                ) &&
                 (
                     this.SecretId == input.SecretId ||
                     (this.SecretId != null &&

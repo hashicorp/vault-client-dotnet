@@ -62,6 +62,23 @@ Method | HTTP request | Description
 [**CubbyholeDelete**](Secrets.md#cubbyholedelete) | **DELETE** /{cubbyhole_mount_path}/{path} | Deletes the secret at the specified location.
 [**CubbyholeRead**](Secrets.md#cubbyholeread) | **GET** /{cubbyhole_mount_path}/{path} | Retrieve the secret at the specified location.
 [**CubbyholeWrite**](Secrets.md#cubbyholewrite) | **POST** /{cubbyhole_mount_path}/{path} | Store a secret at the specified location.
+[**DatabaseDeleteConfig**](Secrets.md#databasedeleteconfig) | **DELETE** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
+[**DatabaseDeleteRole**](Secrets.md#databasedeleterole) | **DELETE** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**DatabaseDeleteStaticRole**](Secrets.md#databasedeletestaticrole) | **DELETE** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
+[**DatabaseListConfig**](Secrets.md#databaselistconfig) | **GET** /{database_mount_path}/config | Configure connection details to a database plugin.
+[**DatabaseListRoles**](Secrets.md#databaselistroles) | **GET** /{database_mount_path}/roles | Manage the roles that can be created with this backend.
+[**DatabaseListStaticRoles**](Secrets.md#databaseliststaticroles) | **GET** /{database_mount_path}/static-roles | Manage the static roles that can be created with this backend.
+[**DatabaseReadConfig**](Secrets.md#databasereadconfig) | **GET** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
+[**DatabaseReadCredentials**](Secrets.md#databasereadcredentials) | **GET** /{database_mount_path}/creds/{name} | Request database credentials for a certain role.
+[**DatabaseReadRole**](Secrets.md#databasereadrole) | **GET** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**DatabaseReadStaticCredentials**](Secrets.md#databasereadstaticcredentials) | **GET** /{database_mount_path}/static-creds/{name} | Request database credentials for a certain static role. These credentials are rotated periodically.
+[**DatabaseReadStaticRole**](Secrets.md#databasereadstaticrole) | **GET** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
+[**DatabaseReset**](Secrets.md#databasereset) | **POST** /{database_mount_path}/reset/{name} | Resets a database plugin.
+[**DatabaseRotateRole**](Secrets.md#databaserotaterole) | **POST** /{database_mount_path}/rotate-role/{name} | 
+[**DatabaseRotateRoot**](Secrets.md#databaserotateroot) | **POST** /{database_mount_path}/rotate-root/{name} | 
+[**DatabaseWriteConfig**](Secrets.md#databasewriteconfig) | **POST** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
+[**DatabaseWriteRole**](Secrets.md#databasewriterole) | **POST** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**DatabaseWriteStaticRole**](Secrets.md#databasewritestaticrole) | **POST** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
 [**GoogleCloudDeleteRoleset**](Secrets.md#googleclouddeleteroleset) | **DELETE** /{gcp_mount_path}/roleset/{name} | 
 [**GoogleCloudDeleteStaticAccount**](Secrets.md#googleclouddeletestaticaccount) | **DELETE** /{gcp_mount_path}/static-account/{name} | 
 [**GoogleCloudKMSDecrypt**](Secrets.md#googlecloudkmsdecrypt) | **POST** /{gcpkms_mount_path}/decrypt/{key} | Decrypt a ciphertext value using a named key
@@ -259,7 +276,9 @@ Method | HTTP request | Description
 [**PKIWriteIntermediateSetSigned**](Secrets.md#pkiwriteintermediatesetsigned) | **POST** /{pki_mount_path}/intermediate/set-signed | 
 [**PKIWriteInternalExported**](Secrets.md#pkiwriteinternalexported) | **POST** /{pki_mount_path}/internal|exported | 
 [**PKIWriteIssueRole**](Secrets.md#pkiwriteissuerole) | **POST** /{pki_mount_path}/issue/{role} | 
+[**PKIWriteIssuerRefDerPEM**](Secrets.md#pkiwriteissuerrefderpem) | **POST** /{pki_mount_path}/{issuer_ref}/der|/pem | 
 [**PKIWriteIssuersConfig**](Secrets.md#pkiwriteissuersconfig) | **POST** /{pki_mount_path}/config/issuers | 
+[**PKIWriteJSON**](Secrets.md#pkiwritejson) | **POST** /{pki_mount_path}//json | 
 [**PKIWriteKMS**](Secrets.md#pkiwritekms) | **POST** /{pki_mount_path}/kms | 
 [**PKIWriteKey**](Secrets.md#pkiwritekey) | **POST** /{pki_mount_path}/key/{key_ref} | 
 [**PKIWriteKeysConfig**](Secrets.md#pkiwritekeysconfig) | **POST** /{pki_mount_path}/config/keys | 
@@ -275,8 +294,6 @@ Method | HTTP request | Description
 [**PkiReadIssuerRefDerPem**](Secrets.md#pkireadissuerrefderpem) | **GET** /{pki_mount_path}/{issuer_ref}/der|/pem | 
 [**PkiReadJson**](Secrets.md#pkireadjson) | **GET** /{pki_mount_path}//json | 
 [**PkiReadPem**](Secrets.md#pkireadpem) | **GET** /{pki_mount_path}//pem | 
-[**PkiWriteIssuerRefDerPem**](Secrets.md#pkiwriteissuerrefderpem) | **POST** /{pki_mount_path}/{issuer_ref}/der|/pem | 
-[**PkiWriteJson**](Secrets.md#pkiwritejson) | **POST** /{pki_mount_path}//json | 
 [**RabbitMQDeleteRole**](Secrets.md#rabbitmqdeleterole) | **DELETE** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
 [**RabbitMQListRoles**](Secrets.md#rabbitmqlistroles) | **GET** /{rabbitmq_mount_path}/roles | Manage the roles that can be created with this backend.
 [**RabbitMQReadCredentials**](Secrets.md#rabbitmqreadcredentials) | **GET** /{rabbitmq_mount_path}/creds/{name} | Request RabbitMQ credentials for a certain role.
@@ -4675,6 +4692,1285 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasedeleteconfig"></a>
+# **DatabaseDeleteConfig**
+
+> void DatabaseDeleteConfig (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Configure connection details to a database plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseDeleteConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of this database connection
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Configure connection details to a database plugin.
+
+                apiInstance.DatabaseDeleteConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseDeleteConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of this database connection | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasedeleterole"></a>
+# **DatabaseDeleteRole**
+
+> void DatabaseDeleteRole (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseDeleteRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the roles that can be created with this backend.
+
+                apiInstance.DatabaseDeleteRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseDeleteRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasedeletestaticrole"></a>
+# **DatabaseDeleteStaticRole**
+
+> void DatabaseDeleteStaticRole (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the static roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseDeleteStaticRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the static roles that can be created with this backend.
+
+                apiInstance.DatabaseDeleteStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseDeleteStaticRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databaselistconfig"></a>
+# **DatabaseListConfig**
+
+> void DatabaseListConfig (string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Configure connection details to a database plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseListConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Configure connection details to a database plugin.
+
+                apiInstance.DatabaseListConfig(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseListConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databaselistroles"></a>
+# **DatabaseListRoles**
+
+> void DatabaseListRoles (string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseListRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the roles that can be created with this backend.
+
+                apiInstance.DatabaseListRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseListRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databaseliststaticroles"></a>
+# **DatabaseListStaticRoles**
+
+> void DatabaseListStaticRoles (string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the static roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseListStaticRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the static roles that can be created with this backend.
+
+                apiInstance.DatabaseListStaticRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseListStaticRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasereadconfig"></a>
+# **DatabaseReadConfig**
+
+> void DatabaseReadConfig (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Configure connection details to a database plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseReadConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of this database connection
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Configure connection details to a database plugin.
+
+                apiInstance.DatabaseReadConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseReadConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of this database connection | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasereadcredentials"></a>
+# **DatabaseReadCredentials**
+
+> void DatabaseReadCredentials (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Request database credentials for a certain role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseReadCredentialsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Request database credentials for a certain role.
+
+                apiInstance.DatabaseReadCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseReadCredentials: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasereadrole"></a>
+# **DatabaseReadRole**
+
+> void DatabaseReadRole (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseReadRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the roles that can be created with this backend.
+
+                apiInstance.DatabaseReadRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseReadRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasereadstaticcredentials"></a>
+# **DatabaseReadStaticCredentials**
+
+> void DatabaseReadStaticCredentials (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Request database credentials for a certain static role. These credentials are rotated periodically.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseReadStaticCredentialsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the static role.
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Request database credentials for a certain static role. These credentials are rotated periodically.
+
+                apiInstance.DatabaseReadStaticCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseReadStaticCredentials: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the static role. | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasereadstaticrole"></a>
+# **DatabaseReadStaticRole**
+
+> void DatabaseReadStaticRole (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the static roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseReadStaticRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the static roles that can be created with this backend.
+
+                apiInstance.DatabaseReadStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseReadStaticRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasereset"></a>
+# **DatabaseReset**
+
+> void DatabaseReset (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Resets a database plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseResetExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of this database connection
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Resets a database plugin.
+
+                apiInstance.DatabaseReset(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseReset: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of this database connection | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databaserotaterole"></a>
+# **DatabaseRotateRole**
+
+> void DatabaseRotateRole (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseRotateRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the static role
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+
+                apiInstance.DatabaseRotateRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseRotateRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the static role | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databaserotateroot"></a>
+# **DatabaseRotateRoot**
+
+> void DatabaseRotateRoot (string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseRotateRootExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of this database connection
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+
+                apiInstance.DatabaseRotateRoot(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseRotateRoot: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of this database connection | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasewriteconfig"></a>
+# **DatabaseWriteConfig**
+
+> void DatabaseWriteConfig (string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Configure connection details to a database plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseWriteConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of this database connection
+            var databaseWriteConfigRequest = new DatabaseWriteConfigRequest(); // DatabaseWriteConfigRequest | 
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Configure connection details to a database plugin.
+
+                apiInstance.DatabaseWriteConfig(string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseWriteConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of this database connection | 
+ **databaseWriteConfigRequest** | [**DatabaseWriteConfigRequest**](DatabaseWriteConfigRequest.md)|  | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasewriterole"></a>
+# **DatabaseWriteRole**
+
+> void DatabaseWriteRole (string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseWriteRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseWriteRoleRequest = new DatabaseWriteRoleRequest(); // DatabaseWriteRoleRequest | 
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the roles that can be created with this backend.
+
+                apiInstance.DatabaseWriteRole(string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseWriteRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseWriteRoleRequest** | [**DatabaseWriteRoleRequest**](DatabaseWriteRoleRequest.md)|  | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="databasewritestaticrole"></a>
+# **DatabaseWriteStaticRole**
+
+> void DatabaseWriteStaticRole (string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+
+Manage the static roles that can be created with this backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DatabaseWriteStaticRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var databaseWriteStaticRoleRequest = new DatabaseWriteStaticRoleRequest(); // DatabaseWriteStaticRoleRequest | 
+            var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+
+            try
+            {
+                // Manage the static roles that can be created with this backend.
+
+                apiInstance.DatabaseWriteStaticRole(string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.DatabaseWriteStaticRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **databaseWriteStaticRoleRequest** | [**DatabaseWriteStaticRoleRequest**](DatabaseWriteStaticRoleRequest.md)|  | 
+ **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 
@@ -19362,6 +20658,82 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pkiwriteissuerrefderpem"></a>
+# **PKIWriteIssuerRefDerPEM**
+
+> void PKIWriteIssuerRefDerPEM (string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PKIWriteIssuerRefDerPEMExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            var pKIWriteIssuerRefDerPEMRequest = new PKIWriteIssuerRefDerPEMRequest(); // PKIWriteIssuerRefDerPEMRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+
+                apiInstance.PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PKIWriteIssuerRefDerPEM: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
+ **pKIWriteIssuerRefDerPEMRequest** | [**PKIWriteIssuerRefDerPEMRequest**](PKIWriteIssuerRefDerPEMRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pkiwriteissuersconfig"></a>
 # **PKIWriteIssuersConfig**
 
@@ -19413,6 +20785,80 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pKIWriteIssuersConfigRequest** | [**PKIWriteIssuersConfigRequest**](PKIWriteIssuersConfigRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pkiwritejson"></a>
+# **PKIWriteJSON**
+
+> void PKIWriteJSON (PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PKIWriteJSONExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var pKIWriteJSONRequest = new PKIWriteJSONRequest(); // PKIWriteJSONRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+
+                apiInstance.PKIWriteJSON(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PKIWriteJSON: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pKIWriteJSONRequest** | [**PKIWriteJSONRequest**](PKIWriteJSONRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
 ### Return type
@@ -20526,156 +21972,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="pkiwriteissuerrefderpem"></a>
-# **PkiWriteIssuerRefDerPem**
-
-> void PkiWriteIssuerRefDerPem (string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PkiWriteIssuerRefDerPemExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
-            var pkiWriteIssuerRefDerPemRequest = new PkiWriteIssuerRefDerPemRequest(); // PkiWriteIssuerRefDerPemRequest | 
-            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
-
-            try
-            {
-
-                apiInstance.PkiWriteIssuerRefDerPem(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PkiWriteIssuerRefDerPem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
- **pkiWriteIssuerRefDerPemRequest** | [**PkiWriteIssuerRefDerPemRequest**](PkiWriteIssuerRefDerPemRequest.md)|  | 
- **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="pkiwritejson"></a>
-# **PkiWriteJson**
-
-> void PkiWriteJson (PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PkiWriteJsonExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var pkiWriteJsonRequest = new PkiWriteJsonRequest(); // PkiWriteJsonRequest | 
-            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
-
-            try
-            {
-
-                apiInstance.PkiWriteJson(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PkiWriteJson: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWriteJsonRequest** | [**PkiWriteJsonRequest**](PkiWriteJsonRequest.md)|  | 
- **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: Not defined
 
 

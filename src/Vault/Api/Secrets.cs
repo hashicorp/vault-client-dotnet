@@ -1056,6 +1056,312 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> CubbyholeWrite(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
         /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseDeleteConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseDeleteRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseDeleteStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseListConfig(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseListRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseListStaticRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseReadConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Request database credentials for a certain role.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseReadCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseReadRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Request database credentials for a certain static role. These credentials are rotated periodically.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseReadStaticCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseReadStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Resets a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseReset(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseRotateRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseRotateRoot(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteConfigRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseWriteConfig(string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseWriteRole(string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteStaticRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> DatabaseWriteStaticRole(string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
+        /// <summary>
         /// 
         /// </summary>
         /// <remarks>
@@ -4611,6 +4917,25 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pKIWriteIssuersConfigRequest"></param>
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -4622,6 +4947,24 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PKIWriteIssuersConfig(PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteJSONRequest"></param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PKIWriteJSON(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -4887,43 +5230,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PkiReadPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> PkiWriteIssuerRefDerPem(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteJsonRequest"></param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> PkiWriteJson(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Manage the roles that can be created with this backend.
         /// </summary>
@@ -6340,7 +6646,7 @@ namespace Vault.Api
     public interface ISecretsAsync : IApiAccessor
     {
         #region Asynchronous Operations
-   
+
         /// <summary>
         /// Configure the default lease information for generated credentials.
         /// </summary>
@@ -6359,7 +6665,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadLeaseAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the root credentials that are used to manage IAM.
         /// </summary>
@@ -6378,7 +6684,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigReadRootIAMCredentialsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6397,7 +6703,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigRotateRootIAMCredentialsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the default lease information for generated credentials.
         /// </summary>
@@ -6417,7 +6723,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteLeaseAsync(AWSConfigWriteLeaseRequest aWSConfigWriteLeaseRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the root credentials that are used to manage IAM.
         /// </summary>
@@ -6437,7 +6743,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSConfigWriteRootIAMCredentialsAsync(AWSConfigWriteRootIAMCredentialsRequest aWSConfigWriteRootIAMCredentialsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
@@ -6457,7 +6763,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSDeleteRoleAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List the existing roles in this backend
         /// </summary>
@@ -6476,7 +6782,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSListRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate AWS credentials from a specific Vault role.
         /// </summary>
@@ -6495,7 +6801,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadCredentialsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
@@ -6515,7 +6821,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadRoleAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate AWS credentials from a specific Vault role.
         /// </summary>
@@ -6535,7 +6841,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSReadSecurityTokenServiceAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate AWS credentials from a specific Vault role.
         /// </summary>
@@ -6555,7 +6861,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteCredentialsAsync(AWSWriteCredentialsRequest aWSWriteCredentialsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
@@ -6576,7 +6882,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteRoleAsync(string name, AWSWriteRoleRequest aWSWriteRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate AWS credentials from a specific Vault role.
         /// </summary>
@@ -6597,7 +6903,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AWSWriteSecurityTokenServiceAsync(string name, AWSWriteSecurityTokenServiceRequest aWSWriteSecurityTokenServiceRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check service accounts in to the library.
         /// </summary>
@@ -6618,7 +6924,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryCheckInLibraryAsync(string name, ActiveDirectoryCheckInLibraryRequest activeDirectoryCheckInLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check service accounts in to the library.
         /// </summary>
@@ -6639,7 +6945,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryCheckInManageLibraryAsync(string name, ActiveDirectoryCheckInManageLibraryRequest activeDirectoryCheckInManageLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check a service account out from the library.
         /// </summary>
@@ -6660,7 +6966,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryCheckOutLibraryAsync(string name, ActiveDirectoryCheckOutLibraryRequest activeDirectoryCheckOutLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the AD server to connect to, along with password options.
         /// </summary>
@@ -6679,7 +6985,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryDeleteConfigAsync(string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a library set.
         /// </summary>
@@ -6699,7 +7005,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryDeleteLibraryAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts.
         /// </summary>
@@ -6719,7 +7025,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryDeleteRoleAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6738,7 +7044,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryListLibrariesAsync(string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List the name of each role currently stored.
         /// </summary>
@@ -6757,7 +7063,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryListRolesAsync(string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the AD server to connect to, along with password options.
         /// </summary>
@@ -6776,7 +7082,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryReadConfigAsync(string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6796,7 +7102,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryReadCredentialsAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read a library set.
         /// </summary>
@@ -6816,7 +7122,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryReadLibraryAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check the status of the service accounts in a library set.
         /// </summary>
@@ -6836,7 +7142,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryReadLibraryStatusAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts.
         /// </summary>
@@ -6856,7 +7162,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryReadRoleAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6876,7 +7182,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryRotateRoleAsync(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -6895,7 +7201,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryRotateRootAsync(string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the AD server to connect to, along with password options.
         /// </summary>
@@ -6915,7 +7221,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryWriteConfigAsync(ActiveDirectoryWriteConfigRequest activeDirectoryWriteConfigRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update a library set.
         /// </summary>
@@ -6936,7 +7242,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryWriteLibraryAsync(string name, ActiveDirectoryWriteLibraryRequest activeDirectoryWriteLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage roles to build links between Vault and Active Directory service accounts.
         /// </summary>
@@ -6957,7 +7263,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ActiveDirectoryWriteRoleAsync(string name, ActiveDirectoryWriteRoleRequest activeDirectoryWriteRoleRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls.
         /// </summary>
@@ -6976,7 +7282,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudDeleteConfigAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for.
         /// </summary>
@@ -6996,7 +7302,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudDeleteRoleAsync(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List the existing roles in this backend.
         /// </summary>
@@ -7015,7 +7321,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudListRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls.
         /// </summary>
@@ -7034,7 +7340,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudReadConfigAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate an API key or STS credential using the given role&#39;s configuration.&#39;
         /// </summary>
@@ -7054,7 +7360,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudReadCredentialsAsync(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for.
         /// </summary>
@@ -7074,7 +7380,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudReadRoleAsync(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the access key and secret to use for RAM and STS calls.
         /// </summary>
@@ -7094,7 +7400,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudWriteConfigAsync(AliCloudWriteConfigRequest aliCloudWriteConfigRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for.
         /// </summary>
@@ -7115,7 +7421,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliCloudWriteRoleAsync(string name, AliCloudWriteRoleRequest aliCloudWriteRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7134,7 +7440,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureDeleteConfigAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials.
         /// </summary>
@@ -7154,7 +7460,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureDeleteRoleAsync(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List existing roles.
         /// </summary>
@@ -7173,7 +7479,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureListRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7192,7 +7498,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureReadConfigAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7212,7 +7518,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureReadCredentialsAsync(string role, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials.
         /// </summary>
@@ -7232,7 +7538,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureReadRoleAsync(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7251,7 +7557,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureRotateRootAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7271,7 +7577,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureWriteConfigAsync(AzureWriteConfigRequest azureWriteConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials.
         /// </summary>
@@ -7292,7 +7598,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AzureWriteRoleAsync(string name, AzureWriteRoleRequest azureWriteRoleRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7312,7 +7618,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulDeleteRoleAsync(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7331,7 +7637,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulListRolesAsync(string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7350,7 +7656,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulReadAccessConfigAsync(string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7370,7 +7676,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulReadCredentialsAsync(string role, string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7390,7 +7696,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulReadRoleAsync(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7410,7 +7716,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulWriteAccessConfigAsync(ConsulWriteAccessConfigRequest consulWriteAccessConfigRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7431,7 +7737,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> ConsulWriteRoleAsync(string name, ConsulWriteRoleRequest consulWriteRoleRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Deletes the secret at the specified location.
         /// </summary>
@@ -7451,7 +7757,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CubbyholeDeleteAsync(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Retrieve the secret at the specified location.
         /// </summary>
@@ -7472,7 +7778,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Store a secret at the specified location.
         /// </summary>
@@ -7492,7 +7798,347 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> CubbyholeWriteAsync(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseDeleteConfigAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseDeleteRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseDeleteStaticRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseListConfigAsync(string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseListRolesAsync(string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseListStaticRolesAsync(string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseReadConfigAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Request database credentials for a certain role.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseReadCredentialsAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseReadRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Request database credentials for a certain static role. These credentials are rotated periodically.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseReadStaticCredentialsAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseReadStaticRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Resets a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseResetAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseRotateRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseRotateRootAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Configure connection details to a database plugin.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteConfigRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseWriteConfigAsync(string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseWriteRoleAsync(string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteStaticRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DatabaseWriteStaticRoleAsync(string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
         /// <summary>
         /// 
         /// </summary>
@@ -7512,7 +8158,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudDeleteRolesetAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7532,7 +8178,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudDeleteStaticAccountAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Decrypt a ciphertext value using a named key
         /// </summary>
@@ -7553,7 +8199,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSDecryptAsync(string key, GoogleCloudKMSDecryptRequest googleCloudKMSDecryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the GCP KMS secrets engine
         /// </summary>
@@ -7572,7 +8218,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSDeleteConfigAsync(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS
         /// </summary>
@@ -7592,7 +8238,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSDeleteKeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Deregister an existing key in Vault
         /// </summary>
@@ -7612,7 +8258,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSDeregisterKeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Encrypt a plaintext value using a named key
         /// </summary>
@@ -7633,7 +8279,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSEncryptAsync(string key, GoogleCloudKMSEncryptRequest googleCloudKMSEncryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List named keys
         /// </summary>
@@ -7652,7 +8298,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSListKeysAsync(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the GCP KMS secrets engine
         /// </summary>
@@ -7671,7 +8317,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSReadConfigAsync(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS
         /// </summary>
@@ -7691,7 +8337,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSReadKeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the key in Vault
         /// </summary>
@@ -7711,7 +8357,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSReadKeyConfigAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Retrieve the public key associated with the named key
         /// </summary>
@@ -7731,7 +8377,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSReadPubkeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Re-encrypt existing ciphertext data to a new version
         /// </summary>
@@ -7752,7 +8398,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSReencryptAsync(string key, GoogleCloudKMSReencryptRequest googleCloudKMSReencryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register an existing crypto key in Google Cloud KMS
         /// </summary>
@@ -7773,7 +8419,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSRegisterKeyAsync(string key, GoogleCloudKMSRegisterKeyRequest googleCloudKMSRegisterKeyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Rotate a crypto key to a new primary version
         /// </summary>
@@ -7793,7 +8439,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSRotateKeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Signs a message or digest using a named key
         /// </summary>
@@ -7814,7 +8460,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSSignAsync(string key, GoogleCloudKMSSignRequest googleCloudKMSSignRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete old crypto key versions from Google Cloud KMS
         /// </summary>
@@ -7834,7 +8480,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSTrimKeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Verify a signature using a named key
         /// </summary>
@@ -7855,7 +8501,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSVerifyAsync(string key, GoogleCloudKMSVerifyRequest googleCloudKMSVerifyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the GCP KMS secrets engine
         /// </summary>
@@ -7875,7 +8521,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSWriteConfigAsync(GoogleCloudKMSWriteConfigRequest googleCloudKMSWriteConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS
         /// </summary>
@@ -7896,7 +8542,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSWriteKeyAsync(string key, GoogleCloudKMSWriteKeyRequest googleCloudKMSWriteKeyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the key in Vault
         /// </summary>
@@ -7917,7 +8563,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKMSWriteKeyConfigAsync(string key, GoogleCloudKMSWriteKeyConfigRequest googleCloudKMSWriteKeyConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7936,7 +8582,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudListRolesetsAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7955,7 +8601,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudListStaticAccountsAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7974,7 +8620,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadConfigAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -7994,7 +8640,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadKeyAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8014,7 +8660,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadRolesetAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8034,7 +8680,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadRolesetKeyAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8054,7 +8700,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadRolesetTokenAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8074,7 +8720,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadStaticAccountAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8094,7 +8740,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadStaticAccountKeyAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8114,7 +8760,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadStaticAccountTokenAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8134,7 +8780,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudReadTokenAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8154,7 +8800,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudRotateRolesetAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8174,7 +8820,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudRotateRolesetKeyAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8193,7 +8839,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudRotateRootAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8213,7 +8859,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudRotateStaticAccountKeyAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8233,7 +8879,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteConfigAsync(GoogleCloudWriteConfigRequest googleCloudWriteConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8254,7 +8900,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteKeyAsync(string roleset, GoogleCloudWriteKeyRequest googleCloudWriteKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8275,7 +8921,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteRolesetAsync(string name, GoogleCloudWriteRolesetRequest googleCloudWriteRolesetRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8296,7 +8942,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteRolesetKeyAsync(string roleset, GoogleCloudWriteRolesetKeyRequest googleCloudWriteRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8316,7 +8962,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteRolesetTokenAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8337,7 +8983,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteStaticAccountAsync(string name, GoogleCloudWriteStaticAccountRequest googleCloudWriteStaticAccountRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8358,7 +9004,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteStaticAccountKeyAsync(string name, GoogleCloudWriteStaticAccountKeyRequest googleCloudWriteStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8378,7 +9024,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteStaticAccountTokenAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8398,7 +9044,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudWriteTokenAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
         /// </summary>
@@ -8418,7 +9064,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv1DeleteAsync(string path, string kvMountPath = "kv", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
         /// </summary>
@@ -8439,7 +9085,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv1ReadAsync(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
         /// </summary>
@@ -8459,7 +9105,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv1WriteAsync(string path, string kvMountPath = "kv", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store.
         /// </summary>
@@ -8479,7 +9125,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2DeleteAsync(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configures settings for the KV store
         /// </summary>
@@ -8499,7 +9145,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2DeleteMetadataAsync(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Marks one or more versions as deleted in the KV store.
         /// </summary>
@@ -8520,7 +9166,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2DeleteVersionsAsync(string path, KVv2DeleteVersionsRequest kVv2DeleteVersionsRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Permanently removes one or more versions in the KV store
         /// </summary>
@@ -8541,7 +9187,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2DestroyVersionsAsync(string path, KVv2DestroyVersionsRequest kVv2DestroyVersionsRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store.
         /// </summary>
@@ -8561,7 +9207,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2ReadAsync(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the backend level settings.
         /// </summary>
@@ -8580,7 +9226,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2ReadConfigAsync(string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configures settings for the KV store
         /// </summary>
@@ -8601,7 +9247,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2ReadMetadataAsync(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the structure of a secret entry from the Key-Value store with the values removed.
         /// </summary>
@@ -8621,7 +9267,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2ReadSubkeysAsync(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Undeletes one or more versions from the KV store.
         /// </summary>
@@ -8642,7 +9288,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2UndeleteVersionsAsync(string path, KVv2UndeleteVersionsRequest kVv2UndeleteVersionsRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Write, Patch, Read, and Delete data in the Key-Value Store.
         /// </summary>
@@ -8663,7 +9309,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2WriteAsync(string path, KVv2WriteRequest kVv2WriteRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure backend level settings that are applied to every key in the key-value store.
         /// </summary>
@@ -8683,7 +9329,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2WriteConfigAsync(KVv2WriteConfigRequest kVv2WriteConfigRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configures settings for the KV store
         /// </summary>
@@ -8704,7 +9350,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KVv2WriteMetadataAsync(string path, KVv2WriteMetadataRequest kVv2WriteMetadataRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8723,7 +9369,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesDeleteConfigAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8743,7 +9389,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesDeleteRoleAsync(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8762,7 +9408,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesListRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8781,7 +9427,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesReadConfigAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8801,7 +9447,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesReadRoleAsync(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8821,7 +9467,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesWriteConfigAsync(KubernetesWriteConfigRequest kubernetesWriteConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8842,7 +9488,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesWriteCredentialsAsync(string name, KubernetesWriteCredentialsRequest kubernetesWriteCredentialsRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8863,7 +9509,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> KubernetesWriteRoleAsync(string name, KubernetesWriteRoleRequest kubernetesWriteRoleRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check service accounts in to the library.
         /// </summary>
@@ -8884,7 +9530,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPCheckInLibraryAsync(string name, LDAPCheckInLibraryRequest lDAPCheckInLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check service accounts in to the library.
         /// </summary>
@@ -8905,7 +9551,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPCheckInManageLibraryAsync(string name, LDAPCheckInManageLibraryRequest lDAPCheckInManageLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check a service account out from the library.
         /// </summary>
@@ -8926,7 +9572,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPCheckOutLibraryAsync(string name, LDAPCheckOutLibraryRequest lDAPCheckOutLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8945,7 +9591,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPDeleteConfigAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a library set.
         /// </summary>
@@ -8965,7 +9611,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPDeleteLibraryAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -8985,7 +9631,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPDeleteRoleAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9005,7 +9651,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPDeleteStaticRoleAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9024,7 +9670,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPListLibrariesAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9043,7 +9689,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPListRolesAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9062,7 +9708,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPListStaticRolesAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9081,7 +9727,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadConfigAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9101,7 +9747,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadCredentialsAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read a library set.
         /// </summary>
@@ -9121,7 +9767,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadLibraryAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check the status of the service accounts in a library set.
         /// </summary>
@@ -9141,7 +9787,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadLibraryStatusAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9161,7 +9807,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadRoleAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9181,7 +9827,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadStaticCredentialsAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9201,7 +9847,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPReadStaticRoleAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9221,7 +9867,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPRotateRoleAsync(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9240,7 +9886,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPRotateRootAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9260,7 +9906,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteConfigAsync(LDAPWriteConfigRequest lDAPWriteConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update a library set.
         /// </summary>
@@ -9281,7 +9927,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteLibraryAsync(string name, LDAPWriteLibraryRequest lDAPWriteLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9302,7 +9948,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteRoleAsync(string name, LDAPWriteRoleRequest lDAPWriteRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9323,7 +9969,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LDAPWriteStaticRoleAsync(string name, LDAPWriteStaticRoleRequest lDAPWriteStaticRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
         /// </summary>
@@ -9343,7 +9989,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasDeleteRoleAsync(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List the existing roles in this backend
         /// </summary>
@@ -9362,7 +10008,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasListRolesAsync(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the  credentials that are used to manage Database Users.
         /// </summary>
@@ -9381,7 +10027,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasReadConfigAsync(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate MongoDB Atlas Programmatic API from a specific Vault role.
         /// </summary>
@@ -9401,7 +10047,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasReadCredentialsAsync(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
         /// </summary>
@@ -9421,7 +10067,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasReadRoleAsync(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the  credentials that are used to manage Database Users.
         /// </summary>
@@ -9441,7 +10087,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasWriteConfigAsync(MongoDBAtlasWriteConfigRequest mongoDBAtlasWriteConfigRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate MongoDB Atlas Programmatic API from a specific Vault role.
         /// </summary>
@@ -9461,7 +10107,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasWriteCredentialsAsync(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
         /// </summary>
@@ -9482,7 +10128,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDBAtlasWriteRoleAsync(string name, MongoDBAtlasWriteRoleRequest mongoDBAtlasWriteRoleRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9501,7 +10147,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadDeleteAccessConfigAsync(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the lease parameters for generated tokens
         /// </summary>
@@ -9520,7 +10166,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadDeleteLeaseConfigAsync(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9540,7 +10186,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadDeleteRoleAsync(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9559,7 +10205,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadListRolesAsync(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9578,7 +10224,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadReadAccessConfigAsync(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9598,7 +10244,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadReadCredentialsAsync(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the lease parameters for generated tokens
         /// </summary>
@@ -9617,7 +10263,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadReadLeaseConfigAsync(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9637,7 +10283,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadReadRoleAsync(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9657,7 +10303,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadWriteAccessConfigAsync(NomadWriteAccessConfigRequest nomadWriteAccessConfigRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the lease parameters for generated tokens
         /// </summary>
@@ -9677,7 +10323,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadWriteLeaseConfigAsync(NomadWriteLeaseConfigRequest nomadWriteLeaseConfigRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9698,7 +10344,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> NomadWriteRoleAsync(string name, NomadWriteRoleRequest nomadWriteRoleRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check service accounts in to the library.
         /// </summary>
@@ -9719,7 +10365,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPCheckInLibraryAsync(string name, OpenLDAPCheckInLibraryRequest openLDAPCheckInLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check service accounts in to the library.
         /// </summary>
@@ -9740,7 +10386,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPCheckInManageLibraryAsync(string name, OpenLDAPCheckInManageLibraryRequest openLDAPCheckInManageLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check a service account out from the library.
         /// </summary>
@@ -9761,7 +10407,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPCheckOutLibraryAsync(string name, OpenLDAPCheckOutLibraryRequest openLDAPCheckOutLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9780,7 +10426,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPDeleteConfigAsync(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a library set.
         /// </summary>
@@ -9800,7 +10446,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPDeleteLibraryAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9820,7 +10466,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPDeleteRoleAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9840,7 +10486,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPDeleteStaticRoleAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9859,7 +10505,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPListLibrariesAsync(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9878,7 +10524,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPListRolesAsync(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9897,7 +10543,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPListStaticRolesAsync(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9916,7 +10562,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadConfigAsync(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9936,7 +10582,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadCredentialsAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read a library set.
         /// </summary>
@@ -9956,7 +10602,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadLibraryAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Check the status of the service accounts in a library set.
         /// </summary>
@@ -9976,7 +10622,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadLibraryStatusAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -9996,7 +10642,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadRoleAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10016,7 +10662,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadStaticCredentialsAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10036,7 +10682,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPReadStaticRoleAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10056,7 +10702,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPRotateRoleAsync(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10075,7 +10721,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPRotateRootAsync(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10095,7 +10741,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPWriteConfigAsync(OpenLDAPWriteConfigRequest openLDAPWriteConfigRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update a library set.
         /// </summary>
@@ -10116,7 +10762,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPWriteLibraryAsync(string name, OpenLDAPWriteLibraryRequest openLDAPWriteLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10137,7 +10783,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPWriteRoleAsync(string name, OpenLDAPWriteRoleRequest openLDAPWriteRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10158,7 +10804,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OpenLDAPWriteStaticRoleAsync(string name, OpenLDAPWriteStaticRoleRequest openLDAPWriteStaticRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10178,7 +10824,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIBundleWriteAsync(PKIBundleWriteRequest pKIBundleWriteRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10198,7 +10844,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIDeleteKeyAsync(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10218,7 +10864,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIDeleteRoleAsync(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10237,7 +10883,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIDeleteRootAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10258,7 +10904,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIGenerateRootAsync(string exported, PKIGenerateRootRequest pKIGenerateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10278,7 +10924,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIImportKeysAsync(PKIImportKeysRequest pKIImportKeysRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10300,7 +10946,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerIssueRoleAsync(string issuerRef, string role, PKIIssuerIssueRoleRequest pKIIssuerIssueRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10321,7 +10967,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerResignCRLsAsync(string issuerRef, PKIIssuerResignCRLsRequest pKIIssuerResignCRLsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10341,7 +10987,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerRevokeAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10362,7 +11008,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerSignIntermediateAsync(string issuerRef, PKIIssuerSignIntermediateRequest pKIIssuerSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10383,7 +11029,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerSignRevocationListAsync(string issuerRef, PKIIssuerSignRevocationListRequest pKIIssuerSignRevocationListRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10405,7 +11051,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerSignRoleAsync(string issuerRef, string role, PKIIssuerSignRoleRequest pKIIssuerSignRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10426,7 +11072,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerSignSelfIssuedAsync(string issuerRef, PKIIssuerSignSelfIssuedRequest pKIIssuerSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10447,7 +11093,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerSignVerbatimAsync(string issuerRef, PKIIssuerSignVerbatimRequest pKIIssuerSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10469,7 +11115,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuerSignVerbatimRoleAsync(string issuerRef, string role, PKIIssuerSignVerbatimRoleRequest pKIIssuerSignVerbatimRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10490,7 +11136,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuersGenerateIntermediateAsync(string exported, PKIIssuersGenerateIntermediateRequest pKIIssuersGenerateIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10511,7 +11157,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuersGenerateRootAsync(string exported, PKIIssuersGenerateRootRequest pKIIssuersGenerateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10530,7 +11176,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIIssuersListAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10549,7 +11195,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIListCertsAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10568,7 +11214,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIListCertsRevokedAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10587,7 +11233,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIListKeysAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10606,7 +11252,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIListRolesAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10625,7 +11271,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadAutoTidyConfigAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10644,7 +11290,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCAAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10663,7 +11309,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCAChainAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10682,7 +11328,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCAPemAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10701,7 +11347,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCRLAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10720,7 +11366,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCRLConfigAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10739,7 +11385,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCRLRotateAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10758,7 +11404,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCRLRotateDeltaAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10778,7 +11424,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCertAsync(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10797,7 +11443,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCertCAChainAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10817,7 +11463,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCertRawAsync(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10837,7 +11483,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadCertRawPemAsync(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10856,7 +11502,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadClusterConfigAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10875,7 +11521,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadDeltaCRLAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10894,7 +11540,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadIssuersConfigAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10914,7 +11560,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadKeyAsync(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10933,7 +11579,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadKeysConfigAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10953,7 +11599,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadOCSPReqAsync(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10973,7 +11619,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadRoleAsync(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -10992,7 +11638,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReadURLConfigAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11012,7 +11658,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIReplaceRootAsync(PKIReplaceRootRequest pKIReplaceRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11032,7 +11678,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIRevokeAsync(PKIRevokeRequest pKIRevokeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11052,7 +11698,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIRevokeWithKeyAsync(PKIRevokeWithKeyRequest pKIRevokeWithKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11072,7 +11718,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIRootSignIntermediateAsync(PKIRootSignIntermediateRequest pKIRootSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11092,7 +11738,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIRootSignSelfIssuedAsync(PKIRootSignSelfIssuedRequest pKIRootSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11113,7 +11759,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIRotateRootAsync(string exported, PKIRotateRootRequest pKIRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11134,7 +11780,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKISignRoleAsync(string role, PKISignRoleRequest pKISignRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11154,7 +11800,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKISignVerbatimAsync(PKISignVerbatimRequest pKISignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11175,7 +11821,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKISignVerbatimRoleAsync(string role, PKISignVerbatimRoleRequest pKISignVerbatimRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11195,7 +11841,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKITidyAsync(PKITidyRequest pKITidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11214,7 +11860,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKITidyCancelAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11233,7 +11879,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKITidyStatusAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11253,7 +11899,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteAutoTidyConfigAsync(PKIWriteAutoTidyConfigRequest pKIWriteAutoTidyConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11273,7 +11919,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteCAConfigAsync(PKIWriteCAConfigRequest pKIWriteCAConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11293,7 +11939,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteCRLConfigAsync(PKIWriteCRLConfigRequest pKIWriteCRLConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11313,7 +11959,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteCertsAsync(PKIWriteCertsRequest pKIWriteCertsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11333,7 +11979,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteClusterConfigAsync(PKIWriteClusterConfigRequest pKIWriteClusterConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11353,7 +11999,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteIntermediateCrossSignAsync(PKIWriteIntermediateCrossSignRequest pKIWriteIntermediateCrossSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11374,7 +12020,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteIntermediateGenerateAsync(string exported, PKIWriteIntermediateGenerateRequest pKIWriteIntermediateGenerateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11394,7 +12040,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteIntermediateSetSignedAsync(PKIWriteIntermediateSetSignedRequest pKIWriteIntermediateSetSignedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11414,7 +12060,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteInternalExportedAsync(PKIWriteInternalExportedRequest pKIWriteInternalExportedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11435,7 +12081,28 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteIssueRoleAsync(string role, PKIWriteIssueRoleRequest pKIWriteIssueRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PKIWriteIssuerRefDerPEMAsync(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
         /// <summary>
         /// 
         /// </summary>
@@ -11455,7 +12122,27 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteIssuersConfigAsync(PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteJSONRequest"></param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PKIWriteJSONAsync(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
         /// <summary>
         /// 
         /// </summary>
@@ -11475,7 +12162,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteKMSAsync(PKIWriteKMSRequest pKIWriteKMSRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11496,7 +12183,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteKeyAsync(string keyRef, PKIWriteKeyRequest pKIWriteKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11516,7 +12203,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteKeysConfigAsync(PKIWriteKeysConfigRequest pKIWriteKeysConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11535,7 +12222,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteOCSPAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11556,7 +12243,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteRoleAsync(string name, PKIWriteRoleRequest pKIWriteRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11576,7 +12263,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PKIWriteURLConfigAsync(PKIWriteURLConfigRequest pKIWriteURLConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11596,7 +12283,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiDeleteIssuerRefDerPemAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11615,7 +12302,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiDeleteJsonAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11634,7 +12321,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadDeltaAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11653,7 +12340,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadDeltaPemAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11672,7 +12359,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadDerAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11692,7 +12379,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadIssuerRefCrlPemDerDeltaPemAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11712,7 +12399,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadIssuerRefDerPemAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11731,7 +12418,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadJsonAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -11750,48 +12437,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadPemAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PkiWriteIssuerRefDerPemAsync(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteJsonRequest"></param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PkiWriteJsonAsync(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles that can be created with this backend.
         /// </summary>
@@ -11811,7 +12457,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQDeleteRoleAsync(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles that can be created with this backend.
         /// </summary>
@@ -11830,7 +12476,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQListRolesAsync(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Request RabbitMQ credentials for a certain role.
         /// </summary>
@@ -11850,7 +12496,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQReadCredentialsAsync(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the lease parameters for generated credentials
         /// </summary>
@@ -11869,7 +12515,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQReadLeaseConfigAsync(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles that can be created with this backend.
         /// </summary>
@@ -11889,7 +12535,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQReadRoleAsync(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
         /// </summary>
@@ -11909,7 +12555,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQWriteConnectionConfigAsync(RabbitMQWriteConnectionConfigRequest rabbitMQWriteConnectionConfigRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure the lease parameters for generated credentials
         /// </summary>
@@ -11929,7 +12575,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQWriteLeaseConfigAsync(RabbitMQWriteLeaseConfigRequest rabbitMQWriteLeaseConfigRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the roles that can be created with this backend.
         /// </summary>
@@ -11950,7 +12596,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> RabbitMQWriteRoleAsync(string name, RabbitMQWriteRoleRequest rabbitMQWriteRoleRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Set the SSH private key used for signing certificates.
         /// </summary>
@@ -11969,7 +12615,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHDeleteCAConfigAsync(string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register a shared private key with Vault.
         /// </summary>
@@ -11989,7 +12635,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHDeleteKeysAsync(string keyName, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend.
         /// </summary>
@@ -12009,7 +12655,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHDeleteRoleAsync(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Assign zero address as default CIDR block for select roles.
         /// </summary>
@@ -12028,7 +12674,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHDeleteZeroAddressConfigAsync(string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend.
         /// </summary>
@@ -12047,7 +12693,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHListRolesAsync(string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the roles associated with the given IP address.
         /// </summary>
@@ -12067,7 +12713,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHLookupAsync(SSHLookupRequest sSHLookupRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Set the SSH private key used for signing certificates.
         /// </summary>
@@ -12086,7 +12732,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHReadCAConfigAsync(string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Retrieve the public key.
         /// </summary>
@@ -12105,7 +12751,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHReadPublicKeyAsync(string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend.
         /// </summary>
@@ -12125,7 +12771,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHReadRoleAsync(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Assign zero address as default CIDR block for select roles.
         /// </summary>
@@ -12144,7 +12790,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHReadZeroAddressConfigAsync(string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Request signing an SSH key using a certain role with the provided details.
         /// </summary>
@@ -12165,7 +12811,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHSignAsync(string role, SSHSignRequest sSHSignRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Validate the OTP provided by Vault SSH Agent.
         /// </summary>
@@ -12185,7 +12831,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHVerifyAsync(SSHVerifyRequest sSHVerifyRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Set the SSH private key used for signing certificates.
         /// </summary>
@@ -12205,7 +12851,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHWriteCAConfigAsync(SSHWriteCAConfigRequest sSHWriteCAConfigRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Creates a credential for establishing SSH connection with the remote host.
         /// </summary>
@@ -12226,7 +12872,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHWriteCredentialsAsync(string role, SSHWriteCredentialsRequest sSHWriteCredentialsRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12247,7 +12893,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHWriteIssueAsync(string role, SSHWriteIssueRequest sSHWriteIssueRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Register a shared private key with Vault.
         /// </summary>
@@ -12268,7 +12914,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHWriteKeysAsync(string keyName, SSHWriteKeysRequest sSHWriteKeysRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the &#39;roles&#39; that can be created with this backend.
         /// </summary>
@@ -12289,7 +12935,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHWriteRoleAsync(string role, SSHWriteRoleRequest sSHWriteRoleRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Assign zero address as default CIDR block for select roles.
         /// </summary>
@@ -12309,7 +12955,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> SSHWriteZeroAddressConfigAsync(SSHWriteZeroAddressConfigRequest sSHWriteZeroAddressConfigRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the keys that can be created with this backend.
         /// </summary>
@@ -12329,7 +12975,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TOTPDeleteKeyAsync(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the keys that can be created with this backend.
         /// </summary>
@@ -12348,7 +12994,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TOTPListKeysAsync(string totpMountPath = "totp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Request time-based one-time use password or validate a password for a certain key .
         /// </summary>
@@ -12368,7 +13014,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TOTPReadCodeAsync(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the keys that can be created with this backend.
         /// </summary>
@@ -12388,7 +13034,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TOTPReadKeyAsync(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Request time-based one-time use password or validate a password for a certain key .
         /// </summary>
@@ -12409,7 +13055,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TOTPWriteCodeAsync(string name, TOTPWriteCodeRequest tOTPWriteCodeRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Manage the keys that can be created with this backend.
         /// </summary>
@@ -12430,7 +13076,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TOTPWriteKeyAsync(string name, TOTPWriteKeyRequest tOTPWriteKeyRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12449,7 +13095,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformDeleteConfigAsync(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12469,7 +13115,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformDeleteRoleAsync(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12488,7 +13134,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformListRolesAsync(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12507,7 +13153,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformReadConfigAsync(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
         /// </summary>
@@ -12527,7 +13173,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformReadCredentialsAsync(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12547,7 +13193,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformReadRoleAsync(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12567,7 +13213,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformRotateRoleAsync(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12587,7 +13233,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformWriteConfigAsync(TerraformWriteConfigRequest terraformWriteConfigRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
         /// </summary>
@@ -12607,7 +13253,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformWriteCredentialsAsync(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -12628,7 +13274,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformWriteRoleAsync(string name, TerraformWriteRoleRequest terraformWriteRoleRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Backup the named key
         /// </summary>
@@ -12648,7 +13294,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitBackupAsync(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Decrypt a ciphertext value using a named key
         /// </summary>
@@ -12669,7 +13315,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitDecryptAsync(string name, TransitDecryptRequest transitDecryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Managed named encryption keys
         /// </summary>
@@ -12689,7 +13335,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitDeleteKeyAsync(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Encrypt a plaintext value or a batch of plaintext blocks using a named key
         /// </summary>
@@ -12710,7 +13356,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitEncryptAsync(string name, TransitEncryptRequest transitEncryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Export named encryption or signing key
         /// </summary>
@@ -12731,7 +13377,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitExportAsync(string name, string type, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Export named encryption or signing key
         /// </summary>
@@ -12753,7 +13399,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitExportVersionAsync(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a data key
         /// </summary>
@@ -12775,7 +13421,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitGenerateDataKeyAsync(string name, string plaintext, TransitGenerateDataKeyRequest transitGenerateDataKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate an HMAC for input data using the named key
         /// </summary>
@@ -12796,7 +13442,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitGenerateHMACAsync(string name, TransitGenerateHMACRequest transitGenerateHMACRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate an HMAC for input data using the named key
         /// </summary>
@@ -12818,7 +13464,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitGenerateHMACWithAlgorithmAsync(string name, string urlalgorithm, TransitGenerateHMACWithAlgorithmRequest transitGenerateHMACWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -12838,7 +13484,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitGenerateRandomAsync(TransitGenerateRandomRequest transitGenerateRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -12859,7 +13505,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitGenerateRandomSourceAsync(string source, TransitGenerateRandomSourceRequest transitGenerateRandomSourceRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -12881,7 +13527,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitGenerateRandomSourceBytesAsync(string source, string urlbytes, TransitGenerateRandomSourceBytesRequest transitGenerateRandomSourceBytesRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -12901,7 +13547,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitHashAsync(TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -12922,7 +13568,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitHashWithAlgorithmAsync(string urlalgorithm, TransitHashWithAlgorithmRequest transitHashWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Imports an externally-generated key into a new transit key
         /// </summary>
@@ -12943,7 +13589,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitImportKeyAsync(string name, TransitImportKeyRequest transitImportKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Imports an externally-generated key into an existing imported key
         /// </summary>
@@ -12964,7 +13610,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitImportKeyVersionAsync(string name, TransitImportKeyVersionRequest transitImportKeyVersionRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Managed named encryption keys
         /// </summary>
@@ -12983,7 +13629,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitListKeysAsync(string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Returns the size of the active cache
         /// </summary>
@@ -13002,7 +13648,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitReadCacheConfigAsync(string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configuration common across all keys
         /// </summary>
@@ -13021,7 +13667,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitReadConfigKeysAsync(string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Managed named encryption keys
         /// </summary>
@@ -13041,7 +13687,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitReadKeyAsync(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Returns the public key to use for wrapping imported keys
         /// </summary>
@@ -13060,7 +13706,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitReadWrappingKeyAsync(string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Restore the named key
         /// </summary>
@@ -13080,7 +13726,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitRestoreAsync(TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Restore the named key
         /// </summary>
@@ -13101,7 +13747,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitRestoreKeyAsync(string name, TransitRestoreKeyRequest transitRestoreKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Rewrap ciphertext
         /// </summary>
@@ -13122,7 +13768,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitRewrapAsync(string name, TransitRewrapRequest transitRewrapRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Rotate named encryption key
         /// </summary>
@@ -13142,7 +13788,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitRotateKeyAsync(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a signature for input data using the named key
         /// </summary>
@@ -13163,7 +13809,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitSignAsync(string name, TransitSignRequest transitSignRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate a signature for input data using the named key
         /// </summary>
@@ -13185,7 +13831,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitSignWithAlgorithmAsync(string name, string urlalgorithm, TransitSignWithAlgorithmRequest transitSignWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Trim key versions of a named key
         /// </summary>
@@ -13206,7 +13852,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitTrimKeyAsync(string name, TransitTrimKeyRequest transitTrimKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key
         /// </summary>
@@ -13227,7 +13873,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitVerifyAsync(string name, TransitVerifyRequest transitVerifyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key
         /// </summary>
@@ -13249,7 +13895,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitVerifyWithAlgorithmAsync(string name, string urlalgorithm, TransitVerifyWithAlgorithmRequest transitVerifyWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configures a new cache of the specified size
         /// </summary>
@@ -13269,7 +13915,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitWriteCacheConfigAsync(TransitWriteCacheConfigRequest transitWriteCacheConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configuration common across all keys
         /// </summary>
@@ -13289,7 +13935,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitWriteConfigKeysAsync(TransitWriteConfigKeysRequest transitWriteConfigKeysRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Managed named encryption keys
         /// </summary>
@@ -13310,7 +13956,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitWriteKeyAsync(string name, TransitWriteKeyRequest transitWriteKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Configure a named encryption key
         /// </summary>
@@ -13331,7 +13977,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitWriteKeyConfigAsync(string name, TransitWriteKeyConfigRequest transitWriteKeyConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -13376,7 +14022,7 @@ namespace Vault.Api
         public Secrets(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");
-            
+
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
@@ -20326,6 +20972,2058 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("CubbyholeWrite", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseDeleteConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseDeleteConfig");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Delete<Object>("/{database_mount_path}/config/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseDeleteConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseDeleteConfigAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseDeleteConfig");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{database_mount_path}/config/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseDeleteConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseDeleteRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseDeleteRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Delete<Object>("/{database_mount_path}/roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseDeleteRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseDeleteRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseDeleteRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{database_mount_path}/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseDeleteRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseDeleteStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseDeleteStaticRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Delete<Object>("/{database_mount_path}/static-roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseDeleteStaticRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseDeleteStaticRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseDeleteStaticRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{database_mount_path}/static-roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseDeleteStaticRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseListConfig(string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/config", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseListConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseListConfigAsync(string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/config", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseListConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseListRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/roles", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseListRoles", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseListRolesAsync(string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseListRoles", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseListStaticRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/static-roles", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseListStaticRoles", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseListStaticRolesAsync(string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/static-roles", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseListStaticRoles", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseReadConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadConfig");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/config/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseReadConfigAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadConfig");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/config/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Request database credentials for a certain role. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseReadCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadCredentials");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/creds/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadCredentials", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Request database credentials for a certain role. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseReadCredentialsAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadCredentials");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadCredentials", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseReadRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseReadRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Request database credentials for a certain static role. These credentials are rotated periodically. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseReadStaticCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadStaticCredentials");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/static-creds/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadStaticCredentials", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Request database credentials for a certain static role. These credentials are rotated periodically. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseReadStaticCredentialsAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadStaticCredentials");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/static-creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadStaticCredentials", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseReadStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadStaticRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{database_mount_path}/static-roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadStaticRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseReadStaticRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReadStaticRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/static-roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReadStaticRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Resets a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseReset(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReset");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{database_mount_path}/reset/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReset", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Resets a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseResetAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseReset");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{database_mount_path}/reset/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseReset", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseRotateRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseRotateRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{database_mount_path}/rotate-role/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseRotateRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the static role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseRotateRoleAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseRotateRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{database_mount_path}/rotate-role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseRotateRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseRotateRoot(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseRotateRoot");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{database_mount_path}/rotate-root/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseRotateRoot", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseRotateRootAsync(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseRotateRoot");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{database_mount_path}/rotate-root/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseRotateRoot", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteConfigRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseWriteConfig(string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseWriteConfig");
+
+            // verify the required parameter 'databaseWriteConfigRequest' is set
+            if (databaseWriteConfigRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'databaseWriteConfigRequest' when calling Secrets->DatabaseWriteConfig");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = databaseWriteConfigRequest;
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{database_mount_path}/config/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseWriteConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Configure connection details to a database plugin. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteConfigRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of this database connection</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseWriteConfigAsync(string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseWriteConfig");
+
+            // verify the required parameter 'databaseWriteConfigRequest' is set
+            if (databaseWriteConfigRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'databaseWriteConfigRequest' when calling Secrets->DatabaseWriteConfig");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = databaseWriteConfigRequest;
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{database_mount_path}/config/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseWriteConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseWriteRole(string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseWriteRole");
+
+            // verify the required parameter 'databaseWriteRoleRequest' is set
+            if (databaseWriteRoleRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'databaseWriteRoleRequest' when calling Secrets->DatabaseWriteRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = databaseWriteRoleRequest;
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{database_mount_path}/roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseWriteRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseWriteRoleAsync(string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseWriteRole");
+
+            // verify the required parameter 'databaseWriteRoleRequest' is set
+            if (databaseWriteRoleRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'databaseWriteRoleRequest' when calling Secrets->DatabaseWriteRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = databaseWriteRoleRequest;
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{database_mount_path}/roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseWriteRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteStaticRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> DatabaseWriteStaticRole(string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseWriteStaticRole");
+
+            // verify the required parameter 'databaseWriteStaticRoleRequest' is set
+            if (databaseWriteStaticRoleRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'databaseWriteStaticRoleRequest' when calling Secrets->DatabaseWriteStaticRole");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = databaseWriteStaticRoleRequest;
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{database_mount_path}/static-roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseWriteStaticRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Manage the static roles that can be created with this backend. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="databaseWriteStaticRoleRequest"></param>
+        /// <param name="databaseMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;database&quot;)</param>
+        /// <param name="name">Name of the role.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> DatabaseWriteStaticRoleAsync(string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->DatabaseWriteStaticRole");
+
+            // verify the required parameter 'databaseWriteStaticRoleRequest' is set
+            if (databaseWriteStaticRoleRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'databaseWriteStaticRoleRequest' when calling Secrets->DatabaseWriteStaticRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (databaseMountPath != null)
+            {
+                requestOptions.PathParameters.Add("database_mount_path", ClientUtils.ParameterToString(databaseMountPath)); // path parameter
+            }
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+            requestOptions.Data = databaseWriteStaticRoleRequest;
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{database_mount_path}/static-roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("DatabaseWriteStaticRole", response);
                 if (exception != null) throw exception;
             }
 
@@ -44195,6 +46893,140 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+            // verify the required parameter 'pKIWriteIssuerRefDerPEMRequest' is set
+            if (pKIWriteIssuerRefDerPEMRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pKIWriteIssuerRefDerPEMRequest' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+            if (pkiMountPath != null)
+            {
+                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+            }
+            requestOptions.Data = pKIWriteIssuerRefDerPEMRequest;
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PKIWriteIssuerRefDerPEM", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PKIWriteIssuerRefDerPEMAsync(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+            // verify the required parameter 'pKIWriteIssuerRefDerPEMRequest' is set
+            if (pKIWriteIssuerRefDerPEMRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pKIWriteIssuerRefDerPEMRequest' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+            if (pkiMountPath != null)
+            {
+                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+            }
+            requestOptions.Data = pKIWriteIssuerRefDerPEMRequest;
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PKIWriteIssuerRefDerPEM", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pKIWriteIssuersConfigRequest"></param>
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -44306,6 +47138,128 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("PKIWriteIssuersConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteJSONRequest"></param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PKIWriteJSON(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'pKIWriteJSONRequest' is set
+            if (pKIWriteJSONRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pKIWriteJSONRequest' when calling Secrets->PKIWriteJSON");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (pkiMountPath != null)
+            {
+                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+            }
+            requestOptions.Data = pKIWriteJSONRequest;
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}//json", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PKIWriteJSON", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteJSONRequest"></param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PKIWriteJSONAsync(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'pKIWriteJSONRequest' is set
+            if (pKIWriteJSONRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pKIWriteJSONRequest' when calling Secrets->PKIWriteJSON");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (pkiMountPath != null)
+            {
+                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+            }
+            requestOptions.Data = pKIWriteJSONRequest;
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}//json", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PKIWriteJSON", response);
                 if (exception != null) throw exception;
             }
 
@@ -46056,262 +49010,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("PkiReadPem", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> PkiWriteIssuerRefDerPem(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-        {
-            // verify the required parameter 'issuerRef' is set
-            if (issuerRef == null)
-                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-            // verify the required parameter 'pkiWriteIssuerRefDerPemRequest' is set
-            if (pkiWriteIssuerRefDerPemRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerRefDerPemRequest' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-            if (pkiMountPath != null)
-            {
-                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-            }
-            requestOptions.Data = pkiWriteIssuerRefDerPemRequest;
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiWriteIssuerRefDerPem", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PkiWriteIssuerRefDerPemAsync(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'issuerRef' is set
-            if (issuerRef == null)
-                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-            // verify the required parameter 'pkiWriteIssuerRefDerPemRequest' is set
-            if (pkiWriteIssuerRefDerPemRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerRefDerPemRequest' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-            if (pkiMountPath != null)
-            {
-                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-            }
-            requestOptions.Data = pkiWriteIssuerRefDerPemRequest;
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiWriteIssuerRefDerPem", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteJsonRequest"></param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> PkiWriteJson(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-        {
-            // verify the required parameter 'pkiWriteJsonRequest' is set
-            if (pkiWriteJsonRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiWriteJsonRequest' when calling Secrets->PkiWriteJson");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            if (pkiMountPath != null)
-            {
-                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-            }
-            requestOptions.Data = pkiWriteJsonRequest;
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{pki_mount_path}//json", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiWriteJson", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteJsonRequest"></param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PkiWriteJsonAsync(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'pkiWriteJsonRequest' is set
-            if (pkiWriteJsonRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiWriteJsonRequest' when calling Secrets->PkiWriteJson");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            if (pkiMountPath != null)
-            {
-                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-            }
-            requestOptions.Data = pkiWriteJsonRequest;
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}//json", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiWriteJson", response);
                 if (exception != null) throw exception;
             }
 

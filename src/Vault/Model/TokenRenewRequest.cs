@@ -96,11 +96,11 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Increment == input.Increment ||
                     this.Increment.Equals(input.Increment)
-                ) && 
+                ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&

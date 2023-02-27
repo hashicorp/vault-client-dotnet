@@ -1813,7 +1813,7 @@ namespace Vault.Api
     public interface IIdentityAsync : IApiAccessor
     {
         #region Asynchronous Operations
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -1832,7 +1832,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliasDeleteByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the alias IDs.
         /// </summary>
@@ -1850,7 +1850,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliasListByIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -1869,7 +1869,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliasReadByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a new alias.
         /// </summary>
@@ -1888,7 +1888,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliasWriteAsync(AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -1908,7 +1908,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AliasWriteByIDAsync(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete all of the entities provided
         /// </summary>
@@ -1927,7 +1927,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityBatchDeleteAsync(EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -1946,7 +1946,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityDeleteAliasByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an entity using entity ID
         /// </summary>
@@ -1965,7 +1965,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityDeleteByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an entity using entity name
         /// </summary>
@@ -1984,7 +1984,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityDeleteByNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the alias IDs.
         /// </summary>
@@ -2002,7 +2002,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityListAliasesByIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the entity IDs
         /// </summary>
@@ -2020,7 +2020,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityListByIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the entity names
         /// </summary>
@@ -2038,7 +2038,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityListByNameAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Query entities based on various properties.
         /// </summary>
@@ -2057,7 +2057,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityLookupAsync(EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Merge two or more entities together
         /// </summary>
@@ -2076,7 +2076,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityMergeAsync(EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -2095,7 +2095,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityReadAliasByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an entity using entity ID
         /// </summary>
@@ -2114,7 +2114,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityReadByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an entity using entity name
         /// </summary>
@@ -2133,7 +2133,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityReadByNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a new entity
         /// </summary>
@@ -2152,7 +2152,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityWriteAsync(EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a new alias.
         /// </summary>
@@ -2171,7 +2171,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityWriteAliasAsync(EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -2191,7 +2191,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityWriteAliasByIDAsync(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an entity using entity ID
         /// </summary>
@@ -2211,7 +2211,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityWriteByIDAsync(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an entity using entity name
         /// </summary>
@@ -2231,7 +2231,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> EntityWriteByNameAsync(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2250,7 +2250,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupDeleteAliasByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or delete an existing group using its ID.
         /// </summary>
@@ -2269,7 +2269,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupDeleteByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2288,7 +2288,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupDeleteByNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the group alias IDs.
         /// </summary>
@@ -2306,7 +2306,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupListAliasesByIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the group IDs.
         /// </summary>
@@ -2324,7 +2324,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupListByIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2342,7 +2342,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupListByNameAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Query groups based on various properties.
         /// </summary>
@@ -2361,7 +2361,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupLookupAsync(GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2380,7 +2380,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupReadAliasByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or delete an existing group using its ID.
         /// </summary>
@@ -2399,7 +2399,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupReadByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2418,7 +2418,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupReadByNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a new group.
         /// </summary>
@@ -2437,7 +2437,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupWriteAsync(GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Creates a new group alias, or updates an existing one.
         /// </summary>
@@ -2456,7 +2456,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupWriteAliasAsync(GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2476,7 +2476,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupWriteAliasByIDAsync(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or delete an existing group using its ID.
         /// </summary>
@@ -2496,7 +2496,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupWriteByIDAsync(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -2516,7 +2516,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GroupWriteByNameAsync(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a login enforcement
         /// </summary>
@@ -2535,7 +2535,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFADeleteLoginEnforcementAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List login enforcements
         /// </summary>
@@ -2553,7 +2553,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAListLoginEnforcementsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity
         /// </summary>
@@ -2572,7 +2572,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodAdminDestroyTOTPAsync(MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
         /// </summary>
@@ -2591,7 +2591,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodAdminGenerateTOTPAsync(MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a configuration for the given MFA method
         /// </summary>
@@ -2610,7 +2610,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodDeleteDuoAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a configuration for the given MFA method
         /// </summary>
@@ -2629,7 +2629,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodDeleteOktaAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a configuration for the given MFA method
         /// </summary>
@@ -2648,7 +2648,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodDeletePingIDAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Delete a configuration for the given MFA method
         /// </summary>
@@ -2667,7 +2667,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodDeleteTOTPAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
         /// </summary>
@@ -2686,7 +2686,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodGenerateTOTPAsync(MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List MFA method configurations for all MFA methods
         /// </summary>
@@ -2704,7 +2704,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodListAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -2722,7 +2722,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodListDuoAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -2740,7 +2740,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodListOktaAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -2758,7 +2758,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodListPingIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -2776,7 +2776,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodListTOTPAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type
         /// </summary>
@@ -2795,7 +2795,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodReadAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current configuration for the given MFA method
         /// </summary>
@@ -2814,7 +2814,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodReadDuoAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current configuration for the given MFA method
         /// </summary>
@@ -2833,7 +2833,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodReadOktaAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current configuration for the given MFA method
         /// </summary>
@@ -2852,7 +2852,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodReadPingIDAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current configuration for the given MFA method
         /// </summary>
@@ -2871,7 +2871,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodReadTOTPAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -2891,7 +2891,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodWriteDuoAsync(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -2911,7 +2911,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodWriteOktaAsync(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -2931,7 +2931,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodWritePingIDAsync(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -2951,7 +2951,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAMethodWriteTOTPAsync(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Read the current login enforcement
         /// </summary>
@@ -2970,7 +2970,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAReadLoginEnforcementAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create or update a login enforcement
         /// </summary>
@@ -2990,7 +2990,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MFAWriteLoginEnforcementAsync(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3009,7 +3009,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteAssignmentAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3028,7 +3028,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteClientAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// CRUD operations for OIDC keys.
         /// </summary>
@@ -3047,7 +3047,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteKeyAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3066,7 +3066,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteProviderAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// CRUD operations on OIDC Roles
         /// </summary>
@@ -3085,7 +3085,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteRoleAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3104,7 +3104,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCDeleteScopeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Verify the authenticity of an OIDC token
         /// </summary>
@@ -3123,7 +3123,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCIntrospectAsync(OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3141,7 +3141,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListAssignmentsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3159,7 +3159,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListClientsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List OIDC keys
         /// </summary>
@@ -3177,7 +3177,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListKeysAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3196,7 +3196,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListProvidersAsync(string allowedClientId = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List configured OIDC roles
         /// </summary>
@@ -3214,7 +3214,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListRolesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3232,7 +3232,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCListScopesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3251,7 +3251,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadAssignmentAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3270,7 +3270,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadClientAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// OIDC configuration
         /// </summary>
@@ -3288,7 +3288,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadConfigAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// CRUD operations for OIDC keys.
         /// </summary>
@@ -3307,7 +3307,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadKeyAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3326,7 +3326,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadProviderAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3345,7 +3345,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadProviderAuthorizeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3364,7 +3364,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadProviderUserInfoAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3383,7 +3383,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadProviderWellKnownKeysAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3402,7 +3402,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadProviderWellKnownOpenIDConfigurationAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// CRUD operations on OIDC Roles
         /// </summary>
@@ -3421,7 +3421,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadRoleAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3440,7 +3440,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadScopeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Generate an OIDC token
         /// </summary>
@@ -3459,7 +3459,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadTokenAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Retrieve public keys
         /// </summary>
@@ -3477,7 +3477,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadWellKnownKeysAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Query OIDC configurations
         /// </summary>
@@ -3495,7 +3495,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCReadWellKnownOpenIDConfigurationAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Rotate a named OIDC key.
         /// </summary>
@@ -3515,7 +3515,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCRotateKeyAsync(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3535,7 +3535,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteAssignmentAsync(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3555,7 +3555,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteClientAsync(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// OIDC configuration
         /// </summary>
@@ -3574,7 +3574,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteConfigAsync(OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// CRUD operations for OIDC keys.
         /// </summary>
@@ -3594,7 +3594,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteKeyAsync(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3614,7 +3614,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteProviderAsync(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3634,7 +3634,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteProviderAuthorizeAsync(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3654,7 +3654,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteProviderTokenAsync(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3673,7 +3673,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteProviderUserInfoAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// CRUD operations on OIDC Roles
         /// </summary>
@@ -3693,7 +3693,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteRoleAsync(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -3713,7 +3713,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OIDCWriteScopeAsync(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -3732,7 +3732,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PersonaIDDeleteByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -3751,7 +3751,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PersonaIDReadByIDAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -3771,7 +3771,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PersonaIDWriteByIDAsync(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// List all the alias IDs.
         /// </summary>
@@ -3789,7 +3789,7 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PersonaListByIDAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-   
+
         /// <summary>
         /// Create a new alias.
         /// </summary>
@@ -3832,7 +3832,7 @@ namespace Vault.Api
         public Identity(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");
-            
+
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;

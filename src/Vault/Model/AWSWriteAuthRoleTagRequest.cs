@@ -126,24 +126,24 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowInstanceMigration == input.AllowInstanceMigration ||
                     this.AllowInstanceMigration.Equals(input.AllowInstanceMigration)
-                ) && 
+                ) &&
                 (
                     this.DisallowReauthentication == input.DisallowReauthentication ||
                     this.DisallowReauthentication.Equals(input.DisallowReauthentication)
-                ) && 
+                ) &&
                 (
                     this.InstanceId == input.InstanceId ||
                     (this.InstanceId != null &&
                     this.InstanceId.Equals(input.InstanceId))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&

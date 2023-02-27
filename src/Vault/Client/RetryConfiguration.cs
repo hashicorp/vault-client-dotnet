@@ -46,7 +46,7 @@ namespace Vault.Client
         public RetryConfiguration(int MaxRetryCount, TimeSpan TimeBetweenRetries)
         {
             RetryPolicy = Policy
-                    .HandleResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))       
+                    .HandleResult<HttpResponseMessage>(r => _retryStatusCodes.Contains(r.StatusCode))
                     .WaitAndRetryAsync(MaxRetryCount, _ => TimeBetweenRetries);
         }
 

@@ -116,21 +116,21 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DisableLocalCaJwt == input.DisableLocalCaJwt ||
                     this.DisableLocalCaJwt.Equals(input.DisableLocalCaJwt)
-                ) && 
+                ) &&
                 (
                     this.KubernetesCaCert == input.KubernetesCaCert ||
                     (this.KubernetesCaCert != null &&
                     this.KubernetesCaCert.Equals(input.KubernetesCaCert))
-                ) && 
+                ) &&
                 (
                     this.KubernetesHost == input.KubernetesHost ||
                     (this.KubernetesHost != null &&
                     this.KubernetesHost.Equals(input.KubernetesHost))
-                ) && 
+                ) &&
                 (
                     this.ServiceAccountJwt == input.ServiceAccountJwt ||
                     (this.ServiceAccountJwt != null &&

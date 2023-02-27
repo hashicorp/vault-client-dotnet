@@ -170,45 +170,45 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
-                ) && 
+                ) &&
                 (
                     this.Context == input.Context ||
                     (this.Context != null &&
                     this.Context.Equals(input.Context))
-                ) && 
+                ) &&
                 (
                     this.HashAlgorithm == input.HashAlgorithm ||
                     (this.HashAlgorithm != null &&
                     this.HashAlgorithm.Equals(input.HashAlgorithm))
-                ) && 
+                ) &&
                 (
                     this.Input == input.Input ||
                     (this.Input != null &&
                     this.Input.Equals(input.Input))
-                ) && 
+                ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
                     this.KeyVersion.Equals(input.KeyVersion)
-                ) && 
+                ) &&
                 (
                     this.MarshalingAlgorithm == input.MarshalingAlgorithm ||
                     (this.MarshalingAlgorithm != null &&
                     this.MarshalingAlgorithm.Equals(input.MarshalingAlgorithm))
-                ) && 
+                ) &&
                 (
                     this.Prehashed == input.Prehashed ||
                     this.Prehashed.Equals(input.Prehashed)
-                ) && 
+                ) &&
                 (
                     this.SaltLength == input.SaltLength ||
                     (this.SaltLength != null &&
                     this.SaltLength.Equals(input.SaltLength))
-                ) && 
+                ) &&
                 (
                     this.SignatureAlgorithm == input.SignatureAlgorithm ||
                     (this.SignatureAlgorithm != null &&

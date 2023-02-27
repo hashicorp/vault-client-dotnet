@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
                     this.SafetyBuffer.Equals(input.SafetyBuffer)

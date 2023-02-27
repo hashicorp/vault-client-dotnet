@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.KeyName == input.KeyName ||
                     (this.KeyName != null &&
                     this.KeyName.Equals(input.KeyName))
-                ) && 
+                ) &&
                 (
                     this.PemBundle == input.PemBundle ||
                     (this.PemBundle != null &&

@@ -166,44 +166,44 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Config == input.Config ||
                     (this.Config != null &&
                     this.Config.Equals(input.Config))
-                ) && 
+                ) &&
                 (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
-                ) && 
+                ) &&
                 (
                     this.ExternalEntropyAccess == input.ExternalEntropyAccess ||
                     this.ExternalEntropyAccess.Equals(input.ExternalEntropyAccess)
-                ) && 
+                ) &&
                 (
                     this.Local == input.Local ||
                     this.Local.Equals(input.Local)
-                ) && 
+                ) &&
                 (
                     this.Options == input.Options ||
                     (this.Options != null &&
                     this.Options.Equals(input.Options))
-                ) && 
+                ) &&
                 (
                     this.PluginName == input.PluginName ||
                     (this.PluginName != null &&
                     this.PluginName.Equals(input.PluginName))
-                ) && 
+                ) &&
                 (
                     this.PluginVersion == input.PluginVersion ||
                     (this.PluginVersion != null &&
                     this.PluginVersion.Equals(input.PluginVersion))
-                ) && 
+                ) &&
                 (
                     this.SealWrap == input.SealWrap ||
                     this.SealWrap.Equals(input.SealWrap)
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

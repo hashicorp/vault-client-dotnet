@@ -137,32 +137,32 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Address == input.Address ||
                     (this.Address != null &&
                     this.Address.Equals(input.Address))
-                ) && 
+                ) &&
                 (
                     this.CaCert == input.CaCert ||
                     (this.CaCert != null &&
                     this.CaCert.Equals(input.CaCert))
-                ) && 
+                ) &&
                 (
                     this.ClientCert == input.ClientCert ||
                     (this.ClientCert != null &&
                     this.ClientCert.Equals(input.ClientCert))
-                ) && 
+                ) &&
                 (
                     this.ClientKey == input.ClientKey ||
                     (this.ClientKey != null &&
                     this.ClientKey.Equals(input.ClientKey))
-                ) && 
+                ) &&
                 (
                     this.Scheme == input.Scheme ||
                     (this.Scheme != null &&
                     this.Scheme.Equals(input.Scheme))
-                ) && 
+                ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&

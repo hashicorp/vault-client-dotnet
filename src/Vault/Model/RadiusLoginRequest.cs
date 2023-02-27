@@ -106,17 +106,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
-                ) && 
+                ) &&
                 (
                     this.Urlusername == input.Urlusername ||
                     (this.Urlusername != null &&
                     this.Urlusername.Equals(input.Urlusername))
-                ) && 
+                ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&

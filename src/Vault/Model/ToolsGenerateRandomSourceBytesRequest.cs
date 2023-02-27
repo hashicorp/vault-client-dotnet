@@ -97,11 +97,11 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Bytes == input.Bytes ||
                     this.Bytes.Equals(input.Bytes)
-                ) && 
+                ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&

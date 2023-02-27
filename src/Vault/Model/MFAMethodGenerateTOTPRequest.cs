@@ -39,7 +39,8 @@ namespace Vault.Model
         public MFAMethodGenerateTOTPRequest(string methodId = default(string))
         {
             // to ensure "methodId" is required (not null)
-            if (methodId == null) {
+            if (methodId == null)
+            {
                 throw new ArgumentNullException("methodId is a required property for MFAMethodGenerateTOTPRequest and cannot be null");
             }
             this.MethodId = methodId;
@@ -95,7 +96,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&

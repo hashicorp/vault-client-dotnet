@@ -128,26 +128,26 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CrlNumber == input.CrlNumber ||
                     this.CrlNumber.Equals(input.CrlNumber)
-                ) && 
+                ) &&
                 (
                     this.Crls == input.Crls ||
                     this.Crls != null &&
                     input.Crls != null &&
                     this.Crls.SequenceEqual(input.Crls)
-                ) && 
+                ) &&
                 (
                     this.DeltaCrlBaseNumber == input.DeltaCrlBaseNumber ||
                     this.DeltaCrlBaseNumber.Equals(input.DeltaCrlBaseNumber)
-                ) && 
+                ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
-                ) && 
+                ) &&
                 (
                     this.NextUpdate == input.NextUpdate ||
                     (this.NextUpdate != null &&

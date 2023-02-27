@@ -147,36 +147,36 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CertType == input.CertType ||
                     (this.CertType != null &&
                     this.CertType.Equals(input.CertType))
-                ) && 
+                ) &&
                 (
                     this.CriticalOptions == input.CriticalOptions ||
                     (this.CriticalOptions != null &&
                     this.CriticalOptions.Equals(input.CriticalOptions))
-                ) && 
+                ) &&
                 (
                     this.Extensions == input.Extensions ||
                     (this.Extensions != null &&
                     this.Extensions.Equals(input.Extensions))
-                ) && 
+                ) &&
                 (
                     this.KeyId == input.KeyId ||
                     (this.KeyId != null &&
                     this.KeyId.Equals(input.KeyId))
-                ) && 
+                ) &&
                 (
                     this.PublicKey == input.PublicKey ||
                     (this.PublicKey != null &&
                     this.PublicKey.Equals(input.PublicKey))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.ValidPrincipals == input.ValidPrincipals ||
                     (this.ValidPrincipals != null &&

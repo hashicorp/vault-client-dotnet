@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
                     this.SecretIdTtl.Equals(input.SecretIdTtl)

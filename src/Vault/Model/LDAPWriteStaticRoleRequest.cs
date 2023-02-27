@@ -106,16 +106,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Dn == input.Dn ||
                     (this.Dn != null &&
                     this.Dn.Equals(input.Dn))
-                ) && 
+                ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
                     this.RotationPeriod.Equals(input.RotationPeriod)
-                ) && 
+                ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&

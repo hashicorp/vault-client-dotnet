@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
-                ) && 
+                ) &&
                 (
                     this.SerialNumber == input.SerialNumber ||
                     (this.SerialNumber != null &&

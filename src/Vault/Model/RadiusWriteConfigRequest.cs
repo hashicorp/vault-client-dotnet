@@ -249,79 +249,79 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DialTimeout == input.DialTimeout ||
                     this.DialTimeout.Equals(input.DialTimeout)
-                ) && 
+                ) &&
                 (
                     this.Host == input.Host ||
                     (this.Host != null &&
                     this.Host.Equals(input.Host))
-                ) && 
+                ) &&
                 (
                     this.NasIdentifier == input.NasIdentifier ||
                     (this.NasIdentifier != null &&
                     this.NasIdentifier.Equals(input.NasIdentifier))
-                ) && 
+                ) &&
                 (
                     this.NasPort == input.NasPort ||
                     this.NasPort.Equals(input.NasPort)
-                ) && 
+                ) &&
                 (
                     this.Port == input.Port ||
                     this.Port.Equals(input.Port)
-                ) && 
+                ) &&
                 (
                     this.ReadTimeout == input.ReadTimeout ||
                     this.ReadTimeout.Equals(input.ReadTimeout)
-                ) && 
+                ) &&
                 (
                     this.Secret == input.Secret ||
                     (this.Secret != null &&
                     this.Secret.Equals(input.Secret))
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.UnregisteredUserPolicies == input.UnregisteredUserPolicies ||
                     (this.UnregisteredUserPolicies != null &&

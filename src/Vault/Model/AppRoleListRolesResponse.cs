@@ -85,7 +85,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Keys == input.Keys ||
                     this.Keys != null &&

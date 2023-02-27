@@ -126,25 +126,25 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Backup == input.Backup ||
                     this.Backup.Equals(input.Backup)
-                ) && 
+                ) &&
                 (
                     this.PgpKeys == input.PgpKeys ||
                     this.PgpKeys != null &&
                     input.PgpKeys != null &&
                     this.PgpKeys.SequenceEqual(input.PgpKeys)
-                ) && 
+                ) &&
                 (
                     this.RequireVerification == input.RequireVerification ||
                     this.RequireVerification.Equals(input.RequireVerification)
-                ) && 
+                ) &&
                 (
                     this.SecretShares == input.SecretShares ||
                     this.SecretShares.Equals(input.SecretShares)
-                ) && 
+                ) &&
                 (
                     this.SecretThreshold == input.SecretThreshold ||
                     this.SecretThreshold.Equals(input.SecretThreshold)

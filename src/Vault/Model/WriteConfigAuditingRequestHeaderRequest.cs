@@ -85,7 +85,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Hmac == input.Hmac ||
                     this.Hmac.Equals(input.Hmac)

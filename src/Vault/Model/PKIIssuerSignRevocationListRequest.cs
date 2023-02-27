@@ -138,31 +138,31 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CrlNumber == input.CrlNumber ||
                     this.CrlNumber.Equals(input.CrlNumber)
-                ) && 
+                ) &&
                 (
                     this.DeltaCrlBaseNumber == input.DeltaCrlBaseNumber ||
                     this.DeltaCrlBaseNumber.Equals(input.DeltaCrlBaseNumber)
-                ) && 
+                ) &&
                 (
                     this.Extensions == input.Extensions ||
                     this.Extensions != null &&
                     input.Extensions != null &&
                     this.Extensions.SequenceEqual(input.Extensions)
-                ) && 
+                ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
-                ) && 
+                ) &&
                 (
                     this.NextUpdate == input.NextUpdate ||
                     (this.NextUpdate != null &&
                     this.NextUpdate.Equals(input.NextUpdate))
-                ) && 
+                ) &&
                 (
                     this.RevokedCerts == input.RevokedCerts ||
                     this.RevokedCerts != null &&

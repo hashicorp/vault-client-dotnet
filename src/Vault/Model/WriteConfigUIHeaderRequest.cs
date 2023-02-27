@@ -96,11 +96,11 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Multivalue == input.Multivalue ||
                     this.Multivalue.Equals(input.Multivalue)
-                ) && 
+                ) &&
                 (
                     this.Values == input.Values ||
                     this.Values != null &&
