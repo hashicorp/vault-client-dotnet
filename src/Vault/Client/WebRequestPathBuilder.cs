@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: MPL-2.0
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
-
 using System.Collections.Generic;
 using System.Web;
 
