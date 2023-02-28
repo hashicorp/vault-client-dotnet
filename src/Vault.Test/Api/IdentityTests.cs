@@ -9,10 +9,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
+
 using Xunit;
 
 using Vault.Client;
 using Vault.Api;
+
 // uncomment below to import models
 //using Vault.Model;
 
@@ -100,8 +102,7 @@ namespace Vault.Test.Api
         public void AliasWriteByIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //AliasWriteByIDRequest aliasWriteByIDRequest = null;
+            //string id = null;//AliasWriteByIDRequest aliasWriteByIDRequest = null;
             //instance.AliasWriteByID(id, aliasWriteByIDRequest);
         }
 
@@ -266,8 +267,7 @@ namespace Vault.Test.Api
         public void EntityWriteAliasByIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //EntityWriteAliasByIDRequest entityWriteAliasByIDRequest = null;
+            //string id = null;//EntityWriteAliasByIDRequest entityWriteAliasByIDRequest = null;
             //instance.EntityWriteAliasByID(id, entityWriteAliasByIDRequest);
         }
 
@@ -278,8 +278,7 @@ namespace Vault.Test.Api
         public void EntityWriteByIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //EntityWriteByIDRequest entityWriteByIDRequest = null;
+            //string id = null;//EntityWriteByIDRequest entityWriteByIDRequest = null;
             //instance.EntityWriteByID(id, entityWriteByIDRequest);
         }
 
@@ -290,8 +289,7 @@ namespace Vault.Test.Api
         public void EntityWriteByNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //EntityWriteByNameRequest entityWriteByNameRequest = null;
+            //string name = null;//EntityWriteByNameRequest entityWriteByNameRequest = null;
             //instance.EntityWriteByName(name, entityWriteByNameRequest);
         }
 
@@ -434,8 +432,7 @@ namespace Vault.Test.Api
         public void GroupWriteAliasByIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //GroupWriteAliasByIDRequest groupWriteAliasByIDRequest = null;
+            //string id = null;//GroupWriteAliasByIDRequest groupWriteAliasByIDRequest = null;
             //instance.GroupWriteAliasByID(id, groupWriteAliasByIDRequest);
         }
 
@@ -446,8 +443,7 @@ namespace Vault.Test.Api
         public void GroupWriteByIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //GroupWriteByIDRequest groupWriteByIDRequest = null;
+            //string id = null;//GroupWriteByIDRequest groupWriteByIDRequest = null;
             //instance.GroupWriteByID(id, groupWriteByIDRequest);
         }
 
@@ -458,8 +454,7 @@ namespace Vault.Test.Api
         public void GroupWriteByNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GroupWriteByNameRequest groupWriteByNameRequest = null;
+            //string name = null;//GroupWriteByNameRequest groupWriteByNameRequest = null;
             //instance.GroupWriteByName(name, groupWriteByNameRequest);
         }
 
@@ -679,8 +674,7 @@ namespace Vault.Test.Api
         public void MFAMethodWriteDuoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest = null;
+            //string methodId = null;//MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest = null;
             //instance.MFAMethodWriteDuo(methodId, mFAMethodWriteDuoRequest);
         }
 
@@ -691,8 +685,7 @@ namespace Vault.Test.Api
         public void MFAMethodWriteOktaTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest = null;
+            //string methodId = null;//MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest = null;
             //instance.MFAMethodWriteOkta(methodId, mFAMethodWriteOktaRequest);
         }
 
@@ -703,8 +696,7 @@ namespace Vault.Test.Api
         public void MFAMethodWritePingIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest = null;
+            //string methodId = null;//MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest = null;
             //instance.MFAMethodWritePingID(methodId, mFAMethodWritePingIDRequest);
         }
 
@@ -715,8 +707,7 @@ namespace Vault.Test.Api
         public void MFAMethodWriteTOTPTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest = null;
+            //string methodId = null;//MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest = null;
             //instance.MFAMethodWriteTOTP(methodId, mFAMethodWriteTOTPRequest);
         }
 
@@ -738,8 +729,7 @@ namespace Vault.Test.Api
         public void MFAWriteLoginEnforcementTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest = null;
+            //string name = null;//MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest = null;
             //instance.MFAWriteLoginEnforcement(name, mFAWriteLoginEnforcementRequest);
         }
 
@@ -860,8 +850,7 @@ namespace Vault.Test.Api
         public void OIDCListProvidersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string allowedClientId = null;
+            //string list = null;//string allowedClientId = null;
             //instance.OIDCListProviders(list, allowedClientId);
         }
 
@@ -916,6 +905,7 @@ namespace Vault.Test.Api
         public void OIDCReadConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.OIDCReadConfig();
         }
 
@@ -1025,6 +1015,7 @@ namespace Vault.Test.Api
         public void OIDCReadWellKnownKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.OIDCReadWellKnownKeys();
         }
 
@@ -1035,6 +1026,7 @@ namespace Vault.Test.Api
         public void OIDCReadWellKnownOpenIDConfigurationTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.OIDCReadWellKnownOpenIDConfiguration();
         }
 
@@ -1045,8 +1037,7 @@ namespace Vault.Test.Api
         public void OIDCRotateKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCRotateKeyRequest oIDCRotateKeyRequest = null;
+            //string name = null;//OIDCRotateKeyRequest oIDCRotateKeyRequest = null;
             //instance.OIDCRotateKey(name, oIDCRotateKeyRequest);
         }
 
@@ -1057,8 +1048,7 @@ namespace Vault.Test.Api
         public void OIDCWriteAssignmentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest = null;
+            //string name = null;//OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest = null;
             //instance.OIDCWriteAssignment(name, oIDCWriteAssignmentRequest);
         }
 
@@ -1069,8 +1059,7 @@ namespace Vault.Test.Api
         public void OIDCWriteClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteClientRequest oIDCWriteClientRequest = null;
+            //string name = null;//OIDCWriteClientRequest oIDCWriteClientRequest = null;
             //instance.OIDCWriteClient(name, oIDCWriteClientRequest);
         }
 
@@ -1092,8 +1081,7 @@ namespace Vault.Test.Api
         public void OIDCWriteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteKeyRequest oIDCWriteKeyRequest = null;
+            //string name = null;//OIDCWriteKeyRequest oIDCWriteKeyRequest = null;
             //instance.OIDCWriteKey(name, oIDCWriteKeyRequest);
         }
 
@@ -1104,8 +1092,7 @@ namespace Vault.Test.Api
         public void OIDCWriteProviderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteProviderRequest oIDCWriteProviderRequest = null;
+            //string name = null;//OIDCWriteProviderRequest oIDCWriteProviderRequest = null;
             //instance.OIDCWriteProvider(name, oIDCWriteProviderRequest);
         }
 
@@ -1116,8 +1103,7 @@ namespace Vault.Test.Api
         public void OIDCWriteProviderAuthorizeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest = null;
+            //string name = null;//OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest = null;
             //instance.OIDCWriteProviderAuthorize(name, oIDCWriteProviderAuthorizeRequest);
         }
 
@@ -1128,8 +1114,7 @@ namespace Vault.Test.Api
         public void OIDCWriteProviderTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest = null;
+            //string name = null;//OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest = null;
             //instance.OIDCWriteProviderToken(name, oIDCWriteProviderTokenRequest);
         }
 
@@ -1151,8 +1136,7 @@ namespace Vault.Test.Api
         public void OIDCWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteRoleRequest oIDCWriteRoleRequest = null;
+            //string name = null;//OIDCWriteRoleRequest oIDCWriteRoleRequest = null;
             //instance.OIDCWriteRole(name, oIDCWriteRoleRequest);
         }
 
@@ -1163,8 +1147,7 @@ namespace Vault.Test.Api
         public void OIDCWriteScopeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OIDCWriteScopeRequest oIDCWriteScopeRequest = null;
+            //string name = null;//OIDCWriteScopeRequest oIDCWriteScopeRequest = null;
             //instance.OIDCWriteScope(name, oIDCWriteScopeRequest);
         }
 
@@ -1197,8 +1180,7 @@ namespace Vault.Test.Api
         public void PersonaIDWriteByIDTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //PersonaIDWriteByIDRequest personaIDWriteByIDRequest = null;
+            //string id = null;//PersonaIDWriteByIDRequest personaIDWriteByIDRequest = null;
             //instance.PersonaIDWriteByID(id, personaIDWriteByIDRequest);
         }
 
@@ -1223,5 +1205,6 @@ namespace Vault.Test.Api
             //PersonaWriteRequest personaWriteRequest = null;
             //instance.PersonaWrite(personaWriteRequest);
         }
+
     }
 }

@@ -9,10 +9,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
+
 using Xunit;
 
 using Vault.Client;
 using Vault.Api;
+
 // uncomment below to import models
 //using Vault.Model;
 
@@ -89,8 +91,7 @@ namespace Vault.Test.Api
         public void AWSConfigWriteLeaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AWSConfigWriteLeaseRequest aWSConfigWriteLeaseRequest = null;
-            //string awsMountPath = null;
+            //AWSConfigWriteLeaseRequest aWSConfigWriteLeaseRequest = null;//string awsMountPath = null;
             //instance.AWSConfigWriteLease(aWSConfigWriteLeaseRequest, awsMountPath);
         }
 
@@ -101,8 +102,7 @@ namespace Vault.Test.Api
         public void AWSConfigWriteRootIAMCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AWSConfigWriteRootIAMCredentialsRequest aWSConfigWriteRootIAMCredentialsRequest = null;
-            //string awsMountPath = null;
+            //AWSConfigWriteRootIAMCredentialsRequest aWSConfigWriteRootIAMCredentialsRequest = null;//string awsMountPath = null;
             //instance.AWSConfigWriteRootIAMCredentials(aWSConfigWriteRootIAMCredentialsRequest, awsMountPath);
         }
 
@@ -113,8 +113,7 @@ namespace Vault.Test.Api
         public void AWSDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string awsMountPath = null;
+            //string name = null;//string awsMountPath = null;
             //instance.AWSDeleteRole(name, awsMountPath);
         }
 
@@ -125,8 +124,7 @@ namespace Vault.Test.Api
         public void AWSListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string awsMountPath = null;
+            //string list = null;//string awsMountPath = null;
             //instance.AWSListRoles(list, awsMountPath);
         }
 
@@ -148,8 +146,7 @@ namespace Vault.Test.Api
         public void AWSReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string awsMountPath = null;
+            //string name = null;//string awsMountPath = null;
             //instance.AWSReadRole(name, awsMountPath);
         }
 
@@ -160,8 +157,7 @@ namespace Vault.Test.Api
         public void AWSReadSecurityTokenServiceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string awsMountPath = null;
+            //string name = null;//string awsMountPath = null;
             //instance.AWSReadSecurityTokenService(name, awsMountPath);
         }
 
@@ -172,8 +168,7 @@ namespace Vault.Test.Api
         public void AWSWriteCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AWSWriteCredentialsRequest aWSWriteCredentialsRequest = null;
-            //string awsMountPath = null;
+            //AWSWriteCredentialsRequest aWSWriteCredentialsRequest = null;//string awsMountPath = null;
             //instance.AWSWriteCredentials(aWSWriteCredentialsRequest, awsMountPath);
         }
 
@@ -184,9 +179,7 @@ namespace Vault.Test.Api
         public void AWSWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AWSWriteRoleRequest aWSWriteRoleRequest = null;
-            //string awsMountPath = null;
+            //string name = null;//AWSWriteRoleRequest aWSWriteRoleRequest = null;//string awsMountPath = null;
             //instance.AWSWriteRole(name, aWSWriteRoleRequest, awsMountPath);
         }
 
@@ -197,9 +190,7 @@ namespace Vault.Test.Api
         public void AWSWriteSecurityTokenServiceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AWSWriteSecurityTokenServiceRequest aWSWriteSecurityTokenServiceRequest = null;
-            //string awsMountPath = null;
+            //string name = null;//AWSWriteSecurityTokenServiceRequest aWSWriteSecurityTokenServiceRequest = null;//string awsMountPath = null;
             //instance.AWSWriteSecurityTokenService(name, aWSWriteSecurityTokenServiceRequest, awsMountPath);
         }
 
@@ -210,9 +201,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryCheckInLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ActiveDirectoryCheckInLibraryRequest activeDirectoryCheckInLibraryRequest = null;
-            //string adMountPath = null;
+            //string name = null;//ActiveDirectoryCheckInLibraryRequest activeDirectoryCheckInLibraryRequest = null;//string adMountPath = null;
             //instance.ActiveDirectoryCheckInLibrary(name, activeDirectoryCheckInLibraryRequest, adMountPath);
         }
 
@@ -223,9 +212,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryCheckInManageLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ActiveDirectoryCheckInManageLibraryRequest activeDirectoryCheckInManageLibraryRequest = null;
-            //string adMountPath = null;
+            //string name = null;//ActiveDirectoryCheckInManageLibraryRequest activeDirectoryCheckInManageLibraryRequest = null;//string adMountPath = null;
             //instance.ActiveDirectoryCheckInManageLibrary(name, activeDirectoryCheckInManageLibraryRequest, adMountPath);
         }
 
@@ -236,9 +223,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryCheckOutLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ActiveDirectoryCheckOutLibraryRequest activeDirectoryCheckOutLibraryRequest = null;
-            //string adMountPath = null;
+            //string name = null;//ActiveDirectoryCheckOutLibraryRequest activeDirectoryCheckOutLibraryRequest = null;//string adMountPath = null;
             //instance.ActiveDirectoryCheckOutLibrary(name, activeDirectoryCheckOutLibraryRequest, adMountPath);
         }
 
@@ -260,8 +245,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryDeleteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryDeleteLibrary(name, adMountPath);
         }
 
@@ -272,8 +256,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryDeleteRole(name, adMountPath);
         }
 
@@ -284,8 +267,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryListLibrariesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string adMountPath = null;
+            //string list = null;//string adMountPath = null;
             //instance.ActiveDirectoryListLibraries(list, adMountPath);
         }
 
@@ -296,8 +278,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string adMountPath = null;
+            //string list = null;//string adMountPath = null;
             //instance.ActiveDirectoryListRoles(list, adMountPath);
         }
 
@@ -319,8 +300,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryReadCredentials(name, adMountPath);
         }
 
@@ -331,8 +311,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryReadLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryReadLibrary(name, adMountPath);
         }
 
@@ -343,8 +322,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryReadLibraryStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryReadLibraryStatus(name, adMountPath);
         }
 
@@ -355,8 +333,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryReadRole(name, adMountPath);
         }
 
@@ -367,8 +344,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
+            //string name = null;//string adMountPath = null;
             //instance.ActiveDirectoryRotateRole(name, adMountPath);
         }
 
@@ -390,8 +366,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ActiveDirectoryWriteConfigRequest activeDirectoryWriteConfigRequest = null;
-            //string adMountPath = null;
+            //ActiveDirectoryWriteConfigRequest activeDirectoryWriteConfigRequest = null;//string adMountPath = null;
             //instance.ActiveDirectoryWriteConfig(activeDirectoryWriteConfigRequest, adMountPath);
         }
 
@@ -402,9 +377,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryWriteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ActiveDirectoryWriteLibraryRequest activeDirectoryWriteLibraryRequest = null;
-            //string adMountPath = null;
+            //string name = null;//ActiveDirectoryWriteLibraryRequest activeDirectoryWriteLibraryRequest = null;//string adMountPath = null;
             //instance.ActiveDirectoryWriteLibrary(name, activeDirectoryWriteLibraryRequest, adMountPath);
         }
 
@@ -415,9 +388,7 @@ namespace Vault.Test.Api
         public void ActiveDirectoryWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ActiveDirectoryWriteRoleRequest activeDirectoryWriteRoleRequest = null;
-            //string adMountPath = null;
+            //string name = null;//ActiveDirectoryWriteRoleRequest activeDirectoryWriteRoleRequest = null;//string adMountPath = null;
             //instance.ActiveDirectoryWriteRole(name, activeDirectoryWriteRoleRequest, adMountPath);
         }
 
@@ -439,8 +410,7 @@ namespace Vault.Test.Api
         public void AliCloudDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string alicloudMountPath = null;
+            //string name = null;//string alicloudMountPath = null;
             //instance.AliCloudDeleteRole(name, alicloudMountPath);
         }
 
@@ -451,8 +421,7 @@ namespace Vault.Test.Api
         public void AliCloudListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string alicloudMountPath = null;
+            //string list = null;//string alicloudMountPath = null;
             //instance.AliCloudListRoles(list, alicloudMountPath);
         }
 
@@ -474,8 +443,7 @@ namespace Vault.Test.Api
         public void AliCloudReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string alicloudMountPath = null;
+            //string name = null;//string alicloudMountPath = null;
             //instance.AliCloudReadCredentials(name, alicloudMountPath);
         }
 
@@ -486,8 +454,7 @@ namespace Vault.Test.Api
         public void AliCloudReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string alicloudMountPath = null;
+            //string name = null;//string alicloudMountPath = null;
             //instance.AliCloudReadRole(name, alicloudMountPath);
         }
 
@@ -498,8 +465,7 @@ namespace Vault.Test.Api
         public void AliCloudWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AliCloudWriteConfigRequest aliCloudWriteConfigRequest = null;
-            //string alicloudMountPath = null;
+            //AliCloudWriteConfigRequest aliCloudWriteConfigRequest = null;//string alicloudMountPath = null;
             //instance.AliCloudWriteConfig(aliCloudWriteConfigRequest, alicloudMountPath);
         }
 
@@ -510,9 +476,7 @@ namespace Vault.Test.Api
         public void AliCloudWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AliCloudWriteRoleRequest aliCloudWriteRoleRequest = null;
-            //string alicloudMountPath = null;
+            //string name = null;//AliCloudWriteRoleRequest aliCloudWriteRoleRequest = null;//string alicloudMountPath = null;
             //instance.AliCloudWriteRole(name, aliCloudWriteRoleRequest, alicloudMountPath);
         }
 
@@ -534,8 +498,7 @@ namespace Vault.Test.Api
         public void AzureDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string azureMountPath = null;
+            //string name = null;//string azureMountPath = null;
             //instance.AzureDeleteRole(name, azureMountPath);
         }
 
@@ -546,8 +509,7 @@ namespace Vault.Test.Api
         public void AzureListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string azureMountPath = null;
+            //string list = null;//string azureMountPath = null;
             //instance.AzureListRoles(list, azureMountPath);
         }
 
@@ -569,8 +531,7 @@ namespace Vault.Test.Api
         public void AzureReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string azureMountPath = null;
+            //string role = null;//string azureMountPath = null;
             //instance.AzureReadCredentials(role, azureMountPath);
         }
 
@@ -581,8 +542,7 @@ namespace Vault.Test.Api
         public void AzureReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string azureMountPath = null;
+            //string name = null;//string azureMountPath = null;
             //instance.AzureReadRole(name, azureMountPath);
         }
 
@@ -604,8 +564,7 @@ namespace Vault.Test.Api
         public void AzureWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //AzureWriteConfigRequest azureWriteConfigRequest = null;
-            //string azureMountPath = null;
+            //AzureWriteConfigRequest azureWriteConfigRequest = null;//string azureMountPath = null;
             //instance.AzureWriteConfig(azureWriteConfigRequest, azureMountPath);
         }
 
@@ -616,9 +575,7 @@ namespace Vault.Test.Api
         public void AzureWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AzureWriteRoleRequest azureWriteRoleRequest = null;
-            //string azureMountPath = null;
+            //string name = null;//AzureWriteRoleRequest azureWriteRoleRequest = null;//string azureMountPath = null;
             //instance.AzureWriteRole(name, azureWriteRoleRequest, azureMountPath);
         }
 
@@ -629,8 +586,7 @@ namespace Vault.Test.Api
         public void ConsulDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string consulMountPath = null;
+            //string name = null;//string consulMountPath = null;
             //instance.ConsulDeleteRole(name, consulMountPath);
         }
 
@@ -641,8 +597,7 @@ namespace Vault.Test.Api
         public void ConsulListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string consulMountPath = null;
+            //string list = null;//string consulMountPath = null;
             //instance.ConsulListRoles(list, consulMountPath);
         }
 
@@ -664,8 +619,7 @@ namespace Vault.Test.Api
         public void ConsulReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string consulMountPath = null;
+            //string role = null;//string consulMountPath = null;
             //instance.ConsulReadCredentials(role, consulMountPath);
         }
 
@@ -676,8 +630,7 @@ namespace Vault.Test.Api
         public void ConsulReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string consulMountPath = null;
+            //string name = null;//string consulMountPath = null;
             //instance.ConsulReadRole(name, consulMountPath);
         }
 
@@ -688,8 +641,7 @@ namespace Vault.Test.Api
         public void ConsulWriteAccessConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ConsulWriteAccessConfigRequest consulWriteAccessConfigRequest = null;
-            //string consulMountPath = null;
+            //ConsulWriteAccessConfigRequest consulWriteAccessConfigRequest = null;//string consulMountPath = null;
             //instance.ConsulWriteAccessConfig(consulWriteAccessConfigRequest, consulMountPath);
         }
 
@@ -700,9 +652,7 @@ namespace Vault.Test.Api
         public void ConsulWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ConsulWriteRoleRequest consulWriteRoleRequest = null;
-            //string consulMountPath = null;
+            //string name = null;//ConsulWriteRoleRequest consulWriteRoleRequest = null;//string consulMountPath = null;
             //instance.ConsulWriteRole(name, consulWriteRoleRequest, consulMountPath);
         }
 
@@ -713,8 +663,7 @@ namespace Vault.Test.Api
         public void CubbyholeDeleteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string cubbyholeMountPath = null;
+            //string path = null;//string cubbyholeMountPath = null;
             //instance.CubbyholeDelete(path, cubbyholeMountPath);
         }
 
@@ -725,9 +674,7 @@ namespace Vault.Test.Api
         public void CubbyholeReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string cubbyholeMountPath = null;
-            //string list = null;
+            //string path = null;//string cubbyholeMountPath = null;//string list = null;
             //instance.CubbyholeRead(path, cubbyholeMountPath, list);
         }
 
@@ -738,8 +685,7 @@ namespace Vault.Test.Api
         public void CubbyholeWriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string cubbyholeMountPath = null;
+            //string path = null;//string cubbyholeMountPath = null;
             //instance.CubbyholeWrite(path, cubbyholeMountPath);
         }
 
@@ -750,8 +696,7 @@ namespace Vault.Test.Api
         public void DatabaseDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseDeleteConfig(name, databaseMountPath);
         }
 
@@ -762,8 +707,7 @@ namespace Vault.Test.Api
         public void DatabaseDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseDeleteRole(name, databaseMountPath);
         }
 
@@ -774,8 +718,7 @@ namespace Vault.Test.Api
         public void DatabaseDeleteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseDeleteStaticRole(name, databaseMountPath);
         }
 
@@ -786,8 +729,7 @@ namespace Vault.Test.Api
         public void DatabaseListConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string databaseMountPath = null;
+            //string list = null;//string databaseMountPath = null;
             //instance.DatabaseListConfig(list, databaseMountPath);
         }
 
@@ -798,8 +740,7 @@ namespace Vault.Test.Api
         public void DatabaseListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string databaseMountPath = null;
+            //string list = null;//string databaseMountPath = null;
             //instance.DatabaseListRoles(list, databaseMountPath);
         }
 
@@ -810,8 +751,7 @@ namespace Vault.Test.Api
         public void DatabaseListStaticRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string databaseMountPath = null;
+            //string list = null;//string databaseMountPath = null;
             //instance.DatabaseListStaticRoles(list, databaseMountPath);
         }
 
@@ -822,8 +762,7 @@ namespace Vault.Test.Api
         public void DatabaseReadConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseReadConfig(name, databaseMountPath);
         }
 
@@ -834,8 +773,7 @@ namespace Vault.Test.Api
         public void DatabaseReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseReadCredentials(name, databaseMountPath);
         }
 
@@ -846,8 +784,7 @@ namespace Vault.Test.Api
         public void DatabaseReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseReadRole(name, databaseMountPath);
         }
 
@@ -858,8 +795,7 @@ namespace Vault.Test.Api
         public void DatabaseReadStaticCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseReadStaticCredentials(name, databaseMountPath);
         }
 
@@ -870,8 +806,7 @@ namespace Vault.Test.Api
         public void DatabaseReadStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseReadStaticRole(name, databaseMountPath);
         }
 
@@ -882,8 +817,7 @@ namespace Vault.Test.Api
         public void DatabaseResetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseReset(name, databaseMountPath);
         }
 
@@ -894,8 +828,7 @@ namespace Vault.Test.Api
         public void DatabaseRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseRotateRole(name, databaseMountPath);
         }
 
@@ -906,8 +839,7 @@ namespace Vault.Test.Api
         public void DatabaseRotateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string databaseMountPath = null;
+            //string name = null;//string databaseMountPath = null;
             //instance.DatabaseRotateRoot(name, databaseMountPath);
         }
 
@@ -918,9 +850,7 @@ namespace Vault.Test.Api
         public void DatabaseWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //DatabaseWriteConfigRequest databaseWriteConfigRequest = null;
-            //string databaseMountPath = null;
+            //string name = null;//DatabaseWriteConfigRequest databaseWriteConfigRequest = null;//string databaseMountPath = null;
             //instance.DatabaseWriteConfig(name, databaseWriteConfigRequest, databaseMountPath);
         }
 
@@ -931,9 +861,7 @@ namespace Vault.Test.Api
         public void DatabaseWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //DatabaseWriteRoleRequest databaseWriteRoleRequest = null;
-            //string databaseMountPath = null;
+            //string name = null;//DatabaseWriteRoleRequest databaseWriteRoleRequest = null;//string databaseMountPath = null;
             //instance.DatabaseWriteRole(name, databaseWriteRoleRequest, databaseMountPath);
         }
 
@@ -944,9 +872,7 @@ namespace Vault.Test.Api
         public void DatabaseWriteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest = null;
-            //string databaseMountPath = null;
+            //string name = null;//DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest = null;//string databaseMountPath = null;
             //instance.DatabaseWriteStaticRole(name, databaseWriteStaticRoleRequest, databaseMountPath);
         }
 
@@ -957,8 +883,7 @@ namespace Vault.Test.Api
         public void GoogleCloudDeleteRolesetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudDeleteRoleset(name, gcpMountPath);
         }
 
@@ -969,8 +894,7 @@ namespace Vault.Test.Api
         public void GoogleCloudDeleteStaticAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudDeleteStaticAccount(name, gcpMountPath);
         }
 
@@ -981,9 +905,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSDecryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSDecryptRequest googleCloudKMSDecryptRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSDecryptRequest googleCloudKMSDecryptRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSDecrypt(key, googleCloudKMSDecryptRequest, gcpkmsMountPath);
         }
 
@@ -1005,8 +927,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSDeleteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSDeleteKey(key, gcpkmsMountPath);
         }
 
@@ -1017,8 +938,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSDeregisterKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSDeregisterKey(key, gcpkmsMountPath);
         }
 
@@ -1029,9 +949,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSEncryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSEncryptRequest googleCloudKMSEncryptRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSEncryptRequest googleCloudKMSEncryptRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSEncrypt(key, googleCloudKMSEncryptRequest, gcpkmsMountPath);
         }
 
@@ -1042,8 +960,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSListKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string gcpkmsMountPath = null;
+            //string list = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSListKeys(list, gcpkmsMountPath);
         }
 
@@ -1065,8 +982,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSReadKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSReadKey(key, gcpkmsMountPath);
         }
 
@@ -1077,8 +993,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSReadKeyConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSReadKeyConfig(key, gcpkmsMountPath);
         }
 
@@ -1089,8 +1004,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSReadPubkeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSReadPubkey(key, gcpkmsMountPath);
         }
 
@@ -1101,9 +1015,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSReencryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSReencryptRequest googleCloudKMSReencryptRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSReencryptRequest googleCloudKMSReencryptRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSReencrypt(key, googleCloudKMSReencryptRequest, gcpkmsMountPath);
         }
 
@@ -1114,9 +1026,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSRegisterKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSRegisterKeyRequest googleCloudKMSRegisterKeyRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSRegisterKeyRequest googleCloudKMSRegisterKeyRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSRegisterKey(key, googleCloudKMSRegisterKeyRequest, gcpkmsMountPath);
         }
 
@@ -1127,8 +1037,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSRotateKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSRotateKey(key, gcpkmsMountPath);
         }
 
@@ -1139,9 +1048,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSSignTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSSignRequest googleCloudKMSSignRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSSignRequest googleCloudKMSSignRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSSign(key, googleCloudKMSSignRequest, gcpkmsMountPath);
         }
 
@@ -1152,8 +1059,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSTrimKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSTrimKey(key, gcpkmsMountPath);
         }
 
@@ -1164,9 +1070,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSVerifyRequest googleCloudKMSVerifyRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSVerifyRequest googleCloudKMSVerifyRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSVerify(key, googleCloudKMSVerifyRequest, gcpkmsMountPath);
         }
 
@@ -1177,8 +1081,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //GoogleCloudKMSWriteConfigRequest googleCloudKMSWriteConfigRequest = null;
-            //string gcpkmsMountPath = null;
+            //GoogleCloudKMSWriteConfigRequest googleCloudKMSWriteConfigRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSWriteConfig(googleCloudKMSWriteConfigRequest, gcpkmsMountPath);
         }
 
@@ -1189,9 +1092,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSWriteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSWriteKeyRequest googleCloudKMSWriteKeyRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSWriteKeyRequest googleCloudKMSWriteKeyRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSWriteKey(key, googleCloudKMSWriteKeyRequest, gcpkmsMountPath);
         }
 
@@ -1202,9 +1103,7 @@ namespace Vault.Test.Api
         public void GoogleCloudKMSWriteKeyConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GoogleCloudKMSWriteKeyConfigRequest googleCloudKMSWriteKeyConfigRequest = null;
-            //string gcpkmsMountPath = null;
+            //string key = null;//GoogleCloudKMSWriteKeyConfigRequest googleCloudKMSWriteKeyConfigRequest = null;//string gcpkmsMountPath = null;
             //instance.GoogleCloudKMSWriteKeyConfig(key, googleCloudKMSWriteKeyConfigRequest, gcpkmsMountPath);
         }
 
@@ -1215,8 +1114,7 @@ namespace Vault.Test.Api
         public void GoogleCloudListRolesetsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string gcpMountPath = null;
+            //string list = null;//string gcpMountPath = null;
             //instance.GoogleCloudListRolesets(list, gcpMountPath);
         }
 
@@ -1227,8 +1125,7 @@ namespace Vault.Test.Api
         public void GoogleCloudListStaticAccountsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string gcpMountPath = null;
+            //string list = null;//string gcpMountPath = null;
             //instance.GoogleCloudListStaticAccounts(list, gcpMountPath);
         }
 
@@ -1250,8 +1147,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadKey(roleset, gcpMountPath);
         }
 
@@ -1262,8 +1158,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadRolesetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadRoleset(name, gcpMountPath);
         }
 
@@ -1274,8 +1169,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadRolesetKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadRolesetKey(roleset, gcpMountPath);
         }
 
@@ -1286,8 +1180,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadRolesetTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadRolesetToken(roleset, gcpMountPath);
         }
 
@@ -1298,8 +1191,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadStaticAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadStaticAccount(name, gcpMountPath);
         }
 
@@ -1310,8 +1202,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadStaticAccountKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadStaticAccountKey(name, gcpMountPath);
         }
 
@@ -1322,8 +1213,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadStaticAccountTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadStaticAccountToken(name, gcpMountPath);
         }
 
@@ -1334,8 +1224,7 @@ namespace Vault.Test.Api
         public void GoogleCloudReadTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//string gcpMountPath = null;
             //instance.GoogleCloudReadToken(roleset, gcpMountPath);
         }
 
@@ -1346,8 +1235,7 @@ namespace Vault.Test.Api
         public void GoogleCloudRotateRolesetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudRotateRoleset(name, gcpMountPath);
         }
 
@@ -1358,8 +1246,7 @@ namespace Vault.Test.Api
         public void GoogleCloudRotateRolesetKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudRotateRolesetKey(name, gcpMountPath);
         }
 
@@ -1381,8 +1268,7 @@ namespace Vault.Test.Api
         public void GoogleCloudRotateStaticAccountKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudRotateStaticAccountKey(name, gcpMountPath);
         }
 
@@ -1393,8 +1279,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //GoogleCloudWriteConfigRequest googleCloudWriteConfigRequest = null;
-            //string gcpMountPath = null;
+            //GoogleCloudWriteConfigRequest googleCloudWriteConfigRequest = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteConfig(googleCloudWriteConfigRequest, gcpMountPath);
         }
 
@@ -1405,9 +1290,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //GoogleCloudWriteKeyRequest googleCloudWriteKeyRequest = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//GoogleCloudWriteKeyRequest googleCloudWriteKeyRequest = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteKey(roleset, googleCloudWriteKeyRequest, gcpMountPath);
         }
 
@@ -1418,9 +1301,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteRolesetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GoogleCloudWriteRolesetRequest googleCloudWriteRolesetRequest = null;
-            //string gcpMountPath = null;
+            //string name = null;//GoogleCloudWriteRolesetRequest googleCloudWriteRolesetRequest = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteRoleset(name, googleCloudWriteRolesetRequest, gcpMountPath);
         }
 
@@ -1431,9 +1312,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteRolesetKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //GoogleCloudWriteRolesetKeyRequest googleCloudWriteRolesetKeyRequest = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//GoogleCloudWriteRolesetKeyRequest googleCloudWriteRolesetKeyRequest = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteRolesetKey(roleset, googleCloudWriteRolesetKeyRequest, gcpMountPath);
         }
 
@@ -1444,8 +1323,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteRolesetTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteRolesetToken(roleset, gcpMountPath);
         }
 
@@ -1456,9 +1334,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteStaticAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GoogleCloudWriteStaticAccountRequest googleCloudWriteStaticAccountRequest = null;
-            //string gcpMountPath = null;
+            //string name = null;//GoogleCloudWriteStaticAccountRequest googleCloudWriteStaticAccountRequest = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteStaticAccount(name, googleCloudWriteStaticAccountRequest, gcpMountPath);
         }
 
@@ -1469,9 +1345,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteStaticAccountKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GoogleCloudWriteStaticAccountKeyRequest googleCloudWriteStaticAccountKeyRequest = null;
-            //string gcpMountPath = null;
+            //string name = null;//GoogleCloudWriteStaticAccountKeyRequest googleCloudWriteStaticAccountKeyRequest = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteStaticAccountKey(name, googleCloudWriteStaticAccountKeyRequest, gcpMountPath);
         }
 
@@ -1482,8 +1356,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteStaticAccountTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
+            //string name = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteStaticAccountToken(name, gcpMountPath);
         }
 
@@ -1494,8 +1367,7 @@ namespace Vault.Test.Api
         public void GoogleCloudWriteTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
+            //string roleset = null;//string gcpMountPath = null;
             //instance.GoogleCloudWriteToken(roleset, gcpMountPath);
         }
 
@@ -1506,8 +1378,7 @@ namespace Vault.Test.Api
         public void KVv1DeleteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string kvMountPath = null;
+            //string path = null;//string kvMountPath = null;
             //instance.KVv1Delete(path, kvMountPath);
         }
 
@@ -1518,9 +1389,7 @@ namespace Vault.Test.Api
         public void KVv1ReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string kvMountPath = null;
-            //string list = null;
+            //string path = null;//string kvMountPath = null;//string list = null;
             //instance.KVv1Read(path, kvMountPath, list);
         }
 
@@ -1531,8 +1400,7 @@ namespace Vault.Test.Api
         public void KVv1WriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string kvMountPath = null;
+            //string path = null;//string kvMountPath = null;
             //instance.KVv1Write(path, kvMountPath);
         }
 
@@ -1543,8 +1411,7 @@ namespace Vault.Test.Api
         public void KVv2DeleteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
+            //string path = null;//string secretMountPath = null;
             //instance.KVv2Delete(path, secretMountPath);
         }
 
@@ -1555,8 +1422,7 @@ namespace Vault.Test.Api
         public void KVv2DeleteMetadataTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
+            //string path = null;//string secretMountPath = null;
             //instance.KVv2DeleteMetadata(path, secretMountPath);
         }
 
@@ -1567,9 +1433,7 @@ namespace Vault.Test.Api
         public void KVv2DeleteVersionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KVv2DeleteVersionsRequest kVv2DeleteVersionsRequest = null;
-            //string secretMountPath = null;
+            //string path = null;//KVv2DeleteVersionsRequest kVv2DeleteVersionsRequest = null;//string secretMountPath = null;
             //instance.KVv2DeleteVersions(path, kVv2DeleteVersionsRequest, secretMountPath);
         }
 
@@ -1580,9 +1444,7 @@ namespace Vault.Test.Api
         public void KVv2DestroyVersionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KVv2DestroyVersionsRequest kVv2DestroyVersionsRequest = null;
-            //string secretMountPath = null;
+            //string path = null;//KVv2DestroyVersionsRequest kVv2DestroyVersionsRequest = null;//string secretMountPath = null;
             //instance.KVv2DestroyVersions(path, kVv2DestroyVersionsRequest, secretMountPath);
         }
 
@@ -1593,8 +1455,7 @@ namespace Vault.Test.Api
         public void KVv2ReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
+            //string path = null;//string secretMountPath = null;
             //instance.KVv2Read(path, secretMountPath);
         }
 
@@ -1616,9 +1477,7 @@ namespace Vault.Test.Api
         public void KVv2ReadMetadataTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //string list = null;
+            //string path = null;//string secretMountPath = null;//string list = null;
             //instance.KVv2ReadMetadata(path, secretMountPath, list);
         }
 
@@ -1629,8 +1488,7 @@ namespace Vault.Test.Api
         public void KVv2ReadSubkeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
+            //string path = null;//string secretMountPath = null;
             //instance.KVv2ReadSubkeys(path, secretMountPath);
         }
 
@@ -1641,9 +1499,7 @@ namespace Vault.Test.Api
         public void KVv2UndeleteVersionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KVv2UndeleteVersionsRequest kVv2UndeleteVersionsRequest = null;
-            //string secretMountPath = null;
+            //string path = null;//KVv2UndeleteVersionsRequest kVv2UndeleteVersionsRequest = null;//string secretMountPath = null;
             //instance.KVv2UndeleteVersions(path, kVv2UndeleteVersionsRequest, secretMountPath);
         }
 
@@ -1654,9 +1510,7 @@ namespace Vault.Test.Api
         public void KVv2WriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KVv2WriteRequest kVv2WriteRequest = null;
-            //string secretMountPath = null;
+            //string path = null;//KVv2WriteRequest kVv2WriteRequest = null;//string secretMountPath = null;
             //instance.KVv2Write(path, kVv2WriteRequest, secretMountPath);
         }
 
@@ -1667,8 +1521,7 @@ namespace Vault.Test.Api
         public void KVv2WriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //KVv2WriteConfigRequest kVv2WriteConfigRequest = null;
-            //string secretMountPath = null;
+            //KVv2WriteConfigRequest kVv2WriteConfigRequest = null;//string secretMountPath = null;
             //instance.KVv2WriteConfig(kVv2WriteConfigRequest, secretMountPath);
         }
 
@@ -1679,9 +1532,7 @@ namespace Vault.Test.Api
         public void KVv2WriteMetadataTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KVv2WriteMetadataRequest kVv2WriteMetadataRequest = null;
-            //string secretMountPath = null;
+            //string path = null;//KVv2WriteMetadataRequest kVv2WriteMetadataRequest = null;//string secretMountPath = null;
             //instance.KVv2WriteMetadata(path, kVv2WriteMetadataRequest, secretMountPath);
         }
 
@@ -1703,8 +1554,7 @@ namespace Vault.Test.Api
         public void KubernetesDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string kubernetesMountPath = null;
+            //string name = null;//string kubernetesMountPath = null;
             //instance.KubernetesDeleteRole(name, kubernetesMountPath);
         }
 
@@ -1715,8 +1565,7 @@ namespace Vault.Test.Api
         public void KubernetesListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string kubernetesMountPath = null;
+            //string list = null;//string kubernetesMountPath = null;
             //instance.KubernetesListRoles(list, kubernetesMountPath);
         }
 
@@ -1738,8 +1587,7 @@ namespace Vault.Test.Api
         public void KubernetesReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string kubernetesMountPath = null;
+            //string name = null;//string kubernetesMountPath = null;
             //instance.KubernetesReadRole(name, kubernetesMountPath);
         }
 
@@ -1750,8 +1598,7 @@ namespace Vault.Test.Api
         public void KubernetesWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //KubernetesWriteConfigRequest kubernetesWriteConfigRequest = null;
-            //string kubernetesMountPath = null;
+            //KubernetesWriteConfigRequest kubernetesWriteConfigRequest = null;//string kubernetesMountPath = null;
             //instance.KubernetesWriteConfig(kubernetesWriteConfigRequest, kubernetesMountPath);
         }
 
@@ -1762,9 +1609,7 @@ namespace Vault.Test.Api
         public void KubernetesWriteCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //KubernetesWriteCredentialsRequest kubernetesWriteCredentialsRequest = null;
-            //string kubernetesMountPath = null;
+            //string name = null;//KubernetesWriteCredentialsRequest kubernetesWriteCredentialsRequest = null;//string kubernetesMountPath = null;
             //instance.KubernetesWriteCredentials(name, kubernetesWriteCredentialsRequest, kubernetesMountPath);
         }
 
@@ -1775,9 +1620,7 @@ namespace Vault.Test.Api
         public void KubernetesWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //KubernetesWriteRoleRequest kubernetesWriteRoleRequest = null;
-            //string kubernetesMountPath = null;
+            //string name = null;//KubernetesWriteRoleRequest kubernetesWriteRoleRequest = null;//string kubernetesMountPath = null;
             //instance.KubernetesWriteRole(name, kubernetesWriteRoleRequest, kubernetesMountPath);
         }
 
@@ -1788,9 +1631,7 @@ namespace Vault.Test.Api
         public void LDAPCheckInLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LDAPCheckInLibraryRequest lDAPCheckInLibraryRequest = null;
-            //string ldapMountPath = null;
+            //string name = null;//LDAPCheckInLibraryRequest lDAPCheckInLibraryRequest = null;//string ldapMountPath = null;
             //instance.LDAPCheckInLibrary(name, lDAPCheckInLibraryRequest, ldapMountPath);
         }
 
@@ -1801,9 +1642,7 @@ namespace Vault.Test.Api
         public void LDAPCheckInManageLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LDAPCheckInManageLibraryRequest lDAPCheckInManageLibraryRequest = null;
-            //string ldapMountPath = null;
+            //string name = null;//LDAPCheckInManageLibraryRequest lDAPCheckInManageLibraryRequest = null;//string ldapMountPath = null;
             //instance.LDAPCheckInManageLibrary(name, lDAPCheckInManageLibraryRequest, ldapMountPath);
         }
 
@@ -1814,9 +1653,7 @@ namespace Vault.Test.Api
         public void LDAPCheckOutLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LDAPCheckOutLibraryRequest lDAPCheckOutLibraryRequest = null;
-            //string ldapMountPath = null;
+            //string name = null;//LDAPCheckOutLibraryRequest lDAPCheckOutLibraryRequest = null;//string ldapMountPath = null;
             //instance.LDAPCheckOutLibrary(name, lDAPCheckOutLibraryRequest, ldapMountPath);
         }
 
@@ -1838,8 +1675,7 @@ namespace Vault.Test.Api
         public void LDAPDeleteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPDeleteLibrary(name, ldapMountPath);
         }
 
@@ -1850,8 +1686,7 @@ namespace Vault.Test.Api
         public void LDAPDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPDeleteRole(name, ldapMountPath);
         }
 
@@ -1862,8 +1697,7 @@ namespace Vault.Test.Api
         public void LDAPDeleteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPDeleteStaticRole(name, ldapMountPath);
         }
 
@@ -1874,8 +1708,7 @@ namespace Vault.Test.Api
         public void LDAPListLibrariesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string ldapMountPath = null;
+            //string list = null;//string ldapMountPath = null;
             //instance.LDAPListLibraries(list, ldapMountPath);
         }
 
@@ -1886,8 +1719,7 @@ namespace Vault.Test.Api
         public void LDAPListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string ldapMountPath = null;
+            //string list = null;//string ldapMountPath = null;
             //instance.LDAPListRoles(list, ldapMountPath);
         }
 
@@ -1898,8 +1730,7 @@ namespace Vault.Test.Api
         public void LDAPListStaticRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string ldapMountPath = null;
+            //string list = null;//string ldapMountPath = null;
             //instance.LDAPListStaticRoles(list, ldapMountPath);
         }
 
@@ -1921,8 +1752,7 @@ namespace Vault.Test.Api
         public void LDAPReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPReadCredentials(name, ldapMountPath);
         }
 
@@ -1933,8 +1763,7 @@ namespace Vault.Test.Api
         public void LDAPReadLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPReadLibrary(name, ldapMountPath);
         }
 
@@ -1945,8 +1774,7 @@ namespace Vault.Test.Api
         public void LDAPReadLibraryStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPReadLibraryStatus(name, ldapMountPath);
         }
 
@@ -1957,8 +1785,7 @@ namespace Vault.Test.Api
         public void LDAPReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPReadRole(name, ldapMountPath);
         }
 
@@ -1969,8 +1796,7 @@ namespace Vault.Test.Api
         public void LDAPReadStaticCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPReadStaticCredentials(name, ldapMountPath);
         }
 
@@ -1981,8 +1807,7 @@ namespace Vault.Test.Api
         public void LDAPReadStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPReadStaticRole(name, ldapMountPath);
         }
 
@@ -1993,8 +1818,7 @@ namespace Vault.Test.Api
         public void LDAPRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
+            //string name = null;//string ldapMountPath = null;
             //instance.LDAPRotateRole(name, ldapMountPath);
         }
 
@@ -2016,8 +1840,7 @@ namespace Vault.Test.Api
         public void LDAPWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //LDAPWriteConfigRequest lDAPWriteConfigRequest = null;
-            //string ldapMountPath = null;
+            //LDAPWriteConfigRequest lDAPWriteConfigRequest = null;//string ldapMountPath = null;
             //instance.LDAPWriteConfig(lDAPWriteConfigRequest, ldapMountPath);
         }
 
@@ -2028,9 +1851,7 @@ namespace Vault.Test.Api
         public void LDAPWriteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LDAPWriteLibraryRequest lDAPWriteLibraryRequest = null;
-            //string ldapMountPath = null;
+            //string name = null;//LDAPWriteLibraryRequest lDAPWriteLibraryRequest = null;//string ldapMountPath = null;
             //instance.LDAPWriteLibrary(name, lDAPWriteLibraryRequest, ldapMountPath);
         }
 
@@ -2041,9 +1862,7 @@ namespace Vault.Test.Api
         public void LDAPWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LDAPWriteRoleRequest lDAPWriteRoleRequest = null;
-            //string ldapMountPath = null;
+            //string name = null;//LDAPWriteRoleRequest lDAPWriteRoleRequest = null;//string ldapMountPath = null;
             //instance.LDAPWriteRole(name, lDAPWriteRoleRequest, ldapMountPath);
         }
 
@@ -2054,9 +1873,7 @@ namespace Vault.Test.Api
         public void LDAPWriteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LDAPWriteStaticRoleRequest lDAPWriteStaticRoleRequest = null;
-            //string ldapMountPath = null;
+            //string name = null;//LDAPWriteStaticRoleRequest lDAPWriteStaticRoleRequest = null;//string ldapMountPath = null;
             //instance.LDAPWriteStaticRole(name, lDAPWriteStaticRoleRequest, ldapMountPath);
         }
 
@@ -2067,8 +1884,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string mongodbatlasMountPath = null;
+            //string name = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasDeleteRole(name, mongodbatlasMountPath);
         }
 
@@ -2079,8 +1895,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mongodbatlasMountPath = null;
+            //string list = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasListRoles(list, mongodbatlasMountPath);
         }
 
@@ -2102,8 +1917,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string mongodbatlasMountPath = null;
+            //string name = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasReadCredentials(name, mongodbatlasMountPath);
         }
 
@@ -2114,8 +1928,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string mongodbatlasMountPath = null;
+            //string name = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasReadRole(name, mongodbatlasMountPath);
         }
 
@@ -2126,8 +1939,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //MongoDBAtlasWriteConfigRequest mongoDBAtlasWriteConfigRequest = null;
-            //string mongodbatlasMountPath = null;
+            //MongoDBAtlasWriteConfigRequest mongoDBAtlasWriteConfigRequest = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasWriteConfig(mongoDBAtlasWriteConfigRequest, mongodbatlasMountPath);
         }
 
@@ -2138,8 +1950,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasWriteCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string mongodbatlasMountPath = null;
+            //string name = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasWriteCredentials(name, mongodbatlasMountPath);
         }
 
@@ -2150,9 +1961,7 @@ namespace Vault.Test.Api
         public void MongoDBAtlasWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //MongoDBAtlasWriteRoleRequest mongoDBAtlasWriteRoleRequest = null;
-            //string mongodbatlasMountPath = null;
+            //string name = null;//MongoDBAtlasWriteRoleRequest mongoDBAtlasWriteRoleRequest = null;//string mongodbatlasMountPath = null;
             //instance.MongoDBAtlasWriteRole(name, mongoDBAtlasWriteRoleRequest, mongodbatlasMountPath);
         }
 
@@ -2185,8 +1994,7 @@ namespace Vault.Test.Api
         public void NomadDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string nomadMountPath = null;
+            //string name = null;//string nomadMountPath = null;
             //instance.NomadDeleteRole(name, nomadMountPath);
         }
 
@@ -2197,8 +2005,7 @@ namespace Vault.Test.Api
         public void NomadListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string nomadMountPath = null;
+            //string list = null;//string nomadMountPath = null;
             //instance.NomadListRoles(list, nomadMountPath);
         }
 
@@ -2220,8 +2027,7 @@ namespace Vault.Test.Api
         public void NomadReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string nomadMountPath = null;
+            //string name = null;//string nomadMountPath = null;
             //instance.NomadReadCredentials(name, nomadMountPath);
         }
 
@@ -2243,8 +2049,7 @@ namespace Vault.Test.Api
         public void NomadReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string nomadMountPath = null;
+            //string name = null;//string nomadMountPath = null;
             //instance.NomadReadRole(name, nomadMountPath);
         }
 
@@ -2255,8 +2060,7 @@ namespace Vault.Test.Api
         public void NomadWriteAccessConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //NomadWriteAccessConfigRequest nomadWriteAccessConfigRequest = null;
-            //string nomadMountPath = null;
+            //NomadWriteAccessConfigRequest nomadWriteAccessConfigRequest = null;//string nomadMountPath = null;
             //instance.NomadWriteAccessConfig(nomadWriteAccessConfigRequest, nomadMountPath);
         }
 
@@ -2267,8 +2071,7 @@ namespace Vault.Test.Api
         public void NomadWriteLeaseConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //NomadWriteLeaseConfigRequest nomadWriteLeaseConfigRequest = null;
-            //string nomadMountPath = null;
+            //NomadWriteLeaseConfigRequest nomadWriteLeaseConfigRequest = null;//string nomadMountPath = null;
             //instance.NomadWriteLeaseConfig(nomadWriteLeaseConfigRequest, nomadMountPath);
         }
 
@@ -2279,9 +2082,7 @@ namespace Vault.Test.Api
         public void NomadWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //NomadWriteRoleRequest nomadWriteRoleRequest = null;
-            //string nomadMountPath = null;
+            //string name = null;//NomadWriteRoleRequest nomadWriteRoleRequest = null;//string nomadMountPath = null;
             //instance.NomadWriteRole(name, nomadWriteRoleRequest, nomadMountPath);
         }
 
@@ -2292,9 +2093,7 @@ namespace Vault.Test.Api
         public void OpenLDAPCheckInLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenLDAPCheckInLibraryRequest openLDAPCheckInLibraryRequest = null;
-            //string openldapMountPath = null;
+            //string name = null;//OpenLDAPCheckInLibraryRequest openLDAPCheckInLibraryRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPCheckInLibrary(name, openLDAPCheckInLibraryRequest, openldapMountPath);
         }
 
@@ -2305,9 +2104,7 @@ namespace Vault.Test.Api
         public void OpenLDAPCheckInManageLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenLDAPCheckInManageLibraryRequest openLDAPCheckInManageLibraryRequest = null;
-            //string openldapMountPath = null;
+            //string name = null;//OpenLDAPCheckInManageLibraryRequest openLDAPCheckInManageLibraryRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPCheckInManageLibrary(name, openLDAPCheckInManageLibraryRequest, openldapMountPath);
         }
 
@@ -2318,9 +2115,7 @@ namespace Vault.Test.Api
         public void OpenLDAPCheckOutLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenLDAPCheckOutLibraryRequest openLDAPCheckOutLibraryRequest = null;
-            //string openldapMountPath = null;
+            //string name = null;//OpenLDAPCheckOutLibraryRequest openLDAPCheckOutLibraryRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPCheckOutLibrary(name, openLDAPCheckOutLibraryRequest, openldapMountPath);
         }
 
@@ -2342,8 +2137,7 @@ namespace Vault.Test.Api
         public void OpenLDAPDeleteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPDeleteLibrary(name, openldapMountPath);
         }
 
@@ -2354,8 +2148,7 @@ namespace Vault.Test.Api
         public void OpenLDAPDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPDeleteRole(name, openldapMountPath);
         }
 
@@ -2366,8 +2159,7 @@ namespace Vault.Test.Api
         public void OpenLDAPDeleteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPDeleteStaticRole(name, openldapMountPath);
         }
 
@@ -2378,8 +2170,7 @@ namespace Vault.Test.Api
         public void OpenLDAPListLibrariesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string openldapMountPath = null;
+            //string list = null;//string openldapMountPath = null;
             //instance.OpenLDAPListLibraries(list, openldapMountPath);
         }
 
@@ -2390,8 +2181,7 @@ namespace Vault.Test.Api
         public void OpenLDAPListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string openldapMountPath = null;
+            //string list = null;//string openldapMountPath = null;
             //instance.OpenLDAPListRoles(list, openldapMountPath);
         }
 
@@ -2402,8 +2192,7 @@ namespace Vault.Test.Api
         public void OpenLDAPListStaticRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string openldapMountPath = null;
+            //string list = null;//string openldapMountPath = null;
             //instance.OpenLDAPListStaticRoles(list, openldapMountPath);
         }
 
@@ -2425,8 +2214,7 @@ namespace Vault.Test.Api
         public void OpenLDAPReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPReadCredentials(name, openldapMountPath);
         }
 
@@ -2437,8 +2225,7 @@ namespace Vault.Test.Api
         public void OpenLDAPReadLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPReadLibrary(name, openldapMountPath);
         }
 
@@ -2449,8 +2236,7 @@ namespace Vault.Test.Api
         public void OpenLDAPReadLibraryStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPReadLibraryStatus(name, openldapMountPath);
         }
 
@@ -2461,8 +2247,7 @@ namespace Vault.Test.Api
         public void OpenLDAPReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPReadRole(name, openldapMountPath);
         }
 
@@ -2473,8 +2258,7 @@ namespace Vault.Test.Api
         public void OpenLDAPReadStaticCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPReadStaticCredentials(name, openldapMountPath);
         }
 
@@ -2485,8 +2269,7 @@ namespace Vault.Test.Api
         public void OpenLDAPReadStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPReadStaticRole(name, openldapMountPath);
         }
 
@@ -2497,8 +2280,7 @@ namespace Vault.Test.Api
         public void OpenLDAPRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
+            //string name = null;//string openldapMountPath = null;
             //instance.OpenLDAPRotateRole(name, openldapMountPath);
         }
 
@@ -2520,8 +2302,7 @@ namespace Vault.Test.Api
         public void OpenLDAPWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //OpenLDAPWriteConfigRequest openLDAPWriteConfigRequest = null;
-            //string openldapMountPath = null;
+            //OpenLDAPWriteConfigRequest openLDAPWriteConfigRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPWriteConfig(openLDAPWriteConfigRequest, openldapMountPath);
         }
 
@@ -2532,9 +2313,7 @@ namespace Vault.Test.Api
         public void OpenLDAPWriteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenLDAPWriteLibraryRequest openLDAPWriteLibraryRequest = null;
-            //string openldapMountPath = null;
+            //string name = null;//OpenLDAPWriteLibraryRequest openLDAPWriteLibraryRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPWriteLibrary(name, openLDAPWriteLibraryRequest, openldapMountPath);
         }
 
@@ -2545,9 +2324,7 @@ namespace Vault.Test.Api
         public void OpenLDAPWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenLDAPWriteRoleRequest openLDAPWriteRoleRequest = null;
-            //string openldapMountPath = null;
+            //string name = null;//OpenLDAPWriteRoleRequest openLDAPWriteRoleRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPWriteRole(name, openLDAPWriteRoleRequest, openldapMountPath);
         }
 
@@ -2558,9 +2335,7 @@ namespace Vault.Test.Api
         public void OpenLDAPWriteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenLDAPWriteStaticRoleRequest openLDAPWriteStaticRoleRequest = null;
-            //string openldapMountPath = null;
+            //string name = null;//OpenLDAPWriteStaticRoleRequest openLDAPWriteStaticRoleRequest = null;//string openldapMountPath = null;
             //instance.OpenLDAPWriteStaticRole(name, openLDAPWriteStaticRoleRequest, openldapMountPath);
         }
 
@@ -2571,8 +2346,7 @@ namespace Vault.Test.Api
         public void PKIBundleWriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIBundleWriteRequest pKIBundleWriteRequest = null;
-            //string pkiMountPath = null;
+            //PKIBundleWriteRequest pKIBundleWriteRequest = null;//string pkiMountPath = null;
             //instance.PKIBundleWrite(pKIBundleWriteRequest, pkiMountPath);
         }
 
@@ -2583,8 +2357,7 @@ namespace Vault.Test.Api
         public void PKIDeleteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string keyRef = null;
-            //string pkiMountPath = null;
+            //string keyRef = null;//string pkiMountPath = null;
             //instance.PKIDeleteKey(keyRef, pkiMountPath);
         }
 
@@ -2595,8 +2368,7 @@ namespace Vault.Test.Api
         public void PKIDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string pkiMountPath = null;
+            //string name = null;//string pkiMountPath = null;
             //instance.PKIDeleteRole(name, pkiMountPath);
         }
 
@@ -2618,9 +2390,7 @@ namespace Vault.Test.Api
         public void PKIGenerateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PKIGenerateRootRequest pKIGenerateRootRequest = null;
-            //string pkiMountPath = null;
+            //string exported = null;//PKIGenerateRootRequest pKIGenerateRootRequest = null;//string pkiMountPath = null;
             //instance.PKIGenerateRoot(exported, pKIGenerateRootRequest, pkiMountPath);
         }
 
@@ -2631,8 +2401,7 @@ namespace Vault.Test.Api
         public void PKIImportKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIImportKeysRequest pKIImportKeysRequest = null;
-            //string pkiMountPath = null;
+            //PKIImportKeysRequest pKIImportKeysRequest = null;//string pkiMountPath = null;
             //instance.PKIImportKeys(pKIImportKeysRequest, pkiMountPath);
         }
 
@@ -2643,10 +2412,7 @@ namespace Vault.Test.Api
         public void PKIIssuerIssueRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string role = null;
-            //PKIIssuerIssueRoleRequest pKIIssuerIssueRoleRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string role = null;//PKIIssuerIssueRoleRequest pKIIssuerIssueRoleRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerIssueRole(issuerRef, role, pKIIssuerIssueRoleRequest, pkiMountPath);
         }
 
@@ -2657,9 +2423,7 @@ namespace Vault.Test.Api
         public void PKIIssuerResignCRLsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PKIIssuerResignCRLsRequest pKIIssuerResignCRLsRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//PKIIssuerResignCRLsRequest pKIIssuerResignCRLsRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerResignCRLs(issuerRef, pKIIssuerResignCRLsRequest, pkiMountPath);
         }
 
@@ -2670,8 +2434,7 @@ namespace Vault.Test.Api
         public void PKIIssuerRevokeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string pkiMountPath = null;
             //instance.PKIIssuerRevoke(issuerRef, pkiMountPath);
         }
 
@@ -2682,9 +2445,7 @@ namespace Vault.Test.Api
         public void PKIIssuerSignIntermediateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PKIIssuerSignIntermediateRequest pKIIssuerSignIntermediateRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//PKIIssuerSignIntermediateRequest pKIIssuerSignIntermediateRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerSignIntermediate(issuerRef, pKIIssuerSignIntermediateRequest, pkiMountPath);
         }
 
@@ -2695,9 +2456,7 @@ namespace Vault.Test.Api
         public void PKIIssuerSignRevocationListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PKIIssuerSignRevocationListRequest pKIIssuerSignRevocationListRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//PKIIssuerSignRevocationListRequest pKIIssuerSignRevocationListRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerSignRevocationList(issuerRef, pKIIssuerSignRevocationListRequest, pkiMountPath);
         }
 
@@ -2708,10 +2467,7 @@ namespace Vault.Test.Api
         public void PKIIssuerSignRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string role = null;
-            //PKIIssuerSignRoleRequest pKIIssuerSignRoleRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string role = null;//PKIIssuerSignRoleRequest pKIIssuerSignRoleRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerSignRole(issuerRef, role, pKIIssuerSignRoleRequest, pkiMountPath);
         }
 
@@ -2722,9 +2478,7 @@ namespace Vault.Test.Api
         public void PKIIssuerSignSelfIssuedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PKIIssuerSignSelfIssuedRequest pKIIssuerSignSelfIssuedRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//PKIIssuerSignSelfIssuedRequest pKIIssuerSignSelfIssuedRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerSignSelfIssued(issuerRef, pKIIssuerSignSelfIssuedRequest, pkiMountPath);
         }
 
@@ -2735,9 +2489,7 @@ namespace Vault.Test.Api
         public void PKIIssuerSignVerbatimTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PKIIssuerSignVerbatimRequest pKIIssuerSignVerbatimRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//PKIIssuerSignVerbatimRequest pKIIssuerSignVerbatimRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerSignVerbatim(issuerRef, pKIIssuerSignVerbatimRequest, pkiMountPath);
         }
 
@@ -2748,10 +2500,7 @@ namespace Vault.Test.Api
         public void PKIIssuerSignVerbatimRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string role = null;
-            //PKIIssuerSignVerbatimRoleRequest pKIIssuerSignVerbatimRoleRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string role = null;//PKIIssuerSignVerbatimRoleRequest pKIIssuerSignVerbatimRoleRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuerSignVerbatimRole(issuerRef, role, pKIIssuerSignVerbatimRoleRequest, pkiMountPath);
         }
 
@@ -2762,9 +2511,7 @@ namespace Vault.Test.Api
         public void PKIIssuersGenerateIntermediateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PKIIssuersGenerateIntermediateRequest pKIIssuersGenerateIntermediateRequest = null;
-            //string pkiMountPath = null;
+            //string exported = null;//PKIIssuersGenerateIntermediateRequest pKIIssuersGenerateIntermediateRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuersGenerateIntermediate(exported, pKIIssuersGenerateIntermediateRequest, pkiMountPath);
         }
 
@@ -2775,9 +2522,7 @@ namespace Vault.Test.Api
         public void PKIIssuersGenerateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PKIIssuersGenerateRootRequest pKIIssuersGenerateRootRequest = null;
-            //string pkiMountPath = null;
+            //string exported = null;//PKIIssuersGenerateRootRequest pKIIssuersGenerateRootRequest = null;//string pkiMountPath = null;
             //instance.PKIIssuersGenerateRoot(exported, pKIIssuersGenerateRootRequest, pkiMountPath);
         }
 
@@ -2788,8 +2533,7 @@ namespace Vault.Test.Api
         public void PKIIssuersListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
+            //string list = null;//string pkiMountPath = null;
             //instance.PKIIssuersList(list, pkiMountPath);
         }
 
@@ -2800,8 +2544,7 @@ namespace Vault.Test.Api
         public void PKIListCertsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
+            //string list = null;//string pkiMountPath = null;
             //instance.PKIListCerts(list, pkiMountPath);
         }
 
@@ -2812,8 +2555,7 @@ namespace Vault.Test.Api
         public void PKIListCertsRevokedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
+            //string list = null;//string pkiMountPath = null;
             //instance.PKIListCertsRevoked(list, pkiMountPath);
         }
 
@@ -2824,8 +2566,7 @@ namespace Vault.Test.Api
         public void PKIListKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
+            //string list = null;//string pkiMountPath = null;
             //instance.PKIListKeys(list, pkiMountPath);
         }
 
@@ -2836,8 +2577,7 @@ namespace Vault.Test.Api
         public void PKIListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
+            //string list = null;//string pkiMountPath = null;
             //instance.PKIListRoles(list, pkiMountPath);
         }
 
@@ -2936,8 +2676,7 @@ namespace Vault.Test.Api
         public void PKIReadCertTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string serial = null;
-            //string pkiMountPath = null;
+            //string serial = null;//string pkiMountPath = null;
             //instance.PKIReadCert(serial, pkiMountPath);
         }
 
@@ -2959,8 +2698,7 @@ namespace Vault.Test.Api
         public void PKIReadCertRawTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string serial = null;
-            //string pkiMountPath = null;
+            //string serial = null;//string pkiMountPath = null;
             //instance.PKIReadCertRaw(serial, pkiMountPath);
         }
 
@@ -2971,8 +2709,7 @@ namespace Vault.Test.Api
         public void PKIReadCertRawPemTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string serial = null;
-            //string pkiMountPath = null;
+            //string serial = null;//string pkiMountPath = null;
             //instance.PKIReadCertRawPem(serial, pkiMountPath);
         }
 
@@ -3016,8 +2753,7 @@ namespace Vault.Test.Api
         public void PKIReadKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string keyRef = null;
-            //string pkiMountPath = null;
+            //string keyRef = null;//string pkiMountPath = null;
             //instance.PKIReadKey(keyRef, pkiMountPath);
         }
 
@@ -3039,8 +2775,7 @@ namespace Vault.Test.Api
         public void PKIReadOCSPReqTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string req = null;
-            //string pkiMountPath = null;
+            //string req = null;//string pkiMountPath = null;
             //instance.PKIReadOCSPReq(req, pkiMountPath);
         }
 
@@ -3051,8 +2786,7 @@ namespace Vault.Test.Api
         public void PKIReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string pkiMountPath = null;
+            //string name = null;//string pkiMountPath = null;
             //instance.PKIReadRole(name, pkiMountPath);
         }
 
@@ -3074,8 +2808,7 @@ namespace Vault.Test.Api
         public void PKIReplaceRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIReplaceRootRequest pKIReplaceRootRequest = null;
-            //string pkiMountPath = null;
+            //PKIReplaceRootRequest pKIReplaceRootRequest = null;//string pkiMountPath = null;
             //instance.PKIReplaceRoot(pKIReplaceRootRequest, pkiMountPath);
         }
 
@@ -3086,8 +2819,7 @@ namespace Vault.Test.Api
         public void PKIRevokeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIRevokeRequest pKIRevokeRequest = null;
-            //string pkiMountPath = null;
+            //PKIRevokeRequest pKIRevokeRequest = null;//string pkiMountPath = null;
             //instance.PKIRevoke(pKIRevokeRequest, pkiMountPath);
         }
 
@@ -3098,8 +2830,7 @@ namespace Vault.Test.Api
         public void PKIRevokeWithKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIRevokeWithKeyRequest pKIRevokeWithKeyRequest = null;
-            //string pkiMountPath = null;
+            //PKIRevokeWithKeyRequest pKIRevokeWithKeyRequest = null;//string pkiMountPath = null;
             //instance.PKIRevokeWithKey(pKIRevokeWithKeyRequest, pkiMountPath);
         }
 
@@ -3110,8 +2841,7 @@ namespace Vault.Test.Api
         public void PKIRootSignIntermediateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIRootSignIntermediateRequest pKIRootSignIntermediateRequest = null;
-            //string pkiMountPath = null;
+            //PKIRootSignIntermediateRequest pKIRootSignIntermediateRequest = null;//string pkiMountPath = null;
             //instance.PKIRootSignIntermediate(pKIRootSignIntermediateRequest, pkiMountPath);
         }
 
@@ -3122,8 +2852,7 @@ namespace Vault.Test.Api
         public void PKIRootSignSelfIssuedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIRootSignSelfIssuedRequest pKIRootSignSelfIssuedRequest = null;
-            //string pkiMountPath = null;
+            //PKIRootSignSelfIssuedRequest pKIRootSignSelfIssuedRequest = null;//string pkiMountPath = null;
             //instance.PKIRootSignSelfIssued(pKIRootSignSelfIssuedRequest, pkiMountPath);
         }
 
@@ -3134,9 +2863,7 @@ namespace Vault.Test.Api
         public void PKIRotateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PKIRotateRootRequest pKIRotateRootRequest = null;
-            //string pkiMountPath = null;
+            //string exported = null;//PKIRotateRootRequest pKIRotateRootRequest = null;//string pkiMountPath = null;
             //instance.PKIRotateRoot(exported, pKIRotateRootRequest, pkiMountPath);
         }
 
@@ -3147,9 +2874,7 @@ namespace Vault.Test.Api
         public void PKISignRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //PKISignRoleRequest pKISignRoleRequest = null;
-            //string pkiMountPath = null;
+            //string role = null;//PKISignRoleRequest pKISignRoleRequest = null;//string pkiMountPath = null;
             //instance.PKISignRole(role, pKISignRoleRequest, pkiMountPath);
         }
 
@@ -3160,8 +2885,7 @@ namespace Vault.Test.Api
         public void PKISignVerbatimTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKISignVerbatimRequest pKISignVerbatimRequest = null;
-            //string pkiMountPath = null;
+            //PKISignVerbatimRequest pKISignVerbatimRequest = null;//string pkiMountPath = null;
             //instance.PKISignVerbatim(pKISignVerbatimRequest, pkiMountPath);
         }
 
@@ -3172,9 +2896,7 @@ namespace Vault.Test.Api
         public void PKISignVerbatimRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //PKISignVerbatimRoleRequest pKISignVerbatimRoleRequest = null;
-            //string pkiMountPath = null;
+            //string role = null;//PKISignVerbatimRoleRequest pKISignVerbatimRoleRequest = null;//string pkiMountPath = null;
             //instance.PKISignVerbatimRole(role, pKISignVerbatimRoleRequest, pkiMountPath);
         }
 
@@ -3185,8 +2907,7 @@ namespace Vault.Test.Api
         public void PKITidyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKITidyRequest pKITidyRequest = null;
-            //string pkiMountPath = null;
+            //PKITidyRequest pKITidyRequest = null;//string pkiMountPath = null;
             //instance.PKITidy(pKITidyRequest, pkiMountPath);
         }
 
@@ -3219,8 +2940,7 @@ namespace Vault.Test.Api
         public void PKIWriteAutoTidyConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteAutoTidyConfigRequest pKIWriteAutoTidyConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteAutoTidyConfigRequest pKIWriteAutoTidyConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteAutoTidyConfig(pKIWriteAutoTidyConfigRequest, pkiMountPath);
         }
 
@@ -3231,8 +2951,7 @@ namespace Vault.Test.Api
         public void PKIWriteCAConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteCAConfigRequest pKIWriteCAConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteCAConfigRequest pKIWriteCAConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteCAConfig(pKIWriteCAConfigRequest, pkiMountPath);
         }
 
@@ -3243,8 +2962,7 @@ namespace Vault.Test.Api
         public void PKIWriteCRLConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteCRLConfigRequest pKIWriteCRLConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteCRLConfigRequest pKIWriteCRLConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteCRLConfig(pKIWriteCRLConfigRequest, pkiMountPath);
         }
 
@@ -3255,8 +2973,7 @@ namespace Vault.Test.Api
         public void PKIWriteCertsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteCertsRequest pKIWriteCertsRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteCertsRequest pKIWriteCertsRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteCerts(pKIWriteCertsRequest, pkiMountPath);
         }
 
@@ -3267,8 +2984,7 @@ namespace Vault.Test.Api
         public void PKIWriteClusterConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteClusterConfigRequest pKIWriteClusterConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteClusterConfigRequest pKIWriteClusterConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteClusterConfig(pKIWriteClusterConfigRequest, pkiMountPath);
         }
 
@@ -3279,8 +2995,7 @@ namespace Vault.Test.Api
         public void PKIWriteIntermediateCrossSignTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteIntermediateCrossSignRequest pKIWriteIntermediateCrossSignRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteIntermediateCrossSignRequest pKIWriteIntermediateCrossSignRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteIntermediateCrossSign(pKIWriteIntermediateCrossSignRequest, pkiMountPath);
         }
 
@@ -3291,9 +3006,7 @@ namespace Vault.Test.Api
         public void PKIWriteIntermediateGenerateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PKIWriteIntermediateGenerateRequest pKIWriteIntermediateGenerateRequest = null;
-            //string pkiMountPath = null;
+            //string exported = null;//PKIWriteIntermediateGenerateRequest pKIWriteIntermediateGenerateRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteIntermediateGenerate(exported, pKIWriteIntermediateGenerateRequest, pkiMountPath);
         }
 
@@ -3304,8 +3017,7 @@ namespace Vault.Test.Api
         public void PKIWriteIntermediateSetSignedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteIntermediateSetSignedRequest pKIWriteIntermediateSetSignedRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteIntermediateSetSignedRequest pKIWriteIntermediateSetSignedRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteIntermediateSetSigned(pKIWriteIntermediateSetSignedRequest, pkiMountPath);
         }
 
@@ -3316,8 +3028,7 @@ namespace Vault.Test.Api
         public void PKIWriteInternalExportedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteInternalExportedRequest pKIWriteInternalExportedRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteInternalExportedRequest pKIWriteInternalExportedRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteInternalExported(pKIWriteInternalExportedRequest, pkiMountPath);
         }
 
@@ -3328,9 +3039,7 @@ namespace Vault.Test.Api
         public void PKIWriteIssueRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //PKIWriteIssueRoleRequest pKIWriteIssueRoleRequest = null;
-            //string pkiMountPath = null;
+            //string role = null;//PKIWriteIssueRoleRequest pKIWriteIssueRoleRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteIssueRole(role, pKIWriteIssueRoleRequest, pkiMountPath);
         }
 
@@ -3341,9 +3050,7 @@ namespace Vault.Test.Api
         public void PKIWriteIssuerRefDerPEMTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteIssuerRefDerPEM(issuerRef, pKIWriteIssuerRefDerPEMRequest, pkiMountPath);
         }
 
@@ -3354,8 +3061,7 @@ namespace Vault.Test.Api
         public void PKIWriteIssuersConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteIssuersConfig(pKIWriteIssuersConfigRequest, pkiMountPath);
         }
 
@@ -3366,8 +3072,7 @@ namespace Vault.Test.Api
         public void PKIWriteJSONTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteJSONRequest pKIWriteJSONRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteJSONRequest pKIWriteJSONRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteJSON(pKIWriteJSONRequest, pkiMountPath);
         }
 
@@ -3378,8 +3083,7 @@ namespace Vault.Test.Api
         public void PKIWriteKMSTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteKMSRequest pKIWriteKMSRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteKMSRequest pKIWriteKMSRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteKMS(pKIWriteKMSRequest, pkiMountPath);
         }
 
@@ -3390,9 +3094,7 @@ namespace Vault.Test.Api
         public void PKIWriteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string keyRef = null;
-            //PKIWriteKeyRequest pKIWriteKeyRequest = null;
-            //string pkiMountPath = null;
+            //string keyRef = null;//PKIWriteKeyRequest pKIWriteKeyRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteKey(keyRef, pKIWriteKeyRequest, pkiMountPath);
         }
 
@@ -3403,8 +3105,7 @@ namespace Vault.Test.Api
         public void PKIWriteKeysConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteKeysConfigRequest pKIWriteKeysConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteKeysConfigRequest pKIWriteKeysConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteKeysConfig(pKIWriteKeysConfigRequest, pkiMountPath);
         }
 
@@ -3426,9 +3127,7 @@ namespace Vault.Test.Api
         public void PKIWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //PKIWriteRoleRequest pKIWriteRoleRequest = null;
-            //string pkiMountPath = null;
+            //string name = null;//PKIWriteRoleRequest pKIWriteRoleRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteRole(name, pKIWriteRoleRequest, pkiMountPath);
         }
 
@@ -3439,8 +3138,7 @@ namespace Vault.Test.Api
         public void PKIWriteURLConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PKIWriteURLConfigRequest pKIWriteURLConfigRequest = null;
-            //string pkiMountPath = null;
+            //PKIWriteURLConfigRequest pKIWriteURLConfigRequest = null;//string pkiMountPath = null;
             //instance.PKIWriteURLConfig(pKIWriteURLConfigRequest, pkiMountPath);
         }
 
@@ -3451,8 +3149,7 @@ namespace Vault.Test.Api
         public void PkiDeleteIssuerRefDerPemTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string pkiMountPath = null;
             //instance.PkiDeleteIssuerRefDerPem(issuerRef, pkiMountPath);
         }
 
@@ -3507,8 +3204,7 @@ namespace Vault.Test.Api
         public void PkiReadIssuerRefCrlPemDerDeltaPemTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string pkiMountPath = null;
             //instance.PkiReadIssuerRefCrlPemDerDeltaPem(issuerRef, pkiMountPath);
         }
 
@@ -3519,8 +3215,7 @@ namespace Vault.Test.Api
         public void PkiReadIssuerRefDerPemTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
+            //string issuerRef = null;//string pkiMountPath = null;
             //instance.PkiReadIssuerRefDerPem(issuerRef, pkiMountPath);
         }
 
@@ -3553,8 +3248,7 @@ namespace Vault.Test.Api
         public void RabbitMQDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string rabbitmqMountPath = null;
+            //string name = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQDeleteRole(name, rabbitmqMountPath);
         }
 
@@ -3565,8 +3259,7 @@ namespace Vault.Test.Api
         public void RabbitMQListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string rabbitmqMountPath = null;
+            //string list = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQListRoles(list, rabbitmqMountPath);
         }
 
@@ -3577,8 +3270,7 @@ namespace Vault.Test.Api
         public void RabbitMQReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string rabbitmqMountPath = null;
+            //string name = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQReadCredentials(name, rabbitmqMountPath);
         }
 
@@ -3600,8 +3292,7 @@ namespace Vault.Test.Api
         public void RabbitMQReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string rabbitmqMountPath = null;
+            //string name = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQReadRole(name, rabbitmqMountPath);
         }
 
@@ -3612,8 +3303,7 @@ namespace Vault.Test.Api
         public void RabbitMQWriteConnectionConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //RabbitMQWriteConnectionConfigRequest rabbitMQWriteConnectionConfigRequest = null;
-            //string rabbitmqMountPath = null;
+            //RabbitMQWriteConnectionConfigRequest rabbitMQWriteConnectionConfigRequest = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQWriteConnectionConfig(rabbitMQWriteConnectionConfigRequest, rabbitmqMountPath);
         }
 
@@ -3624,8 +3314,7 @@ namespace Vault.Test.Api
         public void RabbitMQWriteLeaseConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //RabbitMQWriteLeaseConfigRequest rabbitMQWriteLeaseConfigRequest = null;
-            //string rabbitmqMountPath = null;
+            //RabbitMQWriteLeaseConfigRequest rabbitMQWriteLeaseConfigRequest = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQWriteLeaseConfig(rabbitMQWriteLeaseConfigRequest, rabbitmqMountPath);
         }
 
@@ -3636,9 +3325,7 @@ namespace Vault.Test.Api
         public void RabbitMQWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //RabbitMQWriteRoleRequest rabbitMQWriteRoleRequest = null;
-            //string rabbitmqMountPath = null;
+            //string name = null;//RabbitMQWriteRoleRequest rabbitMQWriteRoleRequest = null;//string rabbitmqMountPath = null;
             //instance.RabbitMQWriteRole(name, rabbitMQWriteRoleRequest, rabbitmqMountPath);
         }
 
@@ -3660,8 +3347,7 @@ namespace Vault.Test.Api
         public void SSHDeleteKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string keyName = null;
-            //string sshMountPath = null;
+            //string keyName = null;//string sshMountPath = null;
             //instance.SSHDeleteKeys(keyName, sshMountPath);
         }
 
@@ -3672,8 +3358,7 @@ namespace Vault.Test.Api
         public void SSHDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string sshMountPath = null;
+            //string role = null;//string sshMountPath = null;
             //instance.SSHDeleteRole(role, sshMountPath);
         }
 
@@ -3695,8 +3380,7 @@ namespace Vault.Test.Api
         public void SSHListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string sshMountPath = null;
+            //string list = null;//string sshMountPath = null;
             //instance.SSHListRoles(list, sshMountPath);
         }
 
@@ -3707,8 +3391,7 @@ namespace Vault.Test.Api
         public void SSHLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SSHLookupRequest sSHLookupRequest = null;
-            //string sshMountPath = null;
+            //SSHLookupRequest sSHLookupRequest = null;//string sshMountPath = null;
             //instance.SSHLookup(sSHLookupRequest, sshMountPath);
         }
 
@@ -3741,8 +3424,7 @@ namespace Vault.Test.Api
         public void SSHReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string sshMountPath = null;
+            //string role = null;//string sshMountPath = null;
             //instance.SSHReadRole(role, sshMountPath);
         }
 
@@ -3764,9 +3446,7 @@ namespace Vault.Test.Api
         public void SSHSignTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SSHSignRequest sSHSignRequest = null;
-            //string sshMountPath = null;
+            //string role = null;//SSHSignRequest sSHSignRequest = null;//string sshMountPath = null;
             //instance.SSHSign(role, sSHSignRequest, sshMountPath);
         }
 
@@ -3777,8 +3457,7 @@ namespace Vault.Test.Api
         public void SSHVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SSHVerifyRequest sSHVerifyRequest = null;
-            //string sshMountPath = null;
+            //SSHVerifyRequest sSHVerifyRequest = null;//string sshMountPath = null;
             //instance.SSHVerify(sSHVerifyRequest, sshMountPath);
         }
 
@@ -3789,8 +3468,7 @@ namespace Vault.Test.Api
         public void SSHWriteCAConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SSHWriteCAConfigRequest sSHWriteCAConfigRequest = null;
-            //string sshMountPath = null;
+            //SSHWriteCAConfigRequest sSHWriteCAConfigRequest = null;//string sshMountPath = null;
             //instance.SSHWriteCAConfig(sSHWriteCAConfigRequest, sshMountPath);
         }
 
@@ -3801,9 +3479,7 @@ namespace Vault.Test.Api
         public void SSHWriteCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SSHWriteCredentialsRequest sSHWriteCredentialsRequest = null;
-            //string sshMountPath = null;
+            //string role = null;//SSHWriteCredentialsRequest sSHWriteCredentialsRequest = null;//string sshMountPath = null;
             //instance.SSHWriteCredentials(role, sSHWriteCredentialsRequest, sshMountPath);
         }
 
@@ -3814,9 +3490,7 @@ namespace Vault.Test.Api
         public void SSHWriteIssueTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SSHWriteIssueRequest sSHWriteIssueRequest = null;
-            //string sshMountPath = null;
+            //string role = null;//SSHWriteIssueRequest sSHWriteIssueRequest = null;//string sshMountPath = null;
             //instance.SSHWriteIssue(role, sSHWriteIssueRequest, sshMountPath);
         }
 
@@ -3827,9 +3501,7 @@ namespace Vault.Test.Api
         public void SSHWriteKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string keyName = null;
-            //SSHWriteKeysRequest sSHWriteKeysRequest = null;
-            //string sshMountPath = null;
+            //string keyName = null;//SSHWriteKeysRequest sSHWriteKeysRequest = null;//string sshMountPath = null;
             //instance.SSHWriteKeys(keyName, sSHWriteKeysRequest, sshMountPath);
         }
 
@@ -3840,9 +3512,7 @@ namespace Vault.Test.Api
         public void SSHWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SSHWriteRoleRequest sSHWriteRoleRequest = null;
-            //string sshMountPath = null;
+            //string role = null;//SSHWriteRoleRequest sSHWriteRoleRequest = null;//string sshMountPath = null;
             //instance.SSHWriteRole(role, sSHWriteRoleRequest, sshMountPath);
         }
 
@@ -3853,8 +3523,7 @@ namespace Vault.Test.Api
         public void SSHWriteZeroAddressConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SSHWriteZeroAddressConfigRequest sSHWriteZeroAddressConfigRequest = null;
-            //string sshMountPath = null;
+            //SSHWriteZeroAddressConfigRequest sSHWriteZeroAddressConfigRequest = null;//string sshMountPath = null;
             //instance.SSHWriteZeroAddressConfig(sSHWriteZeroAddressConfigRequest, sshMountPath);
         }
 
@@ -3865,8 +3534,7 @@ namespace Vault.Test.Api
         public void TOTPDeleteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string totpMountPath = null;
+            //string name = null;//string totpMountPath = null;
             //instance.TOTPDeleteKey(name, totpMountPath);
         }
 
@@ -3877,8 +3545,7 @@ namespace Vault.Test.Api
         public void TOTPListKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string totpMountPath = null;
+            //string list = null;//string totpMountPath = null;
             //instance.TOTPListKeys(list, totpMountPath);
         }
 
@@ -3889,8 +3556,7 @@ namespace Vault.Test.Api
         public void TOTPReadCodeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string totpMountPath = null;
+            //string name = null;//string totpMountPath = null;
             //instance.TOTPReadCode(name, totpMountPath);
         }
 
@@ -3901,8 +3567,7 @@ namespace Vault.Test.Api
         public void TOTPReadKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string totpMountPath = null;
+            //string name = null;//string totpMountPath = null;
             //instance.TOTPReadKey(name, totpMountPath);
         }
 
@@ -3913,9 +3578,7 @@ namespace Vault.Test.Api
         public void TOTPWriteCodeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TOTPWriteCodeRequest tOTPWriteCodeRequest = null;
-            //string totpMountPath = null;
+            //string name = null;//TOTPWriteCodeRequest tOTPWriteCodeRequest = null;//string totpMountPath = null;
             //instance.TOTPWriteCode(name, tOTPWriteCodeRequest, totpMountPath);
         }
 
@@ -3926,9 +3589,7 @@ namespace Vault.Test.Api
         public void TOTPWriteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TOTPWriteKeyRequest tOTPWriteKeyRequest = null;
-            //string totpMountPath = null;
+            //string name = null;//TOTPWriteKeyRequest tOTPWriteKeyRequest = null;//string totpMountPath = null;
             //instance.TOTPWriteKey(name, tOTPWriteKeyRequest, totpMountPath);
         }
 
@@ -3950,8 +3611,7 @@ namespace Vault.Test.Api
         public void TerraformDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
+            //string name = null;//string terraformMountPath = null;
             //instance.TerraformDeleteRole(name, terraformMountPath);
         }
 
@@ -3962,8 +3622,7 @@ namespace Vault.Test.Api
         public void TerraformListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string terraformMountPath = null;
+            //string list = null;//string terraformMountPath = null;
             //instance.TerraformListRoles(list, terraformMountPath);
         }
 
@@ -3985,8 +3644,7 @@ namespace Vault.Test.Api
         public void TerraformReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
+            //string name = null;//string terraformMountPath = null;
             //instance.TerraformReadCredentials(name, terraformMountPath);
         }
 
@@ -3997,8 +3655,7 @@ namespace Vault.Test.Api
         public void TerraformReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
+            //string name = null;//string terraformMountPath = null;
             //instance.TerraformReadRole(name, terraformMountPath);
         }
 
@@ -4009,8 +3666,7 @@ namespace Vault.Test.Api
         public void TerraformRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
+            //string name = null;//string terraformMountPath = null;
             //instance.TerraformRotateRole(name, terraformMountPath);
         }
 
@@ -4021,8 +3677,7 @@ namespace Vault.Test.Api
         public void TerraformWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TerraformWriteConfigRequest terraformWriteConfigRequest = null;
-            //string terraformMountPath = null;
+            //TerraformWriteConfigRequest terraformWriteConfigRequest = null;//string terraformMountPath = null;
             //instance.TerraformWriteConfig(terraformWriteConfigRequest, terraformMountPath);
         }
 
@@ -4033,8 +3688,7 @@ namespace Vault.Test.Api
         public void TerraformWriteCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
+            //string name = null;//string terraformMountPath = null;
             //instance.TerraformWriteCredentials(name, terraformMountPath);
         }
 
@@ -4045,9 +3699,7 @@ namespace Vault.Test.Api
         public void TerraformWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TerraformWriteRoleRequest terraformWriteRoleRequest = null;
-            //string terraformMountPath = null;
+            //string name = null;//TerraformWriteRoleRequest terraformWriteRoleRequest = null;//string terraformMountPath = null;
             //instance.TerraformWriteRole(name, terraformWriteRoleRequest, terraformMountPath);
         }
 
@@ -4058,8 +3710,7 @@ namespace Vault.Test.Api
         public void TransitBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
+            //string name = null;//string transitMountPath = null;
             //instance.TransitBackup(name, transitMountPath);
         }
 
@@ -4070,9 +3721,7 @@ namespace Vault.Test.Api
         public void TransitDecryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitDecryptRequest transitDecryptRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitDecryptRequest transitDecryptRequest = null;//string transitMountPath = null;
             //instance.TransitDecrypt(name, transitDecryptRequest, transitMountPath);
         }
 
@@ -4083,8 +3732,7 @@ namespace Vault.Test.Api
         public void TransitDeleteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
+            //string name = null;//string transitMountPath = null;
             //instance.TransitDeleteKey(name, transitMountPath);
         }
 
@@ -4095,9 +3743,7 @@ namespace Vault.Test.Api
         public void TransitEncryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitEncryptRequest transitEncryptRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitEncryptRequest transitEncryptRequest = null;//string transitMountPath = null;
             //instance.TransitEncrypt(name, transitEncryptRequest, transitMountPath);
         }
 
@@ -4108,9 +3754,7 @@ namespace Vault.Test.Api
         public void TransitExportTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string type = null;
-            //string transitMountPath = null;
+            //string name = null;//string type = null;//string transitMountPath = null;
             //instance.TransitExport(name, type, transitMountPath);
         }
 
@@ -4121,10 +3765,7 @@ namespace Vault.Test.Api
         public void TransitExportVersionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string type = null;
-            //string version = null;
-            //string transitMountPath = null;
+            //string name = null;//string type = null;//string version = null;//string transitMountPath = null;
             //instance.TransitExportVersion(name, type, version, transitMountPath);
         }
 
@@ -4135,10 +3776,7 @@ namespace Vault.Test.Api
         public void TransitGenerateDataKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string plaintext = null;
-            //TransitGenerateDataKeyRequest transitGenerateDataKeyRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//string plaintext = null;//TransitGenerateDataKeyRequest transitGenerateDataKeyRequest = null;//string transitMountPath = null;
             //instance.TransitGenerateDataKey(name, plaintext, transitGenerateDataKeyRequest, transitMountPath);
         }
 
@@ -4149,9 +3787,7 @@ namespace Vault.Test.Api
         public void TransitGenerateHMACTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitGenerateHMACRequest transitGenerateHMACRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitGenerateHMACRequest transitGenerateHMACRequest = null;//string transitMountPath = null;
             //instance.TransitGenerateHMAC(name, transitGenerateHMACRequest, transitMountPath);
         }
 
@@ -4162,10 +3798,7 @@ namespace Vault.Test.Api
         public void TransitGenerateHMACWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string urlalgorithm = null;
-            //TransitGenerateHMACWithAlgorithmRequest transitGenerateHMACWithAlgorithmRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//string urlalgorithm = null;//TransitGenerateHMACWithAlgorithmRequest transitGenerateHMACWithAlgorithmRequest = null;//string transitMountPath = null;
             //instance.TransitGenerateHMACWithAlgorithm(name, urlalgorithm, transitGenerateHMACWithAlgorithmRequest, transitMountPath);
         }
 
@@ -4176,8 +3809,7 @@ namespace Vault.Test.Api
         public void TransitGenerateRandomTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransitGenerateRandomRequest transitGenerateRandomRequest = null;
-            //string transitMountPath = null;
+            //TransitGenerateRandomRequest transitGenerateRandomRequest = null;//string transitMountPath = null;
             //instance.TransitGenerateRandom(transitGenerateRandomRequest, transitMountPath);
         }
 
@@ -4188,9 +3820,7 @@ namespace Vault.Test.Api
         public void TransitGenerateRandomSourceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string source = null;
-            //TransitGenerateRandomSourceRequest transitGenerateRandomSourceRequest = null;
-            //string transitMountPath = null;
+            //string source = null;//TransitGenerateRandomSourceRequest transitGenerateRandomSourceRequest = null;//string transitMountPath = null;
             //instance.TransitGenerateRandomSource(source, transitGenerateRandomSourceRequest, transitMountPath);
         }
 
@@ -4201,10 +3831,7 @@ namespace Vault.Test.Api
         public void TransitGenerateRandomSourceBytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string source = null;
-            //string urlbytes = null;
-            //TransitGenerateRandomSourceBytesRequest transitGenerateRandomSourceBytesRequest = null;
-            //string transitMountPath = null;
+            //string source = null;//string urlbytes = null;//TransitGenerateRandomSourceBytesRequest transitGenerateRandomSourceBytesRequest = null;//string transitMountPath = null;
             //instance.TransitGenerateRandomSourceBytes(source, urlbytes, transitGenerateRandomSourceBytesRequest, transitMountPath);
         }
 
@@ -4215,8 +3842,7 @@ namespace Vault.Test.Api
         public void TransitHashTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransitHashRequest transitHashRequest = null;
-            //string transitMountPath = null;
+            //TransitHashRequest transitHashRequest = null;//string transitMountPath = null;
             //instance.TransitHash(transitHashRequest, transitMountPath);
         }
 
@@ -4227,9 +3853,7 @@ namespace Vault.Test.Api
         public void TransitHashWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlalgorithm = null;
-            //TransitHashWithAlgorithmRequest transitHashWithAlgorithmRequest = null;
-            //string transitMountPath = null;
+            //string urlalgorithm = null;//TransitHashWithAlgorithmRequest transitHashWithAlgorithmRequest = null;//string transitMountPath = null;
             //instance.TransitHashWithAlgorithm(urlalgorithm, transitHashWithAlgorithmRequest, transitMountPath);
         }
 
@@ -4240,9 +3864,7 @@ namespace Vault.Test.Api
         public void TransitImportKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitImportKeyRequest transitImportKeyRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitImportKeyRequest transitImportKeyRequest = null;//string transitMountPath = null;
             //instance.TransitImportKey(name, transitImportKeyRequest, transitMountPath);
         }
 
@@ -4253,9 +3875,7 @@ namespace Vault.Test.Api
         public void TransitImportKeyVersionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitImportKeyVersionRequest transitImportKeyVersionRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitImportKeyVersionRequest transitImportKeyVersionRequest = null;//string transitMountPath = null;
             //instance.TransitImportKeyVersion(name, transitImportKeyVersionRequest, transitMountPath);
         }
 
@@ -4266,8 +3886,7 @@ namespace Vault.Test.Api
         public void TransitListKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string transitMountPath = null;
+            //string list = null;//string transitMountPath = null;
             //instance.TransitListKeys(list, transitMountPath);
         }
 
@@ -4300,8 +3919,7 @@ namespace Vault.Test.Api
         public void TransitReadKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
+            //string name = null;//string transitMountPath = null;
             //instance.TransitReadKey(name, transitMountPath);
         }
 
@@ -4323,8 +3941,7 @@ namespace Vault.Test.Api
         public void TransitRestoreTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransitRestoreRequest transitRestoreRequest = null;
-            //string transitMountPath = null;
+            //TransitRestoreRequest transitRestoreRequest = null;//string transitMountPath = null;
             //instance.TransitRestore(transitRestoreRequest, transitMountPath);
         }
 
@@ -4335,9 +3952,7 @@ namespace Vault.Test.Api
         public void TransitRestoreKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitRestoreKeyRequest transitRestoreKeyRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitRestoreKeyRequest transitRestoreKeyRequest = null;//string transitMountPath = null;
             //instance.TransitRestoreKey(name, transitRestoreKeyRequest, transitMountPath);
         }
 
@@ -4348,9 +3963,7 @@ namespace Vault.Test.Api
         public void TransitRewrapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitRewrapRequest transitRewrapRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitRewrapRequest transitRewrapRequest = null;//string transitMountPath = null;
             //instance.TransitRewrap(name, transitRewrapRequest, transitMountPath);
         }
 
@@ -4361,8 +3974,7 @@ namespace Vault.Test.Api
         public void TransitRotateKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
+            //string name = null;//string transitMountPath = null;
             //instance.TransitRotateKey(name, transitMountPath);
         }
 
@@ -4373,9 +3985,7 @@ namespace Vault.Test.Api
         public void TransitSignTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitSignRequest transitSignRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitSignRequest transitSignRequest = null;//string transitMountPath = null;
             //instance.TransitSign(name, transitSignRequest, transitMountPath);
         }
 
@@ -4386,10 +3996,7 @@ namespace Vault.Test.Api
         public void TransitSignWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string urlalgorithm = null;
-            //TransitSignWithAlgorithmRequest transitSignWithAlgorithmRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//string urlalgorithm = null;//TransitSignWithAlgorithmRequest transitSignWithAlgorithmRequest = null;//string transitMountPath = null;
             //instance.TransitSignWithAlgorithm(name, urlalgorithm, transitSignWithAlgorithmRequest, transitMountPath);
         }
 
@@ -4400,9 +4007,7 @@ namespace Vault.Test.Api
         public void TransitTrimKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitTrimKeyRequest transitTrimKeyRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitTrimKeyRequest transitTrimKeyRequest = null;//string transitMountPath = null;
             //instance.TransitTrimKey(name, transitTrimKeyRequest, transitMountPath);
         }
 
@@ -4413,9 +4018,7 @@ namespace Vault.Test.Api
         public void TransitVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitVerifyRequest transitVerifyRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitVerifyRequest transitVerifyRequest = null;//string transitMountPath = null;
             //instance.TransitVerify(name, transitVerifyRequest, transitMountPath);
         }
 
@@ -4426,10 +4029,7 @@ namespace Vault.Test.Api
         public void TransitVerifyWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string urlalgorithm = null;
-            //TransitVerifyWithAlgorithmRequest transitVerifyWithAlgorithmRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//string urlalgorithm = null;//TransitVerifyWithAlgorithmRequest transitVerifyWithAlgorithmRequest = null;//string transitMountPath = null;
             //instance.TransitVerifyWithAlgorithm(name, urlalgorithm, transitVerifyWithAlgorithmRequest, transitMountPath);
         }
 
@@ -4440,8 +4040,7 @@ namespace Vault.Test.Api
         public void TransitWriteCacheConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransitWriteCacheConfigRequest transitWriteCacheConfigRequest = null;
-            //string transitMountPath = null;
+            //TransitWriteCacheConfigRequest transitWriteCacheConfigRequest = null;//string transitMountPath = null;
             //instance.TransitWriteCacheConfig(transitWriteCacheConfigRequest, transitMountPath);
         }
 
@@ -4452,8 +4051,7 @@ namespace Vault.Test.Api
         public void TransitWriteConfigKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransitWriteConfigKeysRequest transitWriteConfigKeysRequest = null;
-            //string transitMountPath = null;
+            //TransitWriteConfigKeysRequest transitWriteConfigKeysRequest = null;//string transitMountPath = null;
             //instance.TransitWriteConfigKeys(transitWriteConfigKeysRequest, transitMountPath);
         }
 
@@ -4464,9 +4062,7 @@ namespace Vault.Test.Api
         public void TransitWriteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitWriteKeyRequest transitWriteKeyRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitWriteKeyRequest transitWriteKeyRequest = null;//string transitMountPath = null;
             //instance.TransitWriteKey(name, transitWriteKeyRequest, transitMountPath);
         }
 
@@ -4477,9 +4073,7 @@ namespace Vault.Test.Api
         public void TransitWriteKeyConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitWriteKeyConfigRequest transitWriteKeyConfigRequest = null;
-            //string transitMountPath = null;
+            //string name = null;//TransitWriteKeyConfigRequest transitWriteKeyConfigRequest = null;//string transitMountPath = null;
             //instance.TransitWriteKeyConfig(name, transitWriteKeyConfigRequest, transitMountPath);
         }
 
@@ -4490,10 +4084,9 @@ namespace Vault.Test.Api
         public void TransitWriteRandomUrlbytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlbytes = null;
-            //TransitWriteRandomUrlbytesRequest transitWriteRandomUrlbytesRequest = null;
-            //string transitMountPath = null;
+            //string urlbytes = null;//TransitWriteRandomUrlbytesRequest transitWriteRandomUrlbytesRequest = null;//string transitMountPath = null;
             //instance.TransitWriteRandomUrlbytes(urlbytes, transitWriteRandomUrlbytesRequest, transitMountPath);
         }
+
     }
 }
