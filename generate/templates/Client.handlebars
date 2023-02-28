@@ -13,18 +13,18 @@ namespace {{packageName}}
     /// </summary>
     public class {{packageName}}Client
     {
-        {{#with apiInfo}}
-        {{#each apis}}
-        {{#with operations}}
+        {{#with apiInfo ~}}
+        {{#each apis ~}}
+        {{#with operations ~}}
 
         /// <summary>
         /// To access {{packageName}} {{classname}} methods
         /// </summary>
         public {{packageName}}.Api.{{classname}} {{classname}};
-        {{/with}}
-        {{/each}}
-        {{/with}}
 
+        {{/with ~}}
+        {{/each ~}}
+        {{/with ~}}
         private ApiClient _apiClient;
 
         private ExceptionFactory _exceptionFactory;
@@ -39,13 +39,13 @@ namespace {{packageName}}
             _apiClient = new ApiClient(configuration);
             _exceptionFactory = VaultConfiguration.DefaultExceptionFactory;
 
-            {{#with apiInfo}}
-            {{#each apis}}
-            {{#with operations}}
+            {{#with apiInfo ~}}
+            {{#each apis ~}}
+            {{#with operations ~}}
             this.{{classname}} = new {{packageName}}.Api.{{classname}}(_apiClient);
-            {{/with}}
-            {{/each}}
-            {{/with}}
+            {{/with ~}}
+            {{/each ~}}
+            {{/with ~}}
         }
 
         /// <summary>
