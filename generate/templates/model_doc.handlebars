@@ -1,22 +1,17 @@
-{{#each models}}
-{{#with model}}
-# {{{packageName}}}.{{modelPackage}}.{{{classname}}}
-{{#with description}}{{&description}}
-{{/with}}
+{{#each models ~}}
+{{#with model ~}}
+# {{{packageName}}}.{{modelPackage}}.{{{classname}}}{{#with description ~}}{{&description}}{{/with}}
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-{{#with parent}}
-{{#each parentVars}}
+{{#with parent ~}}{{#each parentVars}}
 **{{name}}** | {{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}[**{{dataType}}**]({{complexType}}.md){{/unless}} | {{description}} | {{#unless required}}[optional] {{/unless}}{{#if isReadOnly}}[readonly] {{/if}}{{#with defaultValue}}[default to {{{.}}}]{{/with}}
-{{/each}}
-{{/with}}
-{{#each vars}}**{{name}}** | {{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}[**{{dataType}}**]({{complexType}}.md){{/unless}} | {{description}} | {{#unless required}}[optional] {{/unless}}{{#if isReadOnly}}[readonly] {{/if}}{{#with defaultValue}}[default to {{{.}}}]{{/with}}
-{{/each}}
+{{/each ~}}{{/with}}
+{{#each vars}}**{{name}}** | {{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}[**{{dataType}}**]({{complexType}}.md){{/unless}} | {{description}} | {{#unless required}}[optional] {{/unless}}{{#if isReadOnly}}[readonly] {{/if}}{{#with defaultValue}}[default to {{{.}}}]{{/with}}{{/each}}
 
 [[Back to Model list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-models) [[Back to API list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-api-endpoints) [[Back to README]](../{{#if useGenericHost}}../{{/if}}README.md)
 
-{{/with}}
-{{/each}}
+{{/with ~}}
+{{/each ~}}
