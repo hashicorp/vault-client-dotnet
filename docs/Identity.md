@@ -111,6 +111,8 @@ Method | HTTP request | Description
 [**PersonaWrite**](Identity.md#personawrite) | **POST** /identity/persona | Create a new alias.
 
 
+
+
 <a name="aliasdeletebyid"></a>
 # **AliasDeleteByID**
 
@@ -122,7 +124,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -135,15 +139,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the alias
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.AliasDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -163,6 +178,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the alias | 
 
+
 ### Return type
 
 void (empty response body)
@@ -177,12 +193,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="aliaslistbyid"></a>
 # **AliasListByID**
@@ -195,7 +216,9 @@ List all the alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -208,15 +231,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the alias IDs.
+                
 
                 apiInstance.AliasListByID(TimeSpan? wrapTTL = null);
             }
@@ -236,6 +270,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -250,12 +285,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="aliasreadbyid"></a>
 # **AliasReadByID**
@@ -268,7 +308,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -281,15 +323,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the alias
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.AliasReadByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -309,6 +362,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the alias | 
 
+
 ### Return type
 
 void (empty response body)
@@ -323,12 +377,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="aliaswrite"></a>
 # **AliasWrite**
@@ -341,7 +400,9 @@ Create a new alias.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -354,15 +415,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var aliasWriteRequest = new AliasWriteRequest(); // AliasWriteRequest | 
+            
+            
 
             try
             {
+                
                 // Create a new alias.
+                
 
                 apiInstance.AliasWrite(AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null);
             }
@@ -382,6 +454,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **aliasWriteRequest** | [**AliasWriteRequest**](AliasWriteRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -392,16 +465,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="aliaswritebyid"></a>
 # **AliasWriteByID**
@@ -414,7 +492,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -427,16 +507,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the alias
+            
+            
+            
+            
+            
             var aliasWriteByIDRequest = new AliasWriteByIDRequest(); // AliasWriteByIDRequest | 
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.AliasWriteByID(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -457,6 +552,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the alias | 
  **aliasWriteByIDRequest** | [**AliasWriteByIDRequest**](AliasWriteByIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -467,16 +563,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitybatchdelete"></a>
 # **EntityBatchDelete**
@@ -489,7 +590,9 @@ Delete all of the entities provided
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -502,15 +605,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var entityBatchDeleteRequest = new EntityBatchDeleteRequest(); // EntityBatchDeleteRequest | 
+            
+            
 
             try
             {
+                
                 // Delete all of the entities provided
+                
 
                 apiInstance.EntityBatchDelete(EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null);
             }
@@ -530,6 +644,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityBatchDeleteRequest** | [**EntityBatchDeleteRequest**](EntityBatchDeleteRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -540,16 +655,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitydeletealiasbyid"></a>
 # **EntityDeleteAliasByID**
@@ -562,7 +682,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -575,15 +697,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the alias
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.EntityDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -603,6 +736,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the alias | 
 
+
 ### Return type
 
 void (empty response body)
@@ -617,12 +751,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitydeletebyid"></a>
 # **EntityDeleteByID**
@@ -635,7 +774,9 @@ Update, read or delete an entity using entity ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -648,15 +789,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an entity using entity ID
+                
 
                 apiInstance.EntityDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -676,6 +828,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the entity. If set, updates the corresponding existing entity. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -690,12 +843,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitydeletebyname"></a>
 # **EntityDeleteByName**
@@ -708,7 +866,9 @@ Update, read or delete an entity using entity name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -721,15 +881,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the entity
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an entity using entity name
+                
 
                 apiInstance.EntityDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
@@ -749,6 +920,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the entity | 
 
+
 ### Return type
 
 void (empty response body)
@@ -763,12 +935,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitylistaliasesbyid"></a>
 # **EntityListAliasesByID**
@@ -781,7 +958,9 @@ List all the alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -794,15 +973,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the alias IDs.
+                
 
                 apiInstance.EntityListAliasesByID(TimeSpan? wrapTTL = null);
             }
@@ -822,6 +1012,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -836,12 +1027,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitylistbyid"></a>
 # **EntityListByID**
@@ -854,7 +1050,9 @@ List all the entity IDs
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -867,15 +1065,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the entity IDs
+                
 
                 apiInstance.EntityListByID(TimeSpan? wrapTTL = null);
             }
@@ -895,6 +1104,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -909,12 +1119,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitylistbyname"></a>
 # **EntityListByName**
@@ -927,7 +1142,9 @@ List all the entity names
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -940,15 +1157,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the entity names
+                
 
                 apiInstance.EntityListByName(TimeSpan? wrapTTL = null);
             }
@@ -968,6 +1196,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -982,12 +1211,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitylookup"></a>
 # **EntityLookup**
@@ -1000,7 +1234,9 @@ Query entities based on various properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1013,15 +1249,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var entityLookupRequest = new EntityLookupRequest(); // EntityLookupRequest | 
+            
+            
 
             try
             {
+                
                 // Query entities based on various properties.
+                
 
                 apiInstance.EntityLookup(EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null);
             }
@@ -1041,6 +1288,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityLookupRequest** | [**EntityLookupRequest**](EntityLookupRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1051,16 +1299,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitymerge"></a>
 # **EntityMerge**
@@ -1073,7 +1326,9 @@ Merge two or more entities together
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1086,15 +1341,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var entityMergeRequest = new EntityMergeRequest(); // EntityMergeRequest | 
+            
+            
 
             try
             {
+                
                 // Merge two or more entities together
+                
 
                 apiInstance.EntityMerge(EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null);
             }
@@ -1114,6 +1380,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityMergeRequest** | [**EntityMergeRequest**](EntityMergeRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1124,16 +1391,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entityreadaliasbyid"></a>
 # **EntityReadAliasByID**
@@ -1146,7 +1418,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1159,15 +1433,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the alias
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.EntityReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -1187,6 +1472,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the alias | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1201,12 +1487,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entityreadbyid"></a>
 # **EntityReadByID**
@@ -1219,7 +1510,9 @@ Update, read or delete an entity using entity ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1232,15 +1525,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an entity using entity ID
+                
 
                 apiInstance.EntityReadByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -1260,6 +1564,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the entity. If set, updates the corresponding existing entity. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1274,12 +1579,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entityreadbyname"></a>
 # **EntityReadByName**
@@ -1292,7 +1602,9 @@ Update, read or delete an entity using entity name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1305,15 +1617,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the entity
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an entity using entity name
+                
 
                 apiInstance.EntityReadByName(string name, TimeSpan? wrapTTL = null);
             }
@@ -1333,6 +1656,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the entity | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1347,12 +1671,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitywrite"></a>
 # **EntityWrite**
@@ -1365,7 +1694,9 @@ Create a new entity
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1378,15 +1709,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var entityWriteRequest = new EntityWriteRequest(); // EntityWriteRequest | 
+            
+            
 
             try
             {
+                
                 // Create a new entity
+                
 
                 apiInstance.EntityWrite(EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null);
             }
@@ -1406,6 +1748,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityWriteRequest** | [**EntityWriteRequest**](EntityWriteRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1416,16 +1759,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitywritealias"></a>
 # **EntityWriteAlias**
@@ -1438,7 +1786,9 @@ Create a new alias.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1451,15 +1801,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var entityWriteAliasRequest = new EntityWriteAliasRequest(); // EntityWriteAliasRequest | 
+            
+            
 
             try
             {
+                
                 // Create a new alias.
+                
 
                 apiInstance.EntityWriteAlias(EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
@@ -1479,6 +1840,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityWriteAliasRequest** | [**EntityWriteAliasRequest**](EntityWriteAliasRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1489,16 +1851,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitywritealiasbyid"></a>
 # **EntityWriteAliasByID**
@@ -1511,7 +1878,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1524,16 +1893,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the alias
+            
+            
+            
+            
+            
             var entityWriteAliasByIDRequest = new EntityWriteAliasByIDRequest(); // EntityWriteAliasByIDRequest | 
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.EntityWriteAliasByID(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -1554,6 +1938,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the alias | 
  **entityWriteAliasByIDRequest** | [**EntityWriteAliasByIDRequest**](EntityWriteAliasByIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1564,16 +1949,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitywritebyid"></a>
 # **EntityWriteByID**
@@ -1586,7 +1976,9 @@ Update, read or delete an entity using entity ID
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1599,16 +1991,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the entity. If set, updates the corresponding existing entity.
+            
+            
+            
+            
+            
             var entityWriteByIDRequest = new EntityWriteByIDRequest(); // EntityWriteByIDRequest | 
+            
+            
 
             try
             {
+                
                 // Update, read or delete an entity using entity ID
+                
 
                 apiInstance.EntityWriteByID(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -1629,6 +2036,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the entity. If set, updates the corresponding existing entity. | 
  **entityWriteByIDRequest** | [**EntityWriteByIDRequest**](EntityWriteByIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1639,16 +2047,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="entitywritebyname"></a>
 # **EntityWriteByName**
@@ -1661,7 +2074,9 @@ Update, read or delete an entity using entity name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1674,16 +2089,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the entity
+            
+            
+            
+            
+            
             var entityWriteByNameRequest = new EntityWriteByNameRequest(); // EntityWriteByNameRequest | 
+            
+            
 
             try
             {
+                
                 // Update, read or delete an entity using entity name
+                
 
                 apiInstance.EntityWriteByName(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null);
             }
@@ -1704,6 +2134,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the entity | 
  **entityWriteByNameRequest** | [**EntityWriteByNameRequest**](EntityWriteByNameRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1714,16 +2145,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupdeletealiasbyid"></a>
 # **GroupDeleteAliasByID**
@@ -1736,7 +2172,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1749,14 +2187,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the group alias.
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -1776,6 +2224,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the group alias. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1790,12 +2239,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupdeletebyid"></a>
 # **GroupDeleteByID**
@@ -1808,7 +2262,9 @@ Update or delete an existing group using its ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1821,15 +2277,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
+            
+            
+            
 
             try
             {
+                
                 // Update or delete an existing group using its ID.
+                
 
                 apiInstance.GroupDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -1849,6 +2316,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the group. If set, updates the corresponding existing group. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1863,12 +2331,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupdeletebyname"></a>
 # **GroupDeleteByName**
@@ -1881,7 +2354,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1894,14 +2369,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the group.
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
@@ -1921,6 +2406,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the group. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -1935,12 +2421,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="grouplistaliasesbyid"></a>
 # **GroupListAliasesByID**
@@ -1953,7 +2444,9 @@ List all the group alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1966,15 +2459,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the group alias IDs.
+                
 
                 apiInstance.GroupListAliasesByID(TimeSpan? wrapTTL = null);
             }
@@ -1994,6 +2498,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2008,12 +2513,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="grouplistbyid"></a>
 # **GroupListByID**
@@ -2026,7 +2536,9 @@ List all the group IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2039,15 +2551,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the group IDs.
+                
 
                 apiInstance.GroupListByID(TimeSpan? wrapTTL = null);
             }
@@ -2067,6 +2590,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2081,12 +2605,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="grouplistbyname"></a>
 # **GroupListByName**
@@ -2099,7 +2628,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2112,14 +2643,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupListByName(TimeSpan? wrapTTL = null);
             }
@@ -2139,6 +2680,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2153,12 +2695,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="grouplookup"></a>
 # **GroupLookup**
@@ -2171,7 +2718,9 @@ Query groups based on various properties.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2184,15 +2733,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var groupLookupRequest = new GroupLookupRequest(); // GroupLookupRequest | 
+            
+            
 
             try
             {
+                
                 // Query groups based on various properties.
+                
 
                 apiInstance.GroupLookup(GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null);
             }
@@ -2212,6 +2772,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupLookupRequest** | [**GroupLookupRequest**](GroupLookupRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2222,16 +2783,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupreadaliasbyid"></a>
 # **GroupReadAliasByID**
@@ -2244,7 +2810,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2257,14 +2825,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the group alias.
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -2284,6 +2862,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the group alias. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2298,12 +2877,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupreadbyid"></a>
 # **GroupReadByID**
@@ -2316,7 +2900,9 @@ Update or delete an existing group using its ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2329,15 +2915,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
+            
+            
+            
 
             try
             {
+                
                 // Update or delete an existing group using its ID.
+                
 
                 apiInstance.GroupReadByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -2357,6 +2954,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the group. If set, updates the corresponding existing group. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2371,12 +2969,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupreadbyname"></a>
 # **GroupReadByName**
@@ -2389,7 +2992,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2402,14 +3007,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the group.
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupReadByName(string name, TimeSpan? wrapTTL = null);
             }
@@ -2429,6 +3044,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the group. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2443,12 +3059,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupwrite"></a>
 # **GroupWrite**
@@ -2461,7 +3082,9 @@ Create a new group.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2474,15 +3097,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var groupWriteRequest = new GroupWriteRequest(); // GroupWriteRequest | 
+            
+            
 
             try
             {
+                
                 // Create a new group.
+                
 
                 apiInstance.GroupWrite(GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null);
             }
@@ -2502,6 +3136,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupWriteRequest** | [**GroupWriteRequest**](GroupWriteRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2512,16 +3147,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupwritealias"></a>
 # **GroupWriteAlias**
@@ -2534,7 +3174,9 @@ Creates a new group alias, or updates an existing one.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2547,15 +3189,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var groupWriteAliasRequest = new GroupWriteAliasRequest(); // GroupWriteAliasRequest | 
+            
+            
 
             try
             {
+                
                 // Creates a new group alias, or updates an existing one.
+                
 
                 apiInstance.GroupWriteAlias(GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
@@ -2575,6 +3228,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupWriteAliasRequest** | [**GroupWriteAliasRequest**](GroupWriteAliasRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2585,16 +3239,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupwritealiasbyid"></a>
 # **GroupWriteAliasByID**
@@ -2607,7 +3266,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2620,15 +3281,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the group alias.
+            
+            
+            
+            
+            
             var groupWriteAliasByIDRequest = new GroupWriteAliasByIDRequest(); // GroupWriteAliasByIDRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupWriteAliasByID(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -2649,6 +3324,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the group alias. | 
  **groupWriteAliasByIDRequest** | [**GroupWriteAliasByIDRequest**](GroupWriteAliasByIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2659,16 +3335,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupwritebyid"></a>
 # **GroupWriteByID**
@@ -2681,7 +3362,9 @@ Update or delete an existing group using its ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2694,16 +3377,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the group. If set, updates the corresponding existing group.
+            
+            
+            
+            
+            
             var groupWriteByIDRequest = new GroupWriteByIDRequest(); // GroupWriteByIDRequest | 
+            
+            
 
             try
             {
+                
                 // Update or delete an existing group using its ID.
+                
 
                 apiInstance.GroupWriteByID(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -2724,6 +3422,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the group. If set, updates the corresponding existing group. | 
  **groupWriteByIDRequest** | [**GroupWriteByIDRequest**](GroupWriteByIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2734,16 +3433,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="groupwritebyname"></a>
 # **GroupWriteByName**
@@ -2756,7 +3460,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2769,15 +3475,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the group.
+            
+            
+            
+            
+            
             var groupWriteByNameRequest = new GroupWriteByNameRequest(); // GroupWriteByNameRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.GroupWriteByName(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null);
             }
@@ -2798,6 +3518,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the group. | 
  **groupWriteByNameRequest** | [**GroupWriteByNameRequest**](GroupWriteByNameRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2808,16 +3529,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfadeleteloginenforcement"></a>
 # **MFADeleteLoginEnforcement**
@@ -2830,7 +3556,9 @@ Delete a login enforcement
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2843,15 +3571,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name for this login enforcement configuration
+            
+            
+            
 
             try
             {
+                
                 // Delete a login enforcement
+                
 
                 apiInstance.MFADeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
@@ -2871,6 +3610,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name for this login enforcement configuration | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2885,12 +3625,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfalistloginenforcements"></a>
 # **MFAListLoginEnforcements**
@@ -2903,7 +3648,9 @@ List login enforcements
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2916,15 +3663,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List login enforcements
+                
 
                 apiInstance.MFAListLoginEnforcements(TimeSpan? wrapTTL = null);
             }
@@ -2944,6 +3702,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -2958,12 +3717,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodadmindestroytotp"></a>
 # **MFAMethodAdminDestroyTOTP**
@@ -2976,7 +3740,9 @@ Destroys a TOTP secret for the given MFA method ID on the given entity
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2989,15 +3755,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var mFAMethodAdminDestroyTOTPRequest = new MFAMethodAdminDestroyTOTPRequest(); // MFAMethodAdminDestroyTOTPRequest | 
+            
+            
 
             try
             {
+                
                 // Destroys a TOTP secret for the given MFA method ID on the given entity
+                
 
                 apiInstance.MFAMethodAdminDestroyTOTP(MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null);
             }
@@ -3017,6 +3794,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mFAMethodAdminDestroyTOTPRequest** | [**MFAMethodAdminDestroyTOTPRequest**](MFAMethodAdminDestroyTOTPRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3027,16 +3805,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodadmingeneratetotp"></a>
 # **MFAMethodAdminGenerateTOTP**
@@ -3049,7 +3832,9 @@ Update or create TOTP secret for the given method ID on the given entity.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3062,15 +3847,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var mFAMethodAdminGenerateTOTPRequest = new MFAMethodAdminGenerateTOTPRequest(); // MFAMethodAdminGenerateTOTPRequest | 
+            
+            
 
             try
             {
+                
                 // Update or create TOTP secret for the given method ID on the given entity.
+                
 
                 apiInstance.MFAMethodAdminGenerateTOTP(MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
@@ -3090,6 +3886,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mFAMethodAdminGenerateTOTPRequest** | [**MFAMethodAdminGenerateTOTPRequest**](MFAMethodAdminGenerateTOTPRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3100,16 +3897,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethoddeleteduo"></a>
 # **MFAMethodDeleteDuo**
@@ -3122,7 +3924,9 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3135,15 +3939,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Delete a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodDeleteDuo(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -3163,6 +3978,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3177,12 +3993,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethoddeleteokta"></a>
 # **MFAMethodDeleteOkta**
@@ -3195,7 +4016,9 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3208,15 +4031,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Delete a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodDeleteOkta(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -3236,6 +4070,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3250,12 +4085,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethoddeletepingid"></a>
 # **MFAMethodDeletePingID**
@@ -3268,7 +4108,9 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3281,15 +4123,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Delete a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodDeletePingID(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -3309,6 +4162,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3323,12 +4177,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethoddeletetotp"></a>
 # **MFAMethodDeleteTOTP**
@@ -3341,7 +4200,9 @@ Delete a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3354,15 +4215,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Delete a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodDeleteTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -3382,6 +4254,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3396,12 +4269,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodgeneratetotp"></a>
 # **MFAMethodGenerateTOTP**
@@ -3414,7 +4292,9 @@ Update or create TOTP secret for the given method ID on the given entity.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3427,15 +4307,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var mFAMethodGenerateTOTPRequest = new MFAMethodGenerateTOTPRequest(); // MFAMethodGenerateTOTPRequest | 
+            
+            
 
             try
             {
+                
                 // Update or create TOTP secret for the given method ID on the given entity.
+                
 
                 apiInstance.MFAMethodGenerateTOTP(MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
@@ -3455,6 +4346,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mFAMethodGenerateTOTPRequest** | [**MFAMethodGenerateTOTPRequest**](MFAMethodGenerateTOTPRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3465,16 +4357,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodlist"></a>
 # **MFAMethodList**
@@ -3487,7 +4384,9 @@ List MFA method configurations for all MFA methods
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3500,15 +4399,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List MFA method configurations for all MFA methods
+                
 
                 apiInstance.MFAMethodList(TimeSpan? wrapTTL = null);
             }
@@ -3528,6 +4438,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3542,12 +4453,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodlistduo"></a>
 # **MFAMethodListDuo**
@@ -3560,7 +4476,9 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3573,15 +4491,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List MFA method configurations for the given MFA method
+                
 
                 apiInstance.MFAMethodListDuo(TimeSpan? wrapTTL = null);
             }
@@ -3601,6 +4530,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3615,12 +4545,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodlistokta"></a>
 # **MFAMethodListOkta**
@@ -3633,7 +4568,9 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3646,15 +4583,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List MFA method configurations for the given MFA method
+                
 
                 apiInstance.MFAMethodListOkta(TimeSpan? wrapTTL = null);
             }
@@ -3674,6 +4622,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3688,12 +4637,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodlistpingid"></a>
 # **MFAMethodListPingID**
@@ -3706,7 +4660,9 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3719,15 +4675,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List MFA method configurations for the given MFA method
+                
 
                 apiInstance.MFAMethodListPingID(TimeSpan? wrapTTL = null);
             }
@@ -3747,6 +4714,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3761,12 +4729,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodlisttotp"></a>
 # **MFAMethodListTOTP**
@@ -3779,7 +4752,9 @@ List MFA method configurations for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3792,15 +4767,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List MFA method configurations for the given MFA method
+                
 
                 apiInstance.MFAMethodListTOTP(TimeSpan? wrapTTL = null);
             }
@@ -3820,6 +4806,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3834,12 +4821,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodread"></a>
 # **MFAMethodRead**
@@ -3852,7 +4844,9 @@ Read the current configuration for the given ID regardless of the MFA method typ
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3865,15 +4859,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Read the current configuration for the given ID regardless of the MFA method type
+                
 
                 apiInstance.MFAMethodRead(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -3893,6 +4898,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3907,12 +4913,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodreadduo"></a>
 # **MFAMethodReadDuo**
@@ -3925,7 +4936,9 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3938,15 +4951,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Read the current configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodReadDuo(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -3966,6 +4990,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -3980,12 +5005,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodreadokta"></a>
 # **MFAMethodReadOkta**
@@ -3998,7 +5028,9 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4011,15 +5043,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Read the current configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodReadOkta(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -4039,6 +5082,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4053,12 +5097,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodreadpingid"></a>
 # **MFAMethodReadPingID**
@@ -4071,7 +5120,9 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4084,15 +5135,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Read the current configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodReadPingID(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -4112,6 +5174,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4126,12 +5189,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodreadtotp"></a>
 # **MFAMethodReadTOTP**
@@ -4144,7 +5212,9 @@ Read the current configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4157,15 +5227,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
 
             try
             {
+                
                 // Read the current configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodReadTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
@@ -4185,6 +5266,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **methodId** | **string**| The unique identifier for this MFA method. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4199,12 +5281,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodwriteduo"></a>
 # **MFAMethodWriteDuo**
@@ -4217,7 +5304,9 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4230,16 +5319,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
             var mFAMethodWriteDuoRequest = new MFAMethodWriteDuoRequest(); // MFAMethodWriteDuoRequest | 
+            
+            
 
             try
             {
+                
                 // Update or create a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodWriteDuo(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null);
             }
@@ -4260,6 +5364,7 @@ Name | Type | Description  | Notes
  **methodId** | **string**| The unique identifier for this MFA method. | 
  **mFAMethodWriteDuoRequest** | [**MFAMethodWriteDuoRequest**](MFAMethodWriteDuoRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4270,16 +5375,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodwriteokta"></a>
 # **MFAMethodWriteOkta**
@@ -4292,7 +5402,9 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4305,16 +5417,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
             var mFAMethodWriteOktaRequest = new MFAMethodWriteOktaRequest(); // MFAMethodWriteOktaRequest | 
+            
+            
 
             try
             {
+                
                 // Update or create a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodWriteOkta(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null);
             }
@@ -4335,6 +5462,7 @@ Name | Type | Description  | Notes
  **methodId** | **string**| The unique identifier for this MFA method. | 
  **mFAMethodWriteOktaRequest** | [**MFAMethodWriteOktaRequest**](MFAMethodWriteOktaRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4345,16 +5473,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodwritepingid"></a>
 # **MFAMethodWritePingID**
@@ -4367,7 +5500,9 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4380,16 +5515,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
             var mFAMethodWritePingIDRequest = new MFAMethodWritePingIDRequest(); // MFAMethodWritePingIDRequest | 
+            
+            
 
             try
             {
+                
                 // Update or create a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodWritePingID(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -4410,6 +5560,7 @@ Name | Type | Description  | Notes
  **methodId** | **string**| The unique identifier for this MFA method. | 
  **mFAMethodWritePingIDRequest** | [**MFAMethodWritePingIDRequest**](MFAMethodWritePingIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4420,16 +5571,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfamethodwritetotp"></a>
 # **MFAMethodWriteTOTP**
@@ -4442,7 +5598,9 @@ Update or create a configuration for the given MFA method
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4455,16 +5613,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
             var mFAMethodWriteTOTPRequest = new MFAMethodWriteTOTPRequest(); // MFAMethodWriteTOTPRequest | 
+            
+            
 
             try
             {
+                
                 // Update or create a configuration for the given MFA method
+                
 
                 apiInstance.MFAMethodWriteTOTP(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null);
             }
@@ -4485,6 +5658,7 @@ Name | Type | Description  | Notes
  **methodId** | **string**| The unique identifier for this MFA method. | 
  **mFAMethodWriteTOTPRequest** | [**MFAMethodWriteTOTPRequest**](MFAMethodWriteTOTPRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4495,16 +5669,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfareadloginenforcement"></a>
 # **MFAReadLoginEnforcement**
@@ -4517,7 +5696,9 @@ Read the current login enforcement
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4530,15 +5711,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name for this login enforcement configuration
+            
+            
+            
 
             try
             {
+                
                 // Read the current login enforcement
+                
 
                 apiInstance.MFAReadLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
@@ -4558,6 +5750,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name for this login enforcement configuration | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4572,12 +5765,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mfawriteloginenforcement"></a>
 # **MFAWriteLoginEnforcement**
@@ -4590,7 +5788,9 @@ Create or update a login enforcement
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4603,16 +5803,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name for this login enforcement configuration
+            
+            
+            
+            
+            
             var mFAWriteLoginEnforcementRequest = new MFAWriteLoginEnforcementRequest(); // MFAWriteLoginEnforcementRequest | 
+            
+            
 
             try
             {
+                
                 // Create or update a login enforcement
+                
 
                 apiInstance.MFAWriteLoginEnforcement(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null);
             }
@@ -4633,6 +5848,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name for this login enforcement configuration | 
  **mFAWriteLoginEnforcementRequest** | [**MFAWriteLoginEnforcementRequest**](MFAWriteLoginEnforcementRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4643,16 +5859,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcdeleteassignment"></a>
 # **OIDCDeleteAssignment**
@@ -4665,7 +5886,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4678,14 +5901,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the assignment
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCDeleteAssignment(string name, TimeSpan? wrapTTL = null);
             }
@@ -4705,6 +5938,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the assignment | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4719,12 +5953,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcdeleteclient"></a>
 # **OIDCDeleteClient**
@@ -4737,7 +5976,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4750,14 +5991,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the client.
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCDeleteClient(string name, TimeSpan? wrapTTL = null);
             }
@@ -4777,6 +6028,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the client. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4791,12 +6043,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcdeletekey"></a>
 # **OIDCDeleteKey**
@@ -4809,7 +6066,9 @@ CRUD operations for OIDC keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4822,15 +6081,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
 
             try
             {
+                
                 // CRUD operations for OIDC keys.
+                
 
                 apiInstance.OIDCDeleteKey(string name, TimeSpan? wrapTTL = null);
             }
@@ -4850,6 +6120,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the key | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4864,12 +6135,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcdeleteprovider"></a>
 # **OIDCDeleteProvider**
@@ -4882,7 +6158,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4895,14 +6173,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCDeleteProvider(string name, TimeSpan? wrapTTL = null);
             }
@@ -4922,6 +6210,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -4936,12 +6225,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcdeleterole"></a>
 # **OIDCDeleteRole**
@@ -4954,7 +6248,9 @@ CRUD operations on OIDC Roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4967,15 +6263,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
 
             try
             {
+                
                 // CRUD operations on OIDC Roles
+                
 
                 apiInstance.OIDCDeleteRole(string name, TimeSpan? wrapTTL = null);
             }
@@ -4995,6 +6302,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5009,12 +6317,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcdeletescope"></a>
 # **OIDCDeleteScope**
@@ -5027,7 +6340,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5040,14 +6355,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the scope
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCDeleteScope(string name, TimeSpan? wrapTTL = null);
             }
@@ -5067,6 +6392,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the scope | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5081,12 +6407,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcintrospect"></a>
 # **OIDCIntrospect**
@@ -5099,7 +6430,9 @@ Verify the authenticity of an OIDC token
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5112,15 +6445,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var oIDCIntrospectRequest = new OIDCIntrospectRequest(); // OIDCIntrospectRequest | 
+            
+            
 
             try
             {
+                
                 // Verify the authenticity of an OIDC token
+                
 
                 apiInstance.OIDCIntrospect(OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null);
             }
@@ -5140,6 +6484,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oIDCIntrospectRequest** | [**OIDCIntrospectRequest**](OIDCIntrospectRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5150,16 +6495,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidclistassignments"></a>
 # **OIDCListAssignments**
@@ -5172,7 +6522,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5185,14 +6537,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCListAssignments(TimeSpan? wrapTTL = null);
             }
@@ -5212,6 +6574,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5226,12 +6589,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidclistclients"></a>
 # **OIDCListClients**
@@ -5244,7 +6612,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5257,14 +6627,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCListClients(TimeSpan? wrapTTL = null);
             }
@@ -5284,6 +6664,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5298,12 +6679,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidclistkeys"></a>
 # **OIDCListKeys**
@@ -5316,7 +6702,9 @@ List OIDC keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5329,15 +6717,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List OIDC keys
+                
 
                 apiInstance.OIDCListKeys(TimeSpan? wrapTTL = null);
             }
@@ -5357,6 +6756,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5371,12 +6771,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidclistproviders"></a>
 # **OIDCListProviders**
@@ -5389,7 +6794,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5402,15 +6809,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var allowedClientId = "\"\"";  // string | Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional)  (default to "")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
             }
@@ -5431,6 +6852,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **allowedClientId** | **string**| Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. | [optional] [default to &quot;&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5445,12 +6867,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidclistroles"></a>
 # **OIDCListRoles**
@@ -5463,7 +6890,9 @@ List configured OIDC roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5476,15 +6905,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List configured OIDC roles
+                
 
                 apiInstance.OIDCListRoles(TimeSpan? wrapTTL = null);
             }
@@ -5504,6 +6944,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5518,12 +6959,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidclistscopes"></a>
 # **OIDCListScopes**
@@ -5536,7 +6982,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5549,14 +6997,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCListScopes(TimeSpan? wrapTTL = null);
             }
@@ -5576,6 +7034,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5590,12 +7049,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadassignment"></a>
 # **OIDCReadAssignment**
@@ -5608,7 +7072,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5621,14 +7087,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the assignment
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadAssignment(string name, TimeSpan? wrapTTL = null);
             }
@@ -5648,6 +7124,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the assignment | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5662,12 +7139,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadclient"></a>
 # **OIDCReadClient**
@@ -5680,7 +7162,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5693,14 +7177,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the client.
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadClient(string name, TimeSpan? wrapTTL = null);
             }
@@ -5720,6 +7214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the client. | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5734,12 +7229,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadconfig"></a>
 # **OIDCReadConfig**
@@ -5752,7 +7252,9 @@ OIDC configuration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5765,14 +7267,21 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
 
             try
             {
+                
                 // OIDC configuration
+                
 
                 apiInstance.OIDCReadConfig(TimeSpan? wrapTTL = null);
             }
@@ -5789,6 +7298,7 @@ namespace Example
 ### Parameters
 This endpoint does not need any parameter.
 
+
 ### Return type
 
 void (empty response body)
@@ -5803,12 +7313,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadkey"></a>
 # **OIDCReadKey**
@@ -5821,7 +7336,9 @@ CRUD operations for OIDC keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5834,15 +7351,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
 
             try
             {
+                
                 // CRUD operations for OIDC keys.
+                
 
                 apiInstance.OIDCReadKey(string name, TimeSpan? wrapTTL = null);
             }
@@ -5862,6 +7390,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the key | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5876,12 +7405,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadprovider"></a>
 # **OIDCReadProvider**
@@ -5894,7 +7428,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5907,14 +7443,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadProvider(string name, TimeSpan? wrapTTL = null);
             }
@@ -5934,6 +7480,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -5948,12 +7495,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadproviderauthorize"></a>
 # **OIDCReadProviderAuthorize**
@@ -5966,7 +7518,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5979,14 +7533,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadProviderAuthorize(string name, TimeSpan? wrapTTL = null);
             }
@@ -6006,6 +7570,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6020,12 +7585,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadprovideruserinfo"></a>
 # **OIDCReadProviderUserInfo**
@@ -6038,7 +7608,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6051,14 +7623,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
@@ -6078,6 +7660,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6092,12 +7675,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadproviderwellknownkeys"></a>
 # **OIDCReadProviderWellKnownKeys**
@@ -6110,7 +7698,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6123,14 +7713,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadProviderWellKnownKeys(string name, TimeSpan? wrapTTL = null);
             }
@@ -6150,6 +7750,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6164,12 +7765,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadproviderwellknownopenidconfiguration"></a>
 # **OIDCReadProviderWellKnownOpenIDConfiguration**
@@ -6182,7 +7788,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6195,14 +7803,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(string name, TimeSpan? wrapTTL = null);
             }
@@ -6222,6 +7840,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6236,12 +7855,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadrole"></a>
 # **OIDCReadRole**
@@ -6254,7 +7878,9 @@ CRUD operations on OIDC Roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6267,15 +7893,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
 
             try
             {
+                
                 // CRUD operations on OIDC Roles
+                
 
                 apiInstance.OIDCReadRole(string name, TimeSpan? wrapTTL = null);
             }
@@ -6295,6 +7932,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6309,12 +7947,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadscope"></a>
 # **OIDCReadScope**
@@ -6327,7 +7970,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6340,14 +7985,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the scope
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCReadScope(string name, TimeSpan? wrapTTL = null);
             }
@@ -6367,6 +8022,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the scope | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6381,12 +8037,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadtoken"></a>
 # **OIDCReadToken**
@@ -6399,7 +8060,9 @@ Generate an OIDC token
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6412,15 +8075,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
 
             try
             {
+                
                 // Generate an OIDC token
+                
 
                 apiInstance.OIDCReadToken(string name, TimeSpan? wrapTTL = null);
             }
@@ -6440,6 +8114,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6454,12 +8129,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadwellknownkeys"></a>
 # **OIDCReadWellKnownKeys**
@@ -6472,7 +8152,9 @@ Retrieve public keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6485,14 +8167,21 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
 
             try
             {
+                
                 // Retrieve public keys
+                
 
                 apiInstance.OIDCReadWellKnownKeys(TimeSpan? wrapTTL = null);
             }
@@ -6509,6 +8198,7 @@ namespace Example
 ### Parameters
 This endpoint does not need any parameter.
 
+
 ### Return type
 
 void (empty response body)
@@ -6523,12 +8213,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcreadwellknownopenidconfiguration"></a>
 # **OIDCReadWellKnownOpenIDConfiguration**
@@ -6541,7 +8236,9 @@ Query OIDC configurations
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6554,14 +8251,21 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
 
             try
             {
+                
                 // Query OIDC configurations
+                
 
                 apiInstance.OIDCReadWellKnownOpenIDConfiguration(TimeSpan? wrapTTL = null);
             }
@@ -6578,6 +8282,7 @@ namespace Example
 ### Parameters
 This endpoint does not need any parameter.
 
+
 ### Return type
 
 void (empty response body)
@@ -6592,12 +8297,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcrotatekey"></a>
 # **OIDCRotateKey**
@@ -6610,7 +8320,9 @@ Rotate a named OIDC key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6623,16 +8335,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var oIDCRotateKeyRequest = new OIDCRotateKeyRequest(); // OIDCRotateKeyRequest | 
+            
+            
 
             try
             {
+                
                 // Rotate a named OIDC key.
+                
 
                 apiInstance.OIDCRotateKey(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null);
             }
@@ -6653,6 +8380,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **oIDCRotateKeyRequest** | [**OIDCRotateKeyRequest**](OIDCRotateKeyRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6663,16 +8391,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteassignment"></a>
 # **OIDCWriteAssignment**
@@ -6685,7 +8418,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6698,15 +8433,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the assignment
+            
+            
+            
+            
+            
             var oIDCWriteAssignmentRequest = new OIDCWriteAssignmentRequest(); // OIDCWriteAssignmentRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteAssignment(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null);
             }
@@ -6727,6 +8476,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the assignment | 
  **oIDCWriteAssignmentRequest** | [**OIDCWriteAssignmentRequest**](OIDCWriteAssignmentRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6737,16 +8487,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteclient"></a>
 # **OIDCWriteClient**
@@ -6759,7 +8514,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6772,15 +8529,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the client.
+            
+            
+            
+            
+            
             var oIDCWriteClientRequest = new OIDCWriteClientRequest(); // OIDCWriteClientRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteClient(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null);
             }
@@ -6801,6 +8572,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the client. | 
  **oIDCWriteClientRequest** | [**OIDCWriteClientRequest**](OIDCWriteClientRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6811,16 +8583,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteconfig"></a>
 # **OIDCWriteConfig**
@@ -6833,7 +8610,9 @@ OIDC configuration
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6846,15 +8625,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var oIDCWriteConfigRequest = new OIDCWriteConfigRequest(); // OIDCWriteConfigRequest | 
+            
+            
 
             try
             {
+                
                 // OIDC configuration
+                
 
                 apiInstance.OIDCWriteConfig(OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null);
             }
@@ -6874,6 +8664,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oIDCWriteConfigRequest** | [**OIDCWriteConfigRequest**](OIDCWriteConfigRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6884,16 +8675,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwritekey"></a>
 # **OIDCWriteKey**
@@ -6906,7 +8702,9 @@ CRUD operations for OIDC keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6919,16 +8717,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var oIDCWriteKeyRequest = new OIDCWriteKeyRequest(); // OIDCWriteKeyRequest | 
+            
+            
 
             try
             {
+                
                 // CRUD operations for OIDC keys.
+                
 
                 apiInstance.OIDCWriteKey(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null);
             }
@@ -6949,6 +8762,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **oIDCWriteKeyRequest** | [**OIDCWriteKeyRequest**](OIDCWriteKeyRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -6959,16 +8773,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteprovider"></a>
 # **OIDCWriteProvider**
@@ -6981,7 +8800,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6994,15 +8815,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
+            
+            
             var oIDCWriteProviderRequest = new OIDCWriteProviderRequest(); // OIDCWriteProviderRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteProvider(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null);
             }
@@ -7023,6 +8858,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the provider | 
  **oIDCWriteProviderRequest** | [**OIDCWriteProviderRequest**](OIDCWriteProviderRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7033,16 +8869,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteproviderauthorize"></a>
 # **OIDCWriteProviderAuthorize**
@@ -7055,7 +8896,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7068,15 +8911,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
+            
+            
             var oIDCWriteProviderAuthorizeRequest = new OIDCWriteProviderAuthorizeRequest(); // OIDCWriteProviderAuthorizeRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteProviderAuthorize(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null);
             }
@@ -7097,6 +8954,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the provider | 
  **oIDCWriteProviderAuthorizeRequest** | [**OIDCWriteProviderAuthorizeRequest**](OIDCWriteProviderAuthorizeRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7107,16 +8965,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteprovidertoken"></a>
 # **OIDCWriteProviderToken**
@@ -7129,7 +8992,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7142,15 +9007,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
+            
+            
             var oIDCWriteProviderTokenRequest = new OIDCWriteProviderTokenRequest(); // OIDCWriteProviderTokenRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteProviderToken(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null);
             }
@@ -7171,6 +9050,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the provider | 
  **oIDCWriteProviderTokenRequest** | [**OIDCWriteProviderTokenRequest**](OIDCWriteProviderTokenRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7181,16 +9061,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriteprovideruserinfo"></a>
 # **OIDCWriteProviderUserInfo**
@@ -7203,7 +9088,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7216,14 +9103,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the provider
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
@@ -7243,6 +9140,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7257,12 +9155,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwriterole"></a>
 # **OIDCWriteRole**
@@ -7275,7 +9178,9 @@ CRUD operations on OIDC Roles
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7288,16 +9193,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var oIDCWriteRoleRequest = new OIDCWriteRoleRequest(); // OIDCWriteRoleRequest | 
+            
+            
 
             try
             {
+                
                 // CRUD operations on OIDC Roles
+                
 
                 apiInstance.OIDCWriteRole(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null);
             }
@@ -7318,6 +9238,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **oIDCWriteRoleRequest** | [**OIDCWriteRoleRequest**](OIDCWriteRoleRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7328,16 +9249,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="oidcwritescope"></a>
 # **OIDCWriteScope**
@@ -7350,7 +9276,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7363,15 +9291,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the scope
+            
+            
+            
+            
+            
             var oIDCWriteScopeRequest = new OIDCWriteScopeRequest(); // OIDCWriteScopeRequest | 
+            
+            
 
             try
             {
+                
 
                 apiInstance.OIDCWriteScope(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null);
             }
@@ -7392,6 +9334,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the scope | 
  **oIDCWriteScopeRequest** | [**OIDCWriteScopeRequest**](OIDCWriteScopeRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7402,16 +9345,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="personaiddeletebyid"></a>
 # **PersonaIDDeleteByID**
@@ -7424,7 +9372,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7437,15 +9387,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the persona
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.PersonaIDDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -7465,6 +9426,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the persona | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7479,12 +9441,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="personaidreadbyid"></a>
 # **PersonaIDReadByID**
@@ -7497,7 +9464,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7510,15 +9479,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the persona
+            
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.PersonaIDReadByID(string id, TimeSpan? wrapTTL = null);
             }
@@ -7538,6 +9518,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the persona | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7552,12 +9533,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="personaidwritebyid"></a>
 # **PersonaIDWriteByID**
@@ -7570,7 +9556,9 @@ Update, read or delete an alias ID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7583,16 +9571,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var id = "id_example";  // string | ID of the persona
+            
+            
+            
+            
+            
             var personaIDWriteByIDRequest = new PersonaIDWriteByIDRequest(); // PersonaIDWriteByIDRequest | 
+            
+            
 
             try
             {
+                
                 // Update, read or delete an alias ID.
+                
 
                 apiInstance.PersonaIDWriteByID(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
@@ -7613,6 +9616,7 @@ Name | Type | Description  | Notes
  **id** | **string**| ID of the persona | 
  **personaIDWriteByIDRequest** | [**PersonaIDWriteByIDRequest**](PersonaIDWriteByIDRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7623,16 +9627,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="personalistbyid"></a>
 # **PersonaListByID**
@@ -7645,7 +9654,9 @@ List all the alias IDs.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7658,15 +9669,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
 
             try
             {
+                
                 // List all the alias IDs.
+                
 
                 apiInstance.PersonaListByID(TimeSpan? wrapTTL = null);
             }
@@ -7686,6 +9708,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7700,12 +9723,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="personawrite"></a>
 # **PersonaWrite**
@@ -7718,7 +9746,9 @@ Create a new alias.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7731,15 +9761,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var personaWriteRequest = new PersonaWriteRequest(); // PersonaWriteRequest | 
+            
+            
 
             try
             {
+                
                 // Create a new alias.
+                
 
                 apiInstance.PersonaWrite(PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null);
             }
@@ -7759,6 +9800,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **personaWriteRequest** | [**PersonaWriteRequest**](PersonaWriteRequest.md)|  | 
 
+
 ### Return type
 
 void (empty response body)
@@ -7769,14 +9811,20 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 
