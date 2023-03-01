@@ -21,21 +21,16 @@ namespace {{packageName}}.{{apiPackage}}
         /// <summary>
         /// {{summary}}
         /// </summary>
-        /// <remarks>
-        /// {{notes}}
-        /// </remarks>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#with bodyParam}}
+        {{#if bodyParam}}{{#with bodyParam}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/with}}
-        {{#each pathParams}}
+        {{/with}}{{/if ~}}
+        {{#if pathParams}}{{#each pathParams~}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}
-        {{#each queryParams}}
-        {{#unless required}}
+        {{/each ~}}{{/if ~}}
+        {{#if queryParams}}{{#each queryParams ~}}{{#unless required}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/unless}}
-        {{/each}}
+        {{/unless}}{{/each}}{{/if ~}}
         /// <returns>VaultResponse of {{returnType}}{{#unless returnType}}Object(void){{/unless}}</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
