@@ -22,7 +22,7 @@ namespace {{packageName}}.{{apiPackage}}
         /// {{summary}}
         /// </summary>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#if bodyParam}}{{#with bodyParam}}
+        {{#if bodyParam}}{{~#with bodyParam ~}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
         {{/with}}{{/if ~}}
         {{#if pathParams}}{{#each pathParams~}}
@@ -41,7 +41,7 @@ namespace {{packageName}}.{{apiPackage}}
         /// </param>
         {{#if isDeprecated}}
         [Obsolete]
-        {{/if}}
+        {{/if ~}}
         VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null);
         {{/each}}
         #endregion Synchronous Operations
@@ -55,25 +55,19 @@ namespace {{packageName}}.{{apiPackage}}
     {
         #region Asynchronous Operations
         {{#each operation}}
-   
         /// <summary>
         /// {{summary}}
         /// </summary>
-        /// <remarks>
-        /// {{notes}}
-        /// </remarks>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#with bodyParam}}
+        {{#if bodyParam}}{{~#with bodyParam ~}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/with}}
-        {{#each pathParams}}
+        {{/with}}{{/if ~}}
+        {{#if pathParams}}{{#each pathParams~}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}
-        {{#each queryParams}}
-        {{#unless required}}
+        {{/each ~}}{{/if ~}}
+        {{#if queryParams}}{{#each queryParams ~}}{{#unless required}}
         /// <param name="{{paramName}}">{{description}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/unless}}
-        {{/each}}
+        {{/unless}}{{/each}}{{/if ~}}
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -85,7 +79,7 @@ namespace {{packageName}}.{{apiPackage}}
         /// <returns>Task of VaultResponse{{#with returnType}} ({{.}}){{/with}}</returns>
         {{#if isDeprecated}}
         [Obsolete]
-        {{/if}}
+        {{/if ~}}
         Task<VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>> {{operationId}}Async({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
         {{/each}}
         #endregion Asynchronous Operations
