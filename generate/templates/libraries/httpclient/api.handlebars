@@ -4,13 +4,11 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using {{packageName}}.Client;
-{{#if hasImport}}using {{packageName}}.{{modelPackage}};
-{{/if}}
+{{#if hasImport}}using {{packageName}}.{{modelPackage}};{{/if}}
 
 namespace {{packageName}}.{{apiPackage}}
 {
     {{#with operations}}
-
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
@@ -89,10 +87,7 @@ namespace {{packageName}}.{{apiPackage}}
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} interface {{interfacePrefix}}{{classname}} : {{interfacePrefix}}{{classname}}Sync{{#if supportsAsync}}, {{interfacePrefix}}{{classname}}Async{{/if}}
-    {
-
-    }
+    {{>visibility}} interface {{interfacePrefix}}{{classname}} : {{interfacePrefix}}{{classname}}Sync{{#if supportsAsync}}, {{interfacePrefix}}{{classname}}Async{{/if}} { }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -158,7 +153,6 @@ namespace {{packageName}}.{{apiPackage}}
         }
 
         {{#each operation}}
-
         /// <summary>
         /// {{summary}} {{notes}}
         /// </summary>
@@ -185,26 +179,16 @@ namespace {{packageName}}.{{apiPackage}}
         {{/if ~}}
         public VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
         {
-            {{#each pathParams}}
-            {{#with required}}
-            {{#unless vendorExtensions.x-csharp-value-type}}
+            {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
-
-            {{/unless}}
-            {{/with}}
-            {{/each}}
-            {{#with bodyParam}}
-            {{#with required}}
-            {{#unless vendorExtensions.x-csharp-value-type}}
+            {{/unless}}{{/with}}{{/each}}
+            {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
-
-            {{/unless}}
-            {{/with}}
-            {{/with}}
+            {{/unless}}{{/with}}{{/with}}
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -213,16 +197,12 @@ namespace {{packageName}}.{{apiPackage}}
             }
 
             string[] _contentTypes = new string[] {
-                {{#if consumes}}
-                "{{{mediaType}}}"{{#unless @last}},{{/unless}}
-                {{/if}}
+                {{#if consumes}}"{{{mediaType}}}"{{#unless @last}},{{/unless}}{{/if}}
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                {{#each produces}}
-                "{{{mediaType}}}"{{#unless @last}},{{/unless}}
-                {{/each}}
+                {{#each produces}}"{{{mediaType}}}"{{#unless @last}},{{/unless}}{{/each}}
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -231,43 +211,33 @@ namespace {{packageName}}.{{apiPackage}}
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            {{#each pathParams}}
-            {{#with required}}
+            {{#each pathParams}}{{#with required}}
             requestOptions.PathParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // path parameter
             {{/with}}
             {{#unless required}}
             if ({{paramName}} != null)
             {
                 requestOptions.PathParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // path parameter
-            }
-            {{/unless}}
-            {{/each}}
-            {{#each queryParams}}
-            {{#with required}}
+            }{{/unless}}{{/each}}
+            {{#each queryParams}}{{#with required}}
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", "true"));
             {{/with}}
             {{#unless required}}
             if ({{paramName}} != null)
             {
-                {{#if isDeepObject}}
-                    {{#each items.vars}}
+                {{#if isDeepObject}}{{#each items.vars}}
                 if ({{paramName}}.{{name}} != null)
                 {
                     requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", {{paramName}}.{{name}}));
-                }
-                    {{/each}}
+                }{{/each}}
                 {{#unless items}}
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("deepObject", "{{baseName}}", {{paramName}}));
-                {{/unless}}
-                {{/if}}
+                {{/unless}}{{/if}}
                 {{#unless isDeepObject}}
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", {{paramName}}));
                 {{/unless}}
-            }
-            {{/unless}}
-            {{/each}}
-            {{#each headerParams}}
-            {{#with required}}
+            }{{/unless}}{{/each}}
+            {{#each headerParams}}{{#with required}}
             requestOptions.HeaderParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // header parameter
             {{/with}}
             {{#unless required}}
@@ -275,95 +245,11 @@ namespace {{packageName}}.{{apiPackage}}
             {
                 requestOptions.HeaderParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // header parameter
             }
-            {{/unless}}
-            {{/each}}
-            {{#each formParams}}
-            {{#with required}}
-            {{#if isFile}}
-            requestOptions.FileParameters.Add("{{baseName}}", {{paramName}});
-            {{/if}}
-            {{#unless isFile}}
-            requestOptions.FormParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // form parameter
-            {{/unless}}
-            {{/with}}
-            {{#unless required}}
-            if ({{paramName}} != null)
-            {
-                {{#if isFile}}
-                requestOptions.FileParameters.Add("{{baseName}}", {{paramName}});
-                {{/if}}
-                {{#unless isFile}}
-                requestOptions.FormParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // form parameter
-                {{/unless}}
-            }
-            {{/unless}}
-            {{/each}}
+            {{/unless}}{{/each}}
             {{#with bodyParam}}
             requestOptions.Data = {{paramName}};
             {{/with}}
 
-            {{#each authMethods}}
-            // authentication ({{name}}) required
-            {{#if isApiKey}}
-            {{#if isKeyInCookie}}
-            // cookie parameter support
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")))
-            {
-                requestOptions.Cookies.Add(new Cookie("{{keyParamName}}", this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")));
-            }
-            {{/if}}
-            {{#if isKeyInHeader}}
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")))
-            {
-                requestOptions.HeaderParameters.Add("{{keyParamName}}", this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}"));
-            }
-            {{/if}}
-            {{#if isKeyInQuery}}
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")))
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "{{keyParamName}}", this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")));
-            }
-            {{/if}}
-            {{/if}}
-            {{#if isBasicBasic}}
-            // http basic authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !requestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                requestOptions.HeaderParameters.Add("Authorization", "Basic " + ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
-            }
-            {{/if}}
-            {{#if isBasicBearer}}
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !requestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                requestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-            {{/if}}
-            {{#if isOAuth}}
-            // oauth required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !requestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                requestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-            {{/if}}
-            {{#if isHttpSignature}}
-            if (this.Configuration.HttpSigningConfiguration != null)
-            {
-                var HttpSigningHeaders = this.Configuration.HttpSigningConfiguration.GetHttpSignedHeader(this.Configuration.BasePath, "{{{httpMethod}}}", "{{{path}}}", requestOptions);
-                foreach (var headerItem in HttpSigningHeaders)
-                {
-                    if (requestOptions.HeaderParameters.ContainsKey(headerItem.Key))
-                    {
-                        requestOptions.HeaderParameters[headerItem.Key] = new List<string>() { headerItem.Value };
-                    }
-                    else
-                    {
-                        requestOptions.HeaderParameters.Add(headerItem.Key, headerItem.Value);
-                    }
-                }
-            }
-            {{/if}}
-            {{/each}}
             // make the HTTP request
             var response = this.Client.{{#with lambda.titlecase}}{{#with lambda.lowercase}}{{httpMethod}}{{/with}}{{/with}}<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>("{{{path}}}", requestOptions);
 
@@ -377,7 +263,6 @@ namespace {{packageName}}.{{apiPackage}}
         }
 
         {{#if supportsAsync}}
-
         /// <summary>
         /// {{summary}} {{notes}}
         /// </summary>
@@ -405,26 +290,16 @@ namespace {{packageName}}.{{apiPackage}}
         {{/if ~}}
         public async Task<VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>> {{operationId}}Async({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            {{#each pathParams}}
-            {{#with required}}
-            {{#unless vendorExtensions.x-csharp-value-type}}
+            {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
-
-            {{/unless}}
-            {{/with}}
-            {{/each}}
-            {{#with bodyParam}}
-            {{#with required}}
-            {{#unless vendorExtensions.x-csharp-value-type}}
+            {{/unless}}{{/with}}{{/each}}
+            {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
-
-            {{/unless}}
-            {{/with}}
-            {{/with}}
+            {{/unless}}{{/with}}{{/with}}
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -434,16 +309,12 @@ namespace {{packageName}}.{{apiPackage}}
             }
 
             string[] _contentTypes = new string[] {
-                {{#if consumes}}
-                "{{{mediaType}}}"{{#unless @last}}, {{/unless}}
-                {{/if}}
+                {{#if consumes}}"{{{mediaType}}}"{{#unless @last}}, {{/unless}}{{/if}}
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                {{#each produces}}
-                "{{{mediaType}}}"{{#unless @last}},{{/unless}}
-                {{/each}}
+                {{#each produces}}"{{{mediaType}}}"{{#unless @last}},{{/unless}}{{/each}}
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -452,128 +323,34 @@ namespace {{packageName}}.{{apiPackage}}
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            {{#each pathParams}}
-            {{#with required}}
+            {{#each pathParams}}{{#with required}}
             requestOptions.PathParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // path parameter
             {{/with}}
             {{#unless required}}
             if ({{paramName}} != null)
             {
                 requestOptions.PathParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // path parameter
-            }
-            {{/unless}}
-            {{/each}}
-            {{#each queryParams}}
-            {{#with required}}
+            }{{/unless}}{{/each}}
+            {{#each queryParams}}{{#with required}}
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", "true"));
             {{/with}}
             {{#unless required}}
             if ({{paramName}} != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", {{paramName}}));
-            }
-            {{/unless}}
-            {{/each}}
-            {{#each headerParams}}
-            {{#with required}}
+            }{{/unless}}{{/each}}
+            {{#each headerParams}}{{#with required}}
             requestOptions.HeaderParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // header parameter
             {{/with}}
-            {{#unless required}}
+            {{#unless required ~}}
             if ({{paramName}} != null)
             {
                 requestOptions.HeaderParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // header parameter
-            }
-            {{/unless}}
-            {{/each}}
-            {{#each formParams}}
-            {{#with required}}
-            {{#if isFile}}
-            requestOptions.FileParameters.Add("{{baseName}}", {{paramName}});
-            {{/if}}
-            {{#unless isFile}}
-            requestOptions.FormParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // form parameter
-            {{/unless}}
-            {{/with}}
-            {{#unless required}}
-            if ({{paramName}} != null)
-            {
-                {{#if isFile}}
-                requestOptions.FileParameters.Add("{{baseName}}", {{paramName}});
-                {{/if}}
-                {{#unless isFile}}
-                requestOptions.FormParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // form parameter
-                {{/unless}}
-            }
-            {{/unless}}
-            {{/each}}
-            {{#with bodyParam}}
+            }{{/unless}}{{/each ~}}
+            {{#with bodyParam ~}}
             requestOptions.Data = {{paramName}};
-            {{/with}}
+            {{/with ~}}
 
-            {{#each authMethods}}
-            // authentication ({{name}}) required
-            {{#if isApiKey}}
-            {{#if isKeyInCookie}}
-            // cookie parameter support
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")))
-            {
-                requestOptions.Cookies.Add(new Cookie("{{keyParamName}}", this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")));
-            }
-            {{/if}}
-            {{#if isKeyInHeader}}
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")))
-            {
-                requestOptions.HeaderParameters.Add("{{keyParamName}}", this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}"));
-            }
-            {{/if}}
-            {{#if isKeyInQuery}}
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")))
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "{{keyParamName}}", this.Configuration.GetApiKeyWithPrefix("{{keyParamName}}")));
-            }
-            {{/if}}
-            {{/if}}
-            {{#if isBasic}}
-            {{#if isBasicBasic}}
-            // http basic authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !requestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                requestOptions.HeaderParameters.Add("Authorization", "Basic " + ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
-            }
-            {{/if}}
-            {{#if isBasicBearer}}
-            // bearer authentication required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !requestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                requestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-            {{/if}}
-            {{/if}}
-            {{#if isOAuth}}
-            // oauth required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !requestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                requestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-            {{/if}}
-            {{#if isHttpSignature}}
-            if (this.Configuration.HttpSigningConfiguration != null)
-            {
-                var HttpSigningHeaders = this.Configuration.HttpSigningConfiguration.GetHttpSignedHeader(this.Configuration.BasePath, "{{{httpMethod}}}", "{{{path}}}", requestOptions);
-                foreach (var headerItem in HttpSigningHeaders)
-                {
-                    if (requestOptions.HeaderParameters.ContainsKey(headerItem.Key))
-                    {
-                        requestOptions.HeaderParameters[headerItem.Key] = new List<string>() { headerItem.Value };
-                    }
-                    else
-                    {
-                        requestOptions.HeaderParameters.Add(headerItem.Key, headerItem.Value);
-                    }
-                }
-            }
-            {{/if}}
-            {{/each}}
             // make the HTTP request
             var response = await this.AsynchronousClient.{{#with lambda.titlecase}}{{#with lambda.lowercase}}{{httpMethod}}{{/with}}{{/with}}Async<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>("{{{path}}}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -584,10 +361,6 @@ namespace {{packageName}}.{{apiPackage}}
             }
 
             return ClientUtils.ToVaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>(response.RawContent);
-        }
-
-        {{/if}}
-        {{/each}}
-    }
-    {{/with}}
+        }{{/if}}{{/each}}
+    }{{/with}}
 }
