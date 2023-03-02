@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,12 +18,10 @@ namespace Vault.Api
     public interface ISystemSync : IApiAccessor
     {
         #region Synchronous Operations
+
         /// <summary>
         /// The hash of the given string via the given audit backend
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="calculateAuditHashRequest"></param>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
@@ -37,12 +34,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> CalculateAuditHash(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Disable the audit device at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -54,12 +49,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAuditDevice(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Disable the auth method at the given auth path
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -71,12 +64,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAuthMethod(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Disable auditing of the given request header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -88,12 +79,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Remove any CORS settings.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -104,12 +93,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteConfigCORS(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Remove a UI header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -121,12 +108,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteConfigUIHeader(string header, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -137,12 +122,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGenerateRoot(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -153,12 +136,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGenerateRootAttempt(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revert a single logger to use log level provided in config.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the logger to be modified.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -170,12 +151,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteLogger(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revert the all loggers to use log level provided in config.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -186,12 +165,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteLoggers(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Disable the mount point specified at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -203,12 +180,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteMount(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
@@ -221,12 +196,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Delete the ACL policy with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -238,12 +211,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePoliciesACL(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Delete a password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -255,12 +226,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePoliciesPassword(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Delete the policy with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -272,12 +241,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePolicy(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -289,12 +256,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteQuotasRateLimit(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -305,12 +270,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRaw(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -322,12 +285,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRawPath(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -338,12 +299,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRekeyBackup(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
-        /// <remarks>
-        /// This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -354,12 +313,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRekeyInit(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -370,12 +327,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Cancel any in-progress rekey verification operation.
         /// </summary>
-        /// <remarks>
-        /// This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -386,12 +341,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRekeyVerify(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return a list of configured UI headers.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -402,12 +355,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListConfigUIHeaders(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -419,12 +370,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListLeasesLookupPrefix(string prefix, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the plugins in the catalog.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -436,12 +385,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListPluginsCatalogByType(string type, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -452,12 +399,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListPoliciesACL(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the existing password policies.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -468,12 +413,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListPoliciesPassword(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -484,12 +427,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListQuotasRateLimits(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns map of historical version change entries
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -500,12 +441,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ListVersionHistory(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="mFAValidateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -517,14 +456,14 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> MFAValidate(MFAValidateRequest mFAValidateRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
+
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -535,12 +474,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns an HTML page listing the available profiles.
         /// </summary>
-        /// <remarks>
-        /// Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -551,12 +488,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofRead(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns a sampling of all past memory allocations.
         /// </summary>
-        /// <remarks>
-        /// Returns a sampling of all past memory allocations.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -567,12 +502,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadAllocs(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to blocking on synchronization primitives
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -583,12 +516,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadBlock(TimeSpan? wrapTTL = null);
+
         /// <summary>
-        /// Returns the running program&#39;s command line.
+        /// Returns the running program&#x27;s command line.
         /// </summary>
-        /// <remarks>
-        /// Returns the running program&#39;s command line, with arguments separated by NUL bytes.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -599,12 +530,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadCmdline(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns stack traces of all current goroutines.
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces of all current goroutines.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -615,12 +544,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadGoroutine(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns a sampling of memory allocations of live object.
         /// </summary>
-        /// <remarks>
-        /// Returns a sampling of memory allocations of live object.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -631,12 +558,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadHeap(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns stack traces of holders of contended mutexes
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces of holders of contended mutexes
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -647,12 +572,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadMutex(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload.
         /// </summary>
-        /// <remarks>
-        /// Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -663,12 +586,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadProfile(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns the program counters listed in the request.
         /// </summary>
-        /// <remarks>
-        /// Returns the program counters listed in the request.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -679,12 +600,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadSymbol(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to the creation of new OS threads
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -695,12 +614,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadThreadcreate(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns the execution trace in binary form.
         /// </summary>
-        /// <remarks>
-        /// Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -711,12 +628,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PprofReadTrace(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the enabled audit devices.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -727,12 +642,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadAuditDevices(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the configuration of the auth engine at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -744,12 +657,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadAuthMethod(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
-        /// Reads the given auth path&#39;s configuration.
+        /// Reads the given auth path&#x27;s configuration.
         /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -761,12 +672,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadAuthMethodTune(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the currently enabled credential backends.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -777,12 +686,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadAuthMethods(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the information for the given request header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -794,12 +701,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the request headers that are configured to be audited.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -810,12 +715,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadConfigAuditingRequestHeaders(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return the current CORS settings.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -826,12 +729,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadConfigCORS(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return a sanitized version of the Vault server configuration.
         /// </summary>
-        /// <remarks>
-        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -842,12 +743,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadConfigStateSanitized(TimeSpan? wrapTTL = null);
+
         /// <summary>
-        /// Return the given UI header&#39;s configuration
+        /// Return the given UI header&#x27;s configuration
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -859,12 +758,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadConfigUIHeader(string header, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -875,12 +772,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadGenerateRoot(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -891,12 +786,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadGenerateRootAttempt(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Check the HA status of a Vault cluster
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -907,12 +800,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadHAStatus(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns the health status of Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -923,12 +814,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadHealth(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Information about the host instance that this Vault server is running on.
         /// </summary>
-        /// <remarks>
-        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -939,12 +828,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadHostInfo(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// reports in-flight requests
         /// </summary>
-        /// <remarks>
-        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -955,12 +842,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInFlightRequests(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns the initialization status of Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -971,12 +856,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInit(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -987,12 +870,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersActivity(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1003,12 +884,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersActivityExport(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1019,12 +898,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersActivityMonthly(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the client count tracking configuration.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1035,12 +912,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersConfig(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1051,12 +926,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersEntities(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1067,12 +940,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersRequests(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1083,12 +954,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalCountersTokens(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Expose the route entry and mount entry tables present in the router
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Name of subtree being observed</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1100,12 +969,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalInspectRouter(string tag, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1116,12 +983,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalSpecsOpenAPI(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Lists enabled feature flags.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1132,12 +997,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalUIFeatureFlags(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return information about the given mount.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path of the mount.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1149,12 +1012,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalUIMount(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1165,12 +1026,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalUIMounts(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1181,12 +1040,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalUINamespaces(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1197,12 +1054,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadInternalUIResultantACL(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Provides information about the backend encryption key.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1213,12 +1068,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadKeyStatus(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1229,12 +1082,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadLeader(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List leases associated with this Vault cluster
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1245,12 +1096,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadLeases(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Count of leases associated with this Vault cluster
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1261,12 +1110,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadLeasesCount(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the log level for a single logger.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the logger to be modified.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1278,12 +1125,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadLogger(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the log level for all existing loggers.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1294,13 +1139,12 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadLoggers(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1311,12 +1155,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadMetrics(string format = default(string), TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the configuration of the secret engine at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1328,12 +1170,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadMount(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the currently mounted backends.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1344,12 +1184,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadMounts(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1361,12 +1199,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadMountsConfig(string path, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Lists all the plugins known to Vault
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1377,12 +1213,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPluginsCatalog(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
@@ -1395,13 +1229,12 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1412,12 +1245,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPolicies(string list = default(string), TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Retrieve information about the named ACL policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1429,12 +1260,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPoliciesACL(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1446,12 +1275,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPoliciesPassword(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate a password from an existing password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1463,12 +1290,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPoliciesPasswordGenerate(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Retrieve the policy body for the named policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1480,12 +1305,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadPolicy(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1496,12 +1319,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadQuotasConfig(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1513,13 +1334,12 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadQuotasRateLimit(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1530,14 +1350,13 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRaw(string list = default(string), TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1548,12 +1367,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRawPath(string path, string list = default(string), TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1564,12 +1381,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRekeyBackup(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1580,12 +1395,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRekeyInit(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1596,12 +1409,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1612,12 +1423,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRekeyVerify(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Check status of a mount migration
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1629,12 +1438,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRemountStatus(string migrationId, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1645,12 +1452,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadReplicationStatus(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1661,12 +1466,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadRotateConfig(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Check the seal status of a Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1677,12 +1480,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ReadSealStatus(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Initiate a mount migration
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="remountRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1694,12 +1495,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Remount(RemountRequest remountRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="renewRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1711,12 +1510,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Renew(RenewRequest renewRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="renewForRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -1729,12 +1526,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> RenewFor(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1746,12 +1541,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Revoke(RevokeRequest revokeRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1763,12 +1556,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> RevokeForce(string prefix, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokeLeaseRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -1781,12 +1572,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> RevokeLease(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokePrefixRequest"></param>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
@@ -1799,12 +1588,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> RevokePrefix(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1815,12 +1602,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Rotate(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Seal the Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1831,12 +1616,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Seal(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Cause the node to give up active status.
         /// </summary>
-        /// <remarks>
-        /// This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1847,12 +1630,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> StepDownLeader(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1864,12 +1645,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> SysDeletePluginsCatalogName(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1880,12 +1659,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> SysListLeasesLookup(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1897,12 +1674,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> SysReadPluginsCatalogName(string name, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Unlocks the user with given mount_accessor and alias_identifier
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasIdentifier">It is the name of the alias (user). For example, if the alias belongs to userpass backend, the name should be a valid username within userpass auth method. If the alias belongs to an approle auth method, the name should be a valid RoleID</param>
         /// <param name="mountAccessor">MountAccessor is the identifier of the mount entry to which the user belongs</param>
@@ -1915,12 +1690,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> SysWriteLockedusersMountAccessorUnlockAliasIdentifier(string aliasIdentifier, string mountAccessor, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sysWritePluginsCatalogNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
@@ -1933,12 +1706,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> SysWritePluginsCatalogName(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sysWriteToolsRandomUrlbytesRequest"></param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
@@ -1951,12 +1722,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> SysWriteToolsRandomUrlbytes(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsGenerateRandomRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1968,12 +1737,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ToolsGenerateRandom(ToolsGenerateRandomRequest toolsGenerateRandomRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsGenerateRandomSourceRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
@@ -1986,12 +1753,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ToolsGenerateRandomSource(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
@@ -2005,12 +1770,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ToolsGenerateRandomSourceBytes(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsHashRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2022,12 +1785,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ToolsHash(ToolsHashRequest toolsHashRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsHashWithRequest"></param>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
@@ -2040,12 +1801,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> ToolsHashWith(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Unseal the Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="unsealRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2057,12 +1816,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> Unseal(UnsealRequest unsealRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token.
+        /// Look up wrapping properties for the requester&#x27;s token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2073,12 +1830,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WrappingReadLookup(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Rotates a response-wrapped token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrappingRewrapRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2090,12 +1845,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WrappingRewrap(WrappingRewrapRequest wrappingRewrapRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Unwraps a response-wrapped token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrappingUnwrapRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2107,12 +1860,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WrappingUnwrap(WrappingUnwrapRequest wrappingUnwrapRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Response-wraps an arbitrary JSON object.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2123,12 +1874,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WrappingWrap(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Look up wrapping properties for the given token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrappingWriteLookupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2140,12 +1889,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WrappingWriteLookup(WrappingWriteLookupRequest wrappingWriteLookupRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enable a new audit device at the supplied path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeAuditDeviceRequest"></param>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
@@ -2158,12 +1905,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteAuditDevice(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enables a new auth method.
         /// </summary>
-        /// <remarks>
-        /// After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeAuthMethodRequest"></param>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
@@ -2176,12 +1921,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteAuthMethod(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Tune configuration parameters for a given auth path.
         /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeAuthMethodTuneRequest"></param>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
@@ -2194,12 +1937,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteAuthMethodTune(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeCapabilitiesRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2211,12 +1952,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteCapabilities(WriteCapabilitiesRequest writeCapabilitiesRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeCapabilitiesAccessorRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2228,12 +1967,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteCapabilitiesAccessor(WriteCapabilitiesAccessorRequest writeCapabilitiesAccessorRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeCapabilitiesSelfRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2245,12 +1982,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteCapabilitiesSelf(WriteCapabilitiesSelfRequest writeCapabilitiesSelfRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enable auditing of a header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeConfigAuditingRequestHeaderRequest"></param>
         /// <param name="header"></param>
@@ -2263,12 +1998,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteConfigAuditingRequestHeader(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Configure the CORS settings.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeConfigCORSRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2280,12 +2013,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteConfigCORS(WriteConfigCORSRequest writeConfigCORSRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Reload the given subsystem
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="subsystem"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2297,12 +2028,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteConfigReloadSubsystem(string subsystem, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Configure the values to be returned for the UI header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeConfigUIHeaderRequest"></param>
         /// <param name="header">The name of the header.</param>
@@ -2315,12 +2044,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteConfigUIHeader(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeGenerateRootRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2332,12 +2059,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteGenerateRoot(WriteGenerateRootRequest writeGenerateRootRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeGenerateRootAttemptRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2349,12 +2074,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteGenerateRootAttempt(WriteGenerateRootAttemptRequest writeGenerateRootAttemptRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeGenerateRootUpdateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2366,12 +2089,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteGenerateRootUpdate(WriteGenerateRootUpdateRequest writeGenerateRootUpdateRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Initialize a new Vault.
         /// </summary>
-        /// <remarks>
-        /// The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeInitRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2383,12 +2104,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteInit(WriteInitRequest writeInitRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeInternalCountersConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2400,12 +2119,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteInternalCountersConfig(WriteInternalCountersConfigRequest writeInternalCountersConfigRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Retrieve lease metadata.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesLookupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2417,12 +2134,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesLookup(WriteLeasesLookupRequest writeLeasesLookupRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRenewRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2434,12 +2149,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesRenew(WriteLeasesRenewRequest writeLeasesRenewRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRenew2Request"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -2452,12 +2165,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesRenew2(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevokeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2469,12 +2180,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesRevoke(WriteLeasesRevokeRequest writeLeasesRevokeRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevoke2Request"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -2487,12 +2196,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesRevoke2(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2504,12 +2211,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesRevokeForce(string prefix, TimeSpan? wrapTTL = null);
+
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
@@ -2522,12 +2227,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesRevokePrefix(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2538,12 +2241,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLeasesTidy(TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Modify the log level of a single logger.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLoggerRequest"></param>
         /// <param name="name">The name of the logger to be modified.</param>
@@ -2556,12 +2257,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLogger(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Modify the log level for all existing loggers.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLoggersRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2573,12 +2272,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteLoggers(WriteLoggersRequest writeLoggersRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enable a new secrets engine at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeMountRequest"></param>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
@@ -2591,12 +2288,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteMount(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeMountsConfigRequest"></param>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
@@ -2609,12 +2304,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteMountsConfig(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
@@ -2628,12 +2321,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WritePluginsCatalogByTypeByName(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Reload mounted plugin backends.
         /// </summary>
-        /// <remarks>
-        /// Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePluginsReloadBackendRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2645,12 +2336,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WritePluginsReloadBackend(WritePluginsReloadBackendRequest writePluginsReloadBackendRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Add a new or update an existing ACL policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePoliciesACLRequest"></param>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
@@ -2663,12 +2352,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WritePoliciesACL(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Add a new or update an existing password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePoliciesPasswordRequest"></param>
         /// <param name="name">The name of the password policy.</param>
@@ -2681,12 +2368,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WritePoliciesPassword(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Add a new or update an existing policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePolicyRequest"></param>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
@@ -2699,12 +2384,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WritePolicy(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeQuotasConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2716,12 +2399,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteQuotasConfig(WriteQuotasConfigRequest writeQuotasConfigRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeQuotasRateLimitRequest"></param>
         /// <param name="name">Name of the quota rule.</param>
@@ -2734,12 +2415,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteQuotasRateLimit(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRawRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2751,12 +2430,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteRaw(WriteRawRequest writeRawRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRawPathRequest"></param>
         /// <param name="path"></param>
@@ -2769,12 +2446,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteRawPath(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Initializes a new rekey attempt.
         /// </summary>
-        /// <remarks>
-        /// Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRekeyInitRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2786,12 +2461,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteRekeyInit(WriteRekeyInitRequest writeRekeyInitRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRekeyUpdateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2803,12 +2476,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteRekeyUpdate(WriteRekeyUpdateRequest writeRekeyUpdateRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRekeyVerifyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2820,12 +2491,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteRekeyVerify(WriteRekeyVerifyRequest writeRekeyVerifyRequest, TimeSpan? wrapTTL = null);
+
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRotateConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2837,8 +2506,10 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> WriteRotateConfig(WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null);
+
         #endregion Synchronous Operations
     }
+
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -2850,9 +2521,6 @@ namespace Vault.Api
         /// <summary>
         /// The hash of the given string via the given audit backend
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="calculateAuditHashRequest"></param>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
@@ -2870,9 +2538,6 @@ namespace Vault.Api
         /// <summary>
         /// Disable the audit device at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="wrapTTL">
@@ -2889,9 +2554,6 @@ namespace Vault.Api
         /// <summary>
         /// Disable the auth method at the given auth path
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="wrapTTL">
@@ -2908,9 +2570,6 @@ namespace Vault.Api
         /// <summary>
         /// Disable auditing of the given request header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <param name="wrapTTL">
@@ -2927,9 +2586,6 @@ namespace Vault.Api
         /// <summary>
         /// Remove any CORS settings.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2945,9 +2601,6 @@ namespace Vault.Api
         /// <summary>
         /// Remove a UI header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <param name="wrapTTL">
@@ -2964,9 +2617,6 @@ namespace Vault.Api
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2982,9 +2632,6 @@ namespace Vault.Api
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3000,9 +2647,6 @@ namespace Vault.Api
         /// <summary>
         /// Revert a single logger to use log level provided in config.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="wrapTTL">
@@ -3019,9 +2663,6 @@ namespace Vault.Api
         /// <summary>
         /// Revert the all loggers to use log level provided in config.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3037,9 +2678,6 @@ namespace Vault.Api
         /// <summary>
         /// Disable the mount point specified at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
@@ -3056,9 +2694,6 @@ namespace Vault.Api
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
@@ -3076,9 +2711,6 @@ namespace Vault.Api
         /// <summary>
         /// Delete the ACL policy with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
@@ -3095,9 +2727,6 @@ namespace Vault.Api
         /// <summary>
         /// Delete a password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <param name="wrapTTL">
@@ -3114,9 +2743,6 @@ namespace Vault.Api
         /// <summary>
         /// Delete the policy with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
@@ -3133,9 +2759,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="wrapTTL">
@@ -3152,9 +2775,6 @@ namespace Vault.Api
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3170,9 +2790,6 @@ namespace Vault.Api
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
         /// <param name="wrapTTL">
@@ -3189,9 +2806,6 @@ namespace Vault.Api
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3207,9 +2821,6 @@ namespace Vault.Api
         /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
-        /// <remarks>
-        /// This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3225,9 +2836,6 @@ namespace Vault.Api
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3243,9 +2851,6 @@ namespace Vault.Api
         /// <summary>
         /// Cancel any in-progress rekey verification operation.
         /// </summary>
-        /// <remarks>
-        /// This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3261,9 +2866,6 @@ namespace Vault.Api
         /// <summary>
         /// Return a list of configured UI headers.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3279,9 +2881,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
         /// <param name="wrapTTL">
@@ -3298,9 +2897,6 @@ namespace Vault.Api
         /// <summary>
         /// List the plugins in the catalog.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="wrapTTL">
@@ -3317,9 +2913,6 @@ namespace Vault.Api
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3335,9 +2928,6 @@ namespace Vault.Api
         /// <summary>
         /// List the existing password policies.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3353,9 +2943,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3371,9 +2958,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns map of historical version change entries
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3389,9 +2973,6 @@ namespace Vault.Api
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="mFAValidateRequest"></param>
         /// <param name="wrapTTL">
@@ -3408,11 +2989,10 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
+
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3428,9 +3008,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns an HTML page listing the available profiles.
         /// </summary>
-        /// <remarks>
-        /// Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3446,9 +3023,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns a sampling of all past memory allocations.
         /// </summary>
-        /// <remarks>
-        /// Returns a sampling of all past memory allocations.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3464,9 +3038,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to blocking on synchronization primitives
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3480,11 +3051,8 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PprofReadBlockAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Returns the running program&#39;s command line.
+        /// Returns the running program&#x27;s command line.
         /// </summary>
-        /// <remarks>
-        /// Returns the running program&#39;s command line, with arguments separated by NUL bytes.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3500,9 +3068,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns stack traces of all current goroutines.
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces of all current goroutines.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3518,9 +3083,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns a sampling of memory allocations of live object.
         /// </summary>
-        /// <remarks>
-        /// Returns a sampling of memory allocations of live object.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3536,9 +3098,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns stack traces of holders of contended mutexes
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces of holders of contended mutexes
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3554,9 +3113,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload.
         /// </summary>
-        /// <remarks>
-        /// Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3572,9 +3128,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns the program counters listed in the request.
         /// </summary>
-        /// <remarks>
-        /// Returns the program counters listed in the request.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3590,9 +3143,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads
         /// </summary>
-        /// <remarks>
-        /// Returns stack traces that led to the creation of new OS threads
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3608,9 +3158,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns the execution trace in binary form.
         /// </summary>
-        /// <remarks>
-        /// Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3626,9 +3173,6 @@ namespace Vault.Api
         /// <summary>
         /// List the enabled audit devices.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3644,9 +3188,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the configuration of the auth engine at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="wrapTTL">
@@ -3661,11 +3202,8 @@ namespace Vault.Api
         Task<VaultResponse<Object>> ReadAuthMethodAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Reads the given auth path&#39;s configuration.
+        /// Reads the given auth path&#x27;s configuration.
         /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="wrapTTL">
@@ -3682,9 +3220,6 @@ namespace Vault.Api
         /// <summary>
         /// List the currently enabled credential backends.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3700,9 +3235,6 @@ namespace Vault.Api
         /// <summary>
         /// List the information for the given request header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <param name="wrapTTL">
@@ -3719,9 +3251,6 @@ namespace Vault.Api
         /// <summary>
         /// List the request headers that are configured to be audited.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3737,9 +3266,6 @@ namespace Vault.Api
         /// <summary>
         /// Return the current CORS settings.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3755,9 +3281,6 @@ namespace Vault.Api
         /// <summary>
         /// Return a sanitized version of the Vault server configuration.
         /// </summary>
-        /// <remarks>
-        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3771,11 +3294,8 @@ namespace Vault.Api
         Task<VaultResponse<Object>> ReadConfigStateSanitizedAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Return the given UI header&#39;s configuration
+        /// Return the given UI header&#x27;s configuration
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <param name="wrapTTL">
@@ -3792,9 +3312,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3810,9 +3327,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3828,9 +3342,6 @@ namespace Vault.Api
         /// <summary>
         /// Check the HA status of a Vault cluster
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3846,9 +3357,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns the health status of Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3864,9 +3372,6 @@ namespace Vault.Api
         /// <summary>
         /// Information about the host instance that this Vault server is running on.
         /// </summary>
-        /// <remarks>
-        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3882,9 +3387,6 @@ namespace Vault.Api
         /// <summary>
         /// reports in-flight requests
         /// </summary>
-        /// <remarks>
-        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3900,9 +3402,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns the initialization status of Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3918,9 +3417,6 @@ namespace Vault.Api
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3936,9 +3432,6 @@ namespace Vault.Api
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3954,9 +3447,6 @@ namespace Vault.Api
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3972,9 +3462,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the client count tracking configuration.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3990,9 +3477,6 @@ namespace Vault.Api
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4008,9 +3492,6 @@ namespace Vault.Api
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4026,9 +3507,6 @@ namespace Vault.Api
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4044,9 +3522,6 @@ namespace Vault.Api
         /// <summary>
         /// Expose the route entry and mount entry tables present in the router
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tag">Name of subtree being observed</param>
         /// <param name="wrapTTL">
@@ -4063,9 +3538,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4081,9 +3553,6 @@ namespace Vault.Api
         /// <summary>
         /// Lists enabled feature flags.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4099,9 +3568,6 @@ namespace Vault.Api
         /// <summary>
         /// Return information about the given mount.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path of the mount.</param>
         /// <param name="wrapTTL">
@@ -4118,9 +3584,6 @@ namespace Vault.Api
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4136,9 +3599,6 @@ namespace Vault.Api
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4154,9 +3614,6 @@ namespace Vault.Api
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4172,9 +3629,6 @@ namespace Vault.Api
         /// <summary>
         /// Provides information about the backend encryption key.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4190,9 +3644,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4208,9 +3659,6 @@ namespace Vault.Api
         /// <summary>
         /// List leases associated with this Vault cluster
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4226,9 +3674,6 @@ namespace Vault.Api
         /// <summary>
         /// Count of leases associated with this Vault cluster
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4244,9 +3689,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the log level for a single logger.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="wrapTTL">
@@ -4263,9 +3705,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the log level for all existing loggers.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4281,10 +3720,8 @@ namespace Vault.Api
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4300,9 +3737,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the configuration of the secret engine at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
@@ -4319,9 +3753,6 @@ namespace Vault.Api
         /// <summary>
         /// List the currently mounted backends.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4337,9 +3768,6 @@ namespace Vault.Api
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
@@ -4356,9 +3784,6 @@ namespace Vault.Api
         /// <summary>
         /// Lists all the plugins known to Vault
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4374,9 +3799,6 @@ namespace Vault.Api
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
@@ -4394,10 +3816,8 @@ namespace Vault.Api
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4413,9 +3833,6 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve information about the named ACL policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
@@ -4432,9 +3849,6 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <param name="wrapTTL">
@@ -4451,9 +3865,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate a password from an existing password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <param name="wrapTTL">
@@ -4470,9 +3881,6 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve the policy body for the named policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
@@ -4489,9 +3897,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4507,9 +3912,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="wrapTTL">
@@ -4526,10 +3928,8 @@ namespace Vault.Api
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4545,11 +3945,9 @@ namespace Vault.Api
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4565,9 +3963,6 @@ namespace Vault.Api
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4583,9 +3978,6 @@ namespace Vault.Api
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4601,9 +3993,6 @@ namespace Vault.Api
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4619,9 +4008,6 @@ namespace Vault.Api
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4637,9 +4023,6 @@ namespace Vault.Api
         /// <summary>
         /// Check status of a mount migration
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <param name="wrapTTL">
@@ -4656,9 +4039,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4674,9 +4054,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4692,9 +4069,6 @@ namespace Vault.Api
         /// <summary>
         /// Check the seal status of a Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4710,9 +4084,6 @@ namespace Vault.Api
         /// <summary>
         /// Initiate a mount migration
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="remountRequest"></param>
         /// <param name="wrapTTL">
@@ -4729,9 +4100,6 @@ namespace Vault.Api
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="renewRequest"></param>
         /// <param name="wrapTTL">
@@ -4748,9 +4116,6 @@ namespace Vault.Api
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="renewForRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -4768,9 +4133,6 @@ namespace Vault.Api
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokeRequest"></param>
         /// <param name="wrapTTL">
@@ -4787,9 +4149,6 @@ namespace Vault.Api
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="wrapTTL">
@@ -4806,9 +4165,6 @@ namespace Vault.Api
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokeLeaseRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -4824,11 +4180,8 @@ namespace Vault.Api
         Task<VaultResponse<Object>> RevokeLeaseAsync(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokePrefixRequest"></param>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
@@ -4846,9 +4199,6 @@ namespace Vault.Api
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4864,9 +4214,6 @@ namespace Vault.Api
         /// <summary>
         /// Seal the Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4882,9 +4229,6 @@ namespace Vault.Api
         /// <summary>
         /// Cause the node to give up active status.
         /// </summary>
-        /// <remarks>
-        /// This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4900,9 +4244,6 @@ namespace Vault.Api
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <param name="wrapTTL">
@@ -4919,9 +4260,6 @@ namespace Vault.Api
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4937,9 +4275,6 @@ namespace Vault.Api
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <param name="wrapTTL">
@@ -4956,9 +4291,6 @@ namespace Vault.Api
         /// <summary>
         /// Unlocks the user with given mount_accessor and alias_identifier
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="aliasIdentifier">It is the name of the alias (user). For example, if the alias belongs to userpass backend, the name should be a valid username within userpass auth method. If the alias belongs to an approle auth method, the name should be a valid RoleID</param>
         /// <param name="mountAccessor">MountAccessor is the identifier of the mount entry to which the user belongs</param>
@@ -4976,9 +4308,6 @@ namespace Vault.Api
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sysWritePluginsCatalogNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
@@ -4996,9 +4325,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="sysWriteToolsRandomUrlbytesRequest"></param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
@@ -5016,9 +4342,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsGenerateRandomRequest"></param>
         /// <param name="wrapTTL">
@@ -5035,9 +4358,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsGenerateRandomSourceRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
@@ -5055,9 +4375,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate random bytes
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
@@ -5076,9 +4393,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsHashRequest"></param>
         /// <param name="wrapTTL">
@@ -5095,9 +4409,6 @@ namespace Vault.Api
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="toolsHashWithRequest"></param>
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
@@ -5115,9 +4426,6 @@ namespace Vault.Api
         /// <summary>
         /// Unseal the Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="unsealRequest"></param>
         /// <param name="wrapTTL">
@@ -5132,11 +4440,8 @@ namespace Vault.Api
         Task<VaultResponse<Object>> UnsealAsync(UnsealRequest unsealRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token.
+        /// Look up wrapping properties for the requester&#x27;s token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5152,9 +4457,6 @@ namespace Vault.Api
         /// <summary>
         /// Rotates a response-wrapped token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrappingRewrapRequest"></param>
         /// <param name="wrapTTL">
@@ -5171,9 +4473,6 @@ namespace Vault.Api
         /// <summary>
         /// Unwraps a response-wrapped token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrappingUnwrapRequest"></param>
         /// <param name="wrapTTL">
@@ -5190,9 +4489,6 @@ namespace Vault.Api
         /// <summary>
         /// Response-wraps an arbitrary JSON object.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5208,9 +4504,6 @@ namespace Vault.Api
         /// <summary>
         /// Look up wrapping properties for the given token.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrappingWriteLookupRequest"></param>
         /// <param name="wrapTTL">
@@ -5227,9 +4520,6 @@ namespace Vault.Api
         /// <summary>
         /// Enable a new audit device at the supplied path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeAuditDeviceRequest"></param>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
@@ -5247,9 +4537,6 @@ namespace Vault.Api
         /// <summary>
         /// Enables a new auth method.
         /// </summary>
-        /// <remarks>
-        /// After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeAuthMethodRequest"></param>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
@@ -5267,9 +4554,6 @@ namespace Vault.Api
         /// <summary>
         /// Tune configuration parameters for a given auth path.
         /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeAuthMethodTuneRequest"></param>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
@@ -5287,9 +4571,6 @@ namespace Vault.Api
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeCapabilitiesRequest"></param>
         /// <param name="wrapTTL">
@@ -5306,9 +4587,6 @@ namespace Vault.Api
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeCapabilitiesAccessorRequest"></param>
         /// <param name="wrapTTL">
@@ -5325,9 +4603,6 @@ namespace Vault.Api
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeCapabilitiesSelfRequest"></param>
         /// <param name="wrapTTL">
@@ -5344,9 +4619,6 @@ namespace Vault.Api
         /// <summary>
         /// Enable auditing of a header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeConfigAuditingRequestHeaderRequest"></param>
         /// <param name="header"></param>
@@ -5364,9 +4636,6 @@ namespace Vault.Api
         /// <summary>
         /// Configure the CORS settings.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeConfigCORSRequest"></param>
         /// <param name="wrapTTL">
@@ -5383,9 +4652,6 @@ namespace Vault.Api
         /// <summary>
         /// Reload the given subsystem
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="subsystem"></param>
         /// <param name="wrapTTL">
@@ -5402,9 +4668,6 @@ namespace Vault.Api
         /// <summary>
         /// Configure the values to be returned for the UI header.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeConfigUIHeaderRequest"></param>
         /// <param name="header">The name of the header.</param>
@@ -5422,9 +4685,6 @@ namespace Vault.Api
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeGenerateRootRequest"></param>
         /// <param name="wrapTTL">
@@ -5441,9 +4701,6 @@ namespace Vault.Api
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeGenerateRootAttemptRequest"></param>
         /// <param name="wrapTTL">
@@ -5460,9 +4717,6 @@ namespace Vault.Api
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
         /// </summary>
-        /// <remarks>
-        /// If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeGenerateRootUpdateRequest"></param>
         /// <param name="wrapTTL">
@@ -5479,9 +4733,6 @@ namespace Vault.Api
         /// <summary>
         /// Initialize a new Vault.
         /// </summary>
-        /// <remarks>
-        /// The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeInitRequest"></param>
         /// <param name="wrapTTL">
@@ -5498,9 +4749,6 @@ namespace Vault.Api
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeInternalCountersConfigRequest"></param>
         /// <param name="wrapTTL">
@@ -5517,9 +4765,6 @@ namespace Vault.Api
         /// <summary>
         /// Retrieve lease metadata.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesLookupRequest"></param>
         /// <param name="wrapTTL">
@@ -5536,9 +4781,6 @@ namespace Vault.Api
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRenewRequest"></param>
         /// <param name="wrapTTL">
@@ -5555,9 +4797,6 @@ namespace Vault.Api
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRenew2Request"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -5575,9 +4814,6 @@ namespace Vault.Api
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevokeRequest"></param>
         /// <param name="wrapTTL">
@@ -5594,9 +4830,6 @@ namespace Vault.Api
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevoke2Request"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
@@ -5614,9 +4847,6 @@ namespace Vault.Api
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
-        /// <remarks>
-        /// Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="wrapTTL">
@@ -5631,11 +4861,8 @@ namespace Vault.Api
         Task<VaultResponse<Object>> WriteLeasesRevokeForceAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
@@ -5653,9 +4880,6 @@ namespace Vault.Api
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5671,9 +4895,6 @@ namespace Vault.Api
         /// <summary>
         /// Modify the log level of a single logger.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLoggerRequest"></param>
         /// <param name="name">The name of the logger to be modified.</param>
@@ -5691,9 +4912,6 @@ namespace Vault.Api
         /// <summary>
         /// Modify the log level for all existing loggers.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLoggersRequest"></param>
         /// <param name="wrapTTL">
@@ -5710,9 +4928,6 @@ namespace Vault.Api
         /// <summary>
         /// Enable a new secrets engine at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeMountRequest"></param>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
@@ -5730,9 +4945,6 @@ namespace Vault.Api
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeMountsConfigRequest"></param>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
@@ -5750,9 +4962,6 @@ namespace Vault.Api
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
@@ -5771,9 +4980,6 @@ namespace Vault.Api
         /// <summary>
         /// Reload mounted plugin backends.
         /// </summary>
-        /// <remarks>
-        /// Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePluginsReloadBackendRequest"></param>
         /// <param name="wrapTTL">
@@ -5790,9 +4996,6 @@ namespace Vault.Api
         /// <summary>
         /// Add a new or update an existing ACL policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePoliciesACLRequest"></param>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
@@ -5810,9 +5013,6 @@ namespace Vault.Api
         /// <summary>
         /// Add a new or update an existing password policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePoliciesPasswordRequest"></param>
         /// <param name="name">The name of the password policy.</param>
@@ -5830,9 +5030,6 @@ namespace Vault.Api
         /// <summary>
         /// Add a new or update an existing policy.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writePolicyRequest"></param>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
@@ -5850,9 +5047,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeQuotasConfigRequest"></param>
         /// <param name="wrapTTL">
@@ -5869,9 +5063,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeQuotasRateLimitRequest"></param>
         /// <param name="name">Name of the quota rule.</param>
@@ -5889,9 +5080,6 @@ namespace Vault.Api
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRawRequest"></param>
         /// <param name="wrapTTL">
@@ -5908,9 +5096,6 @@ namespace Vault.Api
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRawPathRequest"></param>
         /// <param name="path"></param>
@@ -5928,9 +5113,6 @@ namespace Vault.Api
         /// <summary>
         /// Initializes a new rekey attempt.
         /// </summary>
-        /// <remarks>
-        /// Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRekeyInitRequest"></param>
         /// <param name="wrapTTL">
@@ -5947,9 +5129,6 @@ namespace Vault.Api
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRekeyUpdateRequest"></param>
         /// <param name="wrapTTL">
@@ -5966,9 +5145,6 @@ namespace Vault.Api
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation.
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRekeyVerifyRequest"></param>
         /// <param name="wrapTTL">
@@ -5985,9 +5161,6 @@ namespace Vault.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRotateConfigRequest"></param>
         /// <param name="wrapTTL">
@@ -6000,16 +5173,15 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> WriteRotateConfigAsync(WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
         #endregion Asynchronous Operations
     }
+
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISystem : ISystemSync, ISystemAsync
-    {
-
-    }
+    public interface ISystem : ISystemSync, ISystemAsync { }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -6031,10 +5203,12 @@ namespace Vault.Api
             this.ExceptionFactory = VaultConfiguration.DefaultExceptionFactory;
         }
 
+
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
         public Vault.Client.IAsynchronousClient AsynchronousClient { get; set; }
+
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
@@ -6089,9 +5263,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> CalculateAuditHash(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->CalculateAuditHash");
+
 
             // verify the required parameter 'calculateAuditHashRequest' is set
             if (calculateAuditHashRequest == null)
@@ -6105,11 +5281,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6118,8 +5295,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = calculateAuditHashRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/audit-hash/{path}", requestOptions);
@@ -6151,9 +5335,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> CalculateAuditHashAsync(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->CalculateAuditHash");
+
 
             // verify the required parameter 'calculateAuditHashRequest' is set
             if (calculateAuditHashRequest == null)
@@ -6168,11 +5354,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6181,9 +5368,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = calculateAuditHashRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = calculateAuditHashRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/audit-hash/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -6195,8 +5385,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Disable the audit device at the given path. 
         /// </summary>
@@ -6212,9 +5400,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteAuditDevice(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteAuditDevice");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6224,10 +5414,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6236,7 +5428,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/audit/{path}", requestOptions);
@@ -6267,9 +5465,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteAuditDeviceAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteAuditDevice");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6280,10 +5480,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6292,7 +5494,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/audit/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -6305,8 +5510,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Disable the auth method at the given auth path 
         /// </summary>
@@ -6322,9 +5525,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteAuthMethod(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteAuthMethod");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6334,10 +5539,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6346,7 +5553,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/auth/{path}", requestOptions);
@@ -6377,9 +5590,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteAuthMethodAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteAuthMethod");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6390,10 +5605,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6402,7 +5619,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -6415,8 +5635,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Disable auditing of the given request header. 
         /// </summary>
@@ -6432,9 +5650,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteConfigAuditingRequestHeader");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6444,10 +5664,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6456,7 +5678,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/config/auditing/request-headers/{header}", requestOptions);
@@ -6487,9 +5715,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteConfigAuditingRequestHeaderAsync(string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteConfigAuditingRequestHeader");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6500,10 +5730,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6512,7 +5744,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -6525,8 +5760,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Remove any CORS settings. 
         /// </summary>
@@ -6541,6 +5774,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteConfigCORS(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -6549,10 +5784,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6560,6 +5797,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -6591,6 +5832,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteConfigCORSAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -6599,10 +5842,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6610,6 +5855,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -6623,8 +5869,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Remove a UI header. 
         /// </summary>
@@ -6640,9 +5884,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteConfigUIHeader(string header, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteConfigUIHeader");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6652,10 +5898,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6664,7 +5912,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/config/ui/headers/{header}", requestOptions);
@@ -6695,9 +5949,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteConfigUIHeaderAsync(string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteConfigUIHeader");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6708,10 +5964,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6720,7 +5978,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -6733,8 +5994,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
         /// </summary>
@@ -6749,6 +6008,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteGenerateRoot(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -6757,10 +6018,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6768,6 +6031,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -6799,6 +6066,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteGenerateRootAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -6807,10 +6076,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6818,6 +6089,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -6831,8 +6103,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
         /// </summary>
@@ -6847,6 +6117,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteGenerateRootAttempt(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -6855,10 +6127,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6866,6 +6140,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -6897,6 +6175,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteGenerateRootAttemptAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -6905,10 +6185,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6916,6 +6198,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -6929,8 +6212,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revert a single logger to use log level provided in config. 
         /// </summary>
@@ -6946,9 +6227,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteLogger(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteLogger");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6958,10 +6241,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6970,7 +6255,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/loggers/{name}", requestOptions);
@@ -7001,9 +6292,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteLoggerAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteLogger");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7014,10 +6307,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7026,7 +6321,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/loggers/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7039,8 +6337,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revert the all loggers to use log level provided in config. 
         /// </summary>
@@ -7055,6 +6351,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteLoggers(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -7063,10 +6361,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7074,6 +6374,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -7105,6 +6409,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteLoggersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -7113,10 +6419,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7124,6 +6432,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -7137,8 +6446,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Disable the mount point specified at the given path. 
         /// </summary>
@@ -7154,9 +6461,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteMount(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteMount");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7166,10 +6475,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7178,7 +6489,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/mounts/{path}", requestOptions);
@@ -7209,9 +6526,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteMountAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteMount");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7222,10 +6541,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7234,7 +6555,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7247,8 +6571,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Remove the plugin with the given name. 
         /// </summary>
@@ -7265,6 +6587,7 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeletePluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePluginsCatalogByTypeByName");
@@ -7272,6 +6595,7 @@ namespace Vault.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->DeletePluginsCatalogByTypeByName");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7281,10 +6605,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7293,8 +6619,16 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions);
@@ -7326,6 +6660,7 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeletePluginsCatalogByTypeByNameAsync(string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePluginsCatalogByTypeByName");
@@ -7333,6 +6668,7 @@ namespace Vault.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->DeletePluginsCatalogByTypeByName");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7343,10 +6679,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7355,8 +6693,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7369,8 +6712,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Delete the ACL policy with the given name. 
         /// </summary>
@@ -7386,9 +6727,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeletePoliciesACL(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePoliciesACL");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7398,10 +6741,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7410,7 +6755,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/policies/acl/{name}", requestOptions);
@@ -7441,9 +6792,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeletePoliciesACLAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePoliciesACL");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7454,10 +6807,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7466,7 +6821,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/acl/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7479,8 +6837,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Delete a password policy. 
         /// </summary>
@@ -7496,9 +6852,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeletePoliciesPassword(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePoliciesPassword");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7508,10 +6866,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7520,7 +6880,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/policies/password/{name}", requestOptions);
@@ -7551,9 +6917,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeletePoliciesPasswordAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePoliciesPassword");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7564,10 +6932,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7576,7 +6946,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policies/password/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7589,8 +6962,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Delete the policy with the given name. 
         /// </summary>
@@ -7606,9 +6977,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeletePolicy(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePolicy");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7618,10 +6991,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7630,7 +7005,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/policy/{name}", requestOptions);
@@ -7661,9 +7042,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeletePolicyAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeletePolicy");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7674,10 +7057,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7686,7 +7071,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7699,8 +7087,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -7716,9 +7102,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteQuotasRateLimit(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteQuotasRateLimit");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7728,10 +7116,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7740,7 +7130,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/quotas/rate-limit/{name}", requestOptions);
@@ -7771,9 +7167,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteQuotasRateLimitAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteQuotasRateLimit");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7784,10 +7182,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7796,7 +7196,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -7809,8 +7212,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Delete the key with given path. 
         /// </summary>
@@ -7825,6 +7226,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteRaw(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -7833,10 +7236,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7844,6 +7249,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -7875,6 +7284,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteRawAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -7883,10 +7294,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7894,6 +7307,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -7907,8 +7321,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Delete the key with given path. 
         /// </summary>
@@ -7924,9 +7336,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteRawPath(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteRawPath");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7936,10 +7350,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7948,7 +7364,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/raw/{path}", requestOptions);
@@ -7979,9 +7401,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteRawPathAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteRawPath");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7992,10 +7416,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8004,7 +7430,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8017,8 +7446,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys. 
         /// </summary>
@@ -8033,6 +7460,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteRekeyBackup(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8041,10 +7470,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8052,6 +7483,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -8083,6 +7518,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteRekeyBackupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8091,10 +7528,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8102,6 +7541,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -8115,8 +7555,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
         /// </summary>
@@ -8131,6 +7569,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteRekeyInit(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8139,10 +7579,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8150,6 +7592,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -8181,6 +7627,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteRekeyInitAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8189,10 +7637,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8200,6 +7650,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -8213,8 +7664,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys. 
         /// </summary>
@@ -8229,6 +7678,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8237,10 +7688,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8248,6 +7701,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -8279,6 +7736,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteRekeyRecoveryKeyBackupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8287,10 +7746,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8298,6 +7759,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -8311,8 +7773,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Cancel any in-progress rekey verification operation. This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
         /// </summary>
@@ -8327,6 +7787,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> DeleteRekeyVerify(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8335,10 +7797,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8346,6 +7810,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -8377,6 +7845,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> DeleteRekeyVerifyAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8385,10 +7855,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8396,6 +7868,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -8409,8 +7882,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return a list of configured UI headers. 
         /// </summary>
@@ -8425,6 +7896,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListConfigUIHeaders(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8433,10 +7906,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8445,7 +7920,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/config/ui/headers/", requestOptions);
@@ -8476,6 +7957,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ListConfigUIHeadersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8484,10 +7967,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8496,7 +7981,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8509,8 +7997,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns a list of lease ids. 
         /// </summary>
@@ -8526,9 +8012,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListLeasesLookupPrefix(string prefix, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->ListLeasesLookupPrefix");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8538,10 +8026,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8550,8 +8040,16 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/leases/lookup/{prefix}", requestOptions);
@@ -8582,9 +8080,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ListLeasesLookupPrefixAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->ListLeasesLookupPrefix");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8595,10 +8095,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8607,8 +8109,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8621,8 +8128,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the plugins in the catalog. 
         /// </summary>
@@ -8638,9 +8143,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListPluginsCatalogByType(string type, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ListPluginsCatalogByType");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8650,10 +8157,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8662,8 +8171,16 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/plugins/catalog/{type}", requestOptions);
@@ -8694,9 +8211,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ListPluginsCatalogByTypeAsync(string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ListPluginsCatalogByType");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8707,10 +8226,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8719,8 +8240,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8733,8 +8259,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the configured access control policies. 
         /// </summary>
@@ -8749,6 +8273,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListPoliciesACL(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8757,10 +8283,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8769,7 +8297,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/acl", requestOptions);
@@ -8800,6 +8334,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ListPoliciesACLAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8808,10 +8344,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8820,7 +8358,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8833,8 +8374,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the existing password policies. 
         /// </summary>
@@ -8849,6 +8388,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListPoliciesPassword(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8857,10 +8398,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8869,7 +8412,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/password", requestOptions);
@@ -8900,6 +8449,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ListPoliciesPasswordAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8908,10 +8459,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8920,7 +8473,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8933,8 +8489,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -8949,6 +8503,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListQuotasRateLimits(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8957,10 +8513,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8969,7 +8527,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/quotas/rate-limit", requestOptions);
@@ -9000,6 +8564,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ListQuotasRateLimitsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9008,10 +8574,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9020,7 +8588,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -9033,8 +8604,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns map of historical version change entries 
         /// </summary>
@@ -9049,6 +8618,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ListVersionHistory(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9057,10 +8628,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9069,7 +8642,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/version-history/", requestOptions);
@@ -9100,6 +8679,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ListVersionHistoryAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9108,10 +8689,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9120,7 +8703,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -9133,8 +8719,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token 
         /// </summary>
@@ -9150,6 +8734,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> MFAValidate(MFAValidateRequest mFAValidateRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'mFAValidateRequest' is set
             if (mFAValidateRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'mFAValidateRequest' when calling System->MFAValidate");
@@ -9162,11 +8748,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9175,7 +8762,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = mFAValidateRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/mfa/validate", requestOptions);
@@ -9206,6 +8798,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> MFAValidateAsync(MFAValidateRequest mFAValidateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'mFAValidateRequest' is set
             if (mFAValidateRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'mFAValidateRequest' when calling System->MFAValidate");
@@ -9219,11 +8813,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9232,8 +8827,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = mFAValidateRequest;
 
+
+            requestOptions.Data = mFAValidateRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/mfa/validate", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -9245,13 +8841,13 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
+
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -9263,6 +8859,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9271,10 +8869,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9283,14 +8883,26 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (logFormat != null)
             {
+
+
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
+
             }
+
             if (logLevel != null)
             {
+
+
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
+
             }
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/monitor", requestOptions);
@@ -9309,7 +8921,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
+
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9323,6 +8937,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> MonitorAsync(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9331,10 +8947,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9343,15 +8961,18 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (logFormat != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_format", logFormat));
             }
+
             if (logLevel != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "log_level", logLevel));
             }
-
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/monitor", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -9363,8 +8984,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns an HTML page listing the available profiles. Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
         /// </summary>
@@ -9379,6 +8998,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofRead(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9387,10 +9008,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9398,6 +9021,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -9429,6 +9056,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9437,10 +9066,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9448,6 +9079,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -9461,8 +9093,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns a sampling of all past memory allocations. Returns a sampling of all past memory allocations.
         /// </summary>
@@ -9477,6 +9107,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadAllocs(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9485,10 +9117,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9496,6 +9130,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -9527,6 +9165,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadAllocsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9535,10 +9175,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9546,6 +9188,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -9559,8 +9202,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
@@ -9575,6 +9216,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadBlock(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9583,10 +9226,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9594,6 +9239,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -9625,6 +9274,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadBlockAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9633,10 +9284,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9644,6 +9297,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -9657,10 +9311,8 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
-        /// Returns the running program&#39;s command line. Returns the running program&#39;s command line, with arguments separated by NUL bytes.
+        /// Returns the running program&#x27;s command line. Returns the running program&#x27;s command line, with arguments separated by NUL bytes.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -9673,6 +9325,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadCmdline(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9681,10 +9335,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9692,6 +9348,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -9708,7 +9368,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Returns the running program&#39;s command line. Returns the running program&#39;s command line, with arguments separated by NUL bytes.
+        /// Returns the running program&#x27;s command line. Returns the running program&#x27;s command line, with arguments separated by NUL bytes.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
@@ -9723,6 +9383,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadCmdlineAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9731,10 +9393,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9742,6 +9406,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -9755,8 +9420,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns stack traces of all current goroutines. Returns stack traces of all current goroutines.
         /// </summary>
@@ -9771,6 +9434,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadGoroutine(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9779,10 +9444,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9790,6 +9457,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -9821,6 +9492,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadGoroutineAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9829,10 +9502,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9840,6 +9515,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -9853,8 +9529,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns a sampling of memory allocations of live object. Returns a sampling of memory allocations of live object.
         /// </summary>
@@ -9869,6 +9543,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadHeap(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9877,10 +9553,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9888,6 +9566,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -9919,6 +9601,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadHeapAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9927,10 +9611,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9938,6 +9624,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -9951,8 +9638,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns stack traces of holders of contended mutexes Returns stack traces of holders of contended mutexes
         /// </summary>
@@ -9967,6 +9652,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadMutex(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9975,10 +9662,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -9986,6 +9675,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10017,6 +9710,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadMutexAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10025,10 +9720,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10036,6 +9733,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10049,8 +9747,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload. Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
         /// </summary>
@@ -10065,6 +9761,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadProfile(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10073,10 +9771,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10084,6 +9784,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10115,6 +9819,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadProfileAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10123,10 +9829,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10134,6 +9842,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10147,8 +9856,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns the program counters listed in the request. Returns the program counters listed in the request.
         /// </summary>
@@ -10163,6 +9870,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadSymbol(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10171,10 +9880,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10182,6 +9893,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10213,6 +9928,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadSymbolAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10221,10 +9938,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10232,6 +9951,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10245,8 +9965,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads Returns stack traces that led to the creation of new OS threads
         /// </summary>
@@ -10261,6 +9979,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadThreadcreate(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10269,10 +9989,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10280,6 +10002,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10311,6 +10037,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadThreadcreateAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10319,10 +10047,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10330,6 +10060,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10343,8 +10074,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns the execution trace in binary form. Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
         /// </summary>
@@ -10359,6 +10088,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> PprofReadTrace(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10367,10 +10098,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10378,6 +10111,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10409,6 +10146,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> PprofReadTraceAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10417,10 +10156,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10428,6 +10169,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10441,8 +10183,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the enabled audit devices. 
         /// </summary>
@@ -10457,6 +10197,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadAuditDevices(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10465,10 +10207,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10476,6 +10220,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10507,6 +10255,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadAuditDevicesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10515,10 +10265,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10526,6 +10278,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10539,8 +10292,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the configuration of the auth engine at the given path. 
         /// </summary>
@@ -10556,9 +10307,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadAuthMethod(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadAuthMethod");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10568,10 +10321,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10580,7 +10335,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/auth/{path}", requestOptions);
@@ -10611,9 +10372,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadAuthMethodAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadAuthMethod");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10624,10 +10387,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10636,7 +10401,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -10649,10 +10417,8 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
-        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
+        /// Reads the given auth path&#x27;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
@@ -10666,9 +10432,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadAuthMethodTune(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadAuthMethodTune");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10678,10 +10446,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10690,7 +10460,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/auth/{path}/tune", requestOptions);
@@ -10706,7 +10482,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
+        /// Reads the given auth path&#x27;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
@@ -10721,9 +10497,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadAuthMethodTuneAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadAuthMethodTune");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10734,10 +10512,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10746,7 +10526,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -10759,8 +10542,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the currently enabled credential backends. 
         /// </summary>
@@ -10775,6 +10556,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadAuthMethods(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10783,10 +10566,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10794,6 +10579,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -10825,6 +10614,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadAuthMethodsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10833,10 +10624,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10844,6 +10637,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -10857,8 +10651,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the information for the given request header. 
         /// </summary>
@@ -10874,9 +10666,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadConfigAuditingRequestHeader");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10886,10 +10680,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10898,7 +10694,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", requestOptions);
@@ -10929,9 +10731,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadConfigAuditingRequestHeaderAsync(string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadConfigAuditingRequestHeader");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10942,10 +10746,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -10954,7 +10760,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -10967,8 +10776,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the request headers that are configured to be audited. 
         /// </summary>
@@ -10983,6 +10790,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadConfigAuditingRequestHeaders(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10991,10 +10800,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11002,6 +10813,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11033,6 +10848,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadConfigAuditingRequestHeadersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11041,10 +10858,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11052,6 +10871,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11065,8 +10885,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return the current CORS settings. 
         /// </summary>
@@ -11081,6 +10899,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadConfigCORS(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11089,10 +10909,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11100,6 +10922,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11131,6 +10957,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadConfigCORSAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11139,10 +10967,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11150,6 +10980,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11163,8 +10994,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
         /// </summary>
@@ -11179,6 +11008,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadConfigStateSanitized(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11187,10 +11018,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11198,6 +11031,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11229,6 +11066,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadConfigStateSanitizedAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11237,10 +11076,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11248,6 +11089,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11261,10 +11103,8 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
-        /// Return the given UI header&#39;s configuration 
+        /// Return the given UI header&#x27;s configuration 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
@@ -11278,9 +11118,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadConfigUIHeader(string header, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadConfigUIHeader");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11290,10 +11132,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11302,7 +11146,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/config/ui/headers/{header}", requestOptions);
@@ -11318,7 +11168,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Return the given UI header&#39;s configuration 
+        /// Return the given UI header&#x27;s configuration 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
@@ -11333,9 +11183,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadConfigUIHeaderAsync(string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadConfigUIHeader");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11346,10 +11198,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11358,7 +11212,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -11371,8 +11228,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
         /// </summary>
@@ -11387,6 +11242,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadGenerateRoot(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11395,10 +11252,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11406,6 +11265,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11437,6 +11300,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadGenerateRootAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11445,10 +11310,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11456,6 +11323,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11469,8 +11337,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
         /// </summary>
@@ -11485,6 +11351,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadGenerateRootAttempt(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11493,10 +11361,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11504,6 +11374,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11535,6 +11409,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadGenerateRootAttemptAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11543,10 +11419,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11554,6 +11432,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11567,8 +11446,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Check the HA status of a Vault cluster 
         /// </summary>
@@ -11583,6 +11460,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadHAStatus(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11591,10 +11470,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11602,6 +11483,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11633,6 +11518,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadHAStatusAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11641,10 +11528,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11652,6 +11541,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11665,8 +11555,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns the health status of Vault. 
         /// </summary>
@@ -11681,6 +11569,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadHealth(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11689,10 +11579,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11700,6 +11592,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11731,6 +11627,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadHealthAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11739,10 +11637,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11750,6 +11650,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11763,8 +11664,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
         /// </summary>
@@ -11779,6 +11678,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadHostInfo(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11787,10 +11688,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11798,6 +11701,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11829,6 +11736,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadHostInfoAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11837,10 +11746,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11848,6 +11759,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11861,8 +11773,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
         /// </summary>
@@ -11877,6 +11787,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInFlightRequests(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11885,10 +11797,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11896,6 +11810,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -11927,6 +11845,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInFlightRequestsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11935,10 +11855,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11946,6 +11868,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -11959,8 +11882,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns the initialization status of Vault. 
         /// </summary>
@@ -11975,6 +11896,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInit(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11983,10 +11906,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -11994,6 +11919,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12025,6 +11954,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInitAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12033,10 +11964,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12044,6 +11977,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12057,8 +11991,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
         /// </summary>
@@ -12073,6 +12005,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersActivity(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12081,10 +12015,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12092,6 +12028,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12123,6 +12063,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersActivityAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12131,10 +12073,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12142,6 +12086,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12155,8 +12100,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
         /// </summary>
@@ -12171,6 +12114,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersActivityExport(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12179,10 +12124,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12190,6 +12137,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12221,6 +12172,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersActivityExportAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12229,10 +12182,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12240,6 +12195,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12253,8 +12209,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces. 
         /// </summary>
@@ -12269,6 +12223,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersActivityMonthly(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12277,10 +12233,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12288,6 +12246,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12319,6 +12281,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersActivityMonthlyAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12327,10 +12291,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12338,6 +12304,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12351,8 +12318,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the client count tracking configuration. 
         /// </summary>
@@ -12367,6 +12332,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersConfig(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12375,10 +12342,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12386,6 +12355,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12417,6 +12390,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersConfigAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12425,10 +12400,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12436,6 +12413,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12449,8 +12427,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -12465,6 +12441,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersEntities(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12473,10 +12451,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12484,6 +12464,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12515,6 +12499,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersEntitiesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12523,10 +12509,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12534,6 +12522,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12547,8 +12536,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -12563,6 +12550,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersRequests(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12571,10 +12560,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12582,6 +12573,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12613,6 +12608,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersRequestsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12621,10 +12618,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12632,6 +12631,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12645,8 +12645,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -12661,6 +12659,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalCountersTokens(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12669,10 +12669,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12680,6 +12682,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12711,6 +12717,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalCountersTokensAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12719,10 +12727,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12730,6 +12740,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12743,8 +12754,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Expose the route entry and mount entry tables present in the router 
         /// </summary>
@@ -12760,9 +12769,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalInspectRouter(string tag, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'tag' is set
             if (tag == null)
                 throw new VaultApiException(400, "Missing required parameter 'tag' when calling System->ReadInternalInspectRouter");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12772,10 +12783,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12784,7 +12797,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("tag", ClientUtils.ParameterToString(tag)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/internal/inspect/router/{tag}", requestOptions);
@@ -12815,9 +12834,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadInternalInspectRouterAsync(string tag, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'tag' is set
             if (tag == null)
                 throw new VaultApiException(400, "Missing required parameter 'tag' when calling System->ReadInternalInspectRouter");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12828,10 +12849,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12840,7 +12863,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("tag", ClientUtils.ParameterToString(tag)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/inspect/router/{tag}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -12853,8 +12879,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate an OpenAPI 3 document of all mounted paths. 
         /// </summary>
@@ -12869,6 +12893,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalSpecsOpenAPI(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12877,10 +12903,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12888,6 +12916,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -12919,6 +12951,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalSpecsOpenAPIAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12927,10 +12961,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12938,6 +12974,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -12951,8 +12988,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Lists enabled feature flags. 
         /// </summary>
@@ -12967,6 +13002,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalUIFeatureFlags(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -12975,10 +13012,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -12986,6 +13025,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13017,6 +13060,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalUIFeatureFlagsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13025,10 +13070,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13036,6 +13083,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13049,8 +13097,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return information about the given mount. 
         /// </summary>
@@ -13066,9 +13112,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalUIMount(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadInternalUIMount");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13078,10 +13126,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13090,7 +13140,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", requestOptions);
@@ -13121,9 +13177,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadInternalUIMountAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadInternalUIMount");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13134,10 +13192,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13146,7 +13206,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -13159,8 +13222,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts. 
         /// </summary>
@@ -13175,6 +13236,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalUIMounts(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13183,10 +13246,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13194,6 +13259,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13225,6 +13294,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalUIMountsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13233,10 +13304,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13244,6 +13317,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13257,8 +13331,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -13273,6 +13345,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalUINamespaces(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13281,10 +13355,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13292,6 +13368,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13323,6 +13403,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalUINamespacesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13331,10 +13413,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13342,6 +13426,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13355,8 +13440,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -13371,6 +13454,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadInternalUIResultantACL(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13379,10 +13464,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13390,6 +13477,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13421,6 +13512,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadInternalUIResultantACLAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13429,10 +13522,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13440,6 +13535,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13453,8 +13549,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Provides information about the backend encryption key. 
         /// </summary>
@@ -13469,6 +13563,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadKeyStatus(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13477,10 +13573,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13488,6 +13586,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13519,6 +13621,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadKeyStatusAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13527,10 +13631,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13538,6 +13644,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13551,8 +13658,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault. 
         /// </summary>
@@ -13567,6 +13672,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadLeader(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13575,10 +13682,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13586,6 +13695,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13617,6 +13730,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadLeaderAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13625,10 +13740,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13636,6 +13753,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13649,8 +13767,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List leases associated with this Vault cluster 
         /// </summary>
@@ -13665,6 +13781,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadLeases(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13673,10 +13791,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13684,6 +13804,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13715,6 +13839,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadLeasesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13723,10 +13849,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13734,6 +13862,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13747,8 +13876,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Count of leases associated with this Vault cluster 
         /// </summary>
@@ -13763,6 +13890,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadLeasesCount(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13771,10 +13900,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13782,6 +13913,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -13813,6 +13948,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadLeasesCountAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13821,10 +13958,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13832,6 +13971,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -13845,8 +13985,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the log level for a single logger. 
         /// </summary>
@@ -13862,9 +14000,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadLogger(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadLogger");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13874,10 +14014,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13886,7 +14028,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/loggers/{name}", requestOptions);
@@ -13917,9 +14065,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadLoggerAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadLogger");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13930,10 +14080,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13942,7 +14094,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/loggers/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -13955,8 +14110,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the log level for all existing loggers. 
         /// </summary>
@@ -13971,6 +14124,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadLoggers(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13979,10 +14134,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -13990,6 +14147,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -14021,6 +14182,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadLoggersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14029,10 +14192,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14040,6 +14205,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -14053,12 +14219,11 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -14070,6 +14235,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadMetrics(string format = default(string), TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14078,10 +14245,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14090,10 +14259,18 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (format != null)
             {
+
+
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
+
             }
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/metrics", requestOptions);
@@ -14112,6 +14289,7 @@ namespace Vault.Api
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14125,6 +14303,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadMetricsAsync(string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14133,10 +14313,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14145,11 +14327,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (format != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
             }
-
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/metrics", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -14161,8 +14345,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the configuration of the secret engine at the given path. 
         /// </summary>
@@ -14178,9 +14360,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadMount(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadMount");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14190,10 +14374,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14202,7 +14388,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/mounts/{path}", requestOptions);
@@ -14233,9 +14425,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadMountAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadMount");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14246,10 +14440,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14258,7 +14454,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14271,8 +14470,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the currently mounted backends. 
         /// </summary>
@@ -14287,6 +14484,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadMounts(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14295,10 +14494,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14306,6 +14507,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -14337,6 +14542,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadMountsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14345,10 +14552,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14356,6 +14565,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -14369,8 +14579,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Tune backend configuration parameters for this mount. 
         /// </summary>
@@ -14386,9 +14594,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadMountsConfig(string path, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadMountsConfig");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14398,10 +14608,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14410,7 +14622,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/mounts/{path}/tune", requestOptions);
@@ -14441,9 +14659,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadMountsConfigAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadMountsConfig");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14454,10 +14674,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14466,7 +14688,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mounts/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14479,8 +14704,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Lists all the plugins known to Vault 
         /// </summary>
@@ -14495,6 +14718,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPluginsCatalog(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14503,10 +14728,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14514,6 +14741,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -14545,6 +14776,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadPluginsCatalogAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14553,10 +14786,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14564,6 +14799,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -14577,8 +14813,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
         /// </summary>
@@ -14595,6 +14829,7 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPluginsCatalogByTypeByName");
@@ -14602,6 +14837,7 @@ namespace Vault.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ReadPluginsCatalogByTypeByName");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14611,10 +14847,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14623,8 +14861,16 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions);
@@ -14656,6 +14902,7 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadPluginsCatalogByTypeByNameAsync(string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPluginsCatalogByTypeByName");
@@ -14663,6 +14910,7 @@ namespace Vault.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ReadPluginsCatalogByTypeByName");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14673,10 +14921,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14685,8 +14935,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14699,12 +14954,11 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -14716,6 +14970,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPolicies(string list = default(string), TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14724,10 +14980,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14736,10 +14994,18 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (list != null)
             {
+
+
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
             }
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policy", requestOptions);
@@ -14758,6 +15024,7 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14771,6 +15038,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadPoliciesAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14779,10 +15048,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14791,11 +15062,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (list != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
-
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policy", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -14807,8 +15080,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Retrieve information about the named ACL policy. 
         /// </summary>
@@ -14824,9 +15095,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPoliciesACL(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPoliciesACL");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14836,10 +15109,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14848,7 +15123,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/acl/{name}", requestOptions);
@@ -14879,9 +15160,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadPoliciesACLAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPoliciesACL");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14892,10 +15175,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14904,7 +15189,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14917,8 +15205,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Retrieve an existing password policy. 
         /// </summary>
@@ -14934,9 +15220,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPoliciesPassword(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPoliciesPassword");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14946,10 +15234,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -14958,7 +15248,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/password/{name}", requestOptions);
@@ -14989,9 +15285,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadPoliciesPasswordAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPoliciesPassword");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15002,10 +15300,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15014,7 +15314,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -15027,8 +15330,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate a password from an existing password policy. 
         /// </summary>
@@ -15044,9 +15345,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPoliciesPasswordGenerate(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPoliciesPasswordGenerate");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15056,10 +15359,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15068,7 +15373,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/password/{name}/generate", requestOptions);
@@ -15099,9 +15410,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadPoliciesPasswordGenerateAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPoliciesPasswordGenerate");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15112,10 +15425,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15124,7 +15439,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password/{name}/generate", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -15137,8 +15455,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Retrieve the policy body for the named policy. 
         /// </summary>
@@ -15154,9 +15470,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadPolicy(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPolicy");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15166,10 +15484,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15178,7 +15498,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policy/{name}", requestOptions);
@@ -15209,9 +15535,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadPolicyAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadPolicy");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15222,10 +15550,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15234,7 +15564,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -15247,8 +15580,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -15263,6 +15594,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadQuotasConfig(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15271,10 +15604,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15282,6 +15617,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -15313,6 +15652,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadQuotasConfigAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15321,10 +15662,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15332,6 +15675,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -15345,8 +15689,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -15362,9 +15704,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadQuotasRateLimit(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadQuotasRateLimit");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15374,10 +15718,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15386,7 +15732,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/quotas/rate-limit/{name}", requestOptions);
@@ -15417,9 +15769,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadQuotasRateLimitAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadQuotasRateLimit");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15430,10 +15784,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15442,7 +15798,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -15455,12 +15814,11 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -15472,6 +15830,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRaw(string list = default(string), TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15480,10 +15840,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15492,10 +15854,18 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (list != null)
             {
+
+
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
             }
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/raw", requestOptions);
@@ -15514,6 +15884,7 @@ namespace Vault.Api
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15527,6 +15898,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadRawAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15535,10 +15908,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15547,11 +15922,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
             if (list != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
-
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -15563,13 +15940,12 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -15581,9 +15957,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRawPath(string path, string list = default(string), TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadRawPath");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15593,10 +15971,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15605,11 +15985,21 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
             if (list != null)
             {
+
+
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
             }
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/raw/{path}", requestOptions);
@@ -15629,6 +16019,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
+
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15641,9 +16032,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadRawPathAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadRawPath");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15654,10 +16047,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15666,12 +16061,16 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
             if (list != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
-
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -15683,8 +16082,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys. 
         /// </summary>
@@ -15699,6 +16096,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRekeyBackup(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15707,10 +16106,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15718,6 +16119,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -15749,6 +16154,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadRekeyBackupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15757,10 +16164,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15768,6 +16177,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -15781,8 +16191,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt. 
         /// </summary>
@@ -15797,6 +16205,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRekeyInit(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15805,10 +16215,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15816,6 +16228,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -15847,6 +16263,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadRekeyInitAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15855,10 +16273,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15866,6 +16286,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -15879,8 +16300,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys. 
         /// </summary>
@@ -15895,6 +16314,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15903,10 +16324,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15914,6 +16337,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -15945,6 +16372,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadRekeyRecoveryKeyBackupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -15953,10 +16382,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -15964,6 +16395,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -15977,8 +16409,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt. 
         /// </summary>
@@ -15993,6 +16423,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRekeyVerify(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16001,10 +16433,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16012,6 +16446,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -16043,6 +16481,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadRekeyVerifyAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16051,10 +16491,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16062,6 +16504,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -16075,8 +16518,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Check status of a mount migration 
         /// </summary>
@@ -16092,9 +16533,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRemountStatus(string migrationId, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
                 throw new VaultApiException(400, "Missing required parameter 'migrationId' when calling System->ReadRemountStatus");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16104,10 +16547,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16116,7 +16561,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("migration_id", ClientUtils.ParameterToString(migrationId)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/remount/status/{migration_id}", requestOptions);
@@ -16147,9 +16598,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ReadRemountStatusAsync(string migrationId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
                 throw new VaultApiException(400, "Missing required parameter 'migrationId' when calling System->ReadRemountStatus");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16160,10 +16613,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16172,7 +16627,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("migration_id", ClientUtils.ParameterToString(migrationId)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/remount/status/{migration_id}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -16185,8 +16643,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -16201,6 +16657,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadReplicationStatus(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16209,10 +16667,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16220,6 +16680,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -16251,6 +16715,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadReplicationStatusAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16259,10 +16725,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16270,6 +16738,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -16283,8 +16752,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -16299,6 +16766,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadRotateConfig(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16307,10 +16776,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16318,6 +16789,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -16349,6 +16824,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadRotateConfigAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16357,10 +16834,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16368,6 +16847,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -16381,8 +16861,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Check the seal status of a Vault. 
         /// </summary>
@@ -16397,6 +16875,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ReadSealStatus(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16405,10 +16885,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16416,6 +16898,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -16447,6 +16933,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> ReadSealStatusAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16455,10 +16943,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16466,6 +16956,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -16479,8 +16970,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Initiate a mount migration 
         /// </summary>
@@ -16496,6 +16985,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Remount(RemountRequest remountRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'remountRequest' is set
             if (remountRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'remountRequest' when calling System->Remount");
@@ -16508,11 +16999,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16521,7 +17013,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = remountRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/remount", requestOptions);
@@ -16552,6 +17049,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RemountAsync(RemountRequest remountRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'remountRequest' is set
             if (remountRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'remountRequest' when calling System->Remount");
@@ -16565,11 +17064,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16578,8 +17078,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = remountRequest;
 
+
+            requestOptions.Data = remountRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/remount", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -16591,8 +17092,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
@@ -16608,6 +17107,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Renew(RenewRequest renewRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'renewRequest' is set
             if (renewRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'renewRequest' when calling System->Renew");
@@ -16620,11 +17121,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16633,7 +17135,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = renewRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/renew", requestOptions);
@@ -16664,6 +17171,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RenewAsync(RenewRequest renewRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'renewRequest' is set
             if (renewRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'renewRequest' when calling System->Renew");
@@ -16677,11 +17186,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16690,8 +17200,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = renewRequest;
 
+
+            requestOptions.Data = renewRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -16703,8 +17214,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
@@ -16721,9 +17230,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> RenewFor(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->RenewFor");
+
 
             // verify the required parameter 'renewForRequest' is set
             if (renewForRequest == null)
@@ -16737,11 +17248,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16750,8 +17262,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+
+
             requestOptions.Data = renewForRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/renew/{url_lease_id}", requestOptions);
@@ -16783,9 +17302,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RenewForAsync(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->RenewFor");
+
 
             // verify the required parameter 'renewForRequest' is set
             if (renewForRequest == null)
@@ -16800,11 +17321,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16813,9 +17335,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            requestOptions.Data = renewForRequest;
 
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+            requestOptions.Data = renewForRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -16827,8 +17352,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
@@ -16844,6 +17367,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Revoke(RevokeRequest revokeRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'revokeRequest' is set
             if (revokeRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'revokeRequest' when calling System->Revoke");
@@ -16856,11 +17381,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16869,7 +17395,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = revokeRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/revoke", requestOptions);
@@ -16900,6 +17431,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RevokeAsync(RevokeRequest revokeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'revokeRequest' is set
             if (revokeRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'revokeRequest' when calling System->Revoke");
@@ -16913,11 +17446,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16926,8 +17460,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = revokeRequest;
 
+
+            requestOptions.Data = revokeRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -16939,8 +17474,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
         /// </summary>
@@ -16956,9 +17489,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> RevokeForce(string prefix, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->RevokeForce");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16968,10 +17503,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16980,7 +17517,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/revoke-force/{prefix}", requestOptions);
@@ -17011,9 +17554,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RevokeForceAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->RevokeForce");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17024,10 +17569,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17036,7 +17583,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -17049,8 +17599,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
@@ -17067,9 +17615,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> RevokeLease(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->RevokeLease");
+
 
             // verify the required parameter 'revokeLeaseRequest' is set
             if (revokeLeaseRequest == null)
@@ -17083,11 +17633,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17096,8 +17647,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+
+
             requestOptions.Data = revokeLeaseRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/revoke/{url_lease_id}", requestOptions);
@@ -17129,9 +17687,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RevokeLeaseAsync(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->RevokeLease");
+
 
             // verify the required parameter 'revokeLeaseRequest' is set
             if (revokeLeaseRequest == null)
@@ -17146,11 +17706,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17159,9 +17720,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            requestOptions.Data = revokeLeaseRequest;
 
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+            requestOptions.Data = revokeLeaseRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -17173,10 +17737,8 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokePrefixRequest"></param>
@@ -17191,9 +17753,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> RevokePrefix(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->RevokePrefix");
+
 
             // verify the required parameter 'revokePrefixRequest' is set
             if (revokePrefixRequest == null)
@@ -17207,11 +17771,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17220,8 +17785,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
+
+
             requestOptions.Data = revokePrefixRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/revoke-prefix/{prefix}", requestOptions);
@@ -17237,7 +17809,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="revokePrefixRequest"></param>
@@ -17253,9 +17825,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> RevokePrefixAsync(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->RevokePrefix");
+
 
             // verify the required parameter 'revokePrefixRequest' is set
             if (revokePrefixRequest == null)
@@ -17270,11 +17844,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17283,9 +17858,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-            requestOptions.Data = revokePrefixRequest;
 
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
+            requestOptions.Data = revokePrefixRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -17297,8 +17875,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Rotates the backend encryption key used to persist data. 
         /// </summary>
@@ -17313,6 +17889,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Rotate(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17321,10 +17899,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17332,6 +17912,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -17363,6 +17947,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> RotateAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17371,10 +17957,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17382,6 +17970,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -17395,8 +17984,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Seal the Vault. 
         /// </summary>
@@ -17411,6 +17998,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Seal(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17419,10 +18008,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17430,6 +18021,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -17461,6 +18056,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> SealAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17469,10 +18066,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17480,6 +18079,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -17493,8 +18093,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Cause the node to give up active status. This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
         /// </summary>
@@ -17509,6 +18107,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> StepDownLeader(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17517,10 +18117,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17528,6 +18130,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -17559,6 +18165,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> StepDownLeaderAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17567,10 +18175,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17578,6 +18188,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -17591,8 +18202,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Remove the plugin with the given name. 
         /// </summary>
@@ -17608,9 +18217,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> SysDeletePluginsCatalogName(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->SysDeletePluginsCatalogName");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17620,10 +18231,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17632,7 +18245,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Delete<Object>("/sys/plugins/catalog/{name}", requestOptions);
@@ -17663,9 +18282,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> SysDeletePluginsCatalogNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->SysDeletePluginsCatalogName");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17676,10 +18297,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17688,7 +18311,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -17701,8 +18327,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Returns a list of lease ids. 
         /// </summary>
@@ -17717,6 +18341,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> SysListLeasesLookup(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17725,10 +18351,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17737,7 +18365,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/leases/lookup/", requestOptions);
@@ -17768,6 +18402,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> SysListLeasesLookupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17776,10 +18412,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17788,7 +18426,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -17801,8 +18442,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
         /// </summary>
@@ -17818,9 +18457,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> SysReadPluginsCatalogName(string name, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->SysReadPluginsCatalogName");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17830,10 +18471,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17842,7 +18485,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/plugins/catalog/{name}", requestOptions);
@@ -17873,9 +18522,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> SysReadPluginsCatalogNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->SysReadPluginsCatalogName");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17886,10 +18537,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17898,7 +18551,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -17911,8 +18567,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Unlocks the user with given mount_accessor and alias_identifier 
         /// </summary>
@@ -17929,6 +18583,7 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> SysWriteLockedusersMountAccessorUnlockAliasIdentifier(string aliasIdentifier, string mountAccessor, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'aliasIdentifier' is set
             if (aliasIdentifier == null)
                 throw new VaultApiException(400, "Missing required parameter 'aliasIdentifier' when calling System->SysWriteLockedusersMountAccessorUnlockAliasIdentifier");
@@ -17936,6 +18591,7 @@ namespace Vault.Api
             // verify the required parameter 'mountAccessor' is set
             if (mountAccessor == null)
                 throw new VaultApiException(400, "Missing required parameter 'mountAccessor' when calling System->SysWriteLockedusersMountAccessorUnlockAliasIdentifier");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17945,10 +18601,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17957,8 +18615,16 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("alias_identifier", ClientUtils.ParameterToString(aliasIdentifier)); // path parameter
+
+
             requestOptions.PathParameters.Add("mount_accessor", ClientUtils.ParameterToString(mountAccessor)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/lockedusers/{mount_accessor}/unlock/{alias_identifier}", requestOptions);
@@ -17990,6 +18656,7 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> SysWriteLockedusersMountAccessorUnlockAliasIdentifierAsync(string aliasIdentifier, string mountAccessor, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'aliasIdentifier' is set
             if (aliasIdentifier == null)
                 throw new VaultApiException(400, "Missing required parameter 'aliasIdentifier' when calling System->SysWriteLockedusersMountAccessorUnlockAliasIdentifier");
@@ -17997,6 +18664,7 @@ namespace Vault.Api
             // verify the required parameter 'mountAccessor' is set
             if (mountAccessor == null)
                 throw new VaultApiException(400, "Missing required parameter 'mountAccessor' when calling System->SysWriteLockedusersMountAccessorUnlockAliasIdentifier");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18007,10 +18675,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18019,8 +18689,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("alias_identifier", ClientUtils.ParameterToString(aliasIdentifier)); // path parameter
+
+
             requestOptions.PathParameters.Add("mount_accessor", ClientUtils.ParameterToString(mountAccessor)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/lockedusers/{mount_accessor}/unlock/{alias_identifier}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -18033,8 +18708,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
@@ -18051,9 +18724,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> SysWritePluginsCatalogName(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->SysWritePluginsCatalogName");
+
 
             // verify the required parameter 'sysWritePluginsCatalogNameRequest' is set
             if (sysWritePluginsCatalogNameRequest == null)
@@ -18067,11 +18742,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18080,8 +18756,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
             requestOptions.Data = sysWritePluginsCatalogNameRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/plugins/catalog/{name}", requestOptions);
@@ -18113,9 +18796,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> SysWritePluginsCatalogNameAsync(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->SysWritePluginsCatalogName");
+
 
             // verify the required parameter 'sysWritePluginsCatalogNameRequest' is set
             if (sysWritePluginsCatalogNameRequest == null)
@@ -18130,11 +18815,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18143,9 +18829,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.Data = sysWritePluginsCatalogNameRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = sysWritePluginsCatalogNameRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18157,8 +18846,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -18175,9 +18862,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> SysWriteToolsRandomUrlbytes(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->SysWriteToolsRandomUrlbytes");
+
 
             // verify the required parameter 'sysWriteToolsRandomUrlbytesRequest' is set
             if (sysWriteToolsRandomUrlbytesRequest == null)
@@ -18191,11 +18880,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18204,8 +18894,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
+
+
+
+
+
             requestOptions.Data = sysWriteToolsRandomUrlbytesRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/tools/random/{urlbytes}", requestOptions);
@@ -18237,9 +18934,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> SysWriteToolsRandomUrlbytesAsync(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->SysWriteToolsRandomUrlbytes");
+
 
             // verify the required parameter 'sysWriteToolsRandomUrlbytesRequest' is set
             if (sysWriteToolsRandomUrlbytesRequest == null)
@@ -18254,11 +18953,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18267,9 +18967,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
-            requestOptions.Data = sysWriteToolsRandomUrlbytesRequest;
 
+            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
+
+
+
+            requestOptions.Data = sysWriteToolsRandomUrlbytesRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18281,8 +18984,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -18298,6 +18999,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ToolsGenerateRandom(ToolsGenerateRandomRequest toolsGenerateRandomRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'toolsGenerateRandomRequest' is set
             if (toolsGenerateRandomRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'toolsGenerateRandomRequest' when calling System->ToolsGenerateRandom");
@@ -18310,11 +19013,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18323,7 +19027,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = toolsGenerateRandomRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/tools/random", requestOptions);
@@ -18354,6 +19063,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ToolsGenerateRandomAsync(ToolsGenerateRandomRequest toolsGenerateRandomRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'toolsGenerateRandomRequest' is set
             if (toolsGenerateRandomRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'toolsGenerateRandomRequest' when calling System->ToolsGenerateRandom");
@@ -18367,11 +19078,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18380,8 +19092,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = toolsGenerateRandomRequest;
 
+
+            requestOptions.Data = toolsGenerateRandomRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18393,8 +19106,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -18411,9 +19122,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ToolsGenerateRandomSource(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'source' is set
             if (source == null)
                 throw new VaultApiException(400, "Missing required parameter 'source' when calling System->ToolsGenerateRandomSource");
+
 
             // verify the required parameter 'toolsGenerateRandomSourceRequest' is set
             if (toolsGenerateRandomSourceRequest == null)
@@ -18427,11 +19140,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18440,8 +19154,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+
+
+
             requestOptions.Data = toolsGenerateRandomSourceRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/tools/random/{source}", requestOptions);
@@ -18473,9 +19194,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ToolsGenerateRandomSourceAsync(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'source' is set
             if (source == null)
                 throw new VaultApiException(400, "Missing required parameter 'source' when calling System->ToolsGenerateRandomSource");
+
 
             // verify the required parameter 'toolsGenerateRandomSourceRequest' is set
             if (toolsGenerateRandomSourceRequest == null)
@@ -18490,11 +19213,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18503,9 +19227,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
-            requestOptions.Data = toolsGenerateRandomSourceRequest;
 
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+
+            requestOptions.Data = toolsGenerateRandomSourceRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18517,8 +19244,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -18536,6 +19261,7 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ToolsGenerateRandomSourceBytes(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'source' is set
             if (source == null)
                 throw new VaultApiException(400, "Missing required parameter 'source' when calling System->ToolsGenerateRandomSourceBytes");
@@ -18543,6 +19269,7 @@ namespace Vault.Api
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->ToolsGenerateRandomSourceBytes");
+
 
             // verify the required parameter 'toolsGenerateRandomSourceBytesRequest' is set
             if (toolsGenerateRandomSourceBytesRequest == null)
@@ -18556,11 +19283,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18569,9 +19297,18 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
             requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
+
+
+
+
+
             requestOptions.Data = toolsGenerateRandomSourceBytesRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/tools/random/{source}/{urlbytes}", requestOptions);
@@ -18604,6 +19341,7 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ToolsGenerateRandomSourceBytesAsync(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'source' is set
             if (source == null)
                 throw new VaultApiException(400, "Missing required parameter 'source' when calling System->ToolsGenerateRandomSourceBytes");
@@ -18611,6 +19349,7 @@ namespace Vault.Api
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->ToolsGenerateRandomSourceBytes");
+
 
             // verify the required parameter 'toolsGenerateRandomSourceBytesRequest' is set
             if (toolsGenerateRandomSourceBytesRequest == null)
@@ -18625,11 +19364,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18638,10 +19378,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
-            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
-            requestOptions.Data = toolsGenerateRandomSourceBytesRequest;
 
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+            requestOptions.PathParameters.Add("urlbytes", ClientUtils.ParameterToString(urlbytes)); // path parameter
+
+
+
+            requestOptions.Data = toolsGenerateRandomSourceBytesRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/random/{source}/{urlbytes}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18653,8 +19398,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
@@ -18670,6 +19413,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ToolsHash(ToolsHashRequest toolsHashRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'toolsHashRequest' is set
             if (toolsHashRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'toolsHashRequest' when calling System->ToolsHash");
@@ -18682,11 +19427,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18695,7 +19441,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = toolsHashRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/tools/hash", requestOptions);
@@ -18726,6 +19477,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ToolsHashAsync(ToolsHashRequest toolsHashRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'toolsHashRequest' is set
             if (toolsHashRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'toolsHashRequest' when calling System->ToolsHash");
@@ -18739,11 +19492,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18752,8 +19506,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = toolsHashRequest;
 
+
+            requestOptions.Data = toolsHashRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18765,8 +19520,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
@@ -18783,9 +19536,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> ToolsHashWith(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling System->ToolsHashWith");
+
 
             // verify the required parameter 'toolsHashWithRequest' is set
             if (toolsHashWithRequest == null)
@@ -18799,11 +19554,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18812,8 +19568,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
+
+
+
+
+
             requestOptions.Data = toolsHashWithRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/tools/hash/{urlalgorithm}", requestOptions);
@@ -18845,9 +19608,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> ToolsHashWithAsync(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling System->ToolsHashWith");
+
 
             // verify the required parameter 'toolsHashWithRequest' is set
             if (toolsHashWithRequest == null)
@@ -18862,11 +19627,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18875,9 +19641,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
-            requestOptions.Data = toolsHashWithRequest;
 
+            requestOptions.PathParameters.Add("urlalgorithm", ClientUtils.ParameterToString(urlalgorithm)); // path parameter
+
+
+
+            requestOptions.Data = toolsHashWithRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/tools/hash/{urlalgorithm}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -18889,8 +19658,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Unseal the Vault. 
         /// </summary>
@@ -18906,6 +19673,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> Unseal(UnsealRequest unsealRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'unsealRequest' is set
             if (unsealRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'unsealRequest' when calling System->Unseal");
@@ -18918,11 +19687,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18931,7 +19701,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = unsealRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/unseal", requestOptions);
@@ -18962,6 +19737,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> UnsealAsync(UnsealRequest unsealRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'unsealRequest' is set
             if (unsealRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'unsealRequest' when calling System->Unseal");
@@ -18975,11 +19752,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18988,8 +19766,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = unsealRequest;
 
+
+            requestOptions.Data = unsealRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/unseal", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19001,10 +19780,8 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token. 
+        /// Look up wrapping properties for the requester&#x27;s token. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -19017,6 +19794,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WrappingReadLookup(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -19025,10 +19804,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19036,6 +19817,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -19052,7 +19837,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Look up wrapping properties for the requester&#39;s token. 
+        /// Look up wrapping properties for the requester&#x27;s token. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
@@ -19067,6 +19852,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> WrappingReadLookupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -19075,10 +19862,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19086,6 +19875,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -19099,8 +19889,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Rotates a response-wrapped token. 
         /// </summary>
@@ -19116,6 +19904,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WrappingRewrap(WrappingRewrapRequest wrappingRewrapRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'wrappingRewrapRequest' is set
             if (wrappingRewrapRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'wrappingRewrapRequest' when calling System->WrappingRewrap");
@@ -19128,11 +19918,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19141,7 +19932,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = wrappingRewrapRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/wrapping/rewrap", requestOptions);
@@ -19172,6 +19968,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WrappingRewrapAsync(WrappingRewrapRequest wrappingRewrapRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'wrappingRewrapRequest' is set
             if (wrappingRewrapRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'wrappingRewrapRequest' when calling System->WrappingRewrap");
@@ -19185,11 +19983,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19198,8 +19997,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = wrappingRewrapRequest;
 
+
+            requestOptions.Data = wrappingRewrapRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/rewrap", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19211,8 +20011,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Unwraps a response-wrapped token. 
         /// </summary>
@@ -19228,6 +20026,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WrappingUnwrap(WrappingUnwrapRequest wrappingUnwrapRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'wrappingUnwrapRequest' is set
             if (wrappingUnwrapRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'wrappingUnwrapRequest' when calling System->WrappingUnwrap");
@@ -19240,11 +20040,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19253,7 +20054,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = wrappingUnwrapRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/wrapping/unwrap", requestOptions);
@@ -19284,6 +20090,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WrappingUnwrapAsync(WrappingUnwrapRequest wrappingUnwrapRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'wrappingUnwrapRequest' is set
             if (wrappingUnwrapRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'wrappingUnwrapRequest' when calling System->WrappingUnwrap");
@@ -19297,11 +20105,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19310,8 +20119,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = wrappingUnwrapRequest;
 
+
+            requestOptions.Data = wrappingUnwrapRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19323,8 +20133,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Response-wraps an arbitrary JSON object. 
         /// </summary>
@@ -19339,6 +20147,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WrappingWrap(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -19347,10 +20157,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19358,6 +20170,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -19389,6 +20205,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> WrappingWrapAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -19397,10 +20215,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19408,6 +20228,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -19421,8 +20242,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Look up wrapping properties for the given token. 
         /// </summary>
@@ -19438,6 +20257,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WrappingWriteLookup(WrappingWriteLookupRequest wrappingWriteLookupRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'wrappingWriteLookupRequest' is set
             if (wrappingWriteLookupRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'wrappingWriteLookupRequest' when calling System->WrappingWriteLookup");
@@ -19450,11 +20271,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19463,7 +20285,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = wrappingWriteLookupRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/wrapping/lookup", requestOptions);
@@ -19494,6 +20321,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WrappingWriteLookupAsync(WrappingWriteLookupRequest wrappingWriteLookupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'wrappingWriteLookupRequest' is set
             if (wrappingWriteLookupRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'wrappingWriteLookupRequest' when calling System->WrappingWriteLookup");
@@ -19507,11 +20336,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19520,8 +20350,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = wrappingWriteLookupRequest;
 
+
+            requestOptions.Data = wrappingWriteLookupRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/wrapping/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19533,8 +20364,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enable a new audit device at the supplied path. 
         /// </summary>
@@ -19551,9 +20380,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteAuditDevice(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteAuditDevice");
+
 
             // verify the required parameter 'writeAuditDeviceRequest' is set
             if (writeAuditDeviceRequest == null)
@@ -19567,11 +20398,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19580,8 +20412,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeAuditDeviceRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/audit/{path}", requestOptions);
@@ -19613,9 +20452,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteAuditDeviceAsync(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteAuditDevice");
+
 
             // verify the required parameter 'writeAuditDeviceRequest' is set
             if (writeAuditDeviceRequest == null)
@@ -19630,11 +20471,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19643,9 +20485,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = writeAuditDeviceRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = writeAuditDeviceRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/audit/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19657,8 +20502,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
         /// </summary>
@@ -19675,9 +20518,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteAuthMethod(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteAuthMethod");
+
 
             // verify the required parameter 'writeAuthMethodRequest' is set
             if (writeAuthMethodRequest == null)
@@ -19691,11 +20536,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19704,8 +20550,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeAuthMethodRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/auth/{path}", requestOptions);
@@ -19737,9 +20590,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteAuthMethodAsync(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteAuthMethod");
+
 
             // verify the required parameter 'writeAuthMethodRequest' is set
             if (writeAuthMethodRequest == null)
@@ -19754,11 +20609,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19767,9 +20623,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = writeAuthMethodRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = writeAuthMethodRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19781,8 +20640,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
@@ -19799,9 +20656,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteAuthMethodTune(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteAuthMethodTune");
+
 
             // verify the required parameter 'writeAuthMethodTuneRequest' is set
             if (writeAuthMethodTuneRequest == null)
@@ -19815,11 +20674,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19828,8 +20688,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeAuthMethodTuneRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/auth/{path}/tune", requestOptions);
@@ -19861,9 +20728,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteAuthMethodTuneAsync(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteAuthMethodTune");
+
 
             // verify the required parameter 'writeAuthMethodTuneRequest' is set
             if (writeAuthMethodTuneRequest == null)
@@ -19878,11 +20747,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19891,9 +20761,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = writeAuthMethodTuneRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = writeAuthMethodTuneRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/auth/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19905,8 +20778,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Fetches the capabilities of the given token on the given path. 
         /// </summary>
@@ -19922,6 +20793,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteCapabilities(WriteCapabilitiesRequest writeCapabilitiesRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeCapabilitiesRequest' is set
             if (writeCapabilitiesRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeCapabilitiesRequest' when calling System->WriteCapabilities");
@@ -19934,11 +20807,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -19947,7 +20821,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeCapabilitiesRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/capabilities", requestOptions);
@@ -19978,6 +20857,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteCapabilitiesAsync(WriteCapabilitiesRequest writeCapabilitiesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeCapabilitiesRequest' is set
             if (writeCapabilitiesRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeCapabilitiesRequest' when calling System->WriteCapabilities");
@@ -19991,11 +20872,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20004,8 +20886,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeCapabilitiesRequest;
 
+
+            requestOptions.Data = writeCapabilitiesRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20017,8 +20900,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path. 
         /// </summary>
@@ -20034,6 +20915,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteCapabilitiesAccessor(WriteCapabilitiesAccessorRequest writeCapabilitiesAccessorRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeCapabilitiesAccessorRequest' is set
             if (writeCapabilitiesAccessorRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeCapabilitiesAccessorRequest' when calling System->WriteCapabilitiesAccessor");
@@ -20046,11 +20929,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20059,7 +20943,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeCapabilitiesAccessorRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/capabilities-accessor", requestOptions);
@@ -20090,6 +20979,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteCapabilitiesAccessorAsync(WriteCapabilitiesAccessorRequest writeCapabilitiesAccessorRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeCapabilitiesAccessorRequest' is set
             if (writeCapabilitiesAccessorRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeCapabilitiesAccessorRequest' when calling System->WriteCapabilitiesAccessor");
@@ -20103,11 +20994,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20116,8 +21008,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeCapabilitiesAccessorRequest;
 
+
+            requestOptions.Data = writeCapabilitiesAccessorRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-accessor", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20129,8 +21022,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Fetches the capabilities of the given token on the given path. 
         /// </summary>
@@ -20146,6 +21037,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteCapabilitiesSelf(WriteCapabilitiesSelfRequest writeCapabilitiesSelfRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeCapabilitiesSelfRequest' is set
             if (writeCapabilitiesSelfRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeCapabilitiesSelfRequest' when calling System->WriteCapabilitiesSelf");
@@ -20158,11 +21051,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20171,7 +21065,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeCapabilitiesSelfRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/capabilities-self", requestOptions);
@@ -20202,6 +21101,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteCapabilitiesSelfAsync(WriteCapabilitiesSelfRequest writeCapabilitiesSelfRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeCapabilitiesSelfRequest' is set
             if (writeCapabilitiesSelfRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeCapabilitiesSelfRequest' when calling System->WriteCapabilitiesSelf");
@@ -20215,11 +21116,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20228,8 +21130,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeCapabilitiesSelfRequest;
 
+
+            requestOptions.Data = writeCapabilitiesSelfRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/capabilities-self", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20241,8 +21144,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enable auditing of a header. 
         /// </summary>
@@ -20259,9 +21160,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteConfigAuditingRequestHeader(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->WriteConfigAuditingRequestHeader");
+
 
             // verify the required parameter 'writeConfigAuditingRequestHeaderRequest' is set
             if (writeConfigAuditingRequestHeaderRequest == null)
@@ -20275,11 +21178,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20288,8 +21192,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeConfigAuditingRequestHeaderRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/config/auditing/request-headers/{header}", requestOptions);
@@ -20321,9 +21232,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteConfigAuditingRequestHeaderAsync(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->WriteConfigAuditingRequestHeader");
+
 
             // verify the required parameter 'writeConfigAuditingRequestHeaderRequest' is set
             if (writeConfigAuditingRequestHeaderRequest == null)
@@ -20338,11 +21251,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20351,9 +21265,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
-            requestOptions.Data = writeConfigAuditingRequestHeaderRequest;
 
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+            requestOptions.Data = writeConfigAuditingRequestHeaderRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20365,8 +21282,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Configure the CORS settings. 
         /// </summary>
@@ -20382,6 +21297,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteConfigCORS(WriteConfigCORSRequest writeConfigCORSRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeConfigCORSRequest' is set
             if (writeConfigCORSRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeConfigCORSRequest' when calling System->WriteConfigCORS");
@@ -20394,11 +21311,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20407,7 +21325,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeConfigCORSRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/config/cors", requestOptions);
@@ -20438,6 +21361,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteConfigCORSAsync(WriteConfigCORSRequest writeConfigCORSRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeConfigCORSRequest' is set
             if (writeConfigCORSRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeConfigCORSRequest' when calling System->WriteConfigCORS");
@@ -20451,11 +21376,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20464,8 +21390,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeConfigCORSRequest;
 
+
+            requestOptions.Data = writeConfigCORSRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/cors", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20477,8 +21404,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Reload the given subsystem 
         /// </summary>
@@ -20494,9 +21419,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteConfigReloadSubsystem(string subsystem, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
                 throw new VaultApiException(400, "Missing required parameter 'subsystem' when calling System->WriteConfigReloadSubsystem");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -20506,10 +21433,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20518,7 +21447,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("subsystem", ClientUtils.ParameterToString(subsystem)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/config/reload/{subsystem}", requestOptions);
@@ -20549,9 +21484,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteConfigReloadSubsystemAsync(string subsystem, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
                 throw new VaultApiException(400, "Missing required parameter 'subsystem' when calling System->WriteConfigReloadSubsystem");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -20562,10 +21499,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20574,7 +21513,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("subsystem", ClientUtils.ParameterToString(subsystem)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/reload/{subsystem}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -20587,8 +21529,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Configure the values to be returned for the UI header. 
         /// </summary>
@@ -20605,9 +21545,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteConfigUIHeader(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->WriteConfigUIHeader");
+
 
             // verify the required parameter 'writeConfigUIHeaderRequest' is set
             if (writeConfigUIHeaderRequest == null)
@@ -20621,11 +21563,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20634,8 +21577,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeConfigUIHeaderRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/config/ui/headers/{header}", requestOptions);
@@ -20667,9 +21617,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteConfigUIHeaderAsync(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'header' is set
             if (header == null)
                 throw new VaultApiException(400, "Missing required parameter 'header' when calling System->WriteConfigUIHeader");
+
 
             // verify the required parameter 'writeConfigUIHeaderRequest' is set
             if (writeConfigUIHeaderRequest == null)
@@ -20684,11 +21636,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20697,9 +21650,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
-            requestOptions.Data = writeConfigUIHeaderRequest;
 
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+
+
+            requestOptions.Data = writeConfigUIHeaderRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20711,8 +21667,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
         /// </summary>
@@ -20728,6 +21682,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteGenerateRoot(WriteGenerateRootRequest writeGenerateRootRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeGenerateRootRequest' is set
             if (writeGenerateRootRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeGenerateRootRequest' when calling System->WriteGenerateRoot");
@@ -20740,11 +21696,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20753,7 +21710,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeGenerateRootRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/generate-root", requestOptions);
@@ -20784,6 +21746,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteGenerateRootAsync(WriteGenerateRootRequest writeGenerateRootRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeGenerateRootRequest' is set
             if (writeGenerateRootRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeGenerateRootRequest' when calling System->WriteGenerateRoot");
@@ -20797,11 +21761,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20810,8 +21775,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeGenerateRootRequest;
 
+
+            requestOptions.Data = writeGenerateRootRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20823,8 +21789,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
         /// </summary>
@@ -20840,6 +21804,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteGenerateRootAttempt(WriteGenerateRootAttemptRequest writeGenerateRootAttemptRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeGenerateRootAttemptRequest' is set
             if (writeGenerateRootAttemptRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeGenerateRootAttemptRequest' when calling System->WriteGenerateRootAttempt");
@@ -20852,11 +21818,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20865,7 +21832,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeGenerateRootAttemptRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/generate-root/attempt", requestOptions);
@@ -20896,6 +21868,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteGenerateRootAttemptAsync(WriteGenerateRootAttemptRequest writeGenerateRootAttemptRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeGenerateRootAttemptRequest' is set
             if (writeGenerateRootAttemptRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeGenerateRootAttemptRequest' when calling System->WriteGenerateRootAttempt");
@@ -20909,11 +21883,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20922,8 +21897,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeGenerateRootAttemptRequest;
 
+
+            requestOptions.Data = writeGenerateRootAttemptRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/attempt", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -20935,8 +21911,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
         /// </summary>
@@ -20952,6 +21926,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteGenerateRootUpdate(WriteGenerateRootUpdateRequest writeGenerateRootUpdateRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeGenerateRootUpdateRequest' is set
             if (writeGenerateRootUpdateRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeGenerateRootUpdateRequest' when calling System->WriteGenerateRootUpdate");
@@ -20964,11 +21940,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -20977,7 +21954,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeGenerateRootUpdateRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/generate-root/update", requestOptions);
@@ -21008,6 +21990,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteGenerateRootUpdateAsync(WriteGenerateRootUpdateRequest writeGenerateRootUpdateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeGenerateRootUpdateRequest' is set
             if (writeGenerateRootUpdateRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeGenerateRootUpdateRequest' when calling System->WriteGenerateRootUpdate");
@@ -21021,11 +22005,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21034,8 +22019,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeGenerateRootUpdateRequest;
 
+
+            requestOptions.Data = writeGenerateRootUpdateRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/generate-root/update", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21047,8 +22033,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Initialize a new Vault. The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
         /// </summary>
@@ -21064,6 +22048,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteInit(WriteInitRequest writeInitRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeInitRequest' is set
             if (writeInitRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeInitRequest' when calling System->WriteInit");
@@ -21076,11 +22062,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21089,7 +22076,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeInitRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/init", requestOptions);
@@ -21120,6 +22112,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteInitAsync(WriteInitRequest writeInitRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeInitRequest' is set
             if (writeInitRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeInitRequest' when calling System->WriteInit");
@@ -21133,11 +22127,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21146,8 +22141,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeInitRequest;
 
+
+            requestOptions.Data = writeInitRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21159,8 +22155,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period. 
         /// </summary>
@@ -21176,6 +22170,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteInternalCountersConfig(WriteInternalCountersConfigRequest writeInternalCountersConfigRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeInternalCountersConfigRequest' is set
             if (writeInternalCountersConfigRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeInternalCountersConfigRequest' when calling System->WriteInternalCountersConfig");
@@ -21188,11 +22184,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21201,7 +22198,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeInternalCountersConfigRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/internal/counters/config", requestOptions);
@@ -21232,6 +22234,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteInternalCountersConfigAsync(WriteInternalCountersConfigRequest writeInternalCountersConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeInternalCountersConfigRequest' is set
             if (writeInternalCountersConfigRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeInternalCountersConfigRequest' when calling System->WriteInternalCountersConfig");
@@ -21245,11 +22249,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21258,8 +22263,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeInternalCountersConfigRequest;
 
+
+            requestOptions.Data = writeInternalCountersConfigRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/counters/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21271,8 +22277,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Retrieve lease metadata. 
         /// </summary>
@@ -21288,6 +22292,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesLookup(WriteLeasesLookupRequest writeLeasesLookupRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeLeasesLookupRequest' is set
             if (writeLeasesLookupRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLeasesLookupRequest' when calling System->WriteLeasesLookup");
@@ -21300,11 +22306,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21313,7 +22320,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeLeasesLookupRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/lookup", requestOptions);
@@ -21344,6 +22356,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesLookupAsync(WriteLeasesLookupRequest writeLeasesLookupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeLeasesLookupRequest' is set
             if (writeLeasesLookupRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLeasesLookupRequest' when calling System->WriteLeasesLookup");
@@ -21357,11 +22371,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21370,8 +22385,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeLeasesLookupRequest;
 
+
+            requestOptions.Data = writeLeasesLookupRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21383,8 +22399,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
@@ -21400,6 +22414,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesRenew(WriteLeasesRenewRequest writeLeasesRenewRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeLeasesRenewRequest' is set
             if (writeLeasesRenewRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLeasesRenewRequest' when calling System->WriteLeasesRenew");
@@ -21412,11 +22428,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21425,7 +22442,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeLeasesRenewRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/renew", requestOptions);
@@ -21456,6 +22478,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesRenewAsync(WriteLeasesRenewRequest writeLeasesRenewRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeLeasesRenewRequest' is set
             if (writeLeasesRenewRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLeasesRenewRequest' when calling System->WriteLeasesRenew");
@@ -21469,11 +22493,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21482,8 +22507,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeLeasesRenewRequest;
 
+
+            requestOptions.Data = writeLeasesRenewRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21495,8 +22521,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
@@ -21513,9 +22537,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesRenew2(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->WriteLeasesRenew2");
+
 
             // verify the required parameter 'writeLeasesRenew2Request' is set
             if (writeLeasesRenew2Request == null)
@@ -21529,11 +22555,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21542,8 +22569,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeLeasesRenew2Request;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/renew/{url_lease_id}", requestOptions);
@@ -21575,9 +22609,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesRenew2Async(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->WriteLeasesRenew2");
+
 
             // verify the required parameter 'writeLeasesRenew2Request' is set
             if (writeLeasesRenew2Request == null)
@@ -21592,11 +22628,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21605,9 +22642,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            requestOptions.Data = writeLeasesRenew2Request;
 
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+            requestOptions.Data = writeLeasesRenew2Request;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/renew/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21619,8 +22659,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
@@ -21636,6 +22674,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesRevoke(WriteLeasesRevokeRequest writeLeasesRevokeRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeLeasesRevokeRequest' is set
             if (writeLeasesRevokeRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLeasesRevokeRequest' when calling System->WriteLeasesRevoke");
@@ -21648,11 +22688,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21661,7 +22702,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeLeasesRevokeRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/revoke", requestOptions);
@@ -21692,6 +22738,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesRevokeAsync(WriteLeasesRevokeRequest writeLeasesRevokeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeLeasesRevokeRequest' is set
             if (writeLeasesRevokeRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLeasesRevokeRequest' when calling System->WriteLeasesRevoke");
@@ -21705,11 +22753,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21718,8 +22767,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeLeasesRevokeRequest;
 
+
+            requestOptions.Data = writeLeasesRevokeRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21731,8 +22781,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
@@ -21749,9 +22797,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesRevoke2(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->WriteLeasesRevoke2");
+
 
             // verify the required parameter 'writeLeasesRevoke2Request' is set
             if (writeLeasesRevoke2Request == null)
@@ -21765,11 +22815,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21778,8 +22829,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeLeasesRevoke2Request;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/revoke/{url_lease_id}", requestOptions);
@@ -21811,9 +22869,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesRevoke2Async(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
                 throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->WriteLeasesRevoke2");
+
 
             // verify the required parameter 'writeLeasesRevoke2Request' is set
             if (writeLeasesRevoke2Request == null)
@@ -21828,11 +22888,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21841,9 +22902,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-            requestOptions.Data = writeLeasesRevoke2Request;
 
+            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
+
+
+
+            requestOptions.Data = writeLeasesRevoke2Request;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -21855,8 +22919,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
         /// </summary>
@@ -21872,9 +22934,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesRevokeForce(string prefix, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->WriteLeasesRevokeForce");
+
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -21884,10 +22948,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21896,7 +22962,13 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
+
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/revoke-force/{prefix}", requestOptions);
@@ -21927,9 +22999,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesRevokeForceAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->WriteLeasesRevokeForce");
+
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -21940,10 +23014,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -21952,7 +23028,10 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
 
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-force/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -21965,10 +23044,8 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
@@ -21983,9 +23060,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesRevokePrefix(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->WriteLeasesRevokePrefix");
+
 
             // verify the required parameter 'writeLeasesRevokePrefixRequest' is set
             if (writeLeasesRevokePrefixRequest == null)
@@ -21999,11 +23078,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22012,8 +23092,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeLeasesRevokePrefixRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/leases/revoke-prefix/{prefix}", requestOptions);
@@ -22029,7 +23116,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
+        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
@@ -22045,9 +23132,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLeasesRevokePrefixAsync(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->WriteLeasesRevokePrefix");
+
 
             // verify the required parameter 'writeLeasesRevokePrefixRequest' is set
             if (writeLeasesRevokePrefixRequest == null)
@@ -22062,11 +23151,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22075,9 +23165,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-            requestOptions.Data = writeLeasesRevokePrefixRequest;
 
+            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
+
+
+
+            requestOptions.Data = writeLeasesRevokePrefixRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/leases/revoke-prefix/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22089,8 +23182,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred. 
         /// </summary>
@@ -22105,6 +23196,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLeasesTidy(TimeSpan? wrapTTL = null)
         {
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -22113,10 +23206,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22124,6 +23219,10 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+
 
 
             // make the HTTP request
@@ -22155,6 +23254,8 @@ namespace Vault.Api
         public async Task<VaultResponse<Object>> WriteLeasesTidyAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
+
+
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -22163,10 +23264,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
+
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22174,6 +23277,7 @@ namespace Vault.Api
 
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
 
 
             // make the HTTP request
@@ -22187,8 +23291,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Modify the log level of a single logger. 
         /// </summary>
@@ -22205,9 +23307,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLogger(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WriteLogger");
+
 
             // verify the required parameter 'writeLoggerRequest' is set
             if (writeLoggerRequest == null)
@@ -22221,11 +23325,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22234,8 +23339,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeLoggerRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/loggers/{name}", requestOptions);
@@ -22267,9 +23379,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLoggerAsync(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WriteLogger");
+
 
             // verify the required parameter 'writeLoggerRequest' is set
             if (writeLoggerRequest == null)
@@ -22284,11 +23398,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22297,9 +23412,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.Data = writeLoggerRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = writeLoggerRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/loggers/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22311,8 +23429,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Modify the log level for all existing loggers. 
         /// </summary>
@@ -22328,6 +23444,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteLoggers(WriteLoggersRequest writeLoggersRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeLoggersRequest' is set
             if (writeLoggersRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLoggersRequest' when calling System->WriteLoggers");
@@ -22340,11 +23458,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22353,7 +23472,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeLoggersRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/loggers", requestOptions);
@@ -22384,6 +23508,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteLoggersAsync(WriteLoggersRequest writeLoggersRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeLoggersRequest' is set
             if (writeLoggersRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeLoggersRequest' when calling System->WriteLoggers");
@@ -22397,11 +23523,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22410,8 +23537,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeLoggersRequest;
 
+
+            requestOptions.Data = writeLoggersRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/loggers", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22423,8 +23551,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enable a new secrets engine at the given path. 
         /// </summary>
@@ -22441,9 +23567,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteMount(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteMount");
+
 
             // verify the required parameter 'writeMountRequest' is set
             if (writeMountRequest == null)
@@ -22457,11 +23585,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22470,8 +23599,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeMountRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/mounts/{path}", requestOptions);
@@ -22503,9 +23639,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteMountAsync(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteMount");
+
 
             // verify the required parameter 'writeMountRequest' is set
             if (writeMountRequest == null)
@@ -22520,11 +23658,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22533,9 +23672,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = writeMountRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = writeMountRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22547,8 +23689,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Tune backend configuration parameters for this mount. 
         /// </summary>
@@ -22565,9 +23705,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteMountsConfig(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteMountsConfig");
+
 
             // verify the required parameter 'writeMountsConfigRequest' is set
             if (writeMountsConfigRequest == null)
@@ -22581,11 +23723,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22594,8 +23737,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeMountsConfigRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/mounts/{path}/tune", requestOptions);
@@ -22627,9 +23777,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteMountsConfigAsync(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteMountsConfig");
+
 
             // verify the required parameter 'writeMountsConfigRequest' is set
             if (writeMountsConfigRequest == null)
@@ -22644,11 +23796,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22657,9 +23810,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = writeMountsConfigRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = writeMountsConfigRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/mounts/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22671,8 +23827,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
@@ -22690,6 +23844,7 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WritePluginsCatalogByTypeByName(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePluginsCatalogByTypeByName");
@@ -22697,6 +23852,7 @@ namespace Vault.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->WritePluginsCatalogByTypeByName");
+
 
             // verify the required parameter 'writePluginsCatalogByTypeByNameRequest' is set
             if (writePluginsCatalogByTypeByNameRequest == null)
@@ -22710,11 +23866,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22723,9 +23880,18 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+
+
             requestOptions.Data = writePluginsCatalogByTypeByNameRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions);
@@ -22758,6 +23924,7 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WritePluginsCatalogByTypeByNameAsync(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePluginsCatalogByTypeByName");
@@ -22765,6 +23932,7 @@ namespace Vault.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->WritePluginsCatalogByTypeByName");
+
 
             // verify the required parameter 'writePluginsCatalogByTypeByNameRequest' is set
             if (writePluginsCatalogByTypeByNameRequest == null)
@@ -22779,11 +23947,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22792,10 +23961,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.Data = writePluginsCatalogByTypeByNameRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+            requestOptions.Data = writePluginsCatalogByTypeByNameRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22807,8 +23981,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Reload mounted plugin backends. Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
         /// </summary>
@@ -22824,6 +23996,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WritePluginsReloadBackend(WritePluginsReloadBackendRequest writePluginsReloadBackendRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writePluginsReloadBackendRequest' is set
             if (writePluginsReloadBackendRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writePluginsReloadBackendRequest' when calling System->WritePluginsReloadBackend");
@@ -22836,11 +24010,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22849,7 +24024,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writePluginsReloadBackendRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/plugins/reload/backend", requestOptions);
@@ -22880,6 +24060,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WritePluginsReloadBackendAsync(WritePluginsReloadBackendRequest writePluginsReloadBackendRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writePluginsReloadBackendRequest' is set
             if (writePluginsReloadBackendRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writePluginsReloadBackendRequest' when calling System->WritePluginsReloadBackend");
@@ -22893,11 +24075,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22906,8 +24089,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writePluginsReloadBackendRequest;
 
+
+            requestOptions.Data = writePluginsReloadBackendRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/reload/backend", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22919,8 +24103,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Add a new or update an existing ACL policy. 
         /// </summary>
@@ -22937,9 +24119,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WritePoliciesACL(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePoliciesACL");
+
 
             // verify the required parameter 'writePoliciesACLRequest' is set
             if (writePoliciesACLRequest == null)
@@ -22953,11 +24137,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22966,8 +24151,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
             requestOptions.Data = writePoliciesACLRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/policies/acl/{name}", requestOptions);
@@ -22999,9 +24191,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WritePoliciesACLAsync(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePoliciesACL");
+
 
             // verify the required parameter 'writePoliciesACLRequest' is set
             if (writePoliciesACLRequest == null)
@@ -23016,11 +24210,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23029,9 +24224,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.Data = writePoliciesACLRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = writePoliciesACLRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/acl/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23043,8 +24241,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Add a new or update an existing password policy. 
         /// </summary>
@@ -23061,9 +24257,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WritePoliciesPassword(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePoliciesPassword");
+
 
             // verify the required parameter 'writePoliciesPasswordRequest' is set
             if (writePoliciesPasswordRequest == null)
@@ -23077,11 +24275,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23090,8 +24289,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
             requestOptions.Data = writePoliciesPasswordRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/policies/password/{name}", requestOptions);
@@ -23123,9 +24329,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WritePoliciesPasswordAsync(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePoliciesPassword");
+
 
             // verify the required parameter 'writePoliciesPasswordRequest' is set
             if (writePoliciesPasswordRequest == null)
@@ -23140,11 +24348,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23153,9 +24362,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.Data = writePoliciesPasswordRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = writePoliciesPasswordRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policies/password/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23167,8 +24379,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Add a new or update an existing policy. 
         /// </summary>
@@ -23185,9 +24395,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WritePolicy(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePolicy");
+
 
             // verify the required parameter 'writePolicyRequest' is set
             if (writePolicyRequest == null)
@@ -23201,11 +24413,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23214,8 +24427,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
             requestOptions.Data = writePolicyRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/policy/{name}", requestOptions);
@@ -23247,9 +24467,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WritePolicyAsync(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WritePolicy");
+
 
             // verify the required parameter 'writePolicyRequest' is set
             if (writePolicyRequest == null)
@@ -23264,11 +24486,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23277,9 +24500,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.Data = writePolicyRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = writePolicyRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23291,8 +24517,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -23308,6 +24532,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteQuotasConfig(WriteQuotasConfigRequest writeQuotasConfigRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeQuotasConfigRequest' is set
             if (writeQuotasConfigRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeQuotasConfigRequest' when calling System->WriteQuotasConfig");
@@ -23320,11 +24546,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23333,7 +24560,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeQuotasConfigRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/quotas/config", requestOptions);
@@ -23364,6 +24596,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteQuotasConfigAsync(WriteQuotasConfigRequest writeQuotasConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeQuotasConfigRequest' is set
             if (writeQuotasConfigRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeQuotasConfigRequest' when calling System->WriteQuotasConfig");
@@ -23377,11 +24611,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23390,8 +24625,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeQuotasConfigRequest;
 
+
+            requestOptions.Data = writeQuotasConfigRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23403,8 +24639,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -23421,9 +24655,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteQuotasRateLimit(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WriteQuotasRateLimit");
+
 
             // verify the required parameter 'writeQuotasRateLimitRequest' is set
             if (writeQuotasRateLimitRequest == null)
@@ -23437,11 +24673,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23450,8 +24687,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeQuotasRateLimitRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/quotas/rate-limit/{name}", requestOptions);
@@ -23483,9 +24727,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteQuotasRateLimitAsync(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling System->WriteQuotasRateLimit");
+
 
             // verify the required parameter 'writeQuotasRateLimitRequest' is set
             if (writeQuotasRateLimitRequest == null)
@@ -23500,11 +24746,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23513,9 +24760,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-            requestOptions.Data = writeQuotasRateLimitRequest;
 
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = writeQuotasRateLimitRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/quotas/rate-limit/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23527,8 +24777,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Update the value of the key at the given path. 
         /// </summary>
@@ -23544,6 +24792,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteRaw(WriteRawRequest writeRawRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeRawRequest' is set
             if (writeRawRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRawRequest' when calling System->WriteRaw");
@@ -23556,11 +24806,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23569,7 +24820,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeRawRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/raw", requestOptions);
@@ -23600,6 +24856,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteRawAsync(WriteRawRequest writeRawRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeRawRequest' is set
             if (writeRawRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRawRequest' when calling System->WriteRaw");
@@ -23613,11 +24871,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23626,8 +24885,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeRawRequest;
 
+
+            requestOptions.Data = writeRawRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23639,8 +24899,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Update the value of the key at the given path. 
         /// </summary>
@@ -23657,9 +24915,11 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteRawPath(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null)
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteRawPath");
+
 
             // verify the required parameter 'writeRawPathRequest' is set
             if (writeRawPathRequest == null)
@@ -23673,11 +24933,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23686,8 +24947,15 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+
+
             requestOptions.Data = writeRawPathRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/raw/{path}", requestOptions);
@@ -23719,9 +24987,11 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteRawPathAsync(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling System->WriteRawPath");
+
 
             // verify the required parameter 'writeRawPathRequest' is set
             if (writeRawPathRequest == null)
@@ -23736,11 +25006,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23749,9 +25020,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-            requestOptions.Data = writeRawPathRequest;
 
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.Data = writeRawPathRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23763,8 +25037,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Initializes a new rekey attempt. Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
         /// </summary>
@@ -23780,6 +25052,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteRekeyInit(WriteRekeyInitRequest writeRekeyInitRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeRekeyInitRequest' is set
             if (writeRekeyInitRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRekeyInitRequest' when calling System->WriteRekeyInit");
@@ -23792,11 +25066,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23805,7 +25080,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeRekeyInitRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/rekey/init", requestOptions);
@@ -23836,6 +25116,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteRekeyInitAsync(WriteRekeyInitRequest writeRekeyInitRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeRekeyInitRequest' is set
             if (writeRekeyInitRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRekeyInitRequest' when calling System->WriteRekeyInit");
@@ -23849,11 +25131,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23862,8 +25145,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeRekeyInitRequest;
 
+
+            requestOptions.Data = writeRekeyInitRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/init", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23875,8 +25159,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault. 
         /// </summary>
@@ -23892,6 +25174,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteRekeyUpdate(WriteRekeyUpdateRequest writeRekeyUpdateRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeRekeyUpdateRequest' is set
             if (writeRekeyUpdateRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRekeyUpdateRequest' when calling System->WriteRekeyUpdate");
@@ -23904,11 +25188,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23917,7 +25202,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeRekeyUpdateRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/rekey/update", requestOptions);
@@ -23948,6 +25238,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteRekeyUpdateAsync(WriteRekeyUpdateRequest writeRekeyUpdateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeRekeyUpdateRequest' is set
             if (writeRekeyUpdateRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRekeyUpdateRequest' when calling System->WriteRekeyUpdate");
@@ -23961,11 +25253,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23974,8 +25267,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeRekeyUpdateRequest;
 
+
+            requestOptions.Data = writeRekeyUpdateRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/update", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -23987,8 +25281,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation. 
         /// </summary>
@@ -24004,6 +25296,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteRekeyVerify(WriteRekeyVerifyRequest writeRekeyVerifyRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeRekeyVerifyRequest' is set
             if (writeRekeyVerifyRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRekeyVerifyRequest' when calling System->WriteRekeyVerify");
@@ -24016,11 +25310,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24029,7 +25324,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeRekeyVerifyRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/rekey/verify", requestOptions);
@@ -24060,6 +25360,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteRekeyVerifyAsync(WriteRekeyVerifyRequest writeRekeyVerifyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeRekeyVerifyRequest' is set
             if (writeRekeyVerifyRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRekeyVerifyRequest' when calling System->WriteRekeyVerify");
@@ -24073,11 +25375,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                "",
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24086,8 +25389,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeRekeyVerifyRequest;
 
+
+            requestOptions.Data = writeRekeyVerifyRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rekey/verify", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -24099,8 +25403,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
-
         /// <summary>
         ///  
         /// </summary>
@@ -24116,6 +25418,8 @@ namespace Vault.Api
         /// </param>
         public VaultResponse<Object> WriteRotateConfig(WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null)
         {
+
+
             // verify the required parameter 'writeRotateConfigRequest' is set
             if (writeRotateConfigRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRotateConfigRequest' when calling System->WriteRotateConfig");
@@ -24128,11 +25432,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                ""
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24141,7 +25446,12 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
+
+
+
+
             requestOptions.Data = writeRotateConfigRequest;
+
 
             // make the HTTP request
             var response = this.Client.Post<Object>("/sys/rotate/config", requestOptions);
@@ -24172,6 +25482,8 @@ namespace Vault.Api
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> WriteRotateConfigAsync(WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+
+
             // verify the required parameter 'writeRotateConfigRequest' is set
             if (writeRotateConfigRequest == null)
                 throw new VaultApiException(400, "Missing required parameter 'writeRotateConfigRequest' when calling System->WriteRotateConfig");
@@ -24185,11 +25497,12 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-                "application/json"
+                ""
             };
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24198,8 +25511,9 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.Data = writeRotateConfigRequest;
 
+
+            requestOptions.Data = writeRotateConfigRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/sys/rotate/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -24211,6 +25525,5 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
-
     }
 }
