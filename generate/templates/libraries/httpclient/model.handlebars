@@ -12,36 +12,24 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-{{#each models}}
-{{#with model}}
-{{#with discriminator}}
+{{#each models ~}}{{#with model}}{{#with discriminator}}
 using JsonSubTypes;
-{{/with}}
-{{/with}}
-{{/each}}
+{{/with}}{{/with}}{{/each ~}}
 {{#if validatable}}
 using System.ComponentModel.DataAnnotations;
-{{/if}}
+{{/if ~}}
 using FileParameter = {{packageName}}.Client.FileParameter;
 {{#if useCompareNetObjects}}
 using OpenAPIClientUtils = {{packageName}}.Client.ClientUtils;
-{{/if}}
-{{#each models}}
-{{#with model}}
-{{#with oneOf}}
-{{#if @first}}
+{{/if ~}}
+{{#each models}}{{#with model}}{{#with oneOf}}{{#if @first}}
 using System.Reflection;
-{{/if}}
-{{/with}}
-{{#with aneOf}}
-{{#if @first}}
+{{/if}}{{/with ~}}
+{{#with aneOf}}{{#if @first}}
 using System.Reflection;
-{{/if}}
-{{/with}}
+{{/if}}{{/with}}
 
 namespace {{packageName}}.{{modelPackage}}
 {
-{{#if isEnum}}{{>modelEnum}}{{/if}}{{#unless isEnum}}{{#with oneOf}}{{#if @first}}{{>modelOneOf}}{{/if}}{{/with}}{{#with anyOf}}{{#if @first}}{{>modelAnyOf}}{{/if}}{{/with}}{{#unless oneOf}}{{#unless anyOf}}{{>modelGeneric}}{{/unless}}{{/unless}}{{/unless}}
-{{/with}}
-{{/each}}
+{{#if isEnum}}{{>modelEnum}}{{/if}}{{#unless isEnum}}{{#with oneOf}}{{#if @first}}{{>modelOneOf}}{{/if}}{{/with}}{{#with anyOf}}{{#if @first}}{{>modelAnyOf}}{{/if}}{{/with}}{{#unless oneOf}}{{#unless anyOf}}{{>modelGeneric}}{{/unless}}{{/unless}}{{/unless}}{{/with}}{{/each}}
 }

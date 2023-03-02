@@ -5,7 +5,7 @@
     [DataContract(Name = "{{{name}}}")]
     {{>visibility}} partial class {{classname}} : AbstractOpenAPISchema, {{#with parent}}{{{.}}}, {{/with}}IEquatable<{{classname}}>{{#if validatable}}, IValidatableObject{{/if}}
     {
-        {{#if isNullable}}
+        {{#if isNullable ~}}
         /// <summary>
         /// Initializes a new instance of the <see cref="{{classname}}" /> class.
         /// </summary>
@@ -13,9 +13,7 @@
         {
             this.IsNullable = true;
             this.SchemaType= "anyOf";
-        }
-
-        {{/if}}
+        }{{/if ~}}
         {{#with anyOf}}
         /// <summary>
         /// Initializes a new instance of the <see cref="{{classname}}" /> class
@@ -27,9 +25,7 @@
             this.IsNullable = {{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}};
             this.SchemaType= "anyOf";
             this.ActualInstance = actualInstance{{#unless isNullable}} ?? throw new ArgumentException("Invalid instance found. Must not be null."){{/unless}};
-        }
-
-        {{/with}}
+        }{{/with}}
 
         private Object _actualInstance;
 
@@ -57,7 +53,6 @@
             }
         }
         {{#with anyOf}}
-
         /// <summary>
         /// Get the actual instance of `{{{.}}}`. If the actual instance is not `{{{.}}}`,
         /// the InvalidClassException will be thrown
@@ -105,7 +100,6 @@
                 return new{{classname}};
             }
             {{#with anyOf}}
-
             try
             {
                 new{{classname}} = new {{classname}}(JsonConvert.DeserializeObject<{{{.}}}>(jsonString, {{classname}}.SerializerSettings));
@@ -116,8 +110,7 @@
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into {{{.}}}: {1}", jsonString, exception.ToString()));
-            }
-            {{/with}}
+            }{{/with}}
 
             // no match found, throw an exception
             throw new InvalidDataException("The JSON string `" + jsonString + "` cannot be deserialized into any schema defined.");
@@ -130,12 +123,8 @@
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            {{#if useCompareNetObjects}}
-            return OpenAPIClientUtils.compareLogic.Compare(this, input as {{classname}}).AreEqual;
-            {{/if}}
-            {{#unless useCompareNetObjects}}
-            return this.Equals(input as {{classname}});
-            {{/unless}}
+            {{~#if useCompareNetObjects ~}}return OpenAPIClientUtils.compareLogic.Compare(this, input as {{classname}}).AreEqual;{{/if}}
+            {{~#unless useCompareNetObjects ~}}return this.Equals(input as {{classname}});{{/unless}}
         }
 
         /// <summary>
@@ -145,15 +134,12 @@
         /// <returns>Boolean</returns>
         public bool Equals({{classname}} input)
         {
-            {{#if useCompareNetObjects}}
-            return OpenAPIClientUtils.compareLogic.Compare(this, input).AreEqual;
-            {{/if}}
-            {{#unless useCompareNetObjects}}
+            {{~#if useCompareNetObjects ~}}return OpenAPIClientUtils.compareLogic.Compare(this, input).AreEqual;{{/if}}
+            {{~#unless useCompareNetObjects ~}}
             if (input == null)
                 return false;
 
-            return this.ActualInstance.Equals(input.ActualInstance);
-            {{/unless}}
+            return this.ActualInstance.Equals(input.ActualInstance);{{/unless ~}}
         }
 
         /// <summary>
@@ -170,7 +156,6 @@
                 return hashCode;
             }
         }
-
         {{#if validatable}}
         /// <summary>
         /// To validate all properties of the instance
@@ -180,8 +165,7 @@
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
-        }
-        {{/if}}
+        }{{/if}}
     }
 
     /// <summary>

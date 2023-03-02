@@ -13,9 +13,7 @@
         {
             this.IsNullable = true;
             this.SchemaType= "oneOf";
-        }
-
-        {{/if}}
+        }{{/if}}
         {{#with oneOf}}
         /// <summary>
         /// Initializes a new instance of the <see cref="{{classname}}" /> class
@@ -27,9 +25,7 @@
             this.IsNullable = {{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}};
             this.SchemaType= "oneOf";
             this.ActualInstance = actualInstance{{#unless isNullable}} ?? throw new ArgumentException("Invalid instance found. Must not be null."){{/unless}};
-        }
-
-        {{/with}}
+        }{{/with}}
 
         private Object _actualInstance;
 
@@ -44,12 +40,10 @@
             }
             set
             {
-                {{#with oneOf}}
-                {{#unless @first}}else {{/unless}}if (value.GetType() == typeof({{{.}}}))
+                {{#with oneOf}}{{#unless @first}}else {{/unless}}if (value.GetType() == typeof({{{.}}}))
                 {
                     this._actualInstance = value;
-                }
-                {{/with}}
+                }{{/with}}
                 else
                 {
                     throw new ArgumentException("Invalid instance found. Must be the following types:{{#with oneOf}} {{{.}}}{{#unless @last}},{{/unless}}{{/with}}");
@@ -57,7 +51,6 @@
             }
         }
         {{#with oneOf}}
-
         /// <summary>
         /// Get the actual instance of `{{{.}}}`. If the actual instance is not `{{{.}}}`,
         /// the InvalidClassException will be thrown
@@ -66,8 +59,7 @@
         public {{{.}}} Get{{{.}}}()
         {
             return ({{{.}}})this.ActualInstance;
-        }
-        {{/with}}
+        }{{/with}}
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -104,9 +96,7 @@
             {
                 return new{{classname}};
             }
-            {{#if useOneOfDiscriminatorLookup}}
-            {{#with discriminator}}
-
+            {{#if useOneOfDiscriminatorLookup}}{{#with discriminator}}
             try
             {
                 var discriminatorObj = JObject.Parse(jsonString)["{{{propertyBaseName}}}"];
@@ -126,14 +116,10 @@
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to parse the json data : `{0}` {1}", jsonString, ex.ToString()));
-            }
-
-            {{/with}}
-            {{/if}}
+            }{{/with}}{{/if}}
             int match = 0;
             List<string> matchedTypes = new List<string>();
             {{#with oneOf}}
-
             try
             {
                 // if it does not contains "AdditionalProperties", use SerializerSettings to deserialize
@@ -152,8 +138,7 @@
             {
                 // deserialization failed, try the next one
                 System.Diagnostics.Debug.WriteLine(string.Format("Failed to deserialize `{0}` into {{{.}}}: {1}", jsonString, exception.ToString()));
-            }
-            {{/with}}
+            }{{/with}}
 
             if (match == 0)
             {
@@ -175,12 +160,8 @@
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            {{#if useCompareNetObjects}}
-            return OpenAPIClientUtils.compareLogic.Compare(this, input as {{classname}}).AreEqual;
-            {{/if}}
-            {{#unless useCompareNetObjects}}
-            return this.Equals(input as {{classname}});
-            {{/unless}}
+            {{~#if useCompareNetObjects ~}}return OpenAPIClientUtils.compareLogic.Compare(this, input as {{classname}}).AreEqual;{{/if}}
+            {{#unless useCompareNetObjects ~}}return this.Equals(input as {{classname}});{{/unless}}
         }
 
         /// <summary>
@@ -190,15 +171,11 @@
         /// <returns>Boolean</returns>
         public bool Equals({{classname}} input)
         {
-            {{#if useCompareNetObjects}}
-            return OpenAPIClientUtils.compareLogic.Compare(this, input).AreEqual;
-            {{/if}}
-            {{#unless useCompareNetObjects}}
-            if (input == null)
+            {{~#if useCompareNetObjects ~}}return OpenAPIClientUtils.compareLogic.Compare(this, input).AreEqual;{{/if}}
+            {{#unless useCompareNetObjects}}if (input == null)
                 return false;
 
-            return this.ActualInstance.Equals(input.ActualInstance);
-            {{/unless}}
+            return this.ActualInstance.Equals(input.ActualInstance);{{/unless ~}}
         }
 
         /// <summary>
@@ -215,7 +192,6 @@
                 return hashCode;
             }
         }
-
         {{#if validatable}}
         /// <summary>
         /// To validate all properties of the instance
@@ -225,8 +201,7 @@
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
-        }
-        {{/if}}
+        }{{/if}}
     }
 
     /// <summary>
