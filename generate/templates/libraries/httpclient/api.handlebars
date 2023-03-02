@@ -251,7 +251,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/with}}
 
             // make the HTTP request
-            var response = this.Client.{{#with lambda.titlecase}}{{#with lambda.lowercase}}{{httpMethod}}{{/with}}{{/with}}<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>("{{{path}}}", requestOptions);
+            var response = this.Client.{{capitalize (lower httpMethod)}}<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>("{{{path}}}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -352,7 +352,7 @@ namespace {{packageName}}.{{apiPackage}}
             {{/with ~}}
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.{{#with lambda.titlecase}}{{#with lambda.lowercase}}{{httpMethod}}{{/with}}{{/with}}Async<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>("{{{path}}}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.{{capitalize (lower httpMethod)}}Async<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>("{{{path}}}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
