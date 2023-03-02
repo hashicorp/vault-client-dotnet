@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// AWSConfigWriteSecurityTokenServiceAccountRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteSecurityTokenServiceAccountRequest")]
+
     public partial class AWSConfigWriteSecurityTokenServiceAccountRequest : IEquatable<AWSConfigWriteSecurityTokenServiceAccountRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSConfigWriteSecurityTokenServiceAccountRequest" /> class.
         /// </summary>
-        /// <param name="stsRole">AWS ARN for STS role to be assumed when interacting with the account specified. The Vault server must have permissions to assume this role..</param>
-        public AWSConfigWriteSecurityTokenServiceAccountRequest(string stsRole = default(string))
+
+        /// <param name="StsRole">AWS ARN for STS role to be assumed when interacting with the account specified. The Vault server must have permissions to assume this role..</param>
+
+
+        public AWSConfigWriteSecurityTokenServiceAccountRequest(string StsRole = default(string))
         {
-            this.StsRole = stsRole;
+
+            this.StsRole = StsRole;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>AWS ARN for STS role to be assumed when interacting with the account specified. The Vault server must have permissions to assume this role.</value>
         [DataMember(Name = "sts_role", EmitDefaultValue = false)]
+
+
         public string StsRole { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.StsRole == input.StsRole ||
                     (this.StsRole != null &&
                     this.StsRole.Equals(input.StsRole))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.StsRole != null)
                 {
                     hashCode = (hashCode * 59) + this.StsRole.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

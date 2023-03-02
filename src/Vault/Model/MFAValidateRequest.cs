@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,32 +26,50 @@ namespace Vault.Model
     /// MFAValidateRequest
     /// </summary>
     [DataContract(Name = "MFAValidateRequest")]
+
     public partial class MFAValidateRequest : IEquatable<MFAValidateRequest>, IValidatableObject
     {
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAValidateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MFAValidateRequest() { }
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAValidateRequest" /> class.
         /// </summary>
-        /// <param name="mfaPayload">A map from MFA method ID to a slice of passcodes or an empty slice if the method does not use passcodes (required).</param>
-        /// <param name="mfaRequestId">ID for this MFA request (required).</param>
-        public MFAValidateRequest(Object mfaPayload = default(Object), string mfaRequestId = default(string))
+
+        /// <param name="MfaPayload">A map from MFA method ID to a slice of passcodes or an empty slice if the method does not use passcodes (required).</param>
+
+        /// <param name="MfaRequestId">ID for this MFA request (required).</param>
+
+
+        public MFAValidateRequest(Object MfaPayload = default(Object), string MfaRequestId = default(string))
         {
-            // to ensure "mfaPayload" is required (not null)
-            if (mfaPayload == null)
+
+            // to ensure "MfaPayload" is required (not null)
+            if (MfaPayload == null)
             {
-                throw new ArgumentNullException("mfaPayload is a required property for MFAValidateRequest and cannot be null");
+                throw new ArgumentNullException("MfaPayload is a required property for MFAValidateRequest and cannot be null");
             }
-            this.MfaPayload = mfaPayload;
-            // to ensure "mfaRequestId" is required (not null)
-            if (mfaRequestId == null)
+            this.MfaPayload = MfaPayload;
+
+
+            // to ensure "MfaRequestId" is required (not null)
+            if (MfaRequestId == null)
             {
-                throw new ArgumentNullException("mfaRequestId is a required property for MFAValidateRequest and cannot be null");
+                throw new ArgumentNullException("MfaRequestId is a required property for MFAValidateRequest and cannot be null");
             }
-            this.MfaRequestId = mfaRequestId;
+            this.MfaRequestId = MfaRequestId;
+
+
         }
 
         /// <summary>
@@ -58,14 +77,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>A map from MFA method ID to a slice of passcodes or an empty slice if the method does not use passcodes</value>
         [DataMember(Name = "mfa_payload", IsRequired = true, EmitDefaultValue = false)]
+
+
         public Object MfaPayload { get; set; }
+
 
         /// <summary>
         /// ID for this MFA request
         /// </summary>
         /// <value>ID for this MFA request</value>
         [DataMember(Name = "mfa_request_id", IsRequired = true, EmitDefaultValue = false)]
+
+
         public string MfaRequestId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -116,12 +143,15 @@ namespace Vault.Model
                     this.MfaPayload == input.MfaPayload ||
                     (this.MfaPayload != null &&
                     this.MfaPayload.Equals(input.MfaPayload))
+
                 ) &&
                 (
                     this.MfaRequestId == input.MfaRequestId ||
                     (this.MfaRequestId != null &&
                     this.MfaRequestId.Equals(input.MfaRequestId))
+
                 );
+
         }
 
         /// <summary>
@@ -133,17 +163,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.MfaPayload != null)
                 {
                     hashCode = (hashCode * 59) + this.MfaPayload.GetHashCode();
                 }
+
                 if (this.MfaRequestId != null)
                 {
                     hashCode = (hashCode * 59) + this.MfaRequestId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -152,6 +187,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

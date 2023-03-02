@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// UserpassWriteUserPoliciesRequest
     /// </summary>
     [DataContract(Name = "UserpassWriteUserPoliciesRequest")]
+
     public partial class UserpassWriteUserPoliciesRequest : IEquatable<UserpassWriteUserPoliciesRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserpassWriteUserPoliciesRequest" /> class.
         /// </summary>
-        /// <param name="policies">Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used..</param>
-        /// <param name="tokenPolicies">Comma-separated list of policies.</param>
-        public UserpassWriteUserPoliciesRequest(List<string> policies = default(List<string>), List<string> tokenPolicies = default(List<string>))
+
+        /// <param name="Policies">Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used..</param>
+
+        /// <param name="TokenPolicies">Comma-separated list of policies.</param>
+
+
+        public UserpassWriteUserPoliciesRequest(List<string> Policies = default(List<string>), List<string> TokenPolicies = default(List<string>))
         {
-            this.Policies = policies;
-            this.TokenPolicies = tokenPolicies;
+
+            this.Policies = Policies;
+
+            this.TokenPolicies = TokenPolicies;
+
         }
 
         /// <summary>
@@ -43,15 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
+
         [Obsolete]
         public List<string> Policies { get; set; }
+
 
         /// <summary>
         /// Comma-separated list of policies
         /// </summary>
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
+
+
         public List<string> TokenPolicies { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -110,6 +133,7 @@ namespace Vault.Model
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
                 );
+
         }
 
         /// <summary>
@@ -121,17 +145,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();
                 }
+
                 if (this.TokenPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -140,6 +169,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,21 +26,44 @@ namespace Vault.Model
     /// KVv2WriteMetadataRequest
     /// </summary>
     [DataContract(Name = "KVv2WriteMetadataRequest")]
+
     public partial class KVv2WriteMetadataRequest : IEquatable<KVv2WriteMetadataRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KVv2WriteMetadataRequest" /> class.
         /// </summary>
-        /// <param name="casRequired">If true the key will require the cas parameter to be set on all write requests. If false, the backend’s configuration will be used..</param>
-        /// <param name="customMetadata">User-provided key-value pairs that are used to describe arbitrary and version-agnostic information about a secret..</param>
-        /// <param name="deleteVersionAfter">The length of time before a version is deleted. If not set, the backend&#39;s configured delete_version_after is used. Cannot be greater than the backend&#39;s delete_version_after. A zero duration clears the current setting. A negative duration will cause an error..</param>
-        /// <param name="maxVersions">The number of versions to keep. If not set, the backend’s configured max version is used..</param>
-        public KVv2WriteMetadataRequest(bool casRequired = default(bool), Object customMetadata = default(Object), int deleteVersionAfter = default(int), int maxVersions = default(int))
+
+        /// <param name="CasRequired">If true the key will require the cas parameter to be set on all write requests. If false, the backend’s configuration will be used..</param>
+
+        /// <param name="CustomMetadata">User-provided key-value pairs that are used to describe arbitrary and version-agnostic information about a secret..</param>
+
+        /// <param name="DeleteVersionAfter">The length of time before a version is deleted. If not set, the backend&#x27;s configured delete_version_after is used. Cannot be greater than the backend&#x27;s delete_version_after. A zero duration clears the current setting. A negative duration will cause an error..</param>
+
+        /// <param name="MaxVersions">The number of versions to keep. If not set, the backend’s configured max version is used..</param>
+
+
+        public KVv2WriteMetadataRequest(bool CasRequired = default(bool), Object CustomMetadata = default(Object), int DeleteVersionAfter = default(int), int MaxVersions = default(int))
         {
-            this.CasRequired = casRequired;
-            this.CustomMetadata = customMetadata;
-            this.DeleteVersionAfter = deleteVersionAfter;
-            this.MaxVersions = maxVersions;
+
+            this.CasRequired = CasRequired;
+
+            this.CustomMetadata = CustomMetadata;
+
+            this.DeleteVersionAfter = DeleteVersionAfter;
+
+            this.MaxVersions = MaxVersions;
+
         }
 
         /// <summary>
@@ -47,28 +71,42 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true the key will require the cas parameter to be set on all write requests. If false, the backend’s configuration will be used.</value>
         [DataMember(Name = "cas_required", EmitDefaultValue = true)]
+
+
         public bool CasRequired { get; set; }
+
 
         /// <summary>
         /// User-provided key-value pairs that are used to describe arbitrary and version-agnostic information about a secret.
         /// </summary>
         /// <value>User-provided key-value pairs that are used to describe arbitrary and version-agnostic information about a secret.</value>
         [DataMember(Name = "custom_metadata", EmitDefaultValue = false)]
+
+
         public Object CustomMetadata { get; set; }
 
+
         /// <summary>
-        /// The length of time before a version is deleted. If not set, the backend&#39;s configured delete_version_after is used. Cannot be greater than the backend&#39;s delete_version_after. A zero duration clears the current setting. A negative duration will cause an error.
+        /// The length of time before a version is deleted. If not set, the backend&#x27;s configured delete_version_after is used. Cannot be greater than the backend&#x27;s delete_version_after. A zero duration clears the current setting. A negative duration will cause an error.
         /// </summary>
-        /// <value>The length of time before a version is deleted. If not set, the backend&#39;s configured delete_version_after is used. Cannot be greater than the backend&#39;s delete_version_after. A zero duration clears the current setting. A negative duration will cause an error.</value>
+        /// <value>The length of time before a version is deleted. If not set, the backend&#x27;s configured delete_version_after is used. Cannot be greater than the backend&#x27;s delete_version_after. A zero duration clears the current setting. A negative duration will cause an error.</value>
         [DataMember(Name = "delete_version_after", EmitDefaultValue = false)]
+
+
         public int DeleteVersionAfter { get; set; }
+
 
         /// <summary>
         /// The number of versions to keep. If not set, the backend’s configured max version is used.
         /// </summary>
         /// <value>The number of versions to keep. If not set, the backend’s configured max version is used.</value>
         [DataMember(Name = "max_versions", EmitDefaultValue = false)]
+
+
         public int MaxVersions { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -119,21 +157,26 @@ namespace Vault.Model
             return
                 (
                     this.CasRequired == input.CasRequired ||
+
                     this.CasRequired.Equals(input.CasRequired)
                 ) &&
                 (
                     this.CustomMetadata == input.CustomMetadata ||
                     (this.CustomMetadata != null &&
                     this.CustomMetadata.Equals(input.CustomMetadata))
+
                 ) &&
                 (
                     this.DeleteVersionAfter == input.DeleteVersionAfter ||
+
                     this.DeleteVersionAfter.Equals(input.DeleteVersionAfter)
                 ) &&
                 (
                     this.MaxVersions == input.MaxVersions ||
+
                     this.MaxVersions.Equals(input.MaxVersions)
                 );
+
         }
 
         /// <summary>
@@ -145,16 +188,23 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.CasRequired.GetHashCode();
                 if (this.CustomMetadata != null)
                 {
                     hashCode = (hashCode * 59) + this.CustomMetadata.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.DeleteVersionAfter.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.MaxVersions.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -163,6 +213,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

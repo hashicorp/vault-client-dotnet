@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,23 +26,39 @@ namespace Vault.Model
     /// PKIWriteClusterConfigRequest
     /// </summary>
     [DataContract(Name = "PKIWriteClusterConfigRequest")]
+
     public partial class PKIWriteClusterConfigRequest : IEquatable<PKIWriteClusterConfigRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteClusterConfigRequest" /> class.
         /// </summary>
-        /// <param name="path">Canonical URI to this mount on this performance replication cluster&#39;s external address. This is for resolving AIA URLs and providing the {{cluster_path}} template parameter but might be used for other purposes in the future. This should only point back to this particular PR replica and should not ever point to another PR cluster. It may point to any node in the PR replica, including standby nodes, and need not always point to the active node. For example: https://pr1.vault.example.com:8200/v1/pki.</param>
-        public PKIWriteClusterConfigRequest(string path = default(string))
+
+        /// <param name="Path">Canonical URI to this mount on this performance replication cluster&#x27;s external address. This is for resolving AIA URLs and providing the {{cluster_path}} template parameter but might be used for other purposes in the future. This should only point back to this particular PR replica and should not ever point to another PR cluster. It may point to any node in the PR replica, including standby nodes, and need not always point to the active node. For example: https://pr1.vault.example.com:8200/v1/pki.</param>
+
+
+        public PKIWriteClusterConfigRequest(string Path = default(string))
         {
-            this.Path = path;
+
+            this.Path = Path;
+
         }
 
         /// <summary>
-        /// Canonical URI to this mount on this performance replication cluster&#39;s external address. This is for resolving AIA URLs and providing the {{cluster_path}} template parameter but might be used for other purposes in the future. This should only point back to this particular PR replica and should not ever point to another PR cluster. It may point to any node in the PR replica, including standby nodes, and need not always point to the active node. For example: https://pr1.vault.example.com:8200/v1/pki
+        /// Canonical URI to this mount on this performance replication cluster&#x27;s external address. This is for resolving AIA URLs and providing the {{cluster_path}} template parameter but might be used for other purposes in the future. This should only point back to this particular PR replica and should not ever point to another PR cluster. It may point to any node in the PR replica, including standby nodes, and need not always point to the active node. For example: https://pr1.vault.example.com:8200/v1/pki
         /// </summary>
-        /// <value>Canonical URI to this mount on this performance replication cluster&#39;s external address. This is for resolving AIA URLs and providing the {{cluster_path}} template parameter but might be used for other purposes in the future. This should only point back to this particular PR replica and should not ever point to another PR cluster. It may point to any node in the PR replica, including standby nodes, and need not always point to the active node. For example: https://pr1.vault.example.com:8200/v1/pki</value>
+        /// <value>Canonical URI to this mount on this performance replication cluster&#x27;s external address. This is for resolving AIA URLs and providing the {{cluster_path}} template parameter but might be used for other purposes in the future. This should only point back to this particular PR replica and should not ever point to another PR cluster. It may point to any node in the PR replica, including standby nodes, and need not always point to the active node. For example: https://pr1.vault.example.com:8200/v1/pki</value>
         [DataMember(Name = "path", EmitDefaultValue = false)]
+
+
         public string Path { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.Path == input.Path ||
                     (this.Path != null &&
                     this.Path.Equals(input.Path))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Path != null)
                 {
                     hashCode = (hashCode * 59) + this.Path.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

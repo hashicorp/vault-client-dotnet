@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,32 +26,55 @@ namespace Vault.Model
     /// GoogleCloudLoginRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudLoginRequest")]
+
     public partial class GoogleCloudLoginRequest : IEquatable<GoogleCloudLoginRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudLoginRequest" /> class.
         /// </summary>
-        /// <param name="jwt">A signed JWT. This is either a self-signed service account JWT (&#39;iam&#39; roles only) or a GCE identity metadata token (&#39;iam&#39;, &#39;gce&#39; roles)..</param>
-        /// <param name="role">Name of the role against which the login is being attempted. Required..</param>
-        public GoogleCloudLoginRequest(string jwt = default(string), string role = default(string))
+
+        /// <param name="Jwt">A signed JWT. This is either a self-signed service account JWT (&#x27;iam&#x27; roles only) or a GCE identity metadata token (&#x27;iam&#x27;, &#x27;gce&#x27; roles)..</param>
+
+        /// <param name="Role">Name of the role against which the login is being attempted. Required..</param>
+
+
+        public GoogleCloudLoginRequest(string Jwt = default(string), string Role = default(string))
         {
-            this.Jwt = jwt;
-            this.Role = role;
+
+            this.Jwt = Jwt;
+
+            this.Role = Role;
+
         }
 
         /// <summary>
-        /// A signed JWT. This is either a self-signed service account JWT (&#39;iam&#39; roles only) or a GCE identity metadata token (&#39;iam&#39;, &#39;gce&#39; roles).
+        /// A signed JWT. This is either a self-signed service account JWT (&#x27;iam&#x27; roles only) or a GCE identity metadata token (&#x27;iam&#x27;, &#x27;gce&#x27; roles).
         /// </summary>
-        /// <value>A signed JWT. This is either a self-signed service account JWT (&#39;iam&#39; roles only) or a GCE identity metadata token (&#39;iam&#39;, &#39;gce&#39; roles).</value>
+        /// <value>A signed JWT. This is either a self-signed service account JWT (&#x27;iam&#x27; roles only) or a GCE identity metadata token (&#x27;iam&#x27;, &#x27;gce&#x27; roles).</value>
         [DataMember(Name = "jwt", EmitDefaultValue = false)]
+
+
         public string Jwt { get; set; }
+
 
         /// <summary>
         /// Name of the role against which the login is being attempted. Required.
         /// </summary>
         /// <value>Name of the role against which the login is being attempted. Required.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
+
+
         public string Role { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +125,15 @@ namespace Vault.Model
                     this.Jwt == input.Jwt ||
                     (this.Jwt != null &&
                     this.Jwt.Equals(input.Jwt))
+
                 ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
+
                 );
+
         }
 
         /// <summary>
@@ -118,17 +145,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Jwt != null)
                 {
                     hashCode = (hashCode * 59) + this.Jwt.GetHashCode();
                 }
+
                 if (this.Role != null)
                 {
                     hashCode = (hashCode * 59) + this.Role.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -137,6 +169,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

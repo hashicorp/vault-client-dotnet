@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// OIDCIntrospectRequest
     /// </summary>
     [DataContract(Name = "OIDCIntrospectRequest")]
+
     public partial class OIDCIntrospectRequest : IEquatable<OIDCIntrospectRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCIntrospectRequest" /> class.
         /// </summary>
-        /// <param name="clientId">Optional client_id to verify.</param>
-        /// <param name="token">Token to verify.</param>
-        public OIDCIntrospectRequest(string clientId = default(string), string token = default(string))
+
+        /// <param name="ClientId">Optional client_id to verify.</param>
+
+        /// <param name="Token">Token to verify.</param>
+
+
+        public OIDCIntrospectRequest(string ClientId = default(string), string Token = default(string))
         {
-            this.ClientId = clientId;
-            this.Token = token;
+
+            this.ClientId = ClientId;
+
+            this.Token = Token;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>Optional client_id to verify</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
+
+
         public string ClientId { get; set; }
+
 
         /// <summary>
         /// Token to verify
         /// </summary>
         /// <value>Token to verify</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +125,15 @@ namespace Vault.Model
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
+
                 ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -118,17 +145,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ClientId != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientId.GetHashCode();
                 }
+
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -137,6 +169,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

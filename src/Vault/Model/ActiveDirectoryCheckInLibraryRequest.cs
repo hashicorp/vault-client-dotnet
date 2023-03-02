@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// ActiveDirectoryCheckInLibraryRequest
     /// </summary>
     [DataContract(Name = "ActiveDirectoryCheckInLibraryRequest")]
+
     public partial class ActiveDirectoryCheckInLibraryRequest : IEquatable<ActiveDirectoryCheckInLibraryRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActiveDirectoryCheckInLibraryRequest" /> class.
         /// </summary>
-        /// <param name="serviceAccountNames">The username/logon name for the service accounts to check in..</param>
-        public ActiveDirectoryCheckInLibraryRequest(List<string> serviceAccountNames = default(List<string>))
+
+        /// <param name="ServiceAccountNames">The username/logon name for the service accounts to check in..</param>
+
+
+        public ActiveDirectoryCheckInLibraryRequest(List<string> ServiceAccountNames = default(List<string>))
         {
-            this.ServiceAccountNames = serviceAccountNames;
+
+            this.ServiceAccountNames = ServiceAccountNames;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>The username/logon name for the service accounts to check in.</value>
         [DataMember(Name = "service_account_names", EmitDefaultValue = false)]
+
+
         public List<string> ServiceAccountNames { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +110,7 @@ namespace Vault.Model
                     input.ServiceAccountNames != null &&
                     this.ServiceAccountNames.SequenceEqual(input.ServiceAccountNames)
                 );
+
         }
 
         /// <summary>
@@ -104,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ServiceAccountNames != null)
                 {
                     hashCode = (hashCode * 59) + this.ServiceAccountNames.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -119,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

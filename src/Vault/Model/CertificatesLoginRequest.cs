@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// CertificatesLoginRequest
     /// </summary>
     [DataContract(Name = "CertificatesLoginRequest")]
+
     public partial class CertificatesLoginRequest : IEquatable<CertificatesLoginRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificatesLoginRequest" /> class.
         /// </summary>
-        /// <param name="name">The name of the certificate role to authenticate against..</param>
-        public CertificatesLoginRequest(string name = default(string))
+
+        /// <param name="Name">The name of the certificate role to authenticate against..</param>
+
+
+        public CertificatesLoginRequest(string Name = default(string))
         {
-            this.Name = name;
+
+            this.Name = Name;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>The name of the certificate role to authenticate against.</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
+
+
         public string Name { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Name != null)
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,32 +26,55 @@ namespace Vault.Model
     /// TransitRestoreKeyRequest
     /// </summary>
     [DataContract(Name = "TransitRestoreKeyRequest")]
+
     public partial class TransitRestoreKeyRequest : IEquatable<TransitRestoreKeyRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitRestoreKeyRequest" /> class.
         /// </summary>
-        /// <param name="backup">Backed up key data to be restored. This should be the output from the &#39;backup/&#39; endpoint..</param>
-        /// <param name="force">If set and a key by the given name exists, force the restore operation and override the key. (default to false).</param>
-        public TransitRestoreKeyRequest(string backup = default(string), bool force = false)
+
+        /// <param name="Backup">Backed up key data to be restored. This should be the output from the &#x27;backup/&#x27; endpoint..</param>
+
+        /// <param name="Force">If set and a key by the given name exists, force the restore operation and override the key. (default to false).</param>
+
+
+        public TransitRestoreKeyRequest(string Backup = default(string), bool Force = false)
         {
-            this.Backup = backup;
-            this.Force = force;
+
+            this.Backup = Backup;
+
+            this.Force = Force;
+
         }
 
         /// <summary>
-        /// Backed up key data to be restored. This should be the output from the &#39;backup/&#39; endpoint.
+        /// Backed up key data to be restored. This should be the output from the &#x27;backup/&#x27; endpoint.
         /// </summary>
-        /// <value>Backed up key data to be restored. This should be the output from the &#39;backup/&#39; endpoint.</value>
+        /// <value>Backed up key data to be restored. This should be the output from the &#x27;backup/&#x27; endpoint.</value>
         [DataMember(Name = "backup", EmitDefaultValue = false)]
+
+
         public string Backup { get; set; }
+
 
         /// <summary>
         /// If set and a key by the given name exists, force the restore operation and override the key.
         /// </summary>
         /// <value>If set and a key by the given name exists, force the restore operation and override the key.</value>
         [DataMember(Name = "force", EmitDefaultValue = true)]
+
+
         public bool Force { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +125,14 @@ namespace Vault.Model
                     this.Backup == input.Backup ||
                     (this.Backup != null &&
                     this.Backup.Equals(input.Backup))
+
                 ) &&
                 (
                     this.Force == input.Force ||
+
                     this.Force.Equals(input.Force)
                 );
+
         }
 
         /// <summary>
@@ -117,14 +144,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Backup != null)
                 {
                     hashCode = (hashCode * 59) + this.Backup.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Force.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -133,6 +165,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

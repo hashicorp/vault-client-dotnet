@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// WriteLoggersRequest
     /// </summary>
     [DataContract(Name = "WriteLoggersRequest")]
+
     public partial class WriteLoggersRequest : IEquatable<WriteLoggersRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteLoggersRequest" /> class.
         /// </summary>
-        /// <param name="level">Log verbosity level. Supported values (in order of detail) are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, and \&quot;error\&quot;..</param>
-        public WriteLoggersRequest(string level = default(string))
+
+        /// <param name="Level">Log verbosity level. Supported values (in order of detail) are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, and \&quot;error\&quot;..</param>
+
+
+        public WriteLoggersRequest(string Level = default(string))
         {
-            this.Level = level;
+
+            this.Level = Level;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>Log verbosity level. Supported values (in order of detail) are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, and \&quot;error\&quot;.</value>
         [DataMember(Name = "level", EmitDefaultValue = false)]
+
+
         public string Level { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.Level == input.Level ||
                     (this.Level != null &&
                     this.Level.Equals(input.Level))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Level != null)
                 {
                     hashCode = (hashCode * 59) + this.Level.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

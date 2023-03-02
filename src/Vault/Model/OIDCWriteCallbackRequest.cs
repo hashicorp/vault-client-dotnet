@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,46 +26,83 @@ namespace Vault.Model
     /// OIDCWriteCallbackRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteCallbackRequest")]
+
     public partial class OIDCWriteCallbackRequest : IEquatable<OIDCWriteCallbackRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCWriteCallbackRequest" /> class.
         /// </summary>
-        /// <param name="clientNonce">clientNonce.</param>
-        /// <param name="code">code.</param>
-        /// <param name="idToken">idToken.</param>
-        /// <param name="state">state.</param>
-        public OIDCWriteCallbackRequest(string clientNonce = default(string), string code = default(string), string idToken = default(string), string state = default(string))
+
+        /// <param name="ClientNonce">ClientNonce.</param>
+
+        /// <param name="Code">Code.</param>
+
+        /// <param name="IdToken">IdToken.</param>
+
+        /// <param name="State">State.</param>
+
+
+        public OIDCWriteCallbackRequest(string ClientNonce = default(string), string Code = default(string), string IdToken = default(string), string State = default(string))
         {
-            this.ClientNonce = clientNonce;
-            this.Code = code;
-            this.IdToken = idToken;
-            this.State = state;
+
+            this.ClientNonce = ClientNonce;
+
+            this.Code = Code;
+
+            this.IdToken = IdToken;
+
+            this.State = State;
+
         }
 
         /// <summary>
         /// Gets or Sets ClientNonce
         /// </summary>
         [DataMember(Name = "client_nonce", EmitDefaultValue = false)]
+
+
         public string ClientNonce { get; set; }
+
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name = "code", EmitDefaultValue = false)]
+
+
         public string Code { get; set; }
+
 
         /// <summary>
         /// Gets or Sets IdToken
         /// </summary>
         [DataMember(Name = "id_token", EmitDefaultValue = false)]
+
+
         public string IdToken { get; set; }
+
 
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name = "state", EmitDefaultValue = false)]
+
+
         public string State { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,22 +155,27 @@ namespace Vault.Model
                     this.ClientNonce == input.ClientNonce ||
                     (this.ClientNonce != null &&
                     this.ClientNonce.Equals(input.ClientNonce))
+
                 ) &&
                 (
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
+
                 ) &&
                 (
                     this.IdToken == input.IdToken ||
                     (this.IdToken != null &&
                     this.IdToken.Equals(input.IdToken))
+
                 ) &&
                 (
                     this.State == input.State ||
                     (this.State != null &&
                     this.State.Equals(input.State))
+
                 );
+
         }
 
         /// <summary>
@@ -144,25 +187,32 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ClientNonce != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientNonce.GetHashCode();
                 }
+
                 if (this.Code != null)
                 {
                     hashCode = (hashCode * 59) + this.Code.GetHashCode();
                 }
+
                 if (this.IdToken != null)
                 {
                     hashCode = (hashCode * 59) + this.IdToken.GetHashCode();
                 }
+
                 if (this.State != null)
                 {
                     hashCode = (hashCode * 59) + this.State.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -171,6 +221,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

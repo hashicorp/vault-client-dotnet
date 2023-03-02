@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,38 +26,88 @@ namespace Vault.Model
     /// AWSConfigWriteClientRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteClientRequest")]
+
     public partial class AWSConfigWriteClientRequest : IEquatable<AWSConfigWriteClientRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSConfigWriteClientRequest" /> class.
         /// </summary>
-        /// <param name="accessKey">AWS Access Key ID for the account used to make AWS API requests. (default to &quot;&quot;).</param>
-        /// <param name="allowedStsHeaderValues">List of additional headers that are allowed to be in AWS STS request headers.</param>
-        /// <param name="endpoint">URL to override the default generated endpoint for making AWS EC2 API calls. (default to &quot;&quot;).</param>
-        /// <param name="iamEndpoint">URL to override the default generated endpoint for making AWS IAM API calls. (default to &quot;&quot;).</param>
-        /// <param name="iamServerIdHeaderValue">Value to require in the X-Vault-AWS-IAM-Server-ID request header (default to &quot;&quot;).</param>
-        /// <param name="maxRetries">Maximum number of retries for recoverable exceptions of AWS APIs (default to -1).</param>
-        /// <param name="secretKey">AWS Secret Access Key for the account used to make AWS API requests. (default to &quot;&quot;).</param>
-        /// <param name="stsEndpoint">URL to override the default generated endpoint for making AWS STS API calls. (default to &quot;&quot;).</param>
-        /// <param name="stsRegion">The region ID for the sts_endpoint, if set. (default to &quot;&quot;).</param>
-        public AWSConfigWriteClientRequest(string accessKey = "", List<string> allowedStsHeaderValues = default(List<string>), string endpoint = "", string iamEndpoint = "", string iamServerIdHeaderValue = "", int maxRetries = -1, string secretKey = "", string stsEndpoint = "", string stsRegion = "")
+
+        /// <param name="AccessKey">AWS Access Key ID for the account used to make AWS API requests. (default to &quot;&quot;).</param>
+
+        /// <param name="AllowedStsHeaderValues">List of additional headers that are allowed to be in AWS STS request headers.</param>
+
+        /// <param name="Endpoint">URL to override the default generated endpoint for making AWS EC2 API calls. (default to &quot;&quot;).</param>
+
+        /// <param name="IamEndpoint">URL to override the default generated endpoint for making AWS IAM API calls. (default to &quot;&quot;).</param>
+
+        /// <param name="IamServerIdHeaderValue">Value to require in the X-Vault-AWS-IAM-Server-ID request header (default to &quot;&quot;).</param>
+
+        /// <param name="MaxRetries">Maximum number of retries for recoverable exceptions of AWS APIs (default to -1).</param>
+
+        /// <param name="SecretKey">AWS Secret Access Key for the account used to make AWS API requests. (default to &quot;&quot;).</param>
+
+        /// <param name="StsEndpoint">URL to override the default generated endpoint for making AWS STS API calls. (default to &quot;&quot;).</param>
+
+        /// <param name="StsRegion">The region ID for the sts_endpoint, if set. (default to &quot;&quot;).</param>
+
+
+        public AWSConfigWriteClientRequest(string AccessKey = "", List<string> AllowedStsHeaderValues = default(List<string>), string Endpoint = "", string IamEndpoint = "", string IamServerIdHeaderValue = "", int MaxRetries = -1, string SecretKey = "", string StsEndpoint = "", string StsRegion = "")
         {
-            // use default value if no "accessKey" provided
-            this.AccessKey = accessKey ?? "";
-            this.AllowedStsHeaderValues = allowedStsHeaderValues;
-            // use default value if no "endpoint" provided
-            this.Endpoint = endpoint ?? "";
-            // use default value if no "iamEndpoint" provided
-            this.IamEndpoint = iamEndpoint ?? "";
-            // use default value if no "iamServerIdHeaderValue" provided
-            this.IamServerIdHeaderValue = iamServerIdHeaderValue ?? "";
-            this.MaxRetries = maxRetries;
-            // use default value if no "secretKey" provided
-            this.SecretKey = secretKey ?? "";
-            // use default value if no "stsEndpoint" provided
-            this.StsEndpoint = stsEndpoint ?? "";
-            // use default value if no "stsRegion" provided
-            this.StsRegion = stsRegion ?? "";
+
+            // use default value if no "AccessKey" provided
+            this.AccessKey = AccessKey ?? "";
+
+
+            this.AllowedStsHeaderValues = AllowedStsHeaderValues;
+
+            // use default value if no "Endpoint" provided
+            this.Endpoint = Endpoint ?? "";
+
+
+            // use default value if no "IamEndpoint" provided
+            this.IamEndpoint = IamEndpoint ?? "";
+
+
+            // use default value if no "IamServerIdHeaderValue" provided
+            this.IamServerIdHeaderValue = IamServerIdHeaderValue ?? "";
+
+
+            this.MaxRetries = MaxRetries;
+
+            // use default value if no "SecretKey" provided
+            this.SecretKey = SecretKey ?? "";
+
+
+            // use default value if no "StsEndpoint" provided
+            this.StsEndpoint = StsEndpoint ?? "";
+
+
+            // use default value if no "StsRegion" provided
+            this.StsRegion = StsRegion ?? "";
+
+
         }
 
         /// <summary>
@@ -64,63 +115,92 @@ namespace Vault.Model
         /// </summary>
         /// <value>AWS Access Key ID for the account used to make AWS API requests.</value>
         [DataMember(Name = "access_key", EmitDefaultValue = false)]
+
+
         public string AccessKey { get; set; }
+
 
         /// <summary>
         /// List of additional headers that are allowed to be in AWS STS request headers
         /// </summary>
         /// <value>List of additional headers that are allowed to be in AWS STS request headers</value>
         [DataMember(Name = "allowed_sts_header_values", EmitDefaultValue = false)]
+
+
         public List<string> AllowedStsHeaderValues { get; set; }
+
 
         /// <summary>
         /// URL to override the default generated endpoint for making AWS EC2 API calls.
         /// </summary>
         /// <value>URL to override the default generated endpoint for making AWS EC2 API calls.</value>
         [DataMember(Name = "endpoint", EmitDefaultValue = false)]
+
+
         public string Endpoint { get; set; }
+
 
         /// <summary>
         /// URL to override the default generated endpoint for making AWS IAM API calls.
         /// </summary>
         /// <value>URL to override the default generated endpoint for making AWS IAM API calls.</value>
         [DataMember(Name = "iam_endpoint", EmitDefaultValue = false)]
+
+
         public string IamEndpoint { get; set; }
+
 
         /// <summary>
         /// Value to require in the X-Vault-AWS-IAM-Server-ID request header
         /// </summary>
         /// <value>Value to require in the X-Vault-AWS-IAM-Server-ID request header</value>
         [DataMember(Name = "iam_server_id_header_value", EmitDefaultValue = false)]
+
+
         public string IamServerIdHeaderValue { get; set; }
+
 
         /// <summary>
         /// Maximum number of retries for recoverable exceptions of AWS APIs
         /// </summary>
         /// <value>Maximum number of retries for recoverable exceptions of AWS APIs</value>
         [DataMember(Name = "max_retries", EmitDefaultValue = false)]
+
+
         public int MaxRetries { get; set; }
+
 
         /// <summary>
         /// AWS Secret Access Key for the account used to make AWS API requests.
         /// </summary>
         /// <value>AWS Secret Access Key for the account used to make AWS API requests.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
+
+
         public string SecretKey { get; set; }
+
 
         /// <summary>
         /// URL to override the default generated endpoint for making AWS STS API calls.
         /// </summary>
         /// <value>URL to override the default generated endpoint for making AWS STS API calls.</value>
         [DataMember(Name = "sts_endpoint", EmitDefaultValue = false)]
+
+
         public string StsEndpoint { get; set; }
+
 
         /// <summary>
         /// The region ID for the sts_endpoint, if set.
         /// </summary>
         /// <value>The region ID for the sts_endpoint, if set.</value>
         [DataMember(Name = "sts_region", EmitDefaultValue = false)]
+
+
         public string StsRegion { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -178,6 +258,7 @@ namespace Vault.Model
                     this.AccessKey == input.AccessKey ||
                     (this.AccessKey != null &&
                     this.AccessKey.Equals(input.AccessKey))
+
                 ) &&
                 (
                     this.AllowedStsHeaderValues == input.AllowedStsHeaderValues ||
@@ -189,36 +270,44 @@ namespace Vault.Model
                     this.Endpoint == input.Endpoint ||
                     (this.Endpoint != null &&
                     this.Endpoint.Equals(input.Endpoint))
+
                 ) &&
                 (
                     this.IamEndpoint == input.IamEndpoint ||
                     (this.IamEndpoint != null &&
                     this.IamEndpoint.Equals(input.IamEndpoint))
+
                 ) &&
                 (
                     this.IamServerIdHeaderValue == input.IamServerIdHeaderValue ||
                     (this.IamServerIdHeaderValue != null &&
                     this.IamServerIdHeaderValue.Equals(input.IamServerIdHeaderValue))
+
                 ) &&
                 (
                     this.MaxRetries == input.MaxRetries ||
+
                     this.MaxRetries.Equals(input.MaxRetries)
                 ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
                     this.SecretKey.Equals(input.SecretKey))
+
                 ) &&
                 (
                     this.StsEndpoint == input.StsEndpoint ||
                     (this.StsEndpoint != null &&
                     this.StsEndpoint.Equals(input.StsEndpoint))
+
                 ) &&
                 (
                     this.StsRegion == input.StsRegion ||
                     (this.StsRegion != null &&
                     this.StsRegion.Equals(input.StsRegion))
+
                 );
+
         }
 
         /// <summary>
@@ -230,42 +319,54 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AccessKey != null)
                 {
                     hashCode = (hashCode * 59) + this.AccessKey.GetHashCode();
                 }
+
                 if (this.AllowedStsHeaderValues != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedStsHeaderValues.GetHashCode();
                 }
+
                 if (this.Endpoint != null)
                 {
                     hashCode = (hashCode * 59) + this.Endpoint.GetHashCode();
                 }
+
                 if (this.IamEndpoint != null)
                 {
                     hashCode = (hashCode * 59) + this.IamEndpoint.GetHashCode();
                 }
+
                 if (this.IamServerIdHeaderValue != null)
                 {
                     hashCode = (hashCode * 59) + this.IamServerIdHeaderValue.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.MaxRetries.GetHashCode();
                 if (this.SecretKey != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretKey.GetHashCode();
                 }
+
                 if (this.StsEndpoint != null)
                 {
                     hashCode = (hashCode * 59) + this.StsEndpoint.GetHashCode();
                 }
+
                 if (this.StsRegion != null)
                 {
                     hashCode = (hashCode * 59) + this.StsRegion.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -274,6 +375,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

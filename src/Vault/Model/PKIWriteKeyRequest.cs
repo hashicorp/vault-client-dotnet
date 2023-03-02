@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// PKIWriteKeyRequest
     /// </summary>
     [DataContract(Name = "PKIWriteKeyRequest")]
+
     public partial class PKIWriteKeyRequest : IEquatable<PKIWriteKeyRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteKeyRequest" /> class.
         /// </summary>
-        /// <param name="keyName">Human-readable name for this key..</param>
-        public PKIWriteKeyRequest(string keyName = default(string))
+
+        /// <param name="KeyName">Human-readable name for this key..</param>
+
+
+        public PKIWriteKeyRequest(string KeyName = default(string))
         {
-            this.KeyName = keyName;
+
+            this.KeyName = KeyName;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>Human-readable name for this key.</value>
         [DataMember(Name = "key_name", EmitDefaultValue = false)]
+
+
         public string KeyName { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.KeyName == input.KeyName ||
                     (this.KeyName != null &&
                     this.KeyName.Equals(input.KeyName))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.KeyName != null)
                 {
                     hashCode = (hashCode * 59) + this.KeyName.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

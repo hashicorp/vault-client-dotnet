@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,21 +26,44 @@ namespace Vault.Model
     /// EntityMergeRequest
     /// </summary>
     [DataContract(Name = "EntityMergeRequest")]
+
     public partial class EntityMergeRequest : IEquatable<EntityMergeRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EntityMergeRequest" /> class.
         /// </summary>
-        /// <param name="conflictingAliasIdsToKeep">Alias IDs to keep in case of conflicting aliases. Ignored if no conflicting aliases found.</param>
-        /// <param name="force">Setting this will follow the &#39;mine&#39; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts..</param>
-        /// <param name="fromEntityIds">Entity IDs which need to get merged.</param>
-        /// <param name="toEntityId">Entity ID into which all the other entities need to get merged.</param>
-        public EntityMergeRequest(List<string> conflictingAliasIdsToKeep = default(List<string>), bool force = default(bool), List<string> fromEntityIds = default(List<string>), string toEntityId = default(string))
+
+        /// <param name="ConflictingAliasIdsToKeep">Alias IDs to keep in case of conflicting aliases. Ignored if no conflicting aliases found.</param>
+
+        /// <param name="Force">Setting this will follow the &#x27;mine&#x27; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts..</param>
+
+        /// <param name="FromEntityIds">Entity IDs which need to get merged.</param>
+
+        /// <param name="ToEntityId">Entity ID into which all the other entities need to get merged.</param>
+
+
+        public EntityMergeRequest(List<string> ConflictingAliasIdsToKeep = default(List<string>), bool Force = default(bool), List<string> FromEntityIds = default(List<string>), string ToEntityId = default(string))
         {
-            this.ConflictingAliasIdsToKeep = conflictingAliasIdsToKeep;
-            this.Force = force;
-            this.FromEntityIds = fromEntityIds;
-            this.ToEntityId = toEntityId;
+
+            this.ConflictingAliasIdsToKeep = ConflictingAliasIdsToKeep;
+
+            this.Force = Force;
+
+            this.FromEntityIds = FromEntityIds;
+
+            this.ToEntityId = ToEntityId;
+
         }
 
         /// <summary>
@@ -47,28 +71,42 @@ namespace Vault.Model
         /// </summary>
         /// <value>Alias IDs to keep in case of conflicting aliases. Ignored if no conflicting aliases found</value>
         [DataMember(Name = "conflicting_alias_ids_to_keep", EmitDefaultValue = false)]
+
+
         public List<string> ConflictingAliasIdsToKeep { get; set; }
 
+
         /// <summary>
-        /// Setting this will follow the &#39;mine&#39; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts.
+        /// Setting this will follow the &#x27;mine&#x27; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts.
         /// </summary>
-        /// <value>Setting this will follow the &#39;mine&#39; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts.</value>
+        /// <value>Setting this will follow the &#x27;mine&#x27; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts.</value>
         [DataMember(Name = "force", EmitDefaultValue = true)]
+
+
         public bool Force { get; set; }
+
 
         /// <summary>
         /// Entity IDs which need to get merged
         /// </summary>
         /// <value>Entity IDs which need to get merged</value>
         [DataMember(Name = "from_entity_ids", EmitDefaultValue = false)]
+
+
         public List<string> FromEntityIds { get; set; }
+
 
         /// <summary>
         /// Entity ID into which all the other entities need to get merged
         /// </summary>
         /// <value>Entity ID into which all the other entities need to get merged</value>
         [DataMember(Name = "to_entity_id", EmitDefaultValue = false)]
+
+
         public string ToEntityId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,6 +163,7 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Force == input.Force ||
+
                     this.Force.Equals(input.Force)
                 ) &&
                 (
@@ -137,7 +176,9 @@ namespace Vault.Model
                     this.ToEntityId == input.ToEntityId ||
                     (this.ToEntityId != null &&
                     this.ToEntityId.Equals(input.ToEntityId))
+
                 );
+
         }
 
         /// <summary>
@@ -149,22 +190,29 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ConflictingAliasIdsToKeep != null)
                 {
                     hashCode = (hashCode * 59) + this.ConflictingAliasIdsToKeep.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Force.GetHashCode();
                 if (this.FromEntityIds != null)
                 {
                     hashCode = (hashCode * 59) + this.FromEntityIds.GetHashCode();
                 }
+
                 if (this.ToEntityId != null)
                 {
                     hashCode = (hashCode * 59) + this.ToEntityId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -173,6 +221,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

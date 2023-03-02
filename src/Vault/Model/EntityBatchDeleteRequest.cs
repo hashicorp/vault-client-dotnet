@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// EntityBatchDeleteRequest
     /// </summary>
     [DataContract(Name = "EntityBatchDeleteRequest")]
+
     public partial class EntityBatchDeleteRequest : IEquatable<EntityBatchDeleteRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EntityBatchDeleteRequest" /> class.
         /// </summary>
-        /// <param name="entityIds">Entity IDs to delete.</param>
-        public EntityBatchDeleteRequest(List<string> entityIds = default(List<string>))
+
+        /// <param name="EntityIds">Entity IDs to delete.</param>
+
+
+        public EntityBatchDeleteRequest(List<string> EntityIds = default(List<string>))
         {
-            this.EntityIds = entityIds;
+
+            this.EntityIds = EntityIds;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>Entity IDs to delete</value>
         [DataMember(Name = "entity_ids", EmitDefaultValue = false)]
+
+
         public List<string> EntityIds { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +110,7 @@ namespace Vault.Model
                     input.EntityIds != null &&
                     this.EntityIds.SequenceEqual(input.EntityIds)
                 );
+
         }
 
         /// <summary>
@@ -104,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.EntityIds != null)
                 {
                     hashCode = (hashCode * 59) + this.EntityIds.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -119,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

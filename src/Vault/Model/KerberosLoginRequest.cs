@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// KerberosLoginRequest
     /// </summary>
     [DataContract(Name = "KerberosLoginRequest")]
+
     public partial class KerberosLoginRequest : IEquatable<KerberosLoginRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KerberosLoginRequest" /> class.
         /// </summary>
-        /// <param name="authorization">SPNEGO Authorization header. Required..</param>
-        public KerberosLoginRequest(string authorization = default(string))
+
+        /// <param name="Authorization">SPNEGO Authorization header. Required..</param>
+
+
+        public KerberosLoginRequest(string Authorization = default(string))
         {
-            this.Authorization = authorization;
+
+            this.Authorization = Authorization;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>SPNEGO Authorization header. Required.</value>
         [DataMember(Name = "authorization", EmitDefaultValue = false)]
+
+
         public string Authorization { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.Authorization == input.Authorization ||
                     (this.Authorization != null &&
                     this.Authorization.Equals(input.Authorization))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Authorization != null)
                 {
                     hashCode = (hashCode * 59) + this.Authorization.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

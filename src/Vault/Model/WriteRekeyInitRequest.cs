@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,23 +26,50 @@ namespace Vault.Model
     /// WriteRekeyInitRequest
     /// </summary>
     [DataContract(Name = "WriteRekeyInitRequest")]
+
     public partial class WriteRekeyInitRequest : IEquatable<WriteRekeyInitRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteRekeyInitRequest" /> class.
         /// </summary>
-        /// <param name="backup">Specifies if using PGP-encrypted keys, whether Vault should also store a plaintext backup of the PGP-encrypted keys..</param>
-        /// <param name="pgpKeys">Specifies an array of PGP public keys used to encrypt the output unseal keys. Ordering is preserved. The keys must be base64-encoded from their original binary representation. The size of this array must be the same as secret_shares..</param>
-        /// <param name="requireVerification">Turns on verification functionality.</param>
-        /// <param name="secretShares">Specifies the number of shares to split the unseal key into..</param>
-        /// <param name="secretThreshold">Specifies the number of shares required to reconstruct the unseal key. This must be less than or equal secret_shares. If using Vault HSM with auto-unsealing, this value must be the same as secret_shares..</param>
-        public WriteRekeyInitRequest(bool backup = default(bool), List<string> pgpKeys = default(List<string>), bool requireVerification = default(bool), int secretShares = default(int), int secretThreshold = default(int))
+
+        /// <param name="Backup">Specifies if using PGP-encrypted keys, whether Vault should also store a plaintext backup of the PGP-encrypted keys..</param>
+
+        /// <param name="PgpKeys">Specifies an array of PGP public keys used to encrypt the output unseal keys. Ordering is preserved. The keys must be base64-encoded from their original binary representation. The size of this array must be the same as secret_shares..</param>
+
+        /// <param name="RequireVerification">Turns on verification functionality.</param>
+
+        /// <param name="SecretShares">Specifies the number of shares to split the unseal key into..</param>
+
+        /// <param name="SecretThreshold">Specifies the number of shares required to reconstruct the unseal key. This must be less than or equal secret_shares. If using Vault HSM with auto-unsealing, this value must be the same as secret_shares..</param>
+
+
+        public WriteRekeyInitRequest(bool Backup = default(bool), List<string> PgpKeys = default(List<string>), bool RequireVerification = default(bool), int SecretShares = default(int), int SecretThreshold = default(int))
         {
-            this.Backup = backup;
-            this.PgpKeys = pgpKeys;
-            this.RequireVerification = requireVerification;
-            this.SecretShares = secretShares;
-            this.SecretThreshold = secretThreshold;
+
+            this.Backup = Backup;
+
+            this.PgpKeys = PgpKeys;
+
+            this.RequireVerification = RequireVerification;
+
+            this.SecretShares = SecretShares;
+
+            this.SecretThreshold = SecretThreshold;
+
         }
 
         /// <summary>
@@ -49,35 +77,52 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies if using PGP-encrypted keys, whether Vault should also store a plaintext backup of the PGP-encrypted keys.</value>
         [DataMember(Name = "backup", EmitDefaultValue = true)]
+
+
         public bool Backup { get; set; }
+
 
         /// <summary>
         /// Specifies an array of PGP public keys used to encrypt the output unseal keys. Ordering is preserved. The keys must be base64-encoded from their original binary representation. The size of this array must be the same as secret_shares.
         /// </summary>
         /// <value>Specifies an array of PGP public keys used to encrypt the output unseal keys. Ordering is preserved. The keys must be base64-encoded from their original binary representation. The size of this array must be the same as secret_shares.</value>
         [DataMember(Name = "pgp_keys", EmitDefaultValue = false)]
+
+
         public List<string> PgpKeys { get; set; }
+
 
         /// <summary>
         /// Turns on verification functionality
         /// </summary>
         /// <value>Turns on verification functionality</value>
         [DataMember(Name = "require_verification", EmitDefaultValue = true)]
+
+
         public bool RequireVerification { get; set; }
+
 
         /// <summary>
         /// Specifies the number of shares to split the unseal key into.
         /// </summary>
         /// <value>Specifies the number of shares to split the unseal key into.</value>
         [DataMember(Name = "secret_shares", EmitDefaultValue = false)]
+
+
         public int SecretShares { get; set; }
+
 
         /// <summary>
         /// Specifies the number of shares required to reconstruct the unseal key. This must be less than or equal secret_shares. If using Vault HSM with auto-unsealing, this value must be the same as secret_shares.
         /// </summary>
         /// <value>Specifies the number of shares required to reconstruct the unseal key. This must be less than or equal secret_shares. If using Vault HSM with auto-unsealing, this value must be the same as secret_shares.</value>
         [DataMember(Name = "secret_threshold", EmitDefaultValue = false)]
+
+
         public int SecretThreshold { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -129,6 +174,7 @@ namespace Vault.Model
             return
                 (
                     this.Backup == input.Backup ||
+
                     this.Backup.Equals(input.Backup)
                 ) &&
                 (
@@ -139,16 +185,20 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RequireVerification == input.RequireVerification ||
+
                     this.RequireVerification.Equals(input.RequireVerification)
                 ) &&
                 (
                     this.SecretShares == input.SecretShares ||
+
                     this.SecretShares.Equals(input.SecretShares)
                 ) &&
                 (
                     this.SecretThreshold == input.SecretThreshold ||
+
                     this.SecretThreshold.Equals(input.SecretThreshold)
                 );
+
         }
 
         /// <summary>
@@ -160,17 +210,25 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Backup.GetHashCode();
                 if (this.PgpKeys != null)
                 {
                     hashCode = (hashCode * 59) + this.PgpKeys.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.RequireVerification.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.SecretShares.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.SecretThreshold.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -179,6 +237,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// AppRoleReadSecretIDNumUsesResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadSecretIDNumUsesResponse")]
+
     public partial class AppRoleReadSecretIDNumUsesResponse : IEquatable<AppRoleReadSecretIDNumUsesResponse>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleReadSecretIDNumUsesResponse" /> class.
         /// </summary>
-        /// <param name="secretIdNumUses">Number of times a secret ID can access the role, after which the SecretID will expire. Defaults to 0 meaning that the secret ID is of unlimited use..</param>
-        public AppRoleReadSecretIDNumUsesResponse(int secretIdNumUses = default(int))
+
+        /// <param name="SecretIdNumUses">Number of times a secret ID can access the role, after which the SecretID will expire. Defaults to 0 meaning that the secret ID is of unlimited use..</param>
+
+
+        public AppRoleReadSecretIDNumUsesResponse(int SecretIdNumUses = default(int))
         {
-            this.SecretIdNumUses = secretIdNumUses;
+
+            this.SecretIdNumUses = SecretIdNumUses;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>Number of times a secret ID can access the role, after which the SecretID will expire. Defaults to 0 meaning that the secret ID is of unlimited use.</value>
         [DataMember(Name = "secret_id_num_uses", EmitDefaultValue = false)]
+
+
         public int SecretIdNumUses { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +106,10 @@ namespace Vault.Model
             return
                 (
                     this.SecretIdNumUses == input.SecretIdNumUses ||
+
                     this.SecretIdNumUses.Equals(input.SecretIdNumUses)
                 );
+
         }
 
         /// <summary>
@@ -102,10 +121,14 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.SecretIdNumUses.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -114,6 +137,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

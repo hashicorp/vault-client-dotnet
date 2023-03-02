@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// TokenRenewAccessorRequest
     /// </summary>
     [DataContract(Name = "TokenRenewAccessorRequest")]
+
     public partial class TokenRenewAccessorRequest : IEquatable<TokenRenewAccessorRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenRenewAccessorRequest" /> class.
         /// </summary>
-        /// <param name="accessor">Accessor of the token to renew (request body).</param>
-        /// <param name="increment">The desired increment in seconds to the token expiration (default to 0).</param>
-        public TokenRenewAccessorRequest(string accessor = default(string), int increment = 0)
+
+        /// <param name="Accessor">Accessor of the token to renew (request body).</param>
+
+        /// <param name="Increment">The desired increment in seconds to the token expiration (default to 0).</param>
+
+
+        public TokenRenewAccessorRequest(string Accessor = default(string), int Increment = 0)
         {
-            this.Accessor = accessor;
-            this.Increment = increment;
+
+            this.Accessor = Accessor;
+
+            this.Increment = Increment;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>Accessor of the token to renew (request body)</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
+
+
         public string Accessor { get; set; }
+
 
         /// <summary>
         /// The desired increment in seconds to the token expiration
         /// </summary>
         /// <value>The desired increment in seconds to the token expiration</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
+
+
         public int Increment { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +125,14 @@ namespace Vault.Model
                     this.Accessor == input.Accessor ||
                     (this.Accessor != null &&
                     this.Accessor.Equals(input.Accessor))
+
                 ) &&
                 (
                     this.Increment == input.Increment ||
+
                     this.Increment.Equals(input.Increment)
                 );
+
         }
 
         /// <summary>
@@ -117,14 +144,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Accessor != null)
                 {
                     hashCode = (hashCode * 59) + this.Accessor.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Increment.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -133,6 +165,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

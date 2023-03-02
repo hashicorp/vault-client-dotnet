@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// WriteLeasesLookupRequest
     /// </summary>
     [DataContract(Name = "WriteLeasesLookupRequest")]
+
     public partial class WriteLeasesLookupRequest : IEquatable<WriteLeasesLookupRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteLeasesLookupRequest" /> class.
         /// </summary>
-        /// <param name="leaseId">The lease identifier to renew. This is included with a lease..</param>
-        public WriteLeasesLookupRequest(string leaseId = default(string))
+
+        /// <param name="LeaseId">The lease identifier to renew. This is included with a lease..</param>
+
+
+        public WriteLeasesLookupRequest(string LeaseId = default(string))
         {
-            this.LeaseId = leaseId;
+
+            this.LeaseId = LeaseId;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
+
+
         public string LeaseId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.LeaseId == input.LeaseId ||
                     (this.LeaseId != null &&
                     this.LeaseId.Equals(input.LeaseId))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.LeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.LeaseId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

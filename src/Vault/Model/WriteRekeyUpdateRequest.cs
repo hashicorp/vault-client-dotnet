@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// WriteRekeyUpdateRequest
     /// </summary>
     [DataContract(Name = "WriteRekeyUpdateRequest")]
+
     public partial class WriteRekeyUpdateRequest : IEquatable<WriteRekeyUpdateRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteRekeyUpdateRequest" /> class.
         /// </summary>
-        /// <param name="key">Specifies a single unseal key share..</param>
-        /// <param name="nonce">Specifies the nonce of the rekey attempt..</param>
-        public WriteRekeyUpdateRequest(string key = default(string), string nonce = default(string))
+
+        /// <param name="Key">Specifies a single unseal key share..</param>
+
+        /// <param name="Nonce">Specifies the nonce of the rekey attempt..</param>
+
+
+        public WriteRekeyUpdateRequest(string Key = default(string), string Nonce = default(string))
         {
-            this.Key = key;
-            this.Nonce = nonce;
+
+            this.Key = Key;
+
+            this.Nonce = Nonce;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies a single unseal key share.</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
+
+
         public string Key { get; set; }
+
 
         /// <summary>
         /// Specifies the nonce of the rekey attempt.
         /// </summary>
         /// <value>Specifies the nonce of the rekey attempt.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
+
+
         public string Nonce { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +125,15 @@ namespace Vault.Model
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
+
                 ) &&
                 (
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&
                     this.Nonce.Equals(input.Nonce))
+
                 );
+
         }
 
         /// <summary>
@@ -118,17 +145,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Key != null)
                 {
                     hashCode = (hashCode * 59) + this.Key.GetHashCode();
                 }
+
                 if (this.Nonce != null)
                 {
                     hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -137,6 +169,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

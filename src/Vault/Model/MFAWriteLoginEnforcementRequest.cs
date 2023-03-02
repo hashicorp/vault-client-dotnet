@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,33 +26,62 @@ namespace Vault.Model
     /// MFAWriteLoginEnforcementRequest
     /// </summary>
     [DataContract(Name = "MFAWriteLoginEnforcementRequest")]
+
     public partial class MFAWriteLoginEnforcementRequest : IEquatable<MFAWriteLoginEnforcementRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAWriteLoginEnforcementRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MFAWriteLoginEnforcementRequest() { }
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAWriteLoginEnforcementRequest" /> class.
         /// </summary>
-        /// <param name="authMethodAccessors">Array of auth mount accessor IDs.</param>
-        /// <param name="authMethodTypes">Array of auth mount types.</param>
-        /// <param name="identityEntityIds">Array of identity entity IDs.</param>
-        /// <param name="identityGroupIds">Array of identity group IDs.</param>
-        /// <param name="mfaMethodIds">Array of Method IDs that determine what methods will be enforced (required).</param>
-        public MFAWriteLoginEnforcementRequest(List<string> authMethodAccessors = default(List<string>), List<string> authMethodTypes = default(List<string>), List<string> identityEntityIds = default(List<string>), List<string> identityGroupIds = default(List<string>), List<string> mfaMethodIds = default(List<string>))
+
+        /// <param name="AuthMethodAccessors">Array of auth mount accessor IDs.</param>
+
+        /// <param name="AuthMethodTypes">Array of auth mount types.</param>
+
+        /// <param name="IdentityEntityIds">Array of identity entity IDs.</param>
+
+        /// <param name="IdentityGroupIds">Array of identity group IDs.</param>
+
+        /// <param name="MfaMethodIds">Array of Method IDs that determine what methods will be enforced (required).</param>
+
+
+        public MFAWriteLoginEnforcementRequest(List<string> AuthMethodAccessors = default(List<string>), List<string> AuthMethodTypes = default(List<string>), List<string> IdentityEntityIds = default(List<string>), List<string> IdentityGroupIds = default(List<string>), List<string> MfaMethodIds = default(List<string>))
         {
-            // to ensure "mfaMethodIds" is required (not null)
-            if (mfaMethodIds == null)
+
+            // to ensure "MfaMethodIds" is required (not null)
+            if (MfaMethodIds == null)
             {
-                throw new ArgumentNullException("mfaMethodIds is a required property for MFAWriteLoginEnforcementRequest and cannot be null");
+                throw new ArgumentNullException("MfaMethodIds is a required property for MFAWriteLoginEnforcementRequest and cannot be null");
             }
-            this.MfaMethodIds = mfaMethodIds;
-            this.AuthMethodAccessors = authMethodAccessors;
-            this.AuthMethodTypes = authMethodTypes;
-            this.IdentityEntityIds = identityEntityIds;
-            this.IdentityGroupIds = identityGroupIds;
+            this.MfaMethodIds = MfaMethodIds;
+
+
+            this.AuthMethodAccessors = AuthMethodAccessors;
+
+            this.AuthMethodTypes = AuthMethodTypes;
+
+            this.IdentityEntityIds = IdentityEntityIds;
+
+            this.IdentityGroupIds = IdentityGroupIds;
+
         }
 
         /// <summary>
@@ -59,35 +89,52 @@ namespace Vault.Model
         /// </summary>
         /// <value>Array of auth mount accessor IDs</value>
         [DataMember(Name = "auth_method_accessors", EmitDefaultValue = false)]
+
+
         public List<string> AuthMethodAccessors { get; set; }
+
 
         /// <summary>
         /// Array of auth mount types
         /// </summary>
         /// <value>Array of auth mount types</value>
         [DataMember(Name = "auth_method_types", EmitDefaultValue = false)]
+
+
         public List<string> AuthMethodTypes { get; set; }
+
 
         /// <summary>
         /// Array of identity entity IDs
         /// </summary>
         /// <value>Array of identity entity IDs</value>
         [DataMember(Name = "identity_entity_ids", EmitDefaultValue = false)]
+
+
         public List<string> IdentityEntityIds { get; set; }
+
 
         /// <summary>
         /// Array of identity group IDs
         /// </summary>
         /// <value>Array of identity group IDs</value>
         [DataMember(Name = "identity_group_ids", EmitDefaultValue = false)]
+
+
         public List<string> IdentityGroupIds { get; set; }
+
 
         /// <summary>
         /// Array of Method IDs that determine what methods will be enforced
         /// </summary>
         /// <value>Array of Method IDs that determine what methods will be enforced</value>
         [DataMember(Name = "mfa_method_ids", IsRequired = true, EmitDefaultValue = false)]
+
+
         public List<string> MfaMethodIds { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -167,6 +214,7 @@ namespace Vault.Model
                     input.MfaMethodIds != null &&
                     this.MfaMethodIds.SequenceEqual(input.MfaMethodIds)
                 );
+
         }
 
         /// <summary>
@@ -178,29 +226,37 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AuthMethodAccessors != null)
                 {
                     hashCode = (hashCode * 59) + this.AuthMethodAccessors.GetHashCode();
                 }
+
                 if (this.AuthMethodTypes != null)
                 {
                     hashCode = (hashCode * 59) + this.AuthMethodTypes.GetHashCode();
                 }
+
                 if (this.IdentityEntityIds != null)
                 {
                     hashCode = (hashCode * 59) + this.IdentityEntityIds.GetHashCode();
                 }
+
                 if (this.IdentityGroupIds != null)
                 {
                     hashCode = (hashCode * 59) + this.IdentityGroupIds.GetHashCode();
                 }
+
                 if (this.MfaMethodIds != null)
                 {
                     hashCode = (hashCode * 59) + this.MfaMethodIds.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -209,6 +265,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

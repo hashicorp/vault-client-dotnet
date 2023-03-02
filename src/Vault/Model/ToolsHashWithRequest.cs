@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,21 +26,42 @@ namespace Vault.Model
     /// ToolsHashWithRequest
     /// </summary>
     [DataContract(Name = "ToolsHashWithRequest")]
+
     public partial class ToolsHashWithRequest : IEquatable<ToolsHashWithRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ToolsHashWithRequest" /> class.
         /// </summary>
-        /// <param name="algorithm">Algorithm to use (POST body parameter). Valid values are: * sha2-224 * sha2-256 * sha2-384 * sha2-512 Defaults to \&quot;sha2-256\&quot;. (default to &quot;sha2-256&quot;).</param>
-        /// <param name="format">Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;hex\&quot;. (default to &quot;hex&quot;).</param>
-        /// <param name="input">The base64-encoded input data.</param>
-        public ToolsHashWithRequest(string algorithm = "sha2-256", string format = "hex", string input = default(string))
+
+        /// <param name="Algorithm">Algorithm to use (POST body parameter). Valid values are: * sha2-224 * sha2-256 * sha2-384 * sha2-512 Defaults to \&quot;sha2-256\&quot;. (default to &quot;sha2-256&quot;).</param>
+
+        /// <param name="Format">Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;hex\&quot;. (default to &quot;hex&quot;).</param>
+
+        /// <param name="Input">The base64-encoded input data.</param>
+
+
+        public ToolsHashWithRequest(string Algorithm = "sha2-256", string Format = "hex", string Input = default(string))
         {
-            // use default value if no "algorithm" provided
-            this.Algorithm = algorithm ?? "sha2-256";
-            // use default value if no "format" provided
-            this.Format = format ?? "hex";
-            this.Input = input;
+
+            // use default value if no "Algorithm" provided
+            this.Algorithm = Algorithm ?? "sha2-256";
+
+
+            // use default value if no "Format" provided
+            this.Format = Format ?? "hex";
+
+
+            this.Input = Input;
+
         }
 
         /// <summary>
@@ -47,21 +69,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>Algorithm to use (POST body parameter). Valid values are: * sha2-224 * sha2-256 * sha2-384 * sha2-512 Defaults to \&quot;sha2-256\&quot;.</value>
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
+
+
         public string Algorithm { get; set; }
+
 
         /// <summary>
         /// Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;hex\&quot;.
         /// </summary>
         /// <value>Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;hex\&quot;.</value>
         [DataMember(Name = "format", EmitDefaultValue = false)]
+
+
         public string Format { get; set; }
+
 
         /// <summary>
         /// The base64-encoded input data
         /// </summary>
         /// <value>The base64-encoded input data</value>
         [DataMember(Name = "input", EmitDefaultValue = false)]
+
+
         public string Input { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -113,17 +146,21 @@ namespace Vault.Model
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
+
                 ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
+
                 ) &&
                 (
                     this.Input == input.Input ||
                     (this.Input != null &&
                     this.Input.Equals(input.Input))
+
                 );
+
         }
 
         /// <summary>
@@ -135,21 +172,27 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Algorithm != null)
                 {
                     hashCode = (hashCode * 59) + this.Algorithm.GetHashCode();
                 }
+
                 if (this.Format != null)
                 {
                     hashCode = (hashCode * 59) + this.Format.GetHashCode();
                 }
+
                 if (this.Input != null)
                 {
                     hashCode = (hashCode * 59) + this.Input.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -158,6 +201,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

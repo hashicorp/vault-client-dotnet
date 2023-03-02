@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,19 +26,38 @@ namespace Vault.Model
     /// OIDCWriteProviderRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteProviderRequest")]
+
     public partial class OIDCWriteProviderRequest : IEquatable<OIDCWriteProviderRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCWriteProviderRequest" /> class.
         /// </summary>
-        /// <param name="allowedClientIds">The client IDs that are permitted to use the provider.</param>
-        /// <param name="issuer">Specifies what will be used for the iss claim of ID tokens..</param>
-        /// <param name="scopesSupported">The scopes supported for requesting on the provider.</param>
-        public OIDCWriteProviderRequest(List<string> allowedClientIds = default(List<string>), string issuer = default(string), List<string> scopesSupported = default(List<string>))
+
+        /// <param name="AllowedClientIds">The client IDs that are permitted to use the provider.</param>
+
+        /// <param name="Issuer">Specifies what will be used for the iss claim of ID tokens..</param>
+
+        /// <param name="ScopesSupported">The scopes supported for requesting on the provider.</param>
+
+
+        public OIDCWriteProviderRequest(List<string> AllowedClientIds = default(List<string>), string Issuer = default(string), List<string> ScopesSupported = default(List<string>))
         {
-            this.AllowedClientIds = allowedClientIds;
-            this.Issuer = issuer;
-            this.ScopesSupported = scopesSupported;
+
+            this.AllowedClientIds = AllowedClientIds;
+
+            this.Issuer = Issuer;
+
+            this.ScopesSupported = ScopesSupported;
+
         }
 
         /// <summary>
@@ -45,21 +65,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>The client IDs that are permitted to use the provider</value>
         [DataMember(Name = "allowed_client_ids", EmitDefaultValue = false)]
+
+
         public List<string> AllowedClientIds { get; set; }
+
 
         /// <summary>
         /// Specifies what will be used for the iss claim of ID tokens.
         /// </summary>
         /// <value>Specifies what will be used for the iss claim of ID tokens.</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
+
+
         public string Issuer { get; set; }
+
 
         /// <summary>
         /// The scopes supported for requesting on the provider
         /// </summary>
         /// <value>The scopes supported for requesting on the provider</value>
         [DataMember(Name = "scopes_supported", EmitDefaultValue = false)]
+
+
         public List<string> ScopesSupported { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,6 +148,7 @@ namespace Vault.Model
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
+
                 ) &&
                 (
                     this.ScopesSupported == input.ScopesSupported ||
@@ -124,6 +156,7 @@ namespace Vault.Model
                     input.ScopesSupported != null &&
                     this.ScopesSupported.SequenceEqual(input.ScopesSupported)
                 );
+
         }
 
         /// <summary>
@@ -135,21 +168,27 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AllowedClientIds != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedClientIds.GetHashCode();
                 }
+
                 if (this.Issuer != null)
                 {
                     hashCode = (hashCode * 59) + this.Issuer.GetHashCode();
                 }
+
                 if (this.ScopesSupported != null)
                 {
                     hashCode = (hashCode * 59) + this.ScopesSupported.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -158,6 +197,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

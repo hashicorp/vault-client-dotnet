@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// OCIWriteConfigRequest
     /// </summary>
     [DataContract(Name = "OCIWriteConfigRequest")]
+
     public partial class OCIWriteConfigRequest : IEquatable<OCIWriteConfigRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OCIWriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="homeTenancyId">The tenancy id of the account..</param>
-        public OCIWriteConfigRequest(string homeTenancyId = default(string))
+
+        /// <param name="HomeTenancyId">The tenancy id of the account..</param>
+
+
+        public OCIWriteConfigRequest(string HomeTenancyId = default(string))
         {
-            this.HomeTenancyId = homeTenancyId;
+
+            this.HomeTenancyId = HomeTenancyId;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>The tenancy id of the account.</value>
         [DataMember(Name = "home_tenancy_id", EmitDefaultValue = false)]
+
+
         public string HomeTenancyId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.HomeTenancyId == input.HomeTenancyId ||
                     (this.HomeTenancyId != null &&
                     this.HomeTenancyId.Equals(input.HomeTenancyId))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.HomeTenancyId != null)
                 {
                     hashCode = (hashCode * 59) + this.HomeTenancyId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

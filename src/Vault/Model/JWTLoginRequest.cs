@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// JWTLoginRequest
     /// </summary>
     [DataContract(Name = "JWTLoginRequest")]
+
     public partial class JWTLoginRequest : IEquatable<JWTLoginRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JWTLoginRequest" /> class.
         /// </summary>
-        /// <param name="jwt">The signed JWT to validate..</param>
-        /// <param name="role">The role to log in against..</param>
-        public JWTLoginRequest(string jwt = default(string), string role = default(string))
+
+        /// <param name="Jwt">The signed JWT to validate..</param>
+
+        /// <param name="Role">The role to log in against..</param>
+
+
+        public JWTLoginRequest(string Jwt = default(string), string Role = default(string))
         {
-            this.Jwt = jwt;
-            this.Role = role;
+
+            this.Jwt = Jwt;
+
+            this.Role = Role;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>The signed JWT to validate.</value>
         [DataMember(Name = "jwt", EmitDefaultValue = false)]
+
+
         public string Jwt { get; set; }
+
 
         /// <summary>
         /// The role to log in against.
         /// </summary>
         /// <value>The role to log in against.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
+
+
         public string Role { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +125,15 @@ namespace Vault.Model
                     this.Jwt == input.Jwt ||
                     (this.Jwt != null &&
                     this.Jwt.Equals(input.Jwt))
+
                 ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
+
                 );
+
         }
 
         /// <summary>
@@ -118,17 +145,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Jwt != null)
                 {
                     hashCode = (hashCode * 59) + this.Jwt.GetHashCode();
                 }
+
                 if (this.Role != null)
                 {
                     hashCode = (hashCode * 59) + this.Role.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -137,6 +169,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

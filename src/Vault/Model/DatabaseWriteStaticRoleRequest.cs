@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,26 +26,58 @@ namespace Vault.Model
     /// DatabaseWriteStaticRoleRequest
     /// </summary>
     [DataContract(Name = "DatabaseWriteStaticRoleRequest")]
+
     public partial class DatabaseWriteStaticRoleRequest : IEquatable<DatabaseWriteStaticRoleRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DatabaseWriteStaticRoleRequest" /> class.
         /// </summary>
-        /// <param name="credentialConfig">The configuration for the given credential_type..</param>
-        /// <param name="credentialType">The type of credential to manage. Options include: &#39;password&#39;, &#39;rsa_private_key&#39;. Defaults to &#39;password&#39;. (default to &quot;password&quot;).</param>
-        /// <param name="dbName">Name of the database this role acts on..</param>
-        /// <param name="rotationPeriod">Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;..</param>
-        /// <param name="rotationStatements">Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#39;s API page for more information on support and formatting for this parameter..</param>
-        /// <param name="username">Name of the static user account for Vault to manage. Requires \&quot;rotation_period\&quot; to be specified.</param>
-        public DatabaseWriteStaticRoleRequest(Object credentialConfig = default(Object), string credentialType = "password", string dbName = default(string), int rotationPeriod = default(int), List<string> rotationStatements = default(List<string>), string username = default(string))
+
+        /// <param name="CredentialConfig">The configuration for the given credential_type..</param>
+
+        /// <param name="CredentialType">The type of credential to manage. Options include: &#x27;password&#x27;, &#x27;rsa_private_key&#x27;. Defaults to &#x27;password&#x27;. (default to &quot;password&quot;).</param>
+
+        /// <param name="DbName">Name of the database this role acts on..</param>
+
+        /// <param name="RotationPeriod">Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;..</param>
+
+        /// <param name="RotationStatements">Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter..</param>
+
+        /// <param name="Username">Name of the static user account for Vault to manage. Requires \&quot;rotation_period\&quot; to be specified.</param>
+
+
+        public DatabaseWriteStaticRoleRequest(Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), int RotationPeriod = default(int), List<string> RotationStatements = default(List<string>), string Username = default(string))
         {
-            this.CredentialConfig = credentialConfig;
-            // use default value if no "credentialType" provided
-            this.CredentialType = credentialType ?? "password";
-            this.DbName = dbName;
-            this.RotationPeriod = rotationPeriod;
-            this.RotationStatements = rotationStatements;
-            this.Username = username;
+
+            this.CredentialConfig = CredentialConfig;
+
+            // use default value if no "CredentialType" provided
+            this.CredentialType = CredentialType ?? "password";
+
+
+            this.DbName = DbName;
+
+            this.RotationPeriod = RotationPeriod;
+
+            this.RotationStatements = RotationStatements;
+
+            this.Username = Username;
+
         }
 
         /// <summary>
@@ -52,42 +85,62 @@ namespace Vault.Model
         /// </summary>
         /// <value>The configuration for the given credential_type.</value>
         [DataMember(Name = "credential_config", EmitDefaultValue = false)]
+
+
         public Object CredentialConfig { get; set; }
 
+
         /// <summary>
-        /// The type of credential to manage. Options include: &#39;password&#39;, &#39;rsa_private_key&#39;. Defaults to &#39;password&#39;.
+        /// The type of credential to manage. Options include: &#x27;password&#x27;, &#x27;rsa_private_key&#x27;. Defaults to &#x27;password&#x27;.
         /// </summary>
-        /// <value>The type of credential to manage. Options include: &#39;password&#39;, &#39;rsa_private_key&#39;. Defaults to &#39;password&#39;.</value>
+        /// <value>The type of credential to manage. Options include: &#x27;password&#x27;, &#x27;rsa_private_key&#x27;. Defaults to &#x27;password&#x27;.</value>
         [DataMember(Name = "credential_type", EmitDefaultValue = false)]
+
+
         public string CredentialType { get; set; }
+
 
         /// <summary>
         /// Name of the database this role acts on.
         /// </summary>
         /// <value>Name of the database this role acts on.</value>
         [DataMember(Name = "db_name", EmitDefaultValue = false)]
+
+
         public string DbName { get; set; }
+
 
         /// <summary>
         /// Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;.
         /// </summary>
         /// <value>Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
+
+
         public int RotationPeriod { get; set; }
 
+
         /// <summary>
-        /// Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#39;s API page for more information on support and formatting for this parameter.
+        /// Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter.
         /// </summary>
-        /// <value>Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#39;s API page for more information on support and formatting for this parameter.</value>
+        /// <value>Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter.</value>
         [DataMember(Name = "rotation_statements", EmitDefaultValue = false)]
+
+
         public List<string> RotationStatements { get; set; }
+
 
         /// <summary>
         /// Name of the static user account for Vault to manage. Requires \&quot;rotation_period\&quot; to be specified
         /// </summary>
         /// <value>Name of the static user account for Vault to manage. Requires \&quot;rotation_period\&quot; to be specified</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
+
+
         public string Username { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -142,19 +195,23 @@ namespace Vault.Model
                     this.CredentialConfig == input.CredentialConfig ||
                     (this.CredentialConfig != null &&
                     this.CredentialConfig.Equals(input.CredentialConfig))
+
                 ) &&
                 (
                     this.CredentialType == input.CredentialType ||
                     (this.CredentialType != null &&
                     this.CredentialType.Equals(input.CredentialType))
+
                 ) &&
                 (
                     this.DbName == input.DbName ||
                     (this.DbName != null &&
                     this.DbName.Equals(input.DbName))
+
                 ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
+
                     this.RotationPeriod.Equals(input.RotationPeriod)
                 ) &&
                 (
@@ -167,7 +224,9 @@ namespace Vault.Model
                     this.Username == input.Username ||
                     (this.Username != null &&
                     this.Username.Equals(input.Username))
+
                 );
+
         }
 
         /// <summary>
@@ -179,30 +238,39 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.CredentialConfig != null)
                 {
                     hashCode = (hashCode * 59) + this.CredentialConfig.GetHashCode();
                 }
+
                 if (this.CredentialType != null)
                 {
                     hashCode = (hashCode * 59) + this.CredentialType.GetHashCode();
                 }
+
                 if (this.DbName != null)
                 {
                     hashCode = (hashCode * 59) + this.DbName.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
                 if (this.RotationStatements != null)
                 {
                     hashCode = (hashCode * 59) + this.RotationStatements.GetHashCode();
                 }
+
                 if (this.Username != null)
                 {
                     hashCode = (hashCode * 59) + this.Username.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -211,6 +279,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

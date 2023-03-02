@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// AppRoleReadTokenNumUsesResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadTokenNumUsesResponse")]
+
     public partial class AppRoleReadTokenNumUsesResponse : IEquatable<AppRoleReadTokenNumUsesResponse>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleReadTokenNumUsesResponse" /> class.
         /// </summary>
-        /// <param name="tokenNumUses">The maximum number of times a token may be used, a value of zero means unlimited.</param>
-        public AppRoleReadTokenNumUsesResponse(int tokenNumUses = default(int))
+
+        /// <param name="TokenNumUses">The maximum number of times a token may be used, a value of zero means unlimited.</param>
+
+
+        public AppRoleReadTokenNumUsesResponse(int TokenNumUses = default(int))
         {
-            this.TokenNumUses = tokenNumUses;
+
+            this.TokenNumUses = TokenNumUses;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
+
+
         public int TokenNumUses { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +106,10 @@ namespace Vault.Model
             return
                 (
                     this.TokenNumUses == input.TokenNumUses ||
+
                     this.TokenNumUses.Equals(input.TokenNumUses)
                 );
+
         }
 
         /// <summary>
@@ -102,10 +121,14 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -114,6 +137,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// RenewForRequest
     /// </summary>
     [DataContract(Name = "RenewForRequest")]
+
     public partial class RenewForRequest : IEquatable<RenewForRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RenewForRequest" /> class.
         /// </summary>
-        /// <param name="increment">The desired increment in seconds to the lease.</param>
-        /// <param name="leaseId">The lease identifier to renew. This is included with a lease..</param>
-        public RenewForRequest(int increment = default(int), string leaseId = default(string))
+
+        /// <param name="Increment">The desired increment in seconds to the lease.</param>
+
+        /// <param name="LeaseId">The lease identifier to renew. This is included with a lease..</param>
+
+
+        public RenewForRequest(int Increment = default(int), string LeaseId = default(string))
         {
-            this.Increment = increment;
-            this.LeaseId = leaseId;
+
+            this.Increment = Increment;
+
+            this.LeaseId = LeaseId;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>The desired increment in seconds to the lease</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
+
+
         public int Increment { get; set; }
+
 
         /// <summary>
         /// The lease identifier to renew. This is included with a lease.
         /// </summary>
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
+
+
         public string LeaseId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,13 +123,16 @@ namespace Vault.Model
             return
                 (
                     this.Increment == input.Increment ||
+
                     this.Increment.Equals(input.Increment)
                 ) &&
                 (
                     this.LeaseId == input.LeaseId ||
                     (this.LeaseId != null &&
                     this.LeaseId.Equals(input.LeaseId))
+
                 );
+
         }
 
         /// <summary>
@@ -117,14 +144,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Increment.GetHashCode();
                 if (this.LeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.LeaseId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -133,6 +165,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,19 +26,38 @@ namespace Vault.Model
     /// GoogleCloudKMSVerifyRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudKMSVerifyRequest")]
+
     public partial class GoogleCloudKMSVerifyRequest : IEquatable<GoogleCloudKMSVerifyRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudKMSVerifyRequest" /> class.
         /// </summary>
-        /// <param name="digest">Digest to verify. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required..</param>
-        /// <param name="keyVersion">Integer version of the crypto key version to use for verification. This field is required..</param>
-        /// <param name="signature">Base64-encoded signature to use for verification. This field is required..</param>
-        public GoogleCloudKMSVerifyRequest(string digest = default(string), int keyVersion = default(int), string signature = default(string))
+
+        /// <param name="Digest">Digest to verify. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required..</param>
+
+        /// <param name="KeyVersion">Integer version of the crypto key version to use for verification. This field is required..</param>
+
+        /// <param name="Signature">Base64-encoded signature to use for verification. This field is required..</param>
+
+
+        public GoogleCloudKMSVerifyRequest(string Digest = default(string), int KeyVersion = default(int), string Signature = default(string))
         {
-            this.Digest = digest;
-            this.KeyVersion = keyVersion;
-            this.Signature = signature;
+
+            this.Digest = Digest;
+
+            this.KeyVersion = KeyVersion;
+
+            this.Signature = Signature;
+
         }
 
         /// <summary>
@@ -45,21 +65,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>Digest to verify. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required.</value>
         [DataMember(Name = "digest", EmitDefaultValue = false)]
+
+
         public string Digest { get; set; }
+
 
         /// <summary>
         /// Integer version of the crypto key version to use for verification. This field is required.
         /// </summary>
         /// <value>Integer version of the crypto key version to use for verification. This field is required.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
+
+
         public int KeyVersion { get; set; }
+
 
         /// <summary>
         /// Base64-encoded signature to use for verification. This field is required.
         /// </summary>
         /// <value>Base64-encoded signature to use for verification. This field is required.</value>
         [DataMember(Name = "signature", EmitDefaultValue = false)]
+
+
         public string Signature { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,16 +142,20 @@ namespace Vault.Model
                     this.Digest == input.Digest ||
                     (this.Digest != null &&
                     this.Digest.Equals(input.Digest))
+
                 ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
+
                     this.KeyVersion.Equals(input.KeyVersion)
                 ) &&
                 (
                     this.Signature == input.Signature ||
                     (this.Signature != null &&
                     this.Signature.Equals(input.Signature))
+
                 );
+
         }
 
         /// <summary>
@@ -132,18 +167,24 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Digest != null)
                 {
                     hashCode = (hashCode * 59) + this.Digest.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.KeyVersion.GetHashCode();
                 if (this.Signature != null)
                 {
                     hashCode = (hashCode * 59) + this.Signature.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -152,6 +193,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

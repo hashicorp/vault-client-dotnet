@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,34 +26,82 @@ namespace Vault.Model
     /// OCIWriteRoleRequest
     /// </summary>
     [DataContract(Name = "OCIWriteRoleRequest")]
+
     public partial class OCIWriteRoleRequest : IEquatable<OCIWriteRoleRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OCIWriteRoleRequest" /> class.
         /// </summary>
-        /// <param name="ocidList">A comma separated list of Group or Dynamic Group OCIDs that are allowed to take this role..</param>
-        /// <param name="tokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
-        /// <param name="tokenExplicitMaxTtl">If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed..</param>
-        /// <param name="tokenMaxTtl">The maximum lifetime of the generated token.</param>
-        /// <param name="tokenNoDefaultPolicy">If true, the &#39;default&#39; policy will not automatically be added to generated tokens.</param>
-        /// <param name="tokenNumUses">The maximum number of times a token may be used, a value of zero means unlimited.</param>
-        /// <param name="tokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
-        /// <param name="tokenPolicies">Comma-separated list of policies.</param>
-        /// <param name="tokenTtl">The initial ttl of the token to generate.</param>
-        /// <param name="tokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
-        public OCIWriteRoleRequest(List<string> ocidList = default(List<string>), List<string> tokenBoundCidrs = default(List<string>), int tokenExplicitMaxTtl = default(int), int tokenMaxTtl = default(int), bool tokenNoDefaultPolicy = default(bool), int tokenNumUses = default(int), int tokenPeriod = default(int), List<string> tokenPolicies = default(List<string>), int tokenTtl = default(int), string tokenType = "default-service")
+
+        /// <param name="OcidList">A comma separated list of Group or Dynamic Group OCIDs that are allowed to take this role..</param>
+
+        /// <param name="TokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
+
+        /// <param name="TokenExplicitMaxTtl">If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed..</param>
+
+        /// <param name="TokenMaxTtl">The maximum lifetime of the generated token.</param>
+
+        /// <param name="TokenNoDefaultPolicy">If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens.</param>
+
+        /// <param name="TokenNumUses">The maximum number of times a token may be used, a value of zero means unlimited.</param>
+
+        /// <param name="TokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
+
+        /// <param name="TokenPolicies">Comma-separated list of policies.</param>
+
+        /// <param name="TokenTtl">The initial ttl of the token to generate.</param>
+
+        /// <param name="TokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
+
+
+        public OCIWriteRoleRequest(List<string> OcidList = default(List<string>), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service")
         {
-            this.OcidList = ocidList;
-            this.TokenBoundCidrs = tokenBoundCidrs;
-            this.TokenExplicitMaxTtl = tokenExplicitMaxTtl;
-            this.TokenMaxTtl = tokenMaxTtl;
-            this.TokenNoDefaultPolicy = tokenNoDefaultPolicy;
-            this.TokenNumUses = tokenNumUses;
-            this.TokenPeriod = tokenPeriod;
-            this.TokenPolicies = tokenPolicies;
-            this.TokenTtl = tokenTtl;
-            // use default value if no "tokenType" provided
-            this.TokenType = tokenType ?? "default-service";
+
+            this.OcidList = OcidList;
+
+            this.TokenBoundCidrs = TokenBoundCidrs;
+
+            this.TokenExplicitMaxTtl = TokenExplicitMaxTtl;
+
+            this.TokenMaxTtl = TokenMaxTtl;
+
+            this.TokenNoDefaultPolicy = TokenNoDefaultPolicy;
+
+            this.TokenNumUses = TokenNumUses;
+
+            this.TokenPeriod = TokenPeriod;
+
+            this.TokenPolicies = TokenPolicies;
+
+            this.TokenTtl = TokenTtl;
+
+            // use default value if no "TokenType" provided
+            this.TokenType = TokenType ?? "default-service";
+
+
         }
 
         /// <summary>
@@ -60,70 +109,102 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma separated list of Group or Dynamic Group OCIDs that are allowed to take this role.</value>
         [DataMember(Name = "ocid_list", EmitDefaultValue = false)]
+
+
         public List<string> OcidList { get; set; }
+
 
         /// <summary>
         /// Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.
         /// </summary>
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
+
+
         public List<string> TokenBoundCidrs { get; set; }
+
 
         /// <summary>
         /// If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.
         /// </summary>
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
+
+
         public int TokenExplicitMaxTtl { get; set; }
+
 
         /// <summary>
         /// The maximum lifetime of the generated token
         /// </summary>
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
+
+
         public int TokenMaxTtl { get; set; }
 
+
         /// <summary>
-        /// If true, the &#39;default&#39; policy will not automatically be added to generated tokens
+        /// If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens
         /// </summary>
-        /// <value>If true, the &#39;default&#39; policy will not automatically be added to generated tokens</value>
+        /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
+
+
         public bool TokenNoDefaultPolicy { get; set; }
+
 
         /// <summary>
         /// The maximum number of times a token may be used, a value of zero means unlimited
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
+
+
         public int TokenNumUses { get; set; }
+
 
         /// <summary>
         /// If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
+
+
         public int TokenPeriod { get; set; }
+
 
         /// <summary>
         /// Comma-separated list of policies
         /// </summary>
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
+
+
         public List<string> TokenPolicies { get; set; }
+
 
         /// <summary>
         /// The initial ttl of the token to generate
         /// </summary>
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
+
+
         public int TokenTtl { get; set; }
+
 
         /// <summary>
         /// The type of token to generate, service or batch
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
+
+
         public string TokenType { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -192,22 +273,27 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
+
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
                 ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
+
                     this.TokenNumUses.Equals(input.TokenNumUses)
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+
                     this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
@@ -218,13 +304,16 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
+
                     this.TokenTtl.Equals(input.TokenTtl)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
+
                 );
+
         }
 
         /// <summary>
@@ -236,31 +325,44 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.OcidList != null)
                 {
                     hashCode = (hashCode * 59) + this.OcidList.GetHashCode();
                 }
+
                 if (this.TokenBoundCidrs != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -269,6 +371,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// AppRoleWriteRoleIDRequest
     /// </summary>
     [DataContract(Name = "AppRoleWriteRoleIDRequest")]
+
     public partial class AppRoleWriteRoleIDRequest : IEquatable<AppRoleWriteRoleIDRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWriteRoleIDRequest" /> class.
         /// </summary>
-        /// <param name="roleId">Identifier of the role. Defaults to a UUID..</param>
-        public AppRoleWriteRoleIDRequest(string roleId = default(string))
+
+        /// <param name="RoleId">Identifier of the role. Defaults to a UUID..</param>
+
+
+        public AppRoleWriteRoleIDRequest(string RoleId = default(string))
         {
-            this.RoleId = roleId;
+
+            this.RoleId = RoleId;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>Identifier of the role. Defaults to a UUID.</value>
         [DataMember(Name = "role_id", EmitDefaultValue = false)]
+
+
         public string RoleId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.RoleId == input.RoleId ||
                     (this.RoleId != null &&
                     this.RoleId.Equals(input.RoleId))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.RoleId != null)
                 {
                     hashCode = (hashCode * 59) + this.RoleId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

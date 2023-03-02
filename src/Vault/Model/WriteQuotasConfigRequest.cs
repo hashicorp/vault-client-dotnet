@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,19 +26,38 @@ namespace Vault.Model
     /// WriteQuotasConfigRequest
     /// </summary>
     [DataContract(Name = "WriteQuotasConfigRequest")]
+
     public partial class WriteQuotasConfigRequest : IEquatable<WriteQuotasConfigRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteQuotasConfigRequest" /> class.
         /// </summary>
-        /// <param name="enableRateLimitAuditLogging">If set, starts audit logging of requests that get rejected due to rate limit quota rule violations..</param>
-        /// <param name="enableRateLimitResponseHeaders">If set, additional rate limit quota HTTP headers will be added to responses..</param>
-        /// <param name="rateLimitExemptPaths">Specifies the list of exempt paths from all rate limit quotas. If empty no paths will be exempt..</param>
-        public WriteQuotasConfigRequest(bool enableRateLimitAuditLogging = default(bool), bool enableRateLimitResponseHeaders = default(bool), List<string> rateLimitExemptPaths = default(List<string>))
+
+        /// <param name="EnableRateLimitAuditLogging">If set, starts audit logging of requests that get rejected due to rate limit quota rule violations..</param>
+
+        /// <param name="EnableRateLimitResponseHeaders">If set, additional rate limit quota HTTP headers will be added to responses..</param>
+
+        /// <param name="RateLimitExemptPaths">Specifies the list of exempt paths from all rate limit quotas. If empty no paths will be exempt..</param>
+
+
+        public WriteQuotasConfigRequest(bool EnableRateLimitAuditLogging = default(bool), bool EnableRateLimitResponseHeaders = default(bool), List<string> RateLimitExemptPaths = default(List<string>))
         {
-            this.EnableRateLimitAuditLogging = enableRateLimitAuditLogging;
-            this.EnableRateLimitResponseHeaders = enableRateLimitResponseHeaders;
-            this.RateLimitExemptPaths = rateLimitExemptPaths;
+
+            this.EnableRateLimitAuditLogging = EnableRateLimitAuditLogging;
+
+            this.EnableRateLimitResponseHeaders = EnableRateLimitResponseHeaders;
+
+            this.RateLimitExemptPaths = RateLimitExemptPaths;
+
         }
 
         /// <summary>
@@ -45,21 +65,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, starts audit logging of requests that get rejected due to rate limit quota rule violations.</value>
         [DataMember(Name = "enable_rate_limit_audit_logging", EmitDefaultValue = true)]
+
+
         public bool EnableRateLimitAuditLogging { get; set; }
+
 
         /// <summary>
         /// If set, additional rate limit quota HTTP headers will be added to responses.
         /// </summary>
         /// <value>If set, additional rate limit quota HTTP headers will be added to responses.</value>
         [DataMember(Name = "enable_rate_limit_response_headers", EmitDefaultValue = true)]
+
+
         public bool EnableRateLimitResponseHeaders { get; set; }
+
 
         /// <summary>
         /// Specifies the list of exempt paths from all rate limit quotas. If empty no paths will be exempt.
         /// </summary>
         /// <value>Specifies the list of exempt paths from all rate limit quotas. If empty no paths will be exempt.</value>
         [DataMember(Name = "rate_limit_exempt_paths", EmitDefaultValue = false)]
+
+
         public List<string> RateLimitExemptPaths { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,10 +140,12 @@ namespace Vault.Model
             return
                 (
                     this.EnableRateLimitAuditLogging == input.EnableRateLimitAuditLogging ||
+
                     this.EnableRateLimitAuditLogging.Equals(input.EnableRateLimitAuditLogging)
                 ) &&
                 (
                     this.EnableRateLimitResponseHeaders == input.EnableRateLimitResponseHeaders ||
+
                     this.EnableRateLimitResponseHeaders.Equals(input.EnableRateLimitResponseHeaders)
                 ) &&
                 (
@@ -121,6 +154,7 @@ namespace Vault.Model
                     input.RateLimitExemptPaths != null &&
                     this.RateLimitExemptPaths.SequenceEqual(input.RateLimitExemptPaths)
                 );
+
         }
 
         /// <summary>
@@ -132,15 +166,21 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.EnableRateLimitAuditLogging.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.EnableRateLimitResponseHeaders.GetHashCode();
                 if (this.RateLimitExemptPaths != null)
                 {
                     hashCode = (hashCode * 59) + this.RateLimitExemptPaths.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -149,6 +189,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

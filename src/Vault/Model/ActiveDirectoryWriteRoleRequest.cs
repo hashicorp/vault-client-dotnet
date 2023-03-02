@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// ActiveDirectoryWriteRoleRequest
     /// </summary>
     [DataContract(Name = "ActiveDirectoryWriteRoleRequest")]
+
     public partial class ActiveDirectoryWriteRoleRequest : IEquatable<ActiveDirectoryWriteRoleRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActiveDirectoryWriteRoleRequest" /> class.
         /// </summary>
-        /// <param name="serviceAccountName">The username/logon name for the service account with which this role will be associated..</param>
-        /// <param name="ttl">In seconds, the default password time-to-live..</param>
-        public ActiveDirectoryWriteRoleRequest(string serviceAccountName = default(string), int ttl = default(int))
+
+        /// <param name="ServiceAccountName">The username/logon name for the service account with which this role will be associated..</param>
+
+        /// <param name="Ttl">In seconds, the default password time-to-live..</param>
+
+
+        public ActiveDirectoryWriteRoleRequest(string ServiceAccountName = default(string), int Ttl = default(int))
         {
-            this.ServiceAccountName = serviceAccountName;
-            this.Ttl = ttl;
+
+            this.ServiceAccountName = ServiceAccountName;
+
+            this.Ttl = Ttl;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>The username/logon name for the service account with which this role will be associated.</value>
         [DataMember(Name = "service_account_name", EmitDefaultValue = false)]
+
+
         public string ServiceAccountName { get; set; }
+
 
         /// <summary>
         /// In seconds, the default password time-to-live.
         /// </summary>
         /// <value>In seconds, the default password time-to-live.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
+
+
         public int Ttl { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +125,14 @@ namespace Vault.Model
                     this.ServiceAccountName == input.ServiceAccountName ||
                     (this.ServiceAccountName != null &&
                     this.ServiceAccountName.Equals(input.ServiceAccountName))
+
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+
                     this.Ttl.Equals(input.Ttl)
                 );
+
         }
 
         /// <summary>
@@ -117,14 +144,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ServiceAccountName != null)
                 {
                     hashCode = (hashCode * 59) + this.ServiceAccountName.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -133,6 +165,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

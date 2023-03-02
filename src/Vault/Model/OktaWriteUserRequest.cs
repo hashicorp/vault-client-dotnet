@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// OktaWriteUserRequest
     /// </summary>
     [DataContract(Name = "OktaWriteUserRequest")]
+
     public partial class OktaWriteUserRequest : IEquatable<OktaWriteUserRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OktaWriteUserRequest" /> class.
         /// </summary>
-        /// <param name="groups">List of groups associated with the user..</param>
-        /// <param name="policies">List of policies associated with the user..</param>
-        public OktaWriteUserRequest(List<string> groups = default(List<string>), List<string> policies = default(List<string>))
+
+        /// <param name="Groups">List of groups associated with the user..</param>
+
+        /// <param name="Policies">List of policies associated with the user..</param>
+
+
+        public OktaWriteUserRequest(List<string> Groups = default(List<string>), List<string> Policies = default(List<string>))
         {
-            this.Groups = groups;
-            this.Policies = policies;
+
+            this.Groups = Groups;
+
+            this.Policies = Policies;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of groups associated with the user.</value>
         [DataMember(Name = "groups", EmitDefaultValue = false)]
+
+
         public List<string> Groups { get; set; }
+
 
         /// <summary>
         /// List of policies associated with the user.
         /// </summary>
         /// <value>List of policies associated with the user.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
+
+
         public List<string> Policies { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,6 +133,7 @@ namespace Vault.Model
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
                 );
+
         }
 
         /// <summary>
@@ -120,17 +145,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Groups != null)
                 {
                     hashCode = (hashCode * 59) + this.Groups.GetHashCode();
                 }
+
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -139,6 +169,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

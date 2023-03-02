@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,22 +26,38 @@ namespace Vault.Model
     /// WrappingUnwrapRequest
     /// </summary>
     [DataContract(Name = "WrappingUnwrapRequest")]
+
     public partial class WrappingUnwrapRequest : IEquatable<WrappingUnwrapRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WrappingUnwrapRequest" /> class.
         /// </summary>
-        /// <param name="token">token.</param>
-        public WrappingUnwrapRequest(string token = default(string))
+
+        /// <param name="Token">Token.</param>
+
+
+        public WrappingUnwrapRequest(string Token = default(string))
         {
-            this.Token = token;
+
+            this.Token = Token;
+
         }
 
         /// <summary>
         /// Gets or Sets Token
         /// </summary>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,7 +107,9 @@ namespace Vault.Model
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -102,13 +121,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -117,6 +140,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

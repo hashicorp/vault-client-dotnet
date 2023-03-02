@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,25 +26,56 @@ namespace Vault.Model
     /// NomadWriteAccessConfigRequest
     /// </summary>
     [DataContract(Name = "NomadWriteAccessConfigRequest")]
+
     public partial class NomadWriteAccessConfigRequest : IEquatable<NomadWriteAccessConfigRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NomadWriteAccessConfigRequest" /> class.
         /// </summary>
-        /// <param name="address">Nomad server address.</param>
-        /// <param name="caCert">CA certificate to use when verifying Nomad server certificate, must be x509 PEM encoded..</param>
-        /// <param name="clientCert">Client certificate used for Nomad&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key..</param>
-        /// <param name="clientKey">Client key used for Nomad&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert..</param>
-        /// <param name="maxTokenNameLength">Max length for name of generated Nomad tokens.</param>
-        /// <param name="token">Token for API calls.</param>
-        public NomadWriteAccessConfigRequest(string address = default(string), string caCert = default(string), string clientCert = default(string), string clientKey = default(string), int maxTokenNameLength = default(int), string token = default(string))
+
+        /// <param name="Address">Nomad server address.</param>
+
+        /// <param name="CaCert">CA certificate to use when verifying Nomad server certificate, must be x509 PEM encoded..</param>
+
+        /// <param name="ClientCert">Client certificate used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key..</param>
+
+        /// <param name="ClientKey">Client key used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert..</param>
+
+        /// <param name="MaxTokenNameLength">Max length for name of generated Nomad tokens.</param>
+
+        /// <param name="Token">Token for API calls.</param>
+
+
+        public NomadWriteAccessConfigRequest(string Address = default(string), string CaCert = default(string), string ClientCert = default(string), string ClientKey = default(string), int MaxTokenNameLength = default(int), string Token = default(string))
         {
-            this.Address = address;
-            this.CaCert = caCert;
-            this.ClientCert = clientCert;
-            this.ClientKey = clientKey;
-            this.MaxTokenNameLength = maxTokenNameLength;
-            this.Token = token;
+
+            this.Address = Address;
+
+            this.CaCert = CaCert;
+
+            this.ClientCert = ClientCert;
+
+            this.ClientKey = ClientKey;
+
+            this.MaxTokenNameLength = MaxTokenNameLength;
+
+            this.Token = Token;
+
         }
 
         /// <summary>
@@ -51,42 +83,62 @@ namespace Vault.Model
         /// </summary>
         /// <value>Nomad server address</value>
         [DataMember(Name = "address", EmitDefaultValue = false)]
+
+
         public string Address { get; set; }
+
 
         /// <summary>
         /// CA certificate to use when verifying Nomad server certificate, must be x509 PEM encoded.
         /// </summary>
         /// <value>CA certificate to use when verifying Nomad server certificate, must be x509 PEM encoded.</value>
         [DataMember(Name = "ca_cert", EmitDefaultValue = false)]
+
+
         public string CaCert { get; set; }
 
-        /// <summary>
-        /// Client certificate used for Nomad&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
-        /// </summary>
-        /// <value>Client certificate used for Nomad&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.</value>
-        [DataMember(Name = "client_cert", EmitDefaultValue = false)]
-        public string ClientCert { get; set; }
 
         /// <summary>
-        /// Client key used for Nomad&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+        /// Client certificate used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
         /// </summary>
-        /// <value>Client key used for Nomad&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.</value>
+        /// <value>Client certificate used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.</value>
+        [DataMember(Name = "client_cert", EmitDefaultValue = false)]
+
+
+        public string ClientCert { get; set; }
+
+
+        /// <summary>
+        /// Client key used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+        /// </summary>
+        /// <value>Client key used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.</value>
         [DataMember(Name = "client_key", EmitDefaultValue = false)]
+
+
         public string ClientKey { get; set; }
+
 
         /// <summary>
         /// Max length for name of generated Nomad tokens
         /// </summary>
         /// <value>Max length for name of generated Nomad tokens</value>
         [DataMember(Name = "max_token_name_length", EmitDefaultValue = false)]
+
+
         public int MaxTokenNameLength { get; set; }
+
 
         /// <summary>
         /// Token for API calls
         /// </summary>
         /// <value>Token for API calls</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -141,31 +193,38 @@ namespace Vault.Model
                     this.Address == input.Address ||
                     (this.Address != null &&
                     this.Address.Equals(input.Address))
+
                 ) &&
                 (
                     this.CaCert == input.CaCert ||
                     (this.CaCert != null &&
                     this.CaCert.Equals(input.CaCert))
+
                 ) &&
                 (
                     this.ClientCert == input.ClientCert ||
                     (this.ClientCert != null &&
                     this.ClientCert.Equals(input.ClientCert))
+
                 ) &&
                 (
                     this.ClientKey == input.ClientKey ||
                     (this.ClientKey != null &&
                     this.ClientKey.Equals(input.ClientKey))
+
                 ) &&
                 (
                     this.MaxTokenNameLength == input.MaxTokenNameLength ||
+
                     this.MaxTokenNameLength.Equals(input.MaxTokenNameLength)
                 ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -177,30 +236,39 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Address != null)
                 {
                     hashCode = (hashCode * 59) + this.Address.GetHashCode();
                 }
+
                 if (this.CaCert != null)
                 {
                     hashCode = (hashCode * 59) + this.CaCert.GetHashCode();
                 }
+
                 if (this.ClientCert != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientCert.GetHashCode();
                 }
+
                 if (this.ClientKey != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientKey.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.MaxTokenNameLength.GetHashCode();
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -209,6 +277,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

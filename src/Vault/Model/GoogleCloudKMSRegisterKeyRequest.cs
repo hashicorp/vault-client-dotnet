@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// GoogleCloudKMSRegisterKeyRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudKMSRegisterKeyRequest")]
+
     public partial class GoogleCloudKMSRegisterKeyRequest : IEquatable<GoogleCloudKMSRegisterKeyRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudKMSRegisterKeyRequest" /> class.
         /// </summary>
-        /// <param name="cryptoKey">Full resource ID of the crypto key including the project, location, key ring, and crypto key like \&quot;projects/%s/locations/%s/keyRings/%s/cryptoKeys/%s\&quot;. This crypto key must already exist in Google Cloud KMS unless verify is set to \&quot;false\&quot;..</param>
-        /// <param name="verify">Verify that the given Google Cloud KMS crypto key exists and is accessible before creating the storage entry in Vault. Set this to \&quot;false\&quot; if the key will not exist at creation time. (default to true).</param>
-        public GoogleCloudKMSRegisterKeyRequest(string cryptoKey = default(string), bool verify = true)
+
+        /// <param name="CryptoKey">Full resource ID of the crypto key including the project, location, key ring, and crypto key like \&quot;projects/%s/locations/%s/keyRings/%s/cryptoKeys/%s\&quot;. This crypto key must already exist in Google Cloud KMS unless verify is set to \&quot;false\&quot;..</param>
+
+        /// <param name="Verify">Verify that the given Google Cloud KMS crypto key exists and is accessible before creating the storage entry in Vault. Set this to \&quot;false\&quot; if the key will not exist at creation time. (default to true).</param>
+
+
+        public GoogleCloudKMSRegisterKeyRequest(string CryptoKey = default(string), bool Verify = true)
         {
-            this.CryptoKey = cryptoKey;
-            this.Verify = verify;
+
+            this.CryptoKey = CryptoKey;
+
+            this.Verify = Verify;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>Full resource ID of the crypto key including the project, location, key ring, and crypto key like \&quot;projects/%s/locations/%s/keyRings/%s/cryptoKeys/%s\&quot;. This crypto key must already exist in Google Cloud KMS unless verify is set to \&quot;false\&quot;.</value>
         [DataMember(Name = "crypto_key", EmitDefaultValue = false)]
+
+
         public string CryptoKey { get; set; }
+
 
         /// <summary>
         /// Verify that the given Google Cloud KMS crypto key exists and is accessible before creating the storage entry in Vault. Set this to \&quot;false\&quot; if the key will not exist at creation time.
         /// </summary>
         /// <value>Verify that the given Google Cloud KMS crypto key exists and is accessible before creating the storage entry in Vault. Set this to \&quot;false\&quot; if the key will not exist at creation time.</value>
         [DataMember(Name = "verify", EmitDefaultValue = true)]
+
+
         public bool Verify { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +125,14 @@ namespace Vault.Model
                     this.CryptoKey == input.CryptoKey ||
                     (this.CryptoKey != null &&
                     this.CryptoKey.Equals(input.CryptoKey))
+
                 ) &&
                 (
                     this.Verify == input.Verify ||
+
                     this.Verify.Equals(input.Verify)
                 );
+
         }
 
         /// <summary>
@@ -117,14 +144,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.CryptoKey != null)
                 {
                     hashCode = (hashCode * 59) + this.CryptoKey.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Verify.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -133,6 +165,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

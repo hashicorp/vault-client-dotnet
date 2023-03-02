@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,19 +26,38 @@ namespace Vault.Model
     /// WriteCapabilitiesAccessorRequest
     /// </summary>
     [DataContract(Name = "WriteCapabilitiesAccessorRequest")]
+
     public partial class WriteCapabilitiesAccessorRequest : IEquatable<WriteCapabilitiesAccessorRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteCapabilitiesAccessorRequest" /> class.
         /// </summary>
-        /// <param name="accessor">Accessor of the token for which capabilities are being queried..</param>
-        /// <param name="path">Use &#39;paths&#39; instead..</param>
-        /// <param name="paths">Paths on which capabilities are being queried..</param>
-        public WriteCapabilitiesAccessorRequest(string accessor = default(string), List<string> path = default(List<string>), List<string> paths = default(List<string>))
+
+        /// <param name="Accessor">Accessor of the token for which capabilities are being queried..</param>
+
+        /// <param name="Path">Use &#x27;paths&#x27; instead..</param>
+
+        /// <param name="Paths">Paths on which capabilities are being queried..</param>
+
+
+        public WriteCapabilitiesAccessorRequest(string Accessor = default(string), List<string> Path = default(List<string>), List<string> Paths = default(List<string>))
         {
-            this.Accessor = accessor;
-            this.Path = path;
-            this.Paths = paths;
+
+            this.Accessor = Accessor;
+
+            this.Path = Path;
+
+            this.Paths = Paths;
+
         }
 
         /// <summary>
@@ -45,22 +65,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>Accessor of the token for which capabilities are being queried.</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
+
+
         public string Accessor { get; set; }
 
+
         /// <summary>
-        /// Use &#39;paths&#39; instead.
+        /// Use &#x27;paths&#x27; instead.
         /// </summary>
-        /// <value>Use &#39;paths&#39; instead.</value>
+        /// <value>Use &#x27;paths&#x27; instead.</value>
         [DataMember(Name = "path", EmitDefaultValue = false)]
+
         [Obsolete]
         public List<string> Path { get; set; }
+
 
         /// <summary>
         /// Paths on which capabilities are being queried.
         /// </summary>
         /// <value>Paths on which capabilities are being queried.</value>
         [DataMember(Name = "paths", EmitDefaultValue = false)]
+
+
         public List<string> Paths { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -112,6 +142,7 @@ namespace Vault.Model
                     this.Accessor == input.Accessor ||
                     (this.Accessor != null &&
                     this.Accessor.Equals(input.Accessor))
+
                 ) &&
                 (
                     this.Path == input.Path ||
@@ -125,6 +156,7 @@ namespace Vault.Model
                     input.Paths != null &&
                     this.Paths.SequenceEqual(input.Paths)
                 );
+
         }
 
         /// <summary>
@@ -136,21 +168,27 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Accessor != null)
                 {
                     hashCode = (hashCode * 59) + this.Accessor.GetHashCode();
                 }
+
                 if (this.Path != null)
                 {
                     hashCode = (hashCode * 59) + this.Path.GetHashCode();
                 }
+
                 if (this.Paths != null)
                 {
                     hashCode = (hashCode * 59) + this.Paths.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -159,6 +197,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

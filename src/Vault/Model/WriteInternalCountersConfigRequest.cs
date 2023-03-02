@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,20 +26,40 @@ namespace Vault.Model
     /// WriteInternalCountersConfigRequest
     /// </summary>
     [DataContract(Name = "WriteInternalCountersConfigRequest")]
+
     public partial class WriteInternalCountersConfigRequest : IEquatable<WriteInternalCountersConfigRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteInternalCountersConfigRequest" /> class.
         /// </summary>
-        /// <param name="defaultReportMonths">Number of months to report if no start date specified. (default to 12).</param>
-        /// <param name="enabled">Enable or disable collection of client count: enable, disable, or default. (default to &quot;default&quot;).</param>
-        /// <param name="retentionMonths">Number of months of client data to retain. Setting to 0 will clear all existing data. (default to 24).</param>
-        public WriteInternalCountersConfigRequest(int defaultReportMonths = 12, string enabled = "default", int retentionMonths = 24)
+
+        /// <param name="DefaultReportMonths">Number of months to report if no start date specified. (default to 12).</param>
+
+        /// <param name="Enabled">Enable or disable collection of client count: enable, disable, or default. (default to &quot;default&quot;).</param>
+
+        /// <param name="RetentionMonths">Number of months of client data to retain. Setting to 0 will clear all existing data. (default to 24).</param>
+
+
+        public WriteInternalCountersConfigRequest(int DefaultReportMonths = 12, string Enabled = "default", int RetentionMonths = 24)
         {
-            this.DefaultReportMonths = defaultReportMonths;
-            // use default value if no "enabled" provided
-            this.Enabled = enabled ?? "default";
-            this.RetentionMonths = retentionMonths;
+
+            this.DefaultReportMonths = DefaultReportMonths;
+
+            // use default value if no "Enabled" provided
+            this.Enabled = Enabled ?? "default";
+
+
+            this.RetentionMonths = RetentionMonths;
+
         }
 
         /// <summary>
@@ -46,21 +67,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>Number of months to report if no start date specified.</value>
         [DataMember(Name = "default_report_months", EmitDefaultValue = false)]
+
+
         public int DefaultReportMonths { get; set; }
+
 
         /// <summary>
         /// Enable or disable collection of client count: enable, disable, or default.
         /// </summary>
         /// <value>Enable or disable collection of client count: enable, disable, or default.</value>
         [DataMember(Name = "enabled", EmitDefaultValue = false)]
+
+
         public string Enabled { get; set; }
+
 
         /// <summary>
         /// Number of months of client data to retain. Setting to 0 will clear all existing data.
         /// </summary>
         /// <value>Number of months of client data to retain. Setting to 0 will clear all existing data.</value>
         [DataMember(Name = "retention_months", EmitDefaultValue = false)]
+
+
         public int RetentionMonths { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -110,17 +142,21 @@ namespace Vault.Model
             return
                 (
                     this.DefaultReportMonths == input.DefaultReportMonths ||
+
                     this.DefaultReportMonths.Equals(input.DefaultReportMonths)
                 ) &&
                 (
                     this.Enabled == input.Enabled ||
                     (this.Enabled != null &&
                     this.Enabled.Equals(input.Enabled))
+
                 ) &&
                 (
                     this.RetentionMonths == input.RetentionMonths ||
+
                     this.RetentionMonths.Equals(input.RetentionMonths)
                 );
+
         }
 
         /// <summary>
@@ -132,15 +168,21 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.DefaultReportMonths.GetHashCode();
                 if (this.Enabled != null)
                 {
                     hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.RetentionMonths.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -149,6 +191,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

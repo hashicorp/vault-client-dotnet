@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,23 +26,50 @@ namespace Vault.Model
     /// AzureWriteAuthConfigRequest
     /// </summary>
     [DataContract(Name = "AzureWriteAuthConfigRequest")]
+
     public partial class AzureWriteAuthConfigRequest : IEquatable<AzureWriteAuthConfigRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureWriteAuthConfigRequest" /> class.
         /// </summary>
-        /// <param name="clientId">The OAuth2 client id to connection to Azure. This value can also be provided with the AZURE_CLIENT_ID environment variable..</param>
-        /// <param name="clientSecret">The OAuth2 client secret to connection to Azure. This value can also be provided with the AZURE_CLIENT_SECRET environment variable..</param>
-        /// <param name="environment">The Azure environment name. If not provided, AzurePublicCloud is used. This value can also be provided with the AZURE_ENVIRONMENT environment variable..</param>
-        /// <param name="resource">The resource URL for the vault application in Azure Active Directory. This value can also be provided with the AZURE_AD_RESOURCE environment variable..</param>
-        /// <param name="tenantId">The tenant id for the Azure Active Directory. This is sometimes referred to as Directory ID in AD. This value can also be provided with the AZURE_TENANT_ID environment variable..</param>
-        public AzureWriteAuthConfigRequest(string clientId = default(string), string clientSecret = default(string), string environment = default(string), string resource = default(string), string tenantId = default(string))
+
+        /// <param name="ClientId">The OAuth2 client id to connection to Azure. This value can also be provided with the AZURE_CLIENT_ID environment variable..</param>
+
+        /// <param name="ClientSecret">The OAuth2 client secret to connection to Azure. This value can also be provided with the AZURE_CLIENT_SECRET environment variable..</param>
+
+        /// <param name="Environment">The Azure environment name. If not provided, AzurePublicCloud is used. This value can also be provided with the AZURE_ENVIRONMENT environment variable..</param>
+
+        /// <param name="Resource">The resource URL for the vault application in Azure Active Directory. This value can also be provided with the AZURE_AD_RESOURCE environment variable..</param>
+
+        /// <param name="TenantId">The tenant id for the Azure Active Directory. This is sometimes referred to as Directory ID in AD. This value can also be provided with the AZURE_TENANT_ID environment variable..</param>
+
+
+        public AzureWriteAuthConfigRequest(string ClientId = default(string), string ClientSecret = default(string), string Environment = default(string), string Resource = default(string), string TenantId = default(string))
         {
-            this.ClientId = clientId;
-            this.ClientSecret = clientSecret;
-            this.Environment = environment;
-            this.Resource = resource;
-            this.TenantId = tenantId;
+
+            this.ClientId = ClientId;
+
+            this.ClientSecret = ClientSecret;
+
+            this.Environment = Environment;
+
+            this.Resource = Resource;
+
+            this.TenantId = TenantId;
+
         }
 
         /// <summary>
@@ -49,35 +77,52 @@ namespace Vault.Model
         /// </summary>
         /// <value>The OAuth2 client id to connection to Azure. This value can also be provided with the AZURE_CLIENT_ID environment variable.</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
+
+
         public string ClientId { get; set; }
+
 
         /// <summary>
         /// The OAuth2 client secret to connection to Azure. This value can also be provided with the AZURE_CLIENT_SECRET environment variable.
         /// </summary>
         /// <value>The OAuth2 client secret to connection to Azure. This value can also be provided with the AZURE_CLIENT_SECRET environment variable.</value>
         [DataMember(Name = "client_secret", EmitDefaultValue = false)]
+
+
         public string ClientSecret { get; set; }
+
 
         /// <summary>
         /// The Azure environment name. If not provided, AzurePublicCloud is used. This value can also be provided with the AZURE_ENVIRONMENT environment variable.
         /// </summary>
         /// <value>The Azure environment name. If not provided, AzurePublicCloud is used. This value can also be provided with the AZURE_ENVIRONMENT environment variable.</value>
         [DataMember(Name = "environment", EmitDefaultValue = false)]
+
+
         public string Environment { get; set; }
+
 
         /// <summary>
         /// The resource URL for the vault application in Azure Active Directory. This value can also be provided with the AZURE_AD_RESOURCE environment variable.
         /// </summary>
         /// <value>The resource URL for the vault application in Azure Active Directory. This value can also be provided with the AZURE_AD_RESOURCE environment variable.</value>
         [DataMember(Name = "resource", EmitDefaultValue = false)]
+
+
         public string Resource { get; set; }
+
 
         /// <summary>
         /// The tenant id for the Azure Active Directory. This is sometimes referred to as Directory ID in AD. This value can also be provided with the AZURE_TENANT_ID environment variable.
         /// </summary>
         /// <value>The tenant id for the Azure Active Directory. This is sometimes referred to as Directory ID in AD. This value can also be provided with the AZURE_TENANT_ID environment variable.</value>
         [DataMember(Name = "tenant_id", EmitDefaultValue = false)]
+
+
         public string TenantId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -131,27 +176,33 @@ namespace Vault.Model
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
+
                 ) &&
                 (
                     this.ClientSecret == input.ClientSecret ||
                     (this.ClientSecret != null &&
                     this.ClientSecret.Equals(input.ClientSecret))
+
                 ) &&
                 (
                     this.Environment == input.Environment ||
                     (this.Environment != null &&
                     this.Environment.Equals(input.Environment))
+
                 ) &&
                 (
                     this.Resource == input.Resource ||
                     (this.Resource != null &&
                     this.Resource.Equals(input.Resource))
+
                 ) &&
                 (
                     this.TenantId == input.TenantId ||
                     (this.TenantId != null &&
                     this.TenantId.Equals(input.TenantId))
+
                 );
+
         }
 
         /// <summary>
@@ -163,29 +214,37 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ClientId != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientId.GetHashCode();
                 }
+
                 if (this.ClientSecret != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientSecret.GetHashCode();
                 }
+
                 if (this.Environment != null)
                 {
                     hashCode = (hashCode * 59) + this.Environment.GetHashCode();
                 }
+
                 if (this.Resource != null)
                 {
                     hashCode = (hashCode * 59) + this.Resource.GetHashCode();
                 }
+
                 if (this.TenantId != null)
                 {
                     hashCode = (hashCode * 59) + this.TenantId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -194,6 +253,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

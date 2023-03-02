@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,19 +26,38 @@ namespace Vault.Model
     /// LDAPWriteStaticRoleRequest
     /// </summary>
     [DataContract(Name = "LDAPWriteStaticRoleRequest")]
+
     public partial class LDAPWriteStaticRoleRequest : IEquatable<LDAPWriteStaticRoleRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LDAPWriteStaticRoleRequest" /> class.
         /// </summary>
-        /// <param name="dn">The distinguished name of the entry to manage..</param>
-        /// <param name="rotationPeriod">Period for automatic credential rotation of the given entry..</param>
-        /// <param name="username">The username/logon name for the entry with which this role will be associated..</param>
-        public LDAPWriteStaticRoleRequest(string dn = default(string), int rotationPeriod = default(int), string username = default(string))
+
+        /// <param name="Dn">The distinguished name of the entry to manage..</param>
+
+        /// <param name="RotationPeriod">Period for automatic credential rotation of the given entry..</param>
+
+        /// <param name="Username">The username/logon name for the entry with which this role will be associated..</param>
+
+
+        public LDAPWriteStaticRoleRequest(string Dn = default(string), int RotationPeriod = default(int), string Username = default(string))
         {
-            this.Dn = dn;
-            this.RotationPeriod = rotationPeriod;
-            this.Username = username;
+
+            this.Dn = Dn;
+
+            this.RotationPeriod = RotationPeriod;
+
+            this.Username = Username;
+
         }
 
         /// <summary>
@@ -45,21 +65,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>The distinguished name of the entry to manage.</value>
         [DataMember(Name = "dn", EmitDefaultValue = false)]
+
+
         public string Dn { get; set; }
+
 
         /// <summary>
         /// Period for automatic credential rotation of the given entry.
         /// </summary>
         /// <value>Period for automatic credential rotation of the given entry.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
+
+
         public int RotationPeriod { get; set; }
+
 
         /// <summary>
         /// The username/logon name for the entry with which this role will be associated.
         /// </summary>
         /// <value>The username/logon name for the entry with which this role will be associated.</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
+
+
         public string Username { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,16 +142,20 @@ namespace Vault.Model
                     this.Dn == input.Dn ||
                     (this.Dn != null &&
                     this.Dn.Equals(input.Dn))
+
                 ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
+
                     this.RotationPeriod.Equals(input.RotationPeriod)
                 ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&
                     this.Username.Equals(input.Username))
+
                 );
+
         }
 
         /// <summary>
@@ -132,18 +167,24 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Dn != null)
                 {
                     hashCode = (hashCode * 59) + this.Dn.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
                 if (this.Username != null)
                 {
                     hashCode = (hashCode * 59) + this.Username.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -152,6 +193,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

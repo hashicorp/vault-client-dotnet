@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,20 +26,40 @@ namespace Vault.Model
     /// TransitGenerateRandomSourceRequest
     /// </summary>
     [DataContract(Name = "TransitGenerateRandomSourceRequest")]
+
     public partial class TransitGenerateRandomSourceRequest : IEquatable<TransitGenerateRandomSourceRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitGenerateRandomSourceRequest" /> class.
         /// </summary>
-        /// <param name="bytes">The number of bytes to generate (POST body parameter). Defaults to 32 (256 bits). (default to 32).</param>
-        /// <param name="format">Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;. (default to &quot;base64&quot;).</param>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter).</param>
-        public TransitGenerateRandomSourceRequest(int bytes = 32, string format = "base64", string urlbytes = default(string))
+
+        /// <param name="Bytes">The number of bytes to generate (POST body parameter). Defaults to 32 (256 bits). (default to 32).</param>
+
+        /// <param name="Format">Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;. (default to &quot;base64&quot;).</param>
+
+        /// <param name="Urlbytes">The number of bytes to generate (POST URL parameter).</param>
+
+
+        public TransitGenerateRandomSourceRequest(int Bytes = 32, string Format = "base64", string Urlbytes = default(string))
         {
-            this.Bytes = bytes;
-            // use default value if no "format" provided
-            this.Format = format ?? "base64";
-            this.Urlbytes = urlbytes;
+
+            this.Bytes = Bytes;
+
+            // use default value if no "Format" provided
+            this.Format = Format ?? "base64";
+
+
+            this.Urlbytes = Urlbytes;
+
         }
 
         /// <summary>
@@ -46,21 +67,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of bytes to generate (POST body parameter). Defaults to 32 (256 bits).</value>
         [DataMember(Name = "bytes", EmitDefaultValue = false)]
+
+
         public int Bytes { get; set; }
+
 
         /// <summary>
         /// Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;.
         /// </summary>
         /// <value>Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;.</value>
         [DataMember(Name = "format", EmitDefaultValue = false)]
+
+
         public string Format { get; set; }
+
 
         /// <summary>
         /// The number of bytes to generate (POST URL parameter)
         /// </summary>
         /// <value>The number of bytes to generate (POST URL parameter)</value>
         [DataMember(Name = "urlbytes", EmitDefaultValue = false)]
+
+
         public string Urlbytes { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -110,18 +142,22 @@ namespace Vault.Model
             return
                 (
                     this.Bytes == input.Bytes ||
+
                     this.Bytes.Equals(input.Bytes)
                 ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
+
                 ) &&
                 (
                     this.Urlbytes == input.Urlbytes ||
                     (this.Urlbytes != null &&
                     this.Urlbytes.Equals(input.Urlbytes))
+
                 );
+
         }
 
         /// <summary>
@@ -133,18 +169,24 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Bytes.GetHashCode();
                 if (this.Format != null)
                 {
                     hashCode = (hashCode * 59) + this.Format.GetHashCode();
                 }
+
                 if (this.Urlbytes != null)
                 {
                     hashCode = (hashCode * 59) + this.Urlbytes.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -153,6 +195,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

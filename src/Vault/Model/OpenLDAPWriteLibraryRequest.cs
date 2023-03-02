@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,21 +26,44 @@ namespace Vault.Model
     /// OpenLDAPWriteLibraryRequest
     /// </summary>
     [DataContract(Name = "OpenLDAPWriteLibraryRequest")]
+
     public partial class OpenLDAPWriteLibraryRequest : IEquatable<OpenLDAPWriteLibraryRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenLDAPWriteLibraryRequest" /> class.
         /// </summary>
-        /// <param name="disableCheckInEnforcement">Disable the default behavior of requiring that check-ins are performed by the entity that checked them out. (default to false).</param>
-        /// <param name="maxTtl">In seconds, the max amount of time a check-out&#39;s renewals should last. Defaults to 24 hours. (default to 86400).</param>
-        /// <param name="serviceAccountNames">The username/logon name for the service accounts with which this set will be associated..</param>
-        /// <param name="ttl">In seconds, the amount of time a check-out should last. Defaults to 24 hours. (default to 86400).</param>
-        public OpenLDAPWriteLibraryRequest(bool disableCheckInEnforcement = false, int maxTtl = 86400, List<string> serviceAccountNames = default(List<string>), int ttl = 86400)
+
+        /// <param name="DisableCheckInEnforcement">Disable the default behavior of requiring that check-ins are performed by the entity that checked them out. (default to false).</param>
+
+        /// <param name="MaxTtl">In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours. (default to 86400).</param>
+
+        /// <param name="ServiceAccountNames">The username/logon name for the service accounts with which this set will be associated..</param>
+
+        /// <param name="Ttl">In seconds, the amount of time a check-out should last. Defaults to 24 hours. (default to 86400).</param>
+
+
+        public OpenLDAPWriteLibraryRequest(bool DisableCheckInEnforcement = false, int MaxTtl = 86400, List<string> ServiceAccountNames = default(List<string>), int Ttl = 86400)
         {
-            this.DisableCheckInEnforcement = disableCheckInEnforcement;
-            this.MaxTtl = maxTtl;
-            this.ServiceAccountNames = serviceAccountNames;
-            this.Ttl = ttl;
+
+            this.DisableCheckInEnforcement = DisableCheckInEnforcement;
+
+            this.MaxTtl = MaxTtl;
+
+            this.ServiceAccountNames = ServiceAccountNames;
+
+            this.Ttl = Ttl;
+
         }
 
         /// <summary>
@@ -47,28 +71,42 @@ namespace Vault.Model
         /// </summary>
         /// <value>Disable the default behavior of requiring that check-ins are performed by the entity that checked them out.</value>
         [DataMember(Name = "disable_check_in_enforcement", EmitDefaultValue = true)]
+
+
         public bool DisableCheckInEnforcement { get; set; }
 
+
         /// <summary>
-        /// In seconds, the max amount of time a check-out&#39;s renewals should last. Defaults to 24 hours.
+        /// In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours.
         /// </summary>
-        /// <value>In seconds, the max amount of time a check-out&#39;s renewals should last. Defaults to 24 hours.</value>
+        /// <value>In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
+
+
         public int MaxTtl { get; set; }
+
 
         /// <summary>
         /// The username/logon name for the service accounts with which this set will be associated.
         /// </summary>
         /// <value>The username/logon name for the service accounts with which this set will be associated.</value>
         [DataMember(Name = "service_account_names", EmitDefaultValue = false)]
+
+
         public List<string> ServiceAccountNames { get; set; }
+
 
         /// <summary>
         /// In seconds, the amount of time a check-out should last. Defaults to 24 hours.
         /// </summary>
         /// <value>In seconds, the amount of time a check-out should last. Defaults to 24 hours.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
+
+
         public int Ttl { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -119,10 +157,12 @@ namespace Vault.Model
             return
                 (
                     this.DisableCheckInEnforcement == input.DisableCheckInEnforcement ||
+
                     this.DisableCheckInEnforcement.Equals(input.DisableCheckInEnforcement)
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+
                     this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
@@ -133,8 +173,10 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+
                     this.Ttl.Equals(input.Ttl)
                 );
+
         }
 
         /// <summary>
@@ -146,16 +188,23 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.DisableCheckInEnforcement.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.ServiceAccountNames != null)
                 {
                     hashCode = (hashCode * 59) + this.ServiceAccountNames.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -164,6 +213,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,32 +26,55 @@ namespace Vault.Model
     /// AWSConfigWriteRoleTagDenyListRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteRoleTagDenyListRequest")]
+
     public partial class AWSConfigWriteRoleTagDenyListRequest : IEquatable<AWSConfigWriteRoleTagDenyListRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSConfigWriteRoleTagDenyListRequest" /> class.
         /// </summary>
-        /// <param name="disablePeriodicTidy">If set to &#39;true&#39;, disables the periodic tidying of deny listed entries. (default to false).</param>
-        /// <param name="safetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days). (default to 15552000).</param>
-        public AWSConfigWriteRoleTagDenyListRequest(bool disablePeriodicTidy = false, int safetyBuffer = 15552000)
+
+        /// <param name="DisablePeriodicTidy">If set to &#x27;true&#x27;, disables the periodic tidying of deny listed entries. (default to false).</param>
+
+        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days). (default to 15552000).</param>
+
+
+        public AWSConfigWriteRoleTagDenyListRequest(bool DisablePeriodicTidy = false, int SafetyBuffer = 15552000)
         {
-            this.DisablePeriodicTidy = disablePeriodicTidy;
-            this.SafetyBuffer = safetyBuffer;
+
+            this.DisablePeriodicTidy = DisablePeriodicTidy;
+
+            this.SafetyBuffer = SafetyBuffer;
+
         }
 
         /// <summary>
-        /// If set to &#39;true&#39;, disables the periodic tidying of deny listed entries.
+        /// If set to &#x27;true&#x27;, disables the periodic tidying of deny listed entries.
         /// </summary>
-        /// <value>If set to &#39;true&#39;, disables the periodic tidying of deny listed entries.</value>
+        /// <value>If set to &#x27;true&#x27;, disables the periodic tidying of deny listed entries.</value>
         [DataMember(Name = "disable_periodic_tidy", EmitDefaultValue = true)]
+
+
         public bool DisablePeriodicTidy { get; set; }
+
 
         /// <summary>
         /// The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days).
         /// </summary>
         /// <value>The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days).</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
+
+
         public int SafetyBuffer { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,12 +123,15 @@ namespace Vault.Model
             return
                 (
                     this.DisablePeriodicTidy == input.DisablePeriodicTidy ||
+
                     this.DisablePeriodicTidy.Equals(input.DisablePeriodicTidy)
                 ) &&
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
+
                     this.SafetyBuffer.Equals(input.SafetyBuffer)
                 );
+
         }
 
         /// <summary>
@@ -116,11 +143,16 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.DisablePeriodicTidy.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -129,6 +161,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

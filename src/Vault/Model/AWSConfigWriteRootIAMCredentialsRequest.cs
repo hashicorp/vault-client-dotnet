@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,27 +26,62 @@ namespace Vault.Model
     /// AWSConfigWriteRootIAMCredentialsRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteRootIAMCredentialsRequest")]
+
     public partial class AWSConfigWriteRootIAMCredentialsRequest : IEquatable<AWSConfigWriteRootIAMCredentialsRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSConfigWriteRootIAMCredentialsRequest" /> class.
         /// </summary>
-        /// <param name="accessKey">Access key with permission to create new keys..</param>
-        /// <param name="iamEndpoint">Endpoint to custom IAM server URL.</param>
-        /// <param name="maxRetries">Maximum number of retries for recoverable exceptions of AWS APIs (default to -1).</param>
-        /// <param name="region">Region for API calls..</param>
-        /// <param name="secretKey">Secret key with permission to create new keys..</param>
-        /// <param name="stsEndpoint">Endpoint to custom STS server URL.</param>
-        /// <param name="usernameTemplate">Template to generate custom IAM usernames.</param>
-        public AWSConfigWriteRootIAMCredentialsRequest(string accessKey = default(string), string iamEndpoint = default(string), int maxRetries = -1, string region = default(string), string secretKey = default(string), string stsEndpoint = default(string), string usernameTemplate = default(string))
+
+        /// <param name="AccessKey">Access key with permission to create new keys..</param>
+
+        /// <param name="IamEndpoint">Endpoint to custom IAM server URL.</param>
+
+        /// <param name="MaxRetries">Maximum number of retries for recoverable exceptions of AWS APIs (default to -1).</param>
+
+        /// <param name="Region">Region for API calls..</param>
+
+        /// <param name="SecretKey">Secret key with permission to create new keys..</param>
+
+        /// <param name="StsEndpoint">Endpoint to custom STS server URL.</param>
+
+        /// <param name="UsernameTemplate">Template to generate custom IAM usernames.</param>
+
+
+        public AWSConfigWriteRootIAMCredentialsRequest(string AccessKey = default(string), string IamEndpoint = default(string), int MaxRetries = -1, string Region = default(string), string SecretKey = default(string), string StsEndpoint = default(string), string UsernameTemplate = default(string))
         {
-            this.AccessKey = accessKey;
-            this.IamEndpoint = iamEndpoint;
-            this.MaxRetries = maxRetries;
-            this.Region = region;
-            this.SecretKey = secretKey;
-            this.StsEndpoint = stsEndpoint;
-            this.UsernameTemplate = usernameTemplate;
+
+            this.AccessKey = AccessKey;
+
+            this.IamEndpoint = IamEndpoint;
+
+            this.MaxRetries = MaxRetries;
+
+            this.Region = Region;
+
+            this.SecretKey = SecretKey;
+
+            this.StsEndpoint = StsEndpoint;
+
+            this.UsernameTemplate = UsernameTemplate;
+
         }
 
         /// <summary>
@@ -53,49 +89,72 @@ namespace Vault.Model
         /// </summary>
         /// <value>Access key with permission to create new keys.</value>
         [DataMember(Name = "access_key", EmitDefaultValue = false)]
+
+
         public string AccessKey { get; set; }
+
 
         /// <summary>
         /// Endpoint to custom IAM server URL
         /// </summary>
         /// <value>Endpoint to custom IAM server URL</value>
         [DataMember(Name = "iam_endpoint", EmitDefaultValue = false)]
+
+
         public string IamEndpoint { get; set; }
+
 
         /// <summary>
         /// Maximum number of retries for recoverable exceptions of AWS APIs
         /// </summary>
         /// <value>Maximum number of retries for recoverable exceptions of AWS APIs</value>
         [DataMember(Name = "max_retries", EmitDefaultValue = false)]
+
+
         public int MaxRetries { get; set; }
+
 
         /// <summary>
         /// Region for API calls.
         /// </summary>
         /// <value>Region for API calls.</value>
         [DataMember(Name = "region", EmitDefaultValue = false)]
+
+
         public string Region { get; set; }
+
 
         /// <summary>
         /// Secret key with permission to create new keys.
         /// </summary>
         /// <value>Secret key with permission to create new keys.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
+
+
         public string SecretKey { get; set; }
+
 
         /// <summary>
         /// Endpoint to custom STS server URL
         /// </summary>
         /// <value>Endpoint to custom STS server URL</value>
         [DataMember(Name = "sts_endpoint", EmitDefaultValue = false)]
+
+
         public string StsEndpoint { get; set; }
+
 
         /// <summary>
         /// Template to generate custom IAM usernames
         /// </summary>
         /// <value>Template to generate custom IAM usernames</value>
         [DataMember(Name = "username_template", EmitDefaultValue = false)]
+
+
         public string UsernameTemplate { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -151,36 +210,44 @@ namespace Vault.Model
                     this.AccessKey == input.AccessKey ||
                     (this.AccessKey != null &&
                     this.AccessKey.Equals(input.AccessKey))
+
                 ) &&
                 (
                     this.IamEndpoint == input.IamEndpoint ||
                     (this.IamEndpoint != null &&
                     this.IamEndpoint.Equals(input.IamEndpoint))
+
                 ) &&
                 (
                     this.MaxRetries == input.MaxRetries ||
+
                     this.MaxRetries.Equals(input.MaxRetries)
                 ) &&
                 (
                     this.Region == input.Region ||
                     (this.Region != null &&
                     this.Region.Equals(input.Region))
+
                 ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
                     this.SecretKey.Equals(input.SecretKey))
+
                 ) &&
                 (
                     this.StsEndpoint == input.StsEndpoint ||
                     (this.StsEndpoint != null &&
                     this.StsEndpoint.Equals(input.StsEndpoint))
+
                 ) &&
                 (
                     this.UsernameTemplate == input.UsernameTemplate ||
                     (this.UsernameTemplate != null &&
                     this.UsernameTemplate.Equals(input.UsernameTemplate))
+
                 );
+
         }
 
         /// <summary>
@@ -192,34 +259,44 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AccessKey != null)
                 {
                     hashCode = (hashCode * 59) + this.AccessKey.GetHashCode();
                 }
+
                 if (this.IamEndpoint != null)
                 {
                     hashCode = (hashCode * 59) + this.IamEndpoint.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.MaxRetries.GetHashCode();
                 if (this.Region != null)
                 {
                     hashCode = (hashCode * 59) + this.Region.GetHashCode();
                 }
+
                 if (this.SecretKey != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretKey.GetHashCode();
                 }
+
                 if (this.StsEndpoint != null)
                 {
                     hashCode = (hashCode * 59) + this.StsEndpoint.GetHashCode();
                 }
+
                 if (this.UsernameTemplate != null)
                 {
                     hashCode = (hashCode * 59) + this.UsernameTemplate.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -228,6 +305,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

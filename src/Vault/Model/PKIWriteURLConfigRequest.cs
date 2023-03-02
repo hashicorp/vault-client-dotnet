@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,21 +26,44 @@ namespace Vault.Model
     /// PKIWriteURLConfigRequest
     /// </summary>
     [DataContract(Name = "PKIWriteURLConfigRequest")]
+
     public partial class PKIWriteURLConfigRequest : IEquatable<PKIWriteURLConfigRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteURLConfigRequest" /> class.
         /// </summary>
-        /// <param name="crlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
-        /// <param name="enableTemplating">Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters. (default to false).</param>
-        /// <param name="issuingCertificates">Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1..</param>
-        /// <param name="ocspServers">Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1..</param>
-        public PKIWriteURLConfigRequest(List<string> crlDistributionPoints = default(List<string>), bool enableTemplating = false, List<string> issuingCertificates = default(List<string>), List<string> ocspServers = default(List<string>))
+
+        /// <param name="CrlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
+
+        /// <param name="EnableTemplating">Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#x27;{{issuer_id}}&#x27; and &#x27;{{cluster_path}}&#x27; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#x27;s path to be set on all PR Secondary clusters. (default to false).</param>
+
+        /// <param name="IssuingCertificates">Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1..</param>
+
+        /// <param name="OcspServers">Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1..</param>
+
+
+        public PKIWriteURLConfigRequest(List<string> CrlDistributionPoints = default(List<string>), bool EnableTemplating = false, List<string> IssuingCertificates = default(List<string>), List<string> OcspServers = default(List<string>))
         {
-            this.CrlDistributionPoints = crlDistributionPoints;
-            this.EnableTemplating = enableTemplating;
-            this.IssuingCertificates = issuingCertificates;
-            this.OcspServers = ocspServers;
+
+            this.CrlDistributionPoints = CrlDistributionPoints;
+
+            this.EnableTemplating = EnableTemplating;
+
+            this.IssuingCertificates = IssuingCertificates;
+
+            this.OcspServers = OcspServers;
+
         }
 
         /// <summary>
@@ -47,28 +71,42 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13.</value>
         [DataMember(Name = "crl_distribution_points", EmitDefaultValue = false)]
+
+
         public List<string> CrlDistributionPoints { get; set; }
 
+
         /// <summary>
-        /// Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters.
+        /// Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#x27;{{issuer_id}}&#x27; and &#x27;{{cluster_path}}&#x27; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#x27;s path to be set on all PR Secondary clusters.
         /// </summary>
-        /// <value>Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters.</value>
+        /// <value>Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#x27;{{issuer_id}}&#x27; and &#x27;{{cluster_path}}&#x27; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#x27;s path to be set on all PR Secondary clusters.</value>
         [DataMember(Name = "enable_templating", EmitDefaultValue = true)]
+
+
         public bool EnableTemplating { get; set; }
+
 
         /// <summary>
         /// Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1.
         /// </summary>
         /// <value>Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1.</value>
         [DataMember(Name = "issuing_certificates", EmitDefaultValue = false)]
+
+
         public List<string> IssuingCertificates { get; set; }
+
 
         /// <summary>
         /// Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1.
         /// </summary>
         /// <value>Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1.</value>
         [DataMember(Name = "ocsp_servers", EmitDefaultValue = false)]
+
+
         public List<string> OcspServers { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,6 +163,7 @@ namespace Vault.Model
                 ) &&
                 (
                     this.EnableTemplating == input.EnableTemplating ||
+
                     this.EnableTemplating.Equals(input.EnableTemplating)
                 ) &&
                 (
@@ -139,6 +178,7 @@ namespace Vault.Model
                     input.OcspServers != null &&
                     this.OcspServers.SequenceEqual(input.OcspServers)
                 );
+
         }
 
         /// <summary>
@@ -150,22 +190,29 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.CrlDistributionPoints != null)
                 {
                     hashCode = (hashCode * 59) + this.CrlDistributionPoints.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.EnableTemplating.GetHashCode();
                 if (this.IssuingCertificates != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuingCertificates.GetHashCode();
                 }
+
                 if (this.OcspServers != null)
                 {
                     hashCode = (hashCode * 59) + this.OcspServers.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -174,6 +221,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

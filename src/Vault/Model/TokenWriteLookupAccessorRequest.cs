@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// TokenWriteLookupAccessorRequest
     /// </summary>
     [DataContract(Name = "TokenWriteLookupAccessorRequest")]
+
     public partial class TokenWriteLookupAccessorRequest : IEquatable<TokenWriteLookupAccessorRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenWriteLookupAccessorRequest" /> class.
         /// </summary>
-        /// <param name="accessor">Accessor of the token to look up (request body).</param>
-        public TokenWriteLookupAccessorRequest(string accessor = default(string))
+
+        /// <param name="Accessor">Accessor of the token to look up (request body).</param>
+
+
+        public TokenWriteLookupAccessorRequest(string Accessor = default(string))
         {
-            this.Accessor = accessor;
+
+            this.Accessor = Accessor;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>Accessor of the token to look up (request body)</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
+
+
         public string Accessor { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.Accessor == input.Accessor ||
                     (this.Accessor != null &&
                     this.Accessor.Equals(input.Accessor))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Accessor != null)
                 {
                     hashCode = (hashCode * 59) + this.Accessor.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

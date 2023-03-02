@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,19 +26,38 @@ namespace Vault.Model
     /// JWTWriteOIDCAuthURLRequest
     /// </summary>
     [DataContract(Name = "JWTWriteOIDCAuthURLRequest")]
+
     public partial class JWTWriteOIDCAuthURLRequest : IEquatable<JWTWriteOIDCAuthURLRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="JWTWriteOIDCAuthURLRequest" /> class.
         /// </summary>
-        /// <param name="clientNonce">Optional client-provided nonce that must match during callback, if present..</param>
-        /// <param name="redirectUri">The OAuth redirect_uri to use in the authorization URL..</param>
-        /// <param name="role">The role to issue an OIDC authorization URL against..</param>
-        public JWTWriteOIDCAuthURLRequest(string clientNonce = default(string), string redirectUri = default(string), string role = default(string))
+
+        /// <param name="ClientNonce">Optional client-provided nonce that must match during callback, if present..</param>
+
+        /// <param name="RedirectUri">The OAuth redirect_uri to use in the authorization URL..</param>
+
+        /// <param name="Role">The role to issue an OIDC authorization URL against..</param>
+
+
+        public JWTWriteOIDCAuthURLRequest(string ClientNonce = default(string), string RedirectUri = default(string), string Role = default(string))
         {
-            this.ClientNonce = clientNonce;
-            this.RedirectUri = redirectUri;
-            this.Role = role;
+
+            this.ClientNonce = ClientNonce;
+
+            this.RedirectUri = RedirectUri;
+
+            this.Role = Role;
+
         }
 
         /// <summary>
@@ -45,21 +65,32 @@ namespace Vault.Model
         /// </summary>
         /// <value>Optional client-provided nonce that must match during callback, if present.</value>
         [DataMember(Name = "client_nonce", EmitDefaultValue = false)]
+
+
         public string ClientNonce { get; set; }
+
 
         /// <summary>
         /// The OAuth redirect_uri to use in the authorization URL.
         /// </summary>
         /// <value>The OAuth redirect_uri to use in the authorization URL.</value>
         [DataMember(Name = "redirect_uri", EmitDefaultValue = false)]
+
+
         public string RedirectUri { get; set; }
+
 
         /// <summary>
         /// The role to issue an OIDC authorization URL against.
         /// </summary>
         /// <value>The role to issue an OIDC authorization URL against.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
+
+
         public string Role { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,17 +142,21 @@ namespace Vault.Model
                     this.ClientNonce == input.ClientNonce ||
                     (this.ClientNonce != null &&
                     this.ClientNonce.Equals(input.ClientNonce))
+
                 ) &&
                 (
                     this.RedirectUri == input.RedirectUri ||
                     (this.RedirectUri != null &&
                     this.RedirectUri.Equals(input.RedirectUri))
+
                 ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
+
                 );
+
         }
 
         /// <summary>
@@ -133,21 +168,27 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.ClientNonce != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientNonce.GetHashCode();
                 }
+
                 if (this.RedirectUri != null)
                 {
                     hashCode = (hashCode * 59) + this.RedirectUri.GetHashCode();
                 }
+
                 if (this.Role != null)
                 {
                     hashCode = (hashCode * 59) + this.Role.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -156,6 +197,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// SSHVerifyRequest
     /// </summary>
     [DataContract(Name = "SSHVerifyRequest")]
+
     public partial class SSHVerifyRequest : IEquatable<SSHVerifyRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SSHVerifyRequest" /> class.
         /// </summary>
-        /// <param name="otp">[Required] One-Time-Key that needs to be validated.</param>
-        public SSHVerifyRequest(string otp = default(string))
+
+        /// <param name="Otp">[Required] One-Time-Key that needs to be validated.</param>
+
+
+        public SSHVerifyRequest(string Otp = default(string))
         {
-            this.Otp = otp;
+
+            this.Otp = Otp;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Required] One-Time-Key that needs to be validated</value>
         [DataMember(Name = "otp", EmitDefaultValue = false)]
+
+
         public string Otp { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.Otp == input.Otp ||
                     (this.Otp != null &&
                     this.Otp.Equals(input.Otp))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Otp != null)
                 {
                     hashCode = (hashCode * 59) + this.Otp.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

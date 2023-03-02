@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,17 +26,32 @@ namespace Vault.Model
     /// TokenRenewRequest
     /// </summary>
     [DataContract(Name = "TokenRenewRequest")]
+
     public partial class TokenRenewRequest : IEquatable<TokenRenewRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenRenewRequest" /> class.
         /// </summary>
-        /// <param name="increment">The desired increment in seconds to the token expiration (default to 0).</param>
-        /// <param name="token">Token to renew (request body).</param>
-        public TokenRenewRequest(int increment = 0, string token = default(string))
+
+        /// <param name="Increment">The desired increment in seconds to the token expiration (default to 0).</param>
+
+        /// <param name="Token">Token to renew (request body).</param>
+
+
+        public TokenRenewRequest(int Increment = 0, string Token = default(string))
         {
-            this.Increment = increment;
-            this.Token = token;
+
+            this.Increment = Increment;
+
+            this.Token = Token;
+
         }
 
         /// <summary>
@@ -43,14 +59,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>The desired increment in seconds to the token expiration</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
+
+
         public int Increment { get; set; }
+
 
         /// <summary>
         /// Token to renew (request body)
         /// </summary>
         /// <value>Token to renew (request body)</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,13 +123,16 @@ namespace Vault.Model
             return
                 (
                     this.Increment == input.Increment ||
+
                     this.Increment.Equals(input.Increment)
                 ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -117,14 +144,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Increment.GetHashCode();
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -133,6 +165,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

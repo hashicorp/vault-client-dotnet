@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,23 +26,39 @@ namespace Vault.Model
     /// AppRoleReadLocalSecretIDsResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadLocalSecretIDsResponse")]
+
     public partial class AppRoleReadLocalSecretIDsResponse : IEquatable<AppRoleReadLocalSecretIDsResponse>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleReadLocalSecretIDsResponse" /> class.
         /// </summary>
-        /// <param name="localSecretIds">If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#39;t be reset later.</param>
-        public AppRoleReadLocalSecretIDsResponse(bool localSecretIds = default(bool))
+
+        /// <param name="LocalSecretIds">If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#x27;t be reset later.</param>
+
+
+        public AppRoleReadLocalSecretIDsResponse(bool LocalSecretIds = default(bool))
         {
-            this.LocalSecretIds = localSecretIds;
+
+            this.LocalSecretIds = LocalSecretIds;
+
         }
 
         /// <summary>
-        /// If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#39;t be reset later
+        /// If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#x27;t be reset later
         /// </summary>
-        /// <value>If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#39;t be reset later</value>
+        /// <value>If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#x27;t be reset later</value>
         [DataMember(Name = "local_secret_ids", EmitDefaultValue = true)]
+
+
         public bool LocalSecretIds { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +106,10 @@ namespace Vault.Model
             return
                 (
                     this.LocalSecretIds == input.LocalSecretIds ||
+
                     this.LocalSecretIds.Equals(input.LocalSecretIds)
                 );
+
         }
 
         /// <summary>
@@ -102,10 +121,14 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.LocalSecretIds.GetHashCode();
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -114,6 +137,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

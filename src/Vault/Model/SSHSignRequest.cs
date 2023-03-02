@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,28 +26,64 @@ namespace Vault.Model
     /// SSHSignRequest
     /// </summary>
     [DataContract(Name = "SSHSignRequest")]
+
     public partial class SSHSignRequest : IEquatable<SSHSignRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SSHSignRequest" /> class.
         /// </summary>
-        /// <param name="certType">Type of certificate to be created; either \&quot;user\&quot; or \&quot;host\&quot;. (default to &quot;user&quot;).</param>
-        /// <param name="criticalOptions">Critical options that the certificate should be signed for..</param>
-        /// <param name="extensions">Extensions that the certificate should be signed for..</param>
-        /// <param name="keyId">Key id that the created certificate should have. If not specified, the display name of the token will be used..</param>
-        /// <param name="publicKey">SSH public key that should be signed..</param>
-        /// <param name="ttl">The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL..</param>
-        /// <param name="validPrincipals">Valid principals, either usernames or hostnames, that the certificate should be signed for..</param>
-        public SSHSignRequest(string certType = "user", Object criticalOptions = default(Object), Object extensions = default(Object), string keyId = default(string), string publicKey = default(string), int ttl = default(int), string validPrincipals = default(string))
+
+        /// <param name="CertType">Type of certificate to be created; either \&quot;user\&quot; or \&quot;host\&quot;. (default to &quot;user&quot;).</param>
+
+        /// <param name="CriticalOptions">Critical options that the certificate should be signed for..</param>
+
+        /// <param name="Extensions">Extensions that the certificate should be signed for..</param>
+
+        /// <param name="KeyId">Key id that the created certificate should have. If not specified, the display name of the token will be used..</param>
+
+        /// <param name="PublicKey">SSH public key that should be signed..</param>
+
+        /// <param name="Ttl">The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL..</param>
+
+        /// <param name="ValidPrincipals">Valid principals, either usernames or hostnames, that the certificate should be signed for..</param>
+
+
+        public SSHSignRequest(string CertType = "user", Object CriticalOptions = default(Object), Object Extensions = default(Object), string KeyId = default(string), string PublicKey = default(string), int Ttl = default(int), string ValidPrincipals = default(string))
         {
-            // use default value if no "certType" provided
-            this.CertType = certType ?? "user";
-            this.CriticalOptions = criticalOptions;
-            this.Extensions = extensions;
-            this.KeyId = keyId;
-            this.PublicKey = publicKey;
-            this.Ttl = ttl;
-            this.ValidPrincipals = validPrincipals;
+
+            // use default value if no "CertType" provided
+            this.CertType = CertType ?? "user";
+
+
+            this.CriticalOptions = CriticalOptions;
+
+            this.Extensions = Extensions;
+
+            this.KeyId = KeyId;
+
+            this.PublicKey = PublicKey;
+
+            this.Ttl = Ttl;
+
+            this.ValidPrincipals = ValidPrincipals;
+
         }
 
         /// <summary>
@@ -54,49 +91,72 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of certificate to be created; either \&quot;user\&quot; or \&quot;host\&quot;.</value>
         [DataMember(Name = "cert_type", EmitDefaultValue = false)]
+
+
         public string CertType { get; set; }
+
 
         /// <summary>
         /// Critical options that the certificate should be signed for.
         /// </summary>
         /// <value>Critical options that the certificate should be signed for.</value>
         [DataMember(Name = "critical_options", EmitDefaultValue = false)]
+
+
         public Object CriticalOptions { get; set; }
+
 
         /// <summary>
         /// Extensions that the certificate should be signed for.
         /// </summary>
         /// <value>Extensions that the certificate should be signed for.</value>
         [DataMember(Name = "extensions", EmitDefaultValue = false)]
+
+
         public Object Extensions { get; set; }
+
 
         /// <summary>
         /// Key id that the created certificate should have. If not specified, the display name of the token will be used.
         /// </summary>
         /// <value>Key id that the created certificate should have. If not specified, the display name of the token will be used.</value>
         [DataMember(Name = "key_id", EmitDefaultValue = false)]
+
+
         public string KeyId { get; set; }
+
 
         /// <summary>
         /// SSH public key that should be signed.
         /// </summary>
         /// <value>SSH public key that should be signed.</value>
         [DataMember(Name = "public_key", EmitDefaultValue = false)]
+
+
         public string PublicKey { get; set; }
+
 
         /// <summary>
         /// The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL.
         /// </summary>
         /// <value>The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
+
+
         public int Ttl { get; set; }
+
 
         /// <summary>
         /// Valid principals, either usernames or hostnames, that the certificate should be signed for.
         /// </summary>
         /// <value>Valid principals, either usernames or hostnames, that the certificate should be signed for.</value>
         [DataMember(Name = "valid_principals", EmitDefaultValue = false)]
+
+
         public string ValidPrincipals { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -152,36 +212,44 @@ namespace Vault.Model
                     this.CertType == input.CertType ||
                     (this.CertType != null &&
                     this.CertType.Equals(input.CertType))
+
                 ) &&
                 (
                     this.CriticalOptions == input.CriticalOptions ||
                     (this.CriticalOptions != null &&
                     this.CriticalOptions.Equals(input.CriticalOptions))
+
                 ) &&
                 (
                     this.Extensions == input.Extensions ||
                     (this.Extensions != null &&
                     this.Extensions.Equals(input.Extensions))
+
                 ) &&
                 (
                     this.KeyId == input.KeyId ||
                     (this.KeyId != null &&
                     this.KeyId.Equals(input.KeyId))
+
                 ) &&
                 (
                     this.PublicKey == input.PublicKey ||
                     (this.PublicKey != null &&
                     this.PublicKey.Equals(input.PublicKey))
+
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+
                     this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.ValidPrincipals == input.ValidPrincipals ||
                     (this.ValidPrincipals != null &&
                     this.ValidPrincipals.Equals(input.ValidPrincipals))
+
                 );
+
         }
 
         /// <summary>
@@ -193,34 +261,44 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.CertType != null)
                 {
                     hashCode = (hashCode * 59) + this.CertType.GetHashCode();
                 }
+
                 if (this.CriticalOptions != null)
                 {
                     hashCode = (hashCode * 59) + this.CriticalOptions.GetHashCode();
                 }
+
                 if (this.Extensions != null)
                 {
                     hashCode = (hashCode * 59) + this.Extensions.GetHashCode();
                 }
+
                 if (this.KeyId != null)
                 {
                     hashCode = (hashCode * 59) + this.KeyId.GetHashCode();
                 }
+
                 if (this.PublicKey != null)
                 {
                     hashCode = (hashCode * 59) + this.PublicKey.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.ValidPrincipals != null)
                 {
                     hashCode = (hashCode * 59) + this.ValidPrincipals.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -229,6 +307,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

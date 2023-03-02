@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,15 +26,26 @@ namespace Vault.Model
     /// PKIBundleWriteRequest
     /// </summary>
     [DataContract(Name = "PKIBundleWriteRequest")]
+
     public partial class PKIBundleWriteRequest : IEquatable<PKIBundleWriteRequest>, IValidatableObject
     {
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIBundleWriteRequest" /> class.
         /// </summary>
-        /// <param name="pemBundle">PEM-format, concatenated unencrypted secret-key (optional) and certificates..</param>
-        public PKIBundleWriteRequest(string pemBundle = default(string))
+
+        /// <param name="PemBundle">PEM-format, concatenated unencrypted secret-key (optional) and certificates..</param>
+
+
+        public PKIBundleWriteRequest(string PemBundle = default(string))
         {
-            this.PemBundle = pemBundle;
+
+            this.PemBundle = PemBundle;
+
         }
 
         /// <summary>
@@ -41,7 +53,12 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM-format, concatenated unencrypted secret-key (optional) and certificates.</value>
         [DataMember(Name = "pem_bundle", EmitDefaultValue = false)]
+
+
         public string PemBundle { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +108,9 @@ namespace Vault.Model
                     this.PemBundle == input.PemBundle ||
                     (this.PemBundle != null &&
                     this.PemBundle.Equals(input.PemBundle))
+
                 );
+
         }
 
         /// <summary>
@@ -103,13 +122,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.PemBundle != null)
                 {
                     hashCode = (hashCode * 59) + this.PemBundle.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -118,6 +141,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }

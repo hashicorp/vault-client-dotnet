@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -25,18 +26,34 @@ namespace Vault.Model
     /// AWSConfigWriteCertificateRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteCertificateRequest")]
+
     public partial class AWSConfigWriteCertificateRequest : IEquatable<AWSConfigWriteCertificateRequest>, IValidatableObject
     {
+
+
+
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSConfigWriteCertificateRequest" /> class.
         /// </summary>
-        /// <param name="awsPublicCert">Base64 encoded AWS Public cert required to verify PKCS7 signature of the EC2 instance metadata..</param>
-        /// <param name="type">Takes the value of either \&quot;pkcs7\&quot; or \&quot;identity\&quot;, indicating the type of document which can be verified using the given certificate. The reason is that the PKCS#7 document will have a DSA digest and the identity signature will have an RSA signature, and accordingly the public certificates to verify those also vary. Defaults to \&quot;pkcs7\&quot;. (default to &quot;pkcs7&quot;).</param>
-        public AWSConfigWriteCertificateRequest(string awsPublicCert = default(string), string type = "pkcs7")
+
+        /// <param name="AwsPublicCert">Base64 encoded AWS Public cert required to verify PKCS7 signature of the EC2 instance metadata..</param>
+
+        /// <param name="Type">Takes the value of either \&quot;pkcs7\&quot; or \&quot;identity\&quot;, indicating the type of document which can be verified using the given certificate. The reason is that the PKCS#7 document will have a DSA digest and the identity signature will have an RSA signature, and accordingly the public certificates to verify those also vary. Defaults to \&quot;pkcs7\&quot;. (default to &quot;pkcs7&quot;).</param>
+
+
+        public AWSConfigWriteCertificateRequest(string AwsPublicCert = default(string), string Type = "pkcs7")
         {
-            this.AwsPublicCert = awsPublicCert;
-            // use default value if no "type" provided
-            this.Type = type ?? "pkcs7";
+
+            this.AwsPublicCert = AwsPublicCert;
+
+            // use default value if no "Type" provided
+            this.Type = Type ?? "pkcs7";
+
+
         }
 
         /// <summary>
@@ -44,14 +61,22 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64 encoded AWS Public cert required to verify PKCS7 signature of the EC2 instance metadata.</value>
         [DataMember(Name = "aws_public_cert", EmitDefaultValue = false)]
+
+
         public string AwsPublicCert { get; set; }
+
 
         /// <summary>
         /// Takes the value of either \&quot;pkcs7\&quot; or \&quot;identity\&quot;, indicating the type of document which can be verified using the given certificate. The reason is that the PKCS#7 document will have a DSA digest and the identity signature will have an RSA signature, and accordingly the public certificates to verify those also vary. Defaults to \&quot;pkcs7\&quot;.
         /// </summary>
         /// <value>Takes the value of either \&quot;pkcs7\&quot; or \&quot;identity\&quot;, indicating the type of document which can be verified using the given certificate. The reason is that the PKCS#7 document will have a DSA digest and the identity signature will have an RSA signature, and accordingly the public certificates to verify those also vary. Defaults to \&quot;pkcs7\&quot;.</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
+
+
         public string Type { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -102,12 +127,15 @@ namespace Vault.Model
                     this.AwsPublicCert == input.AwsPublicCert ||
                     (this.AwsPublicCert != null &&
                     this.AwsPublicCert.Equals(input.AwsPublicCert))
+
                 ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+
                 );
+
         }
 
         /// <summary>
@@ -119,17 +147,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AwsPublicCert != null)
                 {
                     hashCode = (hashCode * 59) + this.AwsPublicCert.GetHashCode();
                 }
+
                 if (this.Type != null)
                 {
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
+
+
 
         /// <summary>
         /// To validate all properties of the instance
@@ -138,6 +171,8 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
+
+
             yield break;
         }
     }
