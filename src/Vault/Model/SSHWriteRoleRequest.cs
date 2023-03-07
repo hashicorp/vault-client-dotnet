@@ -40,6 +40,26 @@ namespace Vault.Model
         public enum AlgorithmSignerEnum
         {
 
+            /// <summary>
+            /// Enum Empty for value: 
+            /// </summary>
+            [EnumMember(Value = "")]
+            Empty = 0,
+            /// <summary>
+            /// Enum SshRsa for value: ssh-rsa
+            /// </summary>
+            [EnumMember(Value = "ssh-rsa")]
+            SshRsa = 1,
+            /// <summary>
+            /// Enum RsaSha2256 for value: rsa-sha2-256
+            /// </summary>
+            [EnumMember(Value = "rsa-sha2-256")]
+            RsaSha2256 = 2,
+            /// <summary>
+            /// Enum RsaSha2512 for value: rsa-sha2-512
+            /// </summary>
+            [EnumMember(Value = "rsa-sha2-512")]
+            RsaSha2512 = 3
         }
 
         /// <summary>
@@ -108,6 +128,21 @@ namespace Vault.Model
         public enum KeyTypeEnum
         {
 
+            /// <summary>
+            /// Enum Otp for value: otp
+            /// </summary>
+            [EnumMember(Value = "otp")]
+            Otp = 0,
+            /// <summary>
+            /// Enum Dynamic for value: dynamic
+            /// </summary>
+            [EnumMember(Value = "dynamic")]
+            Dynamic = 1,
+            /// <summary>
+            /// Enum Ca for value: ca
+            /// </summary>
+            [EnumMember(Value = "ca")]
+            Ca = 2
         }
 
         /// <summary>

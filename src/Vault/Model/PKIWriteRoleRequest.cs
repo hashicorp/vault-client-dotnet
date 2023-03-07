@@ -90,6 +90,26 @@ namespace Vault.Model
         public enum KeyTypeEnum
         {
 
+            /// <summary>
+            /// Enum Rsa for value: rsa
+            /// </summary>
+            [EnumMember(Value = "rsa")]
+            Rsa = 0,
+            /// <summary>
+            /// Enum Ec for value: ec
+            /// </summary>
+            [EnumMember(Value = "ec")]
+            Ec = 1,
+            /// <summary>
+            /// Enum Ed25519 for value: ed25519
+            /// </summary>
+            [EnumMember(Value = "ed25519")]
+            Ed25519 = 2,
+            /// <summary>
+            /// Enum Any for value: any
+            /// </summary>
+            [EnumMember(Value = "any")]
+            Any = 3
         }
 
         /// <summary>

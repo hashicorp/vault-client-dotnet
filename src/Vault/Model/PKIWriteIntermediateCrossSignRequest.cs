@@ -48,6 +48,21 @@ namespace Vault.Model
         public enum ExportedEnum
         {
 
+            /// <summary>
+            /// Enum Internal for value: internal
+            /// </summary>
+            [EnumMember(Value = "internal")]
+            Internal = 0,
+            /// <summary>
+            /// Enum External for value: external
+            /// </summary>
+            [EnumMember(Value = "external")]
+            External = 1,
+            /// <summary>
+            /// Enum Kms for value: kms
+            /// </summary>
+            [EnumMember(Value = "kms")]
+            Kms = 2
         }
 
         /// <summary>
@@ -68,6 +83,21 @@ namespace Vault.Model
         public enum FormatEnum
         {
 
+            /// <summary>
+            /// Enum Pem for value: pem
+            /// </summary>
+            [EnumMember(Value = "pem")]
+            Pem = 0,
+            /// <summary>
+            /// Enum Der for value: der
+            /// </summary>
+            [EnumMember(Value = "der")]
+            Der = 1,
+            /// <summary>
+            /// Enum PemBundle for value: pem_bundle
+            /// </summary>
+            [EnumMember(Value = "pem_bundle")]
+            PemBundle = 2
         }
 
         /// <summary>
@@ -96,6 +126,21 @@ namespace Vault.Model
         public enum KeyTypeEnum
         {
 
+            /// <summary>
+            /// Enum Rsa for value: rsa
+            /// </summary>
+            [EnumMember(Value = "rsa")]
+            Rsa = 0,
+            /// <summary>
+            /// Enum Ec for value: ec
+            /// </summary>
+            [EnumMember(Value = "ec")]
+            Ec = 1,
+            /// <summary>
+            /// Enum Ed25519 for value: ed25519
+            /// </summary>
+            [EnumMember(Value = "ed25519")]
+            Ed25519 = 2
         }
 
         /// <summary>
@@ -134,6 +179,26 @@ namespace Vault.Model
         public enum PrivateKeyFormatEnum
         {
 
+            /// <summary>
+            /// Enum Empty for value: 
+            /// </summary>
+            [EnumMember(Value = "")]
+            Empty = 0,
+            /// <summary>
+            /// Enum Der for value: der
+            /// </summary>
+            [EnumMember(Value = "der")]
+            Der = 1,
+            /// <summary>
+            /// Enum Pem for value: pem
+            /// </summary>
+            [EnumMember(Value = "pem")]
+            Pem = 2,
+            /// <summary>
+            /// Enum Pkcs8 for value: pkcs8
+            /// </summary>
+            [EnumMember(Value = "pkcs8")]
+            Pkcs8 = 3
         }
 
         /// <summary>

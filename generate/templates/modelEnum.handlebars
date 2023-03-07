@@ -9,7 +9,7 @@
     {{/if}}{{/if}}{{/each}}{{/each}}
     {{>visibility}} enum {{datatypeWithEnum}}{{#unless datatypeWithEnum}}{{classname}}{{/unless}}{{#with vendorExtensions.x-enum-byte}}: byte{{/with}}
     {
-        {{#each allowableValues}}{{#each enumVars}}
+        {{#with allowableValues}}{{#each enumVars}}
         /// <summary>
         /// Enum {{name}} for value: {{value}}
         /// </summary>
@@ -17,5 +17,5 @@
         [EnumMember(Value = "{{{value}}}")]
         {{/if}}
         {{name}}{{#unless isString}} = {{{value}}}{{/unless}}{{#if isString}} = {{-index}}{{/if}}{{#unless @last}},{{/unless}}
-        {{/each}}{{/each}}
+        {{/each}}{{/with}}
     }{{! NOTE: This model's enumVars is modified to look like CodegenProperty}}

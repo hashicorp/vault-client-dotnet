@@ -76,6 +76,26 @@ namespace Vault.Model
         public enum TlsMaxVersionEnum
         {
 
+            /// <summary>
+            /// Enum Tls10 for value: tls10
+            /// </summary>
+            [EnumMember(Value = "tls10")]
+            Tls10 = 0,
+            /// <summary>
+            /// Enum Tls11 for value: tls11
+            /// </summary>
+            [EnumMember(Value = "tls11")]
+            Tls11 = 1,
+            /// <summary>
+            /// Enum Tls12 for value: tls12
+            /// </summary>
+            [EnumMember(Value = "tls12")]
+            Tls12 = 2,
+            /// <summary>
+            /// Enum Tls13 for value: tls13
+            /// </summary>
+            [EnumMember(Value = "tls13")]
+            Tls13 = 3
         }
 
         /// <summary>
@@ -96,6 +116,26 @@ namespace Vault.Model
         public enum TlsMinVersionEnum
         {
 
+            /// <summary>
+            /// Enum Tls10 for value: tls10
+            /// </summary>
+            [EnumMember(Value = "tls10")]
+            Tls10 = 0,
+            /// <summary>
+            /// Enum Tls11 for value: tls11
+            /// </summary>
+            [EnumMember(Value = "tls11")]
+            Tls11 = 1,
+            /// <summary>
+            /// Enum Tls12 for value: tls12
+            /// </summary>
+            [EnumMember(Value = "tls12")]
+            Tls12 = 2,
+            /// <summary>
+            /// Enum Tls13 for value: tls13
+            /// </summary>
+            [EnumMember(Value = "tls13")]
+            Tls13 = 3
         }
 
         /// <summary>
