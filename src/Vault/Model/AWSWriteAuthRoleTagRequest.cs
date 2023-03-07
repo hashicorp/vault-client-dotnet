@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>If set, allows migration of the underlying instance where the client resides. This keys off of pendingTime in the metadata document, so essentially, this disables the client nonce check whenever the instance is migrated to a new host and pendingTime is newer than the previously-remembered time. Use with caution.</value>
         [DataMember(Name = "allow_instance_migration", EmitDefaultValue = true)]
 
-
         public bool AllowInstanceMigration { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, only allows a single token to be granted per instance ID. In order to perform a fresh login, the entry in access list for the instance ID needs to be cleared using the &#x27;auth/aws-ec2/identity-accesslist/&lt;instance_id&gt;&#x27; endpoint.</value>
         [DataMember(Name = "disallow_reauthentication", EmitDefaultValue = true)]
-
 
         public bool DisallowReauthentication { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>Instance ID for which this tag is intended for. If set, the created tag can only be used by the instance with the given ID.</value>
         [DataMember(Name = "instance_id", EmitDefaultValue = false)]
 
-
         public string InstanceId { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>If set, specifies the maximum allowed token lifetime.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Policies to be associated with the tag. If set, must be a subset of the role&#x27;s policies. If set, but set to an empty value, only the &#x27;default&#x27; policy will be given to issued tokens.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
-
 
         public List<string> Policies { get; set; }
 

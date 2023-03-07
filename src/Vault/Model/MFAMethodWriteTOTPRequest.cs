@@ -103,7 +103,6 @@ namespace Vault.Model
         /// <value>The hashing algorithm used to generate the TOTP token. Options include SHA1, SHA256 and SHA512.</value>
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
 
-
         public string Algorithm { get; set; }
 
 
@@ -112,7 +111,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of digits in the generated TOTP token. This value can either be 6 or 8.</value>
         [DataMember(Name = "digits", EmitDefaultValue = false)]
-
 
         public int Digits { get; set; }
 
@@ -123,7 +121,6 @@ namespace Vault.Model
         /// <value>The name of the key&#x27;s issuing organization.</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
 
-
         public string Issuer { get; set; }
 
 
@@ -132,7 +129,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Determines the size in bytes of the generated key.</value>
         [DataMember(Name = "key_size", EmitDefaultValue = false)]
-
 
         public int KeySize { get; set; }
 
@@ -143,7 +139,6 @@ namespace Vault.Model
         /// <value>Max number of allowed validation attempts.</value>
         [DataMember(Name = "max_validation_attempts", EmitDefaultValue = false)]
 
-
         public int MaxValidationAttempts { get; set; }
 
 
@@ -152,7 +147,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", EmitDefaultValue = false)]
-
 
         public string MethodId { get; set; }
 
@@ -163,7 +157,6 @@ namespace Vault.Model
         /// <value>The length of time used to generate a counter for the TOTP token calculation.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-
         public int Period { get; set; }
 
 
@@ -173,7 +166,6 @@ namespace Vault.Model
         /// <value>The pixel size of the generated square QR code.</value>
         [DataMember(Name = "qr_size", EmitDefaultValue = false)]
 
-
         public int QrSize { get; set; }
 
 
@@ -182,7 +174,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1.</value>
         [DataMember(Name = "skew", EmitDefaultValue = false)]
-
 
         public int Skew { get; set; }
 

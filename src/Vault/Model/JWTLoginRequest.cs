@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The signed JWT to validate.</value>
         [DataMember(Name = "jwt", EmitDefaultValue = false)]
 
-
         public string Jwt { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The role to log in against.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
-
 
         public string Role { get; set; }
 

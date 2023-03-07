@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Issuer URL to be used in the iss claim of the token. If not set, Vault&#x27;s app_addr will be used.</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
 
-
         public string Issuer { get; set; }
 
 

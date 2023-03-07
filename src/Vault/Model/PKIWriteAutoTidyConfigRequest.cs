@@ -109,7 +109,6 @@ namespace Vault.Model
         /// <value>Set to true to enable automatic tidy operations.</value>
         [DataMember(Name = "enabled", EmitDefaultValue = true)]
 
-
         public bool Enabled { get; set; }
 
 
@@ -118,7 +117,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Interval at which to run an auto-tidy operation. This is the time between tidy invocations (after one finishes to the start of the next). Running a manual tidy will reset this duration.</value>
         [DataMember(Name = "interval_duration", EmitDefaultValue = false)]
-
 
         public int IntervalDuration { get; set; }
 
@@ -129,7 +127,6 @@ namespace Vault.Model
         /// <value>The amount of extra time that must have passed beyond issuer&#x27;s expiration before it is removed from the backend storage. Defaults to 8760 hours (1 year).</value>
         [DataMember(Name = "issuer_safety_buffer", EmitDefaultValue = false)]
 
-
         public int IssuerSafetyBuffer { get; set; }
 
 
@@ -138,7 +135,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The amount of time to wait between processing certificates. This allows operators to change the execution profile of tidy to take consume less resources by slowing down how long it takes to run. Note that the entire list of certificates will be stored in memory during the entire tidy operation, but resources to read/process/update existing entries will be spread out over a greater period of time. By default this is zero seconds.</value>
         [DataMember(Name = "pause_duration", EmitDefaultValue = false)]
-
 
         public string PauseDuration { get; set; }
 
@@ -149,7 +145,6 @@ namespace Vault.Model
         /// <value>The amount of extra time that must have passed beyond certificate expiration before it is removed from the backend storage and/or revocation list. Defaults to 72 hours.</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
 
-
         public int SafetyBuffer { get; set; }
 
 
@@ -158,7 +153,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Set to true to enable tidying up the certificate store</value>
         [DataMember(Name = "tidy_cert_store", EmitDefaultValue = true)]
-
 
         public bool TidyCertStore { get; set; }
 
@@ -169,7 +163,6 @@ namespace Vault.Model
         /// <value>Set to true to automatically remove expired issuers past the issuer_safety_buffer. No keys will be removed as part of this operation.</value>
         [DataMember(Name = "tidy_expired_issuers", EmitDefaultValue = true)]
 
-
         public bool TidyExpiredIssuers { get; set; }
 
 
@@ -178,7 +171,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Deprecated; synonym for &#x27;tidy_revoked_certs</value>
         [DataMember(Name = "tidy_revocation_list", EmitDefaultValue = true)]
-
 
         public bool TidyRevocationList { get; set; }
 
@@ -189,7 +181,6 @@ namespace Vault.Model
         /// <value>Set to true to validate issuer associations on revocation entries. This helps increase the performance of CRL building and OCSP responses.</value>
         [DataMember(Name = "tidy_revoked_cert_issuer_associations", EmitDefaultValue = true)]
 
-
         public bool TidyRevokedCertIssuerAssociations { get; set; }
 
 
@@ -198,7 +189,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Set to true to expire all revoked and expired certificates, removing them both from the CRL and from storage. The CRL will be rotated if this causes any values to be removed.</value>
         [DataMember(Name = "tidy_revoked_certs", EmitDefaultValue = true)]
-
 
         public bool TidyRevokedCerts { get; set; }
 

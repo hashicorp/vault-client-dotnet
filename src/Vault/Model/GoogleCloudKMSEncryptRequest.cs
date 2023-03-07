@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Optional base64-encoded data that, if specified, must also be provided to decrypt this payload.</value>
         [DataMember(Name = "additional_authenticated_data", EmitDefaultValue = false)]
 
-
         public string AdditionalAuthenticatedData { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Integer version of the crypto key version to use for encryption. If unspecified, this defaults to the latest active crypto key version.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
 
-
         public int KeyVersion { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Plaintext value to be encrypted. This can be a string or binary, but the size is limited. See the Google Cloud KMS documentation for information on size limitations by key types.</value>
         [DataMember(Name = "plaintext", EmitDefaultValue = false)]
-
 
         public string Plaintext { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage.</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
 
-
         public int SafetyBuffer { get; set; }
 
 

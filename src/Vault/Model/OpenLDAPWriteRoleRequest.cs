@@ -101,7 +101,6 @@ namespace Vault.Model
         /// <value>LDIF string used to create new entities within the LDAP system. This LDIF can be templated.</value>
         [DataMember(Name = "creation_ldif", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string CreationLdif { get; set; }
 
 
@@ -110,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Default TTL for dynamic credentials</value>
         [DataMember(Name = "default_ttl", EmitDefaultValue = false)]
-
 
         public int DefaultTtl { get; set; }
 
@@ -121,7 +119,6 @@ namespace Vault.Model
         /// <value>LDIF string used to delete entities created within the LDAP system. This LDIF can be templated.</value>
         [DataMember(Name = "deletion_ldif", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string DeletionLdif { get; set; }
 
 
@@ -130,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Max TTL a dynamic credential can be extended to</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -141,7 +137,6 @@ namespace Vault.Model
         /// <value>LDIF string used to rollback changes in the event of a failure to create credentials. This LDIF can be templated.</value>
         [DataMember(Name = "rollback_ldif", EmitDefaultValue = false)]
 
-
         public string RollbackLdif { get; set; }
 
 
@@ -150,7 +145,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The template used to create a username</value>
         [DataMember(Name = "username_template", EmitDefaultValue = false)]
-
 
         public string UsernameTemplate { get; set; }
 

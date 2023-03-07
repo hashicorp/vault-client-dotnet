@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>AWS ARN for STS role to be assumed when interacting with the account specified. The Vault server must have permissions to assume this role.</value>
         [DataMember(Name = "sts_role", EmitDefaultValue = false)]
 
-
         public string StsRole { get; set; }
 
 

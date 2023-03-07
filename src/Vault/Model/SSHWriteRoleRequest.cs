@@ -67,7 +67,6 @@ namespace Vault.Model
         /// <value>When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.</value>
 
         [DataMember(Name = "algorithm_signer", EmitDefaultValue = false)]
-
         public AlgorithmSignerEnum? AlgorithmSigner { get; set; }
 
 
@@ -150,7 +149,6 @@ namespace Vault.Model
         /// <value>[Required for all types] Type of key used to login to hosts. It can be either &#x27;otp&#x27;, &#x27;dynamic&#x27; or &#x27;ca&#x27;. &#x27;otp&#x27; type requires agent to be installed in remote hosts.</value>
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
-
         public KeyTypeEnum? KeyType { get; set; }
 
 
@@ -304,7 +302,6 @@ namespace Vault.Model
         /// <value>[Required for Dynamic type] [Not applicable for OTP type] [Not applicable for CA type] Admin user at remote host. The shared key being registered should be for this user and should have root privileges. Everytime a dynamic credential is being generated for other users, Vault uses this admin username to login to remote host and install the generated credential for the other user.</value>
         [DataMember(Name = "admin_user", EmitDefaultValue = false)]
 
-
         public string AdminUser { get; set; }
 
 
@@ -313,7 +310,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, host certificates that are requested are allowed to use the base domains listed in \&quot;allowed_domains\&quot;, e.g. \&quot;example.com\&quot;. This is a separate option as in some cases this can be considered a security threat.</value>
         [DataMember(Name = "allow_bare_domains", EmitDefaultValue = true)]
-
 
         public bool AllowBareDomains { get; set; }
 
@@ -324,7 +320,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, certificates are allowed to be signed for use as a &#x27;host&#x27;.</value>
         [DataMember(Name = "allow_host_certificates", EmitDefaultValue = true)]
 
-
         public bool AllowHostCertificates { get; set; }
 
 
@@ -333,7 +328,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, host certificates that are requested are allowed to use subdomains of those listed in \&quot;allowed_domains\&quot;.</value>
         [DataMember(Name = "allow_subdomains", EmitDefaultValue = true)]
-
 
         public bool AllowSubdomains { get; set; }
 
@@ -344,7 +338,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, certificates are allowed to be signed for use as a &#x27;user&#x27;.</value>
         [DataMember(Name = "allow_user_certificates", EmitDefaultValue = true)]
 
-
         public bool AllowUserCertificates { get; set; }
 
 
@@ -353,7 +346,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If true, users can override the key ID for a signed certificate with the \&quot;key_id\&quot; field. When false, the key ID will always be the token display name. The key ID is logged by the SSH server and can be useful for auditing.</value>
         [DataMember(Name = "allow_user_key_ids", EmitDefaultValue = true)]
-
 
         public bool AllowUserKeyIds { get; set; }
 
@@ -364,7 +356,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] A comma-separated list of critical options that certificates can have when signed. To allow any critical options, set this to an empty string.</value>
         [DataMember(Name = "allowed_critical_options", EmitDefaultValue = false)]
 
-
         public string AllowedCriticalOptions { get; set; }
 
 
@@ -373,7 +364,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If this option is not specified, client can request for a signed certificate for any valid host. If only certain domains are allowed, then this list enforces it.</value>
         [DataMember(Name = "allowed_domains", EmitDefaultValue = false)]
-
 
         public string AllowedDomains { get; set; }
 
@@ -384,7 +374,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, Allowed domains can be specified using identity template policies. Non-templated domains are also permitted.</value>
         [DataMember(Name = "allowed_domains_template", EmitDefaultValue = true)]
 
-
         public bool AllowedDomainsTemplate { get; set; }
 
 
@@ -393,7 +382,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] A comma-separated list of extensions that certificates can have when signed. An empty list means that no extension overrides are allowed by an end-user; explicitly specify &#x27;*&#x27; to allow any extensions to be set.</value>
         [DataMember(Name = "allowed_extensions", EmitDefaultValue = false)]
-
 
         public string AllowedExtensions { get; set; }
 
@@ -404,7 +392,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, allows the enforcement of key types and minimum key sizes to be signed.</value>
         [DataMember(Name = "allowed_user_key_lengths", EmitDefaultValue = false)]
 
-
         public Object AllowedUserKeyLengths { get; set; }
 
 
@@ -413,7 +400,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Optional for all types] [Works differently for CA type] If this option is not specified, or is &#x27;*&#x27;, client can request a credential for any valid user at the remote host, including the admin user. If only certain usernames are to be allowed, then this list enforces it. If this field is set, then credentials can only be created for default_user and usernames present in this list. Setting this option will enable all the users with access to this role to fetch credentials for all other usernames in this list. Use with caution. N.B.: with the CA type, an empty list means that no users are allowed; explicitly specify &#x27;*&#x27; to allow any user.</value>
         [DataMember(Name = "allowed_users", EmitDefaultValue = false)]
-
 
         public string AllowedUsers { get; set; }
 
@@ -424,7 +410,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, Allowed users can be specified using identity template policies. Non-templated users are also permitted.</value>
         [DataMember(Name = "allowed_users_template", EmitDefaultValue = true)]
 
-
         public bool AllowedUsersTemplate { get; set; }
 
 
@@ -433,7 +418,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Optional for Dynamic type] [Optional for OTP type] [Not applicable for CA type] Comma separated list of CIDR blocks for which the role is applicable for. CIDR blocks can belong to more than one role.</value>
         [DataMember(Name = "cidr_list", EmitDefaultValue = false)]
-
 
         public string CidrList { get; set; }
 
@@ -444,7 +428,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] Critical options certificates should have if none are provided when signing. This field takes in key value pairs in JSON format. Note that these are not restricted by \&quot;allowed_critical_options\&quot;. Defaults to none.</value>
         [DataMember(Name = "default_critical_options", EmitDefaultValue = false)]
 
-
         public Object DefaultCriticalOptions { get; set; }
 
 
@@ -453,7 +436,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] Extensions certificates should have if none are provided when signing. This field takes in key value pairs in JSON format. Note that these are not restricted by \&quot;allowed_extensions\&quot;. Defaults to none.</value>
         [DataMember(Name = "default_extensions", EmitDefaultValue = false)]
-
 
         public Object DefaultExtensions { get; set; }
 
@@ -464,7 +446,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, Default extension values can be specified using identity template policies. Non-templated extension values are also permitted.</value>
         [DataMember(Name = "default_extensions_template", EmitDefaultValue = true)]
 
-
         public bool DefaultExtensionsTemplate { get; set; }
 
 
@@ -473,7 +454,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Required for Dynamic type] [Required for OTP type] [Optional for CA type] Default username for which a credential will be generated. When the endpoint &#x27;creds/&#x27; is used without a username, this value will be used as default username.</value>
         [DataMember(Name = "default_user", EmitDefaultValue = false)]
-
 
         public string DefaultUser { get; set; }
 
@@ -484,7 +464,6 @@ namespace Vault.Model
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, Default user can be specified using identity template policies. Non-templated users are also permitted.</value>
         [DataMember(Name = "default_user_template", EmitDefaultValue = true)]
 
-
         public bool DefaultUserTemplate { get; set; }
 
 
@@ -493,7 +472,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Optional for Dynamic type] [Optional for OTP type] [Not applicable for CA type] Comma separated list of CIDR blocks. IP addresses belonging to these blocks are not accepted by the role. This is particularly useful when big CIDR blocks are being used by the role and certain parts of it needs to be kept out.</value>
         [DataMember(Name = "exclude_cidr_list", EmitDefaultValue = false)]
-
 
         public string ExcludeCidrList { get; set; }
 
@@ -504,7 +482,6 @@ namespace Vault.Model
         /// <value>[Optional for Dynamic type] [Not-applicable for OTP type] [Not applicable for CA type] Script used to install and uninstall public keys in the target machine. The inbuilt default install script will be for Linux hosts. For sample script, refer the project documentation website.</value>
         [DataMember(Name = "install_script", EmitDefaultValue = false)]
 
-
         public string InstallScript { get; set; }
 
 
@@ -513,7 +490,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Required for Dynamic type] [Not applicable for OTP type] [Not applicable for CA type] Name of the registered key in Vault. Before creating the role, use the &#x27;keys/&#x27; endpoint to create a named key.</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
-
 
         public string Key { get; set; }
 
@@ -524,7 +500,6 @@ namespace Vault.Model
         /// <value>[Optional for Dynamic type] [Not applicable for OTP type] [Not applicable for CA type] Length of the RSA dynamic key in bits. It is 1024 by default or it can be 2048.</value>
         [DataMember(Name = "key_bits", EmitDefaultValue = false)]
 
-
         public int KeyBits { get; set; }
 
 
@@ -533,7 +508,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] When supplied, this value specifies a custom format for the key id of a signed certificate. The following variables are available for use: &#x27;{{token_display_name}}&#x27; - The display name of the token used to make the request. &#x27;{{role_name}}&#x27; - The name of the role signing the request. &#x27;{{public_key_hash}}&#x27; - A SHA256 checksum of the public key that is being signed.</value>
         [DataMember(Name = "key_id_format", EmitDefaultValue = false)]
-
 
         public string KeyIdFormat { get; set; }
 
@@ -544,7 +518,6 @@ namespace Vault.Model
         /// <value>[Optional for Dynamic type] [Not applicable for OTP type] [Not applicable for CA type] Comma separated option specifications which will be prefixed to RSA key in authorized_keys file. Options should be valid and comply with authorized_keys file format and should not contain spaces.</value>
         [DataMember(Name = "key_option_specs", EmitDefaultValue = false)]
 
-
         public string KeyOptionSpecs { get; set; }
 
 
@@ -553,7 +526,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] The maximum allowed lease duration</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -564,7 +536,6 @@ namespace Vault.Model
         /// <value>The duration that the SSH certificate should be backdated by at issuance.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
 
-
         public int NotBeforeDuration { get; set; }
 
 
@@ -574,7 +545,6 @@ namespace Vault.Model
         /// <value>[Optional for Dynamic type] [Optional for OTP type] [Not applicable for CA type] Port number for SSH connection. Default is &#x27;22&#x27;. Port number does not play any role in creation of OTP. For &#x27;otp&#x27; type, this is just a way to inform client about the port number to use. Port number will be returned to client by Vault server along with OTP.</value>
         [DataMember(Name = "port", EmitDefaultValue = false)]
 
-
         public int Port { get; set; }
 
 
@@ -583,7 +553,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] The lease duration if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the value of max_ttl.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

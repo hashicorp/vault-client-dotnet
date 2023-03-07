@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Optional data that, if specified, must also be provided during decryption.</value>
         [DataMember(Name = "additional_authenticated_data", EmitDefaultValue = false)]
 
-
         public string AdditionalAuthenticatedData { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Ciphertext to be re-encrypted to the latest key version. This must be ciphertext that Vault previously generated for this named key.</value>
         [DataMember(Name = "ciphertext", EmitDefaultValue = false)]
 
-
         public string Ciphertext { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Integer version of the crypto key version to use for the new encryption. If unspecified, this defaults to the latest active crypto key version.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
-
 
         public int KeyVersion { get; set; }
 

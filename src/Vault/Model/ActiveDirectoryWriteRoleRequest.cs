@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The username/logon name for the service account with which this role will be associated.</value>
         [DataMember(Name = "service_account_name", EmitDefaultValue = false)]
 
-
         public string ServiceAccountName { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>In seconds, the default password time-to-live.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

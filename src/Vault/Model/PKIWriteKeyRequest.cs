@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Human-readable name for this key.</value>
         [DataMember(Name = "key_name", EmitDefaultValue = false)]
 
-
         public string KeyName { get; set; }
 
 

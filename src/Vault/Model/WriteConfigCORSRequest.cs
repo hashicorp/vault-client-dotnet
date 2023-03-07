@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>A comma-separated string or array of strings indicating headers that are allowed on cross-origin requests.</value>
         [DataMember(Name = "allowed_headers", EmitDefaultValue = false)]
 
-
         public List<string> AllowedHeaders { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>A comma-separated string or array of strings indicating origins that may make cross-origin requests.</value>
         [DataMember(Name = "allowed_origins", EmitDefaultValue = false)]
 
-
         public List<string> AllowedOrigins { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Enables or disables CORS headers on requests.</value>
         [DataMember(Name = "enable", EmitDefaultValue = true)]
-
 
         public bool Enable { get; set; }
 

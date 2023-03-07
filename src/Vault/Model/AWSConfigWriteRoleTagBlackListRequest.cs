@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>If set to &#x27;true&#x27;, disables the periodic tidying of deny listed entries.</value>
         [DataMember(Name = "disable_periodic_tidy", EmitDefaultValue = true)]
 
-
         public bool DisablePeriodicTidy { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days).</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
-
 
         public int SafetyBuffer { get; set; }
 

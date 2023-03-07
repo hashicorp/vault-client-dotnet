@@ -89,7 +89,6 @@ namespace Vault.Model
         /// <value>Array of auth mount accessor IDs</value>
         [DataMember(Name = "auth_method_accessors", EmitDefaultValue = false)]
 
-
         public List<string> AuthMethodAccessors { get; set; }
 
 
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Array of auth mount types</value>
         [DataMember(Name = "auth_method_types", EmitDefaultValue = false)]
-
 
         public List<string> AuthMethodTypes { get; set; }
 
@@ -109,7 +107,6 @@ namespace Vault.Model
         /// <value>Array of identity entity IDs</value>
         [DataMember(Name = "identity_entity_ids", EmitDefaultValue = false)]
 
-
         public List<string> IdentityEntityIds { get; set; }
 
 
@@ -119,7 +116,6 @@ namespace Vault.Model
         /// <value>Array of identity group IDs</value>
         [DataMember(Name = "identity_group_ids", EmitDefaultValue = false)]
 
-
         public List<string> IdentityGroupIds { get; set; }
 
 
@@ -128,7 +124,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Array of Method IDs that determine what methods will be enforced</value>
         [DataMember(Name = "mfa_method_ids", IsRequired = true, EmitDefaultValue = false)]
-
 
         public List<string> MfaMethodIds { get; set; }
 

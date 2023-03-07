@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>Entity ID on which the generated secret needs to get stored.</value>
         [DataMember(Name = "entity_id", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string EntityId { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string MethodId { get; set; }
 

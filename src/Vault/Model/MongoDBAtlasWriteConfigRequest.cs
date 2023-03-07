@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>MongoDB Atlas Programmatic Private Key</value>
         [DataMember(Name = "private_key", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string PrivateKey { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>MongoDB Atlas Programmatic Public Key</value>
         [DataMember(Name = "public_key", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string PublicKey { get; set; }
 

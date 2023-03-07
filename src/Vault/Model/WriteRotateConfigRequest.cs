@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Whether automatic rotation is enabled.</value>
         [DataMember(Name = "enabled", EmitDefaultValue = true)]
 
-
         public bool Enabled { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>How long after installation of an active key term that the key will be automatically rotated.</value>
         [DataMember(Name = "interval", EmitDefaultValue = false)]
 
-
         public int Interval { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of encryption operations performed before the barrier key is automatically rotated.</value>
         [DataMember(Name = "max_operations", EmitDefaultValue = false)]
-
 
         public long MaxOperations { get; set; }
 

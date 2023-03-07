@@ -59,8 +59,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
-
 
         public int TokenPeriod { get; set; }
 

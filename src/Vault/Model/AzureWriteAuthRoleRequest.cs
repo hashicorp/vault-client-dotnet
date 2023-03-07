@@ -169,7 +169,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of group ids that login is restricted to.</value>
         [DataMember(Name = "bound_group_ids", EmitDefaultValue = false)]
 
-
         public List<string> BoundGroupIds { get; set; }
 
 
@@ -178,7 +177,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of locations that login is restricted to.</value>
         [DataMember(Name = "bound_locations", EmitDefaultValue = false)]
-
 
         public List<string> BoundLocations { get; set; }
 
@@ -189,7 +187,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of resource groups that login is restricted to.</value>
         [DataMember(Name = "bound_resource_groups", EmitDefaultValue = false)]
 
-
         public List<string> BoundResourceGroups { get; set; }
 
 
@@ -198,7 +195,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of scale sets that login is restricted to.</value>
         [DataMember(Name = "bound_scale_sets", EmitDefaultValue = false)]
-
 
         public List<string> BoundScaleSets { get; set; }
 
@@ -209,7 +205,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of service principal ids that login is restricted to.</value>
         [DataMember(Name = "bound_service_principal_ids", EmitDefaultValue = false)]
 
-
         public List<string> BoundServicePrincipalIds { get; set; }
 
 
@@ -218,7 +213,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of subscription ids that login is restricted to.</value>
         [DataMember(Name = "bound_subscription_ids", EmitDefaultValue = false)]
-
 
         public List<string> BoundSubscriptionIds { get; set; }
 
@@ -229,8 +223,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int MaxTtl { get; set; }
+        [Obsolete] public int MaxTtl { get; set; }
 
 
         /// <summary>
@@ -239,8 +232,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_num_uses\&quot; instead. If this and \&quot;token_num_uses\&quot; are both specified, only \&quot;token_num_uses\&quot; will be used.</value>
         [DataMember(Name = "num_uses", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int NumUses { get; set; }
+        [Obsolete] public int NumUses { get; set; }
 
 
         /// <summary>
@@ -249,8 +241,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -259,8 +250,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -268,7 +258,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
-
 
         public List<string> TokenBoundCidrs { get; set; }
 
@@ -279,7 +268,6 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-
         public int TokenExplicitMaxTtl { get; set; }
 
 
@@ -288,7 +276,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenMaxTtl { get; set; }
 
@@ -299,7 +286,6 @@ namespace Vault.Model
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
 
-
         public bool TokenNoDefaultPolicy { get; set; }
 
 
@@ -308,7 +294,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
-
 
         public int TokenNumUses { get; set; }
 
@@ -319,7 +304,6 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-
         public int TokenPeriod { get; set; }
 
 
@@ -328,7 +312,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
-
 
         public List<string> TokenPolicies { get; set; }
 
@@ -339,7 +322,6 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-
         public int TokenTtl { get; set; }
 
 
@@ -348,7 +330,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
-
 
         public string TokenType { get; set; }
 
@@ -359,8 +340,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Ttl { get; set; }
+        [Obsolete] public int Ttl { get; set; }
 
 
 

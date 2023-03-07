@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>ID of the group to which this is an alias.</value>
         [DataMember(Name = "canonical_id", EmitDefaultValue = false)]
 
-
         public string CanonicalId { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>ID of the group alias.</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-
 
         public string Id { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Mount accessor to which this alias belongs to.</value>
         [DataMember(Name = "mount_accessor", EmitDefaultValue = false)]
 
-
         public string MountAccessor { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Alias of the group.</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-
 
         public string Name { get; set; }
 

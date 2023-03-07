@@ -52,7 +52,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "token", EmitDefaultValue = false)]
 
-
         public string Token { get; set; }
 
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The signed headers of the client</value>
         [DataMember(Name = "request_headers", EmitDefaultValue = false)]
 
-
         public string RequestHeaders { get; set; }
 
 

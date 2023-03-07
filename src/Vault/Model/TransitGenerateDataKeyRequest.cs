@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Number of bits for the key; currently 128, 256, and 512 bits are supported. Defaults to 256.</value>
         [DataMember(Name = "bits", EmitDefaultValue = false)]
 
-
         public int Bits { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Context for key derivation. Required for derived keys.</value>
         [DataMember(Name = "context", EmitDefaultValue = false)]
-
 
         public string Context { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>The version of the Vault key to use for encryption of the data key. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
 
-
         public int KeyVersion { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Nonce for when convergent encryption v1 is used (only in Vault 0.6.1)</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
-
 
         public string Nonce { get; set; }
 

@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>RabbitMQ Management URI</value>
         [DataMember(Name = "connection_uri", EmitDefaultValue = false)]
 
-
         public string ConnectionUri { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Password of the provided RabbitMQ management user</value>
         [DataMember(Name = "password", EmitDefaultValue = false)]
-
 
         public string Password { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>Name of the password policy to use to generate passwords for dynamic credentials.</value>
         [DataMember(Name = "password_policy", EmitDefaultValue = false)]
 
-
         public string PasswordPolicy { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Username of a RabbitMQ management administrator</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
-
 
         public string Username { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>Template describing how dynamic usernames are generated.</value>
         [DataMember(Name = "username_template", EmitDefaultValue = false)]
 
-
         public string UsernameTemplate { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, connection_uri is verified by actually connecting to the RabbitMQ management API</value>
         [DataMember(Name = "verify_connection", EmitDefaultValue = true)]
-
 
         public bool VerifyConnection { get; set; }
 

@@ -52,7 +52,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "keys", EmitDefaultValue = false)]
 
-
         public List<string> Keys { get; set; }
 
 

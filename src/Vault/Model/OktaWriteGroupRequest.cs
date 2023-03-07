@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of policies associated to the group.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-
         public List<string> Policies { get; set; }
 
 

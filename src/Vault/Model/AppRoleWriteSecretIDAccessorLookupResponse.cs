@@ -101,7 +101,6 @@ namespace Vault.Model
         /// <value>List of CIDR blocks enforcing secret IDs to be used from specific set of IP addresses. If &#x27;bound_cidr_list&#x27; is set on the role, then the list of CIDR blocks listed here should be a subset of the CIDR blocks listed on the role.</value>
         [DataMember(Name = "cidr_list", EmitDefaultValue = false)]
 
-
         public List<string> CidrList { get; set; }
 
 
@@ -109,7 +108,6 @@ namespace Vault.Model
         /// Gets or Sets CreationTime
         /// </summary>
         [DataMember(Name = "creation_time", EmitDefaultValue = false)]
-
 
         public DateTime CreationTime { get; set; }
 
@@ -119,7 +117,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "expiration_time", EmitDefaultValue = false)]
 
-
         public DateTime ExpirationTime { get; set; }
 
 
@@ -128,7 +125,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "last_updated_time", EmitDefaultValue = false)]
 
-
         public DateTime LastUpdatedTime { get; set; }
 
 
@@ -136,7 +132,6 @@ namespace Vault.Model
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
-
 
         public Object Metadata { get; set; }
 
@@ -147,7 +142,6 @@ namespace Vault.Model
         /// <value>Accessor of the secret ID</value>
         [DataMember(Name = "secret_id_accessor", EmitDefaultValue = false)]
 
-
         public string SecretIdAccessor { get; set; }
 
 
@@ -156,7 +150,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Number of times a secret ID can access the role, after which the secret ID will expire.</value>
         [DataMember(Name = "secret_id_num_uses", EmitDefaultValue = false)]
-
 
         public int SecretIdNumUses { get; set; }
 
@@ -167,7 +160,6 @@ namespace Vault.Model
         /// <value>Duration in seconds after which the issued secret ID expires.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
 
-
         public int SecretIdTtl { get; set; }
 
 
@@ -176,7 +168,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. Should be a subset of the token CIDR blocks listed on the role, if any.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
-
 
         public List<string> TokenBoundCidrs { get; set; }
 

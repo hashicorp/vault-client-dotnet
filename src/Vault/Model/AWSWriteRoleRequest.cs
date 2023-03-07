@@ -121,8 +121,7 @@ namespace Vault.Model
         /// <value>Use role_arns or policy_arns instead.</value>
         [DataMember(Name = "arn", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string Arn { get; set; }
+        [Obsolete] public string Arn { get; set; }
 
 
         /// <summary>
@@ -130,7 +129,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of credential to retrieve. Must be one of assumed_role, iam_user, or federation_token</value>
         [DataMember(Name = "credential_type", EmitDefaultValue = false)]
-
 
         public string CredentialType { get; set; }
 
@@ -141,7 +139,6 @@ namespace Vault.Model
         /// <value>Default TTL for assumed_role and federation_token credential types when no TTL is explicitly requested with the credentials</value>
         [DataMember(Name = "default_sts_ttl", EmitDefaultValue = false)]
 
-
         public int DefaultStsTtl { get; set; }
 
 
@@ -150,7 +147,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Names of IAM groups that generated IAM users will be added to. For a credential type of assumed_role or federation_token, the policies sent to the corresponding AWS call (sts:AssumeRole or sts:GetFederation) will be the policies from each group in iam_groups combined with the policy_document and policy_arns parameters.</value>
         [DataMember(Name = "iam_groups", EmitDefaultValue = false)]
-
 
         public List<string> IamGroups { get; set; }
 
@@ -161,7 +157,6 @@ namespace Vault.Model
         /// <value>IAM tags to be set for any users created by this role. These must be presented as Key-Value pairs. This can be represented as a map or a list of equal sign delimited key pairs.</value>
         [DataMember(Name = "iam_tags", EmitDefaultValue = false)]
 
-
         public Object IamTags { get; set; }
 
 
@@ -170,7 +165,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Max allowed TTL for assumed_role and federation_token credential types</value>
         [DataMember(Name = "max_sts_ttl", EmitDefaultValue = false)]
-
 
         public int MaxStsTtl { get; set; }
 
@@ -181,7 +175,6 @@ namespace Vault.Model
         /// <value>ARN of an IAM policy to attach as a permissions boundary on IAM user credentials; only valid when credential_type isiam_user</value>
         [DataMember(Name = "permissions_boundary_arn", EmitDefaultValue = false)]
 
-
         public string PermissionsBoundaryArn { get; set; }
 
 
@@ -191,8 +184,7 @@ namespace Vault.Model
         /// <value>Use policy_document instead.</value>
         [DataMember(Name = "policy", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string Policy { get; set; }
+        [Obsolete] public string Policy { get; set; }
 
 
         /// <summary>
@@ -200,7 +192,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>ARNs of AWS policies. Behavior varies by credential_type. When credential_type is iam_user, then it will attach the specified policies to the generated IAM user. When credential_type is assumed_role or federation_token, the policies will be passed as the PolicyArns parameter, acting as a filter on permissions available.</value>
         [DataMember(Name = "policy_arns", EmitDefaultValue = false)]
-
 
         public List<string> PolicyArns { get; set; }
 
@@ -211,7 +202,6 @@ namespace Vault.Model
         /// <value>JSON-encoded IAM policy document. Behavior varies by credential_type. When credential_type is iam_user, then it will attach the contents of the policy_document to the IAM user generated. When credential_type is assumed_role or federation_token, this will be passed in as the Policy parameter to the AssumeRole or GetFederationToken API call, acting as a filter on permissions available.</value>
         [DataMember(Name = "policy_document", EmitDefaultValue = false)]
 
-
         public string PolicyDocument { get; set; }
 
 
@@ -221,7 +211,6 @@ namespace Vault.Model
         /// <value>ARNs of AWS roles allowed to be assumed. Only valid when credential_type is assumed_role</value>
         [DataMember(Name = "role_arns", EmitDefaultValue = false)]
 
-
         public List<string> RoleArns { get; set; }
 
 
@@ -230,7 +219,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Path for IAM User. Only valid when credential_type is iam_user</value>
         [DataMember(Name = "user_path", EmitDefaultValue = false)]
-
 
         public string UserPath { get; set; }
 

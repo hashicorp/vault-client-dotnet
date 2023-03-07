@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Maximum allowed crypto key version. If set to a positive value, key versions greater than the given value are not permitted to be used. If set to 0 or a negative value, there is no maximum key version.</value>
         [DataMember(Name = "max_version", EmitDefaultValue = false)]
 
-
         public int MaxVersion { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Minimum allowed crypto key version. If set to a positive value, key versions less than the given value are not permitted to be used. If set to 0 or a negative value, there is no minimum key version. This value only affects encryption/re-encryption, not decryption. To restrict old values from being decrypted, increase this value and then perform a trim operation.</value>
         [DataMember(Name = "min_version", EmitDefaultValue = false)]
-
 
         public int MinVersion { get; set; }
 

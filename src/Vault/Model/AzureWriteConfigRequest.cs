@@ -89,7 +89,6 @@ namespace Vault.Model
         /// <value>The OAuth2 client id to connect to Azure. This value can also be provided with the AZURE_CLIENT_ID environment variable.</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
 
-
         public string ClientId { get; set; }
 
 
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The OAuth2 client secret to connect to Azure. This value can also be provided with the AZURE_CLIENT_SECRET environment variable.</value>
         [DataMember(Name = "client_secret", EmitDefaultValue = false)]
-
 
         public string ClientSecret { get; set; }
 
@@ -109,7 +107,6 @@ namespace Vault.Model
         /// <value>The Azure environment name. If not provided, AzurePublicCloud is used. This value can also be provided with the AZURE_ENVIRONMENT environment variable.</value>
         [DataMember(Name = "environment", EmitDefaultValue = false)]
 
-
         public string Environment { get; set; }
 
 
@@ -118,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the password policy to use to generate passwords for dynamic credentials.</value>
         [DataMember(Name = "password_policy", EmitDefaultValue = false)]
-
 
         public string PasswordPolicy { get; set; }
 
@@ -129,7 +125,6 @@ namespace Vault.Model
         /// <value>The TTL of the root password in Azure. This can be either a number of seconds or a time formatted duration (ex: 24h, 48ds)</value>
         [DataMember(Name = "root_password_ttl", EmitDefaultValue = false)]
 
-
         public int RootPasswordTtl { get; set; }
 
 
@@ -139,7 +134,6 @@ namespace Vault.Model
         /// <value>The subscription id for the Azure Active Directory. This value can also be provided with the AZURE_SUBSCRIPTION_ID environment variable.</value>
         [DataMember(Name = "subscription_id", EmitDefaultValue = false)]
 
-
         public string SubscriptionId { get; set; }
 
 
@@ -148,7 +142,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The tenant id for the Azure Active Directory. This value can also be provided with the AZURE_TENANT_ID environment variable.</value>
         [DataMember(Name = "tenant_id", EmitDefaultValue = false)]
-
 
         public string TenantId { get; set; }
 

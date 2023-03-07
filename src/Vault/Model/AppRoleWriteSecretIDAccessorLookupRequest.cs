@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Accessor of the SecretID</value>
         [DataMember(Name = "secret_id_accessor", EmitDefaultValue = false)]
 
-
         public string SecretIdAccessor { get; set; }
 
 

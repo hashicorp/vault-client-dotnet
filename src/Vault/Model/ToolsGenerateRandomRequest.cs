@@ -75,7 +75,6 @@ namespace Vault.Model
         /// <value>The number of bytes to generate (POST body parameter). Defaults to 32 (256 bits).</value>
         [DataMember(Name = "bytes", EmitDefaultValue = false)]
 
-
         public int Bytes { get; set; }
 
 
@@ -84,7 +83,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;.</value>
         [DataMember(Name = "format", EmitDefaultValue = false)]
-
 
         public string Format { get; set; }
 
@@ -95,7 +93,6 @@ namespace Vault.Model
         /// <value>Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</value>
         [DataMember(Name = "source", EmitDefaultValue = false)]
 
-
         public string Source { get; set; }
 
 
@@ -104,7 +101,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of bytes to generate (POST URL parameter)</value>
         [DataMember(Name = "urlbytes", EmitDefaultValue = false)]
-
 
         public string Urlbytes { get; set; }
 

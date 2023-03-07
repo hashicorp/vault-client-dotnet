@@ -55,7 +55,6 @@ namespace Vault.Model
         /// <value>Reference (name or identifier) to the default issuer.</value>
         [DataMember(Name = "default", EmitDefaultValue = false)]
 
-
         public string Default { get; set; }
 
 

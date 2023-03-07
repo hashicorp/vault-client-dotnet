@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>The client IDs that are permitted to use the provider</value>
         [DataMember(Name = "allowed_client_ids", EmitDefaultValue = false)]
 
-
         public List<string> AllowedClientIds { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Specifies what will be used for the iss claim of ID tokens.</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
 
-
         public string Issuer { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The scopes supported for requesting on the provider</value>
         [DataMember(Name = "scopes_supported", EmitDefaultValue = false)]
-
 
         public List<string> ScopesSupported { get; set; }
 

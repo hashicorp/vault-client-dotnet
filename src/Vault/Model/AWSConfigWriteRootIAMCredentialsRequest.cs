@@ -89,7 +89,6 @@ namespace Vault.Model
         /// <value>Access key with permission to create new keys.</value>
         [DataMember(Name = "access_key", EmitDefaultValue = false)]
 
-
         public string AccessKey { get; set; }
 
 
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Endpoint to custom IAM server URL</value>
         [DataMember(Name = "iam_endpoint", EmitDefaultValue = false)]
-
 
         public string IamEndpoint { get; set; }
 
@@ -109,7 +107,6 @@ namespace Vault.Model
         /// <value>Maximum number of retries for recoverable exceptions of AWS APIs</value>
         [DataMember(Name = "max_retries", EmitDefaultValue = false)]
 
-
         public int MaxRetries { get; set; }
 
 
@@ -118,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Region for API calls.</value>
         [DataMember(Name = "region", EmitDefaultValue = false)]
-
 
         public string Region { get; set; }
 
@@ -129,7 +125,6 @@ namespace Vault.Model
         /// <value>Secret key with permission to create new keys.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
 
-
         public string SecretKey { get; set; }
 
 
@@ -139,7 +134,6 @@ namespace Vault.Model
         /// <value>Endpoint to custom STS server URL</value>
         [DataMember(Name = "sts_endpoint", EmitDefaultValue = false)]
 
-
         public string StsEndpoint { get; set; }
 
 
@@ -148,7 +142,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Template to generate custom IAM usernames</value>
         [DataMember(Name = "username_template", EmitDefaultValue = false)]
-
 
         public string UsernameTemplate { get; set; }
 

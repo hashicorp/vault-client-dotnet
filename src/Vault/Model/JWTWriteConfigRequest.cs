@@ -131,7 +131,6 @@ namespace Vault.Model
         /// <value>The value against which to match the &#x27;iss&#x27; claim in a JWT. Optional.</value>
         [DataMember(Name = "bound_issuer", EmitDefaultValue = false)]
 
-
         public string BoundIssuer { get; set; }
 
 
@@ -140,7 +139,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The default role to use if none is provided during login. If not set, a role is required during login.</value>
         [DataMember(Name = "default_role", EmitDefaultValue = false)]
-
 
         public string DefaultRole { get; set; }
 
@@ -151,7 +149,6 @@ namespace Vault.Model
         /// <value>The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.</value>
         [DataMember(Name = "jwks_ca_pem", EmitDefaultValue = false)]
 
-
         public string JwksCaPem { get; set; }
 
 
@@ -160,7 +157,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>JWKS URL to use to authenticate signatures. Cannot be used with \&quot;oidc_discovery_url\&quot; or \&quot;jwt_validation_pubkeys\&quot;.</value>
         [DataMember(Name = "jwks_url", EmitDefaultValue = false)]
-
 
         public string JwksUrl { get; set; }
 
@@ -171,7 +167,6 @@ namespace Vault.Model
         /// <value>A list of supported signing algorithms. Defaults to RS256.</value>
         [DataMember(Name = "jwt_supported_algs", EmitDefaultValue = false)]
 
-
         public List<string> JwtSupportedAlgs { get; set; }
 
 
@@ -180,7 +175,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used with \&quot;jwks_url\&quot; or \&quot;oidc_discovery_url\&quot;.</value>
         [DataMember(Name = "jwt_validation_pubkeys", EmitDefaultValue = false)]
-
 
         public List<string> JwtValidationPubkeys { get; set; }
 
@@ -191,7 +185,6 @@ namespace Vault.Model
         /// <value>Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs.</value>
         [DataMember(Name = "namespace_in_state", EmitDefaultValue = true)]
 
-
         public bool NamespaceInState { get; set; }
 
 
@@ -200,7 +193,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The OAuth Client ID configured with your OIDC provider.</value>
         [DataMember(Name = "oidc_client_id", EmitDefaultValue = false)]
-
 
         public string OidcClientId { get; set; }
 
@@ -211,7 +203,6 @@ namespace Vault.Model
         /// <value>The OAuth Client Secret configured with your OIDC provider.</value>
         [DataMember(Name = "oidc_client_secret", EmitDefaultValue = false)]
 
-
         public string OidcClientSecret { get; set; }
 
 
@@ -220,7 +211,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used.</value>
         [DataMember(Name = "oidc_discovery_ca_pem", EmitDefaultValue = false)]
-
 
         public string OidcDiscoveryCaPem { get; set; }
 
@@ -231,7 +221,6 @@ namespace Vault.Model
         /// <value>OIDC Discovery URL, without any .well-known component (base path). Cannot be used with \&quot;jwks_url\&quot; or \&quot;jwt_validation_pubkeys\&quot;.</value>
         [DataMember(Name = "oidc_discovery_url", EmitDefaultValue = false)]
 
-
         public string OidcDiscoveryUrl { get; set; }
 
 
@@ -240,7 +229,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The response mode to be used in the OAuth2 request. Allowed values are &#x27;query&#x27; and &#x27;form_post&#x27;.</value>
         [DataMember(Name = "oidc_response_mode", EmitDefaultValue = false)]
-
 
         public string OidcResponseMode { get; set; }
 
@@ -251,7 +239,6 @@ namespace Vault.Model
         /// <value>The response types to request. Allowed values are &#x27;code&#x27; and &#x27;id_token&#x27;. Defaults to &#x27;code&#x27;.</value>
         [DataMember(Name = "oidc_response_types", EmitDefaultValue = false)]
 
-
         public List<string> OidcResponseTypes { get; set; }
 
 
@@ -260,7 +247,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Provider-specific configuration. Optional.</value>
         [DataMember(Name = "provider_config", EmitDefaultValue = false)]
-
 
         public Object ProviderConfig { get; set; }
 

@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with.</value>
         [DataMember(Name = "associated_data", EmitDefaultValue = false)]
 
-
         public string AssociatedData { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The ciphertext to decrypt, provided as returned by encrypt.</value>
         [DataMember(Name = "ciphertext", EmitDefaultValue = false)]
-
 
         public string Ciphertext { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>Base64 encoded context for key derivation. Required if key derivation is enabled.</value>
         [DataMember(Name = "context", EmitDefaultValue = false)]
 
-
         public string Context { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>Base64 encoded nonce value used during encryption. Must be provided if convergent encryption is enabled for this key and the key was generated with Vault 0.6.1. Not required for keys created in 0.6.2+.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
 
-
         public string Nonce { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned.</value>
         [DataMember(Name = "partial_failure_response_code", EmitDefaultValue = false)]
-
 
         public int PartialFailureResponseCode { get; set; }
 

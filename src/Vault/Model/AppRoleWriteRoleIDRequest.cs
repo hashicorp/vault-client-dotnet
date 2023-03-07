@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Identifier of the role. Defaults to a UUID.</value>
         [DataMember(Name = "role_id", EmitDefaultValue = false)]
 
-
         public string RoleId { get; set; }
 
 

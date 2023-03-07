@@ -89,7 +89,6 @@ namespace Vault.Model
         /// <value>API host name for Duo.</value>
         [DataMember(Name = "api_hostname", EmitDefaultValue = false)]
 
-
         public string ApiHostname { get; set; }
 
 
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Integration key for Duo.</value>
         [DataMember(Name = "integration_key", EmitDefaultValue = false)]
-
 
         public string IntegrationKey { get; set; }
 
@@ -109,7 +107,6 @@ namespace Vault.Model
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", EmitDefaultValue = false)]
 
-
         public string MethodId { get; set; }
 
 
@@ -118,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Push information for Duo.</value>
         [DataMember(Name = "push_info", EmitDefaultValue = false)]
-
 
         public string PushInfo { get; set; }
 
@@ -129,7 +125,6 @@ namespace Vault.Model
         /// <value>Secret key for Duo.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
 
-
         public string SecretKey { get; set; }
 
 
@@ -139,7 +134,6 @@ namespace Vault.Model
         /// <value>If true, the user is reminded to use the passcode upon MFA validation. This option does not enforce using the passcode. Defaults to false.</value>
         [DataMember(Name = "use_passcode", EmitDefaultValue = true)]
 
-
         public bool UsePasscode { get; set; }
 
 
@@ -148,7 +142,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A template string for mapping Identity names to MFA method names. Values to subtitute should be placed in {{}}. For example, \&quot;{{alias.name}}@example.com\&quot;. Currently-supported mappings: alias.name: The name returned by the mount configured via the mount_accessor parameter If blank, the Alias&#x27;s name field will be used as-is.</value>
         [DataMember(Name = "username_format", EmitDefaultValue = false)]
-
 
         public string UsernameFormat { get; set; }
 

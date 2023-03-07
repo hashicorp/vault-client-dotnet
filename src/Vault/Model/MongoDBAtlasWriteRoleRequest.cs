@@ -107,7 +107,6 @@ namespace Vault.Model
         /// <value>Access list entry in CIDR notation to be added for the API key. Optional for organization and project keys.</value>
         [DataMember(Name = "cidr_blocks", EmitDefaultValue = false)]
 
-
         public List<string> CidrBlocks { get; set; }
 
 
@@ -116,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>IP address to be added to the access list for the API key. Optional for organization and project keys.</value>
         [DataMember(Name = "ip_addresses", EmitDefaultValue = false)]
-
 
         public List<string> IpAddresses { get; set; }
 
@@ -127,7 +125,6 @@ namespace Vault.Model
         /// <value>The maximum allowed lifetime of credentials issued using this role.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -136,7 +133,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Organization ID required for an organization API key</value>
         [DataMember(Name = "organization_id", EmitDefaultValue = false)]
-
 
         public string OrganizationId { get; set; }
 
@@ -147,7 +143,6 @@ namespace Vault.Model
         /// <value>Project ID the project API key belongs to.</value>
         [DataMember(Name = "project_id", EmitDefaultValue = false)]
 
-
         public string ProjectId { get; set; }
 
 
@@ -156,7 +151,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Roles assigned when an organization API Key is assigned to a project API key</value>
         [DataMember(Name = "project_roles", EmitDefaultValue = false)]
-
 
         public List<string> ProjectRoles { get; set; }
 
@@ -167,7 +161,6 @@ namespace Vault.Model
         /// <value>List of roles that the API Key should be granted. A minimum of one role must be provided. Any roles provided must be valid for the assigned Project, required for organization and project keys.</value>
         [DataMember(Name = "roles", IsRequired = true, EmitDefaultValue = false)]
 
-
         public List<string> Roles { get; set; }
 
 
@@ -176,7 +169,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds after which the issued credential should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

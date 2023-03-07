@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The description of the scope</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
 
-
         public string Description { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The template string to use for the scope. This may be in string-ified JSON or base64 format.</value>
         [DataMember(Name = "template", EmitDefaultValue = false)]
-
 
         public string Template { get; set; }
 

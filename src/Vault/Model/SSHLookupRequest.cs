@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>[Required] IP address of remote host</value>
         [DataMember(Name = "ip", EmitDefaultValue = false)]
 
-
         public string Ip { get; set; }
 
 

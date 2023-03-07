@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>The contents of the data map will be stored and returned on read.</value>
         [DataMember(Name = "data", EmitDefaultValue = false)]
 
-
         public Object Data { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Options for writing a KV entry. Set the \&quot;cas\&quot; value to use a Check-And-Set operation. If not set the write will be allowed. If set to 0 a write will only be allowed if the key doesn’t exist. If the index is non-zero the write will only be allowed if the key’s current version matches the version specified in the cas parameter.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
 
-
         public Object Options { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If provided during a read, the value at the version number will be returned</value>
         [DataMember(Name = "version", EmitDefaultValue = false)]
-
 
         public int _Version { get; set; }
 

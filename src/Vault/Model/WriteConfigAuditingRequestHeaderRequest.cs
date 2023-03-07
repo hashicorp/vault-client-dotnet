@@ -52,7 +52,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "hmac", EmitDefaultValue = true)]
 
-
         public bool Hmac { get; set; }
 
 

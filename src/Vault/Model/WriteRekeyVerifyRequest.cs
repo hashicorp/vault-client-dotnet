@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Specifies a single unseal share key from the new set of shares.</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
 
-
         public string Key { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies the nonce of the rekey verification operation.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
-
 
         public string Nonce { get; set; }
 

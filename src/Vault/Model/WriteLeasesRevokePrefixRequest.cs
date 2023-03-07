@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Whether or not to perform the revocation synchronously</value>
         [DataMember(Name = "sync", EmitDefaultValue = true)]
 
-
         public bool Sync { get; set; }
 
 

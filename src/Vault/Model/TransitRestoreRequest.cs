@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Backed up key data to be restored. This should be the output from the &#x27;backup/&#x27; endpoint.</value>
         [DataMember(Name = "backup", EmitDefaultValue = false)]
 
-
         public string Backup { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>If set and a key by the given name exists, force the restore operation and override the key.</value>
         [DataMember(Name = "force", EmitDefaultValue = true)]
 
-
         public bool Force { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, this will be the name of the restored key.</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-
 
         public string Name { get; set; }
 

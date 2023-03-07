@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>GCP IAM service account credentials JSON with permissions to create new service accounts and set IAM policies</value>
         [DataMember(Name = "credentials", EmitDefaultValue = false)]
 
-
         public string Credentials { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Maximum time a service account key is valid for. If &lt;&#x3D; 0, will use system default.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Default lease for generated keys. If &lt;&#x3D; 0, will use system default.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

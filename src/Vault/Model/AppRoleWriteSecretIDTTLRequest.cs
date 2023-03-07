@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Duration in seconds after which the issued SecretID should expire. Defaults to 0, meaning no expiration.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
 
-
         public int SecretIdTtl { get; set; }
 
 

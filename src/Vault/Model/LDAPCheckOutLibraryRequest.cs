@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The length of time before the check-out will expire, in seconds.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-
         public int Ttl { get; set; }
 
 

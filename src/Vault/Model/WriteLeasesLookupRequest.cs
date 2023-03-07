@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
 
-
         public string LeaseId { get; set; }
 
 

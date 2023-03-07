@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Disable the default behavior of requiring that check-ins are performed by the entity that checked them out.</value>
         [DataMember(Name = "disable_check_in_enforcement", EmitDefaultValue = true)]
 
-
         public bool DisableCheckInEnforcement { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>The username/logon name for the service accounts with which this set will be associated.</value>
         [DataMember(Name = "service_account_names", EmitDefaultValue = false)]
 
-
         public List<string> ServiceAccountNames { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>In seconds, the amount of time a check-out should last. Defaults to 24 hours.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

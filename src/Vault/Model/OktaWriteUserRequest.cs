@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>List of groups associated with the user.</value>
         [DataMember(Name = "groups", EmitDefaultValue = false)]
 
-
         public List<string> Groups { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of policies associated with the user.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
-
 
         public List<string> Policies { get; set; }
 

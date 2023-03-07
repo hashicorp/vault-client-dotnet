@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>Identifier of the entity from which the MFA method secret needs to be removed.</value>
         [DataMember(Name = "entity_id", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string EntityId { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string MethodId { get; set; }
 

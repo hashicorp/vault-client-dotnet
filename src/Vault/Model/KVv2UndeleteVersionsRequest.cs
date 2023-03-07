@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The versions to unarchive. The versions will be restored and their data will be returned on normal get requests.</value>
         [DataMember(Name = "versions", EmitDefaultValue = false)]
 
-
         public List<int> Versions { get; set; }
 
 

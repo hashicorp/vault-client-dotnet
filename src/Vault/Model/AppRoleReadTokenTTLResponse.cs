@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-
         public int TokenTtl { get; set; }
 
 

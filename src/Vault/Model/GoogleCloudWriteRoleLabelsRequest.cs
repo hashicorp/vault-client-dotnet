@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>BoundLabels to add (in $key:$value)</value>
         [DataMember(Name = "add", EmitDefaultValue = false)]
 
-
         public List<string> Add { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Label key values to remove</value>
         [DataMember(Name = "remove", EmitDefaultValue = false)]
-
 
         public List<string> Remove { get; set; }
 

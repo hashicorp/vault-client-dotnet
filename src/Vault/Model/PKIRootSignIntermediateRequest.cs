@@ -70,7 +70,6 @@ namespace Vault.Model
         /// <value>Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.</value>
 
         [DataMember(Name = "format", EmitDefaultValue = false)]
-
         public FormatEnum? Format { get; set; }
 
 
@@ -134,7 +133,6 @@ namespace Vault.Model
         /// <value>Format for the returned private key. Generally the default will be controlled by the \&quot;format\&quot; parameter as either base64-encoded DER or PEM-encoded DER. However, this can be set to \&quot;pkcs8\&quot; to have the returned private key contain base64-encoded pkcs8 or PEM-encoded pkcs8 instead. Defaults to \&quot;der\&quot;.</value>
 
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
-
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
 
 
@@ -292,7 +290,6 @@ namespace Vault.Model
         /// <value>The requested Subject Alternative Names, if any, in a comma-delimited list. May contain both DNS names and email addresses.</value>
         [DataMember(Name = "alt_names", EmitDefaultValue = false)]
 
-
         public string AltNames { get; set; }
 
 
@@ -301,7 +298,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The requested common name; if you want more than one, specify the alternative names in the alt_names map. If not specified when signing, the common name will be taken from the CSR; other names must still be specified in alt_names or ip_sans.</value>
         [DataMember(Name = "common_name", EmitDefaultValue = false)]
-
 
         public string CommonName { get; set; }
 
@@ -312,7 +308,6 @@ namespace Vault.Model
         /// <value>If set, Country will be set to this value.</value>
         [DataMember(Name = "country", EmitDefaultValue = false)]
 
-
         public List<string> Country { get; set; }
 
 
@@ -321,7 +316,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM-format CSR to be signed.</value>
         [DataMember(Name = "csr", EmitDefaultValue = false)]
-
 
         public string Csr { get; set; }
 
@@ -332,7 +326,6 @@ namespace Vault.Model
         /// <value>If true, the Common Name will not be included in DNS or Email Subject Alternate Names. Defaults to false (CN is included).</value>
         [DataMember(Name = "exclude_cn_from_sans", EmitDefaultValue = true)]
 
-
         public bool ExcludeCnFromSans { get; set; }
 
 
@@ -341,7 +334,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The requested IP SANs, if any, in a comma-delimited list</value>
         [DataMember(Name = "ip_sans", EmitDefaultValue = false)]
-
 
         public List<string> IpSans { get; set; }
 
@@ -352,7 +344,6 @@ namespace Vault.Model
         /// <value>Provide a name to the generated or existing issuer, the name must be unique across all issuers and not be the reserved value &#x27;default&#x27;</value>
         [DataMember(Name = "issuer_name", EmitDefaultValue = false)]
 
-
         public string IssuerName { get; set; }
 
 
@@ -361,7 +352,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</value>
         [DataMember(Name = "issuer_ref", EmitDefaultValue = false)]
-
 
         public string IssuerRef { get; set; }
 
@@ -372,7 +362,6 @@ namespace Vault.Model
         /// <value>If set, Locality will be set to this value.</value>
         [DataMember(Name = "locality", EmitDefaultValue = false)]
 
-
         public List<string> Locality { get; set; }
 
 
@@ -381,7 +370,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum allowable path length</value>
         [DataMember(Name = "max_path_length", EmitDefaultValue = false)]
-
 
         public int MaxPathLength { get; set; }
 
@@ -392,7 +380,6 @@ namespace Vault.Model
         /// <value>Set the not after field of the certificate with specified date value. The value format should be given in UTC format YYYY-MM-ddTHH:MM:SSZ</value>
         [DataMember(Name = "not_after", EmitDefaultValue = false)]
 
-
         public string NotAfter { get; set; }
 
 
@@ -401,7 +388,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The duration before now which the certificate needs to be backdated by.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
-
 
         public int NotBeforeDuration { get; set; }
 
@@ -412,7 +398,6 @@ namespace Vault.Model
         /// <value>If set, O (Organization) will be set to this value.</value>
         [DataMember(Name = "organization", EmitDefaultValue = false)]
 
-
         public List<string> Organization { get; set; }
 
 
@@ -421,7 +406,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Requested other SANs, in an array with the format &lt;oid&gt;;UTF8:&lt;utf8 string value&gt; for each entry.</value>
         [DataMember(Name = "other_sans", EmitDefaultValue = false)]
-
 
         public List<string> OtherSans { get; set; }
 
@@ -432,7 +416,6 @@ namespace Vault.Model
         /// <value>If set, OU (OrganizationalUnit) will be set to this value.</value>
         [DataMember(Name = "ou", EmitDefaultValue = false)]
 
-
         public List<string> Ou { get; set; }
 
 
@@ -441,7 +424,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Domains for which this certificate is allowed to sign or issue child certificates. If set, all DNS names (subject and alt) on child certs must be exact matches or subsets of the given domains (see https://tools.ietf.org/html/rfc5280#section-4.2.1.10).</value>
         [DataMember(Name = "permitted_dns_domains", EmitDefaultValue = false)]
-
 
         public List<string> PermittedDnsDomains { get; set; }
 
@@ -452,7 +434,6 @@ namespace Vault.Model
         /// <value>If set, Postal Code will be set to this value.</value>
         [DataMember(Name = "postal_code", EmitDefaultValue = false)]
 
-
         public List<string> PostalCode { get; set; }
 
 
@@ -461,7 +442,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, Province will be set to this value.</value>
         [DataMember(Name = "province", EmitDefaultValue = false)]
-
 
         public List<string> Province { get; set; }
 
@@ -472,7 +452,6 @@ namespace Vault.Model
         /// <value>The Subject&#x27;s requested serial number, if any. See RFC 4519 Section 2.31 &#x27;serialNumber&#x27; for a description of this field. If you want more than one, specify alternative names in the alt_names map using OID 2.5.4.5. This has no impact on the final certificate&#x27;s Serial Number field.</value>
         [DataMember(Name = "serial_number", EmitDefaultValue = false)]
 
-
         public string SerialNumber { get; set; }
 
 
@@ -481,7 +460,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of bits to use in the signature algorithm; accepts 256 for SHA-2-256, 384 for SHA-2-384, and 512 for SHA-2-512. Defaults to 0 to automatically detect based on key length (SHA-2-256 for RSA keys, and matching the curve size for NIST P-Curves).</value>
         [DataMember(Name = "signature_bits", EmitDefaultValue = false)]
-
 
         public int SignatureBits { get; set; }
 
@@ -492,7 +470,6 @@ namespace Vault.Model
         /// <value>Value for the Subject Key Identifier field (RFC 5280 Section 4.2.1.2). This value should ONLY be used when cross-signing to mimic the existing certificate&#x27;s SKID value; this is necessary to allow certain TLS implementations (such as OpenSSL) which use SKID/AKID matches in chain building to restrict possible valid chains. Specified as a string in hex format. Default is empty, allowing Vault to automatically calculate the SKID according to method one in the above RFC section.</value>
         [DataMember(Name = "skid", EmitDefaultValue = false)]
 
-
         public string Skid { get; set; }
 
 
@@ -501,7 +478,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, Street Address will be set to this value.</value>
         [DataMember(Name = "street_address", EmitDefaultValue = false)]
-
 
         public List<string> StreetAddress { get; set; }
 
@@ -512,7 +488,6 @@ namespace Vault.Model
         /// <value>The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the mount max TTL. Note: this only has an effect when generating a CA cert or signing a CA cert, not when generating a CSR for an intermediate CA.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-
         public int Ttl { get; set; }
 
 
@@ -521,7 +496,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The requested URI SANs, if any, in a comma-delimited list.</value>
         [DataMember(Name = "uri_sans", EmitDefaultValue = false)]
-
 
         public List<string> UriSans { get; set; }
 
@@ -532,7 +506,6 @@ namespace Vault.Model
         /// <value>If true, then: 1) Subject information, including names and alternate names, will be preserved from the CSR rather than using values provided in the other parameters to this path; 2) Any key usages requested in the CSR will be added to the basic set of key usages used for CA certs signed by this path; for instance, the non-repudiation flag; 3) Extensions requested in the CSR will be copied into the issued certificate.</value>
         [DataMember(Name = "use_csr_values", EmitDefaultValue = true)]
 
-
         public bool UseCsrValues { get; set; }
 
 
@@ -541,7 +514,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false.</value>
         [DataMember(Name = "use_pss", EmitDefaultValue = true)]
-
 
         public bool UsePss { get; set; }
 

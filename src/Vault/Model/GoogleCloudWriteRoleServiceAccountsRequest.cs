@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Service-account emails or IDs to add.</value>
         [DataMember(Name = "add", EmitDefaultValue = false)]
 
-
         public List<string> Add { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Service-account emails or IDs to remove.</value>
         [DataMember(Name = "remove", EmitDefaultValue = false)]
-
 
         public List<string> Remove { get; set; }
 

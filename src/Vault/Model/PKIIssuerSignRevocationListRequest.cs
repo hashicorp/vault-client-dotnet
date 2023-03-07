@@ -87,7 +87,6 @@ namespace Vault.Model
         /// <value>The sequence number to be written within the CRL Number extension.</value>
         [DataMember(Name = "crl_number", EmitDefaultValue = false)]
 
-
         public int CrlNumber { get; set; }
 
 
@@ -96,7 +95,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Using a zero or greater value specifies the base CRL revision number to encode within a Delta CRL indicator extension, otherwise the extension will not be added.</value>
         [DataMember(Name = "delta_crl_base_number", EmitDefaultValue = false)]
-
 
         public int DeltaCrlBaseNumber { get; set; }
 
@@ -107,7 +105,6 @@ namespace Vault.Model
         /// <value>A list of maps containing extensions with keys id (string), critical (bool), value (string)</value>
         [DataMember(Name = "extensions", EmitDefaultValue = false)]
 
-
         public List<Object> Extensions { get; set; }
 
 
@@ -116,7 +113,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The format of the combined CRL, can be \&quot;pem\&quot; or \&quot;der\&quot;. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.</value>
         [DataMember(Name = "format", EmitDefaultValue = false)]
-
 
         public string Format { get; set; }
 
@@ -127,7 +123,6 @@ namespace Vault.Model
         /// <value>The amount of time the generated CRL should be valid; defaults to 72 hours.</value>
         [DataMember(Name = "next_update", EmitDefaultValue = false)]
 
-
         public string NextUpdate { get; set; }
 
 
@@ -136,7 +131,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A list of maps containing the keys serial_number (string), revocation_time (string), and extensions (map with keys id (string), critical (bool), value (string))</value>
         [DataMember(Name = "revoked_certs", EmitDefaultValue = false)]
-
 
         public List<Object> RevokedCerts { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>SecretID attached to the role.</value>
         [DataMember(Name = "secret_id", EmitDefaultValue = false)]
 
-
         public string SecretId { get; set; }
 
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The name of the certificate role to authenticate against.</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
 
-
         public string Name { get; set; }
 
 

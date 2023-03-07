@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>Comma separated string or list of CIDR blocks enforcing secret IDs to be used from specific set of IP addresses. If &#x27;bound_cidr_list&#x27; is set on the role, then the list of CIDR blocks listed here should be a subset of the CIDR blocks listed on the role.</value>
         [DataMember(Name = "cidr_list", EmitDefaultValue = false)]
 
-
         public List<string> CidrList { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Metadata to be tied to the SecretID. This should be a JSON formatted string containing metadata in key value pairs.</value>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
-
 
         public string Metadata { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>Number of times this SecretID can be used, after which the SecretID expires. Overrides secret_id_num_uses role option when supplied. May not be higher than role&#x27;s secret_id_num_uses.</value>
         [DataMember(Name = "num_uses", EmitDefaultValue = false)]
 
-
         public int NumUses { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>SecretID to be attached to the role.</value>
         [DataMember(Name = "secret_id", EmitDefaultValue = false)]
-
 
         public string SecretId { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. Should be a subset of the token CIDR blocks listed on the role, if any.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> TokenBoundCidrs { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds after which this SecretID expires. Overrides secret_id_ttl role option when supplied. May not be longer than role&#x27;s secret_id_ttl.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

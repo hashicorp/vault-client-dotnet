@@ -151,7 +151,6 @@ namespace Vault.Model
         /// <value>String or JSON list of allowed entity aliases. If set, specifies the entity aliases which are allowed to be used during token generation. This field supports globbing.</value>
         [DataMember(Name = "allowed_entity_aliases", EmitDefaultValue = false)]
 
-
         public List<string> AllowedEntityAliases { get; set; }
 
 
@@ -160,7 +159,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy names.</value>
         [DataMember(Name = "allowed_policies", EmitDefaultValue = false)]
-
 
         public List<string> AllowedPolicies { get; set; }
 
@@ -171,7 +169,6 @@ namespace Vault.Model
         /// <value>If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy name globs.</value>
         [DataMember(Name = "allowed_policies_glob", EmitDefaultValue = false)]
 
-
         public List<string> AllowedPoliciesGlob { get; set; }
 
 
@@ -181,8 +178,7 @@ namespace Vault.Model
         /// <value>Use &#x27;token_bound_cidrs&#x27; instead.</value>
         [DataMember(Name = "bound_cidrs", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> BoundCidrs { get; set; }
+        [Obsolete] public List<string> BoundCidrs { get; set; }
 
 
         /// <summary>
@@ -190,7 +186,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, successful token creation via this role will require that no policies in the given list are requested. The parameter is a comma-delimited string of policy names.</value>
         [DataMember(Name = "disallowed_policies", EmitDefaultValue = false)]
-
 
         public List<string> DisallowedPolicies { get; set; }
 
@@ -201,7 +196,6 @@ namespace Vault.Model
         /// <value>If set, successful token creation via this role will require that no requested policies glob match any of policies in this list. The parameter is a comma-delimited string of policy name globs.</value>
         [DataMember(Name = "disallowed_policies_glob", EmitDefaultValue = false)]
 
-
         public List<string> DisallowedPoliciesGlob { get; set; }
 
 
@@ -211,8 +205,7 @@ namespace Vault.Model
         /// <value>Use &#x27;token_explicit_max_ttl&#x27; instead.</value>
         [DataMember(Name = "explicit_max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int ExplicitMaxTtl { get; set; }
+        [Obsolete] public int ExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -220,7 +213,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, tokens created via this role will be orphan tokens (have no parent)</value>
         [DataMember(Name = "orphan", EmitDefaultValue = true)]
-
 
         public bool Orphan { get; set; }
 
@@ -231,7 +223,6 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#x27;revoke-prefix&#x27; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w</value>
         [DataMember(Name = "path_suffix", EmitDefaultValue = false)]
 
-
         public string PathSuffix { get; set; }
 
 
@@ -241,8 +232,7 @@ namespace Vault.Model
         /// <value>Use &#x27;token_period&#x27; instead.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -250,7 +240,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Tokens created via this role will be renewable or not according to this value. Defaults to \&quot;true\&quot;.</value>
         [DataMember(Name = "renewable", EmitDefaultValue = true)]
-
 
         public bool Renewable { get; set; }
 
@@ -261,7 +250,6 @@ namespace Vault.Model
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> TokenBoundCidrs { get; set; }
 
 
@@ -270,7 +258,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenExplicitMaxTtl { get; set; }
 
@@ -281,7 +268,6 @@ namespace Vault.Model
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
 
-
         public bool TokenNoDefaultPolicy { get; set; }
 
 
@@ -290,7 +276,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
-
 
         public int TokenNumUses { get; set; }
 
@@ -301,7 +286,6 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-
         public int TokenPeriod { get; set; }
 
 
@@ -310,7 +294,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
-
 
         public string TokenType { get; set; }
 

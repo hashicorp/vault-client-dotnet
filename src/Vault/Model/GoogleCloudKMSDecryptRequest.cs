@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Optional data that was specified during encryption of this payload.</value>
         [DataMember(Name = "additional_authenticated_data", EmitDefaultValue = false)]
 
-
         public string AdditionalAuthenticatedData { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Ciphertext to decrypt as previously returned from an encrypt operation. This must be base64-encoded ciphertext as previously returned from an encrypt operation.</value>
         [DataMember(Name = "ciphertext", EmitDefaultValue = false)]
 
-
         public string Ciphertext { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Integer version of the crypto key version to use for decryption. This is required for asymmetric keys. For symmetric keys, Cloud KMS will choose the correct version automatically.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
-
 
         public int KeyVersion { get; set; }
 

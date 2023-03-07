@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string MethodId { get; set; }
 
 

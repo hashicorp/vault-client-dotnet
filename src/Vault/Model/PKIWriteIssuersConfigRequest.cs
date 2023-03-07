@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Reference (name or identifier) to the default issuer.</value>
         [DataMember(Name = "default", EmitDefaultValue = false)]
 
-
         public string Default { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false.</value>
         [DataMember(Name = "default_follows_latest_issuer", EmitDefaultValue = true)]
-
 
         public bool DefaultFollowsLatestIssuer { get; set; }
 

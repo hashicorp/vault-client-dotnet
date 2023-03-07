@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>PEM-format self-issued certificate to be signed.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
 
-
         public string Certificate { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, require the public key algorithm of the signer to match that of the self issued certificate.</value>
         [DataMember(Name = "require_matching_certificate_algorithms", EmitDefaultValue = true)]
-
 
         public bool RequireMatchingCertificateAlgorithms { get; set; }
 

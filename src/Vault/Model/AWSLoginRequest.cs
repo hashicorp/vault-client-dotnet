@@ -101,7 +101,6 @@ namespace Vault.Model
         /// <value>HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request. Currently, POST is the only supported value</value>
         [DataMember(Name = "iam_http_request_method", EmitDefaultValue = false)]
 
-
         public string IamHttpRequestMethod { get; set; }
 
 
@@ -110,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64-encoded request body when auth_type is iam. This must match the request body included in the signature.</value>
         [DataMember(Name = "iam_request_body", EmitDefaultValue = false)]
-
 
         public string IamRequestBody { get; set; }
 
@@ -121,7 +119,6 @@ namespace Vault.Model
         /// <value>Key/value pairs of headers for use in the sts:GetCallerIdentity HTTP requests headers when auth_type is iam. Can be either a Base64-encoded, JSON-serialized string, or a JSON object of key/value pairs. This must at a minimum include the headers over which AWS has included a signature.</value>
         [DataMember(Name = "iam_request_headers", EmitDefaultValue = false)]
 
-
         public string IamRequestHeaders { get; set; }
 
 
@@ -130,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64-encoded full URL against which to make the AWS request when using iam auth_type.</value>
         [DataMember(Name = "iam_request_url", EmitDefaultValue = false)]
-
 
         public string IamRequestUrl { get; set; }
 
@@ -141,7 +137,6 @@ namespace Vault.Model
         /// <value>Base64 encoded EC2 instance identity document. This needs to be supplied along with the &#x27;signature&#x27; parameter. If using &#x27;curl&#x27; for fetching the identity document, consider using the option &#x27;-w 0&#x27; while piping the output to &#x27;base64&#x27; binary.</value>
         [DataMember(Name = "identity", EmitDefaultValue = false)]
 
-
         public string Identity { get; set; }
 
 
@@ -150,7 +145,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The nonce to be used for subsequent login requests when auth_type is ec2. If this parameter is not specified at all and if reauthentication is allowed, then the backend will generate a random nonce, attaches it to the instance&#x27;s identity access list entry and returns the nonce back as part of auth metadata. This value should be used with further login requests, to establish client authenticity. Clients can choose to set a custom nonce if preferred, in which case, it is recommended that clients provide a strong nonce. If a nonce is provided but with an empty value, it indicates intent to disable reauthentication. Note that, when &#x27;disallow_reauthentication&#x27; option is enabled on either the role or the role tag, the &#x27;nonce&#x27; holds no significance.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
-
 
         public string Nonce { get; set; }
 
@@ -161,7 +155,6 @@ namespace Vault.Model
         /// <value>PKCS7 signature of the identity document when using an auth_type of ec2.</value>
         [DataMember(Name = "pkcs7", EmitDefaultValue = false)]
 
-
         public string Pkcs7 { get; set; }
 
 
@@ -171,7 +164,6 @@ namespace Vault.Model
         /// <value>Name of the role against which the login is being attempted. If &#x27;role&#x27; is not specified, then the login endpoint looks for a role bearing the name of the AMI ID of the EC2 instance that is trying to login. If a matching role is not found, login fails.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
 
-
         public string Role { get; set; }
 
 
@@ -180,7 +172,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64 encoded SHA256 RSA signature of the instance identity document. This needs to be supplied along with &#x27;identity&#x27; parameter.</value>
         [DataMember(Name = "signature", EmitDefaultValue = false)]
-
 
         public string Signature { get; set; }
 

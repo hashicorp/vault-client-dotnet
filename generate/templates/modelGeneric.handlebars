@@ -12,7 +12,7 @@
         {{#with description}}/// <value>{{.}}</value>{{/with}}
         {{#unless conditionalSerialization}}
         [DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
-        {{#if deprecated}}[Obsolete]{{/if}}
+        {{#if deprecated}}[Obsolete]{{/if ~}}
         public {{{complexType}}}{{#unless complexType}}{{{datatypeWithEnum}}}{{/unless}}{{#unless isContainer}}{{#unless required}}?{{/unless}}{{/unless}} {{name}} { get; set; }
         {{#if isReadOnly}}
         /// <summary>
@@ -25,7 +25,7 @@
         }{{/if}}{{/unless}}
         {{#with conditionalSerialization}}{{#if isReadOnly}}
         [DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
-        {{#if deprecated}}[Obsolete]{{/if}}
+        {{#if deprecated}}[Obsolete]{{/if ~}}
         public {{{complexType}}}{{#unless complexType}}{{{datatypeWithEnum}}}{{/unless}}{{#unless isContainer}}{{#unless required}}?{{/unless}}{{/unless}} {{name}} { get; set; }
 
         /// <summary>
@@ -38,7 +38,7 @@
         }{{/if}}
 
         {{#unless isReadOnly}}[DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
-        {{#if deprecated}}[Obsolete]{{/if}}
+        {{#if deprecated}}[Obsolete]{{/if ~}}
         public {{{complexType}}}{{#unless complexType}}{{{datatypeWithEnum}}}{{/unless}}{{#unless isContainer}}{{#unless required}}?{{/unless}}{{/unless}} {{name}}
         {
             get{ return _{{name}};}
@@ -110,7 +110,7 @@
         /// <value>{{.}}</value>{{/with}}
         {{#unless conditionalSerialization}}[DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
         {{#if isDate}}[JsonConverter(typeof(OpenAPIDateConverter))]{{/if}}
-        {{#if deprecated}}[Obsolete]{{/if}}
+        {{#if deprecated}}[Obsolete]{{/if ~}}
         public {{{dataType}}} {{name}} { get; {{#if isReadOnly}}private {{/if}}set; }
 
         {{#if isReadOnly}}/// <summary>

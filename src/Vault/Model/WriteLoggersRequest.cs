@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Log verbosity level. Supported values (in order of detail) are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, and \&quot;error\&quot;.</value>
         [DataMember(Name = "level", EmitDefaultValue = false)]
 
-
         public string Level { get; set; }
 
 

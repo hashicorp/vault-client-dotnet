@@ -73,7 +73,6 @@ namespace Vault.Model
         /// <value>Bindings configuration string.</value>
         [DataMember(Name = "bindings", EmitDefaultValue = false)]
 
-
         public string Bindings { get; set; }
 
 
@@ -82,7 +81,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the GCP project that this roleset&#x27;s service account will belong to.</value>
         [DataMember(Name = "project", EmitDefaultValue = false)]
-
 
         public string Project { get; set; }
 
@@ -93,7 +91,6 @@ namespace Vault.Model
         /// <value>Type of secret generated for this role set. Defaults to &#x27;access_token&#x27;</value>
         [DataMember(Name = "secret_type", EmitDefaultValue = false)]
 
-
         public string SecretType { get; set; }
 
 
@@ -102,7 +99,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of OAuth scopes to assign to credentials generated under this role set</value>
         [DataMember(Name = "token_scopes", EmitDefaultValue = false)]
-
 
         public List<string> TokenScopes { get; set; }
 

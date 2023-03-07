@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Token to revoke (request body)</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
 
-
         public string Token { get; set; }
 
 

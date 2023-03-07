@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>A signed JWT</value>
         [DataMember(Name = "jwt", EmitDefaultValue = false)]
 
-
         public string Jwt { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The resource group from the instance.</value>
         [DataMember(Name = "resource_group_name", EmitDefaultValue = false)]
-
 
         public string ResourceGroupName { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>The token role.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
 
-
         public string Role { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The subscription id for the instance.</value>
         [DataMember(Name = "subscription_id", EmitDefaultValue = false)]
-
 
         public string SubscriptionId { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>The name of the virtual machine. This value is ignored if vmss_name is specified.</value>
         [DataMember(Name = "vm_name", EmitDefaultValue = false)]
 
-
         public string VmName { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The name of the virtual machine scale set the instance is in.</value>
         [DataMember(Name = "vmss_name", EmitDefaultValue = false)]
-
 
         public string VmssName { get; set; }
 

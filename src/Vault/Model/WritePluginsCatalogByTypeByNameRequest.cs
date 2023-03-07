@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>The args passed to plugin command.</value>
         [DataMember(Name = "args", EmitDefaultValue = false)]
 
-
         public List<string> Args { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The command used to start the plugin. The executable defined in this command must exist in vault&#x27;s plugin directory.</value>
         [DataMember(Name = "command", EmitDefaultValue = false)]
-
 
         public string Command { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>The environment variables passed to plugin command. Each entry is of the form \&quot;key&#x3D;value\&quot;.</value>
         [DataMember(Name = "env", EmitDefaultValue = false)]
 
-
         public List<string> Env { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>The SHA256 sum of the executable used in the command field. This should be HEX encoded.</value>
         [DataMember(Name = "sha256", EmitDefaultValue = false)]
 
-
         public string Sha256 { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The semantic version of the plugin to use.</value>
         [DataMember(Name = "version", EmitDefaultValue = false)]
-
 
         public string _Version { get; set; }
 

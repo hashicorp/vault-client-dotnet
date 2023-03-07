@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The rules of the policy.</value>
         [DataMember(Name = "policy", EmitDefaultValue = false)]
 
-
         public string Policy { get; set; }
 
 
@@ -69,8 +68,7 @@ namespace Vault.Model
         /// <value>The rules of the policy.</value>
         [DataMember(Name = "rules", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string Rules { get; set; }
+        [Obsolete] public string Rules { get; set; }
 
 
 

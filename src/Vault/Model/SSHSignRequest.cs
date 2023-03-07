@@ -91,7 +91,6 @@ namespace Vault.Model
         /// <value>Type of certificate to be created; either \&quot;user\&quot; or \&quot;host\&quot;.</value>
         [DataMember(Name = "cert_type", EmitDefaultValue = false)]
 
-
         public string CertType { get; set; }
 
 
@@ -100,7 +99,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Critical options that the certificate should be signed for.</value>
         [DataMember(Name = "critical_options", EmitDefaultValue = false)]
-
 
         public Object CriticalOptions { get; set; }
 
@@ -111,7 +109,6 @@ namespace Vault.Model
         /// <value>Extensions that the certificate should be signed for.</value>
         [DataMember(Name = "extensions", EmitDefaultValue = false)]
 
-
         public Object Extensions { get; set; }
 
 
@@ -120,7 +117,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Key id that the created certificate should have. If not specified, the display name of the token will be used.</value>
         [DataMember(Name = "key_id", EmitDefaultValue = false)]
-
 
         public string KeyId { get; set; }
 
@@ -131,7 +127,6 @@ namespace Vault.Model
         /// <value>SSH public key that should be signed.</value>
         [DataMember(Name = "public_key", EmitDefaultValue = false)]
 
-
         public string PublicKey { get; set; }
 
 
@@ -141,7 +136,6 @@ namespace Vault.Model
         /// <value>The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-
         public int Ttl { get; set; }
 
 
@@ -150,7 +144,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Valid principals, either usernames or hostnames, that the certificate should be signed for.</value>
         [DataMember(Name = "valid_principals", EmitDefaultValue = false)]
-
 
         public string ValidPrincipals { get; set; }
 

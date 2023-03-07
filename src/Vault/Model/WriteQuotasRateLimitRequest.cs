@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>If set, when a client reaches a rate limit threshold, the client will be prohibited from any further requests until after the &#x27;block_interval&#x27; has elapsed.</value>
         [DataMember(Name = "block_interval", EmitDefaultValue = false)]
 
-
         public int BlockInterval { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The duration to enforce rate limiting for (default &#x27;1s&#x27;).</value>
         [DataMember(Name = "interval", EmitDefaultValue = false)]
-
 
         public int Interval { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>Path of the mount or namespace to apply the quota. A blank path configures a global quota. For example namespace1/ adds a quota to a full namespace, namespace1/auth/userpass adds a quota to userpass in namespace1.</value>
         [DataMember(Name = "path", EmitDefaultValue = false)]
 
-
         public string Path { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum number of requests in a given interval to be allowed by the quota rule. The &#x27;rate&#x27; must be positive.</value>
         [DataMember(Name = "rate", EmitDefaultValue = false)]
-
 
         public float Rate { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>Login role to apply this quota to. Note that when set, path must be configured to a valid auth method with a concept of roles.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
 
-
         public string Role { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of the quota rule.</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

@@ -97,7 +97,6 @@ namespace Vault.Model
         /// <value>Enables taking a backup of the named key in plaintext format. Once set, this cannot be disabled.</value>
         [DataMember(Name = "allow_plaintext_backup", EmitDefaultValue = true)]
 
-
         public bool AllowPlaintextBackup { get; set; }
 
 
@@ -106,7 +105,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key.</value>
         [DataMember(Name = "auto_rotate_period", EmitDefaultValue = false)]
-
 
         public int AutoRotatePeriod { get; set; }
 
@@ -117,7 +115,6 @@ namespace Vault.Model
         /// <value>Base64 encoded context for key derivation. When reading a key with key derivation enabled, if the key type supports public keys, this will return the public key for the given context.</value>
         [DataMember(Name = "context", EmitDefaultValue = false)]
 
-
         public string Context { get; set; }
 
 
@@ -126,7 +123,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether to support convergent encryption. This is only supported when using a key with key derivation enabled and will require all requests to carry both a context and 96-bit (12-byte) nonce. The given nonce will be used in place of a randomly generated nonce. As a result, when the same context and nonce are supplied, the same ciphertext is generated. It is *very important* when using this mode that you ensure that all nonces are unique for a given context. Failing to do so will severely impact the ciphertext&#x27;s security.</value>
         [DataMember(Name = "convergent_encryption", EmitDefaultValue = true)]
-
 
         public bool ConvergentEncryption { get; set; }
 
@@ -137,7 +133,6 @@ namespace Vault.Model
         /// <value>Enables key derivation mode. This allows for per-transaction unique keys for encryption operations.</value>
         [DataMember(Name = "derived", EmitDefaultValue = true)]
 
-
         public bool Derived { get; set; }
 
 
@@ -146,7 +141,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported.</value>
         [DataMember(Name = "exportable", EmitDefaultValue = true)]
-
 
         public bool Exportable { get; set; }
 
@@ -157,7 +151,6 @@ namespace Vault.Model
         /// <value>The key size in bytes for the algorithm. Only applies to HMAC and must be no fewer than 32 bytes and no more than 512</value>
         [DataMember(Name = "key_size", EmitDefaultValue = false)]
 
-
         public int KeySize { get; set; }
 
 
@@ -166,7 +159,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of key to create. Currently, \&quot;aes128-gcm96\&quot; (symmetric), \&quot;aes256-gcm96\&quot; (symmetric), \&quot;ecdsa-p256\&quot; (asymmetric), \&quot;ecdsa-p384\&quot; (asymmetric), \&quot;ecdsa-p521\&quot; (asymmetric), \&quot;ed25519\&quot; (asymmetric), \&quot;rsa-2048\&quot; (asymmetric), \&quot;rsa-3072\&quot; (asymmetric), \&quot;rsa-4096\&quot; (asymmetric) are supported. Defaults to \&quot;aes256-gcm96\&quot;.</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

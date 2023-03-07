@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>PEM-format, concatenated unencrypted secret-key (optional) and certificates.</value>
         [DataMember(Name = "pem_bundle", EmitDefaultValue = false)]
 
-
         public string PemBundle { get; set; }
 
 

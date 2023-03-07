@@ -101,7 +101,6 @@ namespace Vault.Model
         /// <value>Configuration for this mount, such as default_lease_ttl and max_lease_ttl.</value>
         [DataMember(Name = "config", EmitDefaultValue = false)]
 
-
         public Object Config { get; set; }
 
 
@@ -110,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>User-friendly description for this mount.</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
-
 
         public string Description { get; set; }
 
@@ -121,7 +119,6 @@ namespace Vault.Model
         /// <value>Whether to give the mount access to Vault&#x27;s external entropy.</value>
         [DataMember(Name = "external_entropy_access", EmitDefaultValue = true)]
 
-
         public bool ExternalEntropyAccess { get; set; }
 
 
@@ -130,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Mark the mount as a local mount, which is not replicated and is unaffected by replication.</value>
         [DataMember(Name = "local", EmitDefaultValue = true)]
-
 
         public bool Local { get; set; }
 
@@ -141,7 +137,6 @@ namespace Vault.Model
         /// <value>The options to pass into the backend. Should be a json object with string keys and values.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
 
-
         public Object Options { get; set; }
 
 
@@ -150,7 +145,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the plugin to mount based from the name registered in the plugin catalog.</value>
         [DataMember(Name = "plugin_name", EmitDefaultValue = false)]
-
 
         public string PluginName { get; set; }
 
@@ -161,7 +155,6 @@ namespace Vault.Model
         /// <value>The semantic version of the plugin to use.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
 
-
         public string PluginVersion { get; set; }
 
 
@@ -171,7 +164,6 @@ namespace Vault.Model
         /// <value>Whether to turn on seal wrapping for the mount.</value>
         [DataMember(Name = "seal_wrap", EmitDefaultValue = true)]
 
-
         public bool SealWrap { get; set; }
 
 
@@ -180,7 +172,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of the backend. Example: \&quot;passthrough\&quot;</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

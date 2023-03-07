@@ -103,7 +103,6 @@ namespace Vault.Model
         /// <value>If set to true, enables automatic rebuilding of the CRL</value>
         [DataMember(Name = "auto_rebuild", EmitDefaultValue = true)]
 
-
         public bool AutoRebuild { get; set; }
 
 
@@ -112,7 +111,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The time before the CRL expires to automatically rebuild it, when enabled. Must be shorter than the CRL expiry. Defaults to 12h.</value>
         [DataMember(Name = "auto_rebuild_grace_period", EmitDefaultValue = false)]
-
 
         public string AutoRebuildGracePeriod { get; set; }
 
@@ -123,7 +121,6 @@ namespace Vault.Model
         /// <value>The time between delta CRL rebuilds if a new revocation has occurred. Must be shorter than the CRL expiry. Defaults to 15m.</value>
         [DataMember(Name = "delta_rebuild_interval", EmitDefaultValue = false)]
 
-
         public string DeltaRebuildInterval { get; set; }
 
 
@@ -132,7 +129,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set to true, disables generating the CRL entirely.</value>
         [DataMember(Name = "disable", EmitDefaultValue = true)]
-
 
         public bool Disable { get; set; }
 
@@ -143,7 +139,6 @@ namespace Vault.Model
         /// <value>Whether to enable delta CRLs between authoritative CRL rebuilds</value>
         [DataMember(Name = "enable_delta", EmitDefaultValue = true)]
 
-
         public bool EnableDelta { get; set; }
 
 
@@ -152,7 +147,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The amount of time the generated CRL should be valid; defaults to 72 hours</value>
         [DataMember(Name = "expiry", EmitDefaultValue = false)]
-
 
         public string Expiry { get; set; }
 
@@ -163,7 +157,6 @@ namespace Vault.Model
         /// <value>If set to true, ocsp unauthorized responses will be returned.</value>
         [DataMember(Name = "ocsp_disable", EmitDefaultValue = true)]
 
-
         public bool OcspDisable { get; set; }
 
 
@@ -172,7 +165,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The amount of time an OCSP response will be valid (controls the NextUpdate field); defaults to 12 hours</value>
         [DataMember(Name = "ocsp_expiry", EmitDefaultValue = false)]
-
 
         public string OcspExpiry { get; set; }
 

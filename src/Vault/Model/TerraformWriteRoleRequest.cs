@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>Maximum time for role. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the Terraform Cloud or Enterprise organization</value>
         [DataMember(Name = "organization", EmitDefaultValue = false)]
-
 
         public string Organization { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>ID of the Terraform Cloud or Enterprise team under organization (e.g., settings/teams/team-xxxxxxxxxxxxx)</value>
         [DataMember(Name = "team_id", EmitDefaultValue = false)]
 
-
         public string TeamId { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>Default lease for generated credentials. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-
         public int Ttl { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>ID of the Terraform Cloud or Enterprise user (e.g., user-xxxxxxxxxxxxxxxx)</value>
         [DataMember(Name = "user_id", EmitDefaultValue = false)]
-
 
         public string UserId { get; set; }
 

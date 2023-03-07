@@ -85,7 +85,6 @@ namespace Vault.Model
         /// <value>Consul server address</value>
         [DataMember(Name = "address", EmitDefaultValue = false)]
 
-
         public string Address { get; set; }
 
 
@@ -94,7 +93,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.</value>
         [DataMember(Name = "ca_cert", EmitDefaultValue = false)]
-
 
         public string CaCert { get; set; }
 
@@ -105,7 +103,6 @@ namespace Vault.Model
         /// <value>Client certificate used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.</value>
         [DataMember(Name = "client_cert", EmitDefaultValue = false)]
 
-
         public string ClientCert { get; set; }
 
 
@@ -114,7 +111,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Client key used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.</value>
         [DataMember(Name = "client_key", EmitDefaultValue = false)]
-
 
         public string ClientKey { get; set; }
 
@@ -125,7 +121,6 @@ namespace Vault.Model
         /// <value>URI scheme for the Consul address</value>
         [DataMember(Name = "scheme", EmitDefaultValue = false)]
 
-
         public string Scheme { get; set; }
 
 
@@ -134,7 +129,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Token for API calls</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
-
 
         public string Token { get; set; }
 

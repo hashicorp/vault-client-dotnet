@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Deprecated: Please use \&quot;secret_id_bound_cidrs\&quot; instead. Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation.</value>
         [DataMember(Name = "bound_cidr_list", EmitDefaultValue = false)]
 
-
         public List<string> BoundCidrList { get; set; }
 
 

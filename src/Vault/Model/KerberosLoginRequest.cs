@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>SPNEGO Authorization header. Required.</value>
         [DataMember(Name = "authorization", EmitDefaultValue = false)]
 
-
         public string Authorization { get; set; }
 
 

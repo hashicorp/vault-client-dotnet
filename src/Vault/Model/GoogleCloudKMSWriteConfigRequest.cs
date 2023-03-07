@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The credentials to use for authenticating to Google Cloud. Leave this blank to use the Default Application Credentials or instance metadata authentication.</value>
         [DataMember(Name = "credentials", EmitDefaultValue = false)]
 
-
         public string Credentials { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The list of full-URL scopes to request when authenticating. By default, this requests https://www.googleapis.com/auth/cloudkms.</value>
         [DataMember(Name = "scopes", EmitDefaultValue = false)]
-
 
         public List<string> Scopes { get; set; }
 

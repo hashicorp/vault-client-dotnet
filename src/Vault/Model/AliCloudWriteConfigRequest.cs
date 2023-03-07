@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Access key with appropriate permissions.</value>
         [DataMember(Name = "access_key", EmitDefaultValue = false)]
 
-
         public string AccessKey { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Secret key with appropriate permissions.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
-
 
         public string SecretKey { get; set; }
 

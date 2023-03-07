@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Nonce provided if performing login that requires number verification challenge. Logins through the vault login CLI command will automatically generate a nonce.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
 
-
         public string Nonce { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Password for this user.</value>
         [DataMember(Name = "password", EmitDefaultValue = false)]
-
 
         public string Password { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Preferred factor provider.</value>
         [DataMember(Name = "provider", EmitDefaultValue = false)]
 
-
         public string Provider { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>TOTP passcode.</value>
         [DataMember(Name = "totp", EmitDefaultValue = false)]
-
 
         public string Totp { get; set; }
 

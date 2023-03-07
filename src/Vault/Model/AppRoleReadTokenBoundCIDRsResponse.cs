@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. Should be a subset of the token CIDR blocks listed on the role, if any.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> TokenBoundCidrs { get; set; }
 
 

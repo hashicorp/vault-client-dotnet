@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Returns multiple values if true</value>
         [DataMember(Name = "multivalue", EmitDefaultValue = true)]
 
-
         public bool Multivalue { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The values to set the header.</value>
         [DataMember(Name = "values", EmitDefaultValue = false)]
-
 
         public List<string> Values { get; set; }
 

@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of tags for this role.</value>
         [DataMember(Name = "tags", EmitDefaultValue = false)]
 
-
         public string Tags { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>A nested map of virtual hosts and exchanges to topic permissions.</value>
         [DataMember(Name = "vhost_topics", EmitDefaultValue = false)]
 
-
         public string VhostTopics { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A map of virtual hosts to permissions.</value>
         [DataMember(Name = "vhosts", EmitDefaultValue = false)]
-
 
         public string Vhosts { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Size of cache, use 0 for an unlimited cache size, defaults to 0</value>
         [DataMember(Name = "size", EmitDefaultValue = false)]
 
-
         public int Size { get; set; }
 
 

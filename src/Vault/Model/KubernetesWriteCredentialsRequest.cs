@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>If true, generate a ClusterRoleBinding to grant permissions across the whole cluster instead of within a namespace. Requires the Vault role to have kubernetes_role_type set to ClusterRole.</value>
         [DataMember(Name = "cluster_role_binding", EmitDefaultValue = true)]
 
-
         public bool ClusterRoleBinding { get; set; }
 
 
@@ -87,7 +86,6 @@ namespace Vault.Model
         /// <value>The name of the Kubernetes namespace in which to generate the credentials</value>
         [DataMember(Name = "kubernetes_namespace", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string KubernetesNamespace { get; set; }
 
 
@@ -96,7 +94,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The TTL of the generated credentials</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

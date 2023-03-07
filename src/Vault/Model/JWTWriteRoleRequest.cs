@@ -237,7 +237,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of allowed values for redirect_uri</value>
         [DataMember(Name = "allowed_redirect_uris", EmitDefaultValue = false)]
 
-
         public List<string> AllowedRedirectUris { get; set; }
 
 
@@ -246,7 +245,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of &#x27;aud&#x27; claims that are valid for login; any match is sufficient</value>
         [DataMember(Name = "bound_audiences", EmitDefaultValue = false)]
-
 
         public List<string> BoundAudiences { get; set; }
 
@@ -257,8 +255,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_bound_cidrs\&quot; instead. If this and \&quot;token_bound_cidrs\&quot; are both specified, only \&quot;token_bound_cidrs\&quot; will be used.</value>
         [DataMember(Name = "bound_cidrs", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> BoundCidrs { get; set; }
+        [Obsolete] public List<string> BoundCidrs { get; set; }
 
 
         /// <summary>
@@ -266,7 +263,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Map of claims/values which must match for login</value>
         [DataMember(Name = "bound_claims", EmitDefaultValue = false)]
-
 
         public Object BoundClaims { get; set; }
 
@@ -277,7 +273,6 @@ namespace Vault.Model
         /// <value>How to interpret values in the map of claims/values (which must match for login): allowed values are &#x27;string&#x27; or &#x27;glob&#x27;</value>
         [DataMember(Name = "bound_claims_type", EmitDefaultValue = false)]
 
-
         public string BoundClaimsType { get; set; }
 
 
@@ -286,7 +281,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The &#x27;sub&#x27; claim that is valid for login. Optional.</value>
         [DataMember(Name = "bound_subject", EmitDefaultValue = false)]
-
 
         public string BoundSubject { get; set; }
 
@@ -297,7 +291,6 @@ namespace Vault.Model
         /// <value>Mappings of claims (key) that will be copied to a metadata field (value)</value>
         [DataMember(Name = "claim_mappings", EmitDefaultValue = false)]
 
-
         public Object ClaimMappings { get; set; }
 
 
@@ -306,7 +299,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds of leeway when validating all claims to account for clock skew. Defaults to 60 (1 minute) if set to 0 and can be disabled if set to -1.</value>
         [DataMember(Name = "clock_skew_leeway", EmitDefaultValue = false)]
-
 
         public int ClockSkewLeeway { get; set; }
 
@@ -317,7 +309,6 @@ namespace Vault.Model
         /// <value>Duration in seconds of leeway when validating expiration of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1.</value>
         [DataMember(Name = "expiration_leeway", EmitDefaultValue = false)]
 
-
         public int ExpirationLeeway { get; set; }
 
 
@@ -326,7 +317,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The claim to use for the Identity group alias names</value>
         [DataMember(Name = "groups_claim", EmitDefaultValue = false)]
-
 
         public string GroupsClaim { get; set; }
 
@@ -337,7 +327,6 @@ namespace Vault.Model
         /// <value>Specifies the allowable elapsed time in seconds since the last time the user was actively authenticated.</value>
         [DataMember(Name = "max_age", EmitDefaultValue = false)]
 
-
         public int MaxAge { get; set; }
 
 
@@ -347,8 +336,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int MaxTtl { get; set; }
+        [Obsolete] public int MaxTtl { get; set; }
 
 
         /// <summary>
@@ -356,7 +344,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds of leeway when validating not before values of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1.</value>
         [DataMember(Name = "not_before_leeway", EmitDefaultValue = false)]
-
 
         public int NotBeforeLeeway { get; set; }
 
@@ -367,8 +354,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_num_uses\&quot; instead. If this and \&quot;token_num_uses\&quot; are both specified, only \&quot;token_num_uses\&quot; will be used.</value>
         [DataMember(Name = "num_uses", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int NumUses { get; set; }
+        [Obsolete] public int NumUses { get; set; }
 
 
         /// <summary>
@@ -376,7 +362,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of OIDC scopes</value>
         [DataMember(Name = "oidc_scopes", EmitDefaultValue = false)]
-
 
         public List<string> OidcScopes { get; set; }
 
@@ -387,8 +372,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -397,8 +381,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -406,7 +389,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of the role, either &#x27;jwt&#x27; or &#x27;oidc&#x27;.</value>
         [DataMember(Name = "role_type", EmitDefaultValue = false)]
-
 
         public string RoleType { get; set; }
 
@@ -417,7 +399,6 @@ namespace Vault.Model
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> TokenBoundCidrs { get; set; }
 
 
@@ -426,7 +407,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenExplicitMaxTtl { get; set; }
 
@@ -437,7 +417,6 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-
         public int TokenMaxTtl { get; set; }
 
 
@@ -446,7 +425,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
-
 
         public bool TokenNoDefaultPolicy { get; set; }
 
@@ -457,7 +435,6 @@ namespace Vault.Model
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
 
-
         public int TokenNumUses { get; set; }
 
 
@@ -466,7 +443,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
-
 
         public int TokenPeriod { get; set; }
 
@@ -477,7 +453,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
 
-
         public List<string> TokenPolicies { get; set; }
 
 
@@ -486,7 +461,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
-
 
         public int TokenTtl { get; set; }
 
@@ -497,7 +471,6 @@ namespace Vault.Model
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
 
-
         public string TokenType { get; set; }
 
 
@@ -507,8 +480,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Ttl { get; set; }
+        [Obsolete] public int Ttl { get; set; }
 
 
         /// <summary>
@@ -516,7 +488,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The claim to use for the Identity entity alias name</value>
         [DataMember(Name = "user_claim", EmitDefaultValue = false)]
-
 
         public string UserClaim { get; set; }
 
@@ -527,7 +498,6 @@ namespace Vault.Model
         /// <value>If true, the user_claim value will use JSON pointer syntax for referencing claims.</value>
         [DataMember(Name = "user_claim_json_pointer", EmitDefaultValue = true)]
 
-
         public bool UserClaimJsonPointer { get; set; }
 
 
@@ -536,7 +506,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Log received OIDC tokens and claims when debug-level logging is active. Not recommended in production since sensitive information may be present in OIDC responses.</value>
         [DataMember(Name = "verbose_oidc_logging", EmitDefaultValue = true)]
-
 
         public bool VerboseOidcLogging { get; set; }
 

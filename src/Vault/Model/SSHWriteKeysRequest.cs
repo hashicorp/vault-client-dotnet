@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>[Required] SSH private key with super user privileges in host</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
 
-
         public string Key { get; set; }
 
 

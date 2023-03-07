@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Specifies a single unseal key share. This is required unless reset is true.</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
 
-
         public string Key { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies if previously-provided unseal keys are discarded and the unseal process is reset.</value>
         [DataMember(Name = "reset", EmitDefaultValue = true)]
-
 
         public bool Reset { get; set; }
 

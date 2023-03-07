@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Default lease for roles.</value>
         [DataMember(Name = "lease", EmitDefaultValue = false)]
 
-
         public string Lease { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Maximum time a credential is valid for.</value>
         [DataMember(Name = "lease_max", EmitDefaultValue = false)]
-
 
         public string LeaseMax { get; set; }
 

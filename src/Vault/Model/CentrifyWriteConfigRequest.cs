@@ -125,7 +125,6 @@ namespace Vault.Model
         /// <value>OAuth2 App ID</value>
         [DataMember(Name = "app_id", EmitDefaultValue = false)]
 
-
         public string AppId { get; set; }
 
 
@@ -134,7 +133,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>OAuth2 Client ID</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
-
 
         public string ClientId { get; set; }
 
@@ -145,7 +143,6 @@ namespace Vault.Model
         /// <value>OAuth2 Client Secret</value>
         [DataMember(Name = "client_secret", EmitDefaultValue = false)]
 
-
         public string ClientSecret { get; set; }
 
 
@@ -155,8 +152,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -164,7 +160,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>OAuth2 App Scope</value>
         [DataMember(Name = "scope", EmitDefaultValue = false)]
-
 
         public string Scope { get; set; }
 
@@ -175,7 +170,6 @@ namespace Vault.Model
         /// <value>Service URL (https://&lt;tenant&gt;.my.centrify.com)</value>
         [DataMember(Name = "service_url", EmitDefaultValue = false)]
 
-
         public string ServiceUrl { get; set; }
 
 
@@ -184,7 +178,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
-
 
         public List<string> TokenBoundCidrs { get; set; }
 
@@ -195,7 +188,6 @@ namespace Vault.Model
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
 
-
         public bool TokenNoDefaultPolicy { get; set; }
 
 
@@ -204,7 +196,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
-
 
         public int TokenNumUses { get; set; }
 
@@ -215,7 +206,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
 
-
         public List<string> TokenPolicies { get; set; }
 
 
@@ -225,7 +215,6 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-
         public int TokenTtl { get; set; }
 
 
@@ -234,7 +223,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
-
 
         public string TokenType { get; set; }
 

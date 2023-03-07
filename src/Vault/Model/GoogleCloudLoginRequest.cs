@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>A signed JWT. This is either a self-signed service account JWT (&#x27;iam&#x27; roles only) or a GCE identity metadata token (&#x27;iam&#x27;, &#x27;gce&#x27; roles).</value>
         [DataMember(Name = "jwt", EmitDefaultValue = false)]
 
-
         public string Jwt { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the role against which the login is being attempted. Required.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
-
 
         public string Role { get; set; }
 

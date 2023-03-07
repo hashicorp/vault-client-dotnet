@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>GitHub personal API token</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
 
-
         public string Token { get; set; }
 
 

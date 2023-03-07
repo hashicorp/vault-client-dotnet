@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>If set, during renewal, skips the matching of presented client identity with the client identity used during login. Defaults to false.</value>
         [DataMember(Name = "disable_binding", EmitDefaultValue = true)]
 
-
         public bool DisableBinding { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>If set, metadata of the certificate including the metadata corresponding to allowed_metadata_extensions will be stored in the alias. Defaults to false.</value>
         [DataMember(Name = "enable_identity_alias_metadata", EmitDefaultValue = true)]
 
-
         public bool EnableIdentityAliasMetadata { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The size of the in memory OCSP response cache, shared by all configured certs</value>
         [DataMember(Name = "ocsp_cache_size", EmitDefaultValue = false)]
-
 
         public int OcspCacheSize { get; set; }
 

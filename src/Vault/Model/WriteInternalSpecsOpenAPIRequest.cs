@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Context string appended to every operationId</value>
         [DataMember(Name = "context", EmitDefaultValue = false)]
 
-
         public string Context { get; set; }
 
 

@@ -103,7 +103,6 @@ namespace Vault.Model
         /// <value>Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;</value>
 
         [DataMember(Name = "tls_max_version", EmitDefaultValue = false)]
-
         public TlsMaxVersionEnum? TlsMaxVersion { get; set; }
 
 
@@ -143,7 +142,6 @@ namespace Vault.Model
         /// <value>Minimum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;</value>
 
         [DataMember(Name = "tls_min_version", EmitDefaultValue = false)]
-
         public TlsMinVersionEnum? TlsMinVersion { get; set; }
 
 
@@ -315,7 +313,6 @@ namespace Vault.Model
         /// <value>Use anonymous binds when performing LDAP group searches (if true the initial credentials will still be used for the initial connection test).</value>
         [DataMember(Name = "anonymous_group_search", EmitDefaultValue = true)]
 
-
         public bool AnonymousGroupSearch { get; set; }
 
 
@@ -324,7 +321,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>LDAP DN for searching for the user DN (optional)</value>
         [DataMember(Name = "binddn", EmitDefaultValue = false)]
-
 
         public string Binddn { get; set; }
 
@@ -335,7 +331,6 @@ namespace Vault.Model
         /// <value>LDAP password for searching for the user DN (optional)</value>
         [DataMember(Name = "bindpass", EmitDefaultValue = false)]
 
-
         public string Bindpass { get; set; }
 
 
@@ -344,7 +339,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, case sensitivity will be used when comparing usernames and groups for matching policies.</value>
         [DataMember(Name = "case_sensitive_names", EmitDefaultValue = true)]
-
 
         public bool CaseSensitiveNames { get; set; }
 
@@ -355,7 +349,6 @@ namespace Vault.Model
         /// <value>CA certificate to use when verifying LDAP server certificate, must be x509 PEM encoded (optional)</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
 
-
         public string Certificate { get; set; }
 
 
@@ -364,7 +357,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Client certificate to provide to the LDAP server, must be x509 PEM encoded (optional)</value>
         [DataMember(Name = "client_tls_cert", EmitDefaultValue = false)]
-
 
         public string ClientTlsCert { get; set; }
 
@@ -375,7 +367,6 @@ namespace Vault.Model
         /// <value>Client certificate key to provide to the LDAP server, must be x509 PEM encoded (optional)</value>
         [DataMember(Name = "client_tls_key", EmitDefaultValue = false)]
 
-
         public string ClientTlsKey { get; set; }
 
 
@@ -384,7 +375,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Denies an unauthenticated LDAP bind request if the user&#x27;s password is empty; defaults to true</value>
         [DataMember(Name = "deny_null_bind", EmitDefaultValue = true)]
-
 
         public bool DenyNullBind { get; set; }
 
@@ -395,7 +385,6 @@ namespace Vault.Model
         /// <value>Use anonymous bind to discover the bind DN of a user (optional)</value>
         [DataMember(Name = "discoverdn", EmitDefaultValue = true)]
 
-
         public bool Discoverdn { get; set; }
 
 
@@ -404,7 +393,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>LDAP attribute to follow on objects returned by &lt;groupfilter&gt; in order to enumerate user group membership. Examples: \&quot;cn\&quot; or \&quot;memberOf\&quot;, etc. Default: cn</value>
         [DataMember(Name = "groupattr", EmitDefaultValue = false)]
-
 
         public string Groupattr { get; set; }
 
@@ -415,7 +403,6 @@ namespace Vault.Model
         /// <value>LDAP search base to use for group membership search (eg: ou&#x3D;Groups,dc&#x3D;example,dc&#x3D;org)</value>
         [DataMember(Name = "groupdn", EmitDefaultValue = false)]
 
-
         public string Groupdn { get; set; }
 
 
@@ -424,7 +411,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Go template for querying group membership of user (optional) The template can access the following context variables: UserDN, Username Example: (&amp;(objectClass&#x3D;group)(member:1.2.840.113556.1.4.1941:&#x3D;{{.UserDN}})) Default: (|(memberUid&#x3D;{{.Username}})(member&#x3D;{{.UserDN}})(uniqueMember&#x3D;{{.UserDN}}))</value>
         [DataMember(Name = "groupfilter", EmitDefaultValue = false)]
-
 
         public string Groupfilter { get; set; }
 
@@ -435,7 +421,6 @@ namespace Vault.Model
         /// <value>Skip LDAP server SSL Certificate verification - VERY insecure (optional)</value>
         [DataMember(Name = "insecure_tls", EmitDefaultValue = true)]
 
-
         public bool InsecureTls { get; set; }
 
 
@@ -445,8 +430,7 @@ namespace Vault.Model
         /// <value>The desired length of passwords that Vault generates.</value>
         [DataMember(Name = "length", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Length { get; set; }
+        [Obsolete] public int Length { get; set; }
 
 
         /// <summary>
@@ -454,7 +438,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum password time-to-live.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -465,7 +448,6 @@ namespace Vault.Model
         /// <value>Password policy to use to generate passwords</value>
         [DataMember(Name = "password_policy", EmitDefaultValue = false)]
 
-
         public string PasswordPolicy { get; set; }
 
 
@@ -474,7 +456,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Timeout, in seconds, for the connection when making requests against the server before returning back an error.</value>
         [DataMember(Name = "request_timeout", EmitDefaultValue = false)]
-
 
         public int RequestTimeout { get; set; }
 
@@ -485,7 +466,6 @@ namespace Vault.Model
         /// <value>The desired LDAP schema used when modifying user account passwords.</value>
         [DataMember(Name = "schema", EmitDefaultValue = false)]
 
-
         public string Schema { get; set; }
 
 
@@ -494,7 +474,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Issue a StartTLS command after establishing unencrypted connection (optional)</value>
         [DataMember(Name = "starttls", EmitDefaultValue = true)]
-
 
         public bool Starttls { get; set; }
 
@@ -505,7 +484,6 @@ namespace Vault.Model
         /// <value>The default password time-to-live.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-
         public int Ttl { get; set; }
 
 
@@ -514,7 +492,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Enables userPrincipalDomain login with [username]@UPNDomain (optional)</value>
         [DataMember(Name = "upndomain", EmitDefaultValue = false)]
-
 
         public string Upndomain { get; set; }
 
@@ -525,7 +502,6 @@ namespace Vault.Model
         /// <value>LDAP URL to connect to (default: ldap://127.0.0.1). Multiple URLs can be specified by concatenating them with commas; they will be tried in-order.</value>
         [DataMember(Name = "url", EmitDefaultValue = false)]
 
-
         public string Url { get; set; }
 
 
@@ -534,7 +510,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>In Vault 1.1.1 a fix for handling group CN values of different cases unfortunately introduced a regression that could cause previously defined groups to not be found due to a change in the resulting name. If set true, the pre-1.1.1 behavior for matching group CNs will be used. This is only needed in some upgrade scenarios for backwards compatibility. It is enabled by default if the config is upgraded but disabled by default on new configurations.</value>
         [DataMember(Name = "use_pre111_group_cn_behavior", EmitDefaultValue = true)]
-
 
         public bool UsePre111GroupCnBehavior { get; set; }
 
@@ -545,7 +520,6 @@ namespace Vault.Model
         /// <value>If true, use the Active Directory tokenGroups constructed attribute of the user to find the group memberships. This will find all security groups including nested ones.</value>
         [DataMember(Name = "use_token_groups", EmitDefaultValue = true)]
 
-
         public bool UseTokenGroups { get; set; }
 
 
@@ -554,7 +528,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Attribute used for users (default: cn)</value>
         [DataMember(Name = "userattr", EmitDefaultValue = false)]
-
 
         public string Userattr { get; set; }
 
@@ -565,7 +538,6 @@ namespace Vault.Model
         /// <value>LDAP domain to use for users (eg: ou&#x3D;People,dc&#x3D;example,dc&#x3D;org)</value>
         [DataMember(Name = "userdn", EmitDefaultValue = false)]
 
-
         public string Userdn { get; set; }
 
 
@@ -575,7 +547,6 @@ namespace Vault.Model
         /// <value>Go template for LDAP user search filer (optional) The template can access the following context variables: UserAttr, Username Default: ({{.UserAttr}}&#x3D;{{.Username}})</value>
         [DataMember(Name = "userfilter", EmitDefaultValue = false)]
 
-
         public string Userfilter { get; set; }
 
 
@@ -584,7 +555,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, sets the alias name to the username</value>
         [DataMember(Name = "username_as_alias", EmitDefaultValue = true)]
-
 
         public bool UsernameAsAlias { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Whether to allow automatic upserting (creation) of keys on the encrypt endpoint.</value>
         [DataMember(Name = "disable_upsert", EmitDefaultValue = true)]
 
-
         public bool DisableUpsert { get; set; }
 
 

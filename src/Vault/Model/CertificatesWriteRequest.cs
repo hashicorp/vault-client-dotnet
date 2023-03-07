@@ -229,7 +229,6 @@ namespace Vault.Model
         /// <value>A comma-separated list of names. At least one must exist in the Common Name. Supports globbing.</value>
         [DataMember(Name = "allowed_common_names", EmitDefaultValue = false)]
 
-
         public List<string> AllowedCommonNames { get; set; }
 
 
@@ -238,7 +237,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated list of DNS names. At least one must exist in the SANs. Supports globbing.</value>
         [DataMember(Name = "allowed_dns_sans", EmitDefaultValue = false)]
-
 
         public List<string> AllowedDnsSans { get; set; }
 
@@ -249,7 +247,6 @@ namespace Vault.Model
         /// <value>A comma-separated list of Email Addresses. At least one must exist in the SANs. Supports globbing.</value>
         [DataMember(Name = "allowed_email_sans", EmitDefaultValue = false)]
 
-
         public List<string> AllowedEmailSans { get; set; }
 
 
@@ -258,7 +255,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated string or array of oid extensions. Upon successful authentication, these extensions will be added as metadata if they are present in the certificate. The metadata key will be the string consisting of the oid numbers separated by a dash (-) instead of a dot (.) to allow usage in ACL templates.</value>
         [DataMember(Name = "allowed_metadata_extensions", EmitDefaultValue = false)]
-
 
         public List<string> AllowedMetadataExtensions { get; set; }
 
@@ -269,7 +265,6 @@ namespace Vault.Model
         /// <value>A comma-separated list of names. At least one must exist in either the Common Name or SANs. Supports globbing. This parameter is deprecated, please use allowed_common_names, allowed_dns_sans, allowed_email_sans, allowed_uri_sans.</value>
         [DataMember(Name = "allowed_names", EmitDefaultValue = false)]
 
-
         public List<string> AllowedNames { get; set; }
 
 
@@ -278,7 +273,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated list of Organizational Units names. At least one must exist in the OU field.</value>
         [DataMember(Name = "allowed_organizational_units", EmitDefaultValue = false)]
-
 
         public List<string> AllowedOrganizationalUnits { get; set; }
 
@@ -289,7 +283,6 @@ namespace Vault.Model
         /// <value>A comma-separated list of URIs. At least one must exist in the SANs. Supports globbing.</value>
         [DataMember(Name = "allowed_uri_sans", EmitDefaultValue = false)]
 
-
         public List<string> AllowedUriSans { get; set; }
 
 
@@ -299,8 +292,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_bound_cidrs\&quot; instead. If this and \&quot;token_bound_cidrs\&quot; are both specified, only \&quot;token_bound_cidrs\&quot; will be used.</value>
         [DataMember(Name = "bound_cidrs", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> BoundCidrs { get; set; }
+        [Obsolete] public List<string> BoundCidrs { get; set; }
 
 
         /// <summary>
@@ -308,7 +300,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The public certificate that should be trusted. Must be x509 PEM encoded.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
-
 
         public string Certificate { get; set; }
 
@@ -319,7 +310,6 @@ namespace Vault.Model
         /// <value>The display name to use for clients using this certificate.</value>
         [DataMember(Name = "display_name", EmitDefaultValue = false)]
 
-
         public string DisplayName { get; set; }
 
 
@@ -329,8 +319,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "lease", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Lease { get; set; }
+        [Obsolete] public int Lease { get; set; }
 
 
         /// <summary>
@@ -339,8 +328,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int MaxTtl { get; set; }
+        [Obsolete] public int MaxTtl { get; set; }
 
 
         /// <summary>
@@ -348,7 +336,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Any additional CA certificates needed to communicate with OCSP servers</value>
         [DataMember(Name = "ocsp_ca_certificates", EmitDefaultValue = false)]
-
 
         public string OcspCaCertificates { get; set; }
 
@@ -359,7 +346,6 @@ namespace Vault.Model
         /// <value>Whether to attempt OCSP verification of certificates at login</value>
         [DataMember(Name = "ocsp_enabled", EmitDefaultValue = true)]
 
-
         public bool OcspEnabled { get; set; }
 
 
@@ -368,7 +354,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set to true, if an OCSP revocation cannot be made successfully, login will proceed rather than failing. If false, failing to get an OCSP status fails the request.</value>
         [DataMember(Name = "ocsp_fail_open", EmitDefaultValue = true)]
-
 
         public bool OcspFailOpen { get; set; }
 
@@ -379,7 +364,6 @@ namespace Vault.Model
         /// <value>If set to true, rather than accepting the first successful OCSP response, query all servers and consider the certificate valid only if all servers agree.</value>
         [DataMember(Name = "ocsp_query_all_servers", EmitDefaultValue = true)]
 
-
         public bool OcspQueryAllServers { get; set; }
 
 
@@ -388,7 +372,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated list of OCSP server addresses. If unset, the OCSP server is determined from the AuthorityInformationAccess extension on the certificate being inspected.</value>
         [DataMember(Name = "ocsp_servers_override", EmitDefaultValue = false)]
-
 
         public List<string> OcspServersOverride { get; set; }
 
@@ -399,8 +382,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -409,8 +391,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -418,7 +399,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated string or array of extensions formatted as \&quot;oid:value\&quot;. Expects the extension value to be some type of ASN1 encoded string. All values much match. Supports globbing on \&quot;value\&quot;.</value>
         [DataMember(Name = "required_extensions", EmitDefaultValue = false)]
-
 
         public List<string> RequiredExtensions { get; set; }
 
@@ -429,7 +409,6 @@ namespace Vault.Model
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> TokenBoundCidrs { get; set; }
 
 
@@ -438,7 +417,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenExplicitMaxTtl { get; set; }
 
@@ -449,7 +427,6 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-
         public int TokenMaxTtl { get; set; }
 
 
@@ -458,7 +435,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
-
 
         public bool TokenNoDefaultPolicy { get; set; }
 
@@ -469,7 +445,6 @@ namespace Vault.Model
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
 
-
         public int TokenNumUses { get; set; }
 
 
@@ -478,7 +453,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
-
 
         public int TokenPeriod { get; set; }
 
@@ -489,7 +463,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
 
-
         public List<string> TokenPolicies { get; set; }
 
 
@@ -498,7 +471,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
-
 
         public int TokenTtl { get; set; }
 
@@ -509,7 +481,6 @@ namespace Vault.Model
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
 
-
         public string TokenType { get; set; }
 
 
@@ -519,8 +490,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Ttl { get; set; }
+        [Obsolete] public int Ttl { get; set; }
 
 
 

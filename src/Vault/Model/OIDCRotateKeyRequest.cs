@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key.</value>
         [DataMember(Name = "verification_ttl", EmitDefaultValue = false)]
 
-
         public int VerificationTtl { get; set; }
 
 

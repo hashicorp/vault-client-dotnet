@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Entity IDs to delete</value>
         [DataMember(Name = "entity_ids", EmitDefaultValue = false)]
 
-
         public List<string> EntityIds { get; set; }
 
 

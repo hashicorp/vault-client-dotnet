@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-
         public int TokenMaxTtl { get; set; }
 
 

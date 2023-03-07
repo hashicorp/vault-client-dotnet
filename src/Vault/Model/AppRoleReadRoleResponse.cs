@@ -145,7 +145,6 @@ namespace Vault.Model
         /// <value>Impose secret ID to be presented when logging in using this role.</value>
         [DataMember(Name = "bind_secret_id", EmitDefaultValue = true)]
 
-
         public bool BindSecretId { get; set; }
 
 
@@ -154,7 +153,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#x27;t be reset later</value>
         [DataMember(Name = "local_secret_ids", EmitDefaultValue = true)]
-
 
         public bool LocalSecretIds { get; set; }
 
@@ -165,8 +163,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -175,8 +172,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -184,7 +180,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation.</value>
         [DataMember(Name = "secret_id_bound_cidrs", EmitDefaultValue = false)]
-
 
         public List<string> SecretIdBoundCidrs { get; set; }
 
@@ -195,7 +190,6 @@ namespace Vault.Model
         /// <value>Number of times a secret ID can access the role, after which the secret ID will expire.</value>
         [DataMember(Name = "secret_id_num_uses", EmitDefaultValue = false)]
 
-
         public int SecretIdNumUses { get; set; }
 
 
@@ -204,7 +198,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds after which the issued secret ID expires.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
-
 
         public int SecretIdTtl { get; set; }
 
@@ -215,7 +208,6 @@ namespace Vault.Model
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> TokenBoundCidrs { get; set; }
 
 
@@ -224,7 +216,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenExplicitMaxTtl { get; set; }
 
@@ -235,7 +226,6 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-
         public int TokenMaxTtl { get; set; }
 
 
@@ -244,7 +234,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
-
 
         public bool TokenNoDefaultPolicy { get; set; }
 
@@ -255,7 +244,6 @@ namespace Vault.Model
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
 
-
         public int TokenNumUses { get; set; }
 
 
@@ -264,7 +252,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value.</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
-
 
         public int TokenPeriod { get; set; }
 
@@ -275,7 +262,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
 
-
         public List<string> TokenPolicies { get; set; }
 
 
@@ -285,7 +271,6 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-
         public int TokenTtl { get; set; }
 
 
@@ -294,7 +279,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
-
 
         public string TokenType { get; set; }
 

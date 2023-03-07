@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>[Required] IP of the remote host</value>
         [DataMember(Name = "ip", EmitDefaultValue = false)]
 
-
         public string Ip { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Optional] Username in remote host</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
-
 
         public string Username { get; set; }
 

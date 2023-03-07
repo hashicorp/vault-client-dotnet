@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Comma separated string or array of identity entity IDs</value>
         [DataMember(Name = "entity_ids", EmitDefaultValue = false)]
 
-
         public List<string> EntityIds { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or array of identity group IDs</value>
         [DataMember(Name = "group_ids", EmitDefaultValue = false)]
-
 
         public List<string> GroupIds { get; set; }
 

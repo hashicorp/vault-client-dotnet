@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Accessor of the token for which capabilities are being queried.</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
 
-
         public string Accessor { get; set; }
 
 
@@ -75,8 +74,7 @@ namespace Vault.Model
         /// <value>Use &#x27;paths&#x27; instead.</value>
         [DataMember(Name = "path", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Path { get; set; }
+        [Obsolete] public List<string> Path { get; set; }
 
 
         /// <summary>
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Paths on which capabilities are being queried.</value>
         [DataMember(Name = "paths", EmitDefaultValue = false)]
-
 
         public List<string> Paths { get; set; }
 

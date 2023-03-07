@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>Specifies if using PGP-encrypted keys, whether Vault should also store a plaintext backup of the PGP-encrypted keys.</value>
         [DataMember(Name = "backup", EmitDefaultValue = true)]
 
-
         public bool Backup { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies an array of PGP public keys used to encrypt the output unseal keys. Ordering is preserved. The keys must be base64-encoded from their original binary representation. The size of this array must be the same as secret_shares.</value>
         [DataMember(Name = "pgp_keys", EmitDefaultValue = false)]
-
 
         public List<string> PgpKeys { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>Turns on verification functionality</value>
         [DataMember(Name = "require_verification", EmitDefaultValue = true)]
 
-
         public bool RequireVerification { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>Specifies the number of shares to split the unseal key into.</value>
         [DataMember(Name = "secret_shares", EmitDefaultValue = false)]
 
-
         public int SecretShares { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies the number of shares required to reconstruct the unseal key. This must be less than or equal secret_shares. If using Vault HSM with auto-unsealing, this value must be the same as secret_shares.</value>
         [DataMember(Name = "secret_threshold", EmitDefaultValue = false)]
-
 
         public int SecretThreshold { get; set; }
 

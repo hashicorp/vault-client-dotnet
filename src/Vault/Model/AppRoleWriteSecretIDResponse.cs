@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Secret ID attached to the role.</value>
         [DataMember(Name = "secret_id", EmitDefaultValue = false)]
 
-
         public string SecretId { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Accessor of the secret ID</value>
         [DataMember(Name = "secret_id_accessor", EmitDefaultValue = false)]
-
 
         public string SecretIdAccessor { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Number of times a secret ID can access the role, after which the secret ID will expire.</value>
         [DataMember(Name = "secret_id_num_uses", EmitDefaultValue = false)]
 
-
         public int SecretIdNumUses { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds after which the issued secret ID expires.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
-
 
         public int SecretIdTtl { get; set; }
 

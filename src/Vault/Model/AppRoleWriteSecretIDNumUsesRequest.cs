@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Number of times a SecretID can access the role, after which the SecretID will expire.</value>
         [DataMember(Name = "secret_id_num_uses", EmitDefaultValue = false)]
 
-
         public int SecretIdNumUses { get; set; }
 
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The username/logon name for the service accounts to check in.</value>
         [DataMember(Name = "service_account_names", EmitDefaultValue = false)]
 
-
         public List<string> ServiceAccountNames { get; set; }
 
 

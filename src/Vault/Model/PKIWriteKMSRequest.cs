@@ -64,7 +64,6 @@ namespace Vault.Model
         /// <value>The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot; and \&quot;ed25519\&quot; are the only valid values.</value>
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
-
         public KeyTypeEnum? KeyType { get; set; }
 
 
@@ -110,7 +109,6 @@ namespace Vault.Model
         /// <value>The number of bits to use. Allowed values are 0 (universal default); with rsa key_type: 2048 (default), 3072, or 4096; with ec key_type: 224, 256 (default), 384, or 521; ignored with ed25519.</value>
         [DataMember(Name = "key_bits", EmitDefaultValue = false)]
 
-
         public int KeyBits { get; set; }
 
 
@@ -119,7 +117,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Optional name to be used for this key</value>
         [DataMember(Name = "key_name", EmitDefaultValue = false)]
-
 
         public string KeyName { get; set; }
 
@@ -130,7 +127,6 @@ namespace Vault.Model
         /// <value>The name of the managed key to use when the exported type is kms. When kms type is the key type, this field or managed_key_name is required. Ignored for other types.</value>
         [DataMember(Name = "managed_key_id", EmitDefaultValue = false)]
 
-
         public string ManagedKeyId { get; set; }
 
 
@@ -139,7 +135,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The name of the managed key to use when the exported type is kms. When kms type is the key type, this field or managed_key_id is required. Ignored for other types.</value>
         [DataMember(Name = "managed_key_name", EmitDefaultValue = false)]
-
 
         public string ManagedKeyName { get; set; }
 

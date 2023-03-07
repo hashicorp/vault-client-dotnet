@@ -133,7 +133,6 @@ namespace Vault.Model
         /// <value>The ID of the requesting client.</value>
         [DataMember(Name = "client_id", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string ClientId { get; set; }
 
 
@@ -142,7 +141,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The code challenge derived from the code verifier.</value>
         [DataMember(Name = "code_challenge", EmitDefaultValue = false)]
-
 
         public string CodeChallenge { get; set; }
 
@@ -153,7 +151,6 @@ namespace Vault.Model
         /// <value>The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;.</value>
         [DataMember(Name = "code_challenge_method", EmitDefaultValue = false)]
 
-
         public string CodeChallengeMethod { get; set; }
 
 
@@ -162,7 +159,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The allowable elapsed time in seconds since the last time the end-user was actively authenticated.</value>
         [DataMember(Name = "max_age", EmitDefaultValue = false)]
-
 
         public int MaxAge { get; set; }
 
@@ -173,7 +169,6 @@ namespace Vault.Model
         /// <value>The value that will be returned in the ID token nonce claim after a token exchange.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
 
-
         public string Nonce { get; set; }
 
 
@@ -182,7 +177,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The redirection URI to which the response will be sent.</value>
         [DataMember(Name = "redirect_uri", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string RedirectUri { get; set; }
 
@@ -193,7 +187,6 @@ namespace Vault.Model
         /// <value>The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27;</value>
         [DataMember(Name = "response_type", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string ResponseType { get; set; }
 
 
@@ -203,7 +196,6 @@ namespace Vault.Model
         /// <value>A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required.</value>
         [DataMember(Name = "scope", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string Scope { get; set; }
 
 
@@ -212,7 +204,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The value used to maintain state between the authentication request and client.</value>
         [DataMember(Name = "state", EmitDefaultValue = false)]
-
 
         public string State { get; set; }
 

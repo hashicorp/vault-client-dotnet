@@ -89,7 +89,6 @@ namespace Vault.Model
         /// <value>Okta API key.</value>
         [DataMember(Name = "api_token", EmitDefaultValue = false)]
 
-
         public string ApiToken { get; set; }
 
 
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The base domain to use for the Okta API. When not specified in the configuration, \&quot;okta.com\&quot; is used.</value>
         [DataMember(Name = "base_url", EmitDefaultValue = false)]
-
 
         public string BaseUrl { get; set; }
 
@@ -109,7 +107,6 @@ namespace Vault.Model
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", EmitDefaultValue = false)]
 
-
         public string MethodId { get; set; }
 
 
@@ -118,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the organization to be used in the Okta API.</value>
         [DataMember(Name = "org_name", EmitDefaultValue = false)]
-
 
         public string OrgName { get; set; }
 
@@ -129,7 +125,6 @@ namespace Vault.Model
         /// <value>If true, the username will only match the primary email for the account. Defaults to false.</value>
         [DataMember(Name = "primary_email", EmitDefaultValue = true)]
 
-
         public bool PrimaryEmail { get; set; }
 
 
@@ -139,7 +134,6 @@ namespace Vault.Model
         /// <value>(DEPRECATED) Use base_url instead.</value>
         [DataMember(Name = "production", EmitDefaultValue = true)]
 
-
         public bool Production { get; set; }
 
 
@@ -148,7 +142,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A template string for mapping Identity names to MFA method names. Values to substitute should be placed in {{}}. For example, \&quot;{{entity.name}}@example.com\&quot;. If blank, the Entity&#x27;s name field will be used as-is.</value>
         [DataMember(Name = "username_format", EmitDefaultValue = false)]
-
 
         public string UsernameFormat { get; set; }
 

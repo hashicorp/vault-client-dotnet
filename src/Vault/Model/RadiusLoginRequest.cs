@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Password for this user.</value>
         [DataMember(Name = "password", EmitDefaultValue = false)]
 
-
         public string Password { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Username to be used for login. (URL parameter)</value>
         [DataMember(Name = "urlusername", EmitDefaultValue = false)]
 
-
         public string Urlusername { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Username to be used for login. (POST request body)</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
-
 
         public string Username { get; set; }
 

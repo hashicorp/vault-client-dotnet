@@ -70,7 +70,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "client_nonce", EmitDefaultValue = false)]
 
-
         public string ClientNonce { get; set; }
 
 
@@ -78,7 +77,6 @@ namespace Vault.Model
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name = "code", EmitDefaultValue = false)]
-
 
         public string Code { get; set; }
 
@@ -88,7 +86,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "id_token", EmitDefaultValue = false)]
 
-
         public string IdToken { get; set; }
 
 
@@ -96,7 +93,6 @@ namespace Vault.Model
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name = "state", EmitDefaultValue = false)]
-
 
         public string State { get; set; }
 

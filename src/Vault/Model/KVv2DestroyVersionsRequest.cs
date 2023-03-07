@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The versions to destroy. Their data will be permanently deleted.</value>
         [DataMember(Name = "versions", EmitDefaultValue = false)]
 
-
         public List<int> Versions { get; set; }
 
 

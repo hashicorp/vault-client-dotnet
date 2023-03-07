@@ -67,7 +67,6 @@ namespace Vault.Model
         /// <value>Auth mode (&#x27;ro&#x27; for resource owner, &#x27;cc&#x27; for credential client).</value>
         [DataMember(Name = "mode", EmitDefaultValue = false)]
 
-
         public string Mode { get; set; }
 
 
@@ -77,7 +76,6 @@ namespace Vault.Model
         /// <value>Password for this user.</value>
         [DataMember(Name = "password", EmitDefaultValue = false)]
 
-
         public string Password { get; set; }
 
 
@@ -86,7 +84,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Username of the user.</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
-
 
         public string Username { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Reference (name or identifier) of the default key.</value>
         [DataMember(Name = "default", EmitDefaultValue = false)]
 
-
         public string Default { get; set; }
 
 

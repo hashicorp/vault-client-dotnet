@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Token to look up (unused, does not need to be set)</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
 
-
         public string Token { get; set; }
 
 

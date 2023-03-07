@@ -137,7 +137,6 @@ namespace Vault.Model
         /// <value>CF’s API address.</value>
         [DataMember(Name = "cf_api_addr", EmitDefaultValue = false)]
 
-
         public string CfApiAddr { get; set; }
 
 
@@ -146,7 +145,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The PEM-format certificates that are presented for mutual TLS with the CloudFoundry API. If not set, mutual TLS is not used</value>
         [DataMember(Name = "cf_api_mutual_tls_certificate", EmitDefaultValue = false)]
-
 
         public string CfApiMutualTlsCertificate { get; set; }
 
@@ -157,7 +155,6 @@ namespace Vault.Model
         /// <value>The PEM-format private key that are used for mutual TLS with the CloudFoundry API. If not set, mutual TLS is not used</value>
         [DataMember(Name = "cf_api_mutual_tls_key", EmitDefaultValue = false)]
 
-
         public string CfApiMutualTlsKey { get; set; }
 
 
@@ -166,7 +163,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The PEM-format CA certificates that are acceptable for the CF API to present.</value>
         [DataMember(Name = "cf_api_trusted_certificates", EmitDefaultValue = false)]
-
 
         public List<string> CfApiTrustedCertificates { get; set; }
 
@@ -177,7 +173,6 @@ namespace Vault.Model
         /// <value>The client id for CF’s API.</value>
         [DataMember(Name = "cf_client_id", EmitDefaultValue = false)]
 
-
         public string CfClientId { get; set; }
 
 
@@ -186,7 +181,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The client secret for CF’s API.</value>
         [DataMember(Name = "cf_client_secret", EmitDefaultValue = false)]
-
 
         public string CfClientSecret { get; set; }
 
@@ -197,7 +191,6 @@ namespace Vault.Model
         /// <value>The password for CF’s API.</value>
         [DataMember(Name = "cf_password", EmitDefaultValue = false)]
 
-
         public string CfPassword { get; set; }
 
 
@@ -206,7 +199,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The username for CF’s API.</value>
         [DataMember(Name = "cf_username", EmitDefaultValue = false)]
-
 
         public string CfUsername { get; set; }
 
@@ -217,7 +209,6 @@ namespace Vault.Model
         /// <value>The PEM-format CA certificates that are required to have issued the instance certificates presented for logging in.</value>
         [DataMember(Name = "identity_ca_certificates", EmitDefaultValue = false)]
 
-
         public List<string> IdentityCaCertificates { get; set; }
 
 
@@ -226,7 +217,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds for the maximum acceptable length in the future a \&quot;signing_time\&quot; can be. Useful for clock drift. Set low to reduce the opportunity for replay attacks.</value>
         [DataMember(Name = "login_max_seconds_not_after", EmitDefaultValue = false)]
-
 
         public int LoginMaxSecondsNotAfter { get; set; }
 
@@ -237,7 +227,6 @@ namespace Vault.Model
         /// <value>Duration in seconds for the maximum acceptable age of a \&quot;signing_time\&quot;. Useful for clock drift. Set low to reduce the opportunity for replay attacks.</value>
         [DataMember(Name = "login_max_seconds_not_before", EmitDefaultValue = false)]
 
-
         public int LoginMaxSecondsNotBefore { get; set; }
 
 
@@ -247,8 +236,7 @@ namespace Vault.Model
         /// <value>Deprecated. Please use \&quot;cf_api_addr\&quot;.</value>
         [DataMember(Name = "pcf_api_addr", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string PcfApiAddr { get; set; }
+        [Obsolete] public string PcfApiAddr { get; set; }
 
 
         /// <summary>
@@ -257,8 +245,7 @@ namespace Vault.Model
         /// <value>Deprecated. Please use \&quot;cf_api_trusted_certificates\&quot;.</value>
         [DataMember(Name = "pcf_api_trusted_certificates", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> PcfApiTrustedCertificates { get; set; }
+        [Obsolete] public List<string> PcfApiTrustedCertificates { get; set; }
 
 
         /// <summary>
@@ -267,8 +254,7 @@ namespace Vault.Model
         /// <value>Deprecated. Please use \&quot;cf_password\&quot;.</value>
         [DataMember(Name = "pcf_password", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string PcfPassword { get; set; }
+        [Obsolete] public string PcfPassword { get; set; }
 
 
         /// <summary>
@@ -277,8 +263,7 @@ namespace Vault.Model
         /// <value>Deprecated. Please use \&quot;cf_username\&quot;.</value>
         [DataMember(Name = "pcf_username", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string PcfUsername { get; set; }
+        [Obsolete] public string PcfUsername { get; set; }
 
 
 

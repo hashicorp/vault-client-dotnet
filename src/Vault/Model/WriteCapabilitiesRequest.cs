@@ -65,8 +65,7 @@ namespace Vault.Model
         /// <value>Use &#x27;paths&#x27; instead.</value>
         [DataMember(Name = "path", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Path { get; set; }
+        [Obsolete] public List<string> Path { get; set; }
 
 
         /// <summary>
@@ -74,7 +73,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Paths on which capabilities are being queried.</value>
         [DataMember(Name = "paths", EmitDefaultValue = false)]
-
 
         public List<string> Paths { get; set; }
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Token for which capabilities are being queried.</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
-
 
         public string Token { get; set; }
 

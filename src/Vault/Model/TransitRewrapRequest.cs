@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Ciphertext value to rewrap</value>
         [DataMember(Name = "ciphertext", EmitDefaultValue = false)]
 
-
         public string Ciphertext { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64 encoded context for key derivation. Required for derived keys.</value>
         [DataMember(Name = "context", EmitDefaultValue = false)]
-
 
         public string Context { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>The version of the key to use for encryption. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
 
-
         public int KeyVersion { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Nonce for when convergent encryption is used</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
-
 
         public string Nonce { get; set; }
 

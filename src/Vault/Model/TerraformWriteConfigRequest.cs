@@ -81,7 +81,6 @@ namespace Vault.Model
         /// <value>The address to access Terraform Cloud or Enterprise. Default is \&quot;https://app.terraform.io\&quot;.</value>
         [DataMember(Name = "address", EmitDefaultValue = false)]
 
-
         public string Address { get; set; }
 
 
@@ -91,7 +90,6 @@ namespace Vault.Model
         /// <value>The base path for the Terraform Cloud or Enterprise API. Default is \&quot;/api/v2/\&quot;.</value>
         [DataMember(Name = "base_path", EmitDefaultValue = false)]
 
-
         public string BasePath { get; set; }
 
 
@@ -100,7 +98,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The token to access Terraform Cloud</value>
         [DataMember(Name = "token", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string Token { get; set; }
 

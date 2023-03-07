@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>The OAuth2 client id to connection to Azure. This value can also be provided with the AZURE_CLIENT_ID environment variable.</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
 
-
         public string ClientId { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The OAuth2 client secret to connection to Azure. This value can also be provided with the AZURE_CLIENT_SECRET environment variable.</value>
         [DataMember(Name = "client_secret", EmitDefaultValue = false)]
-
 
         public string ClientSecret { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>The Azure environment name. If not provided, AzurePublicCloud is used. This value can also be provided with the AZURE_ENVIRONMENT environment variable.</value>
         [DataMember(Name = "environment", EmitDefaultValue = false)]
 
-
         public string Environment { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>The resource URL for the vault application in Azure Active Directory. This value can also be provided with the AZURE_AD_RESOURCE environment variable.</value>
         [DataMember(Name = "resource", EmitDefaultValue = false)]
 
-
         public string Resource { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The tenant id for the Azure Active Directory. This is sometimes referred to as Directory ID in AD. This value can also be provided with the AZURE_TENANT_ID environment variable.</value>
         [DataMember(Name = "tenant_id", EmitDefaultValue = false)]
-
 
         public string TenantId { get; set; }
 

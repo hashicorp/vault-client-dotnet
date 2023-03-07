@@ -115,7 +115,6 @@ namespace Vault.Model
         /// <value>A label selector for Kubernetes namespaces in which credentials can be generated. Accepts either a JSON or YAML object. If set with allowed_kubernetes_namespaces, the conditions are conjuncted.</value>
         [DataMember(Name = "allowed_kubernetes_namespace_selector", EmitDefaultValue = false)]
 
-
         public string AllowedKubernetesNamespaceSelector { get; set; }
 
 
@@ -124,7 +123,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A list of the Kubernetes namespaces in which credentials can be generated. If set to \&quot;*\&quot; all namespaces are allowed.</value>
         [DataMember(Name = "allowed_kubernetes_namespaces", EmitDefaultValue = false)]
-
 
         public List<string> AllowedKubernetesNamespaces { get; set; }
 
@@ -135,7 +133,6 @@ namespace Vault.Model
         /// <value>Additional annotations to apply to all generated Kubernetes objects.</value>
         [DataMember(Name = "extra_annotations", EmitDefaultValue = false)]
 
-
         public Object ExtraAnnotations { get; set; }
 
 
@@ -144,7 +141,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Additional labels to apply to all generated Kubernetes objects.</value>
         [DataMember(Name = "extra_labels", EmitDefaultValue = false)]
-
 
         public Object ExtraLabels { get; set; }
 
@@ -155,7 +151,6 @@ namespace Vault.Model
         /// <value>The Role or ClusterRole rules to use when generating a role. Accepts either a JSON or YAML object. If set, the entire chain of Kubernetes objects will be generated.</value>
         [DataMember(Name = "generated_role_rules", EmitDefaultValue = false)]
 
-
         public string GeneratedRoleRules { get; set; }
 
 
@@ -164,7 +159,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The pre-existing Role or ClusterRole to bind a generated service account to. If set, Kubernetes token, service account, and role binding objects will be created.</value>
         [DataMember(Name = "kubernetes_role_name", EmitDefaultValue = false)]
-
 
         public string KubernetesRoleName { get; set; }
 
@@ -175,7 +169,6 @@ namespace Vault.Model
         /// <value>Specifies whether the Kubernetes role is a Role or ClusterRole.</value>
         [DataMember(Name = "kubernetes_role_type", EmitDefaultValue = false)]
 
-
         public string KubernetesRoleType { get; set; }
 
 
@@ -184,7 +177,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The name template to use when generating service accounts, roles and role bindings. If unset, a default template is used.</value>
         [DataMember(Name = "name_template", EmitDefaultValue = false)]
-
 
         public string NameTemplate { get; set; }
 
@@ -195,7 +187,6 @@ namespace Vault.Model
         /// <value>The pre-existing service account to generate tokens for. Mutually exclusive with all role parameters. If set, only a Kubernetes service account token will be created.</value>
         [DataMember(Name = "service_account_name", EmitDefaultValue = false)]
 
-
         public string ServiceAccountName { get; set; }
 
 
@@ -205,7 +196,6 @@ namespace Vault.Model
         /// <value>The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "token_default_ttl", EmitDefaultValue = false)]
 
-
         public int TokenDefaultTtl { get; set; }
 
 
@@ -214,7 +204,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenMaxTtl { get; set; }
 

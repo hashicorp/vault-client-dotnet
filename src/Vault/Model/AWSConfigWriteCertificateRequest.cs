@@ -61,7 +61,6 @@ namespace Vault.Model
         /// <value>Base64 encoded AWS Public cert required to verify PKCS7 signature of the EC2 instance metadata.</value>
         [DataMember(Name = "aws_public_cert", EmitDefaultValue = false)]
 
-
         public string AwsPublicCert { get; set; }
 
 
@@ -70,7 +69,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Takes the value of either \&quot;pkcs7\&quot; or \&quot;identity\&quot;, indicating the type of document which can be verified using the given certificate. The reason is that the PKCS#7 document will have a DSA digest and the identity signature will have an RSA signature, and accordingly the public certificates to verify those also vary. Defaults to \&quot;pkcs7\&quot;.</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

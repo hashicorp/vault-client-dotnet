@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>Nomad server address</value>
         [DataMember(Name = "address", EmitDefaultValue = false)]
 
-
         public string Address { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>CA certificate to use when verifying Nomad server certificate, must be x509 PEM encoded.</value>
         [DataMember(Name = "ca_cert", EmitDefaultValue = false)]
-
 
         public string CaCert { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>Client certificate used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.</value>
         [DataMember(Name = "client_cert", EmitDefaultValue = false)]
 
-
         public string ClientCert { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Client key used for Nomad&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.</value>
         [DataMember(Name = "client_key", EmitDefaultValue = false)]
-
 
         public string ClientKey { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>Max length for name of generated Nomad tokens</value>
         [DataMember(Name = "max_token_name_length", EmitDefaultValue = false)]
 
-
         public int MaxTokenNameLength { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Token for API calls</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
-
 
         public string Token { get; set; }
 

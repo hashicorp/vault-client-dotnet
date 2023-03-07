@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>Optional client_id</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
 
-
         public string ClientId { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The OIDC key to use for generating tokens. The specified key must already exist.</value>
         [DataMember(Name = "key", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string Key { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>The template string to use for generating tokens. This may be in string-ified JSON or base64 format.</value>
         [DataMember(Name = "template", EmitDefaultValue = false)]
 
-
         public string Template { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>TTL of the tokens generated against the role.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

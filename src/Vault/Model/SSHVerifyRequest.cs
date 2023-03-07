@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>[Required] One-Time-Key that needs to be validated</value>
         [DataMember(Name = "otp", EmitDefaultValue = false)]
 
-
         public string Otp { get; set; }
 
 

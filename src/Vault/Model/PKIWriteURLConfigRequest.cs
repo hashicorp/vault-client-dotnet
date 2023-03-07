@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13.</value>
         [DataMember(Name = "crl_distribution_points", EmitDefaultValue = false)]
 
-
         public List<string> CrlDistributionPoints { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#x27;{{issuer_id}}&#x27; and &#x27;{{cluster_path}}&#x27; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#x27;s path to be set on all PR Secondary clusters.</value>
         [DataMember(Name = "enable_templating", EmitDefaultValue = true)]
-
 
         public bool EnableTemplating { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1.</value>
         [DataMember(Name = "issuing_certificates", EmitDefaultValue = false)]
 
-
         public List<string> IssuingCertificates { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1.</value>
         [DataMember(Name = "ocsp_servers", EmitDefaultValue = false)]
-
 
         public List<string> OcspServers { get; set; }
 

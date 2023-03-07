@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Certificate to revoke in PEM format; must be signed by an issuer in this mount.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
 
-
         public string Certificate { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Key to use to verify revocation permission; must be in PEM format.</value>
         [DataMember(Name = "private_key", EmitDefaultValue = false)]
 
-
         public string PrivateKey { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Certificate serial number, in colon- or hyphen-separated octal</value>
         [DataMember(Name = "serial_number", EmitDefaultValue = false)]
-
 
         public string SerialNumber { get; set; }
 

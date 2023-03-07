@@ -73,7 +73,6 @@ namespace Vault.Model
         /// <value>Bindings configuration string.</value>
         [DataMember(Name = "bindings", EmitDefaultValue = false)]
 
-
         public string Bindings { get; set; }
 
 
@@ -82,7 +81,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of secret generated for this account. Cannot be updated. Defaults to \&quot;access_token\&quot;</value>
         [DataMember(Name = "secret_type", EmitDefaultValue = false)]
-
 
         public string SecretType { get; set; }
 
@@ -93,7 +91,6 @@ namespace Vault.Model
         /// <value>Required. Email of the GCP service account to manage. Cannot be updated.</value>
         [DataMember(Name = "service_account_email", EmitDefaultValue = false)]
 
-
         public string ServiceAccountEmail { get; set; }
 
 
@@ -102,7 +99,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of OAuth scopes to assign to access tokens generated under this account. Ignored if \&quot;secret_type\&quot; is not \&quot;\&quot;access_token\&quot;\&quot;</value>
         [DataMember(Name = "token_scopes", EmitDefaultValue = false)]
-
 
         public List<string> TokenScopes { get; set; }
 

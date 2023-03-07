@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Duration after which the issued credentials should not be allowed to be renewed</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration before which the issued credentials needs renewal</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

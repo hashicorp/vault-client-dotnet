@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>If set, starts audit logging of requests that get rejected due to rate limit quota rule violations.</value>
         [DataMember(Name = "enable_rate_limit_audit_logging", EmitDefaultValue = true)]
 
-
         public bool EnableRateLimitAuditLogging { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>If set, additional rate limit quota HTTP headers will be added to responses.</value>
         [DataMember(Name = "enable_rate_limit_response_headers", EmitDefaultValue = true)]
 
-
         public bool EnableRateLimitResponseHeaders { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies the list of exempt paths from all rate limit quotas. If empty no paths will be exempt.</value>
         [DataMember(Name = "rate_limit_exempt_paths", EmitDefaultValue = false)]
-
 
         public List<string> RateLimitExemptPaths { get; set; }
 

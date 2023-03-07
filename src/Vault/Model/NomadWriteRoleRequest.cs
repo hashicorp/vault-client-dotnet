@@ -67,7 +67,6 @@ namespace Vault.Model
         /// <value>Boolean value describing if the token should be global or not. Defaults to false.</value>
         [DataMember(Name = "global", EmitDefaultValue = true)]
 
-
         public bool Global { get; set; }
 
 
@@ -77,7 +76,6 @@ namespace Vault.Model
         /// <value>Comma-separated string or list of policies as previously created in Nomad. Required for &#x27;client&#x27; token.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-
         public List<string> Policies { get; set; }
 
 
@@ -86,7 +84,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Which type of token to create: &#x27;client&#x27; or &#x27;management&#x27;. If a &#x27;management&#x27; token, the \&quot;policies\&quot; parameter is not required. Defaults to &#x27;client&#x27;.</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

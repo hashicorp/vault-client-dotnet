@@ -115,7 +115,6 @@ namespace Vault.Model
         /// <value>AWS Access Key ID for the account used to make AWS API requests.</value>
         [DataMember(Name = "access_key", EmitDefaultValue = false)]
 
-
         public string AccessKey { get; set; }
 
 
@@ -124,7 +123,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of additional headers that are allowed to be in AWS STS request headers</value>
         [DataMember(Name = "allowed_sts_header_values", EmitDefaultValue = false)]
-
 
         public List<string> AllowedStsHeaderValues { get; set; }
 
@@ -135,7 +133,6 @@ namespace Vault.Model
         /// <value>URL to override the default generated endpoint for making AWS EC2 API calls.</value>
         [DataMember(Name = "endpoint", EmitDefaultValue = false)]
 
-
         public string Endpoint { get; set; }
 
 
@@ -144,7 +141,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>URL to override the default generated endpoint for making AWS IAM API calls.</value>
         [DataMember(Name = "iam_endpoint", EmitDefaultValue = false)]
-
 
         public string IamEndpoint { get; set; }
 
@@ -155,7 +151,6 @@ namespace Vault.Model
         /// <value>Value to require in the X-Vault-AWS-IAM-Server-ID request header</value>
         [DataMember(Name = "iam_server_id_header_value", EmitDefaultValue = false)]
 
-
         public string IamServerIdHeaderValue { get; set; }
 
 
@@ -164,7 +159,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Maximum number of retries for recoverable exceptions of AWS APIs</value>
         [DataMember(Name = "max_retries", EmitDefaultValue = false)]
-
 
         public int MaxRetries { get; set; }
 
@@ -175,7 +169,6 @@ namespace Vault.Model
         /// <value>AWS Secret Access Key for the account used to make AWS API requests.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
 
-
         public string SecretKey { get; set; }
 
 
@@ -185,7 +178,6 @@ namespace Vault.Model
         /// <value>URL to override the default generated endpoint for making AWS STS API calls.</value>
         [DataMember(Name = "sts_endpoint", EmitDefaultValue = false)]
 
-
         public string StsEndpoint { get; set; }
 
 
@@ -194,7 +186,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The region ID for the sts_endpoint, if set.</value>
         [DataMember(Name = "sts_region", EmitDefaultValue = false)]
-
 
         public string StsRegion { get; set; }
 

@@ -79,7 +79,6 @@ namespace Vault.Model
         /// <value>Generate SSH key pair internally rather than use the private_key and public_key fields.</value>
         [DataMember(Name = "generate_signing_key", EmitDefaultValue = true)]
 
-
         public bool GenerateSigningKey { get; set; }
 
 
@@ -88,7 +87,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies the desired key bits when generating variable-length keys (such as when key_type&#x3D;\&quot;ssh-rsa\&quot;) or which NIST P-curve to use when key_type&#x3D;\&quot;ec\&quot; (256, 384, or 521).</value>
         [DataMember(Name = "key_bits", EmitDefaultValue = false)]
-
 
         public int KeyBits { get; set; }
 
@@ -99,7 +97,6 @@ namespace Vault.Model
         /// <value>Specifies the desired key type when generating; could be a OpenSSH key type identifier (ssh-rsa, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521, or ssh-ed25519) or an algorithm (rsa, ec, ed25519).</value>
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
 
-
         public string KeyType { get; set; }
 
 
@@ -109,7 +106,6 @@ namespace Vault.Model
         /// <value>Private half of the SSH key that will be used to sign certificates.</value>
         [DataMember(Name = "private_key", EmitDefaultValue = false)]
 
-
         public string PrivateKey { get; set; }
 
 
@@ -118,7 +114,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Public half of the SSH key that will be used to sign certificates.</value>
         [DataMember(Name = "public_key", EmitDefaultValue = false)]
-
 
         public string PublicKey { get; set; }
 

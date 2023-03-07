@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>JSON of policies to be dynamically applied to users of this role.</value>
         [DataMember(Name = "inline_policies", EmitDefaultValue = false)]
 
-
         public string InlinePolicies { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum allowed lifetime of tokens issued using this role.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>The name and type of each remote policy to be applied. Example: \&quot;name:AliyunRDSReadOnlyAccess,type:System\&quot;.</value>
         [DataMember(Name = "remote_policies", EmitDefaultValue = false)]
 
-
         public List<string> RemotePolicies { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>ARN of the role to be assumed. If provided, inline_policies and remote_policies should be blank. At creation time, this role must have configured trusted actors, and the access key and secret that will be used to assume the role (in /config) must qualify as a trusted actor.</value>
         [DataMember(Name = "role_arn", EmitDefaultValue = false)]
 
-
         public string RoleArn { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds after which the issued token should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

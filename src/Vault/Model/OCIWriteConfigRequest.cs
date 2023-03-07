@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The tenancy id of the account.</value>
         [DataMember(Name = "home_tenancy_id", EmitDefaultValue = false)]
 
-
         public string HomeTenancyId { get; set; }
 
 

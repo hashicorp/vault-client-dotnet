@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
 
-
         public int TokenNumUses { get; set; }
 
 

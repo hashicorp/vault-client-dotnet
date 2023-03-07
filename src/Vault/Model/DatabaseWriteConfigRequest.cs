@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>Comma separated string or array of the role names allowed to get creds from this database connection. If empty no roles are allowed. If \&quot;*\&quot; all roles are allowed.</value>
         [DataMember(Name = "allowed_roles", EmitDefaultValue = false)]
 
-
         public List<string> AllowedRoles { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Password policy to use when generating passwords.</value>
         [DataMember(Name = "password_policy", EmitDefaultValue = false)]
-
 
         public string PasswordPolicy { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>The name of a builtin or previously registered plugin known to vault. This endpoint will create an instance of that plugin type.</value>
         [DataMember(Name = "plugin_name", EmitDefaultValue = false)]
 
-
         public string PluginName { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The version of the plugin to use.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
-
 
         public string PluginVersion { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>Specifies the database statements to be executed to rotate the root user&#x27;s credentials. See the plugin&#x27;s API page for more information on support and formatting for this parameter.</value>
         [DataMember(Name = "root_rotation_statements", EmitDefaultValue = false)]
 
-
         public List<string> RootRotationStatements { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, the connection details are verified by actually connecting to the database. Defaults to true.</value>
         [DataMember(Name = "verify_connection", EmitDefaultValue = true)]
-
 
         public bool VerifyConnection { get; set; }
 

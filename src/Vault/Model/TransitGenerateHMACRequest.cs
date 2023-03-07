@@ -73,7 +73,6 @@ namespace Vault.Model
         /// <value>Algorithm to use (POST body parameter). Valid values are: * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 Defaults to \&quot;sha2-256\&quot;.</value>
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
 
-
         public string Algorithm { get; set; }
 
 
@@ -82,7 +81,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The base64-encoded input data</value>
         [DataMember(Name = "input", EmitDefaultValue = false)]
-
 
         public string Input { get; set; }
 
@@ -93,7 +91,6 @@ namespace Vault.Model
         /// <value>The version of the key to use for generating the HMAC. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
 
-
         public int KeyVersion { get; set; }
 
 
@@ -102,7 +99,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Algorithm to use (POST URL parameter)</value>
         [DataMember(Name = "urlalgorithm", EmitDefaultValue = false)]
-
 
         public string Urlalgorithm { get; set; }
 

@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>A signed JWT for authenticating a service account. This field is required.</value>
         [DataMember(Name = "jwt", EmitDefaultValue = false)]
 
-
         public string Jwt { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the role against which the login is being attempted. This field is required</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
-
 
         public string Role { get; set; }
 

@@ -87,7 +87,6 @@ namespace Vault.Model
         /// <value>The time-to-live for access tokens obtained by the client.</value>
         [DataMember(Name = "access_token_ttl", EmitDefaultValue = false)]
 
-
         public int AccessTokenTtl { get; set; }
 
 
@@ -96,7 +95,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or array of assignment resources.</value>
         [DataMember(Name = "assignments", EmitDefaultValue = false)]
-
 
         public List<string> Assignments { get; set; }
 
@@ -107,7 +105,6 @@ namespace Vault.Model
         /// <value>The client type based on its ability to maintain confidentiality of credentials. The following client types are supported: &#x27;confidential&#x27;, &#x27;public&#x27;. Defaults to &#x27;confidential&#x27;.</value>
         [DataMember(Name = "client_type", EmitDefaultValue = false)]
 
-
         public string ClientType { get; set; }
 
 
@@ -116,7 +113,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The time-to-live for ID tokens obtained by the client.</value>
         [DataMember(Name = "id_token_ttl", EmitDefaultValue = false)]
-
 
         public int IdTokenTtl { get; set; }
 
@@ -127,7 +123,6 @@ namespace Vault.Model
         /// <value>A reference to a named key resource. Cannot be modified after creation. Defaults to the &#x27;default&#x27; key.</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
 
-
         public string Key { get; set; }
 
 
@@ -136,7 +131,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or array of redirect URIs used by the client. One of these values must exactly match the redirect_uri parameter value used in each authentication request.</value>
         [DataMember(Name = "redirect_uris", EmitDefaultValue = false)]
-
 
         public List<string> RedirectUris { get; set; }
 

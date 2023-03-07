@@ -117,7 +117,6 @@ namespace Vault.Model
         /// <value>The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.</value>
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
-
         public KeyTypeEnum? KeyType { get; set; }
 
 
@@ -363,7 +362,6 @@ namespace Vault.Model
         /// <value>If set, clients can request certificates for any domain, regardless of allowed_domains restrictions. See the documentation for more information.</value>
         [DataMember(Name = "allow_any_name", EmitDefaultValue = true)]
 
-
         public bool AllowAnyName { get; set; }
 
 
@@ -372,7 +370,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, clients can request certificates for the base domains themselves, e.g. \&quot;example.com\&quot; of domains listed in allowed_domains. This is a separate option as in some cases this can be considered a security threat. See the documentation for more information.</value>
         [DataMember(Name = "allow_bare_domains", EmitDefaultValue = true)]
-
 
         public bool AllowBareDomains { get; set; }
 
@@ -383,7 +380,6 @@ namespace Vault.Model
         /// <value>If set, domains specified in allowed_domains can include shell-style glob patterns, e.g. \&quot;ftp*.example.com\&quot;. See the documentation for more information.</value>
         [DataMember(Name = "allow_glob_domains", EmitDefaultValue = true)]
 
-
         public bool AllowGlobDomains { get; set; }
 
 
@@ -392,7 +388,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, IP Subject Alternative Names are allowed. Any valid IP is accepted and No authorization checking is performed.</value>
         [DataMember(Name = "allow_ip_sans", EmitDefaultValue = true)]
-
 
         public bool AllowIpSans { get; set; }
 
@@ -403,7 +398,6 @@ namespace Vault.Model
         /// <value>Whether to allow \&quot;localhost\&quot; and \&quot;localdomain\&quot; as a valid common name in a request, independent of allowed_domains value.</value>
         [DataMember(Name = "allow_localhost", EmitDefaultValue = true)]
 
-
         public bool AllowLocalhost { get; set; }
 
 
@@ -412,7 +406,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, clients can request certificates for subdomains of domains listed in allowed_domains, including wildcard subdomains. See the documentation for more information.</value>
         [DataMember(Name = "allow_subdomains", EmitDefaultValue = true)]
-
 
         public bool AllowSubdomains { get; set; }
 
@@ -423,7 +416,6 @@ namespace Vault.Model
         /// <value>If set, allows certificates with wildcards in the common name to be issued, conforming to RFC 6125&#x27;s Section 6.4.3; e.g., \&quot;*.example.net\&quot; or \&quot;b*z.example.net\&quot;. See the documentation for more information.</value>
         [DataMember(Name = "allow_wildcard_certificates", EmitDefaultValue = true)]
 
-
         public bool AllowWildcardCertificates { get; set; }
 
 
@@ -432,7 +424,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies the domains this role is allowed to issue certificates for. This is used with the allow_bare_domains, allow_subdomains, and allow_glob_domains to determine matches for the common name, DNS-typed SAN entries, and Email-typed SAN entries of certificates. See the documentation for more information. This parameter accepts a comma-separated string or list of domains.</value>
         [DataMember(Name = "allowed_domains", EmitDefaultValue = false)]
-
 
         public List<string> AllowedDomains { get; set; }
 
@@ -443,7 +434,6 @@ namespace Vault.Model
         /// <value>If set, Allowed domains can be specified using identity template policies. Non-templated domains are also permitted.</value>
         [DataMember(Name = "allowed_domains_template", EmitDefaultValue = true)]
 
-
         public bool AllowedDomainsTemplate { get; set; }
 
 
@@ -452,7 +442,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, an array of allowed other names to put in SANs. These values support globbing and must be in the format &lt;oid&gt;;&lt;type&gt;:&lt;value&gt;. Currently only \&quot;utf8\&quot; is a valid type. All values, including globbing values, must use this syntax, with the exception being a single \&quot;*\&quot; which allows any OID and any value (but type must still be utf8).</value>
         [DataMember(Name = "allowed_other_sans", EmitDefaultValue = false)]
-
 
         public List<string> AllowedOtherSans { get; set; }
 
@@ -463,7 +452,6 @@ namespace Vault.Model
         /// <value>If set, an array of allowed serial numbers to put in Subject. These values support globbing.</value>
         [DataMember(Name = "allowed_serial_numbers", EmitDefaultValue = false)]
 
-
         public List<string> AllowedSerialNumbers { get; set; }
 
 
@@ -472,7 +460,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, an array of allowed URIs for URI Subject Alternative Names. Any valid URI is accepted, these values support globbing.</value>
         [DataMember(Name = "allowed_uri_sans", EmitDefaultValue = false)]
-
 
         public List<string> AllowedUriSans { get; set; }
 
@@ -483,7 +470,6 @@ namespace Vault.Model
         /// <value>If set, Allowed URI SANs can be specified using identity template policies. Non-templated URI SANs are also permitted.</value>
         [DataMember(Name = "allowed_uri_sans_template", EmitDefaultValue = true)]
 
-
         public bool AllowedUriSansTemplate { get; set; }
 
 
@@ -492,7 +478,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Backend Type</value>
         [DataMember(Name = "backend", EmitDefaultValue = false)]
-
 
         public string Backend { get; set; }
 
@@ -503,7 +488,6 @@ namespace Vault.Model
         /// <value>Mark Basic Constraints valid when issuing non-CA certificates.</value>
         [DataMember(Name = "basic_constraints_valid_for_non_ca", EmitDefaultValue = true)]
 
-
         public bool BasicConstraintsValidForNonCa { get; set; }
 
 
@@ -512,7 +496,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, certificates are flagged for client auth use. Defaults to true. See also RFC 5280 Section 4.2.1.12.</value>
         [DataMember(Name = "client_flag", EmitDefaultValue = true)]
-
 
         public bool ClientFlag { get; set; }
 
@@ -523,7 +506,6 @@ namespace Vault.Model
         /// <value>List of allowed validations to run against the Common Name field. Values can include &#x27;email&#x27; to validate the CN is a email address, &#x27;hostname&#x27; to validate the CN is a valid hostname (potentially including wildcards). When multiple validations are specified, these take OR semantics (either email OR hostname are allowed). The special value &#x27;disabled&#x27; allows disabling all CN name validations, allowing for arbitrary non-Hostname, non-Email address CNs.</value>
         [DataMember(Name = "cn_validations", EmitDefaultValue = false)]
 
-
         public List<string> CnValidations { get; set; }
 
 
@@ -532,7 +514,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, certificates are flagged for code signing use. Defaults to false. See also RFC 5280 Section 4.2.1.12.</value>
         [DataMember(Name = "code_signing_flag", EmitDefaultValue = true)]
-
 
         public bool CodeSigningFlag { get; set; }
 
@@ -543,7 +524,6 @@ namespace Vault.Model
         /// <value>If set, Country will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "country", EmitDefaultValue = false)]
 
-
         public List<string> Country { get; set; }
 
 
@@ -552,7 +532,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, certificates are flagged for email protection use. Defaults to false. See also RFC 5280 Section 4.2.1.12.</value>
         [DataMember(Name = "email_protection_flag", EmitDefaultValue = true)]
-
 
         public bool EmailProtectionFlag { get; set; }
 
@@ -563,7 +542,6 @@ namespace Vault.Model
         /// <value>If set, only valid host names are allowed for CN and DNS SANs, and the host part of email addresses. Defaults to true.</value>
         [DataMember(Name = "enforce_hostnames", EmitDefaultValue = true)]
 
-
         public bool EnforceHostnames { get; set; }
 
 
@@ -572,7 +550,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated string or list of extended key usages. Valid values can be found at https://golang.org/pkg/crypto/x509/#ExtKeyUsage - - simply drop the \&quot;ExtKeyUsage\&quot; part of the name. To remove all key usages from being set, set this value to an empty list. See also RFC 5280 Section 4.2.1.12.</value>
         [DataMember(Name = "ext_key_usage", EmitDefaultValue = false)]
-
 
         public List<string> ExtKeyUsage { get; set; }
 
@@ -583,7 +560,6 @@ namespace Vault.Model
         /// <value>A comma-separated string or list of extended key usage oids.</value>
         [DataMember(Name = "ext_key_usage_oids", EmitDefaultValue = false)]
 
-
         public List<string> ExtKeyUsageOids { get; set; }
 
 
@@ -592,7 +568,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, certificates issued/signed against this role will have Vault leases attached to them. Defaults to \&quot;false\&quot;. Certificates can be added to the CRL by \&quot;vault revoke &lt;lease_id&gt;\&quot; when certificates are associated with leases. It can also be done using the \&quot;pki/revoke\&quot; endpoint. However, when lease generation is disabled, invoking \&quot;pki/revoke\&quot; would be the only way to add the certificates to the CRL. When large number of certificates are generated with long lifetimes, it is recommended that lease generation be disabled, as large amount of leases adversely affect the startup time of Vault.</value>
         [DataMember(Name = "generate_lease", EmitDefaultValue = true)]
-
 
         public bool GenerateLease { get; set; }
 
@@ -603,7 +578,6 @@ namespace Vault.Model
         /// <value>Reference to the issuer used to sign requests serviced by this role.</value>
         [DataMember(Name = "issuer_ref", EmitDefaultValue = false)]
 
-
         public string IssuerRef { get; set; }
 
 
@@ -612,7 +586,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of bits to use. Allowed values are 0 (universal default); with rsa key_type: 2048 (default), 3072, or 4096; with ec key_type: 224, 256 (default), 384, or 521; ignored with ed25519.</value>
         [DataMember(Name = "key_bits", EmitDefaultValue = false)]
-
 
         public int KeyBits { get; set; }
 
@@ -623,7 +596,6 @@ namespace Vault.Model
         /// <value>A comma-separated string or list of key usages (not extended key usages). Valid values can be found at https://golang.org/pkg/crypto/x509/#KeyUsage - - simply drop the \&quot;KeyUsage\&quot; part of the name. To remove all key usages from being set, set this value to an empty list. See also RFC 5280 Section 4.2.1.3.</value>
         [DataMember(Name = "key_usage", EmitDefaultValue = false)]
 
-
         public List<string> KeyUsage { get; set; }
 
 
@@ -632,7 +604,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, Locality will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "locality", EmitDefaultValue = false)]
-
 
         public List<string> Locality { get; set; }
 
@@ -643,7 +614,6 @@ namespace Vault.Model
         /// <value>The maximum allowed lease duration. If not set, defaults to the system maximum lease TTL.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -652,7 +622,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, certificates issued/signed against this role will not be stored in the storage backend. This can improve performance when issuing large numbers of certificates. However, certificates issued in this way cannot be enumerated or revoked, so this option is recommended only for certificates that are non-sensitive, or extremely short-lived. This option implies a value of \&quot;false\&quot; for \&quot;generate_lease\&quot;.</value>
         [DataMember(Name = "no_store", EmitDefaultValue = true)]
-
 
         public bool NoStore { get; set; }
 
@@ -663,7 +632,6 @@ namespace Vault.Model
         /// <value>Set the not after field of the certificate with specified date value. The value format should be given in UTC format YYYY-MM-ddTHH:MM:SSZ.</value>
         [DataMember(Name = "not_after", EmitDefaultValue = false)]
 
-
         public string NotAfter { get; set; }
 
 
@@ -672,7 +640,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The duration before now which the certificate needs to be backdated by.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
-
 
         public int NotBeforeDuration { get; set; }
 
@@ -683,7 +650,6 @@ namespace Vault.Model
         /// <value>If set, O (Organization) will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "organization", EmitDefaultValue = false)]
 
-
         public List<string> Organization { get; set; }
 
 
@@ -692,7 +658,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, OU (OrganizationalUnit) will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "ou", EmitDefaultValue = false)]
-
 
         public List<string> Ou { get; set; }
 
@@ -703,7 +668,6 @@ namespace Vault.Model
         /// <value>A comma-separated string or list of policy OIDs, or a JSON list of qualified policy information, which must include an oid, and may include a notice and/or cps url, using the form [{\&quot;oid\&quot;&#x3D;\&quot;1.3.6.1.4.1.7.8\&quot;,\&quot;notice\&quot;&#x3D;\&quot;I am a user Notice\&quot;}, {\&quot;oid\&quot;&#x3D;\&quot;1.3.6.1.4.1.44947.1.2.4 \&quot;,\&quot;cps\&quot;&#x3D;\&quot;https://example.com\&quot;}].</value>
         [DataMember(Name = "policy_identifiers", EmitDefaultValue = false)]
 
-
         public List<string> PolicyIdentifiers { get; set; }
 
 
@@ -712,7 +676,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set, Postal Code will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "postal_code", EmitDefaultValue = false)]
-
 
         public List<string> PostalCode { get; set; }
 
@@ -723,7 +686,6 @@ namespace Vault.Model
         /// <value>If set, Province will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "province", EmitDefaultValue = false)]
 
-
         public List<string> Province { get; set; }
 
 
@@ -732,7 +694,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>If set to false, makes the &#x27;common_name&#x27; field optional while generating a certificate.</value>
         [DataMember(Name = "require_cn", EmitDefaultValue = true)]
-
 
         public bool RequireCn { get; set; }
 
@@ -743,7 +704,6 @@ namespace Vault.Model
         /// <value>If set, certificates are flagged for server auth use. Defaults to true. See also RFC 5280 Section 4.2.1.12.</value>
         [DataMember(Name = "server_flag", EmitDefaultValue = true)]
 
-
         public bool ServerFlag { get; set; }
 
 
@@ -752,7 +712,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of bits to use in the signature algorithm; accepts 256 for SHA-2-256, 384 for SHA-2-384, and 512 for SHA-2-512. Defaults to 0 to automatically detect based on key length (SHA-2-256 for RSA keys, and matching the curve size for NIST P-Curves).</value>
         [DataMember(Name = "signature_bits", EmitDefaultValue = false)]
-
 
         public int SignatureBits { get; set; }
 
@@ -763,7 +722,6 @@ namespace Vault.Model
         /// <value>If set, Street Address will be set to this value in certificates issued by this role.</value>
         [DataMember(Name = "street_address", EmitDefaultValue = false)]
 
-
         public List<string> StreetAddress { get; set; }
 
 
@@ -772,7 +730,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The lease duration (validity period of the certificate) if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the system default value or the value of max_ttl, whichever is shorter.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 
@@ -783,7 +740,6 @@ namespace Vault.Model
         /// <value>If set, when used with a signing profile, the common name in the CSR will be used. This does *not* include any requested Subject Alternative Names; use use_csr_sans for that. Defaults to true.</value>
         [DataMember(Name = "use_csr_common_name", EmitDefaultValue = true)]
 
-
         public bool UseCsrCommonName { get; set; }
 
 
@@ -793,7 +749,6 @@ namespace Vault.Model
         /// <value>If set, when used with a signing profile, the SANs in the CSR will be used. This does *not* include the Common Name (cn); use use_csr_common_name for that. Defaults to true.</value>
         [DataMember(Name = "use_csr_sans", EmitDefaultValue = true)]
 
-
         public bool UseCsrSans { get; set; }
 
 
@@ -802,7 +757,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false.</value>
         [DataMember(Name = "use_pss", EmitDefaultValue = true)]
-
 
         public bool UsePss { get; set; }
 

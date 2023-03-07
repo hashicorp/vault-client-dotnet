@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>User-friendly description for this audit backend.</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
 
-
         public string Description { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Mark the mount as a local mount, which is not replicated and is unaffected by replication.</value>
         [DataMember(Name = "local", EmitDefaultValue = true)]
-
 
         public bool Local { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Configuration options for the audit backend.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
 
-
         public Object Options { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of the backend. Example: \&quot;mysql\&quot;</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

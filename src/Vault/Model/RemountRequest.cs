@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The previous mount point.</value>
         [DataMember(Name = "from", EmitDefaultValue = false)]
 
-
         public string From { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The new mount point.</value>
         [DataMember(Name = "to", EmitDefaultValue = false)]
-
 
         public string To { get; set; }
 

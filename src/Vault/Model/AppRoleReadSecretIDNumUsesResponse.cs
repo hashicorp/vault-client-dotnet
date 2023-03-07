@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Number of times a secret ID can access the role, after which the SecretID will expire. Defaults to 0 meaning that the secret ID is of unlimited use.</value>
         [DataMember(Name = "secret_id_num_uses", EmitDefaultValue = false)]
 
-
         public int SecretIdNumUses { get; set; }
 
 

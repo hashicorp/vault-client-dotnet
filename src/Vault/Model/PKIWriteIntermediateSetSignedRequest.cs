@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>PEM-format certificate. This must be a CA certificate with a public key matching the previously-generated key from the generation endpoint. Additional parent CAs may be optionally appended to the bundle.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
 
-
         public string Certificate { get; set; }
 
 

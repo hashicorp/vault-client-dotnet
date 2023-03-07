@@ -107,7 +107,6 @@ namespace Vault.Model
         /// <value>The ID of the requesting client.</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
 
-
         public string ClientId { get; set; }
 
 
@@ -116,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The secret of the requesting client.</value>
         [DataMember(Name = "client_secret", EmitDefaultValue = false)]
-
 
         public string ClientSecret { get; set; }
 
@@ -127,7 +125,6 @@ namespace Vault.Model
         /// <value>The authorization code received from the provider&#x27;s authorization endpoint.</value>
         [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string Code { get; set; }
 
 
@@ -136,7 +133,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The code verifier associated with the authorization code.</value>
         [DataMember(Name = "code_verifier", EmitDefaultValue = false)]
-
 
         public string CodeVerifier { get; set; }
 
@@ -147,7 +143,6 @@ namespace Vault.Model
         /// <value>The authorization grant type. The following grant types are supported: &#x27;authorization_code&#x27;.</value>
         [DataMember(Name = "grant_type", IsRequired = true, EmitDefaultValue = false)]
 
-
         public string GrantType { get; set; }
 
 
@@ -156,7 +151,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The callback location where the authentication response was sent.</value>
         [DataMember(Name = "redirect_uri", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string RedirectUri { get; set; }
 

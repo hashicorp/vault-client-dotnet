@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Accessor of the token to look up (request body)</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
 
-
         public string Accessor { get; set; }
 
 

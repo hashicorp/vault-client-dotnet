@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", EmitDefaultValue = false)]
 
-
         public string MethodId { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>The settings file provided by Ping, Base64-encoded. This must be a settings file suitable for third-party clients, not the PingID SDK or PingFederate.</value>
         [DataMember(Name = "settings_file_base64", EmitDefaultValue = false)]
 
-
         public string SettingsFileBase64 { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A template string for mapping Identity names to MFA method names. Values to subtitute should be placed in {{}}. For example, \&quot;{{alias.name}}@example.com\&quot;. Currently-supported mappings: alias.name: The name returned by the mount configured via the mount_accessor parameter If blank, the Alias&#x27;s name field will be used as-is.</value>
         [DataMember(Name = "username_format", EmitDefaultValue = false)]
-
 
         public string UsernameFormat { get; set; }
 

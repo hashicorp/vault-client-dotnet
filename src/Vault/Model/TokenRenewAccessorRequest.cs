@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Accessor of the token to renew (request body)</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
 
-
         public string Accessor { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The desired increment in seconds to the token expiration</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
-
 
         public int Increment { get; set; }
 

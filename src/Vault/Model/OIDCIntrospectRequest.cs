@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Optional client_id to verify</value>
         [DataMember(Name = "client_id", EmitDefaultValue = false)]
 
-
         public string ClientId { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Token to verify</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
-
 
         public string Token { get; set; }
 

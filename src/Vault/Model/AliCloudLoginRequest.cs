@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>The request headers. This must include the headers over which AliCloud has included a signature.</value>
         [DataMember(Name = "identity_request_headers", EmitDefaultValue = false)]
 
-
         public string IdentityRequestHeaders { get; set; }
 
 
@@ -87,7 +86,6 @@ namespace Vault.Model
         /// <value>Base64-encoded full URL against which to make the AliCloud request.</value>
         [DataMember(Name = "identity_request_url", EmitDefaultValue = false)]
 
-
         public string IdentityRequestUrl { get; set; }
 
 
@@ -96,7 +94,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the role against which the login is being attempted. If &#x27;role&#x27; is not specified, then the login endpoint looks for a role name in the ARN returned by the GetCallerIdentity request. If a matching role is not found, login fails.</value>
         [DataMember(Name = "role", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string Role { get; set; }
 

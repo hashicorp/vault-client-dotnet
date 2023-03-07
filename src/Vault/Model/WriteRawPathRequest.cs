@@ -70,7 +70,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "compressed", EmitDefaultValue = true)]
 
-
         public bool Compressed { get; set; }
 
 
@@ -78,7 +77,6 @@ namespace Vault.Model
         /// Gets or Sets CompressionType
         /// </summary>
         [DataMember(Name = "compression_type", EmitDefaultValue = false)]
-
 
         public string CompressionType { get; set; }
 
@@ -88,7 +86,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "encoding", EmitDefaultValue = false)]
 
-
         public string Encoding { get; set; }
 
 
@@ -96,7 +93,6 @@ namespace Vault.Model
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "value", EmitDefaultValue = false)]
-
 
         public string Value { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Specifies a base64-encoded PGP public key.</value>
         [DataMember(Name = "pgp_key", EmitDefaultValue = false)]
 
-
         public string PgpKey { get; set; }
 
 

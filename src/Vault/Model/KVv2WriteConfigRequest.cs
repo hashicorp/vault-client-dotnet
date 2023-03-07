@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>If true, the backend will require the cas parameter to be set for each write</value>
         [DataMember(Name = "cas_required", EmitDefaultValue = true)]
 
-
         public bool CasRequired { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>If set, the length of time before a version is deleted. A negative duration disables the use of delete_version_after on all keys. A zero duration clears the current setting. Accepts a Go duration format string.</value>
         [DataMember(Name = "delete_version_after", EmitDefaultValue = false)]
 
-
         public int DeleteVersionAfter { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The number of versions to keep for each key. Defaults to 10</value>
         [DataMember(Name = "max_versions", EmitDefaultValue = false)]
-
 
         public int MaxVersions { get; set; }
 

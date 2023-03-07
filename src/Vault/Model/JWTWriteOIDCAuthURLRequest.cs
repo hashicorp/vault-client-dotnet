@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Optional client-provided nonce that must match during callback, if present.</value>
         [DataMember(Name = "client_nonce", EmitDefaultValue = false)]
 
-
         public string ClientNonce { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>The OAuth redirect_uri to use in the authorization URL.</value>
         [DataMember(Name = "redirect_uri", EmitDefaultValue = false)]
 
-
         public string RedirectUri { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The role to issue an OIDC authorization URL against.</value>
         [DataMember(Name = "role", EmitDefaultValue = false)]
-
 
         public string Role { get; set; }
 

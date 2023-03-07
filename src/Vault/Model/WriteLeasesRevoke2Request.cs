@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
 
-
         public string LeaseId { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether or not to perform the revocation synchronously</value>
         [DataMember(Name = "sync", EmitDefaultValue = true)]
-
 
         public bool Sync { get; set; }
 

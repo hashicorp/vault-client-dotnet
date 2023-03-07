@@ -61,7 +61,6 @@ namespace Vault.Model
         /// <value>Unique identifier of the Role. Required to be supplied when the &#x27;bind_secret_id&#x27; constraint is set.</value>
         [DataMember(Name = "role_id", EmitDefaultValue = false)]
 
-
         public string RoleId { get; set; }
 
 
@@ -70,7 +69,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>SecretID belong to the App role</value>
         [DataMember(Name = "secret_id", EmitDefaultValue = false)]
-
 
         public string SecretId { get; set; }
 

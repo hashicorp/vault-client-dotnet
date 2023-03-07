@@ -127,7 +127,6 @@ namespace Vault.Model
         /// <value>Indicates which namespace that the token will be created within. Defaults to &#x27;default&#x27;. Available in Consul 1.7 and above.</value>
         [DataMember(Name = "consul_namespace", EmitDefaultValue = false)]
 
-
         public string ConsulNamespace { get; set; }
 
 
@@ -136,7 +135,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of policies to attach to the token. Either \&quot;consul_policies\&quot; or \&quot;consul_roles\&quot; are required for Consul 1.5 and above, or just \&quot;consul_policies\&quot; if using Consul 1.4.</value>
         [DataMember(Name = "consul_policies", EmitDefaultValue = false)]
-
 
         public List<string> ConsulPolicies { get; set; }
 
@@ -147,7 +145,6 @@ namespace Vault.Model
         /// <value>List of Consul roles to attach to the token. Either \&quot;policies\&quot; or \&quot;consul_roles\&quot; are required for Consul 1.5 and above.</value>
         [DataMember(Name = "consul_roles", EmitDefaultValue = false)]
 
-
         public List<string> ConsulRoles { get; set; }
 
 
@@ -157,8 +154,7 @@ namespace Vault.Model
         /// <value>Use \&quot;ttl\&quot; instead.</value>
         [DataMember(Name = "lease", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Lease { get; set; }
+        [Obsolete] public int Lease { get; set; }
 
 
         /// <summary>
@@ -166,7 +162,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Indicates that the token should not be replicated globally and instead be local to the current datacenter. Available in Consul 1.4 and above.</value>
         [DataMember(Name = "local", EmitDefaultValue = true)]
-
 
         public bool Local { get; set; }
 
@@ -177,7 +172,6 @@ namespace Vault.Model
         /// <value>Max TTL for the Consul token created from the role.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-
         public int MaxTtl { get; set; }
 
 
@@ -186,7 +180,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of Node Identities to attach to the token. Available in Consul 1.8.1 or above.</value>
         [DataMember(Name = "node_identities", EmitDefaultValue = false)]
-
 
         public List<string> NodeIdentities { get; set; }
 
@@ -197,7 +190,6 @@ namespace Vault.Model
         /// <value>Indicates which admin partition that the token will be created within. Defaults to &#x27;default&#x27;. Available in Consul 1.11 and above.</value>
         [DataMember(Name = "partition", EmitDefaultValue = false)]
 
-
         public string Partition { get; set; }
 
 
@@ -207,8 +199,7 @@ namespace Vault.Model
         /// <value>Use \&quot;consul_policies\&quot; instead.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -217,8 +208,7 @@ namespace Vault.Model
         /// <value>Policy document, base64 encoded. Required for &#x27;client&#x27; tokens. Required for Consul pre-1.4.</value>
         [DataMember(Name = "policy", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string Policy { get; set; }
+        [Obsolete] public string Policy { get; set; }
 
 
         /// <summary>
@@ -226,7 +216,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of Service Identities to attach to the token, separated by semicolons. Available in Consul 1.5 or above.</value>
         [DataMember(Name = "service_identities", EmitDefaultValue = false)]
-
 
         public List<string> ServiceIdentities { get; set; }
 
@@ -237,8 +226,7 @@ namespace Vault.Model
         /// <value>Which type of token to create: &#x27;client&#x27; or &#x27;management&#x27;. If a &#x27;management&#x27; token, the \&quot;policy\&quot;, \&quot;policies\&quot;, and \&quot;consul_roles\&quot; parameters are not required. Defaults to &#x27;client&#x27;.</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string TokenType { get; set; }
+        [Obsolete] public string TokenType { get; set; }
 
 
         /// <summary>
@@ -246,7 +234,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>TTL for the Consul token created from the role.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

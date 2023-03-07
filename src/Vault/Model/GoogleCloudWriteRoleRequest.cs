@@ -217,7 +217,6 @@ namespace Vault.Model
         /// <value>If true, will add group aliases to auth tokens generated under this role. This will add the full list of ancestors (projects, folders, organizations) for the given entity&#x27;s project. Requires IAM permission &#x60;resourcemanager.projects.get&#x60; on this project.</value>
         [DataMember(Name = "add_group_aliases", EmitDefaultValue = true)]
 
-
         public bool AddGroupAliases { get; set; }
 
 
@@ -226,7 +225,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>&#x27;iam&#x27; roles only. If false, Vault will not not allow GCE instances to login in against this role</value>
         [DataMember(Name = "allow_gce_inference", EmitDefaultValue = true)]
-
 
         public bool AllowGceInference { get; set; }
 
@@ -237,7 +235,6 @@ namespace Vault.Model
         /// <value>Deprecated: use \&quot;bound_instance_groups\&quot; instead.</value>
         [DataMember(Name = "bound_instance_group", EmitDefaultValue = false)]
 
-
         public string BoundInstanceGroup { get; set; }
 
 
@@ -246,7 +243,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of permitted instance groups to which the GCE instance must belong. This option only applies to \&quot;gce\&quot; roles.</value>
         [DataMember(Name = "bound_instance_groups", EmitDefaultValue = false)]
-
 
         public List<string> BoundInstanceGroups { get; set; }
 
@@ -257,7 +253,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of GCP labels formatted as\&quot;key:value\&quot; strings that must be present on the GCE instance in order to authenticate. This option only applies to \&quot;gce\&quot; roles.</value>
         [DataMember(Name = "bound_labels", EmitDefaultValue = false)]
 
-
         public List<string> BoundLabels { get; set; }
 
 
@@ -266,7 +261,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>GCP Projects that authenticating entities must belong to.</value>
         [DataMember(Name = "bound_projects", EmitDefaultValue = false)]
-
 
         public List<string> BoundProjects { get; set; }
 
@@ -277,7 +271,6 @@ namespace Vault.Model
         /// <value>Deprecated: use \&quot;bound_regions\&quot; instead.</value>
         [DataMember(Name = "bound_region", EmitDefaultValue = false)]
 
-
         public string BoundRegion { get; set; }
 
 
@@ -286,7 +279,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of permitted regions to which the GCE instance must belong. If a group is provided, it is assumed to be a regional group. If \&quot;zone\&quot; is provided, this option is ignored. This can be a self-link or region name. This option only applies to \&quot;gce\&quot; roles.</value>
         [DataMember(Name = "bound_regions", EmitDefaultValue = false)]
-
 
         public List<string> BoundRegions { get; set; }
 
@@ -297,7 +289,6 @@ namespace Vault.Model
         /// <value>Can be set for both &#x27;iam&#x27; and &#x27;gce&#x27; roles (required for &#x27;iam&#x27;). A comma-seperated list of authorized service accounts. If the single value \&quot;*\&quot; is given, this is assumed to be all service accounts under the role&#x27;s project. If this is set on a GCE role, the inferred service account from the instance metadata token will be used.</value>
         [DataMember(Name = "bound_service_accounts", EmitDefaultValue = false)]
 
-
         public List<string> BoundServiceAccounts { get; set; }
 
 
@@ -306,7 +297,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Deprecated: use \&quot;bound_zones\&quot; instead.</value>
         [DataMember(Name = "bound_zone", EmitDefaultValue = false)]
-
 
         public string BoundZone { get; set; }
 
@@ -317,7 +307,6 @@ namespace Vault.Model
         /// <value>Comma-separated list of permitted zones to which the GCE instance must belong. If a group is provided, it is assumed to be a zonal group. This can be a self-link or zone name. This option only applies to \&quot;gce\&quot; roles.</value>
         [DataMember(Name = "bound_zones", EmitDefaultValue = false)]
 
-
         public List<string> BoundZones { get; set; }
 
 
@@ -326,7 +315,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Currently enabled for &#x27;iam&#x27; only. Duration in seconds from time of validation that a JWT must expire within.</value>
         [DataMember(Name = "max_jwt_exp", EmitDefaultValue = false)]
-
 
         public int MaxJwtExp { get; set; }
 
@@ -337,8 +325,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int MaxTtl { get; set; }
+        [Obsolete] public int MaxTtl { get; set; }
 
 
         /// <summary>
@@ -347,8 +334,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Period { get; set; }
+        [Obsolete] public int Period { get; set; }
 
 
         /// <summary>
@@ -357,8 +343,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public List<string> Policies { get; set; }
+        [Obsolete] public List<string> Policies { get; set; }
 
 
         /// <summary>
@@ -366,7 +351,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Deprecated: use \&quot;bound_projects\&quot; instead</value>
         [DataMember(Name = "project_id", EmitDefaultValue = false)]
-
 
         public string ProjectId { get; set; }
 
@@ -377,7 +361,6 @@ namespace Vault.Model
         /// <value>Deprecated: use \&quot;bound_service_accounts\&quot; instead.</value>
         [DataMember(Name = "service_accounts", EmitDefaultValue = false)]
 
-
         public List<string> ServiceAccounts { get; set; }
 
 
@@ -386,7 +369,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
-
 
         public List<string> TokenBoundCidrs { get; set; }
 
@@ -397,7 +379,6 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-
         public int TokenExplicitMaxTtl { get; set; }
 
 
@@ -406,7 +387,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
-
 
         public int TokenMaxTtl { get; set; }
 
@@ -417,7 +397,6 @@ namespace Vault.Model
         /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
 
-
         public bool TokenNoDefaultPolicy { get; set; }
 
 
@@ -426,7 +405,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
-
 
         public int TokenNumUses { get; set; }
 
@@ -437,7 +415,6 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-
         public int TokenPeriod { get; set; }
 
 
@@ -446,7 +423,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of policies</value>
         [DataMember(Name = "token_policies", EmitDefaultValue = false)]
-
 
         public List<string> TokenPolicies { get; set; }
 
@@ -457,7 +433,6 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-
         public int TokenTtl { get; set; }
 
 
@@ -466,7 +441,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
-
 
         public string TokenType { get; set; }
 
@@ -477,8 +451,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public int Ttl { get; set; }
+        [Obsolete] public int Ttl { get; set; }
 
 
         /// <summary>
@@ -486,7 +459,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of the role. Currently supported: iam, gce</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

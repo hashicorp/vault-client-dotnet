@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The versions to be archived. The versioned data will not be deleted, but it will no longer be returned in normal get requests.</value>
         [DataMember(Name = "versions", EmitDefaultValue = false)]
 
-
         public List<int> Versions { get; set; }
 
 

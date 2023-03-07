@@ -89,7 +89,6 @@ namespace Vault.Model
         /// <value>ID of the group. If set, updates the corresponding existing group.</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
 
-
         public string Id { get; set; }
 
 
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Entity IDs to be assigned as group members.</value>
         [DataMember(Name = "member_entity_ids", EmitDefaultValue = false)]
-
 
         public List<string> MemberEntityIds { get; set; }
 
@@ -109,7 +107,6 @@ namespace Vault.Model
         /// <value>Group IDs to be assigned as group members.</value>
         [DataMember(Name = "member_group_ids", EmitDefaultValue = false)]
 
-
         public List<string> MemberGroupIds { get; set; }
 
 
@@ -118,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Metadata to be associated with the group. In CLI, this parameter can be repeated multiple times, and it all gets merged together. For example: vault &lt;command&gt; &lt;path&gt; metadata&#x3D;key1&#x3D;value1 metadata&#x3D;key2&#x3D;value2</value>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
-
 
         public Object Metadata { get; set; }
 
@@ -129,7 +125,6 @@ namespace Vault.Model
         /// <value>Name of the group.</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
 
-
         public string Name { get; set; }
 
 
@@ -139,7 +134,6 @@ namespace Vault.Model
         /// <value>Policies to be tied to the group.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
 
-
         public List<string> Policies { get; set; }
 
 
@@ -148,7 +142,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Type of the group, &#x27;internal&#x27; or &#x27;external&#x27;. Defaults to &#x27;internal&#x27;</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 

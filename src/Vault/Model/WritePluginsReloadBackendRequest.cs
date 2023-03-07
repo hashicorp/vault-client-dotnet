@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>The mount paths of the plugin backends to reload.</value>
         [DataMember(Name = "mounts", EmitDefaultValue = false)]
 
-
         public List<string> Mounts { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>The name of the plugin to reload, as registered in the plugin catalog.</value>
         [DataMember(Name = "plugin", EmitDefaultValue = false)]
 
-
         public string Plugin { get; set; }
 
 
@@ -83,7 +81,6 @@ namespace Vault.Model
         /// Gets or Sets Scope
         /// </summary>
         [DataMember(Name = "scope", EmitDefaultValue = false)]
-
 
         public string Scope { get; set; }
 

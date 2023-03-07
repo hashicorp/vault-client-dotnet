@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Optional name to be used for this key</value>
         [DataMember(Name = "key_name", EmitDefaultValue = false)]
 
-
         public string KeyName { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM-format, unencrypted secret key</value>
         [DataMember(Name = "pem_bundle", EmitDefaultValue = false)]
-
 
         public string PemBundle { get; set; }
 

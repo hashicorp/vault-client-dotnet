@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Disable defaulting to the local CA certificate and service account JWT when running in a Kubernetes pod.</value>
         [DataMember(Name = "disable_local_ca_jwt", EmitDefaultValue = true)]
 
-
         public bool DisableLocalCaJwt { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM encoded CA certificate to use to verify the Kubernetes API server certificate. Defaults to the local pod&#x27;s CA if found.</value>
         [DataMember(Name = "kubernetes_ca_cert", EmitDefaultValue = false)]
-
 
         public string KubernetesCaCert { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Kubernetes API URL to connect to. Defaults to https://$KUBERNETES_SERVICE_HOST:KUBERNETES_SERVICE_PORT if those environment variables are set.</value>
         [DataMember(Name = "kubernetes_host", EmitDefaultValue = false)]
 
-
         public string KubernetesHost { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The JSON web token of the service account used by the secret engine to manage Kubernetes credentials. Defaults to the local pod&#x27;s JWT if found.</value>
         [DataMember(Name = "service_account_jwt", EmitDefaultValue = false)]
-
 
         public string ServiceAccountJwt { get; set; }
 

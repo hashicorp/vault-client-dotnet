@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Alias IDs to keep in case of conflicting aliases. Ignored if no conflicting aliases found</value>
         [DataMember(Name = "conflicting_alias_ids_to_keep", EmitDefaultValue = false)]
 
-
         public List<string> ConflictingAliasIdsToKeep { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Setting this will follow the &#x27;mine&#x27; strategy for merging MFA secrets. If there are secrets of the same type both in entities that are merged from and in entity into which all others are getting merged, secrets in the destination will be unaltered. If not set, this API will throw an error containing all the conflicts.</value>
         [DataMember(Name = "force", EmitDefaultValue = true)]
-
 
         public bool Force { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Entity IDs which need to get merged</value>
         [DataMember(Name = "from_entity_ids", EmitDefaultValue = false)]
 
-
         public List<string> FromEntityIds { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Entity ID into which all the other entities need to get merged</value>
         [DataMember(Name = "to_entity_id", EmitDefaultValue = false)]
-
 
         public string ToEntityId { get; set; }
 

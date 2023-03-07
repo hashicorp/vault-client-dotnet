@@ -73,7 +73,6 @@ namespace Vault.Model
         /// <value>Signing algorithm to use. This will default to RS256.</value>
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
 
-
         public string Algorithm { get; set; }
 
 
@@ -82,7 +81,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or array of role client ids allowed to use this key for signing. If empty no roles are allowed. If \&quot;*\&quot; all roles are allowed.</value>
         [DataMember(Name = "allowed_client_ids", EmitDefaultValue = false)]
-
 
         public List<string> AllowedClientIds { get; set; }
 
@@ -93,7 +91,6 @@ namespace Vault.Model
         /// <value>How often to generate a new keypair.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
-
         public int RotationPeriod { get; set; }
 
 
@@ -102,7 +99,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Controls how long the public portion of a key will be available for verification after being rotated.</value>
         [DataMember(Name = "verification_ttl", EmitDefaultValue = false)]
-
 
         public int VerificationTtl { get; set; }
 

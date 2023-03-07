@@ -119,7 +119,6 @@ namespace Vault.Model
         /// <value>A list of headers to whitelist and allow a plugin to set on responses.</value>
         [DataMember(Name = "allowed_response_headers", EmitDefaultValue = false)]
 
-
         public List<string> AllowedResponseHeaders { get; set; }
 
 
@@ -128,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The list of keys in the request data object that will not be HMAC&#x27;ed by audit devices.</value>
         [DataMember(Name = "audit_non_hmac_request_keys", EmitDefaultValue = false)]
-
 
         public List<string> AuditNonHmacRequestKeys { get; set; }
 
@@ -139,7 +137,6 @@ namespace Vault.Model
         /// <value>The list of keys in the response data object that will not be HMAC&#x27;ed by audit devices.</value>
         [DataMember(Name = "audit_non_hmac_response_keys", EmitDefaultValue = false)]
 
-
         public List<string> AuditNonHmacResponseKeys { get; set; }
 
 
@@ -148,7 +145,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The default lease TTL for this mount.</value>
         [DataMember(Name = "default_lease_ttl", EmitDefaultValue = false)]
-
 
         public string DefaultLeaseTtl { get; set; }
 
@@ -159,7 +155,6 @@ namespace Vault.Model
         /// <value>User-friendly description for this credential backend.</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
 
-
         public string Description { get; set; }
 
 
@@ -168,7 +163,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#x27;unauth&#x27; and &#x27;hidden&#x27;, with the empty default (&#x27;&#x27;) behaving like &#x27;hidden&#x27;.</value>
         [DataMember(Name = "listing_visibility", EmitDefaultValue = false)]
-
 
         public string ListingVisibility { get; set; }
 
@@ -179,7 +173,6 @@ namespace Vault.Model
         /// <value>The max lease TTL for this mount.</value>
         [DataMember(Name = "max_lease_ttl", EmitDefaultValue = false)]
 
-
         public string MaxLeaseTtl { get; set; }
 
 
@@ -188,7 +181,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The options to pass into the backend. Should be a json object with string keys and values.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
-
 
         public Object Options { get; set; }
 
@@ -199,7 +191,6 @@ namespace Vault.Model
         /// <value>A list of headers to whitelist and pass from the request to the plugin.</value>
         [DataMember(Name = "passthrough_request_headers", EmitDefaultValue = false)]
 
-
         public List<string> PassthroughRequestHeaders { get; set; }
 
 
@@ -208,7 +199,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The semantic version of the plugin to use.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
-
 
         public string PluginVersion { get; set; }
 
@@ -219,7 +209,6 @@ namespace Vault.Model
         /// <value>The type of token to issue (service or batch).</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
 
-
         public string TokenType { get; set; }
 
 
@@ -228,7 +217,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The user lockout configuration to pass into the backend. Should be a json object with string keys and values.</value>
         [DataMember(Name = "user_lockout_config", EmitDefaultValue = false)]
-
 
         public Object UserLockoutConfig { get; set; }
 

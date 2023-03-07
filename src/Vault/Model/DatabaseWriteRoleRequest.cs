@@ -103,7 +103,6 @@ namespace Vault.Model
         /// <value>Specifies the database statements executed to create and configure a user. See the plugin&#x27;s API page for more information on support and formatting for this parameter.</value>
         [DataMember(Name = "creation_statements", EmitDefaultValue = false)]
 
-
         public List<string> CreationStatements { get; set; }
 
 
@@ -112,7 +111,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The configuration for the given credential_type.</value>
         [DataMember(Name = "credential_config", EmitDefaultValue = false)]
-
 
         public Object CredentialConfig { get; set; }
 
@@ -123,7 +121,6 @@ namespace Vault.Model
         /// <value>The type of credential to manage. Options include: &#x27;password&#x27;, &#x27;rsa_private_key&#x27;. Defaults to &#x27;password&#x27;.</value>
         [DataMember(Name = "credential_type", EmitDefaultValue = false)]
 
-
         public string CredentialType { get; set; }
 
 
@@ -132,7 +129,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the database this role acts on.</value>
         [DataMember(Name = "db_name", EmitDefaultValue = false)]
-
 
         public string DbName { get; set; }
 
@@ -143,7 +139,6 @@ namespace Vault.Model
         /// <value>Default ttl for role.</value>
         [DataMember(Name = "default_ttl", EmitDefaultValue = false)]
 
-
         public int DefaultTtl { get; set; }
 
 
@@ -152,7 +147,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Maximum time a credential is valid for</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -163,7 +157,6 @@ namespace Vault.Model
         /// <value>Specifies the database statements to be executed to renew a user. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter.</value>
         [DataMember(Name = "renew_statements", EmitDefaultValue = false)]
 
-
         public List<string> RenewStatements { get; set; }
 
 
@@ -173,7 +166,6 @@ namespace Vault.Model
         /// <value>Specifies the database statements to be executed to revoke a user. See the plugin&#x27;s API page for more information on support and formatting for this parameter.</value>
         [DataMember(Name = "revocation_statements", EmitDefaultValue = false)]
 
-
         public List<string> RevocationStatements { get; set; }
 
 
@@ -182,7 +174,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies the database statements to be executed rollback a create operation in the event of an error. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter.</value>
         [DataMember(Name = "rollback_statements", EmitDefaultValue = false)]
-
 
         public List<string> RollbackStatements { get; set; }
 

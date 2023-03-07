@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>Certificate to revoke in PEM format; must be signed by an issuer in this mount.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
 
-
         public string Certificate { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Certificate serial number, in colon- or hyphen-separated octal</value>
         [DataMember(Name = "serial_number", EmitDefaultValue = false)]
-
 
         public string SerialNumber { get; set; }
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Value for users mapping</value>
         [DataMember(Name = "value", EmitDefaultValue = false)]
 
-
         public string Value { get; set; }
 
 

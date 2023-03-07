@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Impose secret_id to be presented when logging in using this role. Defaults to &#x27;true&#x27;.</value>
         [DataMember(Name = "bind_secret_id", EmitDefaultValue = true)]
 
-
         public bool BindSecretId { get; set; }
 
 

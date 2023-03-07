@@ -69,7 +69,6 @@ namespace Vault.Model
         /// <value>Algorithm to use (POST body parameter). Valid values are: * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 Defaults to \&quot;sha2-256\&quot;.</value>
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
 
-
         public string Algorithm { get; set; }
 
 
@@ -79,7 +78,6 @@ namespace Vault.Model
         /// <value>Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;hex\&quot;.</value>
         [DataMember(Name = "format", EmitDefaultValue = false)]
 
-
         public string Format { get; set; }
 
 
@@ -88,7 +86,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The base64-encoded input data</value>
         [DataMember(Name = "input", EmitDefaultValue = false)]
-
 
         public string Input { get; set; }
 

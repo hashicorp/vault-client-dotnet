@@ -69,7 +69,6 @@ namespace Vault.Model
         /// <value>Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot;</value>
         [DataMember(Name = "key_algorithm", EmitDefaultValue = false)]
 
-
         public string KeyAlgorithm { get; set; }
 
 
@@ -79,7 +78,6 @@ namespace Vault.Model
         /// <value>Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot;</value>
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
 
-
         public string KeyType { get; set; }
 
 
@@ -88,7 +86,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Lifetime of the service account key</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

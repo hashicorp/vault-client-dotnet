@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>The distinguished name of the entry to manage.</value>
         [DataMember(Name = "dn", EmitDefaultValue = false)]
 
-
         public string Dn { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Period for automatic credential rotation of the given entry.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
-
         public int RotationPeriod { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The username/logon name for the entry with which this role will be associated.</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
-
 
         public string Username { get; set; }
 

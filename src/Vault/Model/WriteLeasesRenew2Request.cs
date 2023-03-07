@@ -59,7 +59,6 @@ namespace Vault.Model
         /// <value>The desired increment in seconds to the lease</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
 
-
         public int Increment { get; set; }
 
 
@@ -68,7 +67,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
-
 
         public string LeaseId { get; set; }
 

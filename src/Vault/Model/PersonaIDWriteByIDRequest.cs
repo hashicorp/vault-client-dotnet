@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>Entity ID to which this persona should be tied to</value>
         [DataMember(Name = "entity_id", EmitDefaultValue = false)]
 
-
         public string EntityId { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Metadata to be associated with the persona. In CLI, this parameter can be repeated multiple times, and it all gets merged together. For example: vault &lt;command&gt; &lt;path&gt; metadata&#x3D;key1&#x3D;value1 metadata&#x3D;key2&#x3D;value2</value>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
-
 
         public Object Metadata { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Mount accessor to which this persona belongs to</value>
         [DataMember(Name = "mount_accessor", EmitDefaultValue = false)]
 
-
         public string MountAccessor { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the persona</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-
 
         public string Name { get; set; }
 

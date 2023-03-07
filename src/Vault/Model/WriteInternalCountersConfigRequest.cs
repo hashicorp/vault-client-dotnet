@@ -67,7 +67,6 @@ namespace Vault.Model
         /// <value>Number of months to report if no start date specified.</value>
         [DataMember(Name = "default_report_months", EmitDefaultValue = false)]
 
-
         public int DefaultReportMonths { get; set; }
 
 
@@ -77,7 +76,6 @@ namespace Vault.Model
         /// <value>Enable or disable collection of client count: enable, disable, or default.</value>
         [DataMember(Name = "enabled", EmitDefaultValue = false)]
 
-
         public string Enabled { get; set; }
 
 
@@ -86,7 +84,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Number of months of client data to retain. Setting to 0 will clear all existing data.</value>
         [DataMember(Name = "retention_months", EmitDefaultValue = false)]
-
 
         public int RetentionMonths { get; set; }
 

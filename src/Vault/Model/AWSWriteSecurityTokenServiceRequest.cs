@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>ARN of role to assume when credential_type is assumed_role</value>
         [DataMember(Name = "role_arn", EmitDefaultValue = false)]
 
-
         public string RoleArn { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Session name to use when assuming role. Max chars: 64</value>
         [DataMember(Name = "role_session_name", EmitDefaultValue = false)]
 
-
         public string RoleSessionName { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Lifetime of the returned credentials in seconds</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

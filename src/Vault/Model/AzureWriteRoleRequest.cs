@@ -83,7 +83,6 @@ namespace Vault.Model
         /// <value>Application Object ID to use for static service principal credentials.</value>
         [DataMember(Name = "application_object_id", EmitDefaultValue = false)]
 
-
         public string ApplicationObjectId { get; set; }
 
 
@@ -92,7 +91,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>JSON list of Azure groups to add the service principal to.</value>
         [DataMember(Name = "azure_groups", EmitDefaultValue = false)]
-
 
         public string AzureGroups { get; set; }
 
@@ -103,7 +101,6 @@ namespace Vault.Model
         /// <value>JSON list of Azure roles to assign.</value>
         [DataMember(Name = "azure_roles", EmitDefaultValue = false)]
 
-
         public string AzureRoles { get; set; }
 
 
@@ -112,7 +109,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Maximum time a service principal. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
-
 
         public int MaxTtl { get; set; }
 
@@ -123,7 +119,6 @@ namespace Vault.Model
         /// <value>Indicates whether new application objects should be permanently deleted. If not set, objects will not be permanently deleted.</value>
         [DataMember(Name = "permanently_delete", EmitDefaultValue = true)]
 
-
         public bool PermanentlyDelete { get; set; }
 
 
@@ -132,7 +127,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Default lease for generated credentials. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
-
 
         public int Ttl { get; set; }
 

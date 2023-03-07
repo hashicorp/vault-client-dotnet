@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation.</value>
         [DataMember(Name = "secret_id_bound_cidrs", EmitDefaultValue = false)]
 
-
         public List<string> SecretIdBoundCidrs { get; set; }
 
 

@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>TOTP code to be validated.</value>
         [DataMember(Name = "code", EmitDefaultValue = false)]
 
-
         public string Code { get; set; }
 
 

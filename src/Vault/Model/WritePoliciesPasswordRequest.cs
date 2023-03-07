@@ -53,7 +53,6 @@ namespace Vault.Model
         /// <value>The password policy</value>
         [DataMember(Name = "policy", EmitDefaultValue = false)]
 
-
         public string Policy { get; set; }
 
 

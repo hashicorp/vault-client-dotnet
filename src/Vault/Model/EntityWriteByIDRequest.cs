@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>If set true, tokens tied to this identity will not be able to be used (but will not be revoked).</value>
         [DataMember(Name = "disabled", EmitDefaultValue = true)]
 
-
         public bool Disabled { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Metadata to be associated with the entity. In CLI, this parameter can be repeated multiple times, and it all gets merged together. For example: vault &lt;command&gt; &lt;path&gt; metadata&#x3D;key1&#x3D;value1 metadata&#x3D;key2&#x3D;value2</value>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
-
 
         public Object Metadata { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Name of the entity</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
 
-
         public string Name { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Policies to be tied to the entity.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
-
 
         public List<string> Policies { get; set; }
 

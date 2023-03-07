@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>A map from MFA method ID to a slice of passcodes or an empty slice if the method does not use passcodes</value>
         [DataMember(Name = "mfa_payload", IsRequired = true, EmitDefaultValue = false)]
 
-
         public Object MfaPayload { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>ID for this MFA request</value>
         [DataMember(Name = "mfa_request_id", IsRequired = true, EmitDefaultValue = false)]
-
 
         public string MfaRequestId { get; set; }
 

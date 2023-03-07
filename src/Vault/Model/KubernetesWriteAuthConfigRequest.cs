@@ -89,8 +89,7 @@ namespace Vault.Model
         /// <value>Disable JWT issuer validation (Deprecated, will be removed in a future release)</value>
         [DataMember(Name = "disable_iss_validation", EmitDefaultValue = true)]
 
-        [Obsolete]
-        public bool DisableIssValidation { get; set; }
+        [Obsolete] public bool DisableIssValidation { get; set; }
 
 
         /// <summary>
@@ -98,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Disable defaulting to the local CA cert and service account JWT when running in a Kubernetes pod</value>
         [DataMember(Name = "disable_local_ca_jwt", EmitDefaultValue = true)]
-
 
         public bool DisableLocalCaJwt { get; set; }
 
@@ -109,8 +107,7 @@ namespace Vault.Model
         /// <value>Optional JWT issuer. If no issuer is specified, then this plugin will use kubernetes.io/serviceaccount as the default issuer. (Deprecated, will be removed in a future release)</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
 
-        [Obsolete]
-        public string Issuer { get; set; }
+        [Obsolete] public string Issuer { get; set; }
 
 
         /// <summary>
@@ -118,7 +115,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM encoded CA cert for use by the TLS client used to talk with the API.</value>
         [DataMember(Name = "kubernetes_ca_cert", EmitDefaultValue = false)]
-
 
         public string KubernetesCaCert { get; set; }
 
@@ -129,7 +125,6 @@ namespace Vault.Model
         /// <value>Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.</value>
         [DataMember(Name = "kubernetes_host", EmitDefaultValue = false)]
 
-
         public string KubernetesHost { get; set; }
 
 
@@ -139,7 +134,6 @@ namespace Vault.Model
         /// <value>Optional list of PEM-formated public keys or certificates used to verify the signatures of kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.</value>
         [DataMember(Name = "pem_keys", EmitDefaultValue = false)]
 
-
         public List<string> PemKeys { get; set; }
 
 
@@ -148,7 +142,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.</value>
         [DataMember(Name = "token_reviewer_jwt", EmitDefaultValue = false)]
-
 
         public string TokenReviewerJwt { get; set; }
 

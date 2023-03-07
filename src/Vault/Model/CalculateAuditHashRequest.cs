@@ -52,7 +52,6 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "input", EmitDefaultValue = false)]
 
-
         public string Input { get; set; }
 
 

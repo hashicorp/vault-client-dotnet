@@ -65,7 +65,6 @@ namespace Vault.Model
         /// <value>Digest to verify. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required.</value>
         [DataMember(Name = "digest", EmitDefaultValue = false)]
 
-
         public string Digest { get; set; }
 
 
@@ -75,7 +74,6 @@ namespace Vault.Model
         /// <value>Integer version of the crypto key version to use for verification. This field is required.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
 
-
         public int KeyVersion { get; set; }
 
 
@@ -84,7 +82,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64-encoded signature to use for verification. This field is required.</value>
         [DataMember(Name = "signature", EmitDefaultValue = false)]
-
 
         public string Signature { get; set; }
 

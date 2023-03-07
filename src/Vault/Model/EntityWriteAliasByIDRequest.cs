@@ -77,7 +77,6 @@ namespace Vault.Model
         /// <value>Entity ID to which this alias should be tied to</value>
         [DataMember(Name = "canonical_id", EmitDefaultValue = false)]
 
-
         public string CanonicalId { get; set; }
 
 
@@ -86,7 +85,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>User provided key-value pairs</value>
         [DataMember(Name = "custom_metadata", EmitDefaultValue = false)]
-
 
         public Object CustomMetadata { get; set; }
 
@@ -97,7 +95,6 @@ namespace Vault.Model
         /// <value>Entity ID to which this alias belongs to. This field is deprecated, use canonical_id.</value>
         [DataMember(Name = "entity_id", EmitDefaultValue = false)]
 
-
         public string EntityId { get; set; }
 
 
@@ -107,7 +104,6 @@ namespace Vault.Model
         /// <value>(Unused)</value>
         [DataMember(Name = "mount_accessor", EmitDefaultValue = false)]
 
-
         public string MountAccessor { get; set; }
 
 
@@ -116,7 +112,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>(Unused)</value>
         [DataMember(Name = "name", EmitDefaultValue = false)]
-
 
         public string Name { get; set; }
 

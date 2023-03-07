@@ -71,7 +71,6 @@ namespace Vault.Model
         /// <value>If set to true, returns any groups found in LDAP as a group alias.</value>
         [DataMember(Name = "add_group_aliases", EmitDefaultValue = true)]
 
-
         public bool AddGroupAliases { get; set; }
 
 
@@ -80,7 +79,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Base64 encoded keytab</value>
         [DataMember(Name = "keytab", EmitDefaultValue = false)]
-
 
         public string Keytab { get; set; }
 
@@ -91,7 +89,6 @@ namespace Vault.Model
         /// <value>Remove instance/FQDN from keytab principal names.</value>
         [DataMember(Name = "remove_instance_name", EmitDefaultValue = true)]
 
-
         public bool RemoveInstanceName { get; set; }
 
 
@@ -100,7 +97,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Service Account</value>
         [DataMember(Name = "service_account", EmitDefaultValue = false)]
-
 
         public string ServiceAccount { get; set; }
 

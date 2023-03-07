@@ -125,7 +125,6 @@ namespace Vault.Model
         /// <value>Name to associate with this token</value>
         [DataMember(Name = "display_name", EmitDefaultValue = false)]
 
-
         public string DisplayName { get; set; }
 
 
@@ -134,7 +133,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Name of the entity alias to associate with this token</value>
         [DataMember(Name = "entity_alias", EmitDefaultValue = false)]
-
 
         public string EntityAlias { get; set; }
 
@@ -145,7 +143,6 @@ namespace Vault.Model
         /// <value>Explicit Max TTL of this token</value>
         [DataMember(Name = "explicit_max_ttl", EmitDefaultValue = false)]
 
-
         public string ExplicitMaxTtl { get; set; }
 
 
@@ -154,7 +151,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Value for the token</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-
 
         public string Id { get; set; }
 
@@ -165,7 +161,6 @@ namespace Vault.Model
         /// <value>Arbitrary key&#x3D;value metadata to associate with the token</value>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
 
-
         public Object Metadata { get; set; }
 
 
@@ -174,7 +169,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Do not include default policy for this token</value>
         [DataMember(Name = "no_default_policy", EmitDefaultValue = true)]
-
 
         public bool NoDefaultPolicy { get; set; }
 
@@ -185,7 +179,6 @@ namespace Vault.Model
         /// <value>Create the token with no parent</value>
         [DataMember(Name = "no_parent", EmitDefaultValue = true)]
 
-
         public bool NoParent { get; set; }
 
 
@@ -194,7 +187,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Max number of uses for this token</value>
         [DataMember(Name = "num_uses", EmitDefaultValue = false)]
-
 
         public int NumUses { get; set; }
 
@@ -205,7 +197,6 @@ namespace Vault.Model
         /// <value>Renew period</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-
         public string Period { get; set; }
 
 
@@ -214,7 +205,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>List of policies for the token</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
-
 
         public List<string> Policies { get; set; }
 
@@ -225,7 +215,6 @@ namespace Vault.Model
         /// <value>Allow token to be renewed past its initial TTL up to system/mount maximum TTL</value>
         [DataMember(Name = "renewable", EmitDefaultValue = true)]
 
-
         public bool Renewable { get; set; }
 
 
@@ -235,7 +224,6 @@ namespace Vault.Model
         /// <value>Time to live for this token</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-
         public string Ttl { get; set; }
 
 
@@ -244,7 +232,6 @@ namespace Vault.Model
         /// </summary>
         /// <value>Token type</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
-
 
         public string Type { get; set; }
 
