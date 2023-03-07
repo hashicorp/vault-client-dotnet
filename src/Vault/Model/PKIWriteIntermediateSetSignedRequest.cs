@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "PKIWriteIntermediateSetSignedRequest")]
     public partial class PKIWriteIntermediateSetSignedRequest : IEquatable<PKIWriteIntermediateSetSignedRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteIntermediateSetSignedRequest" /> class.
         /// </summary>
-        /// <param name="certificate">PEM-format certificate. This must be a CA certificate with a public key matching the previously-generated key from the generation endpoint. Additional parent CAs may be optionally appended to the bundle..</param>
-        public PKIWriteIntermediateSetSignedRequest(string certificate = default(string))
+
+        /// <param name="Certificate">PEM-format certificate. This must be a CA certificate with a public key matching the previously-generated key from the generation endpoint. Additional parent CAs may be optionally appended to the bundle..</param>
+
+
+        public PKIWriteIntermediateSetSignedRequest(string Certificate = default(string))
         {
-            this.Certificate = certificate;
+
+            this.Certificate = Certificate;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM-format certificate. This must be a CA certificate with a public key matching the previously-generated key from the generation endpoint. Additional parent CAs may be optionally appended to the bundle.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
+
         public string Certificate { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Certificate != null)
                 {
                     hashCode = (hashCode * 59) + this.Certificate.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

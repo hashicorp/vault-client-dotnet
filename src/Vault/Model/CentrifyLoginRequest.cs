@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,40 +28,60 @@ namespace Vault.Model
     [DataContract(Name = "CentrifyLoginRequest")]
     public partial class CentrifyLoginRequest : IEquatable<CentrifyLoginRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CentrifyLoginRequest" /> class.
         /// </summary>
-        /// <param name="mode">Auth mode (&#39;ro&#39; for resource owner, &#39;cc&#39; for credential client). (default to &quot;ro&quot;).</param>
-        /// <param name="password">Password for this user..</param>
-        /// <param name="username">Username of the user..</param>
-        public CentrifyLoginRequest(string mode = "ro", string password = default(string), string username = default(string))
+
+        /// <param name="Mode">Auth mode (&#x27;ro&#x27; for resource owner, &#x27;cc&#x27; for credential client). (default to &quot;ro&quot;).</param>
+
+        /// <param name="Password">Password for this user..</param>
+
+        /// <param name="Username">Username of the user..</param>
+
+
+        public CentrifyLoginRequest(string Mode = "ro", string Password = default(string), string Username = default(string))
         {
-            // use default value if no "mode" provided
-            this.Mode = mode ?? "ro";
-            this.Password = password;
-            this.Username = username;
+
+            // use default value if no "Mode" provided
+            this.Mode = Mode ?? "ro";
+
+
+            this.Password = Password;
+
+            this.Username = Username;
+
         }
 
         /// <summary>
-        /// Auth mode (&#39;ro&#39; for resource owner, &#39;cc&#39; for credential client).
+        /// Auth mode (&#x27;ro&#x27; for resource owner, &#x27;cc&#x27; for credential client).
         /// </summary>
-        /// <value>Auth mode (&#39;ro&#39; for resource owner, &#39;cc&#39; for credential client).</value>
+        /// <value>Auth mode (&#x27;ro&#x27; for resource owner, &#x27;cc&#x27; for credential client).</value>
         [DataMember(Name = "mode", EmitDefaultValue = false)]
+
         public string Mode { get; set; }
+
 
         /// <summary>
         /// Password for this user.
         /// </summary>
         /// <value>Password for this user.</value>
         [DataMember(Name = "password", EmitDefaultValue = false)]
+
         public string Password { get; set; }
+
 
         /// <summary>
         /// Username of the user.
         /// </summary>
         /// <value>Username of the user.</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
+
         public string Username { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -112,17 +133,21 @@ namespace Vault.Model
                     this.Mode == input.Mode ||
                     (this.Mode != null &&
                     this.Mode.Equals(input.Mode))
+
                 ) &&
                 (
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
+
                 ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&
                     this.Username.Equals(input.Username))
+
                 );
+
         }
 
         /// <summary>
@@ -134,18 +159,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Mode != null)
                 {
                     hashCode = (hashCode * 59) + this.Mode.GetHashCode();
                 }
+
                 if (this.Password != null)
                 {
                     hashCode = (hashCode * 59) + this.Password.GetHashCode();
                 }
+
                 if (this.Username != null)
                 {
                     hashCode = (hashCode * 59) + this.Username.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

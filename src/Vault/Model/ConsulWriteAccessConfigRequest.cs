@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,24 +28,42 @@ namespace Vault.Model
     [DataContract(Name = "ConsulWriteAccessConfigRequest")]
     public partial class ConsulWriteAccessConfigRequest : IEquatable<ConsulWriteAccessConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsulWriteAccessConfigRequest" /> class.
         /// </summary>
-        /// <param name="address">Consul server address.</param>
-        /// <param name="caCert">CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded..</param>
-        /// <param name="clientCert">Client certificate used for Consul&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key..</param>
-        /// <param name="clientKey">Client key used for Consul&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert..</param>
-        /// <param name="scheme">URI scheme for the Consul address (default to &quot;http&quot;).</param>
-        /// <param name="token">Token for API calls.</param>
-        public ConsulWriteAccessConfigRequest(string address = default(string), string caCert = default(string), string clientCert = default(string), string clientKey = default(string), string scheme = "http", string token = default(string))
+
+        /// <param name="Address">Consul server address.</param>
+
+        /// <param name="CaCert">CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded..</param>
+
+        /// <param name="ClientCert">Client certificate used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key..</param>
+
+        /// <param name="ClientKey">Client key used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert..</param>
+
+        /// <param name="Scheme">URI scheme for the Consul address (default to &quot;http&quot;).</param>
+
+        /// <param name="Token">Token for API calls.</param>
+
+
+        public ConsulWriteAccessConfigRequest(string Address = default(string), string CaCert = default(string), string ClientCert = default(string), string ClientKey = default(string), string Scheme = "http", string Token = default(string))
         {
-            this.Address = address;
-            this.CaCert = caCert;
-            this.ClientCert = clientCert;
-            this.ClientKey = clientKey;
-            // use default value if no "scheme" provided
-            this.Scheme = scheme ?? "http";
-            this.Token = token;
+
+            this.Address = Address;
+
+            this.CaCert = CaCert;
+
+            this.ClientCert = ClientCert;
+
+            this.ClientKey = ClientKey;
+
+            // use default value if no "Scheme" provided
+            this.Scheme = Scheme ?? "http";
+
+
+            this.Token = Token;
+
         }
 
         /// <summary>
@@ -52,42 +71,56 @@ namespace Vault.Model
         /// </summary>
         /// <value>Consul server address</value>
         [DataMember(Name = "address", EmitDefaultValue = false)]
+
         public string Address { get; set; }
+
 
         /// <summary>
         /// CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
         /// </summary>
         /// <value>CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.</value>
         [DataMember(Name = "ca_cert", EmitDefaultValue = false)]
+
         public string CaCert { get; set; }
 
-        /// <summary>
-        /// Client certificate used for Consul&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
-        /// </summary>
-        /// <value>Client certificate used for Consul&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.</value>
-        [DataMember(Name = "client_cert", EmitDefaultValue = false)]
-        public string ClientCert { get; set; }
 
         /// <summary>
-        /// Client key used for Consul&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+        /// Client certificate used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
         /// </summary>
-        /// <value>Client key used for Consul&#39;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.</value>
+        /// <value>Client certificate used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.</value>
+        [DataMember(Name = "client_cert", EmitDefaultValue = false)]
+
+        public string ClientCert { get; set; }
+
+
+        /// <summary>
+        /// Client key used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+        /// </summary>
+        /// <value>Client key used for Consul&#x27;s TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.</value>
         [DataMember(Name = "client_key", EmitDefaultValue = false)]
+
         public string ClientKey { get; set; }
+
 
         /// <summary>
         /// URI scheme for the Consul address
         /// </summary>
         /// <value>URI scheme for the Consul address</value>
         [DataMember(Name = "scheme", EmitDefaultValue = false)]
+
         public string Scheme { get; set; }
+
 
         /// <summary>
         /// Token for API calls
         /// </summary>
         /// <value>Token for API calls</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -142,32 +175,39 @@ namespace Vault.Model
                     this.Address == input.Address ||
                     (this.Address != null &&
                     this.Address.Equals(input.Address))
+
                 ) &&
                 (
                     this.CaCert == input.CaCert ||
                     (this.CaCert != null &&
                     this.CaCert.Equals(input.CaCert))
+
                 ) &&
                 (
                     this.ClientCert == input.ClientCert ||
                     (this.ClientCert != null &&
                     this.ClientCert.Equals(input.ClientCert))
+
                 ) &&
                 (
                     this.ClientKey == input.ClientKey ||
                     (this.ClientKey != null &&
                     this.ClientKey.Equals(input.ClientKey))
+
                 ) &&
                 (
                     this.Scheme == input.Scheme ||
                     (this.Scheme != null &&
                     this.Scheme.Equals(input.Scheme))
+
                 ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -179,30 +219,37 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Address != null)
                 {
                     hashCode = (hashCode * 59) + this.Address.GetHashCode();
                 }
+
                 if (this.CaCert != null)
                 {
                     hashCode = (hashCode * 59) + this.CaCert.GetHashCode();
                 }
+
                 if (this.ClientCert != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientCert.GetHashCode();
                 }
+
                 if (this.ClientKey != null)
                 {
                     hashCode = (hashCode * 59) + this.ClientKey.GetHashCode();
                 }
+
                 if (this.Scheme != null)
                 {
                     hashCode = (hashCode * 59) + this.Scheme.GetHashCode();
                 }
+
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

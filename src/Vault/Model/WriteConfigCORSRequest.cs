@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "WriteConfigCORSRequest")]
     public partial class WriteConfigCORSRequest : IEquatable<WriteConfigCORSRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteConfigCORSRequest" /> class.
         /// </summary>
-        /// <param name="allowedHeaders">A comma-separated string or array of strings indicating headers that are allowed on cross-origin requests..</param>
-        /// <param name="allowedOrigins">A comma-separated string or array of strings indicating origins that may make cross-origin requests..</param>
-        /// <param name="enable">Enables or disables CORS headers on requests..</param>
-        public WriteConfigCORSRequest(List<string> allowedHeaders = default(List<string>), List<string> allowedOrigins = default(List<string>), bool enable = default(bool))
+
+        /// <param name="AllowedHeaders">A comma-separated string or array of strings indicating headers that are allowed on cross-origin requests..</param>
+
+        /// <param name="AllowedOrigins">A comma-separated string or array of strings indicating origins that may make cross-origin requests..</param>
+
+        /// <param name="Enable">Enables or disables CORS headers on requests..</param>
+
+
+        public WriteConfigCORSRequest(List<string> AllowedHeaders = default(List<string>), List<string> AllowedOrigins = default(List<string>), bool Enable = default(bool))
         {
-            this.AllowedHeaders = allowedHeaders;
-            this.AllowedOrigins = allowedOrigins;
-            this.Enable = enable;
+
+            this.AllowedHeaders = AllowedHeaders;
+
+            this.AllowedOrigins = AllowedOrigins;
+
+            this.Enable = Enable;
+
         }
 
         /// <summary>
@@ -45,21 +57,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>A comma-separated string or array of strings indicating headers that are allowed on cross-origin requests.</value>
         [DataMember(Name = "allowed_headers", EmitDefaultValue = false)]
+
         public List<string> AllowedHeaders { get; set; }
+
 
         /// <summary>
         /// A comma-separated string or array of strings indicating origins that may make cross-origin requests.
         /// </summary>
         /// <value>A comma-separated string or array of strings indicating origins that may make cross-origin requests.</value>
         [DataMember(Name = "allowed_origins", EmitDefaultValue = false)]
+
         public List<string> AllowedOrigins { get; set; }
+
 
         /// <summary>
         /// Enables or disables CORS headers on requests.
         /// </summary>
         /// <value>Enables or disables CORS headers on requests.</value>
         [DataMember(Name = "enable", EmitDefaultValue = true)]
+
         public bool Enable { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -121,8 +141,10 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Enable == input.Enable ||
+
                     this.Enable.Equals(input.Enable)
                 );
+
         }
 
         /// <summary>
@@ -134,14 +156,18 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AllowedHeaders != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedHeaders.GetHashCode();
                 }
+
                 if (this.AllowedOrigins != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedOrigins.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Enable.GetHashCode();
                 return hashCode;
             }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "OIDCWriteAssignmentRequest")]
     public partial class OIDCWriteAssignmentRequest : IEquatable<OIDCWriteAssignmentRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCWriteAssignmentRequest" /> class.
         /// </summary>
-        /// <param name="entityIds">Comma separated string or array of identity entity IDs.</param>
-        /// <param name="groupIds">Comma separated string or array of identity group IDs.</param>
-        public OIDCWriteAssignmentRequest(List<string> entityIds = default(List<string>), List<string> groupIds = default(List<string>))
+
+        /// <param name="EntityIds">Comma separated string or array of identity entity IDs.</param>
+
+        /// <param name="GroupIds">Comma separated string or array of identity group IDs.</param>
+
+
+        public OIDCWriteAssignmentRequest(List<string> EntityIds = default(List<string>), List<string> GroupIds = default(List<string>))
         {
-            this.EntityIds = entityIds;
-            this.GroupIds = groupIds;
+
+            this.EntityIds = EntityIds;
+
+            this.GroupIds = GroupIds;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or array of identity entity IDs</value>
         [DataMember(Name = "entity_ids", EmitDefaultValue = false)]
+
         public List<string> EntityIds { get; set; }
+
 
         /// <summary>
         /// Comma separated string or array of identity group IDs
         /// </summary>
         /// <value>Comma separated string or array of identity group IDs</value>
         [DataMember(Name = "group_ids", EmitDefaultValue = false)]
+
         public List<string> GroupIds { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,6 +125,7 @@ namespace Vault.Model
                     input.GroupIds != null &&
                     this.GroupIds.SequenceEqual(input.GroupIds)
                 );
+
         }
 
         /// <summary>
@@ -120,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.EntityIds != null)
                 {
                     hashCode = (hashCode * 59) + this.EntityIds.GetHashCode();
                 }
+
                 if (this.GroupIds != null)
                 {
                     hashCode = (hashCode * 59) + this.GroupIds.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

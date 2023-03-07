@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "LDAPWriteGroupRequest")]
     public partial class LDAPWriteGroupRequest : IEquatable<LDAPWriteGroupRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LDAPWriteGroupRequest" /> class.
         /// </summary>
-        /// <param name="policies">Comma-separated list of policies associated to the group..</param>
-        public LDAPWriteGroupRequest(List<string> policies = default(List<string>))
+
+        /// <param name="Policies">Comma-separated list of policies associated to the group..</param>
+
+
+        public LDAPWriteGroupRequest(List<string> Policies = default(List<string>))
         {
-            this.Policies = policies;
+
+            this.Policies = Policies;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of policies associated to the group.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
+
         public List<string> Policies { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +105,7 @@ namespace Vault.Model
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
                 );
+
         }
 
         /// <summary>
@@ -104,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

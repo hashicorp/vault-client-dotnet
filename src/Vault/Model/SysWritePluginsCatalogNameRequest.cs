@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,23 +28,40 @@ namespace Vault.Model
     [DataContract(Name = "SysWritePluginsCatalogNameRequest")]
     public partial class SysWritePluginsCatalogNameRequest : IEquatable<SysWritePluginsCatalogNameRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SysWritePluginsCatalogNameRequest" /> class.
         /// </summary>
-        /// <param name="args">The args passed to plugin command..</param>
-        /// <param name="command">The command used to start the plugin. The executable defined in this command must exist in vault&#39;s plugin directory..</param>
-        /// <param name="env">The environment variables passed to plugin command. Each entry is of the form \&quot;key&#x3D;value\&quot;..</param>
-        /// <param name="sha256">The SHA256 sum of the executable used in the command field. This should be HEX encoded..</param>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database.</param>
-        /// <param name="version">The semantic version of the plugin to use..</param>
-        public SysWritePluginsCatalogNameRequest(List<string> args = default(List<string>), string command = default(string), List<string> env = default(List<string>), string sha256 = default(string), string type = default(string), string version = default(string))
+
+        /// <param name="Args">The args passed to plugin command..</param>
+
+        /// <param name="Command">The command used to start the plugin. The executable defined in this command must exist in vault&#x27;s plugin directory..</param>
+
+        /// <param name="Env">The environment variables passed to plugin command. Each entry is of the form \&quot;key&#x3D;value\&quot;..</param>
+
+        /// <param name="Sha256">The SHA256 sum of the executable used in the command field. This should be HEX encoded..</param>
+
+        /// <param name="Type">The type of the plugin, may be auth, secret, or database.</param>
+
+        /// <param name="_Version">The semantic version of the plugin to use..</param>
+
+
+        public SysWritePluginsCatalogNameRequest(List<string> Args = default(List<string>), string Command = default(string), List<string> Env = default(List<string>), string Sha256 = default(string), string Type = default(string), string _Version = default(string))
         {
-            this.Args = args;
-            this.Command = command;
-            this.Env = env;
-            this.Sha256 = sha256;
-            this.Type = type;
-            this._Version = version;
+
+            this.Args = Args;
+
+            this.Command = Command;
+
+            this.Env = Env;
+
+            this.Sha256 = Sha256;
+
+            this.Type = Type;
+
+            this._Version = _Version;
+
         }
 
         /// <summary>
@@ -51,42 +69,56 @@ namespace Vault.Model
         /// </summary>
         /// <value>The args passed to plugin command.</value>
         [DataMember(Name = "args", EmitDefaultValue = false)]
+
         public List<string> Args { get; set; }
 
+
         /// <summary>
-        /// The command used to start the plugin. The executable defined in this command must exist in vault&#39;s plugin directory.
+        /// The command used to start the plugin. The executable defined in this command must exist in vault&#x27;s plugin directory.
         /// </summary>
-        /// <value>The command used to start the plugin. The executable defined in this command must exist in vault&#39;s plugin directory.</value>
+        /// <value>The command used to start the plugin. The executable defined in this command must exist in vault&#x27;s plugin directory.</value>
         [DataMember(Name = "command", EmitDefaultValue = false)]
+
         public string Command { get; set; }
+
 
         /// <summary>
         /// The environment variables passed to plugin command. Each entry is of the form \&quot;key&#x3D;value\&quot;.
         /// </summary>
         /// <value>The environment variables passed to plugin command. Each entry is of the form \&quot;key&#x3D;value\&quot;.</value>
         [DataMember(Name = "env", EmitDefaultValue = false)]
+
         public List<string> Env { get; set; }
+
 
         /// <summary>
         /// The SHA256 sum of the executable used in the command field. This should be HEX encoded.
         /// </summary>
         /// <value>The SHA256 sum of the executable used in the command field. This should be HEX encoded.</value>
         [DataMember(Name = "sha256", EmitDefaultValue = false)]
+
         public string Sha256 { get; set; }
+
 
         /// <summary>
         /// The type of the plugin, may be auth, secret, or database
         /// </summary>
         /// <value>The type of the plugin, may be auth, secret, or database</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
+
         public string Type { get; set; }
+
 
         /// <summary>
         /// The semantic version of the plugin to use.
         /// </summary>
         /// <value>The semantic version of the plugin to use.</value>
         [DataMember(Name = "version", EmitDefaultValue = false)]
+
         public string _Version { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -147,6 +179,7 @@ namespace Vault.Model
                     this.Command == input.Command ||
                     (this.Command != null &&
                     this.Command.Equals(input.Command))
+
                 ) &&
                 (
                     this.Env == input.Env ||
@@ -158,17 +191,21 @@ namespace Vault.Model
                     this.Sha256 == input.Sha256 ||
                     (this.Sha256 != null &&
                     this.Sha256.Equals(input.Sha256))
+
                 ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+
                 ) &&
                 (
                     this._Version == input._Version ||
                     (this._Version != null &&
                     this._Version.Equals(input._Version))
+
                 );
+
         }
 
         /// <summary>
@@ -180,30 +217,37 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Args != null)
                 {
                     hashCode = (hashCode * 59) + this.Args.GetHashCode();
                 }
+
                 if (this.Command != null)
                 {
                     hashCode = (hashCode * 59) + this.Command.GetHashCode();
                 }
+
                 if (this.Env != null)
                 {
                     hashCode = (hashCode * 59) + this.Env.GetHashCode();
                 }
+
                 if (this.Sha256 != null)
                 {
                     hashCode = (hashCode * 59) + this.Sha256.GetHashCode();
                 }
+
                 if (this.Type != null)
                 {
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
                 }
+
                 if (this._Version != null)
                 {
                     hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AliasId** | **string** | ID of the alias. | [optional] 
-**AliasMountAccessor** | **string** | Accessor of the mount to which the alias belongs to. This should be supplied in conjunction with &#39;alias_name&#39;. | [optional] 
-**AliasName** | **string** | Name of the alias. This should be supplied in conjunction with &#39;alias_mount_accessor&#39;. | [optional] 
+**AliasMountAccessor** | **string** | Accessor of the mount to which the alias belongs to. This should be supplied in conjunction with &#x27;alias_name&#x27;. | [optional] 
+**AliasName** | **string** | Name of the alias. This should be supplied in conjunction with &#x27;alias_mount_accessor&#x27;. | [optional] 
 **Id** | **string** | ID of the entity. | [optional] 
 **Name** | **string** | Name of the entity. | [optional] 
 

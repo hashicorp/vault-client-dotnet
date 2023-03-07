@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "WriteGenerateRootRequest")]
     public partial class WriteGenerateRootRequest : IEquatable<WriteGenerateRootRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteGenerateRootRequest" /> class.
         /// </summary>
-        /// <param name="pgpKey">Specifies a base64-encoded PGP public key..</param>
-        public WriteGenerateRootRequest(string pgpKey = default(string))
+
+        /// <param name="PgpKey">Specifies a base64-encoded PGP public key..</param>
+
+
+        public WriteGenerateRootRequest(string PgpKey = default(string))
         {
-            this.PgpKey = pgpKey;
+
+            this.PgpKey = PgpKey;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies a base64-encoded PGP public key.</value>
         [DataMember(Name = "pgp_key", EmitDefaultValue = false)]
+
         public string PgpKey { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.PgpKey == input.PgpKey ||
                     (this.PgpKey != null &&
                     this.PgpKey.Equals(input.PgpKey))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.PgpKey != null)
                 {
                     hashCode = (hashCode * 59) + this.PgpKey.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

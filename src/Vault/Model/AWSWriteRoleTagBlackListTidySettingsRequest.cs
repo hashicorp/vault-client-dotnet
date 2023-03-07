@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AWSWriteRoleTagBlackListTidySettingsRequest")]
     public partial class AWSWriteRoleTagBlackListTidySettingsRequest : IEquatable<AWSWriteRoleTagBlackListTidySettingsRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AWSWriteRoleTagBlackListTidySettingsRequest" /> class.
         /// </summary>
-        /// <param name="safetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. (default to 259200).</param>
-        public AWSWriteRoleTagBlackListTidySettingsRequest(int safetyBuffer = 259200)
+
+        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. (default to 259200).</param>
+
+
+        public AWSWriteRoleTagBlackListTidySettingsRequest(int SafetyBuffer = 259200)
         {
-            this.SafetyBuffer = safetyBuffer;
+
+            this.SafetyBuffer = SafetyBuffer;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage.</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
+
         public int SafetyBuffer { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
+
                     this.SafetyBuffer.Equals(input.SafetyBuffer)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
                 return hashCode;
             }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleWriteSecretIDDestroyRequest")]
     public partial class AppRoleWriteSecretIDDestroyRequest : IEquatable<AppRoleWriteSecretIDDestroyRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWriteSecretIDDestroyRequest" /> class.
         /// </summary>
-        /// <param name="secretId">SecretID attached to the role..</param>
-        public AppRoleWriteSecretIDDestroyRequest(string secretId = default(string))
+
+        /// <param name="SecretId">SecretID attached to the role..</param>
+
+
+        public AppRoleWriteSecretIDDestroyRequest(string SecretId = default(string))
         {
-            this.SecretId = secretId;
+
+            this.SecretId = SecretId;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>SecretID attached to the role.</value>
         [DataMember(Name = "secret_id", EmitDefaultValue = false)]
+
         public string SecretId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.SecretId == input.SecretId ||
                     (this.SecretId != null &&
                     this.SecretId.Equals(input.SecretId))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.SecretId != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "TokenRevokeAccessorRequest")]
     public partial class TokenRevokeAccessorRequest : IEquatable<TokenRevokeAccessorRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenRevokeAccessorRequest" /> class.
         /// </summary>
-        /// <param name="accessor">Accessor of the token (request body).</param>
-        public TokenRevokeAccessorRequest(string accessor = default(string))
+
+        /// <param name="Accessor">Accessor of the token (request body).</param>
+
+
+        public TokenRevokeAccessorRequest(string Accessor = default(string))
         {
-            this.Accessor = accessor;
+
+            this.Accessor = Accessor;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Accessor of the token (request body)</value>
         [DataMember(Name = "accessor", EmitDefaultValue = false)]
+
         public string Accessor { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Accessor == input.Accessor ||
                     (this.Accessor != null &&
                     this.Accessor.Equals(input.Accessor))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Accessor != null)
                 {
                     hashCode = (hashCode * 59) + this.Accessor.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

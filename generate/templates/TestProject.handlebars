@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-{{#appName}}
+{{#with appName}}
 {{{.}}}
 
-{{/appName}}
-{{#appDescription}}
+{{/with}}
+{{#with appDescription}}
 {{{.}}}
 
-{{/appDescription}}
-{{#version}}The version of the OpenAPI document: {{{.}}}{{/version}}
-{{#infoEmail}}Contact: {{{.}}}{{/infoEmail}}
+{{/with}}
+{{#with version}}The version of the OpenAPI document: {{{.}}}{{/with}}
+{{#with infoEmail}}Contact: {{{.}}}{{/with}}
 -->
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -17,7 +17,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>{{testPackageName}}</RootNamespace>
     <AssemblyName>{{testPackageName}}</AssemblyName>
-    <TargetFramework{{#multiTarget}}s{{/multiTarget}}>{{testTargetFramework}}</TargetFramework{{#multiTarget}}s{{/multiTarget}}>
+    <TargetFramework{{#with multiTarget}}s{{/with}}>{{testTargetFramework}}</TargetFramework{{#with multiTarget}}s{{/with}}>
     <IsPackable>false</IsPackable>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Scope** | **string** | OAuth2 App Scope | [optional] [default to "vault_io_integration"]
 **ServiceUrl** | **string** | Service URL (https://&lt;tenant&gt;.my.centrify.com) | [optional] 
 **TokenBoundCidrs** | **List&lt;string&gt;** | Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token. | [optional] 
-**TokenNoDefaultPolicy** | **bool** | If true, the &#39;default&#39; policy will not automatically be added to generated tokens | [optional] 
+**TokenNoDefaultPolicy** | **bool** | If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens | [optional] 
 **TokenNumUses** | **int** | The maximum number of times a token may be used, a value of zero means unlimited | [optional] 
 **TokenPolicies** | **List&lt;string&gt;** | Comma-separated list of policies | [optional] 
 **TokenTtl** | **int** | The initial ttl of the token to generate | [optional] 

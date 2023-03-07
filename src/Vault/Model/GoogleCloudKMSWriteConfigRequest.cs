@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudKMSWriteConfigRequest")]
     public partial class GoogleCloudKMSWriteConfigRequest : IEquatable<GoogleCloudKMSWriteConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudKMSWriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="credentials">The credentials to use for authenticating to Google Cloud. Leave this blank to use the Default Application Credentials or instance metadata authentication..</param>
-        /// <param name="scopes">The list of full-URL scopes to request when authenticating. By default, this requests https://www.googleapis.com/auth/cloudkms..</param>
-        public GoogleCloudKMSWriteConfigRequest(string credentials = default(string), List<string> scopes = default(List<string>))
+
+        /// <param name="Credentials">The credentials to use for authenticating to Google Cloud. Leave this blank to use the Default Application Credentials or instance metadata authentication..</param>
+
+        /// <param name="Scopes">The list of full-URL scopes to request when authenticating. By default, this requests https://www.googleapis.com/auth/cloudkms..</param>
+
+
+        public GoogleCloudKMSWriteConfigRequest(string Credentials = default(string), List<string> Scopes = default(List<string>))
         {
-            this.Credentials = credentials;
-            this.Scopes = scopes;
+
+            this.Credentials = Credentials;
+
+            this.Scopes = Scopes;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>The credentials to use for authenticating to Google Cloud. Leave this blank to use the Default Application Credentials or instance metadata authentication.</value>
         [DataMember(Name = "credentials", EmitDefaultValue = false)]
+
         public string Credentials { get; set; }
+
 
         /// <summary>
         /// The list of full-URL scopes to request when authenticating. By default, this requests https://www.googleapis.com/auth/cloudkms.
         /// </summary>
         /// <value>The list of full-URL scopes to request when authenticating. By default, this requests https://www.googleapis.com/auth/cloudkms.</value>
         [DataMember(Name = "scopes", EmitDefaultValue = false)]
+
         public List<string> Scopes { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,6 +117,7 @@ namespace Vault.Model
                     this.Credentials == input.Credentials ||
                     (this.Credentials != null &&
                     this.Credentials.Equals(input.Credentials))
+
                 ) &&
                 (
                     this.Scopes == input.Scopes ||
@@ -108,6 +125,7 @@ namespace Vault.Model
                     input.Scopes != null &&
                     this.Scopes.SequenceEqual(input.Scopes)
                 );
+
         }
 
         /// <summary>
@@ -119,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Credentials != null)
                 {
                     hashCode = (hashCode * 59) + this.Credentials.GetHashCode();
                 }
+
                 if (this.Scopes != null)
                 {
                     hashCode = (hashCode * 59) + this.Scopes.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

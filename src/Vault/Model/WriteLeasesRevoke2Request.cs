@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "WriteLeasesRevoke2Request")]
     public partial class WriteLeasesRevoke2Request : IEquatable<WriteLeasesRevoke2Request>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteLeasesRevoke2Request" /> class.
         /// </summary>
-        /// <param name="leaseId">The lease identifier to renew. This is included with a lease..</param>
-        /// <param name="sync">Whether or not to perform the revocation synchronously (default to true).</param>
-        public WriteLeasesRevoke2Request(string leaseId = default(string), bool sync = true)
+
+        /// <param name="LeaseId">The lease identifier to renew. This is included with a lease..</param>
+
+        /// <param name="Sync">Whether or not to perform the revocation synchronously (default to true).</param>
+
+
+        public WriteLeasesRevoke2Request(string LeaseId = default(string), bool Sync = true)
         {
-            this.LeaseId = leaseId;
-            this.Sync = sync;
+
+            this.LeaseId = LeaseId;
+
+            this.Sync = Sync;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
+
         public string LeaseId { get; set; }
+
 
         /// <summary>
         /// Whether or not to perform the revocation synchronously
         /// </summary>
         /// <value>Whether or not to perform the revocation synchronously</value>
         [DataMember(Name = "sync", EmitDefaultValue = true)]
+
         public bool Sync { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +117,14 @@ namespace Vault.Model
                     this.LeaseId == input.LeaseId ||
                     (this.LeaseId != null &&
                     this.LeaseId.Equals(input.LeaseId))
+
                 ) &&
                 (
                     this.Sync == input.Sync ||
+
                     this.Sync.Equals(input.Sync)
                 );
+
         }
 
         /// <summary>
@@ -117,10 +136,13 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.LeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.LeaseId.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Sync.GetHashCode();
                 return hashCode;
             }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "RemountRequest")]
     public partial class RemountRequest : IEquatable<RemountRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RemountRequest" /> class.
         /// </summary>
-        /// <param name="from">The previous mount point..</param>
-        /// <param name="to">The new mount point..</param>
-        public RemountRequest(string from = default(string), string to = default(string))
+
+        /// <param name="From">The previous mount point..</param>
+
+        /// <param name="To">The new mount point..</param>
+
+
+        public RemountRequest(string From = default(string), string To = default(string))
         {
-            this.From = from;
-            this.To = to;
+
+            this.From = From;
+
+            this.To = To;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>The previous mount point.</value>
         [DataMember(Name = "from", EmitDefaultValue = false)]
+
         public string From { get; set; }
+
 
         /// <summary>
         /// The new mount point.
         /// </summary>
         /// <value>The new mount point.</value>
         [DataMember(Name = "to", EmitDefaultValue = false)]
+
         public string To { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +117,15 @@ namespace Vault.Model
                     this.From == input.From ||
                     (this.From != null &&
                     this.From.Equals(input.From))
+
                 ) &&
                 (
                     this.To == input.To ||
                     (this.To != null &&
                     this.To.Equals(input.To))
+
                 );
+
         }
 
         /// <summary>
@@ -118,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.From != null)
                 {
                     hashCode = (hashCode * 59) + this.From.GetHashCode();
                 }
+
                 if (this.To != null)
                 {
                     hashCode = (hashCode * 59) + this.To.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllowedResponseHeaders** | **List&lt;string&gt;** | A list of headers to whitelist and allow a plugin to set on responses. | [optional] 
-**AuditNonHmacRequestKeys** | **List&lt;string&gt;** | The list of keys in the request data object that will not be HMAC&#39;ed by audit devices. | [optional] 
-**AuditNonHmacResponseKeys** | **List&lt;string&gt;** | The list of keys in the response data object that will not be HMAC&#39;ed by audit devices. | [optional] 
+**AuditNonHmacRequestKeys** | **List&lt;string&gt;** | The list of keys in the request data object that will not be HMAC&#x27;ed by audit devices. | [optional] 
+**AuditNonHmacResponseKeys** | **List&lt;string&gt;** | The list of keys in the response data object that will not be HMAC&#x27;ed by audit devices. | [optional] 
 **DefaultLeaseTtl** | **string** | The default lease TTL for this mount. | [optional] 
 **Description** | **string** | User-friendly description for this credential backend. | [optional] 
-**ListingVisibility** | **string** | Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#39;unauth&#39; and &#39;hidden&#39;, with the empty default (&#39;&#39;) behaving like &#39;hidden&#39;. | [optional] 
+**ListingVisibility** | **string** | Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#x27;unauth&#x27; and &#x27;hidden&#x27;, with the empty default (&#x27;&#x27;) behaving like &#x27;hidden&#x27;. | [optional] 
 **MaxLeaseTtl** | **string** | The max lease TTL for this mount. | [optional] 
 **Options** | **Object** | The options to pass into the backend. Should be a json object with string keys and values. | [optional] 
 **PassthroughRequestHeaders** | **List&lt;string&gt;** | A list of headers to whitelist and pass from the request to the plugin. | [optional] 

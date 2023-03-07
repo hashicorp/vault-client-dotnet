@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "PKIImportKeysRequest")]
     public partial class PKIImportKeysRequest : IEquatable<PKIImportKeysRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIImportKeysRequest" /> class.
         /// </summary>
-        /// <param name="keyName">Optional name to be used for this key.</param>
-        /// <param name="pemBundle">PEM-format, unencrypted secret key.</param>
-        public PKIImportKeysRequest(string keyName = default(string), string pemBundle = default(string))
+
+        /// <param name="KeyName">Optional name to be used for this key.</param>
+
+        /// <param name="PemBundle">PEM-format, unencrypted secret key.</param>
+
+
+        public PKIImportKeysRequest(string KeyName = default(string), string PemBundle = default(string))
         {
-            this.KeyName = keyName;
-            this.PemBundle = pemBundle;
+
+            this.KeyName = KeyName;
+
+            this.PemBundle = PemBundle;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Optional name to be used for this key</value>
         [DataMember(Name = "key_name", EmitDefaultValue = false)]
+
         public string KeyName { get; set; }
+
 
         /// <summary>
         /// PEM-format, unencrypted secret key
         /// </summary>
         /// <value>PEM-format, unencrypted secret key</value>
         [DataMember(Name = "pem_bundle", EmitDefaultValue = false)]
+
         public string PemBundle { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +117,15 @@ namespace Vault.Model
                     this.KeyName == input.KeyName ||
                     (this.KeyName != null &&
                     this.KeyName.Equals(input.KeyName))
+
                 ) &&
                 (
                     this.PemBundle == input.PemBundle ||
                     (this.PemBundle != null &&
                     this.PemBundle.Equals(input.PemBundle))
+
                 );
+
         }
 
         /// <summary>
@@ -118,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.KeyName != null)
                 {
                     hashCode = (hashCode * 59) + this.KeyName.GetHashCode();
                 }
+
                 if (this.PemBundle != null)
                 {
                     hashCode = (hashCode * 59) + this.PemBundle.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

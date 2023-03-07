@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "WritePoliciesPasswordRequest")]
     public partial class WritePoliciesPasswordRequest : IEquatable<WritePoliciesPasswordRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WritePoliciesPasswordRequest" /> class.
         /// </summary>
-        /// <param name="policy">The password policy.</param>
-        public WritePoliciesPasswordRequest(string policy = default(string))
+
+        /// <param name="Policy">The password policy.</param>
+
+
+        public WritePoliciesPasswordRequest(string Policy = default(string))
         {
-            this.Policy = policy;
+
+            this.Policy = Policy;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>The password policy</value>
         [DataMember(Name = "policy", EmitDefaultValue = false)]
+
         public string Policy { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Policy == input.Policy ||
                     (this.Policy != null &&
                     this.Policy.Equals(input.Policy))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Policy != null)
                 {
                     hashCode = (hashCode * 59) + this.Policy.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

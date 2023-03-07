@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -470,8 +469,6 @@ namespace Vault.Client
                 }
             }
 
-
-
             // TODO provide an alternative that allows cookies per request instead of per API client
             if (options.Cookies != null && options.Cookies.Count > 0)
             {
@@ -573,7 +570,6 @@ namespace Vault.Client
                     })
                     .ConfigureAwait(false);
 
-
                 if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
@@ -587,7 +583,6 @@ namespace Vault.Client
             {
                 response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
             }
-
             if (!response.IsSuccessStatusCode)
             {
                 return await ToApiResponse<T>(response, default(T), req.RequestUri);

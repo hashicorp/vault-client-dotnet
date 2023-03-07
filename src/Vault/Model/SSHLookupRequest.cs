@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "SSHLookupRequest")]
     public partial class SSHLookupRequest : IEquatable<SSHLookupRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SSHLookupRequest" /> class.
         /// </summary>
-        /// <param name="ip">[Required] IP address of remote host.</param>
-        public SSHLookupRequest(string ip = default(string))
+
+        /// <param name="Ip">[Required] IP address of remote host.</param>
+
+
+        public SSHLookupRequest(string Ip = default(string))
         {
-            this.Ip = ip;
+
+            this.Ip = Ip;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Required] IP address of remote host</value>
         [DataMember(Name = "ip", EmitDefaultValue = false)]
+
         public string Ip { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Ip == input.Ip ||
                     (this.Ip != null &&
                     this.Ip.Equals(input.Ip))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Ip != null)
                 {
                     hashCode = (hashCode * 59) + this.Ip.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

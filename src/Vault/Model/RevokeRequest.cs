@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "RevokeRequest")]
     public partial class RevokeRequest : IEquatable<RevokeRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="RevokeRequest" /> class.
         /// </summary>
-        /// <param name="leaseId">The lease identifier to renew. This is included with a lease..</param>
-        /// <param name="sync">Whether or not to perform the revocation synchronously (default to true).</param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease..</param>
-        public RevokeRequest(string leaseId = default(string), bool sync = true, string urlLeaseId = default(string))
+
+        /// <param name="LeaseId">The lease identifier to renew. This is included with a lease..</param>
+
+        /// <param name="Sync">Whether or not to perform the revocation synchronously (default to true).</param>
+
+        /// <param name="UrlLeaseId">The lease identifier to renew. This is included with a lease..</param>
+
+
+        public RevokeRequest(string LeaseId = default(string), bool Sync = true, string UrlLeaseId = default(string))
         {
-            this.LeaseId = leaseId;
-            this.Sync = sync;
-            this.UrlLeaseId = urlLeaseId;
+
+            this.LeaseId = LeaseId;
+
+            this.Sync = Sync;
+
+            this.UrlLeaseId = UrlLeaseId;
+
         }
 
         /// <summary>
@@ -45,21 +57,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "lease_id", EmitDefaultValue = false)]
+
         public string LeaseId { get; set; }
+
 
         /// <summary>
         /// Whether or not to perform the revocation synchronously
         /// </summary>
         /// <value>Whether or not to perform the revocation synchronously</value>
         [DataMember(Name = "sync", EmitDefaultValue = true)]
+
         public bool Sync { get; set; }
+
 
         /// <summary>
         /// The lease identifier to renew. This is included with a lease.
         /// </summary>
         /// <value>The lease identifier to renew. This is included with a lease.</value>
         [DataMember(Name = "url_lease_id", EmitDefaultValue = false)]
+
         public string UrlLeaseId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,16 +131,20 @@ namespace Vault.Model
                     this.LeaseId == input.LeaseId ||
                     (this.LeaseId != null &&
                     this.LeaseId.Equals(input.LeaseId))
+
                 ) &&
                 (
                     this.Sync == input.Sync ||
+
                     this.Sync.Equals(input.Sync)
                 ) &&
                 (
                     this.UrlLeaseId == input.UrlLeaseId ||
                     (this.UrlLeaseId != null &&
                     this.UrlLeaseId.Equals(input.UrlLeaseId))
+
                 );
+
         }
 
         /// <summary>
@@ -132,15 +156,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.LeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.LeaseId.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Sync.GetHashCode();
                 if (this.UrlLeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.UrlLeaseId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

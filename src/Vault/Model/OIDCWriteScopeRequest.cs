@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "OIDCWriteScopeRequest")]
     public partial class OIDCWriteScopeRequest : IEquatable<OIDCWriteScopeRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCWriteScopeRequest" /> class.
         /// </summary>
-        /// <param name="description">The description of the scope.</param>
-        /// <param name="template">The template string to use for the scope. This may be in string-ified JSON or base64 format..</param>
-        public OIDCWriteScopeRequest(string description = default(string), string template = default(string))
+
+        /// <param name="Description">The description of the scope.</param>
+
+        /// <param name="Template">The template string to use for the scope. This may be in string-ified JSON or base64 format..</param>
+
+
+        public OIDCWriteScopeRequest(string Description = default(string), string Template = default(string))
         {
-            this.Description = description;
-            this.Template = template;
+
+            this.Description = Description;
+
+            this.Template = Template;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>The description of the scope</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
+
         public string Description { get; set; }
+
 
         /// <summary>
         /// The template string to use for the scope. This may be in string-ified JSON or base64 format.
         /// </summary>
         /// <value>The template string to use for the scope. This may be in string-ified JSON or base64 format.</value>
         [DataMember(Name = "template", EmitDefaultValue = false)]
+
         public string Template { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +117,15 @@ namespace Vault.Model
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
+
                 ) &&
                 (
                     this.Template == input.Template ||
                     (this.Template != null &&
                     this.Template.Equals(input.Template))
+
                 );
+
         }
 
         /// <summary>
@@ -118,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Description != null)
                 {
                     hashCode = (hashCode * 59) + this.Description.GetHashCode();
                 }
+
                 if (this.Template != null)
                 {
                     hashCode = (hashCode * 59) + this.Template.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

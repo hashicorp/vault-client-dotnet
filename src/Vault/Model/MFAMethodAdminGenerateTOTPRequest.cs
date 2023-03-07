@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,30 +28,42 @@ namespace Vault.Model
     [DataContract(Name = "MFAMethodAdminGenerateTOTPRequest")]
     public partial class MFAMethodAdminGenerateTOTPRequest : IEquatable<MFAMethodAdminGenerateTOTPRequest>, IValidatableObject
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAMethodAdminGenerateTOTPRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MFAMethodAdminGenerateTOTPRequest() { }
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAMethodAdminGenerateTOTPRequest" /> class.
         /// </summary>
-        /// <param name="entityId">Entity ID on which the generated secret needs to get stored. (required).</param>
-        /// <param name="methodId">The unique identifier for this MFA method. (required).</param>
-        public MFAMethodAdminGenerateTOTPRequest(string entityId = default(string), string methodId = default(string))
+
+        /// <param name="EntityId">Entity ID on which the generated secret needs to get stored. (required).</param>
+
+        /// <param name="MethodId">The unique identifier for this MFA method. (required).</param>
+
+
+        public MFAMethodAdminGenerateTOTPRequest(string EntityId = default(string), string MethodId = default(string))
         {
-            // to ensure "entityId" is required (not null)
-            if (entityId == null)
+
+            // to ensure "EntityId" is required (not null)
+            if (EntityId == null)
             {
-                throw new ArgumentNullException("entityId is a required property for MFAMethodAdminGenerateTOTPRequest and cannot be null");
+                throw new ArgumentNullException("EntityId is a required property for MFAMethodAdminGenerateTOTPRequest and cannot be null");
             }
-            this.EntityId = entityId;
-            // to ensure "methodId" is required (not null)
-            if (methodId == null)
+            this.EntityId = EntityId;
+
+
+            // to ensure "MethodId" is required (not null)
+            if (MethodId == null)
             {
-                throw new ArgumentNullException("methodId is a required property for MFAMethodAdminGenerateTOTPRequest and cannot be null");
+                throw new ArgumentNullException("MethodId is a required property for MFAMethodAdminGenerateTOTPRequest and cannot be null");
             }
-            this.MethodId = methodId;
+            this.MethodId = MethodId;
+
+
         }
 
         /// <summary>
@@ -58,14 +71,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Entity ID on which the generated secret needs to get stored.</value>
         [DataMember(Name = "entity_id", IsRequired = true, EmitDefaultValue = false)]
+
         public string EntityId { get; set; }
+
 
         /// <summary>
         /// The unique identifier for this MFA method.
         /// </summary>
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", IsRequired = true, EmitDefaultValue = false)]
+
         public string MethodId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -116,12 +135,15 @@ namespace Vault.Model
                     this.EntityId == input.EntityId ||
                     (this.EntityId != null &&
                     this.EntityId.Equals(input.EntityId))
+
                 ) &&
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&
                     this.MethodId.Equals(input.MethodId))
+
                 );
+
         }
 
         /// <summary>
@@ -133,14 +155,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.EntityId != null)
                 {
                     hashCode = (hashCode * 59) + this.EntityId.GetHashCode();
                 }
+
                 if (this.MethodId != null)
                 {
                     hashCode = (hashCode * 59) + this.MethodId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

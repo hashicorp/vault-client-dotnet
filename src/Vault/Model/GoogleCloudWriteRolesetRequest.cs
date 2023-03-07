@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,20 +28,34 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudWriteRolesetRequest")]
     public partial class GoogleCloudWriteRolesetRequest : IEquatable<GoogleCloudWriteRolesetRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudWriteRolesetRequest" /> class.
         /// </summary>
-        /// <param name="bindings">Bindings configuration string..</param>
-        /// <param name="project">Name of the GCP project that this roleset&#39;s service account will belong to..</param>
-        /// <param name="secretType">Type of secret generated for this role set. Defaults to &#39;access_token&#39; (default to &quot;access_token&quot;).</param>
-        /// <param name="tokenScopes">List of OAuth scopes to assign to credentials generated under this role set.</param>
-        public GoogleCloudWriteRolesetRequest(string bindings = default(string), string project = default(string), string secretType = "access_token", List<string> tokenScopes = default(List<string>))
+
+        /// <param name="Bindings">Bindings configuration string..</param>
+
+        /// <param name="Project">Name of the GCP project that this roleset&#x27;s service account will belong to..</param>
+
+        /// <param name="SecretType">Type of secret generated for this role set. Defaults to &#x27;access_token&#x27; (default to &quot;access_token&quot;).</param>
+
+        /// <param name="TokenScopes">List of OAuth scopes to assign to credentials generated under this role set.</param>
+
+
+        public GoogleCloudWriteRolesetRequest(string Bindings = default(string), string Project = default(string), string SecretType = "access_token", List<string> TokenScopes = default(List<string>))
         {
-            this.Bindings = bindings;
-            this.Project = project;
-            // use default value if no "secretType" provided
-            this.SecretType = secretType ?? "access_token";
-            this.TokenScopes = tokenScopes;
+
+            this.Bindings = Bindings;
+
+            this.Project = Project;
+
+            // use default value if no "SecretType" provided
+            this.SecretType = SecretType ?? "access_token";
+
+
+            this.TokenScopes = TokenScopes;
+
         }
 
         /// <summary>
@@ -48,28 +63,38 @@ namespace Vault.Model
         /// </summary>
         /// <value>Bindings configuration string.</value>
         [DataMember(Name = "bindings", EmitDefaultValue = false)]
+
         public string Bindings { get; set; }
 
-        /// <summary>
-        /// Name of the GCP project that this roleset&#39;s service account will belong to.
-        /// </summary>
-        /// <value>Name of the GCP project that this roleset&#39;s service account will belong to.</value>
-        [DataMember(Name = "project", EmitDefaultValue = false)]
-        public string Project { get; set; }
 
         /// <summary>
-        /// Type of secret generated for this role set. Defaults to &#39;access_token&#39;
+        /// Name of the GCP project that this roleset&#x27;s service account will belong to.
         /// </summary>
-        /// <value>Type of secret generated for this role set. Defaults to &#39;access_token&#39;</value>
+        /// <value>Name of the GCP project that this roleset&#x27;s service account will belong to.</value>
+        [DataMember(Name = "project", EmitDefaultValue = false)]
+
+        public string Project { get; set; }
+
+
+        /// <summary>
+        /// Type of secret generated for this role set. Defaults to &#x27;access_token&#x27;
+        /// </summary>
+        /// <value>Type of secret generated for this role set. Defaults to &#x27;access_token&#x27;</value>
         [DataMember(Name = "secret_type", EmitDefaultValue = false)]
+
         public string SecretType { get; set; }
+
 
         /// <summary>
         /// List of OAuth scopes to assign to credentials generated under this role set
         /// </summary>
         /// <value>List of OAuth scopes to assign to credentials generated under this role set</value>
         [DataMember(Name = "token_scopes", EmitDefaultValue = false)]
+
         public List<string> TokenScopes { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -122,16 +147,19 @@ namespace Vault.Model
                     this.Bindings == input.Bindings ||
                     (this.Bindings != null &&
                     this.Bindings.Equals(input.Bindings))
+
                 ) &&
                 (
                     this.Project == input.Project ||
                     (this.Project != null &&
                     this.Project.Equals(input.Project))
+
                 ) &&
                 (
                     this.SecretType == input.SecretType ||
                     (this.SecretType != null &&
                     this.SecretType.Equals(input.SecretType))
+
                 ) &&
                 (
                     this.TokenScopes == input.TokenScopes ||
@@ -139,6 +167,7 @@ namespace Vault.Model
                     input.TokenScopes != null &&
                     this.TokenScopes.SequenceEqual(input.TokenScopes)
                 );
+
         }
 
         /// <summary>
@@ -150,22 +179,27 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Bindings != null)
                 {
                     hashCode = (hashCode * 59) + this.Bindings.GetHashCode();
                 }
+
                 if (this.Project != null)
                 {
                     hashCode = (hashCode * 59) + this.Project.GetHashCode();
                 }
+
                 if (this.SecretType != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretType.GetHashCode();
                 }
+
                 if (this.TokenScopes != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenScopes.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

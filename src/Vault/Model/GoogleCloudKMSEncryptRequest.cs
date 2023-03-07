@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudKMSEncryptRequest")]
     public partial class GoogleCloudKMSEncryptRequest : IEquatable<GoogleCloudKMSEncryptRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudKMSEncryptRequest" /> class.
         /// </summary>
-        /// <param name="additionalAuthenticatedData">Optional base64-encoded data that, if specified, must also be provided to decrypt this payload..</param>
-        /// <param name="keyVersion">Integer version of the crypto key version to use for encryption. If unspecified, this defaults to the latest active crypto key version..</param>
-        /// <param name="plaintext">Plaintext value to be encrypted. This can be a string or binary, but the size is limited. See the Google Cloud KMS documentation for information on size limitations by key types..</param>
-        public GoogleCloudKMSEncryptRequest(string additionalAuthenticatedData = default(string), int keyVersion = default(int), string plaintext = default(string))
+
+        /// <param name="AdditionalAuthenticatedData">Optional base64-encoded data that, if specified, must also be provided to decrypt this payload..</param>
+
+        /// <param name="KeyVersion">Integer version of the crypto key version to use for encryption. If unspecified, this defaults to the latest active crypto key version..</param>
+
+        /// <param name="Plaintext">Plaintext value to be encrypted. This can be a string or binary, but the size is limited. See the Google Cloud KMS documentation for information on size limitations by key types..</param>
+
+
+        public GoogleCloudKMSEncryptRequest(string AdditionalAuthenticatedData = default(string), int KeyVersion = default(int), string Plaintext = default(string))
         {
-            this.AdditionalAuthenticatedData = additionalAuthenticatedData;
-            this.KeyVersion = keyVersion;
-            this.Plaintext = plaintext;
+
+            this.AdditionalAuthenticatedData = AdditionalAuthenticatedData;
+
+            this.KeyVersion = KeyVersion;
+
+            this.Plaintext = Plaintext;
+
         }
 
         /// <summary>
@@ -45,21 +57,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>Optional base64-encoded data that, if specified, must also be provided to decrypt this payload.</value>
         [DataMember(Name = "additional_authenticated_data", EmitDefaultValue = false)]
+
         public string AdditionalAuthenticatedData { get; set; }
+
 
         /// <summary>
         /// Integer version of the crypto key version to use for encryption. If unspecified, this defaults to the latest active crypto key version.
         /// </summary>
         /// <value>Integer version of the crypto key version to use for encryption. If unspecified, this defaults to the latest active crypto key version.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
+
         public int KeyVersion { get; set; }
+
 
         /// <summary>
         /// Plaintext value to be encrypted. This can be a string or binary, but the size is limited. See the Google Cloud KMS documentation for information on size limitations by key types.
         /// </summary>
         /// <value>Plaintext value to be encrypted. This can be a string or binary, but the size is limited. See the Google Cloud KMS documentation for information on size limitations by key types.</value>
         [DataMember(Name = "plaintext", EmitDefaultValue = false)]
+
         public string Plaintext { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,16 +131,20 @@ namespace Vault.Model
                     this.AdditionalAuthenticatedData == input.AdditionalAuthenticatedData ||
                     (this.AdditionalAuthenticatedData != null &&
                     this.AdditionalAuthenticatedData.Equals(input.AdditionalAuthenticatedData))
+
                 ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
+
                     this.KeyVersion.Equals(input.KeyVersion)
                 ) &&
                 (
                     this.Plaintext == input.Plaintext ||
                     (this.Plaintext != null &&
                     this.Plaintext.Equals(input.Plaintext))
+
                 );
+
         }
 
         /// <summary>
@@ -132,15 +156,19 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AdditionalAuthenticatedData != null)
                 {
                     hashCode = (hashCode * 59) + this.AdditionalAuthenticatedData.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.KeyVersion.GetHashCode();
                 if (this.Plaintext != null)
                 {
                     hashCode = (hashCode * 59) + this.Plaintext.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

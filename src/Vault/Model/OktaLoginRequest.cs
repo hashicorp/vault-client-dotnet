@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,19 +28,32 @@ namespace Vault.Model
     [DataContract(Name = "OktaLoginRequest")]
     public partial class OktaLoginRequest : IEquatable<OktaLoginRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OktaLoginRequest" /> class.
         /// </summary>
-        /// <param name="nonce">Nonce provided if performing login that requires number verification challenge. Logins through the vault login CLI command will automatically generate a nonce..</param>
-        /// <param name="password">Password for this user..</param>
-        /// <param name="provider">Preferred factor provider..</param>
-        /// <param name="totp">TOTP passcode..</param>
-        public OktaLoginRequest(string nonce = default(string), string password = default(string), string provider = default(string), string totp = default(string))
+
+        /// <param name="Nonce">Nonce provided if performing login that requires number verification challenge. Logins through the vault login CLI command will automatically generate a nonce..</param>
+
+        /// <param name="Password">Password for this user..</param>
+
+        /// <param name="Provider">Preferred factor provider..</param>
+
+        /// <param name="Totp">TOTP passcode..</param>
+
+
+        public OktaLoginRequest(string Nonce = default(string), string Password = default(string), string Provider = default(string), string Totp = default(string))
         {
-            this.Nonce = nonce;
-            this.Password = password;
-            this.Provider = provider;
-            this.Totp = totp;
+
+            this.Nonce = Nonce;
+
+            this.Password = Password;
+
+            this.Provider = Provider;
+
+            this.Totp = Totp;
+
         }
 
         /// <summary>
@@ -47,28 +61,38 @@ namespace Vault.Model
         /// </summary>
         /// <value>Nonce provided if performing login that requires number verification challenge. Logins through the vault login CLI command will automatically generate a nonce.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
+
         public string Nonce { get; set; }
+
 
         /// <summary>
         /// Password for this user.
         /// </summary>
         /// <value>Password for this user.</value>
         [DataMember(Name = "password", EmitDefaultValue = false)]
+
         public string Password { get; set; }
+
 
         /// <summary>
         /// Preferred factor provider.
         /// </summary>
         /// <value>Preferred factor provider.</value>
         [DataMember(Name = "provider", EmitDefaultValue = false)]
+
         public string Provider { get; set; }
+
 
         /// <summary>
         /// TOTP passcode.
         /// </summary>
         /// <value>TOTP passcode.</value>
         [DataMember(Name = "totp", EmitDefaultValue = false)]
+
         public string Totp { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -121,22 +145,27 @@ namespace Vault.Model
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&
                     this.Nonce.Equals(input.Nonce))
+
                 ) &&
                 (
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
+
                 ) &&
                 (
                     this.Provider == input.Provider ||
                     (this.Provider != null &&
                     this.Provider.Equals(input.Provider))
+
                 ) &&
                 (
                     this.Totp == input.Totp ||
                     (this.Totp != null &&
                     this.Totp.Equals(input.Totp))
+
                 );
+
         }
 
         /// <summary>
@@ -148,22 +177,27 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Nonce != null)
                 {
                     hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 }
+
                 if (this.Password != null)
                 {
                     hashCode = (hashCode * 59) + this.Password.GetHashCode();
                 }
+
                 if (this.Provider != null)
                 {
                     hashCode = (hashCode * 59) + this.Provider.GetHashCode();
                 }
+
                 if (this.Totp != null)
                 {
                     hashCode = (hashCode * 59) + this.Totp.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

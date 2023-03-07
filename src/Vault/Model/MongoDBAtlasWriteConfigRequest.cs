@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,30 +28,42 @@ namespace Vault.Model
     [DataContract(Name = "MongoDBAtlasWriteConfigRequest")]
     public partial class MongoDBAtlasWriteConfigRequest : IEquatable<MongoDBAtlasWriteConfigRequest>, IValidatableObject
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MongoDBAtlasWriteConfigRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected MongoDBAtlasWriteConfigRequest() { }
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MongoDBAtlasWriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="privateKey">MongoDB Atlas Programmatic Private Key (required).</param>
-        /// <param name="publicKey">MongoDB Atlas Programmatic Public Key (required).</param>
-        public MongoDBAtlasWriteConfigRequest(string privateKey = default(string), string publicKey = default(string))
+
+        /// <param name="PrivateKey">MongoDB Atlas Programmatic Private Key (required).</param>
+
+        /// <param name="PublicKey">MongoDB Atlas Programmatic Public Key (required).</param>
+
+
+        public MongoDBAtlasWriteConfigRequest(string PrivateKey = default(string), string PublicKey = default(string))
         {
-            // to ensure "privateKey" is required (not null)
-            if (privateKey == null)
+
+            // to ensure "PrivateKey" is required (not null)
+            if (PrivateKey == null)
             {
-                throw new ArgumentNullException("privateKey is a required property for MongoDBAtlasWriteConfigRequest and cannot be null");
+                throw new ArgumentNullException("PrivateKey is a required property for MongoDBAtlasWriteConfigRequest and cannot be null");
             }
-            this.PrivateKey = privateKey;
-            // to ensure "publicKey" is required (not null)
-            if (publicKey == null)
+            this.PrivateKey = PrivateKey;
+
+
+            // to ensure "PublicKey" is required (not null)
+            if (PublicKey == null)
             {
-                throw new ArgumentNullException("publicKey is a required property for MongoDBAtlasWriteConfigRequest and cannot be null");
+                throw new ArgumentNullException("PublicKey is a required property for MongoDBAtlasWriteConfigRequest and cannot be null");
             }
-            this.PublicKey = publicKey;
+            this.PublicKey = PublicKey;
+
+
         }
 
         /// <summary>
@@ -58,14 +71,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>MongoDB Atlas Programmatic Private Key</value>
         [DataMember(Name = "private_key", IsRequired = true, EmitDefaultValue = false)]
+
         public string PrivateKey { get; set; }
+
 
         /// <summary>
         /// MongoDB Atlas Programmatic Public Key
         /// </summary>
         /// <value>MongoDB Atlas Programmatic Public Key</value>
         [DataMember(Name = "public_key", IsRequired = true, EmitDefaultValue = false)]
+
         public string PublicKey { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -116,12 +135,15 @@ namespace Vault.Model
                     this.PrivateKey == input.PrivateKey ||
                     (this.PrivateKey != null &&
                     this.PrivateKey.Equals(input.PrivateKey))
+
                 ) &&
                 (
                     this.PublicKey == input.PublicKey ||
                     (this.PublicKey != null &&
                     this.PublicKey.Equals(input.PublicKey))
+
                 );
+
         }
 
         /// <summary>
@@ -133,14 +155,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.PrivateKey != null)
                 {
                     hashCode = (hashCode * 59) + this.PrivateKey.GetHashCode();
                 }
+
                 if (this.PublicKey != null)
                 {
                     hashCode = (hashCode * 59) + this.PublicKey.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

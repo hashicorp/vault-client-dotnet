@@ -1,0 +1,136 @@
+# {{packageName}}.{{apiPackage}}.{{classname}}{{#with description}}
+{{.}}{{/with}}
+
+All URIs are relative to *{{{basePath}}}*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+{{#with operations}}{{#each operation}}[**{{operationId}}**]({{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{summary}}
+{{/each}}{{/with}}
+
+{{#with operations}}
+{{#each operation}}
+<a name="{{{operationIdLowerCase}}}"></a>
+# **{{{operationId}}}**
+
+> {{returnType}}{{#unless returnType}}void{{/unless}} {{operationId}} ({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
+
+{{{summary}}}{{#if notes}}
+
+{{{.}}}{{/if}}
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+{{#if useHttpClient}}
+using System.Net.Http;
+{{/if}}
+using {{packageName}}.{{apiPackage}};
+using {{packageName}}.Client;
+using {{packageName}}.{{modelPackage}};
+
+namespace Example
+{
+    public class {{operationId}}Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "{{{basePath}}}";
+            {{#if hasAuthMethods}}
+            {{#each authMethods}}
+            {{#if isBasicBasic}}
+            // Configure HTTP basic authorization: {{{name}}}
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+            {{/if}}
+            {{#if isBasicBearer}}
+            // Configure Bearer token for authorization: {{{name}}}
+            config.AccessToken = "YOUR_BEARER_TOKEN";
+            {{/if}}
+            {{#if isApiKey}}
+            // Configure API key authorization: {{{name}}}
+            config.AddApiKey("{{{keyParamName}}}", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("{{{keyParamName}}}", "Bearer");
+            {{/if}}
+            {{#if isOAuth}}
+            // Configure OAuth2 access token for authorization: {{{name}}}
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+            {{/if}}
+            {{/each}}
+
+            {{/if}}
+            {{#if useHttpClient}}
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new {{classname}}(httpClient, config, httpClientHandler);
+            {{/if}}
+            {{#unless useHttpClient}}
+            var apiInstance = new {{classname}}(config);
+            {{/unless}}
+            {{#each allParams}}
+            {{#if isPrimitiveType}}
+            var {{paramName}} = {{{example}}};  // {{{dataType}}} | {{{description}}}{{#unless required}} (optional) {{/unless}}{{#with defaultValue}} (default to {{{.}}}){{/with}}
+            {{/if}}
+            {{#unless isPrimitiveType}}
+            var {{paramName}} = new {{{dataType}}}(); // {{{dataType}}} | {{{description}}}{{#unless required}} (optional) {{/unless}}{{#with defaultValue}} (default to {{{.}}}){{/with}}
+            {{/unless}}
+            {{/each}}
+
+            try
+            {
+                {{#with summary}}
+                // {{{.}}}
+                {{/with}}
+
+                {{#with returnType}}{{{.}}} result = {{/with}}apiInstance.{{{operationId}}}({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null);{{#with returnType}}
+
+                Debug.WriteLine(result);{{/with}}
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling {{classname}}.{{operationId}}: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+{{#unless allParams}}This endpoint does not need any parameter.{{/unless}}{{#each allParams}}{{#if @last}}
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------{{/if}}{{/each}}
+{{#each allParams}} **{{paramName}}** | {{#if isFile}}**{{dataType}}**{{/if}}{{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}{{#unless isFile}}[**{{dataType}}**]({{#if isContainer}}{{baseType}}{{/if}}{{#unless isContainer}}{{dataType}}{{/unless}}.md){{/unless}}{{/unless}}| {{description}} | {{#unless required}}[optional] {{/unless}}{{#with defaultValue}}[default to {{.}}]{{/with}}
+{{/each}}
+
+### Return type
+
+{{#with returnType}}{{#with returnTypeIsPrimitive}}**{{{returnType}}}**{{/with}}{{#unless returnTypeIsPrimitive}}[**{{returnType}}**]({{returnBaseType}}.md){{/unless}}{{/with}}{{#unless returnType}}void (empty response body){{/unless}}
+
+### Authorization
+
+{{#unless authMethods}}No authorization required{{/unless}}{{#each authMethods}}[{{{name}}}](../README.md#{{{name}}}){{#unless @last}}, {{/unless}}{{/each}}
+
+### HTTP request headers
+
+ - **Content-Type**: {{#if consumes}}{{{mediaType}}}{{#unless @last}}, {{/unless}}{{/if}}{{#unless consumes}}Not defined{{/unless}}
+ - **Accept**: {{#each produces}}{{{mediaType}}}{{#unless @last}}, {{/unless}}{{/each}}{{#unless produces}}Not defined{{/unless}}
+
+{{#with responses.[0]}}
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+{{#each responses}}
+| **{{code}}** | {{message}} | {{#each headers}} * {{baseName}} - {{description}} <br> {{/each}}{{#unless headers.[0]}} - {{/unless}} |
+{{/each}}
+{{/with}}
+
+[[Back to top]](#) [[Back to API list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-api-endpoints) [[Back to Model list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-models) [[Back to README]](../{{#if useGenericHost}}../{{/if}}README.md)
+
+{{/each}}
+{{/with}}

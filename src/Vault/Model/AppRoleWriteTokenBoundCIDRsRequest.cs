@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleWriteTokenBoundCIDRsRequest")]
     public partial class AppRoleWriteTokenBoundCIDRsRequest : IEquatable<AppRoleWriteTokenBoundCIDRsRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWriteTokenBoundCIDRsRequest" /> class.
         /// </summary>
-        /// <param name="tokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
-        public AppRoleWriteTokenBoundCIDRsRequest(List<string> tokenBoundCidrs = default(List<string>))
+
+        /// <param name="TokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
+
+
+        public AppRoleWriteTokenBoundCIDRsRequest(List<string> TokenBoundCidrs = default(List<string>))
         {
-            this.TokenBoundCidrs = tokenBoundCidrs;
+
+            this.TokenBoundCidrs = TokenBoundCidrs;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
+
         public List<string> TokenBoundCidrs { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +105,7 @@ namespace Vault.Model
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
                 );
+
         }
 
         /// <summary>
@@ -104,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.TokenBoundCidrs != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

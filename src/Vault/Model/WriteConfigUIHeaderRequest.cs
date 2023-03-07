@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "WriteConfigUIHeaderRequest")]
     public partial class WriteConfigUIHeaderRequest : IEquatable<WriteConfigUIHeaderRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteConfigUIHeaderRequest" /> class.
         /// </summary>
-        /// <param name="multivalue">Returns multiple values if true.</param>
-        /// <param name="values">The values to set the header..</param>
-        public WriteConfigUIHeaderRequest(bool multivalue = default(bool), List<string> values = default(List<string>))
+
+        /// <param name="Multivalue">Returns multiple values if true.</param>
+
+        /// <param name="Values">The values to set the header..</param>
+
+
+        public WriteConfigUIHeaderRequest(bool Multivalue = default(bool), List<string> Values = default(List<string>))
         {
-            this.Multivalue = multivalue;
-            this.Values = values;
+
+            this.Multivalue = Multivalue;
+
+            this.Values = Values;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Returns multiple values if true</value>
         [DataMember(Name = "multivalue", EmitDefaultValue = true)]
+
         public bool Multivalue { get; set; }
+
 
         /// <summary>
         /// The values to set the header.
         /// </summary>
         /// <value>The values to set the header.</value>
         [DataMember(Name = "values", EmitDefaultValue = false)]
+
         public List<string> Values { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,6 +115,7 @@ namespace Vault.Model
             return
                 (
                     this.Multivalue == input.Multivalue ||
+
                     this.Multivalue.Equals(input.Multivalue)
                 ) &&
                 (
@@ -107,6 +124,7 @@ namespace Vault.Model
                     input.Values != null &&
                     this.Values.SequenceEqual(input.Values)
                 );
+
         }
 
         /// <summary>
@@ -118,11 +136,14 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Multivalue.GetHashCode();
                 if (this.Values != null)
                 {
                     hashCode = (hashCode * 59) + this.Values.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

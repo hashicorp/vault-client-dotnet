@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "PKIWriteIssuersConfigRequest")]
     public partial class PKIWriteIssuersConfigRequest : IEquatable<PKIWriteIssuersConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteIssuersConfigRequest" /> class.
         /// </summary>
-        /// <param name="_default">Reference (name or identifier) to the default issuer..</param>
-        /// <param name="defaultFollowsLatestIssuer">Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false. (default to false).</param>
-        public PKIWriteIssuersConfigRequest(string _default = default(string), bool defaultFollowsLatestIssuer = false)
+
+        /// <param name="Default">Reference (name or identifier) to the default issuer..</param>
+
+        /// <param name="DefaultFollowsLatestIssuer">Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false. (default to false).</param>
+
+
+        public PKIWriteIssuersConfigRequest(string Default = default(string), bool DefaultFollowsLatestIssuer = false)
         {
-            this.Default = _default;
-            this.DefaultFollowsLatestIssuer = defaultFollowsLatestIssuer;
+
+            this.Default = Default;
+
+            this.DefaultFollowsLatestIssuer = DefaultFollowsLatestIssuer;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Reference (name or identifier) to the default issuer.</value>
         [DataMember(Name = "default", EmitDefaultValue = false)]
+
         public string Default { get; set; }
+
 
         /// <summary>
         /// Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false.
         /// </summary>
         /// <value>Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false.</value>
         [DataMember(Name = "default_follows_latest_issuer", EmitDefaultValue = true)]
+
         public bool DefaultFollowsLatestIssuer { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +117,14 @@ namespace Vault.Model
                     this.Default == input.Default ||
                     (this.Default != null &&
                     this.Default.Equals(input.Default))
+
                 ) &&
                 (
                     this.DefaultFollowsLatestIssuer == input.DefaultFollowsLatestIssuer ||
+
                     this.DefaultFollowsLatestIssuer.Equals(input.DefaultFollowsLatestIssuer)
                 );
+
         }
 
         /// <summary>
@@ -117,10 +136,13 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Default != null)
                 {
                     hashCode = (hashCode * 59) + this.Default.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.DefaultFollowsLatestIssuer.GetHashCode();
                 return hashCode;
             }

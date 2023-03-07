@@ -14,17 +14,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-{{^netStandard}}
-using System.Web;
-{{/netStandard}}
+{{#unless netStandard ~}}using System.Web;{{/unless ~}}
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
 using System.Net.Http;
 using System.Net.Http.Headers;
-{{#supportsRetry}}
-using Polly;
-{{/supportsRetry}}
+{{#if supportsRetry}}using Polly;{{/if}}
 
 namespace {{packageName}}.Client
 {
@@ -175,7 +171,7 @@ namespace {{packageName}}.Client
     /// <remarks>
     /// The Dispose method will manage the HttpClient lifecycle when not passed by constructor.
     /// </remarks>
-    {{>visibility}} partial class ApiClient : ISynchronousClient{{#supportsAsync}}, IAsynchronousClient{{/supportsAsync}}
+    {{>visibility}} partial class ApiClient : ISynchronousClient{{#if supportsAsync}}, IAsynchronousClient{{/if}}
     {
         /// <summary>
         /// {{packageName}} configuration object for all requests
@@ -325,7 +321,6 @@ namespace {{packageName}}.Client
         }
 
         /// Prepares multipart/form-data content
-        {{! TODO: Add handling of improper usage }}
         HttpContent PrepareMultipartFormDataContent(RequestOptions options)
         {
             string boundary = "---------" + Guid.NewGuid().ToString().ToUpperInvariant();
@@ -443,7 +438,6 @@ namespace {{packageName}}.Client
                 contentType = contentTypes.FirstOrDefault();
             }
 
-            {{!// TODO Add error handling in case of improper usage}}
             if (contentType == "multipart/form-data")
             {
                 request.Content = PrepareMultipartFormDataContent(options);
@@ -473,8 +467,6 @@ namespace {{packageName}}.Client
                 }
             }
 
-
-
             // TODO provide an alternative that allows cookies per request instead of per API client
             if (options.Cookies != null && options.Cookies.Count > 0)
             {
@@ -492,7 +484,7 @@ namespace {{packageName}}.Client
             T result = (T)responseData;
             string rawContent = await response.Content.ReadAsStringAsync();
 
-            var transformed = new ApiResponse<T>(response.StatusCode, new Multimap<string, string>({{#caseInsensitiveResponseHeaders}}StringComparer.OrdinalIgnoreCase{{/caseInsensitiveResponseHeaders}}), result, rawContent)
+            var transformed = new ApiResponse<T>(response.StatusCode, new Multimap<string, string>({{#each caseInsensitiveResponseHeaders}}StringComparer.OrdinalIgnoreCase{{/each}}), result, rawContent)
             {
                 ErrorText = response.ReasonPhrase,
                 Cookies = new List<Cookie>()
@@ -563,7 +555,7 @@ namespace {{packageName}}.Client
             InterceptRequest(req);
 
             HttpResponseMessage response;
-{{#supportsRetry}}
+{{#if supportsRetry ~}}
             if (Configuration.RetryConfiguration.RetryPolicy != null)
             {
                 var retryPolicy = Configuration.RetryConfiguration.RetryPolicy;
@@ -577,7 +569,6 @@ namespace {{packageName}}.Client
                     })
                     .ConfigureAwait(false);
 
-
                 if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
@@ -589,11 +580,11 @@ namespace {{packageName}}.Client
             }
             else
             {
-{{/supportsRetry}}
+{{/if ~}}
                 response = await Configuration.HttpClient.SendAsync(req, cancellationToken).ConfigureAwait(false);
-{{#supportsRetry}}
+{{#if supportsRetry ~}}
             }
-{{/supportsRetry}}
+{{/if ~}}
 
             if (!response.IsSuccessStatusCode)
             {
@@ -617,7 +608,7 @@ namespace {{packageName}}.Client
             return await ToApiResponse<T>(response, responseData, req.RequestUri);
         }
 
-        {{#supportsAsync}}
+        {{#if supportsAsync ~}}
         #region IAsynchronousClient
         /// <summary>
         /// Make a HTTP GET request (async).
@@ -702,8 +693,7 @@ namespace {{packageName}}.Client
         {
             return ExecAsync<T>(NewRequest(new HttpMethod("PATCH"), path, options), cancellationToken);
         }
-        #endregion IAsynchronousClient
-        {{/supportsAsync}}
+        #endregion IAsynchronousClient{{/if}}
 
         #region ISynchronousClient
         /// <summary>

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CidrList** | **List&lt;string&gt;** | List of CIDR blocks enforcing secret IDs to be used from specific set of IP addresses. If &#39;bound_cidr_list&#39; is set on the role, then the list of CIDR blocks listed here should be a subset of the CIDR blocks listed on the role. | [optional] 
+**CidrList** | **List&lt;string&gt;** | List of CIDR blocks enforcing secret IDs to be used from specific set of IP addresses. If &#x27;bound_cidr_list&#x27; is set on the role, then the list of CIDR blocks listed here should be a subset of the CIDR blocks listed on the role. | [optional] 
 **CreationTime** | **DateTime** |  | [optional] 
 **ExpirationTime** | **DateTime** |  | [optional] 
 **LastUpdatedTime** | **DateTime** |  | [optional] 

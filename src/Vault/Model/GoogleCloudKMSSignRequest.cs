@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudKMSSignRequest")]
     public partial class GoogleCloudKMSSignRequest : IEquatable<GoogleCloudKMSSignRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudKMSSignRequest" /> class.
         /// </summary>
-        /// <param name="digest">Digest to sign. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required..</param>
-        /// <param name="keyVersion">Integer version of the crypto key version to use for signing. This field is required..</param>
-        public GoogleCloudKMSSignRequest(string digest = default(string), int keyVersion = default(int))
+
+        /// <param name="Digest">Digest to sign. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required..</param>
+
+        /// <param name="KeyVersion">Integer version of the crypto key version to use for signing. This field is required..</param>
+
+
+        public GoogleCloudKMSSignRequest(string Digest = default(string), int KeyVersion = default(int))
         {
-            this.Digest = digest;
-            this.KeyVersion = keyVersion;
+
+            this.Digest = Digest;
+
+            this.KeyVersion = KeyVersion;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Digest to sign. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required.</value>
         [DataMember(Name = "digest", EmitDefaultValue = false)]
+
         public string Digest { get; set; }
+
 
         /// <summary>
         /// Integer version of the crypto key version to use for signing. This field is required.
         /// </summary>
         /// <value>Integer version of the crypto key version to use for signing. This field is required.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
+
         public int KeyVersion { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +117,14 @@ namespace Vault.Model
                     this.Digest == input.Digest ||
                     (this.Digest != null &&
                     this.Digest.Equals(input.Digest))
+
                 ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
+
                     this.KeyVersion.Equals(input.KeyVersion)
                 );
+
         }
 
         /// <summary>
@@ -117,10 +136,13 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Digest != null)
                 {
                     hashCode = (hashCode * 59) + this.Digest.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.KeyVersion.GetHashCode();
                 return hashCode;
             }

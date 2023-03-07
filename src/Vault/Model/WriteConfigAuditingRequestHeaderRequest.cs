@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,20 +28,31 @@ namespace Vault.Model
     [DataContract(Name = "WriteConfigAuditingRequestHeaderRequest")]
     public partial class WriteConfigAuditingRequestHeaderRequest : IEquatable<WriteConfigAuditingRequestHeaderRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteConfigAuditingRequestHeaderRequest" /> class.
         /// </summary>
-        /// <param name="hmac">hmac.</param>
-        public WriteConfigAuditingRequestHeaderRequest(bool hmac = default(bool))
+
+        /// <param name="Hmac">Hmac.</param>
+
+
+        public WriteConfigAuditingRequestHeaderRequest(bool Hmac = default(bool))
         {
-            this.Hmac = hmac;
+
+            this.Hmac = Hmac;
+
         }
 
         /// <summary>
         /// Gets or Sets Hmac
         /// </summary>
         [DataMember(Name = "hmac", EmitDefaultValue = true)]
+
         public bool Hmac { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -88,8 +100,10 @@ namespace Vault.Model
             return
                 (
                     this.Hmac == input.Hmac ||
+
                     this.Hmac.Equals(input.Hmac)
                 );
+
         }
 
         /// <summary>
@@ -101,6 +115,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Hmac.GetHashCode();
                 return hashCode;
             }

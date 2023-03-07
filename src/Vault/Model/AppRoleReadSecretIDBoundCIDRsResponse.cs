@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleReadSecretIDBoundCIDRsResponse")]
     public partial class AppRoleReadSecretIDBoundCIDRsResponse : IEquatable<AppRoleReadSecretIDBoundCIDRsResponse>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleReadSecretIDBoundCIDRsResponse" /> class.
         /// </summary>
-        /// <param name="secretIdBoundCidrs">Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation..</param>
-        public AppRoleReadSecretIDBoundCIDRsResponse(List<string> secretIdBoundCidrs = default(List<string>))
+
+        /// <param name="SecretIdBoundCidrs">Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation..</param>
+
+
+        public AppRoleReadSecretIDBoundCIDRsResponse(List<string> SecretIdBoundCidrs = default(List<string>))
         {
-            this.SecretIdBoundCidrs = secretIdBoundCidrs;
+
+            this.SecretIdBoundCidrs = SecretIdBoundCidrs;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation.</value>
         [DataMember(Name = "secret_id_bound_cidrs", EmitDefaultValue = false)]
+
         public List<string> SecretIdBoundCidrs { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +105,7 @@ namespace Vault.Model
                     input.SecretIdBoundCidrs != null &&
                     this.SecretIdBoundCidrs.SequenceEqual(input.SecretIdBoundCidrs)
                 );
+
         }
 
         /// <summary>
@@ -104,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.SecretIdBoundCidrs != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretIdBoundCidrs.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

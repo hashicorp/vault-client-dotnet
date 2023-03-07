@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "KVv2WriteConfigRequest")]
     public partial class KVv2WriteConfigRequest : IEquatable<KVv2WriteConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KVv2WriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="casRequired">If true, the backend will require the cas parameter to be set for each write.</param>
-        /// <param name="deleteVersionAfter">If set, the length of time before a version is deleted. A negative duration disables the use of delete_version_after on all keys. A zero duration clears the current setting. Accepts a Go duration format string..</param>
-        /// <param name="maxVersions">The number of versions to keep for each key. Defaults to 10.</param>
-        public KVv2WriteConfigRequest(bool casRequired = default(bool), int deleteVersionAfter = default(int), int maxVersions = default(int))
+
+        /// <param name="CasRequired">If true, the backend will require the cas parameter to be set for each write.</param>
+
+        /// <param name="DeleteVersionAfter">If set, the length of time before a version is deleted. A negative duration disables the use of delete_version_after on all keys. A zero duration clears the current setting. Accepts a Go duration format string..</param>
+
+        /// <param name="MaxVersions">The number of versions to keep for each key. Defaults to 10.</param>
+
+
+        public KVv2WriteConfigRequest(bool CasRequired = default(bool), int DeleteVersionAfter = default(int), int MaxVersions = default(int))
         {
-            this.CasRequired = casRequired;
-            this.DeleteVersionAfter = deleteVersionAfter;
-            this.MaxVersions = maxVersions;
+
+            this.CasRequired = CasRequired;
+
+            this.DeleteVersionAfter = DeleteVersionAfter;
+
+            this.MaxVersions = MaxVersions;
+
         }
 
         /// <summary>
@@ -45,21 +57,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>If true, the backend will require the cas parameter to be set for each write</value>
         [DataMember(Name = "cas_required", EmitDefaultValue = true)]
+
         public bool CasRequired { get; set; }
+
 
         /// <summary>
         /// If set, the length of time before a version is deleted. A negative duration disables the use of delete_version_after on all keys. A zero duration clears the current setting. Accepts a Go duration format string.
         /// </summary>
         /// <value>If set, the length of time before a version is deleted. A negative duration disables the use of delete_version_after on all keys. A zero duration clears the current setting. Accepts a Go duration format string.</value>
         [DataMember(Name = "delete_version_after", EmitDefaultValue = false)]
+
         public int DeleteVersionAfter { get; set; }
+
 
         /// <summary>
         /// The number of versions to keep for each key. Defaults to 10
         /// </summary>
         /// <value>The number of versions to keep for each key. Defaults to 10</value>
         [DataMember(Name = "max_versions", EmitDefaultValue = false)]
+
         public int MaxVersions { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,16 +129,20 @@ namespace Vault.Model
             return
                 (
                     this.CasRequired == input.CasRequired ||
+
                     this.CasRequired.Equals(input.CasRequired)
                 ) &&
                 (
                     this.DeleteVersionAfter == input.DeleteVersionAfter ||
+
                     this.DeleteVersionAfter.Equals(input.DeleteVersionAfter)
                 ) &&
                 (
                     this.MaxVersions == input.MaxVersions ||
+
                     this.MaxVersions.Equals(input.MaxVersions)
                 );
+
         }
 
         /// <summary>
@@ -130,8 +154,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.CasRequired.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.DeleteVersionAfter.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.MaxVersions.GetHashCode();
                 return hashCode;
             }

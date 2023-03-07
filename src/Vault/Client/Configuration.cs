@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -145,12 +144,12 @@ namespace Vault.Client
 
         private string _dateTimeFormat = ISO8601_DATETIME_FORMAT;
         private string _tempFolderPath = Path.GetTempPath();
-
         /// <summary>
         /// Gets or sets the servers defined in the OpenAPI spec.
         /// </summary>
         /// <value>The servers</value>
         private IList<IReadOnlyDictionary<string, object>> _servers;
+
         #endregion Private Members
 
         #region Constructors
@@ -215,7 +214,6 @@ namespace Vault.Client
                 httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
                 httpClientHandler.ServerCertificateCustomValidationCallback = ValidateServiceCertficate;
             }
-
 
             timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));

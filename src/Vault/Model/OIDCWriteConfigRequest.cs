@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,21 +28,32 @@ namespace Vault.Model
     [DataContract(Name = "OIDCWriteConfigRequest")]
     public partial class OIDCWriteConfigRequest : IEquatable<OIDCWriteConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCWriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="issuer">Issuer URL to be used in the iss claim of the token. If not set, Vault&#39;s app_addr will be used..</param>
-        public OIDCWriteConfigRequest(string issuer = default(string))
+
+        /// <param name="Issuer">Issuer URL to be used in the iss claim of the token. If not set, Vault&#x27;s app_addr will be used..</param>
+
+
+        public OIDCWriteConfigRequest(string Issuer = default(string))
         {
-            this.Issuer = issuer;
+
+            this.Issuer = Issuer;
+
         }
 
         /// <summary>
-        /// Issuer URL to be used in the iss claim of the token. If not set, Vault&#39;s app_addr will be used.
+        /// Issuer URL to be used in the iss claim of the token. If not set, Vault&#x27;s app_addr will be used.
         /// </summary>
-        /// <value>Issuer URL to be used in the iss claim of the token. If not set, Vault&#39;s app_addr will be used.</value>
+        /// <value>Issuer URL to be used in the iss claim of the token. If not set, Vault&#x27;s app_addr will be used.</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
+
         public string Issuer { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Issuer != null)
                 {
                     hashCode = (hashCode * 59) + this.Issuer.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

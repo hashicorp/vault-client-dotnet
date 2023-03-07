@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleWriteBindSecretIDRequest")]
     public partial class AppRoleWriteBindSecretIDRequest : IEquatable<AppRoleWriteBindSecretIDRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWriteBindSecretIDRequest" /> class.
         /// </summary>
-        /// <param name="bindSecretId">Impose secret_id to be presented when logging in using this role. (default to true).</param>
-        public AppRoleWriteBindSecretIDRequest(bool bindSecretId = true)
+
+        /// <param name="BindSecretId">Impose secret_id to be presented when logging in using this role. (default to true).</param>
+
+
+        public AppRoleWriteBindSecretIDRequest(bool BindSecretId = true)
         {
-            this.BindSecretId = bindSecretId;
+
+            this.BindSecretId = BindSecretId;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Impose secret_id to be presented when logging in using this role.</value>
         [DataMember(Name = "bind_secret_id", EmitDefaultValue = true)]
+
         public bool BindSecretId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.BindSecretId == input.BindSecretId ||
+
                     this.BindSecretId.Equals(input.BindSecretId)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.BindSecretId.GetHashCode();
                 return hashCode;
             }

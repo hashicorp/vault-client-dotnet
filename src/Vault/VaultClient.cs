@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -17,7 +16,6 @@ namespace Vault
     /// </summary>
     public class VaultClient
     {
-
         /// <summary>
         /// To access Vault Auth methods
         /// </summary>

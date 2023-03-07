@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "LDAPWriteUserRequest")]
     public partial class LDAPWriteUserRequest : IEquatable<LDAPWriteUserRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LDAPWriteUserRequest" /> class.
         /// </summary>
-        /// <param name="groups">Comma-separated list of additional groups associated with the user..</param>
-        /// <param name="policies">Comma-separated list of policies associated with the user..</param>
-        public LDAPWriteUserRequest(List<string> groups = default(List<string>), List<string> policies = default(List<string>))
+
+        /// <param name="Groups">Comma-separated list of additional groups associated with the user..</param>
+
+        /// <param name="Policies">Comma-separated list of policies associated with the user..</param>
+
+
+        public LDAPWriteUserRequest(List<string> Groups = default(List<string>), List<string> Policies = default(List<string>))
         {
-            this.Groups = groups;
-            this.Policies = policies;
+
+            this.Groups = Groups;
+
+            this.Policies = Policies;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Comma-separated list of additional groups associated with the user.</value>
         [DataMember(Name = "groups", EmitDefaultValue = false)]
+
         public List<string> Groups { get; set; }
+
 
         /// <summary>
         /// Comma-separated list of policies associated with the user.
         /// </summary>
         /// <value>Comma-separated list of policies associated with the user.</value>
         [DataMember(Name = "policies", EmitDefaultValue = false)]
+
         public List<string> Policies { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,6 +125,7 @@ namespace Vault.Model
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
                 );
+
         }
 
         /// <summary>
@@ -120,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Groups != null)
                 {
                     hashCode = (hashCode * 59) + this.Groups.GetHashCode();
                 }
+
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

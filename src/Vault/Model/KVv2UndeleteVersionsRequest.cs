@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "KVv2UndeleteVersionsRequest")]
     public partial class KVv2UndeleteVersionsRequest : IEquatable<KVv2UndeleteVersionsRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KVv2UndeleteVersionsRequest" /> class.
         /// </summary>
-        /// <param name="versions">The versions to unarchive. The versions will be restored and their data will be returned on normal get requests..</param>
-        public KVv2UndeleteVersionsRequest(List<int> versions = default(List<int>))
+
+        /// <param name="Versions">The versions to unarchive. The versions will be restored and their data will be returned on normal get requests..</param>
+
+
+        public KVv2UndeleteVersionsRequest(List<int> Versions = default(List<int>))
         {
-            this.Versions = versions;
+
+            this.Versions = Versions;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>The versions to unarchive. The versions will be restored and their data will be returned on normal get requests.</value>
         [DataMember(Name = "versions", EmitDefaultValue = false)]
+
         public List<int> Versions { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +105,7 @@ namespace Vault.Model
                     input.Versions != null &&
                     this.Versions.SequenceEqual(input.Versions)
                 );
+
         }
 
         /// <summary>
@@ -104,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Versions != null)
                 {
                     hashCode = (hashCode * 59) + this.Versions.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
