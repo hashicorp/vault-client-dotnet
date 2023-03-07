@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | Auth mode (&#39;ro&#39; for resource owner, &#39;cc&#39; for credential client). | [optional] [default to "ro"]
+**Mode** | **string** | Auth mode (&#x27;ro&#x27; for resource owner, &#x27;cc&#x27; for credential client). | [optional] [default to "ro"]
 **Password** | **string** | Password for this user. | [optional] 
 **Username** | **string** | Username of the user. | [optional] 
 

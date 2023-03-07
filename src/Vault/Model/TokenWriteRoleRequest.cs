@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,46 +28,86 @@ namespace Vault.Model
     [DataContract(Name = "TokenWriteRoleRequest")]
     public partial class TokenWriteRoleRequest : IEquatable<TokenWriteRoleRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenWriteRoleRequest" /> class.
         /// </summary>
-        /// <param name="allowedEntityAliases">String or JSON list of allowed entity aliases. If set, specifies the entity aliases which are allowed to be used during token generation. This field supports globbing..</param>
-        /// <param name="allowedPolicies">If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#39;s policies. The parameter is a comma-delimited string of policy names..</param>
-        /// <param name="allowedPoliciesGlob">If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#39;s policies. The parameter is a comma-delimited string of policy name globs..</param>
-        /// <param name="boundCidrs">Use &#39;token_bound_cidrs&#39; instead..</param>
-        /// <param name="disallowedPolicies">If set, successful token creation via this role will require that no policies in the given list are requested. The parameter is a comma-delimited string of policy names..</param>
-        /// <param name="disallowedPoliciesGlob">If set, successful token creation via this role will require that no requested policies glob match any of policies in this list. The parameter is a comma-delimited string of policy name globs..</param>
-        /// <param name="explicitMaxTtl">Use &#39;token_explicit_max_ttl&#39; instead..</param>
-        /// <param name="orphan">If true, tokens created via this role will be orphan tokens (have no parent).</param>
-        /// <param name="pathSuffix">If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#39;revoke-prefix&#39; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w.</param>
-        /// <param name="period">Use &#39;token_period&#39; instead..</param>
-        /// <param name="renewable">Tokens created via this role will be renewable or not according to this value. Defaults to \&quot;true\&quot;. (default to true).</param>
-        /// <param name="tokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
-        /// <param name="tokenExplicitMaxTtl">If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed..</param>
-        /// <param name="tokenNoDefaultPolicy">If true, the &#39;default&#39; policy will not automatically be added to generated tokens.</param>
-        /// <param name="tokenNumUses">The maximum number of times a token may be used, a value of zero means unlimited.</param>
-        /// <param name="tokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
-        /// <param name="tokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
-        public TokenWriteRoleRequest(List<string> allowedEntityAliases = default(List<string>), List<string> allowedPolicies = default(List<string>), List<string> allowedPoliciesGlob = default(List<string>), List<string> boundCidrs = default(List<string>), List<string> disallowedPolicies = default(List<string>), List<string> disallowedPoliciesGlob = default(List<string>), int explicitMaxTtl = default(int), bool orphan = default(bool), string pathSuffix = default(string), int period = default(int), bool renewable = true, List<string> tokenBoundCidrs = default(List<string>), int tokenExplicitMaxTtl = default(int), bool tokenNoDefaultPolicy = default(bool), int tokenNumUses = default(int), int tokenPeriod = default(int), string tokenType = "default-service")
+
+        /// <param name="AllowedEntityAliases">String or JSON list of allowed entity aliases. If set, specifies the entity aliases which are allowed to be used during token generation. This field supports globbing..</param>
+
+        /// <param name="AllowedPolicies">If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy names..</param>
+
+        /// <param name="AllowedPoliciesGlob">If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy name globs..</param>
+
+        /// <param name="BoundCidrs">Use &#x27;token_bound_cidrs&#x27; instead..</param>
+
+        /// <param name="DisallowedPolicies">If set, successful token creation via this role will require that no policies in the given list are requested. The parameter is a comma-delimited string of policy names..</param>
+
+        /// <param name="DisallowedPoliciesGlob">If set, successful token creation via this role will require that no requested policies glob match any of policies in this list. The parameter is a comma-delimited string of policy name globs..</param>
+
+        /// <param name="ExplicitMaxTtl">Use &#x27;token_explicit_max_ttl&#x27; instead..</param>
+
+        /// <param name="Orphan">If true, tokens created via this role will be orphan tokens (have no parent).</param>
+
+        /// <param name="PathSuffix">If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#x27;revoke-prefix&#x27; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w.</param>
+
+        /// <param name="Period">Use &#x27;token_period&#x27; instead..</param>
+
+        /// <param name="Renewable">Tokens created via this role will be renewable or not according to this value. Defaults to \&quot;true\&quot;. (default to true).</param>
+
+        /// <param name="TokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
+
+        /// <param name="TokenExplicitMaxTtl">If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed..</param>
+
+        /// <param name="TokenNoDefaultPolicy">If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens.</param>
+
+        /// <param name="TokenNumUses">The maximum number of times a token may be used, a value of zero means unlimited.</param>
+
+        /// <param name="TokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
+
+        /// <param name="TokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
+
+
+        public TokenWriteRoleRequest(List<string> AllowedEntityAliases = default(List<string>), List<string> AllowedPolicies = default(List<string>), List<string> AllowedPoliciesGlob = default(List<string>), List<string> BoundCidrs = default(List<string>), List<string> DisallowedPolicies = default(List<string>), List<string> DisallowedPoliciesGlob = default(List<string>), int ExplicitMaxTtl = default(int), bool Orphan = default(bool), string PathSuffix = default(string), int Period = default(int), bool Renewable = true, List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), string TokenType = "default-service")
         {
-            this.AllowedEntityAliases = allowedEntityAliases;
-            this.AllowedPolicies = allowedPolicies;
-            this.AllowedPoliciesGlob = allowedPoliciesGlob;
-            this.BoundCidrs = boundCidrs;
-            this.DisallowedPolicies = disallowedPolicies;
-            this.DisallowedPoliciesGlob = disallowedPoliciesGlob;
-            this.ExplicitMaxTtl = explicitMaxTtl;
-            this.Orphan = orphan;
-            this.PathSuffix = pathSuffix;
-            this.Period = period;
-            this.Renewable = renewable;
-            this.TokenBoundCidrs = tokenBoundCidrs;
-            this.TokenExplicitMaxTtl = tokenExplicitMaxTtl;
-            this.TokenNoDefaultPolicy = tokenNoDefaultPolicy;
-            this.TokenNumUses = tokenNumUses;
-            this.TokenPeriod = tokenPeriod;
-            // use default value if no "tokenType" provided
-            this.TokenType = tokenType ?? "default-service";
+
+            this.AllowedEntityAliases = AllowedEntityAliases;
+
+            this.AllowedPolicies = AllowedPolicies;
+
+            this.AllowedPoliciesGlob = AllowedPoliciesGlob;
+
+            this.BoundCidrs = BoundCidrs;
+
+            this.DisallowedPolicies = DisallowedPolicies;
+
+            this.DisallowedPoliciesGlob = DisallowedPoliciesGlob;
+
+            this.ExplicitMaxTtl = ExplicitMaxTtl;
+
+            this.Orphan = Orphan;
+
+            this.PathSuffix = PathSuffix;
+
+            this.Period = Period;
+
+            this.Renewable = Renewable;
+
+            this.TokenBoundCidrs = TokenBoundCidrs;
+
+            this.TokenExplicitMaxTtl = TokenExplicitMaxTtl;
+
+            this.TokenNoDefaultPolicy = TokenNoDefaultPolicy;
+
+            this.TokenNumUses = TokenNumUses;
+
+            this.TokenPeriod = TokenPeriod;
+
+            // use default value if no "TokenType" provided
+            this.TokenType = TokenType ?? "default-service";
+
+
         }
 
         /// <summary>
@@ -74,122 +115,155 @@ namespace Vault.Model
         /// </summary>
         /// <value>String or JSON list of allowed entity aliases. If set, specifies the entity aliases which are allowed to be used during token generation. This field supports globbing.</value>
         [DataMember(Name = "allowed_entity_aliases", EmitDefaultValue = false)]
+
         public List<string> AllowedEntityAliases { get; set; }
 
+
         /// <summary>
-        /// If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#39;s policies. The parameter is a comma-delimited string of policy names.
+        /// If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy names.
         /// </summary>
-        /// <value>If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#39;s policies. The parameter is a comma-delimited string of policy names.</value>
+        /// <value>If set, tokens can be created with any subset of the policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy names.</value>
         [DataMember(Name = "allowed_policies", EmitDefaultValue = false)]
+
         public List<string> AllowedPolicies { get; set; }
 
-        /// <summary>
-        /// If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#39;s policies. The parameter is a comma-delimited string of policy name globs.
-        /// </summary>
-        /// <value>If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#39;s policies. The parameter is a comma-delimited string of policy name globs.</value>
-        [DataMember(Name = "allowed_policies_glob", EmitDefaultValue = false)]
-        public List<string> AllowedPoliciesGlob { get; set; }
 
         /// <summary>
-        /// Use &#39;token_bound_cidrs&#39; instead.
+        /// If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy name globs.
         /// </summary>
-        /// <value>Use &#39;token_bound_cidrs&#39; instead.</value>
+        /// <value>If set, tokens can be created with any subset of glob matched policies in this list, rather than the normal semantics of tokens being a subset of the calling token&#x27;s policies. The parameter is a comma-delimited string of policy name globs.</value>
+        [DataMember(Name = "allowed_policies_glob", EmitDefaultValue = false)]
+
+        public List<string> AllowedPoliciesGlob { get; set; }
+
+
+        /// <summary>
+        /// Use &#x27;token_bound_cidrs&#x27; instead.
+        /// </summary>
+        /// <value>Use &#x27;token_bound_cidrs&#x27; instead.</value>
         [DataMember(Name = "bound_cidrs", EmitDefaultValue = false)]
-        [Obsolete]
-        public List<string> BoundCidrs { get; set; }
+
+        [Obsolete] public List<string> BoundCidrs { get; set; }
+
 
         /// <summary>
         /// If set, successful token creation via this role will require that no policies in the given list are requested. The parameter is a comma-delimited string of policy names.
         /// </summary>
         /// <value>If set, successful token creation via this role will require that no policies in the given list are requested. The parameter is a comma-delimited string of policy names.</value>
         [DataMember(Name = "disallowed_policies", EmitDefaultValue = false)]
+
         public List<string> DisallowedPolicies { get; set; }
+
 
         /// <summary>
         /// If set, successful token creation via this role will require that no requested policies glob match any of policies in this list. The parameter is a comma-delimited string of policy name globs.
         /// </summary>
         /// <value>If set, successful token creation via this role will require that no requested policies glob match any of policies in this list. The parameter is a comma-delimited string of policy name globs.</value>
         [DataMember(Name = "disallowed_policies_glob", EmitDefaultValue = false)]
+
         public List<string> DisallowedPoliciesGlob { get; set; }
 
+
         /// <summary>
-        /// Use &#39;token_explicit_max_ttl&#39; instead.
+        /// Use &#x27;token_explicit_max_ttl&#x27; instead.
         /// </summary>
-        /// <value>Use &#39;token_explicit_max_ttl&#39; instead.</value>
+        /// <value>Use &#x27;token_explicit_max_ttl&#x27; instead.</value>
         [DataMember(Name = "explicit_max_ttl", EmitDefaultValue = false)]
-        [Obsolete]
-        public int ExplicitMaxTtl { get; set; }
+
+        [Obsolete] public int ExplicitMaxTtl { get; set; }
+
 
         /// <summary>
         /// If true, tokens created via this role will be orphan tokens (have no parent)
         /// </summary>
         /// <value>If true, tokens created via this role will be orphan tokens (have no parent)</value>
         [DataMember(Name = "orphan", EmitDefaultValue = true)]
+
         public bool Orphan { get; set; }
 
-        /// <summary>
-        /// If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#39;revoke-prefix&#39; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w
-        /// </summary>
-        /// <value>If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#39;revoke-prefix&#39; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w</value>
-        [DataMember(Name = "path_suffix", EmitDefaultValue = false)]
-        public string PathSuffix { get; set; }
 
         /// <summary>
-        /// Use &#39;token_period&#39; instead.
+        /// If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#x27;revoke-prefix&#x27; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w
         /// </summary>
-        /// <value>Use &#39;token_period&#39; instead.</value>
+        /// <value>If set, tokens created via this role will contain the given suffix as a part of their path. This can be used to assist use of the &#x27;revoke-prefix&#x27; endpoint later on. The given suffix must match the regular expression.\\w[\\w-.]+\\w</value>
+        [DataMember(Name = "path_suffix", EmitDefaultValue = false)]
+
+        public string PathSuffix { get; set; }
+
+
+        /// <summary>
+        /// Use &#x27;token_period&#x27; instead.
+        /// </summary>
+        /// <value>Use &#x27;token_period&#x27; instead.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
-        [Obsolete]
-        public int Period { get; set; }
+
+        [Obsolete] public int Period { get; set; }
+
 
         /// <summary>
         /// Tokens created via this role will be renewable or not according to this value. Defaults to \&quot;true\&quot;.
         /// </summary>
         /// <value>Tokens created via this role will be renewable or not according to this value. Defaults to \&quot;true\&quot;.</value>
         [DataMember(Name = "renewable", EmitDefaultValue = true)]
+
         public bool Renewable { get; set; }
+
 
         /// <summary>
         /// Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.
         /// </summary>
         /// <value>Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token.</value>
         [DataMember(Name = "token_bound_cidrs", EmitDefaultValue = false)]
+
         public List<string> TokenBoundCidrs { get; set; }
+
 
         /// <summary>
         /// If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.
         /// </summary>
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
+
         public int TokenExplicitMaxTtl { get; set; }
 
+
         /// <summary>
-        /// If true, the &#39;default&#39; policy will not automatically be added to generated tokens
+        /// If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens
         /// </summary>
-        /// <value>If true, the &#39;default&#39; policy will not automatically be added to generated tokens</value>
+        /// <value>If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens</value>
         [DataMember(Name = "token_no_default_policy", EmitDefaultValue = true)]
+
         public bool TokenNoDefaultPolicy { get; set; }
+
 
         /// <summary>
         /// The maximum number of times a token may be used, a value of zero means unlimited
         /// </summary>
         /// <value>The maximum number of times a token may be used, a value of zero means unlimited</value>
         [DataMember(Name = "token_num_uses", EmitDefaultValue = false)]
+
         public int TokenNumUses { get; set; }
+
 
         /// <summary>
         /// If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
+
         public int TokenPeriod { get; set; }
+
 
         /// <summary>
         /// The type of token to generate, service or batch
         /// </summary>
         /// <value>The type of token to generate, service or batch</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
+
         public string TokenType { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -289,23 +363,28 @@ namespace Vault.Model
                 ) &&
                 (
                     this.ExplicitMaxTtl == input.ExplicitMaxTtl ||
+
                     this.ExplicitMaxTtl.Equals(input.ExplicitMaxTtl)
                 ) &&
                 (
                     this.Orphan == input.Orphan ||
+
                     this.Orphan.Equals(input.Orphan)
                 ) &&
                 (
                     this.PathSuffix == input.PathSuffix ||
                     (this.PathSuffix != null &&
                     this.PathSuffix.Equals(input.PathSuffix))
+
                 ) &&
                 (
                     this.Period == input.Period ||
+
                     this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.Renewable == input.Renewable ||
+
                     this.Renewable.Equals(input.Renewable)
                 ) &&
                 (
@@ -316,25 +395,31 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
+
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
                 ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
+
                     this.TokenNumUses.Equals(input.TokenNumUses)
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+
                     this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
+
                 );
+
         }
 
         /// <summary>
@@ -346,50 +431,68 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AllowedEntityAliases != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedEntityAliases.GetHashCode();
                 }
+
                 if (this.AllowedPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedPolicies.GetHashCode();
                 }
+
                 if (this.AllowedPoliciesGlob != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedPoliciesGlob.GetHashCode();
                 }
+
                 if (this.BoundCidrs != null)
                 {
                     hashCode = (hashCode * 59) + this.BoundCidrs.GetHashCode();
                 }
+
                 if (this.DisallowedPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.DisallowedPolicies.GetHashCode();
                 }
+
                 if (this.DisallowedPoliciesGlob != null)
                 {
                     hashCode = (hashCode * 59) + this.DisallowedPoliciesGlob.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.ExplicitMaxTtl.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.Orphan.GetHashCode();
                 if (this.PathSuffix != null)
                 {
                     hashCode = (hashCode * 59) + this.PathSuffix.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Period.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.Renewable.GetHashCode();
                 if (this.TokenBoundCidrs != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

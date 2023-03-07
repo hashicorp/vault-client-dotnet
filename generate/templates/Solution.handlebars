@@ -1,12 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio {{^netStandard}}2012{{/netStandard}}{{#netStandard}}14{{/netStandard}}
-VisualStudioVersion = {{^netStandard}}12.0.0.0{{/netStandard}}{{#netStandard}}14.0.25420.1{{/netStandard}}
-MinimumVisualStudioVersion = {{^netStandard}}10.0.0.1{{/netStandard}}{{#netStandard}}10.0.40219.1{{/netStandard}}
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "{{packageName}}", "src\{{packageName}}\{{packageName}}.csproj", "{{packageGuid}}"
+# Visual Studio {{#unless netStandard}}2012{{/unless}}{{#with netStandard}}14{{/with}}
+VisualStudioVersion = {{#unless netStandard}}12.0.0.0{{/unless}}{{#with netStandard}}14.0.25420.1{{/with}}
+MinimumVisualStudioVersion = {{#unless netStandard}}10.0.0.1{{/unless}}{{#with netStandard}}10.0.40219.1{{/with}}
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "{{packageName}}", "src/{{packageName}}/{{packageName}}.csproj", "{{packageGuid}}"
 EndProject
-{{^excludeTests}}Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "{{testPackageName}}", "src\{{testPackageName}}\{{testPackageName}}.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
+{{#unless excludeTests}}Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "{{testPackageName}}", "src/{{testPackageName}}/{{testPackageName}}.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
-{{/excludeTests}}Global
+{{/unless}}Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

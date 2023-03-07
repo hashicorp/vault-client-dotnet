@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,7 +21,6 @@ namespace Vault.Client
     /// </summary>
     public static class ClientUtils
     {
-
         /// <summary>
         /// Clones the given HttpRequestMessage and returns a new copy of Http request
         /// </summary>

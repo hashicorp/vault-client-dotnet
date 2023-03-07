@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "OIDCRotateKeyRequest")]
     public partial class OIDCRotateKeyRequest : IEquatable<OIDCRotateKeyRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCRotateKeyRequest" /> class.
         /// </summary>
-        /// <param name="verificationTtl">Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key..</param>
-        public OIDCRotateKeyRequest(int verificationTtl = default(int))
+
+        /// <param name="VerificationTtl">Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key..</param>
+
+
+        public OIDCRotateKeyRequest(int VerificationTtl = default(int))
         {
-            this.VerificationTtl = verificationTtl;
+
+            this.VerificationTtl = VerificationTtl;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key.</value>
         [DataMember(Name = "verification_ttl", EmitDefaultValue = false)]
+
         public int VerificationTtl { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.VerificationTtl == input.VerificationTtl ||
+
                     this.VerificationTtl.Equals(input.VerificationTtl)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.VerificationTtl.GetHashCode();
                 return hashCode;
             }

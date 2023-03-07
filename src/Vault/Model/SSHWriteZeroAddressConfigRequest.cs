@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "SSHWriteZeroAddressConfigRequest")]
     public partial class SSHWriteZeroAddressConfigRequest : IEquatable<SSHWriteZeroAddressConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SSHWriteZeroAddressConfigRequest" /> class.
         /// </summary>
-        /// <param name="roles">[Required] Comma separated list of role names which allows credentials to be requested for any IP address. CIDR blocks previously registered under these roles will be ignored..</param>
-        public SSHWriteZeroAddressConfigRequest(List<string> roles = default(List<string>))
+
+        /// <param name="Roles">[Required] Comma separated list of role names which allows credentials to be requested for any IP address. CIDR blocks previously registered under these roles will be ignored..</param>
+
+
+        public SSHWriteZeroAddressConfigRequest(List<string> Roles = default(List<string>))
         {
-            this.Roles = roles;
+
+            this.Roles = Roles;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Required] Comma separated list of role names which allows credentials to be requested for any IP address. CIDR blocks previously registered under these roles will be ignored.</value>
         [DataMember(Name = "roles", EmitDefaultValue = false)]
+
         public List<string> Roles { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +105,7 @@ namespace Vault.Model
                     input.Roles != null &&
                     this.Roles.SequenceEqual(input.Roles)
                 );
+
         }
 
         /// <summary>
@@ -104,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Roles != null)
                 {
                     hashCode = (hashCode * 59) + this.Roles.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

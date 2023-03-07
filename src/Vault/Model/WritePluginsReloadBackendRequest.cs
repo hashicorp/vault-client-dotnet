@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "WritePluginsReloadBackendRequest")]
     public partial class WritePluginsReloadBackendRequest : IEquatable<WritePluginsReloadBackendRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WritePluginsReloadBackendRequest" /> class.
         /// </summary>
-        /// <param name="mounts">The mount paths of the plugin backends to reload..</param>
-        /// <param name="plugin">The name of the plugin to reload, as registered in the plugin catalog..</param>
-        /// <param name="scope">scope.</param>
-        public WritePluginsReloadBackendRequest(List<string> mounts = default(List<string>), string plugin = default(string), string scope = default(string))
+
+        /// <param name="Mounts">The mount paths of the plugin backends to reload..</param>
+
+        /// <param name="Plugin">The name of the plugin to reload, as registered in the plugin catalog..</param>
+
+        /// <param name="Scope">Scope.</param>
+
+
+        public WritePluginsReloadBackendRequest(List<string> Mounts = default(List<string>), string Plugin = default(string), string Scope = default(string))
         {
-            this.Mounts = mounts;
-            this.Plugin = plugin;
-            this.Scope = scope;
+
+            this.Mounts = Mounts;
+
+            this.Plugin = Plugin;
+
+            this.Scope = Scope;
+
         }
 
         /// <summary>
@@ -45,20 +57,28 @@ namespace Vault.Model
         /// </summary>
         /// <value>The mount paths of the plugin backends to reload.</value>
         [DataMember(Name = "mounts", EmitDefaultValue = false)]
+
         public List<string> Mounts { get; set; }
+
 
         /// <summary>
         /// The name of the plugin to reload, as registered in the plugin catalog.
         /// </summary>
         /// <value>The name of the plugin to reload, as registered in the plugin catalog.</value>
         [DataMember(Name = "plugin", EmitDefaultValue = false)]
+
         public string Plugin { get; set; }
+
 
         /// <summary>
         /// Gets or Sets Scope
         /// </summary>
         [DataMember(Name = "scope", EmitDefaultValue = false)]
+
         public string Scope { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -116,12 +136,15 @@ namespace Vault.Model
                     this.Plugin == input.Plugin ||
                     (this.Plugin != null &&
                     this.Plugin.Equals(input.Plugin))
+
                 ) &&
                 (
                     this.Scope == input.Scope ||
                     (this.Scope != null &&
                     this.Scope.Equals(input.Scope))
+
                 );
+
         }
 
         /// <summary>
@@ -133,18 +156,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Mounts != null)
                 {
                     hashCode = (hashCode * 59) + this.Mounts.GetHashCode();
                 }
+
                 if (this.Plugin != null)
                 {
                     hashCode = (hashCode * 59) + this.Plugin.GetHashCode();
                 }
+
                 if (this.Scope != null)
                 {
                     hashCode = (hashCode * 59) + this.Scope.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

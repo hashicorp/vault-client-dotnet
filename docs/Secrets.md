@@ -39,7 +39,7 @@ Method | HTTP request | Description
 [**AliCloudDeleteRole**](Secrets.md#aliclouddeleterole) | **DELETE** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
 [**AliCloudListRoles**](Secrets.md#alicloudlistroles) | **GET** /{alicloud_mount_path}/role | List the existing roles in this backend.
 [**AliCloudReadConfig**](Secrets.md#alicloudreadconfig) | **GET** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
-[**AliCloudReadCredentials**](Secrets.md#alicloudreadcredentials) | **GET** /{alicloud_mount_path}/creds/{name} | Generate an API key or STS credential using the given role&#39;s configuration.&#39;
+[**AliCloudReadCredentials**](Secrets.md#alicloudreadcredentials) | **GET** /{alicloud_mount_path}/creds/{name} | Generate an API key or STS credential using the given role&#x27;s configuration.&#x27;
 [**AliCloudReadRole**](Secrets.md#alicloudreadrole) | **GET** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
 [**AliCloudWriteConfig**](Secrets.md#alicloudwriteconfig) | **POST** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
 [**AliCloudWriteRole**](Secrets.md#alicloudwriterole) | **POST** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
@@ -304,13 +304,13 @@ Method | HTTP request | Description
 [**RabbitMQWriteRole**](Secrets.md#rabbitmqwriterole) | **POST** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
 [**SSHDeleteCAConfig**](Secrets.md#sshdeletecaconfig) | **DELETE** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
 [**SSHDeleteKeys**](Secrets.md#sshdeletekeys) | **DELETE** /{ssh_mount_path}/keys/{key_name} | Register a shared private key with Vault.
-[**SSHDeleteRole**](Secrets.md#sshdeleterole) | **DELETE** /{ssh_mount_path}/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
+[**SSHDeleteRole**](Secrets.md#sshdeleterole) | **DELETE** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
 [**SSHDeleteZeroAddressConfig**](Secrets.md#sshdeletezeroaddressconfig) | **DELETE** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**SSHListRoles**](Secrets.md#sshlistroles) | **GET** /{ssh_mount_path}/roles | Manage the &#39;roles&#39; that can be created with this backend.
+[**SSHListRoles**](Secrets.md#sshlistroles) | **GET** /{ssh_mount_path}/roles | Manage the &#x27;roles&#x27; that can be created with this backend.
 [**SSHLookup**](Secrets.md#sshlookup) | **POST** /{ssh_mount_path}/lookup | List all the roles associated with the given IP address.
 [**SSHReadCAConfig**](Secrets.md#sshreadcaconfig) | **GET** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
 [**SSHReadPublicKey**](Secrets.md#sshreadpublickey) | **GET** /{ssh_mount_path}/public_key | Retrieve the public key.
-[**SSHReadRole**](Secrets.md#sshreadrole) | **GET** /{ssh_mount_path}/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
+[**SSHReadRole**](Secrets.md#sshreadrole) | **GET** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
 [**SSHReadZeroAddressConfig**](Secrets.md#sshreadzeroaddressconfig) | **GET** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
 [**SSHSign**](Secrets.md#sshsign) | **POST** /{ssh_mount_path}/sign/{role} | Request signing an SSH key using a certain role with the provided details.
 [**SSHVerify**](Secrets.md#sshverify) | **POST** /{ssh_mount_path}/verify | Validate the OTP provided by Vault SSH Agent.
@@ -318,7 +318,7 @@ Method | HTTP request | Description
 [**SSHWriteCredentials**](Secrets.md#sshwritecredentials) | **POST** /{ssh_mount_path}/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
 [**SSHWriteIssue**](Secrets.md#sshwriteissue) | **POST** /{ssh_mount_path}/issue/{role} | 
 [**SSHWriteKeys**](Secrets.md#sshwritekeys) | **POST** /{ssh_mount_path}/keys/{key_name} | Register a shared private key with Vault.
-[**SSHWriteRole**](Secrets.md#sshwriterole) | **POST** /{ssh_mount_path}/roles/{role} | Manage the &#39;roles&#39; that can be created with this backend.
+[**SSHWriteRole**](Secrets.md#sshwriterole) | **POST** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
 [**SSHWriteZeroAddressConfig**](Secrets.md#sshwritezeroaddressconfig) | **POST** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
 [**TOTPDeleteKey**](Secrets.md#totpdeletekey) | **DELETE** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
 [**TOTPListKeys**](Secrets.md#totplistkeys) | **GET** /{totp_mount_path}/keys | Manage the keys that can be created with this backend.
@@ -373,6 +373,8 @@ Method | HTTP request | Description
 [**TransitWriteRandomUrlbytes**](Secrets.md#transitwriterandomurlbytes) | **POST** /{transit_mount_path}/random/{urlbytes} | Generate random bytes
 
 
+
+
 <a name="awsconfigreadlease"></a>
 # **AWSConfigReadLease**
 
@@ -384,7 +386,9 @@ Configure the default lease information for generated credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -397,15 +401,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Configure the default lease information for generated credentials.
+                
 
                 apiInstance.AWSConfigReadLease(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -425,6 +440,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -439,12 +455,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsconfigreadrootiamcredentials"></a>
 # **AWSConfigReadRootIAMCredentials**
@@ -457,7 +478,9 @@ Configure the root credentials that are used to manage IAM.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -470,15 +493,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Configure the root credentials that are used to manage IAM.
+                
 
                 apiInstance.AWSConfigReadRootIAMCredentials(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -498,6 +532,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -512,12 +547,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsconfigrotaterootiamcredentials"></a>
 # **AWSConfigRotateRootIAMCredentials**
@@ -530,7 +570,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -543,14 +585,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.AWSConfigRotateRootIAMCredentials(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -570,6 +622,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -584,12 +637,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsconfigwritelease"></a>
 # **AWSConfigWriteLease**
@@ -602,7 +660,9 @@ Configure the default lease information for generated credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -615,16 +675,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var aWSConfigWriteLeaseRequest = new AWSConfigWriteLeaseRequest(); // AWSConfigWriteLeaseRequest | 
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Configure the default lease information for generated credentials.
+                
 
                 apiInstance.AWSConfigWriteLease(AWSConfigWriteLeaseRequest aWSConfigWriteLeaseRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -645,6 +720,7 @@ Name | Type | Description  | Notes
  **aWSConfigWriteLeaseRequest** | [**AWSConfigWriteLeaseRequest**](AWSConfigWriteLeaseRequest.md)|  | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -655,16 +731,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsconfigwriterootiamcredentials"></a>
 # **AWSConfigWriteRootIAMCredentials**
@@ -677,7 +758,9 @@ Configure the root credentials that are used to manage IAM.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -690,16 +773,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var aWSConfigWriteRootIAMCredentialsRequest = new AWSConfigWriteRootIAMCredentialsRequest(); // AWSConfigWriteRootIAMCredentialsRequest | 
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Configure the root credentials that are used to manage IAM.
+                
 
                 apiInstance.AWSConfigWriteRootIAMCredentials(AWSConfigWriteRootIAMCredentialsRequest aWSConfigWriteRootIAMCredentialsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -720,6 +818,7 @@ Name | Type | Description  | Notes
  **aWSConfigWriteRootIAMCredentialsRequest** | [**AWSConfigWriteRootIAMCredentialsRequest**](AWSConfigWriteRootIAMCredentialsRequest.md)|  | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -730,16 +829,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsdeleterole"></a>
 # **AWSDeleteRole**
@@ -752,7 +856,9 @@ Read, write and reference IAM policies that access keys can be made for.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -765,16 +871,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the policy
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Read, write and reference IAM policies that access keys can be made for.
+                
 
                 apiInstance.AWSDeleteRole(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -795,6 +916,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the policy | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -809,12 +931,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awslistroles"></a>
 # **AWSListRoles**
@@ -827,7 +954,9 @@ List the existing roles in this backend
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -840,16 +969,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // List the existing roles in this backend
+                
 
                 apiInstance.AWSListRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -870,6 +1014,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -884,12 +1029,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsreadcredentials"></a>
 # **AWSReadCredentials**
@@ -902,7 +1052,9 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -915,15 +1067,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Generate AWS credentials from a specific Vault role.
+                
 
                 apiInstance.AWSReadCredentials(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -943,6 +1106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -957,12 +1121,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsreadrole"></a>
 # **AWSReadRole**
@@ -975,7 +1144,9 @@ Read, write and reference IAM policies that access keys can be made for.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -988,16 +1159,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the policy
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Read, write and reference IAM policies that access keys can be made for.
+                
 
                 apiInstance.AWSReadRole(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -1018,6 +1204,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the policy | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1032,12 +1219,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awsreadsecuritytokenservice"></a>
 # **AWSReadSecurityTokenService**
@@ -1050,7 +1242,9 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1063,16 +1257,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Generate AWS credentials from a specific Vault role.
+                
 
                 apiInstance.AWSReadSecurityTokenService(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -1093,6 +1302,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1107,12 +1317,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awswritecredentials"></a>
 # **AWSWriteCredentials**
@@ -1125,7 +1340,9 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1138,16 +1355,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var aWSWriteCredentialsRequest = new AWSWriteCredentialsRequest(); // AWSWriteCredentialsRequest | 
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Generate AWS credentials from a specific Vault role.
+                
 
                 apiInstance.AWSWriteCredentials(AWSWriteCredentialsRequest aWSWriteCredentialsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -1168,6 +1400,7 @@ Name | Type | Description  | Notes
  **aWSWriteCredentialsRequest** | [**AWSWriteCredentialsRequest**](AWSWriteCredentialsRequest.md)|  | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1178,16 +1411,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awswriterole"></a>
 # **AWSWriteRole**
@@ -1200,7 +1438,9 @@ Read, write and reference IAM policies that access keys can be made for.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1213,17 +1453,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the policy
+            
+            
+            
+            
+            
             var aWSWriteRoleRequest = new AWSWriteRoleRequest(); // AWSWriteRoleRequest | 
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Read, write and reference IAM policies that access keys can be made for.
+                
 
                 apiInstance.AWSWriteRole(string name, AWSWriteRoleRequest aWSWriteRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -1245,6 +1504,7 @@ Name | Type | Description  | Notes
  **aWSWriteRoleRequest** | [**AWSWriteRoleRequest**](AWSWriteRoleRequest.md)|  | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1255,16 +1515,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="awswritesecuritytokenservice"></a>
 # **AWSWriteSecurityTokenService**
@@ -1277,7 +1542,9 @@ Generate AWS credentials from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1290,17 +1557,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var aWSWriteSecurityTokenServiceRequest = new AWSWriteSecurityTokenServiceRequest(); // AWSWriteSecurityTokenServiceRequest | 
+            
+            
+            
             var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            
+            
+            
 
             try
             {
+                
                 // Generate AWS credentials from a specific Vault role.
+                
 
                 apiInstance.AWSWriteSecurityTokenService(string name, AWSWriteSecurityTokenServiceRequest aWSWriteSecurityTokenServiceRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
@@ -1322,6 +1608,7 @@ Name | Type | Description  | Notes
  **aWSWriteSecurityTokenServiceRequest** | [**AWSWriteSecurityTokenServiceRequest**](AWSWriteSecurityTokenServiceRequest.md)|  | 
  **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1332,16 +1619,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorycheckinlibrary"></a>
 # **ActiveDirectoryCheckInLibrary**
@@ -1354,7 +1646,9 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1367,17 +1661,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var activeDirectoryCheckInLibraryRequest = new ActiveDirectoryCheckInLibraryRequest(); // ActiveDirectoryCheckInLibraryRequest | 
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Check service accounts in to the library.
+                
 
                 apiInstance.ActiveDirectoryCheckInLibrary(string name, ActiveDirectoryCheckInLibraryRequest activeDirectoryCheckInLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1399,6 +1712,7 @@ Name | Type | Description  | Notes
  **activeDirectoryCheckInLibraryRequest** | [**ActiveDirectoryCheckInLibraryRequest**](ActiveDirectoryCheckInLibraryRequest.md)|  | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1409,16 +1723,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorycheckinmanagelibrary"></a>
 # **ActiveDirectoryCheckInManageLibrary**
@@ -1431,7 +1750,9 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1444,17 +1765,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var activeDirectoryCheckInManageLibraryRequest = new ActiveDirectoryCheckInManageLibraryRequest(); // ActiveDirectoryCheckInManageLibraryRequest | 
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Check service accounts in to the library.
+                
 
                 apiInstance.ActiveDirectoryCheckInManageLibrary(string name, ActiveDirectoryCheckInManageLibraryRequest activeDirectoryCheckInManageLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1476,6 +1816,7 @@ Name | Type | Description  | Notes
  **activeDirectoryCheckInManageLibraryRequest** | [**ActiveDirectoryCheckInManageLibraryRequest**](ActiveDirectoryCheckInManageLibraryRequest.md)|  | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1486,16 +1827,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorycheckoutlibrary"></a>
 # **ActiveDirectoryCheckOutLibrary**
@@ -1508,7 +1854,9 @@ Check a service account out from the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1521,17 +1869,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set
+            
+            
+            
+            
+            
             var activeDirectoryCheckOutLibraryRequest = new ActiveDirectoryCheckOutLibraryRequest(); // ActiveDirectoryCheckOutLibraryRequest | 
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Check a service account out from the library.
+                
 
                 apiInstance.ActiveDirectoryCheckOutLibrary(string name, ActiveDirectoryCheckOutLibraryRequest activeDirectoryCheckOutLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1553,6 +1920,7 @@ Name | Type | Description  | Notes
  **activeDirectoryCheckOutLibraryRequest** | [**ActiveDirectoryCheckOutLibraryRequest**](ActiveDirectoryCheckOutLibraryRequest.md)|  | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1563,16 +1931,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorydeleteconfig"></a>
 # **ActiveDirectoryDeleteConfig**
@@ -1585,7 +1958,9 @@ Configure the AD server to connect to, along with password options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1598,15 +1973,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Configure the AD server to connect to, along with password options.
+                
 
                 apiInstance.ActiveDirectoryDeleteConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1626,6 +2012,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1640,12 +2027,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorydeletelibrary"></a>
 # **ActiveDirectoryDeleteLibrary**
@@ -1658,7 +2050,9 @@ Delete a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1671,16 +2065,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Delete a library set.
+                
 
                 apiInstance.ActiveDirectoryDeleteLibrary(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1701,6 +2110,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1715,12 +2125,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorydeleterole"></a>
 # **ActiveDirectoryDeleteRole**
@@ -1733,7 +2148,9 @@ Manage roles to build links between Vault and Active Directory service accounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1746,16 +2163,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Manage roles to build links between Vault and Active Directory service accounts.
+                
 
                 apiInstance.ActiveDirectoryDeleteRole(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1776,6 +2208,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1790,12 +2223,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorylistlibraries"></a>
 # **ActiveDirectoryListLibraries**
@@ -1808,7 +2246,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1821,15 +2261,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ActiveDirectoryListLibraries(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1850,6 +2304,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1864,12 +2319,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorylistroles"></a>
 # **ActiveDirectoryListRoles**
@@ -1882,7 +2342,9 @@ List the name of each role currently stored.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1895,16 +2357,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // List the name of each role currently stored.
+                
 
                 apiInstance.ActiveDirectoryListRoles(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1925,6 +2402,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -1939,12 +2417,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryreadconfig"></a>
 # **ActiveDirectoryReadConfig**
@@ -1957,7 +2440,9 @@ Configure the AD server to connect to, along with password options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -1970,15 +2455,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Configure the AD server to connect to, along with password options.
+                
 
                 apiInstance.ActiveDirectoryReadConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -1998,6 +2494,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2012,12 +2509,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryreadcredentials"></a>
 # **ActiveDirectoryReadCredentials**
@@ -2030,7 +2532,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2043,15 +2547,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ActiveDirectoryReadCredentials(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2072,6 +2590,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2086,12 +2605,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryreadlibrary"></a>
 # **ActiveDirectoryReadLibrary**
@@ -2104,7 +2628,9 @@ Read a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2117,16 +2643,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Read a library set.
+                
 
                 apiInstance.ActiveDirectoryReadLibrary(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2147,6 +2688,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2161,12 +2703,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryreadlibrarystatus"></a>
 # **ActiveDirectoryReadLibraryStatus**
@@ -2179,7 +2726,9 @@ Check the status of the service accounts in a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2192,16 +2741,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Check the status of the service accounts in a library set.
+                
 
                 apiInstance.ActiveDirectoryReadLibraryStatus(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2222,6 +2786,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2236,12 +2801,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryreadrole"></a>
 # **ActiveDirectoryReadRole**
@@ -2254,7 +2824,9 @@ Manage roles to build links between Vault and Active Directory service accounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2267,16 +2839,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Manage roles to build links between Vault and Active Directory service accounts.
+                
 
                 apiInstance.ActiveDirectoryReadRole(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2297,6 +2884,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2311,12 +2899,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryrotaterole"></a>
 # **ActiveDirectoryRotateRole**
@@ -2329,7 +2922,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2342,15 +2937,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ActiveDirectoryRotateRole(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2371,6 +2980,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2385,12 +2995,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectoryrotateroot"></a>
 # **ActiveDirectoryRotateRoot**
@@ -2403,7 +3018,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2416,14 +3033,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ActiveDirectoryRotateRoot(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2443,6 +3070,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2457,12 +3085,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorywriteconfig"></a>
 # **ActiveDirectoryWriteConfig**
@@ -2475,7 +3108,9 @@ Configure the AD server to connect to, along with password options.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2488,16 +3123,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var activeDirectoryWriteConfigRequest = new ActiveDirectoryWriteConfigRequest(); // ActiveDirectoryWriteConfigRequest | 
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Configure the AD server to connect to, along with password options.
+                
 
                 apiInstance.ActiveDirectoryWriteConfig(ActiveDirectoryWriteConfigRequest activeDirectoryWriteConfigRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2518,6 +3168,7 @@ Name | Type | Description  | Notes
  **activeDirectoryWriteConfigRequest** | [**ActiveDirectoryWriteConfigRequest**](ActiveDirectoryWriteConfigRequest.md)|  | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2528,16 +3179,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorywritelibrary"></a>
 # **ActiveDirectoryWriteLibrary**
@@ -2550,7 +3206,9 @@ Update a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2563,17 +3221,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var activeDirectoryWriteLibraryRequest = new ActiveDirectoryWriteLibraryRequest(); // ActiveDirectoryWriteLibraryRequest | 
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Update a library set.
+                
 
                 apiInstance.ActiveDirectoryWriteLibrary(string name, ActiveDirectoryWriteLibraryRequest activeDirectoryWriteLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2595,6 +3272,7 @@ Name | Type | Description  | Notes
  **activeDirectoryWriteLibraryRequest** | [**ActiveDirectoryWriteLibraryRequest**](ActiveDirectoryWriteLibraryRequest.md)|  | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2605,16 +3283,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="activedirectorywriterole"></a>
 # **ActiveDirectoryWriteRole**
@@ -2627,7 +3310,9 @@ Manage roles to build links between Vault and Active Directory service accounts.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2640,17 +3325,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var activeDirectoryWriteRoleRequest = new ActiveDirectoryWriteRoleRequest(); // ActiveDirectoryWriteRoleRequest | 
+            
+            
+            
             var adMountPath = "\"ad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ad")
+            
+            
+            
 
             try
             {
+                
                 // Manage roles to build links between Vault and Active Directory service accounts.
+                
 
                 apiInstance.ActiveDirectoryWriteRole(string name, ActiveDirectoryWriteRoleRequest activeDirectoryWriteRoleRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
@@ -2672,6 +3376,7 @@ Name | Type | Description  | Notes
  **activeDirectoryWriteRoleRequest** | [**ActiveDirectoryWriteRoleRequest**](ActiveDirectoryWriteRoleRequest.md)|  | 
  **adMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2682,16 +3387,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="aliclouddeleteconfig"></a>
 # **AliCloudDeleteConfig**
@@ -2704,7 +3414,9 @@ Configure the access key and secret to use for RAM and STS calls.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2717,15 +3429,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Configure the access key and secret to use for RAM and STS calls.
+                
 
                 apiInstance.AliCloudDeleteConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -2745,6 +3468,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2759,12 +3483,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="aliclouddeleterole"></a>
 # **AliCloudDeleteRole**
@@ -2777,7 +3506,9 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2790,16 +3521,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The name of the role.
+            
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Read, write and reference policies and roles that API keys or STS credentials can be made for.
+                
 
                 apiInstance.AliCloudDeleteRole(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -2820,6 +3566,7 @@ Name | Type | Description  | Notes
  **name** | **string**| The name of the role. | 
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2834,12 +3581,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="alicloudlistroles"></a>
 # **AliCloudListRoles**
@@ -2852,7 +3604,9 @@ List the existing roles in this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2865,16 +3619,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // List the existing roles in this backend.
+                
 
                 apiInstance.AliCloudListRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -2895,6 +3664,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2909,12 +3679,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="alicloudreadconfig"></a>
 # **AliCloudReadConfig**
@@ -2927,7 +3702,9 @@ Configure the access key and secret to use for RAM and STS calls.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -2940,15 +3717,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Configure the access key and secret to use for RAM and STS calls.
+                
 
                 apiInstance.AliCloudReadConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -2968,6 +3756,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -2982,12 +3771,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="alicloudreadcredentials"></a>
 # **AliCloudReadCredentials**
@@ -3000,7 +3794,9 @@ Generate an API key or STS credential using the given role's configuration.'
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3013,16 +3809,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The name of the role.
+            
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Generate an API key or STS credential using the given role's configuration.'
+                
 
                 apiInstance.AliCloudReadCredentials(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -3043,6 +3854,7 @@ Name | Type | Description  | Notes
  **name** | **string**| The name of the role. | 
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3057,12 +3869,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="alicloudreadrole"></a>
 # **AliCloudReadRole**
@@ -3075,7 +3892,9 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3088,16 +3907,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The name of the role.
+            
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Read, write and reference policies and roles that API keys or STS credentials can be made for.
+                
 
                 apiInstance.AliCloudReadRole(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -3118,6 +3952,7 @@ Name | Type | Description  | Notes
  **name** | **string**| The name of the role. | 
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3132,12 +3967,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="alicloudwriteconfig"></a>
 # **AliCloudWriteConfig**
@@ -3150,7 +3990,9 @@ Configure the access key and secret to use for RAM and STS calls.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3163,16 +4005,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var aliCloudWriteConfigRequest = new AliCloudWriteConfigRequest(); // AliCloudWriteConfigRequest | 
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Configure the access key and secret to use for RAM and STS calls.
+                
 
                 apiInstance.AliCloudWriteConfig(AliCloudWriteConfigRequest aliCloudWriteConfigRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -3193,6 +4050,7 @@ Name | Type | Description  | Notes
  **aliCloudWriteConfigRequest** | [**AliCloudWriteConfigRequest**](AliCloudWriteConfigRequest.md)|  | 
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3203,16 +4061,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="alicloudwriterole"></a>
 # **AliCloudWriteRole**
@@ -3225,7 +4088,9 @@ Read, write and reference policies and roles that API keys or STS credentials ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3238,17 +4103,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The name of the role.
+            
+            
+            
+            
+            
             var aliCloudWriteRoleRequest = new AliCloudWriteRoleRequest(); // AliCloudWriteRoleRequest | 
+            
+            
+            
             var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+            
+            
+            
 
             try
             {
+                
                 // Read, write and reference policies and roles that API keys or STS credentials can be made for.
+                
 
                 apiInstance.AliCloudWriteRole(string name, AliCloudWriteRoleRequest aliCloudWriteRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
@@ -3270,6 +4154,7 @@ Name | Type | Description  | Notes
  **aliCloudWriteRoleRequest** | [**AliCloudWriteRoleRequest**](AliCloudWriteRoleRequest.md)|  | 
  **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3280,16 +4165,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azuredeleteconfig"></a>
 # **AzureDeleteConfig**
@@ -3302,7 +4192,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3315,14 +4207,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.AzureDeleteConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3342,6 +4244,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3356,12 +4259,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azuredeleterole"></a>
 # **AzureDeleteRole**
@@ -3374,7 +4282,9 @@ Manage the Vault roles used to generate Azure credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3387,16 +4297,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
                 // Manage the Vault roles used to generate Azure credentials.
+                
 
                 apiInstance.AzureDeleteRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3417,6 +4342,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3431,12 +4357,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurelistroles"></a>
 # **AzureListRoles**
@@ -3449,7 +4380,9 @@ List existing roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3462,16 +4395,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
                 // List existing roles.
+                
 
                 apiInstance.AzureListRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3492,6 +4440,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3506,12 +4455,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurereadconfig"></a>
 # **AzureReadConfig**
@@ -3524,7 +4478,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3537,14 +4493,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.AzureReadConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3564,6 +4530,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3578,12 +4545,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurereadcredentials"></a>
 # **AzureReadCredentials**
@@ -3596,7 +4568,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3609,15 +4583,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | Name of the Vault role
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.AzureReadCredentials(string role, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3638,6 +4626,7 @@ Name | Type | Description  | Notes
  **role** | **string**| Name of the Vault role | 
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3652,12 +4641,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurereadrole"></a>
 # **AzureReadRole**
@@ -3670,7 +4664,9 @@ Manage the Vault roles used to generate Azure credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3683,16 +4679,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
                 // Manage the Vault roles used to generate Azure credentials.
+                
 
                 apiInstance.AzureReadRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3713,6 +4724,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3727,12 +4739,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurerotateroot"></a>
 # **AzureRotateRoot**
@@ -3745,7 +4762,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3758,14 +4777,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.AzureRotateRoot(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3785,6 +4814,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3799,12 +4829,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurewriteconfig"></a>
 # **AzureWriteConfig**
@@ -3817,7 +4852,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3830,15 +4867,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var azureWriteConfigRequest = new AzureWriteConfigRequest(); // AzureWriteConfigRequest | 
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.AzureWriteConfig(AzureWriteConfigRequest azureWriteConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3859,6 +4910,7 @@ Name | Type | Description  | Notes
  **azureWriteConfigRequest** | [**AzureWriteConfigRequest**](AzureWriteConfigRequest.md)|  | 
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3869,16 +4921,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="azurewriterole"></a>
 # **AzureWriteRole**
@@ -3891,7 +4948,9 @@ Manage the Vault roles used to generate Azure credentials.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3904,17 +4963,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
+            
             var azureWriteRoleRequest = new AzureWriteRoleRequest(); // AzureWriteRoleRequest | 
+            
+            
+            
             var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+            
+            
+            
 
             try
             {
+                
                 // Manage the Vault roles used to generate Azure credentials.
+                
 
                 apiInstance.AzureWriteRole(string name, AzureWriteRoleRequest azureWriteRoleRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
@@ -3936,6 +5014,7 @@ Name | Type | Description  | Notes
  **azureWriteRoleRequest** | [**AzureWriteRoleRequest**](AzureWriteRoleRequest.md)|  | 
  **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -3946,16 +5025,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consuldeleterole"></a>
 # **ConsulDeleteRole**
@@ -3968,7 +5052,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -3981,15 +5067,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulDeleteRole(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4010,6 +5110,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4024,12 +5125,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consullistroles"></a>
 # **ConsulListRoles**
@@ -4042,7 +5148,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4055,15 +5163,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulListRoles(string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4084,6 +5206,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4098,12 +5221,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consulreadaccessconfig"></a>
 # **ConsulReadAccessConfig**
@@ -4116,7 +5244,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4129,14 +5259,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulReadAccessConfig(string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4156,6 +5296,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4170,12 +5311,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consulreadcredentials"></a>
 # **ConsulReadCredentials**
@@ -4188,7 +5334,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4201,15 +5349,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | Name of the role.
+            
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulReadCredentials(string role, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4230,6 +5392,7 @@ Name | Type | Description  | Notes
  **role** | **string**| Name of the role. | 
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4244,12 +5407,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consulreadrole"></a>
 # **ConsulReadRole**
@@ -4262,7 +5430,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4275,15 +5445,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulReadRole(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4304,6 +5488,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4318,12 +5503,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consulwriteaccessconfig"></a>
 # **ConsulWriteAccessConfig**
@@ -4336,7 +5526,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4349,15 +5541,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var consulWriteAccessConfigRequest = new ConsulWriteAccessConfigRequest(); // ConsulWriteAccessConfigRequest | 
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulWriteAccessConfig(ConsulWriteAccessConfigRequest consulWriteAccessConfigRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4378,6 +5584,7 @@ Name | Type | Description  | Notes
  **consulWriteAccessConfigRequest** | [**ConsulWriteAccessConfigRequest**](ConsulWriteAccessConfigRequest.md)|  | 
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4388,16 +5595,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="consulwriterole"></a>
 # **ConsulWriteRole**
@@ -4410,7 +5622,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4423,16 +5637,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
+            
             var consulWriteRoleRequest = new ConsulWriteRoleRequest(); // ConsulWriteRoleRequest | 
+            
+            
+            
             var consulMountPath = "\"consul\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "consul")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.ConsulWriteRole(string name, ConsulWriteRoleRequest consulWriteRoleRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
@@ -4454,6 +5686,7 @@ Name | Type | Description  | Notes
  **consulWriteRoleRequest** | [**ConsulWriteRoleRequest**](ConsulWriteRoleRequest.md)|  | 
  **consulMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;consul&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4464,16 +5697,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="cubbyholedelete"></a>
 # **CubbyholeDelete**
@@ -4486,7 +5724,9 @@ Deletes the secret at the specified location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4499,16 +5739,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Specifies the path of the secret.
+            
+            
+            
+            
             var cubbyholeMountPath = "\"cubbyhole\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cubbyhole")
+            
+            
+            
 
             try
             {
+                
                 // Deletes the secret at the specified location.
+                
 
                 apiInstance.CubbyholeDelete(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
             }
@@ -4529,6 +5784,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Specifies the path of the secret. | 
  **cubbyholeMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cubbyhole&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4543,12 +5799,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="cubbyholeread"></a>
 # **CubbyholeRead**
@@ -4561,7 +5822,9 @@ Retrieve the secret at the specified location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4574,17 +5837,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Specifies the path of the secret.
+            
+            
+            
+            
             var cubbyholeMountPath = "\"cubbyhole\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cubbyhole")
+            
+            
+            
+            
             var list = "list_example";  // string | Return a list if `true` (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Retrieve the secret at the specified location.
+                
 
                 apiInstance.CubbyholeRead(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null);
             }
@@ -4606,6 +5888,7 @@ Name | Type | Description  | Notes
  **cubbyholeMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cubbyhole&quot;]
  **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
+
 ### Return type
 
 void (empty response body)
@@ -4620,12 +5903,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="cubbyholewrite"></a>
 # **CubbyholeWrite**
@@ -4638,7 +5926,9 @@ Store a secret at the specified location.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4651,16 +5941,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Specifies the path of the secret.
+            
+            
+            
+            
             var cubbyholeMountPath = "\"cubbyhole\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cubbyhole")
+            
+            
+            
 
             try
             {
+                
                 // Store a secret at the specified location.
+                
 
                 apiInstance.CubbyholeWrite(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
             }
@@ -4681,6 +5986,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Specifies the path of the secret. | 
  **cubbyholeMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cubbyhole&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4695,12 +6001,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasedeleteconfig"></a>
 # **DatabaseDeleteConfig**
@@ -4713,7 +6024,9 @@ Configure connection details to a database plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4726,16 +6039,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of this database connection
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Configure connection details to a database plugin.
+                
 
                 apiInstance.DatabaseDeleteConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -4756,6 +6084,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of this database connection | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4770,12 +6099,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasedeleterole"></a>
 # **DatabaseDeleteRole**
@@ -4788,7 +6122,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4801,16 +6137,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseDeleteRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -4831,6 +6182,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4845,12 +6197,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasedeletestaticrole"></a>
 # **DatabaseDeleteStaticRole**
@@ -4863,7 +6220,9 @@ Manage the static roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4876,16 +6235,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the static roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseDeleteStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -4906,6 +6280,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4920,12 +6295,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databaselistconfig"></a>
 # **DatabaseListConfig**
@@ -4938,7 +6318,9 @@ Configure connection details to a database plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -4951,16 +6333,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Configure connection details to a database plugin.
+                
 
                 apiInstance.DatabaseListConfig(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -4981,6 +6378,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -4995,12 +6393,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databaselistroles"></a>
 # **DatabaseListRoles**
@@ -5013,7 +6416,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5026,16 +6431,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseListRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5056,6 +6476,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5070,12 +6491,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databaseliststaticroles"></a>
 # **DatabaseListStaticRoles**
@@ -5088,7 +6514,9 @@ Manage the static roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5101,16 +6529,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the static roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseListStaticRoles(string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5131,6 +6574,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5145,12 +6589,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasereadconfig"></a>
 # **DatabaseReadConfig**
@@ -5163,7 +6612,9 @@ Configure connection details to a database plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5176,16 +6627,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of this database connection
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Configure connection details to a database plugin.
+                
 
                 apiInstance.DatabaseReadConfig(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5206,6 +6672,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of this database connection | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5220,12 +6687,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasereadcredentials"></a>
 # **DatabaseReadCredentials**
@@ -5238,7 +6710,9 @@ Request database credentials for a certain role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5251,16 +6725,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Request database credentials for a certain role.
+                
 
                 apiInstance.DatabaseReadCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5281,6 +6770,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5295,12 +6785,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasereadrole"></a>
 # **DatabaseReadRole**
@@ -5313,7 +6808,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5326,16 +6823,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseReadRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5356,6 +6868,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5370,12 +6883,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasereadstaticcredentials"></a>
 # **DatabaseReadStaticCredentials**
@@ -5388,7 +6906,9 @@ Request database credentials for a certain static role. These credentials are ro
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5401,16 +6921,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role.
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Request database credentials for a certain static role. These credentials are rotated periodically.
+                
 
                 apiInstance.DatabaseReadStaticCredentials(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5431,6 +6966,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role. | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5445,12 +6981,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasereadstaticrole"></a>
 # **DatabaseReadStaticRole**
@@ -5463,7 +7004,9 @@ Manage the static roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5476,16 +7019,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the static roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseReadStaticRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5506,6 +7064,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5520,12 +7079,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasereset"></a>
 # **DatabaseReset**
@@ -5538,7 +7102,9 @@ Resets a database plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5551,16 +7117,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of this database connection
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Resets a database plugin.
+                
 
                 apiInstance.DatabaseReset(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5581,6 +7162,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of this database connection | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5595,12 +7177,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databaserotaterole"></a>
 # **DatabaseRotateRole**
@@ -5613,7 +7200,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5626,15 +7215,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.DatabaseRotateRole(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5655,6 +7258,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5669,12 +7273,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databaserotateroot"></a>
 # **DatabaseRotateRoot**
@@ -5687,7 +7296,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5700,15 +7311,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of this database connection
+            
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.DatabaseRotateRoot(string name, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5729,6 +7354,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of this database connection | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5743,12 +7369,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasewriteconfig"></a>
 # **DatabaseWriteConfig**
@@ -5761,7 +7392,9 @@ Configure connection details to a database plugin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5774,17 +7407,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of this database connection
+            
+            
+            
+            
+            
             var databaseWriteConfigRequest = new DatabaseWriteConfigRequest(); // DatabaseWriteConfigRequest | 
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Configure connection details to a database plugin.
+                
 
                 apiInstance.DatabaseWriteConfig(string name, DatabaseWriteConfigRequest databaseWriteConfigRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5806,6 +7458,7 @@ Name | Type | Description  | Notes
  **databaseWriteConfigRequest** | [**DatabaseWriteConfigRequest**](DatabaseWriteConfigRequest.md)|  | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5816,16 +7469,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasewriterole"></a>
 # **DatabaseWriteRole**
@@ -5838,7 +7496,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5851,17 +7511,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
+            
             var databaseWriteRoleRequest = new DatabaseWriteRoleRequest(); // DatabaseWriteRoleRequest | 
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseWriteRole(string name, DatabaseWriteRoleRequest databaseWriteRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5883,6 +7562,7 @@ Name | Type | Description  | Notes
  **databaseWriteRoleRequest** | [**DatabaseWriteRoleRequest**](DatabaseWriteRoleRequest.md)|  | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5893,16 +7573,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="databasewritestaticrole"></a>
 # **DatabaseWriteStaticRole**
@@ -5915,7 +7600,9 @@ Manage the static roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -5928,17 +7615,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
+            
             var databaseWriteStaticRoleRequest = new DatabaseWriteStaticRoleRequest(); // DatabaseWriteStaticRoleRequest | 
+            
+            
+            
             var databaseMountPath = "\"database\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "database")
+            
+            
+            
 
             try
             {
+                
                 // Manage the static roles that can be created with this backend.
+                
 
                 apiInstance.DatabaseWriteStaticRole(string name, DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest, string databaseMountPath = "database", TimeSpan? wrapTTL = null);
             }
@@ -5960,6 +7666,7 @@ Name | Type | Description  | Notes
  **databaseWriteStaticRoleRequest** | [**DatabaseWriteStaticRoleRequest**](DatabaseWriteStaticRoleRequest.md)|  | 
  **databaseMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;database&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -5970,16 +7677,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googleclouddeleteroleset"></a>
 # **GoogleCloudDeleteRoleset**
@@ -5992,7 +7704,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6005,15 +7719,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the role.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudDeleteRoleset(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -6034,6 +7762,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name of the role. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6048,12 +7777,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googleclouddeletestaticaccount"></a>
 # **GoogleCloudDeleteStaticAccount**
@@ -6066,7 +7800,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6079,15 +7815,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudDeleteStaticAccount(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -6108,6 +7858,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name to refer to this static account in Vault. Cannot be updated. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6122,12 +7873,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsdecrypt"></a>
 # **GoogleCloudKMSDecrypt**
@@ -6140,7 +7896,9 @@ Decrypt a ciphertext value using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6153,17 +7911,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault to use for decryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.
+            
+            
+            
+            
+            
             var googleCloudKMSDecryptRequest = new GoogleCloudKMSDecryptRequest(); // GoogleCloudKMSDecryptRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Decrypt a ciphertext value using a named key
+                
 
                 apiInstance.GoogleCloudKMSDecrypt(string key, GoogleCloudKMSDecryptRequest googleCloudKMSDecryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6185,6 +7962,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSDecryptRequest** | [**GoogleCloudKMSDecryptRequest**](GoogleCloudKMSDecryptRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6195,16 +7973,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsdeleteconfig"></a>
 # **GoogleCloudKMSDeleteConfig**
@@ -6217,7 +8000,9 @@ Configure the GCP KMS secrets engine
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6230,15 +8015,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Configure the GCP KMS secrets engine
+                
 
                 apiInstance.GoogleCloudKMSDeleteConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6258,6 +8054,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6272,12 +8069,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsdeletekey"></a>
 # **GoogleCloudKMSDeleteKey**
@@ -6290,7 +8092,9 @@ Interact with crypto keys in Vault and Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6303,16 +8107,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Interact with crypto keys in Vault and Google Cloud KMS
+                
 
                 apiInstance.GoogleCloudKMSDeleteKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6333,6 +8152,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key in Vault. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6347,12 +8167,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsderegisterkey"></a>
 # **GoogleCloudKMSDeregisterKey**
@@ -6365,7 +8190,9 @@ Deregister an existing key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6378,16 +8205,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Deregister an existing key in Vault
+                
 
                 apiInstance.GoogleCloudKMSDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6408,6 +8250,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6422,12 +8265,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsencrypt"></a>
 # **GoogleCloudKMSEncrypt**
@@ -6440,7 +8288,9 @@ Encrypt a plaintext value using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6453,17 +8303,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault to use for encryption. This key must already exist in Vault and must map back to a Google Cloud KMS key.
+            
+            
+            
+            
+            
             var googleCloudKMSEncryptRequest = new GoogleCloudKMSEncryptRequest(); // GoogleCloudKMSEncryptRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Encrypt a plaintext value using a named key
+                
 
                 apiInstance.GoogleCloudKMSEncrypt(string key, GoogleCloudKMSEncryptRequest googleCloudKMSEncryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6485,6 +8354,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSEncryptRequest** | [**GoogleCloudKMSEncryptRequest**](GoogleCloudKMSEncryptRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6495,16 +8365,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmslistkeys"></a>
 # **GoogleCloudKMSListKeys**
@@ -6517,7 +8392,9 @@ List named keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6530,16 +8407,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // List named keys
+                
 
                 apiInstance.GoogleCloudKMSListKeys(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6560,6 +8452,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6574,12 +8467,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsreadconfig"></a>
 # **GoogleCloudKMSReadConfig**
@@ -6592,7 +8490,9 @@ Configure the GCP KMS secrets engine
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6605,15 +8505,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Configure the GCP KMS secrets engine
+                
 
                 apiInstance.GoogleCloudKMSReadConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6633,6 +8544,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6647,12 +8559,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsreadkey"></a>
 # **GoogleCloudKMSReadKey**
@@ -6665,7 +8582,9 @@ Interact with crypto keys in Vault and Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6678,16 +8597,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Interact with crypto keys in Vault and Google Cloud KMS
+                
 
                 apiInstance.GoogleCloudKMSReadKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6708,6 +8642,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key in Vault. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6722,12 +8657,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsreadkeyconfig"></a>
 # **GoogleCloudKMSReadKeyConfig**
@@ -6740,7 +8680,9 @@ Configure the key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6753,16 +8695,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Configure the key in Vault
+                
 
                 apiInstance.GoogleCloudKMSReadKeyConfig(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6783,6 +8740,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key in Vault. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6797,12 +8755,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsreadpubkey"></a>
 # **GoogleCloudKMSReadPubkey**
@@ -6815,7 +8778,9 @@ Retrieve the public key associated with the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6828,16 +8793,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Retrieve the public key associated with the named key
+                
 
                 apiInstance.GoogleCloudKMSReadPubkey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6858,6 +8838,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key for which to get the public key. This key must already exist in Vault and Google Cloud KMS. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6872,12 +8853,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsreencrypt"></a>
 # **GoogleCloudKMSReencrypt**
@@ -6890,7 +8876,9 @@ Re-encrypt existing ciphertext data to a new version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6903,17 +8891,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key to use for encryption. This key must already exist in Vault and Google Cloud KMS.
+            
+            
+            
+            
+            
             var googleCloudKMSReencryptRequest = new GoogleCloudKMSReencryptRequest(); // GoogleCloudKMSReencryptRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Re-encrypt existing ciphertext data to a new version
+                
 
                 apiInstance.GoogleCloudKMSReencrypt(string key, GoogleCloudKMSReencryptRequest googleCloudKMSReencryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -6935,6 +8942,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSReencryptRequest** | [**GoogleCloudKMSReencryptRequest**](GoogleCloudKMSReencryptRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -6945,16 +8953,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsregisterkey"></a>
 # **GoogleCloudKMSRegisterKey**
@@ -6967,7 +8980,9 @@ Register an existing crypto key in Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -6980,17 +8995,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key to register in Vault. This will be the named used to refer to the underlying crypto key when encrypting or decrypting data.
+            
+            
+            
+            
+            
             var googleCloudKMSRegisterKeyRequest = new GoogleCloudKMSRegisterKeyRequest(); // GoogleCloudKMSRegisterKeyRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Register an existing crypto key in Google Cloud KMS
+                
 
                 apiInstance.GoogleCloudKMSRegisterKey(string key, GoogleCloudKMSRegisterKeyRequest googleCloudKMSRegisterKeyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7012,6 +9046,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSRegisterKeyRequest** | [**GoogleCloudKMSRegisterKeyRequest**](GoogleCloudKMSRegisterKeyRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7022,16 +9057,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsrotatekey"></a>
 # **GoogleCloudKMSRotateKey**
@@ -7044,7 +9084,9 @@ Rotate a crypto key to a new primary version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7057,16 +9099,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Rotate a crypto key to a new primary version
+                
 
                 apiInstance.GoogleCloudKMSRotateKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7087,6 +9144,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key to rotate. This key must already be registered with Vault and point to a valid Google Cloud KMS crypto key. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7101,12 +9159,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmssign"></a>
 # **GoogleCloudKMSSign**
@@ -7119,7 +9182,9 @@ Signs a message or digest using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7132,17 +9197,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault to use for signing. This key must already exist in Vault and must map back to a Google Cloud KMS key.
+            
+            
+            
+            
+            
             var googleCloudKMSSignRequest = new GoogleCloudKMSSignRequest(); // GoogleCloudKMSSignRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Signs a message or digest using a named key
+                
 
                 apiInstance.GoogleCloudKMSSign(string key, GoogleCloudKMSSignRequest googleCloudKMSSignRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7164,6 +9248,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSSignRequest** | [**GoogleCloudKMSSignRequest**](GoogleCloudKMSSignRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7174,16 +9259,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmstrimkey"></a>
 # **GoogleCloudKMSTrimKey**
@@ -7196,7 +9286,9 @@ Delete old crypto key versions from Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7209,16 +9301,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault.
+            
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Delete old crypto key versions from Google Cloud KMS
+                
 
                 apiInstance.GoogleCloudKMSTrimKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7239,6 +9346,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Name of the key in Vault. | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7253,12 +9361,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmsverify"></a>
 # **GoogleCloudKMSVerify**
@@ -7271,7 +9384,9 @@ Verify a signature using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7284,17 +9399,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault to use for verification. This key must already exist in Vault and must map back to a Google Cloud KMS key.
+            
+            
+            
+            
+            
             var googleCloudKMSVerifyRequest = new GoogleCloudKMSVerifyRequest(); // GoogleCloudKMSVerifyRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Verify a signature using a named key
+                
 
                 apiInstance.GoogleCloudKMSVerify(string key, GoogleCloudKMSVerifyRequest googleCloudKMSVerifyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7316,6 +9450,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSVerifyRequest** | [**GoogleCloudKMSVerifyRequest**](GoogleCloudKMSVerifyRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7326,16 +9461,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmswriteconfig"></a>
 # **GoogleCloudKMSWriteConfig**
@@ -7348,7 +9488,9 @@ Configure the GCP KMS secrets engine
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7361,16 +9503,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var googleCloudKMSWriteConfigRequest = new GoogleCloudKMSWriteConfigRequest(); // GoogleCloudKMSWriteConfigRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Configure the GCP KMS secrets engine
+                
 
                 apiInstance.GoogleCloudKMSWriteConfig(GoogleCloudKMSWriteConfigRequest googleCloudKMSWriteConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7391,6 +9548,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSWriteConfigRequest** | [**GoogleCloudKMSWriteConfigRequest**](GoogleCloudKMSWriteConfigRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7401,16 +9559,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmswritekey"></a>
 # **GoogleCloudKMSWriteKey**
@@ -7423,7 +9586,9 @@ Interact with crypto keys in Vault and Google Cloud KMS
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7436,17 +9601,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault.
+            
+            
+            
+            
+            
             var googleCloudKMSWriteKeyRequest = new GoogleCloudKMSWriteKeyRequest(); // GoogleCloudKMSWriteKeyRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Interact with crypto keys in Vault and Google Cloud KMS
+                
 
                 apiInstance.GoogleCloudKMSWriteKey(string key, GoogleCloudKMSWriteKeyRequest googleCloudKMSWriteKeyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7468,6 +9652,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSWriteKeyRequest** | [**GoogleCloudKMSWriteKeyRequest**](GoogleCloudKMSWriteKeyRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7478,16 +9663,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudkmswritekeyconfig"></a>
 # **GoogleCloudKMSWriteKeyConfig**
@@ -7500,7 +9690,9 @@ Configure the key in Vault
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7513,17 +9705,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var key = "key_example";  // string | Name of the key in Vault.
+            
+            
+            
+            
+            
             var googleCloudKMSWriteKeyConfigRequest = new GoogleCloudKMSWriteKeyConfigRequest(); // GoogleCloudKMSWriteKeyConfigRequest | 
+            
+            
+            
             var gcpkmsMountPath = "\"gcpkms\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcpkms")
+            
+            
+            
 
             try
             {
+                
                 // Configure the key in Vault
+                
 
                 apiInstance.GoogleCloudKMSWriteKeyConfig(string key, GoogleCloudKMSWriteKeyConfigRequest googleCloudKMSWriteKeyConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
@@ -7545,6 +9756,7 @@ Name | Type | Description  | Notes
  **googleCloudKMSWriteKeyConfigRequest** | [**GoogleCloudKMSWriteKeyConfigRequest**](GoogleCloudKMSWriteKeyConfigRequest.md)|  | 
  **gcpkmsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcpkms&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7555,16 +9767,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudlistrolesets"></a>
 # **GoogleCloudListRolesets**
@@ -7577,7 +9794,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7590,15 +9809,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudListRolesets(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -7619,6 +9852,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7633,12 +9867,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudliststaticaccounts"></a>
 # **GoogleCloudListStaticAccounts**
@@ -7651,7 +9890,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7664,15 +9905,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudListStaticAccounts(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -7693,6 +9948,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7707,12 +9963,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadconfig"></a>
 # **GoogleCloudReadConfig**
@@ -7725,7 +9986,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7738,14 +10001,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -7765,6 +10038,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7779,12 +10053,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadkey"></a>
 # **GoogleCloudReadKey**
@@ -7797,7 +10076,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7810,15 +10091,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -7839,6 +10134,7 @@ Name | Type | Description  | Notes
  **roleset** | **string**| Required. Name of the role set. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7853,12 +10149,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadroleset"></a>
 # **GoogleCloudReadRoleset**
@@ -7871,7 +10172,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7884,15 +10187,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the role.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadRoleset(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -7913,6 +10230,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name of the role. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -7927,12 +10245,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadrolesetkey"></a>
 # **GoogleCloudReadRolesetKey**
@@ -7945,7 +10268,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -7958,15 +10283,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -7987,6 +10326,7 @@ Name | Type | Description  | Notes
  **roleset** | **string**| Required. Name of the role set. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8001,12 +10341,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadrolesettoken"></a>
 # **GoogleCloudReadRolesetToken**
@@ -8019,7 +10364,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8032,15 +10379,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8061,6 +10422,7 @@ Name | Type | Description  | Notes
  **roleset** | **string**| Required. Name of the role set. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8075,12 +10437,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadstaticaccount"></a>
 # **GoogleCloudReadStaticAccount**
@@ -8093,7 +10460,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8106,15 +10475,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadStaticAccount(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8135,6 +10518,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name to refer to this static account in Vault. Cannot be updated. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8149,12 +10533,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadstaticaccountkey"></a>
 # **GoogleCloudReadStaticAccountKey**
@@ -8167,7 +10556,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8180,15 +10571,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the static account.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadStaticAccountKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8209,6 +10614,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name of the static account. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8223,12 +10629,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadstaticaccounttoken"></a>
 # **GoogleCloudReadStaticAccountToken**
@@ -8241,7 +10652,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8254,15 +10667,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the static account.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadStaticAccountToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8283,6 +10710,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name of the static account. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8297,12 +10725,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudreadtoken"></a>
 # **GoogleCloudReadToken**
@@ -8315,7 +10748,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8328,15 +10763,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudReadToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8357,6 +10806,7 @@ Name | Type | Description  | Notes
  **roleset** | **string**| Required. Name of the role set. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8371,12 +10821,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudrotateroleset"></a>
 # **GoogleCloudRotateRoleset**
@@ -8389,7 +10844,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8402,15 +10859,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudRotateRoleset(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8431,6 +10902,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8445,12 +10917,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudrotaterolesetkey"></a>
 # **GoogleCloudRotateRolesetKey**
@@ -8463,7 +10940,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8476,15 +10955,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudRotateRolesetKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8505,6 +10998,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8519,12 +11013,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudrotateroot"></a>
 # **GoogleCloudRotateRoot**
@@ -8537,7 +11036,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8550,14 +11051,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudRotateRoot(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8577,6 +11088,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8591,12 +11103,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudrotatestaticaccountkey"></a>
 # **GoogleCloudRotateStaticAccountKey**
@@ -8609,7 +11126,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8622,15 +11141,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the account.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudRotateStaticAccountKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8651,6 +11184,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the account. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8665,12 +11199,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwriteconfig"></a>
 # **GoogleCloudWriteConfig**
@@ -8683,7 +11222,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8696,15 +11237,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var googleCloudWriteConfigRequest = new GoogleCloudWriteConfigRequest(); // GoogleCloudWriteConfigRequest | 
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteConfig(GoogleCloudWriteConfigRequest googleCloudWriteConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8725,6 +11280,7 @@ Name | Type | Description  | Notes
  **googleCloudWriteConfigRequest** | [**GoogleCloudWriteConfigRequest**](GoogleCloudWriteConfigRequest.md)|  | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8735,16 +11291,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwritekey"></a>
 # **GoogleCloudWriteKey**
@@ -8757,7 +11318,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8770,16 +11333,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
+            
             var googleCloudWriteKeyRequest = new GoogleCloudWriteKeyRequest(); // GoogleCloudWriteKeyRequest | 
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteKey(string roleset, GoogleCloudWriteKeyRequest googleCloudWriteKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8801,6 +11382,7 @@ Name | Type | Description  | Notes
  **googleCloudWriteKeyRequest** | [**GoogleCloudWriteKeyRequest**](GoogleCloudWriteKeyRequest.md)|  | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8811,16 +11393,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwriteroleset"></a>
 # **GoogleCloudWriteRoleset**
@@ -8833,7 +11420,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8846,16 +11435,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the role.
+            
+            
+            
+            
+            
             var googleCloudWriteRolesetRequest = new GoogleCloudWriteRolesetRequest(); // GoogleCloudWriteRolesetRequest | 
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteRoleset(string name, GoogleCloudWriteRolesetRequest googleCloudWriteRolesetRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8877,6 +11484,7 @@ Name | Type | Description  | Notes
  **googleCloudWriteRolesetRequest** | [**GoogleCloudWriteRolesetRequest**](GoogleCloudWriteRolesetRequest.md)|  | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8887,16 +11495,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwriterolesetkey"></a>
 # **GoogleCloudWriteRolesetKey**
@@ -8909,7 +11522,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8922,16 +11537,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
+            
             var googleCloudWriteRolesetKeyRequest = new GoogleCloudWriteRolesetKeyRequest(); // GoogleCloudWriteRolesetKeyRequest | 
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteRolesetKey(string roleset, GoogleCloudWriteRolesetKeyRequest googleCloudWriteRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -8953,6 +11586,7 @@ Name | Type | Description  | Notes
  **googleCloudWriteRolesetKeyRequest** | [**GoogleCloudWriteRolesetKeyRequest**](GoogleCloudWriteRolesetKeyRequest.md)|  | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -8963,16 +11597,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwriterolesettoken"></a>
 # **GoogleCloudWriteRolesetToken**
@@ -8985,7 +11624,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -8998,15 +11639,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -9027,6 +11682,7 @@ Name | Type | Description  | Notes
  **roleset** | **string**| Required. Name of the role set. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9041,12 +11697,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwritestaticaccount"></a>
 # **GoogleCloudWriteStaticAccount**
@@ -9059,7 +11720,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9072,16 +11735,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name to refer to this static account in Vault. Cannot be updated.
+            
+            
+            
+            
+            
             var googleCloudWriteStaticAccountRequest = new GoogleCloudWriteStaticAccountRequest(); // GoogleCloudWriteStaticAccountRequest | 
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteStaticAccount(string name, GoogleCloudWriteStaticAccountRequest googleCloudWriteStaticAccountRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -9103,6 +11784,7 @@ Name | Type | Description  | Notes
  **googleCloudWriteStaticAccountRequest** | [**GoogleCloudWriteStaticAccountRequest**](GoogleCloudWriteStaticAccountRequest.md)|  | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9113,16 +11795,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwritestaticaccountkey"></a>
 # **GoogleCloudWriteStaticAccountKey**
@@ -9135,7 +11822,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9148,16 +11837,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the static account.
+            
+            
+            
+            
+            
             var googleCloudWriteStaticAccountKeyRequest = new GoogleCloudWriteStaticAccountKeyRequest(); // GoogleCloudWriteStaticAccountKeyRequest | 
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteStaticAccountKey(string name, GoogleCloudWriteStaticAccountKeyRequest googleCloudWriteStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -9179,6 +11886,7 @@ Name | Type | Description  | Notes
  **googleCloudWriteStaticAccountKeyRequest** | [**GoogleCloudWriteStaticAccountKeyRequest**](GoogleCloudWriteStaticAccountKeyRequest.md)|  | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9189,16 +11897,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwritestaticaccounttoken"></a>
 # **GoogleCloudWriteStaticAccountToken**
@@ -9211,7 +11924,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9224,15 +11939,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Required. Name of the static account.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteStaticAccountToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -9253,6 +11982,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Required. Name of the static account. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9267,12 +11997,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="googlecloudwritetoken"></a>
 # **GoogleCloudWriteToken**
@@ -9285,7 +12020,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9298,15 +12035,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var roleset = "roleset_example";  // string | Required. Name of the role set.
+            
+            
+            
+            
             var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.GoogleCloudWriteToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
@@ -9327,6 +12078,7 @@ Name | Type | Description  | Notes
  **roleset** | **string**| Required. Name of the role set. | 
  **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9341,12 +12093,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv1delete"></a>
 # **KVv1Delete**
@@ -9359,7 +12116,9 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9372,16 +12131,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var kvMountPath = "\"kv\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kv")
+            
+            
+            
 
             try
             {
+                
                 // Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+                
 
                 apiInstance.KVv1Delete(string path, string kvMountPath = "kv", TimeSpan? wrapTTL = null);
             }
@@ -9402,6 +12176,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Location of the secret. | 
  **kvMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kv&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9416,12 +12191,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv1read"></a>
 # **KVv1Read**
@@ -9434,7 +12214,9 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9447,17 +12229,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var kvMountPath = "\"kv\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kv")
+            
+            
+            
+            
             var list = "list_example";  // string | Return a list if `true` (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+                
 
                 apiInstance.KVv1Read(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null);
             }
@@ -9479,6 +12280,7 @@ Name | Type | Description  | Notes
  **kvMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kv&quot;]
  **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
+
 ### Return type
 
 void (empty response body)
@@ -9493,12 +12295,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv1write"></a>
 # **KVv1Write**
@@ -9511,7 +12318,9 @@ Pass-through secret storage to the storage backend, allowing you to read/write a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9524,16 +12333,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var kvMountPath = "\"kv\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kv")
+            
+            
+            
 
             try
             {
+                
                 // Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+                
 
                 apiInstance.KVv1Write(string path, string kvMountPath = "kv", TimeSpan? wrapTTL = null);
             }
@@ -9554,6 +12378,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Location of the secret. | 
  **kvMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kv&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9568,12 +12393,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2delete"></a>
 # **KVv2Delete**
@@ -9586,7 +12416,9 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9599,16 +12431,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Write, Patch, Read, and Delete data in the Key-Value Store.
+                
 
                 apiInstance.KVv2Delete(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -9629,6 +12476,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Location of the secret. | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9643,12 +12491,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2deletemetadata"></a>
 # **KVv2DeleteMetadata**
@@ -9661,7 +12514,9 @@ Configures settings for the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9674,16 +12529,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Configures settings for the KV store
+                
 
                 apiInstance.KVv2DeleteMetadata(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -9704,6 +12574,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Location of the secret. | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9718,12 +12589,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2deleteversions"></a>
 # **KVv2DeleteVersions**
@@ -9736,7 +12612,9 @@ Marks one or more versions as deleted in the KV store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9749,17 +12627,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            
             var kVv2DeleteVersionsRequest = new KVv2DeleteVersionsRequest(); // KVv2DeleteVersionsRequest | 
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Marks one or more versions as deleted in the KV store.
+                
 
                 apiInstance.KVv2DeleteVersions(string path, KVv2DeleteVersionsRequest kVv2DeleteVersionsRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -9781,6 +12678,7 @@ Name | Type | Description  | Notes
  **kVv2DeleteVersionsRequest** | [**KVv2DeleteVersionsRequest**](KVv2DeleteVersionsRequest.md)|  | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9791,16 +12689,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2destroyversions"></a>
 # **KVv2DestroyVersions**
@@ -9813,7 +12716,9 @@ Permanently removes one or more versions in the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9826,17 +12731,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            
             var kVv2DestroyVersionsRequest = new KVv2DestroyVersionsRequest(); // KVv2DestroyVersionsRequest | 
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Permanently removes one or more versions in the KV store
+                
 
                 apiInstance.KVv2DestroyVersions(string path, KVv2DestroyVersionsRequest kVv2DestroyVersionsRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -9858,6 +12782,7 @@ Name | Type | Description  | Notes
  **kVv2DestroyVersionsRequest** | [**KVv2DestroyVersionsRequest**](KVv2DestroyVersionsRequest.md)|  | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9868,16 +12793,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2read"></a>
 # **KVv2Read**
@@ -9890,7 +12820,9 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9903,16 +12835,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Write, Patch, Read, and Delete data in the Key-Value Store.
+                
 
                 apiInstance.KVv2Read(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -9933,6 +12880,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Location of the secret. | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -9947,12 +12895,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2readconfig"></a>
 # **KVv2ReadConfig**
@@ -9965,7 +12918,9 @@ Read the backend level settings.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -9978,15 +12933,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Read the backend level settings.
+                
 
                 apiInstance.KVv2ReadConfig(string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -10006,6 +12972,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10020,12 +12987,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2readmetadata"></a>
 # **KVv2ReadMetadata**
@@ -10038,7 +13010,9 @@ Configures settings for the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10051,17 +13025,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
+            
             var list = "list_example";  // string | Return a list if `true` (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Configures settings for the KV store
+                
 
                 apiInstance.KVv2ReadMetadata(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null);
             }
@@ -10083,6 +13076,7 @@ Name | Type | Description  | Notes
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
  **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
+
 ### Return type
 
 void (empty response body)
@@ -10097,12 +13091,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2readsubkeys"></a>
 # **KVv2ReadSubkeys**
@@ -10115,7 +13114,9 @@ Read the structure of a secret entry from the Key-Value store with the values re
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10128,16 +13129,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Read the structure of a secret entry from the Key-Value store with the values removed.
+                
 
                 apiInstance.KVv2ReadSubkeys(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -10158,6 +13174,7 @@ Name | Type | Description  | Notes
  **path** | **string**| Location of the secret. | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10172,12 +13189,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2undeleteversions"></a>
 # **KVv2UndeleteVersions**
@@ -10190,7 +13212,9 @@ Undeletes one or more versions from the KV store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10203,17 +13227,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            
             var kVv2UndeleteVersionsRequest = new KVv2UndeleteVersionsRequest(); // KVv2UndeleteVersionsRequest | 
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Undeletes one or more versions from the KV store.
+                
 
                 apiInstance.KVv2UndeleteVersions(string path, KVv2UndeleteVersionsRequest kVv2UndeleteVersionsRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -10235,6 +13278,7 @@ Name | Type | Description  | Notes
  **kVv2UndeleteVersionsRequest** | [**KVv2UndeleteVersionsRequest**](KVv2UndeleteVersionsRequest.md)|  | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10245,16 +13289,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2write"></a>
 # **KVv2Write**
@@ -10267,7 +13316,9 @@ Write, Patch, Read, and Delete data in the Key-Value Store.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10280,17 +13331,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            
             var kVv2WriteRequest = new KVv2WriteRequest(); // KVv2WriteRequest | 
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Write, Patch, Read, and Delete data in the Key-Value Store.
+                
 
                 apiInstance.KVv2Write(string path, KVv2WriteRequest kVv2WriteRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -10312,6 +13382,7 @@ Name | Type | Description  | Notes
  **kVv2WriteRequest** | [**KVv2WriteRequest**](KVv2WriteRequest.md)|  | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10322,16 +13393,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2writeconfig"></a>
 # **KVv2WriteConfig**
@@ -10344,7 +13420,9 @@ Configure backend level settings that are applied to every key in the key-value 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10357,16 +13435,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var kVv2WriteConfigRequest = new KVv2WriteConfigRequest(); // KVv2WriteConfigRequest | 
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Configure backend level settings that are applied to every key in the key-value store.
+                
 
                 apiInstance.KVv2WriteConfig(KVv2WriteConfigRequest kVv2WriteConfigRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -10387,6 +13480,7 @@ Name | Type | Description  | Notes
  **kVv2WriteConfigRequest** | [**KVv2WriteConfigRequest**](KVv2WriteConfigRequest.md)|  | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10397,16 +13491,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kvv2writemetadata"></a>
 # **KVv2WriteMetadata**
@@ -10419,7 +13518,9 @@ Configures settings for the KV store
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10432,17 +13533,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            
             var kVv2WriteMetadataRequest = new KVv2WriteMetadataRequest(); // KVv2WriteMetadataRequest | 
+            
+            
+            
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
+            
+            
+            
 
             try
             {
+                
                 // Configures settings for the KV store
+                
 
                 apiInstance.KVv2WriteMetadata(string path, KVv2WriteMetadataRequest kVv2WriteMetadataRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
@@ -10464,6 +13584,7 @@ Name | Type | Description  | Notes
  **kVv2WriteMetadataRequest** | [**KVv2WriteMetadataRequest**](KVv2WriteMetadataRequest.md)|  | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10474,16 +13595,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kubernetesdeleteconfig"></a>
 # **KubernetesDeleteConfig**
@@ -10496,7 +13622,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10509,14 +13637,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesDeleteConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10536,6 +13674,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10550,12 +13689,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kubernetesdeleterole"></a>
 # **KubernetesDeleteRole**
@@ -10568,7 +13712,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10581,15 +13727,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesDeleteRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10610,6 +13770,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10624,12 +13785,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kuberneteslistroles"></a>
 # **KubernetesListRoles**
@@ -10642,7 +13808,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10655,15 +13823,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesListRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10684,6 +13866,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10698,12 +13881,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kubernetesreadconfig"></a>
 # **KubernetesReadConfig**
@@ -10716,7 +13904,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10729,14 +13919,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesReadConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10756,6 +13956,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10770,12 +13971,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kubernetesreadrole"></a>
 # **KubernetesReadRole**
@@ -10788,7 +13994,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10801,15 +14009,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesReadRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10830,6 +14052,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10844,12 +14067,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kuberneteswriteconfig"></a>
 # **KubernetesWriteConfig**
@@ -10862,7 +14090,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10875,15 +14105,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var kubernetesWriteConfigRequest = new KubernetesWriteConfigRequest(); // KubernetesWriteConfigRequest | 
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesWriteConfig(KubernetesWriteConfigRequest kubernetesWriteConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10904,6 +14148,7 @@ Name | Type | Description  | Notes
  **kubernetesWriteConfigRequest** | [**KubernetesWriteConfigRequest**](KubernetesWriteConfigRequest.md)|  | 
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10914,16 +14159,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kuberneteswritecredentials"></a>
 # **KubernetesWriteCredentials**
@@ -10936,7 +14186,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -10949,16 +14201,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the Vault role
+            
+            
+            
+            
+            
             var kubernetesWriteCredentialsRequest = new KubernetesWriteCredentialsRequest(); // KubernetesWriteCredentialsRequest | 
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesWriteCredentials(string name, KubernetesWriteCredentialsRequest kubernetesWriteCredentialsRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -10980,6 +14250,7 @@ Name | Type | Description  | Notes
  **kubernetesWriteCredentialsRequest** | [**KubernetesWriteCredentialsRequest**](KubernetesWriteCredentialsRequest.md)|  | 
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -10990,16 +14261,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="kuberneteswriterole"></a>
 # **KubernetesWriteRole**
@@ -11012,7 +14288,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11025,16 +14303,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var kubernetesWriteRoleRequest = new KubernetesWriteRoleRequest(); // KubernetesWriteRoleRequest | 
+            
+            
+            
             var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.KubernetesWriteRole(string name, KubernetesWriteRoleRequest kubernetesWriteRoleRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
@@ -11056,6 +14352,7 @@ Name | Type | Description  | Notes
  **kubernetesWriteRoleRequest** | [**KubernetesWriteRoleRequest**](KubernetesWriteRoleRequest.md)|  | 
  **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11066,16 +14363,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapcheckinlibrary"></a>
 # **LDAPCheckInLibrary**
@@ -11088,7 +14390,9 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11101,17 +14405,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var lDAPCheckInLibraryRequest = new LDAPCheckInLibraryRequest(); // LDAPCheckInLibraryRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Check service accounts in to the library.
+                
 
                 apiInstance.LDAPCheckInLibrary(string name, LDAPCheckInLibraryRequest lDAPCheckInLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11133,6 +14456,7 @@ Name | Type | Description  | Notes
  **lDAPCheckInLibraryRequest** | [**LDAPCheckInLibraryRequest**](LDAPCheckInLibraryRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11143,16 +14467,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapcheckinmanagelibrary"></a>
 # **LDAPCheckInManageLibrary**
@@ -11165,7 +14494,9 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11178,17 +14509,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var lDAPCheckInManageLibraryRequest = new LDAPCheckInManageLibraryRequest(); // LDAPCheckInManageLibraryRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Check service accounts in to the library.
+                
 
                 apiInstance.LDAPCheckInManageLibrary(string name, LDAPCheckInManageLibraryRequest lDAPCheckInManageLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11210,6 +14560,7 @@ Name | Type | Description  | Notes
  **lDAPCheckInManageLibraryRequest** | [**LDAPCheckInManageLibraryRequest**](LDAPCheckInManageLibraryRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11220,16 +14571,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapcheckoutlibrary"></a>
 # **LDAPCheckOutLibrary**
@@ -11242,7 +14598,9 @@ Check a service account out from the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11255,17 +14613,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set
+            
+            
+            
+            
+            
             var lDAPCheckOutLibraryRequest = new LDAPCheckOutLibraryRequest(); // LDAPCheckOutLibraryRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Check a service account out from the library.
+                
 
                 apiInstance.LDAPCheckOutLibrary(string name, LDAPCheckOutLibraryRequest lDAPCheckOutLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11287,6 +14664,7 @@ Name | Type | Description  | Notes
  **lDAPCheckOutLibraryRequest** | [**LDAPCheckOutLibraryRequest**](LDAPCheckOutLibraryRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11297,16 +14675,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapdeleteconfig"></a>
 # **LDAPDeleteConfig**
@@ -11319,7 +14702,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11332,14 +14717,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPDeleteConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11359,6 +14754,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11373,12 +14769,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapdeletelibrary"></a>
 # **LDAPDeleteLibrary**
@@ -11391,7 +14792,9 @@ Delete a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11404,16 +14807,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Delete a library set.
+                
 
                 apiInstance.LDAPDeleteLibrary(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11434,6 +14852,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11448,12 +14867,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapdeleterole"></a>
 # **LDAPDeleteRole**
@@ -11466,7 +14890,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11479,15 +14905,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role (lowercase)
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPDeleteRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11508,6 +14948,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role (lowercase) | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11522,12 +14963,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapdeletestaticrole"></a>
 # **LDAPDeleteStaticRole**
@@ -11540,7 +14986,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11553,15 +15001,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPDeleteStaticRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11582,6 +15044,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11596,12 +15059,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldaplistlibraries"></a>
 # **LDAPListLibraries**
@@ -11614,7 +15082,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11627,15 +15097,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPListLibraries(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11656,6 +15140,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11670,12 +15155,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldaplistroles"></a>
 # **LDAPListRoles**
@@ -11688,7 +15178,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11701,15 +15193,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPListRoles(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11730,6 +15236,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11744,12 +15251,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapliststaticroles"></a>
 # **LDAPListStaticRoles**
@@ -11762,7 +15274,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11775,15 +15289,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPListStaticRoles(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11804,6 +15332,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11818,12 +15347,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadconfig"></a>
 # **LDAPReadConfig**
@@ -11836,7 +15370,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11849,14 +15385,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPReadConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11876,6 +15422,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11890,12 +15437,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadcredentials"></a>
 # **LDAPReadCredentials**
@@ -11908,7 +15460,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11921,15 +15475,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the dynamic role.
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPReadCredentials(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -11950,6 +15518,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the dynamic role. | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -11964,12 +15533,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadlibrary"></a>
 # **LDAPReadLibrary**
@@ -11982,7 +15556,9 @@ Read a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -11995,16 +15571,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Read a library set.
+                
 
                 apiInstance.LDAPReadLibrary(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12025,6 +15616,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12039,12 +15631,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadlibrarystatus"></a>
 # **LDAPReadLibraryStatus**
@@ -12057,7 +15654,9 @@ Check the status of the service accounts in a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12070,16 +15669,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Check the status of the service accounts in a library set.
+                
 
                 apiInstance.LDAPReadLibraryStatus(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12100,6 +15714,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12114,12 +15729,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadrole"></a>
 # **LDAPReadRole**
@@ -12132,7 +15752,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12145,15 +15767,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role (lowercase)
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPReadRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12174,6 +15810,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role (lowercase) | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12188,12 +15825,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadstaticcredentials"></a>
 # **LDAPReadStaticCredentials**
@@ -12206,7 +15848,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12219,15 +15863,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role.
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPReadStaticCredentials(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12248,6 +15906,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role. | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12262,12 +15921,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapreadstaticrole"></a>
 # **LDAPReadStaticRole**
@@ -12280,7 +15944,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12293,15 +15959,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPReadStaticRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12322,6 +16002,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12336,12 +16017,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldaprotaterole"></a>
 # **LDAPRotateRole**
@@ -12354,7 +16040,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12367,15 +16055,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPRotateRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12396,6 +16098,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12410,12 +16113,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldaprotateroot"></a>
 # **LDAPRotateRoot**
@@ -12428,7 +16136,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12441,14 +16151,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPRotateRoot(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12468,6 +16188,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12482,12 +16203,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapwriteconfig"></a>
 # **LDAPWriteConfig**
@@ -12500,7 +16226,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12513,15 +16241,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var lDAPWriteConfigRequest = new LDAPWriteConfigRequest(); // LDAPWriteConfigRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPWriteConfig(LDAPWriteConfigRequest lDAPWriteConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12542,6 +16284,7 @@ Name | Type | Description  | Notes
  **lDAPWriteConfigRequest** | [**LDAPWriteConfigRequest**](LDAPWriteConfigRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12552,16 +16295,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapwritelibrary"></a>
 # **LDAPWriteLibrary**
@@ -12574,7 +16322,9 @@ Update a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12587,17 +16337,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var lDAPWriteLibraryRequest = new LDAPWriteLibraryRequest(); // LDAPWriteLibraryRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
                 // Update a library set.
+                
 
                 apiInstance.LDAPWriteLibrary(string name, LDAPWriteLibraryRequest lDAPWriteLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12619,6 +16388,7 @@ Name | Type | Description  | Notes
  **lDAPWriteLibraryRequest** | [**LDAPWriteLibraryRequest**](LDAPWriteLibraryRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12629,16 +16399,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapwriterole"></a>
 # **LDAPWriteRole**
@@ -12651,7 +16426,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12664,16 +16441,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role (lowercase)
+            
+            
+            
+            
+            
             var lDAPWriteRoleRequest = new LDAPWriteRoleRequest(); // LDAPWriteRoleRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPWriteRole(string name, LDAPWriteRoleRequest lDAPWriteRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12695,6 +16490,7 @@ Name | Type | Description  | Notes
  **lDAPWriteRoleRequest** | [**LDAPWriteRoleRequest**](LDAPWriteRoleRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12705,16 +16501,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="ldapwritestaticrole"></a>
 # **LDAPWriteStaticRole**
@@ -12727,7 +16528,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12740,16 +16543,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var lDAPWriteStaticRoleRequest = new LDAPWriteStaticRoleRequest(); // LDAPWriteStaticRoleRequest | 
+            
+            
+            
             var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.LDAPWriteStaticRole(string name, LDAPWriteStaticRoleRequest lDAPWriteStaticRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
@@ -12771,6 +16592,7 @@ Name | Type | Description  | Notes
  **lDAPWriteStaticRoleRequest** | [**LDAPWriteStaticRoleRequest**](LDAPWriteStaticRoleRequest.md)|  | 
  **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12781,16 +16603,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlasdeleterole"></a>
 # **MongoDBAtlasDeleteRole**
@@ -12803,7 +16630,9 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12816,16 +16645,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the Roles
+            
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+                
 
                 apiInstance.MongoDBAtlasDeleteRole(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -12846,6 +16690,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the Roles | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12860,12 +16705,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlaslistroles"></a>
 # **MongoDBAtlasListRoles**
@@ -12878,7 +16728,9 @@ List the existing roles in this backend
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12891,16 +16743,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // List the existing roles in this backend
+                
 
                 apiInstance.MongoDBAtlasListRoles(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -12921,6 +16788,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -12935,12 +16803,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlasreadconfig"></a>
 # **MongoDBAtlasReadConfig**
@@ -12953,7 +16826,9 @@ Configure the  credentials that are used to manage Database Users.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -12966,15 +16841,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Configure the  credentials that are used to manage Database Users.
+                
 
                 apiInstance.MongoDBAtlasReadConfig(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -12994,6 +16880,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13008,12 +16895,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlasreadcredentials"></a>
 # **MongoDBAtlasReadCredentials**
@@ -13026,7 +16918,9 @@ Generate MongoDB Atlas Programmatic API from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13039,16 +16933,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Generate MongoDB Atlas Programmatic API from a specific Vault role.
+                
 
                 apiInstance.MongoDBAtlasReadCredentials(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -13069,6 +16978,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13083,12 +16993,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlasreadrole"></a>
 # **MongoDBAtlasReadRole**
@@ -13101,7 +17016,9 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13114,16 +17031,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the Roles
+            
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+                
 
                 apiInstance.MongoDBAtlasReadRole(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -13144,6 +17076,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the Roles | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13158,12 +17091,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlaswriteconfig"></a>
 # **MongoDBAtlasWriteConfig**
@@ -13176,7 +17114,9 @@ Configure the  credentials that are used to manage Database Users.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13189,16 +17129,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var mongoDBAtlasWriteConfigRequest = new MongoDBAtlasWriteConfigRequest(); // MongoDBAtlasWriteConfigRequest | 
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Configure the  credentials that are used to manage Database Users.
+                
 
                 apiInstance.MongoDBAtlasWriteConfig(MongoDBAtlasWriteConfigRequest mongoDBAtlasWriteConfigRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -13219,6 +17174,7 @@ Name | Type | Description  | Notes
  **mongoDBAtlasWriteConfigRequest** | [**MongoDBAtlasWriteConfigRequest**](MongoDBAtlasWriteConfigRequest.md)|  | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13229,16 +17185,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlaswritecredentials"></a>
 # **MongoDBAtlasWriteCredentials**
@@ -13251,7 +17212,9 @@ Generate MongoDB Atlas Programmatic API from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13264,16 +17227,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Generate MongoDB Atlas Programmatic API from a specific Vault role.
+                
 
                 apiInstance.MongoDBAtlasWriteCredentials(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -13294,6 +17272,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13308,12 +17287,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="mongodbatlaswriterole"></a>
 # **MongoDBAtlasWriteRole**
@@ -13326,7 +17310,9 @@ Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13339,17 +17325,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the Roles
+            
+            
+            
+            
+            
             var mongoDBAtlasWriteRoleRequest = new MongoDBAtlasWriteRoleRequest(); // MongoDBAtlasWriteRoleRequest | 
+            
+            
+            
             var mongodbatlasMountPath = "\"mongodbatlas\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "mongodbatlas")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+                
 
                 apiInstance.MongoDBAtlasWriteRole(string name, MongoDBAtlasWriteRoleRequest mongoDBAtlasWriteRoleRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
@@ -13371,6 +17376,7 @@ Name | Type | Description  | Notes
  **mongoDBAtlasWriteRoleRequest** | [**MongoDBAtlasWriteRoleRequest**](MongoDBAtlasWriteRoleRequest.md)|  | 
  **mongodbatlasMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;mongodbatlas&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13381,16 +17387,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomaddeleteaccessconfig"></a>
 # **NomadDeleteAccessConfig**
@@ -13403,7 +17414,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13416,14 +17429,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadDeleteAccessConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13443,6 +17466,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13457,12 +17481,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomaddeleteleaseconfig"></a>
 # **NomadDeleteLeaseConfig**
@@ -13475,7 +17504,9 @@ Configure the lease parameters for generated tokens
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13488,15 +17519,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
                 // Configure the lease parameters for generated tokens
+                
 
                 apiInstance.NomadDeleteLeaseConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13516,6 +17558,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13530,12 +17573,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomaddeleterole"></a>
 # **NomadDeleteRole**
@@ -13548,7 +17596,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13561,15 +17611,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadDeleteRole(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13590,6 +17654,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13604,12 +17669,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadlistroles"></a>
 # **NomadListRoles**
@@ -13622,7 +17692,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13635,15 +17707,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadListRoles(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13664,6 +17750,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13678,12 +17765,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadreadaccessconfig"></a>
 # **NomadReadAccessConfig**
@@ -13696,7 +17788,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13709,14 +17803,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadReadAccessConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13736,6 +17840,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13750,12 +17855,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadreadcredentials"></a>
 # **NomadReadCredentials**
@@ -13768,7 +17878,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13781,15 +17893,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadReadCredentials(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13810,6 +17936,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13824,12 +17951,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadreadleaseconfig"></a>
 # **NomadReadLeaseConfig**
@@ -13842,7 +17974,9 @@ Configure the lease parameters for generated tokens
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13855,15 +17989,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
                 // Configure the lease parameters for generated tokens
+                
 
                 apiInstance.NomadReadLeaseConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13883,6 +18028,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13897,12 +18043,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadreadrole"></a>
 # **NomadReadRole**
@@ -13915,7 +18066,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -13928,15 +18081,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadReadRole(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -13957,6 +18124,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -13971,12 +18139,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadwriteaccessconfig"></a>
 # **NomadWriteAccessConfig**
@@ -13989,7 +18162,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14002,15 +18177,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var nomadWriteAccessConfigRequest = new NomadWriteAccessConfigRequest(); // NomadWriteAccessConfigRequest | 
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadWriteAccessConfig(NomadWriteAccessConfigRequest nomadWriteAccessConfigRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -14031,6 +18220,7 @@ Name | Type | Description  | Notes
  **nomadWriteAccessConfigRequest** | [**NomadWriteAccessConfigRequest**](NomadWriteAccessConfigRequest.md)|  | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14041,16 +18231,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadwriteleaseconfig"></a>
 # **NomadWriteLeaseConfig**
@@ -14063,7 +18258,9 @@ Configure the lease parameters for generated tokens
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14076,16 +18273,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var nomadWriteLeaseConfigRequest = new NomadWriteLeaseConfigRequest(); // NomadWriteLeaseConfigRequest | 
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
                 // Configure the lease parameters for generated tokens
+                
 
                 apiInstance.NomadWriteLeaseConfig(NomadWriteLeaseConfigRequest nomadWriteLeaseConfigRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -14106,6 +18318,7 @@ Name | Type | Description  | Notes
  **nomadWriteLeaseConfigRequest** | [**NomadWriteLeaseConfigRequest**](NomadWriteLeaseConfigRequest.md)|  | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14116,16 +18329,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="nomadwriterole"></a>
 # **NomadWriteRole**
@@ -14138,7 +18356,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14151,16 +18371,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var nomadWriteRoleRequest = new NomadWriteRoleRequest(); // NomadWriteRoleRequest | 
+            
+            
+            
             var nomadMountPath = "\"nomad\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "nomad")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.NomadWriteRole(string name, NomadWriteRoleRequest nomadWriteRoleRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
@@ -14182,6 +18420,7 @@ Name | Type | Description  | Notes
  **nomadWriteRoleRequest** | [**NomadWriteRoleRequest**](NomadWriteRoleRequest.md)|  | 
  **nomadMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;nomad&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14192,16 +18431,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapcheckinlibrary"></a>
 # **OpenLDAPCheckInLibrary**
@@ -14214,7 +18458,9 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14227,17 +18473,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var openLDAPCheckInLibraryRequest = new OpenLDAPCheckInLibraryRequest(); // OpenLDAPCheckInLibraryRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Check service accounts in to the library.
+                
 
                 apiInstance.OpenLDAPCheckInLibrary(string name, OpenLDAPCheckInLibraryRequest openLDAPCheckInLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14259,6 +18524,7 @@ Name | Type | Description  | Notes
  **openLDAPCheckInLibraryRequest** | [**OpenLDAPCheckInLibraryRequest**](OpenLDAPCheckInLibraryRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14269,16 +18535,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapcheckinmanagelibrary"></a>
 # **OpenLDAPCheckInManageLibrary**
@@ -14291,7 +18562,9 @@ Check service accounts in to the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14304,17 +18577,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var openLDAPCheckInManageLibraryRequest = new OpenLDAPCheckInManageLibraryRequest(); // OpenLDAPCheckInManageLibraryRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Check service accounts in to the library.
+                
 
                 apiInstance.OpenLDAPCheckInManageLibrary(string name, OpenLDAPCheckInManageLibraryRequest openLDAPCheckInManageLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14336,6 +18628,7 @@ Name | Type | Description  | Notes
  **openLDAPCheckInManageLibraryRequest** | [**OpenLDAPCheckInManageLibraryRequest**](OpenLDAPCheckInManageLibraryRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14346,16 +18639,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapcheckoutlibrary"></a>
 # **OpenLDAPCheckOutLibrary**
@@ -14368,7 +18666,9 @@ Check a service account out from the library.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14381,17 +18681,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set
+            
+            
+            
+            
+            
             var openLDAPCheckOutLibraryRequest = new OpenLDAPCheckOutLibraryRequest(); // OpenLDAPCheckOutLibraryRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Check a service account out from the library.
+                
 
                 apiInstance.OpenLDAPCheckOutLibrary(string name, OpenLDAPCheckOutLibraryRequest openLDAPCheckOutLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14413,6 +18732,7 @@ Name | Type | Description  | Notes
  **openLDAPCheckOutLibraryRequest** | [**OpenLDAPCheckOutLibraryRequest**](OpenLDAPCheckOutLibraryRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14423,16 +18743,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapdeleteconfig"></a>
 # **OpenLDAPDeleteConfig**
@@ -14445,7 +18770,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14458,14 +18785,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPDeleteConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14485,6 +18822,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14499,12 +18837,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapdeletelibrary"></a>
 # **OpenLDAPDeleteLibrary**
@@ -14517,7 +18860,9 @@ Delete a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14530,16 +18875,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Delete a library set.
+                
 
                 apiInstance.OpenLDAPDeleteLibrary(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14560,6 +18920,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14574,12 +18935,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapdeleterole"></a>
 # **OpenLDAPDeleteRole**
@@ -14592,7 +18958,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14605,15 +18973,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role (lowercase)
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPDeleteRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14634,6 +19016,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role (lowercase) | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14648,12 +19031,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapdeletestaticrole"></a>
 # **OpenLDAPDeleteStaticRole**
@@ -14666,7 +19054,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14679,15 +19069,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPDeleteStaticRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14708,6 +19112,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14722,12 +19127,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldaplistlibraries"></a>
 # **OpenLDAPListLibraries**
@@ -14740,7 +19150,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14753,15 +19165,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPListLibraries(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14782,6 +19208,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14796,12 +19223,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldaplistroles"></a>
 # **OpenLDAPListRoles**
@@ -14814,7 +19246,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14827,15 +19261,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPListRoles(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14856,6 +19304,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14870,12 +19319,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapliststaticroles"></a>
 # **OpenLDAPListStaticRoles**
@@ -14888,7 +19342,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14901,15 +19357,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPListStaticRoles(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -14930,6 +19400,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -14944,12 +19415,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadconfig"></a>
 # **OpenLDAPReadConfig**
@@ -14962,7 +19438,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -14975,14 +19453,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPReadConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15002,6 +19490,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15016,12 +19505,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadcredentials"></a>
 # **OpenLDAPReadCredentials**
@@ -15034,7 +19528,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15047,15 +19543,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the dynamic role.
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPReadCredentials(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15076,6 +19586,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the dynamic role. | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15090,12 +19601,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadlibrary"></a>
 # **OpenLDAPReadLibrary**
@@ -15108,7 +19624,9 @@ Read a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15121,16 +19639,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Read a library set.
+                
 
                 apiInstance.OpenLDAPReadLibrary(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15151,6 +19684,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15165,12 +19699,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadlibrarystatus"></a>
 # **OpenLDAPReadLibraryStatus**
@@ -15183,7 +19722,9 @@ Check the status of the service accounts in a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15196,16 +19737,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Check the status of the service accounts in a library set.
+                
 
                 apiInstance.OpenLDAPReadLibraryStatus(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15226,6 +19782,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the set. | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15240,12 +19797,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadrole"></a>
 # **OpenLDAPReadRole**
@@ -15258,7 +19820,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15271,15 +19835,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role (lowercase)
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPReadRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15300,6 +19878,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role (lowercase) | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15314,12 +19893,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadstaticcredentials"></a>
 # **OpenLDAPReadStaticCredentials**
@@ -15332,7 +19916,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15345,15 +19931,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role.
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPReadStaticCredentials(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15374,6 +19974,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role. | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15388,12 +19989,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapreadstaticrole"></a>
 # **OpenLDAPReadStaticRole**
@@ -15406,7 +20012,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15419,15 +20027,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPReadStaticRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15448,6 +20070,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15462,12 +20085,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldaprotaterole"></a>
 # **OpenLDAPRotateRole**
@@ -15480,7 +20108,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15493,15 +20123,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the static role
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPRotateRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15522,6 +20166,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the static role | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15536,12 +20181,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldaprotateroot"></a>
 # **OpenLDAPRotateRoot**
@@ -15554,7 +20204,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15567,14 +20219,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPRotateRoot(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15594,6 +20256,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15608,12 +20271,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapwriteconfig"></a>
 # **OpenLDAPWriteConfig**
@@ -15626,7 +20294,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15639,15 +20309,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var openLDAPWriteConfigRequest = new OpenLDAPWriteConfigRequest(); // OpenLDAPWriteConfigRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPWriteConfig(OpenLDAPWriteConfigRequest openLDAPWriteConfigRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15668,6 +20352,7 @@ Name | Type | Description  | Notes
  **openLDAPWriteConfigRequest** | [**OpenLDAPWriteConfigRequest**](OpenLDAPWriteConfigRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15678,16 +20363,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapwritelibrary"></a>
 # **OpenLDAPWriteLibrary**
@@ -15700,7 +20390,9 @@ Update a library set.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15713,17 +20405,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the set.
+            
+            
+            
+            
+            
             var openLDAPWriteLibraryRequest = new OpenLDAPWriteLibraryRequest(); // OpenLDAPWriteLibraryRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
                 // Update a library set.
+                
 
                 apiInstance.OpenLDAPWriteLibrary(string name, OpenLDAPWriteLibraryRequest openLDAPWriteLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15745,6 +20456,7 @@ Name | Type | Description  | Notes
  **openLDAPWriteLibraryRequest** | [**OpenLDAPWriteLibraryRequest**](OpenLDAPWriteLibraryRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15755,16 +20467,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapwriterole"></a>
 # **OpenLDAPWriteRole**
@@ -15777,7 +20494,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15790,16 +20509,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role (lowercase)
+            
+            
+            
+            
+            
             var openLDAPWriteRoleRequest = new OpenLDAPWriteRoleRequest(); // OpenLDAPWriteRoleRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPWriteRole(string name, OpenLDAPWriteRoleRequest openLDAPWriteRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15821,6 +20558,7 @@ Name | Type | Description  | Notes
  **openLDAPWriteRoleRequest** | [**OpenLDAPWriteRoleRequest**](OpenLDAPWriteRoleRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15831,16 +20569,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="openldapwritestaticrole"></a>
 # **OpenLDAPWriteStaticRole**
@@ -15853,7 +20596,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15866,16 +20611,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var openLDAPWriteStaticRoleRequest = new OpenLDAPWriteStaticRoleRequest(); // OpenLDAPWriteStaticRoleRequest | 
+            
+            
+            
             var openldapMountPath = "\"openldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "openldap")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.OpenLDAPWriteStaticRole(string name, OpenLDAPWriteStaticRoleRequest openLDAPWriteStaticRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
@@ -15897,6 +20660,7 @@ Name | Type | Description  | Notes
  **openLDAPWriteStaticRoleRequest** | [**OpenLDAPWriteStaticRoleRequest**](OpenLDAPWriteStaticRoleRequest.md)|  | 
  **openldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;openldap&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15907,16 +20671,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkibundlewrite"></a>
 # **PKIBundleWrite**
@@ -15929,7 +20698,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -15942,15 +20713,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIBundleWriteRequest = new PKIBundleWriteRequest(); // PKIBundleWriteRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIBundleWrite(PKIBundleWriteRequest pKIBundleWriteRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -15971,6 +20756,7 @@ Name | Type | Description  | Notes
  **pKIBundleWriteRequest** | [**PKIBundleWriteRequest**](PKIBundleWriteRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -15981,16 +20767,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkideletekey"></a>
 # **PKIDeleteKey**
@@ -16003,7 +20794,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16016,15 +20809,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIDeleteKey(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16045,6 +20852,7 @@ Name | Type | Description  | Notes
  **keyRef** | **string**| Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key. | [default to &quot;default&quot;]
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16059,12 +20867,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkideleterole"></a>
 # **PKIDeleteRole**
@@ -16077,7 +20890,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16090,15 +20905,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIDeleteRole(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16119,6 +20948,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16133,12 +20963,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkideleteroot"></a>
 # **PKIDeleteRoot**
@@ -16151,7 +20986,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16164,14 +21001,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIDeleteRoot(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16191,6 +21038,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16205,12 +21053,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkigenerateroot"></a>
 # **PKIGenerateRoot**
@@ -16223,7 +21076,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16236,16 +21091,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
+            
+            
+            
+            
+            
             var pKIGenerateRootRequest = new PKIGenerateRootRequest(); // PKIGenerateRootRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIGenerateRoot(string exported, PKIGenerateRootRequest pKIGenerateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16267,6 +21140,7 @@ Name | Type | Description  | Notes
  **pKIGenerateRootRequest** | [**PKIGenerateRootRequest**](PKIGenerateRootRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16277,16 +21151,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiimportkeys"></a>
 # **PKIImportKeys**
@@ -16299,7 +21178,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16312,15 +21193,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIImportKeysRequest = new PKIImportKeysRequest(); // PKIImportKeysRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIImportKeys(PKIImportKeysRequest pKIImportKeysRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16341,6 +21236,7 @@ Name | Type | Description  | Notes
  **pKIImportKeysRequest** | [**PKIImportKeysRequest**](PKIImportKeysRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16351,16 +21247,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuerissuerole"></a>
 # **PKIIssuerIssueRole**
@@ -16373,7 +21274,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16386,17 +21289,39 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request
+            
+            
+            
+            
+            
             var pKIIssuerIssueRoleRequest = new PKIIssuerIssueRoleRequest(); // PKIIssuerIssueRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerIssueRole(string issuerRef, string role, PKIIssuerIssueRoleRequest pKIIssuerIssueRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16419,6 +21344,7 @@ Name | Type | Description  | Notes
  **pKIIssuerIssueRoleRequest** | [**PKIIssuerIssueRoleRequest**](PKIIssuerIssueRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16429,16 +21355,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuerresigncrls"></a>
 # **PKIIssuerResignCRLs**
@@ -16451,7 +21382,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16464,16 +21397,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
+            
             var pKIIssuerResignCRLsRequest = new PKIIssuerResignCRLsRequest(); // PKIIssuerResignCRLsRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerResignCRLs(string issuerRef, PKIIssuerResignCRLsRequest pKIIssuerResignCRLsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16495,6 +21446,7 @@ Name | Type | Description  | Notes
  **pKIIssuerResignCRLsRequest** | [**PKIIssuerResignCRLsRequest**](PKIIssuerResignCRLsRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16505,16 +21457,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuerrevoke"></a>
 # **PKIIssuerRevoke**
@@ -16527,7 +21484,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16540,15 +21499,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerRevoke(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16569,6 +21542,7 @@ Name | Type | Description  | Notes
  **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16583,12 +21557,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersignintermediate"></a>
 # **PKIIssuerSignIntermediate**
@@ -16601,7 +21580,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16614,16 +21595,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
+            
             var pKIIssuerSignIntermediateRequest = new PKIIssuerSignIntermediateRequest(); // PKIIssuerSignIntermediateRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerSignIntermediate(string issuerRef, PKIIssuerSignIntermediateRequest pKIIssuerSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16645,6 +21644,7 @@ Name | Type | Description  | Notes
  **pKIIssuerSignIntermediateRequest** | [**PKIIssuerSignIntermediateRequest**](PKIIssuerSignIntermediateRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16655,16 +21655,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersignrevocationlist"></a>
 # **PKIIssuerSignRevocationList**
@@ -16677,7 +21682,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16690,16 +21697,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
+            
             var pKIIssuerSignRevocationListRequest = new PKIIssuerSignRevocationListRequest(); // PKIIssuerSignRevocationListRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerSignRevocationList(string issuerRef, PKIIssuerSignRevocationListRequest pKIIssuerSignRevocationListRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16721,6 +21746,7 @@ Name | Type | Description  | Notes
  **pKIIssuerSignRevocationListRequest** | [**PKIIssuerSignRevocationListRequest**](PKIIssuerSignRevocationListRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16731,16 +21757,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersignrole"></a>
 # **PKIIssuerSignRole**
@@ -16753,7 +21784,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16766,17 +21799,39 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request
+            
+            
+            
+            
+            
             var pKIIssuerSignRoleRequest = new PKIIssuerSignRoleRequest(); // PKIIssuerSignRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerSignRole(string issuerRef, string role, PKIIssuerSignRoleRequest pKIIssuerSignRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16799,6 +21854,7 @@ Name | Type | Description  | Notes
  **pKIIssuerSignRoleRequest** | [**PKIIssuerSignRoleRequest**](PKIIssuerSignRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16809,16 +21865,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersignselfissued"></a>
 # **PKIIssuerSignSelfIssued**
@@ -16831,7 +21892,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16844,16 +21907,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
+            
             var pKIIssuerSignSelfIssuedRequest = new PKIIssuerSignSelfIssuedRequest(); // PKIIssuerSignSelfIssuedRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerSignSelfIssued(string issuerRef, PKIIssuerSignSelfIssuedRequest pKIIssuerSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16875,6 +21956,7 @@ Name | Type | Description  | Notes
  **pKIIssuerSignSelfIssuedRequest** | [**PKIIssuerSignSelfIssuedRequest**](PKIIssuerSignSelfIssuedRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16885,16 +21967,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersignverbatim"></a>
 # **PKIIssuerSignVerbatim**
@@ -16907,7 +21994,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16920,16 +22009,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
+            
             var pKIIssuerSignVerbatimRequest = new PKIIssuerSignVerbatimRequest(); // PKIIssuerSignVerbatimRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerSignVerbatim(string issuerRef, PKIIssuerSignVerbatimRequest pKIIssuerSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -16951,6 +22058,7 @@ Name | Type | Description  | Notes
  **pKIIssuerSignVerbatimRequest** | [**PKIIssuerSignVerbatimRequest**](PKIIssuerSignVerbatimRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -16961,16 +22069,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersignverbatimrole"></a>
 # **PKIIssuerSignVerbatimRole**
@@ -16983,7 +22096,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -16996,17 +22111,39 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request
+            
+            
+            
+            
+            
             var pKIIssuerSignVerbatimRoleRequest = new PKIIssuerSignVerbatimRoleRequest(); // PKIIssuerSignVerbatimRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuerSignVerbatimRole(string issuerRef, string role, PKIIssuerSignVerbatimRoleRequest pKIIssuerSignVerbatimRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17029,6 +22166,7 @@ Name | Type | Description  | Notes
  **pKIIssuerSignVerbatimRoleRequest** | [**PKIIssuerSignVerbatimRoleRequest**](PKIIssuerSignVerbatimRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17039,16 +22177,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersgenerateintermediate"></a>
 # **PKIIssuersGenerateIntermediate**
@@ -17061,7 +22204,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17074,16 +22219,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
+            
+            
+            
+            
+            
             var pKIIssuersGenerateIntermediateRequest = new PKIIssuersGenerateIntermediateRequest(); // PKIIssuersGenerateIntermediateRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuersGenerateIntermediate(string exported, PKIIssuersGenerateIntermediateRequest pKIIssuersGenerateIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17105,6 +22268,7 @@ Name | Type | Description  | Notes
  **pKIIssuersGenerateIntermediateRequest** | [**PKIIssuersGenerateIntermediateRequest**](PKIIssuersGenerateIntermediateRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17115,16 +22279,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuersgenerateroot"></a>
 # **PKIIssuersGenerateRoot**
@@ -17137,7 +22306,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17150,16 +22321,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
+            
+            
+            
+            
+            
             var pKIIssuersGenerateRootRequest = new PKIIssuersGenerateRootRequest(); // PKIIssuersGenerateRootRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuersGenerateRoot(string exported, PKIIssuersGenerateRootRequest pKIIssuersGenerateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17181,6 +22370,7 @@ Name | Type | Description  | Notes
  **pKIIssuersGenerateRootRequest** | [**PKIIssuersGenerateRootRequest**](PKIIssuersGenerateRootRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17191,16 +22381,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiissuerslist"></a>
 # **PKIIssuersList**
@@ -17213,7 +22408,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17226,15 +22423,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIIssuersList(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17255,6 +22466,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17269,12 +22481,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkilistcerts"></a>
 # **PKIListCerts**
@@ -17287,7 +22504,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17300,15 +22519,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIListCerts(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17329,6 +22562,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17343,12 +22577,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkilistcertsrevoked"></a>
 # **PKIListCertsRevoked**
@@ -17361,7 +22600,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17374,15 +22615,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIListCertsRevoked(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17403,6 +22658,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17417,12 +22673,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkilistkeys"></a>
 # **PKIListKeys**
@@ -17435,7 +22696,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17448,15 +22711,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIListKeys(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17477,6 +22754,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17491,12 +22769,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkilistroles"></a>
 # **PKIListRoles**
@@ -17509,7 +22792,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17522,15 +22807,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIListRoles(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17551,6 +22850,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17565,12 +22865,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadautotidyconfig"></a>
 # **PKIReadAutoTidyConfig**
@@ -17583,7 +22888,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17596,14 +22903,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadAutoTidyConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17623,6 +22940,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17637,12 +22955,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadca"></a>
 # **PKIReadCA**
@@ -17655,7 +22978,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17668,14 +22993,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCA(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17695,6 +23030,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17709,12 +23045,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcachain"></a>
 # **PKIReadCAChain**
@@ -17727,7 +23068,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17740,14 +23083,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCAChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17767,6 +23120,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17781,12 +23135,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcapem"></a>
 # **PKIReadCAPem**
@@ -17799,7 +23158,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17812,14 +23173,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCAPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17839,6 +23210,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17853,12 +23225,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcrl"></a>
 # **PKIReadCRL**
@@ -17871,7 +23248,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17884,14 +23263,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCRL(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17911,6 +23300,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17925,12 +23315,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcrlconfig"></a>
 # **PKIReadCRLConfig**
@@ -17943,7 +23338,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -17956,14 +23353,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCRLConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -17983,6 +23390,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -17997,12 +23405,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcrlrotate"></a>
 # **PKIReadCRLRotate**
@@ -18015,7 +23428,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18028,14 +23443,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCRLRotate(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18055,6 +23480,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18069,12 +23495,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcrlrotatedelta"></a>
 # **PKIReadCRLRotateDelta**
@@ -18087,7 +23518,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18100,14 +23533,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCRLRotateDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18127,6 +23570,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18141,12 +23585,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcert"></a>
 # **PKIReadCert**
@@ -18159,7 +23608,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18172,15 +23623,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCert(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18201,6 +23666,7 @@ Name | Type | Description  | Notes
  **serial** | **string**| Certificate serial number, in colon- or hyphen-separated octal | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18215,12 +23681,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcertcachain"></a>
 # **PKIReadCertCAChain**
@@ -18233,7 +23704,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18246,14 +23719,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCertCAChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18273,6 +23756,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18287,12 +23771,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcertraw"></a>
 # **PKIReadCertRaw**
@@ -18305,7 +23794,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18318,15 +23809,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCertRaw(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18347,6 +23852,7 @@ Name | Type | Description  | Notes
  **serial** | **string**| Certificate serial number, in colon- or hyphen-separated octal | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18361,12 +23867,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadcertrawpem"></a>
 # **PKIReadCertRawPem**
@@ -18379,7 +23890,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18392,15 +23905,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var serial = "serial_example";  // string | Certificate serial number, in colon- or hyphen-separated octal
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadCertRawPem(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18421,6 +23948,7 @@ Name | Type | Description  | Notes
  **serial** | **string**| Certificate serial number, in colon- or hyphen-separated octal | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18435,12 +23963,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadclusterconfig"></a>
 # **PKIReadClusterConfig**
@@ -18453,7 +23986,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18466,14 +24001,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadClusterConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18493,6 +24038,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18507,12 +24053,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireaddeltacrl"></a>
 # **PKIReadDeltaCRL**
@@ -18525,7 +24076,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18538,14 +24091,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadDeltaCRL(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18565,6 +24128,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18579,12 +24143,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadissuersconfig"></a>
 # **PKIReadIssuersConfig**
@@ -18597,7 +24166,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18610,14 +24181,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadIssuersConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18637,6 +24218,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18651,12 +24233,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadkey"></a>
 # **PKIReadKey**
@@ -18669,7 +24256,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18682,15 +24271,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadKey(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18711,6 +24314,7 @@ Name | Type | Description  | Notes
  **keyRef** | **string**| Reference to key; either \&quot;default\&quot; for the configured default key, an identifier of a key, or the name assigned to the key. | [default to &quot;default&quot;]
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18725,12 +24329,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadkeysconfig"></a>
 # **PKIReadKeysConfig**
@@ -18743,7 +24352,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18756,14 +24367,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadKeysConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18783,6 +24404,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18797,12 +24419,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadocspreq"></a>
 # **PKIReadOCSPReq**
@@ -18815,7 +24442,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18828,15 +24457,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var req = "req_example";  // string | base-64 encoded ocsp request
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadOCSPReq(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18857,6 +24500,7 @@ Name | Type | Description  | Notes
  **req** | **string**| base-64 encoded ocsp request | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18871,12 +24515,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadrole"></a>
 # **PKIReadRole**
@@ -18889,7 +24538,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18902,15 +24553,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadRole(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -18931,6 +24596,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -18945,12 +24611,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadurlconfig"></a>
 # **PKIReadURLConfig**
@@ -18963,7 +24634,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -18976,14 +24649,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReadURLConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19003,6 +24686,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19017,12 +24701,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireplaceroot"></a>
 # **PKIReplaceRoot**
@@ -19035,7 +24724,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19048,15 +24739,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIReplaceRootRequest = new PKIReplaceRootRequest(); // PKIReplaceRootRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIReplaceRoot(PKIReplaceRootRequest pKIReplaceRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19077,6 +24782,7 @@ Name | Type | Description  | Notes
  **pKIReplaceRootRequest** | [**PKIReplaceRootRequest**](PKIReplaceRootRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19087,16 +24793,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkirevoke"></a>
 # **PKIRevoke**
@@ -19109,7 +24820,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19122,15 +24835,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIRevokeRequest = new PKIRevokeRequest(); // PKIRevokeRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIRevoke(PKIRevokeRequest pKIRevokeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19151,6 +24878,7 @@ Name | Type | Description  | Notes
  **pKIRevokeRequest** | [**PKIRevokeRequest**](PKIRevokeRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19161,16 +24889,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkirevokewithkey"></a>
 # **PKIRevokeWithKey**
@@ -19183,7 +24916,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19196,15 +24931,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIRevokeWithKeyRequest = new PKIRevokeWithKeyRequest(); // PKIRevokeWithKeyRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIRevokeWithKey(PKIRevokeWithKeyRequest pKIRevokeWithKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19225,6 +24974,7 @@ Name | Type | Description  | Notes
  **pKIRevokeWithKeyRequest** | [**PKIRevokeWithKeyRequest**](PKIRevokeWithKeyRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19235,16 +24985,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkirootsignintermediate"></a>
 # **PKIRootSignIntermediate**
@@ -19257,7 +25012,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19270,15 +25027,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIRootSignIntermediateRequest = new PKIRootSignIntermediateRequest(); // PKIRootSignIntermediateRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIRootSignIntermediate(PKIRootSignIntermediateRequest pKIRootSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19299,6 +25070,7 @@ Name | Type | Description  | Notes
  **pKIRootSignIntermediateRequest** | [**PKIRootSignIntermediateRequest**](PKIRootSignIntermediateRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19309,16 +25081,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkirootsignselfissued"></a>
 # **PKIRootSignSelfIssued**
@@ -19331,7 +25108,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19344,15 +25123,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIRootSignSelfIssuedRequest = new PKIRootSignSelfIssuedRequest(); // PKIRootSignSelfIssuedRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIRootSignSelfIssued(PKIRootSignSelfIssuedRequest pKIRootSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19373,6 +25166,7 @@ Name | Type | Description  | Notes
  **pKIRootSignSelfIssuedRequest** | [**PKIRootSignSelfIssuedRequest**](PKIRootSignSelfIssuedRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19383,16 +25177,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkirotateroot"></a>
 # **PKIRotateRoot**
@@ -19405,7 +25204,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19418,16 +25219,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
+            
+            
+            
+            
+            
             var pKIRotateRootRequest = new PKIRotateRootRequest(); // PKIRotateRootRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIRotateRoot(string exported, PKIRotateRootRequest pKIRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19449,6 +25268,7 @@ Name | Type | Description  | Notes
  **pKIRotateRootRequest** | [**PKIRotateRootRequest**](PKIRotateRootRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19459,16 +25279,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkisignrole"></a>
 # **PKISignRole**
@@ -19481,7 +25306,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19494,16 +25321,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request
+            
+            
+            
+            
+            
             var pKISignRoleRequest = new PKISignRoleRequest(); // PKISignRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKISignRole(string role, PKISignRoleRequest pKISignRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19525,6 +25370,7 @@ Name | Type | Description  | Notes
  **pKISignRoleRequest** | [**PKISignRoleRequest**](PKISignRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19535,16 +25381,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkisignverbatim"></a>
 # **PKISignVerbatim**
@@ -19557,7 +25408,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19570,15 +25423,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKISignVerbatimRequest = new PKISignVerbatimRequest(); // PKISignVerbatimRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKISignVerbatim(PKISignVerbatimRequest pKISignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19599,6 +25466,7 @@ Name | Type | Description  | Notes
  **pKISignVerbatimRequest** | [**PKISignVerbatimRequest**](PKISignVerbatimRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19609,16 +25477,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkisignverbatimrole"></a>
 # **PKISignVerbatimRole**
@@ -19631,7 +25504,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19644,16 +25519,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request
+            
+            
+            
+            
+            
             var pKISignVerbatimRoleRequest = new PKISignVerbatimRoleRequest(); // PKISignVerbatimRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKISignVerbatimRole(string role, PKISignVerbatimRoleRequest pKISignVerbatimRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19675,6 +25568,7 @@ Name | Type | Description  | Notes
  **pKISignVerbatimRoleRequest** | [**PKISignVerbatimRoleRequest**](PKISignVerbatimRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19685,16 +25579,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkitidy"></a>
 # **PKITidy**
@@ -19707,7 +25606,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19720,15 +25621,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKITidyRequest = new PKITidyRequest(); // PKITidyRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKITidy(PKITidyRequest pKITidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19749,6 +25664,7 @@ Name | Type | Description  | Notes
  **pKITidyRequest** | [**PKITidyRequest**](PKITidyRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19759,16 +25675,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkitidycancel"></a>
 # **PKITidyCancel**
@@ -19781,7 +25702,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19794,14 +25717,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKITidyCancel(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19821,6 +25754,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19835,12 +25769,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkitidystatus"></a>
 # **PKITidyStatus**
@@ -19853,7 +25792,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19866,14 +25807,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKITidyStatus(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19893,6 +25844,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19907,12 +25859,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteautotidyconfig"></a>
 # **PKIWriteAutoTidyConfig**
@@ -19925,7 +25882,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -19938,15 +25897,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteAutoTidyConfigRequest = new PKIWriteAutoTidyConfigRequest(); // PKIWriteAutoTidyConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteAutoTidyConfig(PKIWriteAutoTidyConfigRequest pKIWriteAutoTidyConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -19967,6 +25940,7 @@ Name | Type | Description  | Notes
  **pKIWriteAutoTidyConfigRequest** | [**PKIWriteAutoTidyConfigRequest**](PKIWriteAutoTidyConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -19977,16 +25951,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritecaconfig"></a>
 # **PKIWriteCAConfig**
@@ -19999,7 +25978,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20012,15 +25993,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteCAConfigRequest = new PKIWriteCAConfigRequest(); // PKIWriteCAConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteCAConfig(PKIWriteCAConfigRequest pKIWriteCAConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20041,6 +26036,7 @@ Name | Type | Description  | Notes
  **pKIWriteCAConfigRequest** | [**PKIWriteCAConfigRequest**](PKIWriteCAConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20051,16 +26047,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritecrlconfig"></a>
 # **PKIWriteCRLConfig**
@@ -20073,7 +26074,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20086,15 +26089,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteCRLConfigRequest = new PKIWriteCRLConfigRequest(); // PKIWriteCRLConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteCRLConfig(PKIWriteCRLConfigRequest pKIWriteCRLConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20115,6 +26132,7 @@ Name | Type | Description  | Notes
  **pKIWriteCRLConfigRequest** | [**PKIWriteCRLConfigRequest**](PKIWriteCRLConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20125,16 +26143,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritecerts"></a>
 # **PKIWriteCerts**
@@ -20147,7 +26170,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20160,15 +26185,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteCertsRequest = new PKIWriteCertsRequest(); // PKIWriteCertsRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteCerts(PKIWriteCertsRequest pKIWriteCertsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20189,6 +26228,7 @@ Name | Type | Description  | Notes
  **pKIWriteCertsRequest** | [**PKIWriteCertsRequest**](PKIWriteCertsRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20199,16 +26239,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteclusterconfig"></a>
 # **PKIWriteClusterConfig**
@@ -20221,7 +26266,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20234,15 +26281,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteClusterConfigRequest = new PKIWriteClusterConfigRequest(); // PKIWriteClusterConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteClusterConfig(PKIWriteClusterConfigRequest pKIWriteClusterConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20263,6 +26324,7 @@ Name | Type | Description  | Notes
  **pKIWriteClusterConfigRequest** | [**PKIWriteClusterConfigRequest**](PKIWriteClusterConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20273,16 +26335,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteintermediatecrosssign"></a>
 # **PKIWriteIntermediateCrossSign**
@@ -20295,7 +26362,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20308,15 +26377,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteIntermediateCrossSignRequest = new PKIWriteIntermediateCrossSignRequest(); // PKIWriteIntermediateCrossSignRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteIntermediateCrossSign(PKIWriteIntermediateCrossSignRequest pKIWriteIntermediateCrossSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20337,6 +26420,7 @@ Name | Type | Description  | Notes
  **pKIWriteIntermediateCrossSignRequest** | [**PKIWriteIntermediateCrossSignRequest**](PKIWriteIntermediateCrossSignRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20347,16 +26431,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteintermediategenerate"></a>
 # **PKIWriteIntermediateGenerate**
@@ -20369,7 +26458,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20382,16 +26473,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
+            
+            
+            
+            
+            
             var pKIWriteIntermediateGenerateRequest = new PKIWriteIntermediateGenerateRequest(); // PKIWriteIntermediateGenerateRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteIntermediateGenerate(string exported, PKIWriteIntermediateGenerateRequest pKIWriteIntermediateGenerateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20413,6 +26522,7 @@ Name | Type | Description  | Notes
  **pKIWriteIntermediateGenerateRequest** | [**PKIWriteIntermediateGenerateRequest**](PKIWriteIntermediateGenerateRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20423,16 +26533,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteintermediatesetsigned"></a>
 # **PKIWriteIntermediateSetSigned**
@@ -20445,7 +26560,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20458,15 +26575,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteIntermediateSetSignedRequest = new PKIWriteIntermediateSetSignedRequest(); // PKIWriteIntermediateSetSignedRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteIntermediateSetSigned(PKIWriteIntermediateSetSignedRequest pKIWriteIntermediateSetSignedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20487,6 +26618,7 @@ Name | Type | Description  | Notes
  **pKIWriteIntermediateSetSignedRequest** | [**PKIWriteIntermediateSetSignedRequest**](PKIWriteIntermediateSetSignedRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20497,16 +26629,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteinternalexported"></a>
 # **PKIWriteInternalExported**
@@ -20519,7 +26656,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20532,15 +26671,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteInternalExportedRequest = new PKIWriteInternalExportedRequest(); // PKIWriteInternalExportedRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteInternalExported(PKIWriteInternalExportedRequest pKIWriteInternalExportedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20561,6 +26714,7 @@ Name | Type | Description  | Notes
  **pKIWriteInternalExportedRequest** | [**PKIWriteInternalExportedRequest**](PKIWriteInternalExportedRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20571,16 +26725,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteissuerole"></a>
 # **PKIWriteIssueRole**
@@ -20593,7 +26752,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20606,16 +26767,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request
+            
+            
+            
+            
+            
             var pKIWriteIssueRoleRequest = new PKIWriteIssueRoleRequest(); // PKIWriteIssueRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteIssueRole(string role, PKIWriteIssueRoleRequest pKIWriteIssueRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20637,6 +26816,7 @@ Name | Type | Description  | Notes
  **pKIWriteIssueRoleRequest** | [**PKIWriteIssueRoleRequest**](PKIWriteIssueRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20647,16 +26827,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteissuerrefderpem"></a>
 # **PKIWriteIssuerRefDerPEM**
@@ -20669,7 +26854,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20682,16 +26869,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
+            
             var pKIWriteIssuerRefDerPEMRequest = new PKIWriteIssuerRefDerPEMRequest(); // PKIWriteIssuerRefDerPEMRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20713,6 +26918,7 @@ Name | Type | Description  | Notes
  **pKIWriteIssuerRefDerPEMRequest** | [**PKIWriteIssuerRefDerPEMRequest**](PKIWriteIssuerRefDerPEMRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20723,16 +26929,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteissuersconfig"></a>
 # **PKIWriteIssuersConfig**
@@ -20745,7 +26956,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20758,15 +26971,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteIssuersConfigRequest = new PKIWriteIssuersConfigRequest(); // PKIWriteIssuersConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteIssuersConfig(PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20787,6 +27014,7 @@ Name | Type | Description  | Notes
  **pKIWriteIssuersConfigRequest** | [**PKIWriteIssuersConfigRequest**](PKIWriteIssuersConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20797,16 +27025,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritejson"></a>
 # **PKIWriteJSON**
@@ -20819,7 +27052,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20832,15 +27067,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteJSONRequest = new PKIWriteJSONRequest(); // PKIWriteJSONRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteJSON(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20861,6 +27110,7 @@ Name | Type | Description  | Notes
  **pKIWriteJSONRequest** | [**PKIWriteJSONRequest**](PKIWriteJSONRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20871,16 +27121,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritekms"></a>
 # **PKIWriteKMS**
@@ -20893,7 +27148,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20906,15 +27163,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteKMSRequest = new PKIWriteKMSRequest(); // PKIWriteKMSRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteKMS(PKIWriteKMSRequest pKIWriteKMSRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -20935,6 +27206,7 @@ Name | Type | Description  | Notes
  **pKIWriteKMSRequest** | [**PKIWriteKMSRequest**](PKIWriteKMSRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -20945,16 +27217,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritekey"></a>
 # **PKIWriteKey**
@@ -20967,7 +27244,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -20980,16 +27259,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var keyRef = "\"default\"";  // string | Reference to key; either \"default\" for the configured default key, an identifier of a key, or the name assigned to the key. (default to "default")
+            
+            
+            
+            
+            
             var pKIWriteKeyRequest = new PKIWriteKeyRequest(); // PKIWriteKeyRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteKey(string keyRef, PKIWriteKeyRequest pKIWriteKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21011,6 +27308,7 @@ Name | Type | Description  | Notes
  **pKIWriteKeyRequest** | [**PKIWriteKeyRequest**](PKIWriteKeyRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21021,16 +27319,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwritekeysconfig"></a>
 # **PKIWriteKeysConfig**
@@ -21043,7 +27346,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21056,15 +27361,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteKeysConfigRequest = new PKIWriteKeysConfigRequest(); // PKIWriteKeysConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteKeysConfig(PKIWriteKeysConfigRequest pKIWriteKeysConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21085,6 +27404,7 @@ Name | Type | Description  | Notes
  **pKIWriteKeysConfigRequest** | [**PKIWriteKeysConfigRequest**](PKIWriteKeysConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21095,16 +27415,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteocsp"></a>
 # **PKIWriteOCSP**
@@ -21117,7 +27442,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21130,14 +27457,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteOCSP(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21157,6 +27494,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21171,12 +27509,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriterole"></a>
 # **PKIWriteRole**
@@ -21189,7 +27532,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21202,16 +27547,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var pKIWriteRoleRequest = new PKIWriteRoleRequest(); // PKIWriteRoleRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteRole(string name, PKIWriteRoleRequest pKIWriteRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21233,6 +27596,7 @@ Name | Type | Description  | Notes
  **pKIWriteRoleRequest** | [**PKIWriteRoleRequest**](PKIWriteRoleRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21243,16 +27607,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkiwriteurlconfig"></a>
 # **PKIWriteURLConfig**
@@ -21265,7 +27634,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21278,15 +27649,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var pKIWriteURLConfigRequest = new PKIWriteURLConfigRequest(); // PKIWriteURLConfigRequest | 
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PKIWriteURLConfig(PKIWriteURLConfigRequest pKIWriteURLConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21307,6 +27692,7 @@ Name | Type | Description  | Notes
  **pKIWriteURLConfigRequest** | [**PKIWriteURLConfigRequest**](PKIWriteURLConfigRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21317,16 +27703,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkideleteissuerrefderpem"></a>
 # **PkiDeleteIssuerRefDerPem**
@@ -21339,7 +27730,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21352,15 +27745,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiDeleteIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21381,6 +27788,7 @@ Name | Type | Description  | Notes
  **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21395,12 +27803,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkideletejson"></a>
 # **PkiDeleteJson**
@@ -21413,7 +27826,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21426,14 +27841,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiDeleteJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21453,6 +27878,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21467,12 +27893,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireaddelta"></a>
 # **PkiReadDelta**
@@ -21485,7 +27916,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21498,14 +27931,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21525,6 +27968,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21539,12 +27983,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireaddeltapem"></a>
 # **PkiReadDeltaPem**
@@ -21557,7 +28006,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21570,14 +28021,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadDeltaPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21597,6 +28058,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21611,12 +28073,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadder"></a>
 # **PkiReadDer**
@@ -21629,7 +28096,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21642,14 +28111,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadDer(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21669,6 +28148,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21683,12 +28163,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadissuerrefcrlpemderdeltapem"></a>
 # **PkiReadIssuerRefCrlPemDerDeltaPem**
@@ -21701,7 +28186,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21714,15 +28201,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadIssuerRefCrlPemDerDeltaPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21743,6 +28244,7 @@ Name | Type | Description  | Notes
  **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21757,12 +28259,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadissuerrefderpem"></a>
 # **PkiReadIssuerRefDerPem**
@@ -21775,7 +28282,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21788,15 +28297,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21817,6 +28340,7 @@ Name | Type | Description  | Notes
  **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21831,12 +28355,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadjson"></a>
 # **PkiReadJson**
@@ -21849,7 +28378,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21862,14 +28393,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21889,6 +28430,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21903,12 +28445,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="pkireadpem"></a>
 # **PkiReadPem**
@@ -21921,7 +28468,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -21934,14 +28483,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.PkiReadPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
@@ -21961,6 +28520,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -21975,12 +28535,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqdeleterole"></a>
 # **RabbitMQDeleteRole**
@@ -21993,7 +28558,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22006,16 +28573,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.RabbitMQDeleteRole(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22036,6 +28618,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22050,12 +28633,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqlistroles"></a>
 # **RabbitMQListRoles**
@@ -22068,7 +28656,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22081,16 +28671,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.RabbitMQListRoles(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22111,6 +28716,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22125,12 +28731,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqreadcredentials"></a>
 # **RabbitMQReadCredentials**
@@ -22143,7 +28754,9 @@ Request RabbitMQ credentials for a certain role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22156,16 +28769,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Request RabbitMQ credentials for a certain role.
+                
 
                 apiInstance.RabbitMQReadCredentials(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22186,6 +28814,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22200,12 +28829,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqreadleaseconfig"></a>
 # **RabbitMQReadLeaseConfig**
@@ -22218,7 +28852,9 @@ Configure the lease parameters for generated credentials
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22231,15 +28867,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Configure the lease parameters for generated credentials
+                
 
                 apiInstance.RabbitMQReadLeaseConfig(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22259,6 +28906,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22273,12 +28921,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqreadrole"></a>
 # **RabbitMQReadRole**
@@ -22291,7 +28944,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22304,16 +28959,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.RabbitMQReadRole(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22334,6 +29004,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role. | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22348,12 +29019,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqwriteconnectionconfig"></a>
 # **RabbitMQWriteConnectionConfig**
@@ -22366,7 +29042,9 @@ Configure the connection URI, username, and password to talk to RabbitMQ managem
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22379,16 +29057,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var rabbitMQWriteConnectionConfigRequest = new RabbitMQWriteConnectionConfigRequest(); // RabbitMQWriteConnectionConfigRequest | 
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
+                
 
                 apiInstance.RabbitMQWriteConnectionConfig(RabbitMQWriteConnectionConfigRequest rabbitMQWriteConnectionConfigRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22409,6 +29102,7 @@ Name | Type | Description  | Notes
  **rabbitMQWriteConnectionConfigRequest** | [**RabbitMQWriteConnectionConfigRequest**](RabbitMQWriteConnectionConfigRequest.md)|  | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22419,16 +29113,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqwriteleaseconfig"></a>
 # **RabbitMQWriteLeaseConfig**
@@ -22441,7 +29140,9 @@ Configure the lease parameters for generated credentials
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22454,16 +29155,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var rabbitMQWriteLeaseConfigRequest = new RabbitMQWriteLeaseConfigRequest(); // RabbitMQWriteLeaseConfigRequest | 
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Configure the lease parameters for generated credentials
+                
 
                 apiInstance.RabbitMQWriteLeaseConfig(RabbitMQWriteLeaseConfigRequest rabbitMQWriteLeaseConfigRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22484,6 +29200,7 @@ Name | Type | Description  | Notes
  **rabbitMQWriteLeaseConfigRequest** | [**RabbitMQWriteLeaseConfigRequest**](RabbitMQWriteLeaseConfigRequest.md)|  | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22494,16 +29211,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="rabbitmqwriterole"></a>
 # **RabbitMQWriteRole**
@@ -22516,7 +29238,9 @@ Manage the roles that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22529,17 +29253,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role.
+            
+            
+            
+            
+            
             var rabbitMQWriteRoleRequest = new RabbitMQWriteRoleRequest(); // RabbitMQWriteRoleRequest | 
+            
+            
+            
             var rabbitmqMountPath = "\"rabbitmq\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "rabbitmq")
+            
+            
+            
 
             try
             {
+                
                 // Manage the roles that can be created with this backend.
+                
 
                 apiInstance.RabbitMQWriteRole(string name, RabbitMQWriteRoleRequest rabbitMQWriteRoleRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
@@ -22561,6 +29304,7 @@ Name | Type | Description  | Notes
  **rabbitMQWriteRoleRequest** | [**RabbitMQWriteRoleRequest**](RabbitMQWriteRoleRequest.md)|  | 
  **rabbitmqMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;rabbitmq&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22571,16 +29315,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshdeletecaconfig"></a>
 # **SSHDeleteCAConfig**
@@ -22593,7 +29342,9 @@ Set the SSH private key used for signing certificates.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22606,15 +29357,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Set the SSH private key used for signing certificates.
+                
 
                 apiInstance.SSHDeleteCAConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -22634,6 +29396,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22648,12 +29411,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshdeletekeys"></a>
 # **SSHDeleteKeys**
@@ -22666,7 +29434,9 @@ Register a shared private key with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22679,16 +29449,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var keyName = "keyName_example";  // string | [Required] Name of the key
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Register a shared private key with Vault.
+                
 
                 apiInstance.SSHDeleteKeys(string keyName, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -22709,6 +29494,7 @@ Name | Type | Description  | Notes
  **keyName** | **string**| [Required] Name of the key | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22723,12 +29509,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshdeleterole"></a>
 # **SSHDeleteRole**
@@ -22741,7 +29532,9 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22754,16 +29547,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Manage the 'roles' that can be created with this backend.
+                
 
                 apiInstance.SSHDeleteRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -22784,6 +29592,7 @@ Name | Type | Description  | Notes
  **role** | **string**| [Required for all types] Name of the role being created. | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22798,12 +29607,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshdeletezeroaddressconfig"></a>
 # **SSHDeleteZeroAddressConfig**
@@ -22816,7 +29630,9 @@ Assign zero address as default CIDR block for select roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22829,15 +29645,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Assign zero address as default CIDR block for select roles.
+                
 
                 apiInstance.SSHDeleteZeroAddressConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -22857,6 +29684,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22871,12 +29699,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshlistroles"></a>
 # **SSHListRoles**
@@ -22889,7 +29722,9 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22902,16 +29737,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Manage the 'roles' that can be created with this backend.
+                
 
                 apiInstance.SSHListRoles(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -22932,6 +29782,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -22946,12 +29797,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshlookup"></a>
 # **SSHLookup**
@@ -22964,7 +29820,9 @@ List all the roles associated with the given IP address.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -22977,16 +29835,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var sSHLookupRequest = new SSHLookupRequest(); // SSHLookupRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // List all the roles associated with the given IP address.
+                
 
                 apiInstance.SSHLookup(SSHLookupRequest sSHLookupRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23007,6 +29880,7 @@ Name | Type | Description  | Notes
  **sSHLookupRequest** | [**SSHLookupRequest**](SSHLookupRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23017,16 +29891,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshreadcaconfig"></a>
 # **SSHReadCAConfig**
@@ -23039,7 +29918,9 @@ Set the SSH private key used for signing certificates.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23052,15 +29933,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Set the SSH private key used for signing certificates.
+                
 
                 apiInstance.SSHReadCAConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23080,6 +29972,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23094,12 +29987,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshreadpublickey"></a>
 # **SSHReadPublicKey**
@@ -23112,7 +30010,9 @@ Retrieve the public key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23125,15 +30025,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Retrieve the public key.
+                
 
                 apiInstance.SSHReadPublicKey(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23153,6 +30064,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23167,12 +30079,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshreadrole"></a>
 # **SSHReadRole**
@@ -23185,7 +30102,9 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23198,16 +30117,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Manage the 'roles' that can be created with this backend.
+                
 
                 apiInstance.SSHReadRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23228,6 +30162,7 @@ Name | Type | Description  | Notes
  **role** | **string**| [Required for all types] Name of the role being created. | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23242,12 +30177,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshreadzeroaddressconfig"></a>
 # **SSHReadZeroAddressConfig**
@@ -23260,7 +30200,9 @@ Assign zero address as default CIDR block for select roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23273,15 +30215,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Assign zero address as default CIDR block for select roles.
+                
 
                 apiInstance.SSHReadZeroAddressConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23301,6 +30254,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23315,12 +30269,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshsign"></a>
 # **SSHSign**
@@ -23333,7 +30292,9 @@ Request signing an SSH key using a certain role with the provided details.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23346,17 +30307,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request.
+            
+            
+            
+            
+            
             var sSHSignRequest = new SSHSignRequest(); // SSHSignRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Request signing an SSH key using a certain role with the provided details.
+                
 
                 apiInstance.SSHSign(string role, SSHSignRequest sSHSignRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23378,6 +30358,7 @@ Name | Type | Description  | Notes
  **sSHSignRequest** | [**SSHSignRequest**](SSHSignRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23388,16 +30369,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshverify"></a>
 # **SSHVerify**
@@ -23410,7 +30396,9 @@ Validate the OTP provided by Vault SSH Agent.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23423,16 +30411,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var sSHVerifyRequest = new SSHVerifyRequest(); // SSHVerifyRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Validate the OTP provided by Vault SSH Agent.
+                
 
                 apiInstance.SSHVerify(SSHVerifyRequest sSHVerifyRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23453,6 +30456,7 @@ Name | Type | Description  | Notes
  **sSHVerifyRequest** | [**SSHVerifyRequest**](SSHVerifyRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23463,16 +30467,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshwritecaconfig"></a>
 # **SSHWriteCAConfig**
@@ -23485,7 +30494,9 @@ Set the SSH private key used for signing certificates.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23498,16 +30509,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var sSHWriteCAConfigRequest = new SSHWriteCAConfigRequest(); // SSHWriteCAConfigRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Set the SSH private key used for signing certificates.
+                
 
                 apiInstance.SSHWriteCAConfig(SSHWriteCAConfigRequest sSHWriteCAConfigRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23528,6 +30554,7 @@ Name | Type | Description  | Notes
  **sSHWriteCAConfigRequest** | [**SSHWriteCAConfigRequest**](SSHWriteCAConfigRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23538,16 +30565,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshwritecredentials"></a>
 # **SSHWriteCredentials**
@@ -23560,7 +30592,9 @@ Creates a credential for establishing SSH connection with the remote host.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23573,17 +30607,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | [Required] Name of the role
+            
+            
+            
+            
+            
             var sSHWriteCredentialsRequest = new SSHWriteCredentialsRequest(); // SSHWriteCredentialsRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Creates a credential for establishing SSH connection with the remote host.
+                
 
                 apiInstance.SSHWriteCredentials(string role, SSHWriteCredentialsRequest sSHWriteCredentialsRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23605,6 +30658,7 @@ Name | Type | Description  | Notes
  **sSHWriteCredentialsRequest** | [**SSHWriteCredentialsRequest**](SSHWriteCredentialsRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23615,16 +30669,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshwriteissue"></a>
 # **SSHWriteIssue**
@@ -23637,7 +30696,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23650,16 +30711,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | The desired role with configuration for this request.
+            
+            
+            
+            
+            
             var sSHWriteIssueRequest = new SSHWriteIssueRequest(); // SSHWriteIssueRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.SSHWriteIssue(string role, SSHWriteIssueRequest sSHWriteIssueRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23681,6 +30760,7 @@ Name | Type | Description  | Notes
  **sSHWriteIssueRequest** | [**SSHWriteIssueRequest**](SSHWriteIssueRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23691,16 +30771,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshwritekeys"></a>
 # **SSHWriteKeys**
@@ -23713,7 +30798,9 @@ Register a shared private key with Vault.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23726,17 +30813,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var keyName = "keyName_example";  // string | [Required] Name of the key
+            
+            
+            
+            
+            
             var sSHWriteKeysRequest = new SSHWriteKeysRequest(); // SSHWriteKeysRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Register a shared private key with Vault.
+                
 
                 apiInstance.SSHWriteKeys(string keyName, SSHWriteKeysRequest sSHWriteKeysRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23758,6 +30864,7 @@ Name | Type | Description  | Notes
  **sSHWriteKeysRequest** | [**SSHWriteKeysRequest**](SSHWriteKeysRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23768,16 +30875,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshwriterole"></a>
 # **SSHWriteRole**
@@ -23790,7 +30902,9 @@ Manage the 'roles' that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23803,17 +30917,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var role = "role_example";  // string | [Required for all types] Name of the role being created.
+            
+            
+            
+            
+            
             var sSHWriteRoleRequest = new SSHWriteRoleRequest(); // SSHWriteRoleRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Manage the 'roles' that can be created with this backend.
+                
 
                 apiInstance.SSHWriteRole(string role, SSHWriteRoleRequest sSHWriteRoleRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23835,6 +30968,7 @@ Name | Type | Description  | Notes
  **sSHWriteRoleRequest** | [**SSHWriteRoleRequest**](SSHWriteRoleRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23845,16 +30979,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="sshwritezeroaddressconfig"></a>
 # **SSHWriteZeroAddressConfig**
@@ -23867,7 +31006,9 @@ Assign zero address as default CIDR block for select roles.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23880,16 +31021,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var sSHWriteZeroAddressConfigRequest = new SSHWriteZeroAddressConfigRequest(); // SSHWriteZeroAddressConfigRequest | 
+            
+            
+            
             var sshMountPath = "\"ssh\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ssh")
+            
+            
+            
 
             try
             {
+                
                 // Assign zero address as default CIDR block for select roles.
+                
 
                 apiInstance.SSHWriteZeroAddressConfig(SSHWriteZeroAddressConfigRequest sSHWriteZeroAddressConfigRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
@@ -23910,6 +31066,7 @@ Name | Type | Description  | Notes
  **sSHWriteZeroAddressConfigRequest** | [**SSHWriteZeroAddressConfigRequest**](SSHWriteZeroAddressConfigRequest.md)|  | 
  **sshMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ssh&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23920,16 +31077,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="totpdeletekey"></a>
 # **TOTPDeleteKey**
@@ -23942,7 +31104,9 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -23955,16 +31119,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key.
+            
+            
+            
+            
             var totpMountPath = "\"totp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "totp")
+            
+            
+            
 
             try
             {
+                
                 // Manage the keys that can be created with this backend.
+                
 
                 apiInstance.TOTPDeleteKey(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
@@ -23985,6 +31164,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key. | 
  **totpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;totp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -23999,12 +31179,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="totplistkeys"></a>
 # **TOTPListKeys**
@@ -24017,7 +31202,9 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24030,16 +31217,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var totpMountPath = "\"totp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "totp")
+            
+            
+            
 
             try
             {
+                
                 // Manage the keys that can be created with this backend.
+                
 
                 apiInstance.TOTPListKeys(string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
@@ -24060,6 +31262,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **totpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;totp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24074,12 +31277,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="totpreadcode"></a>
 # **TOTPReadCode**
@@ -24092,7 +31300,9 @@ Request time-based one-time use password or validate a password for a certain ke
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24105,16 +31315,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key.
+            
+            
+            
+            
             var totpMountPath = "\"totp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "totp")
+            
+            
+            
 
             try
             {
+                
                 // Request time-based one-time use password or validate a password for a certain key .
+                
 
                 apiInstance.TOTPReadCode(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
@@ -24135,6 +31360,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key. | 
  **totpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;totp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24149,12 +31375,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="totpreadkey"></a>
 # **TOTPReadKey**
@@ -24167,7 +31398,9 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24180,16 +31413,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key.
+            
+            
+            
+            
             var totpMountPath = "\"totp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "totp")
+            
+            
+            
 
             try
             {
+                
                 // Manage the keys that can be created with this backend.
+                
 
                 apiInstance.TOTPReadKey(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
@@ -24210,6 +31458,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key. | 
  **totpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;totp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24224,12 +31473,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="totpwritecode"></a>
 # **TOTPWriteCode**
@@ -24242,7 +31496,9 @@ Request time-based one-time use password or validate a password for a certain ke
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24255,17 +31511,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key.
+            
+            
+            
+            
+            
             var tOTPWriteCodeRequest = new TOTPWriteCodeRequest(); // TOTPWriteCodeRequest | 
+            
+            
+            
             var totpMountPath = "\"totp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "totp")
+            
+            
+            
 
             try
             {
+                
                 // Request time-based one-time use password or validate a password for a certain key .
+                
 
                 apiInstance.TOTPWriteCode(string name, TOTPWriteCodeRequest tOTPWriteCodeRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
@@ -24287,6 +31562,7 @@ Name | Type | Description  | Notes
  **tOTPWriteCodeRequest** | [**TOTPWriteCodeRequest**](TOTPWriteCodeRequest.md)|  | 
  **totpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;totp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24297,16 +31573,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="totpwritekey"></a>
 # **TOTPWriteKey**
@@ -24319,7 +31600,9 @@ Manage the keys that can be created with this backend.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24332,17 +31615,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key.
+            
+            
+            
+            
+            
             var tOTPWriteKeyRequest = new TOTPWriteKeyRequest(); // TOTPWriteKeyRequest | 
+            
+            
+            
             var totpMountPath = "\"totp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "totp")
+            
+            
+            
 
             try
             {
+                
                 // Manage the keys that can be created with this backend.
+                
 
                 apiInstance.TOTPWriteKey(string name, TOTPWriteKeyRequest tOTPWriteKeyRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
@@ -24364,6 +31666,7 @@ Name | Type | Description  | Notes
  **tOTPWriteKeyRequest** | [**TOTPWriteKeyRequest**](TOTPWriteKeyRequest.md)|  | 
  **totpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;totp&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24374,16 +31677,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformdeleteconfig"></a>
 # **TerraformDeleteConfig**
@@ -24396,7 +31704,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24409,14 +31719,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformDeleteConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24436,6 +31756,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24450,12 +31771,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformdeleterole"></a>
 # **TerraformDeleteRole**
@@ -24468,7 +31794,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24481,15 +31809,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformDeleteRole(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24510,6 +31852,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24524,12 +31867,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformlistroles"></a>
 # **TerraformListRoles**
@@ -24542,7 +31890,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24555,15 +31905,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformListRoles(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24584,6 +31948,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24598,12 +31963,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformreadconfig"></a>
 # **TerraformReadConfig**
@@ -24616,7 +31986,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24629,14 +32001,24 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformReadConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24656,6 +32038,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24670,12 +32053,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformreadcredentials"></a>
 # **TerraformReadCredentials**
@@ -24688,7 +32076,9 @@ Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24701,16 +32091,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
                 // Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
+                
 
                 apiInstance.TerraformReadCredentials(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24731,6 +32136,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24745,12 +32151,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformreadrole"></a>
 # **TerraformReadRole**
@@ -24763,7 +32174,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24776,15 +32189,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformReadRole(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24805,6 +32232,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24819,12 +32247,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformrotaterole"></a>
 # **TerraformRotateRole**
@@ -24837,7 +32270,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24850,15 +32285,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the team or organization role
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformRotateRole(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24879,6 +32328,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the team or organization role | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24893,12 +32343,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformwriteconfig"></a>
 # **TerraformWriteConfig**
@@ -24911,7 +32366,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24924,15 +32381,29 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var terraformWriteConfigRequest = new TerraformWriteConfigRequest(); // TerraformWriteConfigRequest | 
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformWriteConfig(TerraformWriteConfigRequest terraformWriteConfigRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -24953,6 +32424,7 @@ Name | Type | Description  | Notes
  **terraformWriteConfigRequest** | [**TerraformWriteConfigRequest**](TerraformWriteConfigRequest.md)|  | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -24963,16 +32435,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformwritecredentials"></a>
 # **TerraformWriteCredentials**
@@ -24985,7 +32462,9 @@ Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -24998,16 +32477,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
                 // Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
+                
 
                 apiInstance.TerraformWriteCredentials(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -25028,6 +32522,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the role | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25042,12 +32537,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="terraformwriterole"></a>
 # **TerraformWriteRole**
@@ -25060,7 +32560,9 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25073,16 +32575,34 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            
             var terraformWriteRoleRequest = new TerraformWriteRoleRequest(); // TerraformWriteRoleRequest | 
+            
+            
+            
             var terraformMountPath = "\"terraform\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "terraform")
+            
+            
+            
 
             try
             {
+                
 
                 apiInstance.TerraformWriteRole(string name, TerraformWriteRoleRequest terraformWriteRoleRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
@@ -25104,6 +32624,7 @@ Name | Type | Description  | Notes
  **terraformWriteRoleRequest** | [**TerraformWriteRoleRequest**](TerraformWriteRoleRequest.md)|  | 
  **terraformMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;terraform&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25114,16 +32635,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitbackup"></a>
 # **TransitBackup**
@@ -25136,7 +32662,9 @@ Backup the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25149,16 +32677,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Backup the named key
+                
 
                 apiInstance.TransitBackup(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25179,6 +32722,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25193,12 +32737,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitdecrypt"></a>
 # **TransitDecrypt**
@@ -25211,7 +32760,9 @@ Decrypt a ciphertext value using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25224,17 +32775,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var transitDecryptRequest = new TransitDecryptRequest(); // TransitDecryptRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Decrypt a ciphertext value using a named key
+                
 
                 apiInstance.TransitDecrypt(string name, TransitDecryptRequest transitDecryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25256,6 +32826,7 @@ Name | Type | Description  | Notes
  **transitDecryptRequest** | [**TransitDecryptRequest**](TransitDecryptRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25266,16 +32837,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitdeletekey"></a>
 # **TransitDeleteKey**
@@ -25288,7 +32864,9 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25301,16 +32879,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Managed named encryption keys
+                
 
                 apiInstance.TransitDeleteKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25331,6 +32924,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25345,12 +32939,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **204** | empty body |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitencrypt"></a>
 # **TransitEncrypt**
@@ -25363,7 +32962,9 @@ Encrypt a plaintext value or a batch of plaintext blocks using a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25376,17 +32977,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var transitEncryptRequest = new TransitEncryptRequest(); // TransitEncryptRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Encrypt a plaintext value or a batch of plaintext blocks using a named key
+                
 
                 apiInstance.TransitEncrypt(string name, TransitEncryptRequest transitEncryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25408,6 +33028,7 @@ Name | Type | Description  | Notes
  **transitEncryptRequest** | [**TransitEncryptRequest**](TransitEncryptRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25418,16 +33039,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitexport"></a>
 # **TransitExport**
@@ -25440,7 +33066,9 @@ Export named encryption or signing key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25453,17 +33081,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
             var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Export named encryption or signing key
+                
 
                 apiInstance.TransitExport(string name, string type, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25485,6 +33132,7 @@ Name | Type | Description  | Notes
  **type** | **string**| Type of key to export (encryption-key, signing-key, hmac-key) | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25499,12 +33147,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitexportversion"></a>
 # **TransitExportVersion**
@@ -25517,7 +33170,9 @@ Export named encryption or signing key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25530,18 +33185,41 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
             var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
+            
+            
+            
+            
             var version = "version_example";  // string | Version of the key
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Export named encryption or signing key
+                
 
                 apiInstance.TransitExportVersion(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25564,6 +33242,7 @@ Name | Type | Description  | Notes
  **version** | **string**| Version of the key | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25578,12 +33257,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitgeneratedatakey"></a>
 # **TransitGenerateDataKey**
@@ -25596,7 +33280,9 @@ Generate a data key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25609,18 +33295,41 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The backend key used for encrypting the data key
+            
+            
+            
+            
             var plaintext = "plaintext_example";  // string | \"plaintext\" will return the key in both plaintext and ciphertext; \"wrapped\" will return the ciphertext only.
+            
+            
+            
+            
+            
             var transitGenerateDataKeyRequest = new TransitGenerateDataKeyRequest(); // TransitGenerateDataKeyRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate a data key
+                
 
                 apiInstance.TransitGenerateDataKey(string name, string plaintext, TransitGenerateDataKeyRequest transitGenerateDataKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25643,6 +33352,7 @@ Name | Type | Description  | Notes
  **transitGenerateDataKeyRequest** | [**TransitGenerateDataKeyRequest**](TransitGenerateDataKeyRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25653,16 +33363,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitgeneratehmac"></a>
 # **TransitGenerateHMAC**
@@ -25675,7 +33390,9 @@ Generate an HMAC for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25688,17 +33405,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The key to use for the HMAC function
+            
+            
+            
+            
+            
             var transitGenerateHMACRequest = new TransitGenerateHMACRequest(); // TransitGenerateHMACRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate an HMAC for input data using the named key
+                
 
                 apiInstance.TransitGenerateHMAC(string name, TransitGenerateHMACRequest transitGenerateHMACRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25720,6 +33456,7 @@ Name | Type | Description  | Notes
  **transitGenerateHMACRequest** | [**TransitGenerateHMACRequest**](TransitGenerateHMACRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25730,16 +33467,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitgeneratehmacwithalgorithm"></a>
 # **TransitGenerateHMACWithAlgorithm**
@@ -25752,7 +33494,9 @@ Generate an HMAC for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25765,18 +33509,41 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The key to use for the HMAC function
+            
+            
+            
+            
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
+            
+            
+            
+            
+            
             var transitGenerateHMACWithAlgorithmRequest = new TransitGenerateHMACWithAlgorithmRequest(); // TransitGenerateHMACWithAlgorithmRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate an HMAC for input data using the named key
+                
 
                 apiInstance.TransitGenerateHMACWithAlgorithm(string name, string urlalgorithm, TransitGenerateHMACWithAlgorithmRequest transitGenerateHMACWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25799,6 +33566,7 @@ Name | Type | Description  | Notes
  **transitGenerateHMACWithAlgorithmRequest** | [**TransitGenerateHMACWithAlgorithmRequest**](TransitGenerateHMACWithAlgorithmRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25809,16 +33577,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitgeneraterandom"></a>
 # **TransitGenerateRandom**
@@ -25831,7 +33604,9 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25844,16 +33619,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var transitGenerateRandomRequest = new TransitGenerateRandomRequest(); // TransitGenerateRandomRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate random bytes
+                
 
                 apiInstance.TransitGenerateRandom(TransitGenerateRandomRequest transitGenerateRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25874,6 +33664,7 @@ Name | Type | Description  | Notes
  **transitGenerateRandomRequest** | [**TransitGenerateRandomRequest**](TransitGenerateRandomRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25884,16 +33675,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitgeneraterandomsource"></a>
 # **TransitGenerateRandomSource**
@@ -25906,7 +33702,9 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25919,17 +33717,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
+            
+            
+            
+            
+            
             var transitGenerateRandomSourceRequest = new TransitGenerateRandomSourceRequest(); // TransitGenerateRandomSourceRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate random bytes
+                
 
                 apiInstance.TransitGenerateRandomSource(string source, TransitGenerateRandomSourceRequest transitGenerateRandomSourceRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -25951,6 +33768,7 @@ Name | Type | Description  | Notes
  **transitGenerateRandomSourceRequest** | [**TransitGenerateRandomSourceRequest**](TransitGenerateRandomSourceRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -25961,16 +33779,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitgeneraterandomsourcebytes"></a>
 # **TransitGenerateRandomSourceBytes**
@@ -25983,7 +33806,9 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -25996,18 +33821,41 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
+            
+            
+            
+            
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
+            
+            
+            
+            
+            
             var transitGenerateRandomSourceBytesRequest = new TransitGenerateRandomSourceBytesRequest(); // TransitGenerateRandomSourceBytesRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate random bytes
+                
 
                 apiInstance.TransitGenerateRandomSourceBytes(string source, string urlbytes, TransitGenerateRandomSourceBytesRequest transitGenerateRandomSourceBytesRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26030,6 +33878,7 @@ Name | Type | Description  | Notes
  **transitGenerateRandomSourceBytesRequest** | [**TransitGenerateRandomSourceBytesRequest**](TransitGenerateRandomSourceBytesRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26040,16 +33889,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transithash"></a>
 # **TransitHash**
@@ -26062,7 +33916,9 @@ Generate a hash sum for input data
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26075,16 +33931,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var transitHashRequest = new TransitHashRequest(); // TransitHashRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate a hash sum for input data
+                
 
                 apiInstance.TransitHash(TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26105,6 +33976,7 @@ Name | Type | Description  | Notes
  **transitHashRequest** | [**TransitHashRequest**](TransitHashRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26115,16 +33987,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transithashwithalgorithm"></a>
 # **TransitHashWithAlgorithm**
@@ -26137,7 +34014,9 @@ Generate a hash sum for input data
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26150,17 +34029,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
+            
+            
+            
+            
+            
             var transitHashWithAlgorithmRequest = new TransitHashWithAlgorithmRequest(); // TransitHashWithAlgorithmRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate a hash sum for input data
+                
 
                 apiInstance.TransitHashWithAlgorithm(string urlalgorithm, TransitHashWithAlgorithmRequest transitHashWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26182,6 +34080,7 @@ Name | Type | Description  | Notes
  **transitHashWithAlgorithmRequest** | [**TransitHashWithAlgorithmRequest**](TransitHashWithAlgorithmRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26192,16 +34091,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitimportkey"></a>
 # **TransitImportKey**
@@ -26214,7 +34118,9 @@ Imports an externally-generated key into a new transit key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26227,17 +34133,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The name of the key
+            
+            
+            
+            
+            
             var transitImportKeyRequest = new TransitImportKeyRequest(); // TransitImportKeyRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Imports an externally-generated key into a new transit key
+                
 
                 apiInstance.TransitImportKey(string name, TransitImportKeyRequest transitImportKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26259,6 +34184,7 @@ Name | Type | Description  | Notes
  **transitImportKeyRequest** | [**TransitImportKeyRequest**](TransitImportKeyRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26269,16 +34195,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitimportkeyversion"></a>
 # **TransitImportKeyVersion**
@@ -26291,7 +34222,9 @@ Imports an externally-generated key into an existing imported key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26304,17 +34237,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The name of the key
+            
+            
+            
+            
+            
             var transitImportKeyVersionRequest = new TransitImportKeyVersionRequest(); // TransitImportKeyVersionRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Imports an externally-generated key into an existing imported key
+                
 
                 apiInstance.TransitImportKeyVersion(string name, TransitImportKeyVersionRequest transitImportKeyVersionRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26336,6 +34288,7 @@ Name | Type | Description  | Notes
  **transitImportKeyVersionRequest** | [**TransitImportKeyVersionRequest**](TransitImportKeyVersionRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26346,16 +34299,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitlistkeys"></a>
 # **TransitListKeys**
@@ -26368,7 +34326,9 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26381,16 +34341,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Managed named encryption keys
+                
 
                 apiInstance.TransitListKeys(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26411,6 +34386,7 @@ Name | Type | Description  | Notes
  **list** | **string**| Must be set to &#x60;true&#x60; | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26425,12 +34401,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitreadcacheconfig"></a>
 # **TransitReadCacheConfig**
@@ -26443,7 +34424,9 @@ Returns the size of the active cache
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26456,15 +34439,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Returns the size of the active cache
+                
 
                 apiInstance.TransitReadCacheConfig(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26484,6 +34478,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26498,12 +34493,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitreadconfigkeys"></a>
 # **TransitReadConfigKeys**
@@ -26516,7 +34516,9 @@ Configuration common across all keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26529,15 +34531,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Configuration common across all keys
+                
 
                 apiInstance.TransitReadConfigKeys(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26557,6 +34570,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26571,12 +34585,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitreadkey"></a>
 # **TransitReadKey**
@@ -26589,7 +34608,9 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26602,16 +34623,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Managed named encryption keys
+                
 
                 apiInstance.TransitReadKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26632,6 +34668,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26646,12 +34683,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitreadwrappingkey"></a>
 # **TransitReadWrappingKey**
@@ -26664,7 +34706,9 @@ Returns the public key to use for wrapping imported keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26677,15 +34721,26 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Returns the public key to use for wrapping imported keys
+                
 
                 apiInstance.TransitReadWrappingKey(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26705,6 +34760,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26719,12 +34775,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitrestore"></a>
 # **TransitRestore**
@@ -26737,7 +34798,9 @@ Restore the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26750,16 +34813,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var transitRestoreRequest = new TransitRestoreRequest(); // TransitRestoreRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Restore the named key
+                
 
                 apiInstance.TransitRestore(TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26780,6 +34858,7 @@ Name | Type | Description  | Notes
  **transitRestoreRequest** | [**TransitRestoreRequest**](TransitRestoreRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26790,16 +34869,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitrestorekey"></a>
 # **TransitRestoreKey**
@@ -26812,7 +34896,9 @@ Restore the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26825,17 +34911,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | If set, this will be the name of the restored key.
+            
+            
+            
+            
+            
             var transitRestoreKeyRequest = new TransitRestoreKeyRequest(); // TransitRestoreKeyRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Restore the named key
+                
 
                 apiInstance.TransitRestoreKey(string name, TransitRestoreKeyRequest transitRestoreKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26857,6 +34962,7 @@ Name | Type | Description  | Notes
  **transitRestoreKeyRequest** | [**TransitRestoreKeyRequest**](TransitRestoreKeyRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26867,16 +34973,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitrewrap"></a>
 # **TransitRewrap**
@@ -26889,7 +35000,9 @@ Rewrap ciphertext
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26902,17 +35015,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var transitRewrapRequest = new TransitRewrapRequest(); // TransitRewrapRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Rewrap ciphertext
+                
 
                 apiInstance.TransitRewrap(string name, TransitRewrapRequest transitRewrapRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -26934,6 +35066,7 @@ Name | Type | Description  | Notes
  **transitRewrapRequest** | [**TransitRewrapRequest**](TransitRewrapRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -26944,16 +35077,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitrotatekey"></a>
 # **TransitRotateKey**
@@ -26966,7 +35104,9 @@ Rotate named encryption key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -26979,16 +35119,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Rotate named encryption key
+                
 
                 apiInstance.TransitRotateKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27009,6 +35164,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27023,12 +35179,17 @@ No authorization required
  - **Accept**: Not defined
 
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitsign"></a>
 # **TransitSign**
@@ -27041,7 +35202,9 @@ Generate a signature for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27054,17 +35217,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The key to use
+            
+            
+            
+            
+            
             var transitSignRequest = new TransitSignRequest(); // TransitSignRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate a signature for input data using the named key
+                
 
                 apiInstance.TransitSign(string name, TransitSignRequest transitSignRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27086,6 +35268,7 @@ Name | Type | Description  | Notes
  **transitSignRequest** | [**TransitSignRequest**](TransitSignRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27096,16 +35279,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitsignwithalgorithm"></a>
 # **TransitSignWithAlgorithm**
@@ -27118,7 +35306,9 @@ Generate a signature for input data using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27131,18 +35321,41 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The key to use
+            
+            
+            
+            
             var urlalgorithm = "urlalgorithm_example";  // string | Hash algorithm to use (POST URL parameter)
+            
+            
+            
+            
+            
             var transitSignWithAlgorithmRequest = new TransitSignWithAlgorithmRequest(); // TransitSignWithAlgorithmRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate a signature for input data using the named key
+                
 
                 apiInstance.TransitSignWithAlgorithm(string name, string urlalgorithm, TransitSignWithAlgorithmRequest transitSignWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27165,6 +35378,7 @@ Name | Type | Description  | Notes
  **transitSignWithAlgorithmRequest** | [**TransitSignWithAlgorithmRequest**](TransitSignWithAlgorithmRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27175,16 +35389,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transittrimkey"></a>
 # **TransitTrimKey**
@@ -27197,7 +35416,9 @@ Trim key versions of a named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27210,17 +35431,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var transitTrimKeyRequest = new TransitTrimKeyRequest(); // TransitTrimKeyRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Trim key versions of a named key
+                
 
                 apiInstance.TransitTrimKey(string name, TransitTrimKeyRequest transitTrimKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27242,6 +35482,7 @@ Name | Type | Description  | Notes
  **transitTrimKeyRequest** | [**TransitTrimKeyRequest**](TransitTrimKeyRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27252,16 +35493,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitverify"></a>
 # **TransitVerify**
@@ -27274,7 +35520,9 @@ Verify a signature or HMAC for input data created using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27287,17 +35535,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The key to use
+            
+            
+            
+            
+            
             var transitVerifyRequest = new TransitVerifyRequest(); // TransitVerifyRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Verify a signature or HMAC for input data created using the named key
+                
 
                 apiInstance.TransitVerify(string name, TransitVerifyRequest transitVerifyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27319,6 +35586,7 @@ Name | Type | Description  | Notes
  **transitVerifyRequest** | [**TransitVerifyRequest**](TransitVerifyRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27329,16 +35597,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitverifywithalgorithm"></a>
 # **TransitVerifyWithAlgorithm**
@@ -27351,7 +35624,9 @@ Verify a signature or HMAC for input data created using the named key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27364,18 +35639,41 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | The key to use
+            
+            
+            
+            
             var urlalgorithm = "urlalgorithm_example";  // string | Hash algorithm to use (POST URL parameter)
+            
+            
+            
+            
+            
             var transitVerifyWithAlgorithmRequest = new TransitVerifyWithAlgorithmRequest(); // TransitVerifyWithAlgorithmRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Verify a signature or HMAC for input data created using the named key
+                
 
                 apiInstance.TransitVerifyWithAlgorithm(string name, string urlalgorithm, TransitVerifyWithAlgorithmRequest transitVerifyWithAlgorithmRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27398,6 +35696,7 @@ Name | Type | Description  | Notes
  **transitVerifyWithAlgorithmRequest** | [**TransitVerifyWithAlgorithmRequest**](TransitVerifyWithAlgorithmRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27408,16 +35707,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitwritecacheconfig"></a>
 # **TransitWriteCacheConfig**
@@ -27430,7 +35734,9 @@ Configures a new cache of the specified size
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27443,16 +35749,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var transitWriteCacheConfigRequest = new TransitWriteCacheConfigRequest(); // TransitWriteCacheConfigRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Configures a new cache of the specified size
+                
 
                 apiInstance.TransitWriteCacheConfig(TransitWriteCacheConfigRequest transitWriteCacheConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27473,6 +35794,7 @@ Name | Type | Description  | Notes
  **transitWriteCacheConfigRequest** | [**TransitWriteCacheConfigRequest**](TransitWriteCacheConfigRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27483,16 +35805,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitwriteconfigkeys"></a>
 # **TransitWriteConfigKeys**
@@ -27505,7 +35832,9 @@ Configuration common across all keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27518,16 +35847,31 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
             var transitWriteConfigKeysRequest = new TransitWriteConfigKeysRequest(); // TransitWriteConfigKeysRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Configuration common across all keys
+                
 
                 apiInstance.TransitWriteConfigKeys(TransitWriteConfigKeysRequest transitWriteConfigKeysRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27548,6 +35892,7 @@ Name | Type | Description  | Notes
  **transitWriteConfigKeysRequest** | [**TransitWriteConfigKeysRequest**](TransitWriteConfigKeysRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27558,16 +35903,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitwritekey"></a>
 # **TransitWriteKey**
@@ -27580,7 +35930,9 @@ Managed named encryption keys
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27593,17 +35945,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var transitWriteKeyRequest = new TransitWriteKeyRequest(); // TransitWriteKeyRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Managed named encryption keys
+                
 
                 apiInstance.TransitWriteKey(string name, TransitWriteKeyRequest transitWriteKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27625,6 +35996,7 @@ Name | Type | Description  | Notes
  **transitWriteKeyRequest** | [**TransitWriteKeyRequest**](TransitWriteKeyRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27635,16 +36007,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitwritekeyconfig"></a>
 # **TransitWriteKeyConfig**
@@ -27657,7 +36034,9 @@ Configure a named encryption key
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27670,17 +36049,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            
             var transitWriteKeyConfigRequest = new TransitWriteKeyConfigRequest(); // TransitWriteKeyConfigRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Configure a named encryption key
+                
 
                 apiInstance.TransitWriteKeyConfig(string name, TransitWriteKeyConfigRequest transitWriteKeyConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27702,6 +36100,7 @@ Name | Type | Description  | Notes
  **transitWriteKeyConfigRequest** | [**TransitWriteKeyConfigRequest**](TransitWriteKeyConfigRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27712,16 +36111,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: , 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 
 <a name="transitwriterandomurlbytes"></a>
 # **TransitWriteRandomUrlbytes**
@@ -27734,7 +36138,9 @@ Generate random bytes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+
 using System.Net.Http;
+
 using Vault.Api;
 using Vault.Client;
 using Vault.Model;
@@ -27747,17 +36153,36 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost";
+            
+            
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
+            
+            
+            
+            
+            
             var transitWriteRandomUrlbytesRequest = new TransitWriteRandomUrlbytesRequest(); // TransitWriteRandomUrlbytesRequest | 
+            
+            
+            
             var transitMountPath = "\"transit\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "transit")
+            
+            
+            
 
             try
             {
+                
                 // Generate random bytes
+                
 
                 apiInstance.TransitWriteRandomUrlbytes(string urlbytes, TransitWriteRandomUrlbytesRequest transitWriteRandomUrlbytesRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
@@ -27779,6 +36204,7 @@ Name | Type | Description  | Notes
  **transitWriteRandomUrlbytesRequest** | [**TransitWriteRandomUrlbytesRequest**](TransitWriteRandomUrlbytesRequest.md)|  | 
  **transitMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;transit&quot;]
 
+
 ### Return type
 
 void (empty response body)
@@ -27789,14 +36215,20 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: 
  - **Accept**: Not defined
+
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+
 | **200** | OK |  -  |
 
+
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 

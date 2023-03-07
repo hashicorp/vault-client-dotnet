@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleWritePeriodRequest")]
     public partial class AppRoleWritePeriodRequest : IEquatable<AppRoleWritePeriodRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWritePeriodRequest" /> class.
         /// </summary>
-        /// <param name="period">Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used..</param>
-        /// <param name="tokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
-        public AppRoleWritePeriodRequest(int period = default(int), int tokenPeriod = default(int))
+
+        /// <param name="Period">Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used..</param>
+
+        /// <param name="TokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
+
+
+        public AppRoleWritePeriodRequest(int Period = default(int), int TokenPeriod = default(int))
         {
-            this.Period = period;
-            this.TokenPeriod = tokenPeriod;
+
+            this.Period = Period;
+
+            this.TokenPeriod = TokenPeriod;
+
         }
 
         /// <summary>
@@ -43,15 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
-        [Obsolete]
-        public int Period { get; set; }
+
+        [Obsolete] public int Period { get; set; }
+
 
         /// <summary>
         /// If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).
         /// </summary>
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
+
         public int TokenPeriod { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -100,12 +115,15 @@ namespace Vault.Model
             return
                 (
                     this.Period == input.Period ||
+
                     this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+
                     this.TokenPeriod.Equals(input.TokenPeriod)
                 );
+
         }
 
         /// <summary>
@@ -117,7 +135,10 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Period.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 return hashCode;
             }

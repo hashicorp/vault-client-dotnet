@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "TransitWriteConfigKeysRequest")]
     public partial class TransitWriteConfigKeysRequest : IEquatable<TransitWriteConfigKeysRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitWriteConfigKeysRequest" /> class.
         /// </summary>
-        /// <param name="disableUpsert">Whether to allow automatic upserting (creation) of keys on the encrypt endpoint..</param>
-        public TransitWriteConfigKeysRequest(bool disableUpsert = default(bool))
+
+        /// <param name="DisableUpsert">Whether to allow automatic upserting (creation) of keys on the encrypt endpoint..</param>
+
+
+        public TransitWriteConfigKeysRequest(bool DisableUpsert = default(bool))
         {
-            this.DisableUpsert = disableUpsert;
+
+            this.DisableUpsert = DisableUpsert;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether to allow automatic upserting (creation) of keys on the encrypt endpoint.</value>
         [DataMember(Name = "disable_upsert", EmitDefaultValue = true)]
+
         public bool DisableUpsert { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.DisableUpsert == input.DisableUpsert ||
+
                     this.DisableUpsert.Equals(input.DisableUpsert)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.DisableUpsert.GetHashCode();
                 return hashCode;
             }

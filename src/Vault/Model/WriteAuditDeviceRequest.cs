@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,19 +28,32 @@ namespace Vault.Model
     [DataContract(Name = "WriteAuditDeviceRequest")]
     public partial class WriteAuditDeviceRequest : IEquatable<WriteAuditDeviceRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteAuditDeviceRequest" /> class.
         /// </summary>
-        /// <param name="description">User-friendly description for this audit backend..</param>
-        /// <param name="local">Mark the mount as a local mount, which is not replicated and is unaffected by replication. (default to false).</param>
-        /// <param name="options">Configuration options for the audit backend..</param>
-        /// <param name="type">The type of the backend. Example: \&quot;mysql\&quot;.</param>
-        public WriteAuditDeviceRequest(string description = default(string), bool local = false, Object options = default(Object), string type = default(string))
+
+        /// <param name="Description">User-friendly description for this audit backend..</param>
+
+        /// <param name="Local">Mark the mount as a local mount, which is not replicated and is unaffected by replication. (default to false).</param>
+
+        /// <param name="Options">Configuration options for the audit backend..</param>
+
+        /// <param name="Type">The type of the backend. Example: \&quot;mysql\&quot;.</param>
+
+
+        public WriteAuditDeviceRequest(string Description = default(string), bool Local = false, Object Options = default(Object), string Type = default(string))
         {
-            this.Description = description;
-            this.Local = local;
-            this.Options = options;
-            this.Type = type;
+
+            this.Description = Description;
+
+            this.Local = Local;
+
+            this.Options = Options;
+
+            this.Type = Type;
+
         }
 
         /// <summary>
@@ -47,28 +61,38 @@ namespace Vault.Model
         /// </summary>
         /// <value>User-friendly description for this audit backend.</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
+
         public string Description { get; set; }
+
 
         /// <summary>
         /// Mark the mount as a local mount, which is not replicated and is unaffected by replication.
         /// </summary>
         /// <value>Mark the mount as a local mount, which is not replicated and is unaffected by replication.</value>
         [DataMember(Name = "local", EmitDefaultValue = true)]
+
         public bool Local { get; set; }
+
 
         /// <summary>
         /// Configuration options for the audit backend.
         /// </summary>
         /// <value>Configuration options for the audit backend.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
+
         public Object Options { get; set; }
+
 
         /// <summary>
         /// The type of the backend. Example: \&quot;mysql\&quot;
         /// </summary>
         /// <value>The type of the backend. Example: \&quot;mysql\&quot;</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
+
         public string Type { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -121,21 +145,26 @@ namespace Vault.Model
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
+
                 ) &&
                 (
                     this.Local == input.Local ||
+
                     this.Local.Equals(input.Local)
                 ) &&
                 (
                     this.Options == input.Options ||
                     (this.Options != null &&
                     this.Options.Equals(input.Options))
+
                 ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+
                 );
+
         }
 
         /// <summary>
@@ -147,19 +176,24 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Description != null)
                 {
                     hashCode = (hashCode * 59) + this.Description.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Local.GetHashCode();
                 if (this.Options != null)
                 {
                     hashCode = (hashCode * 59) + this.Options.GetHashCode();
                 }
+
                 if (this.Type != null)
                 {
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

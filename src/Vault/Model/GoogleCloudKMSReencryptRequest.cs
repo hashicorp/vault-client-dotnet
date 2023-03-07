@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudKMSReencryptRequest")]
     public partial class GoogleCloudKMSReencryptRequest : IEquatable<GoogleCloudKMSReencryptRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudKMSReencryptRequest" /> class.
         /// </summary>
-        /// <param name="additionalAuthenticatedData">Optional data that, if specified, must also be provided during decryption..</param>
-        /// <param name="ciphertext">Ciphertext to be re-encrypted to the latest key version. This must be ciphertext that Vault previously generated for this named key..</param>
-        /// <param name="keyVersion">Integer version of the crypto key version to use for the new encryption. If unspecified, this defaults to the latest active crypto key version..</param>
-        public GoogleCloudKMSReencryptRequest(string additionalAuthenticatedData = default(string), string ciphertext = default(string), int keyVersion = default(int))
+
+        /// <param name="AdditionalAuthenticatedData">Optional data that, if specified, must also be provided during decryption..</param>
+
+        /// <param name="Ciphertext">Ciphertext to be re-encrypted to the latest key version. This must be ciphertext that Vault previously generated for this named key..</param>
+
+        /// <param name="KeyVersion">Integer version of the crypto key version to use for the new encryption. If unspecified, this defaults to the latest active crypto key version..</param>
+
+
+        public GoogleCloudKMSReencryptRequest(string AdditionalAuthenticatedData = default(string), string Ciphertext = default(string), int KeyVersion = default(int))
         {
-            this.AdditionalAuthenticatedData = additionalAuthenticatedData;
-            this.Ciphertext = ciphertext;
-            this.KeyVersion = keyVersion;
+
+            this.AdditionalAuthenticatedData = AdditionalAuthenticatedData;
+
+            this.Ciphertext = Ciphertext;
+
+            this.KeyVersion = KeyVersion;
+
         }
 
         /// <summary>
@@ -45,21 +57,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>Optional data that, if specified, must also be provided during decryption.</value>
         [DataMember(Name = "additional_authenticated_data", EmitDefaultValue = false)]
+
         public string AdditionalAuthenticatedData { get; set; }
+
 
         /// <summary>
         /// Ciphertext to be re-encrypted to the latest key version. This must be ciphertext that Vault previously generated for this named key.
         /// </summary>
         /// <value>Ciphertext to be re-encrypted to the latest key version. This must be ciphertext that Vault previously generated for this named key.</value>
         [DataMember(Name = "ciphertext", EmitDefaultValue = false)]
+
         public string Ciphertext { get; set; }
+
 
         /// <summary>
         /// Integer version of the crypto key version to use for the new encryption. If unspecified, this defaults to the latest active crypto key version.
         /// </summary>
         /// <value>Integer version of the crypto key version to use for the new encryption. If unspecified, this defaults to the latest active crypto key version.</value>
         [DataMember(Name = "key_version", EmitDefaultValue = false)]
+
         public int KeyVersion { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,16 +131,20 @@ namespace Vault.Model
                     this.AdditionalAuthenticatedData == input.AdditionalAuthenticatedData ||
                     (this.AdditionalAuthenticatedData != null &&
                     this.AdditionalAuthenticatedData.Equals(input.AdditionalAuthenticatedData))
+
                 ) &&
                 (
                     this.Ciphertext == input.Ciphertext ||
                     (this.Ciphertext != null &&
                     this.Ciphertext.Equals(input.Ciphertext))
+
                 ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
+
                     this.KeyVersion.Equals(input.KeyVersion)
                 );
+
         }
 
         /// <summary>
@@ -132,14 +156,18 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AdditionalAuthenticatedData != null)
                 {
                     hashCode = (hashCode * 59) + this.AdditionalAuthenticatedData.GetHashCode();
                 }
+
                 if (this.Ciphertext != null)
                 {
                     hashCode = (hashCode * 59) + this.Ciphertext.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.KeyVersion.GetHashCode();
                 return hashCode;
             }

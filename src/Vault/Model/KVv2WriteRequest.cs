@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,17 +28,28 @@ namespace Vault.Model
     [DataContract(Name = "KVv2WriteRequest")]
     public partial class KVv2WriteRequest : IEquatable<KVv2WriteRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="KVv2WriteRequest" /> class.
         /// </summary>
-        /// <param name="data">The contents of the data map will be stored and returned on read..</param>
-        /// <param name="options">Options for writing a KV entry. Set the \&quot;cas\&quot; value to use a Check-And-Set operation. If not set the write will be allowed. If set to 0 a write will only be allowed if the key doesn’t exist. If the index is non-zero the write will only be allowed if the key’s current version matches the version specified in the cas parameter..</param>
-        /// <param name="version">If provided during a read, the value at the version number will be returned.</param>
-        public KVv2WriteRequest(Object data = default(Object), Object options = default(Object), int version = default(int))
+
+        /// <param name="Data">The contents of the data map will be stored and returned on read..</param>
+
+        /// <param name="Options">Options for writing a KV entry. Set the \&quot;cas\&quot; value to use a Check-And-Set operation. If not set the write will be allowed. If set to 0 a write will only be allowed if the key doesn’t exist. If the index is non-zero the write will only be allowed if the key’s current version matches the version specified in the cas parameter..</param>
+
+        /// <param name="_Version">If provided during a read, the value at the version number will be returned.</param>
+
+
+        public KVv2WriteRequest(Object Data = default(Object), Object Options = default(Object), int _Version = default(int))
         {
-            this.Data = data;
-            this.Options = options;
-            this._Version = version;
+
+            this.Data = Data;
+
+            this.Options = Options;
+
+            this._Version = _Version;
+
         }
 
         /// <summary>
@@ -45,21 +57,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>The contents of the data map will be stored and returned on read.</value>
         [DataMember(Name = "data", EmitDefaultValue = false)]
+
         public Object Data { get; set; }
+
 
         /// <summary>
         /// Options for writing a KV entry. Set the \&quot;cas\&quot; value to use a Check-And-Set operation. If not set the write will be allowed. If set to 0 a write will only be allowed if the key doesn’t exist. If the index is non-zero the write will only be allowed if the key’s current version matches the version specified in the cas parameter.
         /// </summary>
         /// <value>Options for writing a KV entry. Set the \&quot;cas\&quot; value to use a Check-And-Set operation. If not set the write will be allowed. If set to 0 a write will only be allowed if the key doesn’t exist. If the index is non-zero the write will only be allowed if the key’s current version matches the version specified in the cas parameter.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
+
         public Object Options { get; set; }
+
 
         /// <summary>
         /// If provided during a read, the value at the version number will be returned
         /// </summary>
         /// <value>If provided during a read, the value at the version number will be returned</value>
         [DataMember(Name = "version", EmitDefaultValue = false)]
+
         public int _Version { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -111,16 +131,20 @@ namespace Vault.Model
                     this.Data == input.Data ||
                     (this.Data != null &&
                     this.Data.Equals(input.Data))
+
                 ) &&
                 (
                     this.Options == input.Options ||
                     (this.Options != null &&
                     this.Options.Equals(input.Options))
+
                 ) &&
                 (
                     this._Version == input._Version ||
+
                     this._Version.Equals(input._Version)
                 );
+
         }
 
         /// <summary>
@@ -132,14 +156,18 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Data != null)
                 {
                     hashCode = (hashCode * 59) + this.Data.GetHashCode();
                 }
+
                 if (this.Options != null)
                 {
                     hashCode = (hashCode * 59) + this.Options.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 return hashCode;
             }

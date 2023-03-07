@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,29 +28,44 @@ namespace Vault.Model
     [DataContract(Name = "TerraformWriteConfigRequest")]
     public partial class TerraformWriteConfigRequest : IEquatable<TerraformWriteConfigRequest>, IValidatableObject
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TerraformWriteConfigRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected TerraformWriteConfigRequest() { }
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TerraformWriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="address">The address to access Terraform Cloud or Enterprise. Default is \&quot;https://app.terraform.io\&quot;. (default to &quot;https://app.terraform.io&quot;).</param>
-        /// <param name="basePath">The base path for the Terraform Cloud or Enterprise API. Default is \&quot;/api/v2/\&quot;. (default to &quot;/api/v2/&quot;).</param>
-        /// <param name="token">The token to access Terraform Cloud (required).</param>
-        public TerraformWriteConfigRequest(string address = "https://app.terraform.io", string basePath = "/api/v2/", string token = default(string))
+
+        /// <param name="Address">The address to access Terraform Cloud or Enterprise. Default is \&quot;https://app.terraform.io\&quot;. (default to &quot;https://app.terraform.io&quot;).</param>
+
+        /// <param name="BasePath">The base path for the Terraform Cloud or Enterprise API. Default is \&quot;/api/v2/\&quot;. (default to &quot;/api/v2/&quot;).</param>
+
+        /// <param name="Token">The token to access Terraform Cloud (required).</param>
+
+
+        public TerraformWriteConfigRequest(string Address = "https://app.terraform.io", string BasePath = "/api/v2/", string Token = default(string))
         {
-            // to ensure "token" is required (not null)
-            if (token == null)
+
+            // to ensure "Token" is required (not null)
+            if (Token == null)
             {
-                throw new ArgumentNullException("token is a required property for TerraformWriteConfigRequest and cannot be null");
+                throw new ArgumentNullException("Token is a required property for TerraformWriteConfigRequest and cannot be null");
             }
-            this.Token = token;
-            // use default value if no "address" provided
-            this.Address = address ?? "https://app.terraform.io";
-            // use default value if no "basePath" provided
-            this.BasePath = basePath ?? "/api/v2/";
+            this.Token = Token;
+
+
+            // use default value if no "Address" provided
+            this.Address = Address ?? "https://app.terraform.io";
+
+
+            // use default value if no "BasePath" provided
+            this.BasePath = BasePath ?? "/api/v2/";
+
+
         }
 
         /// <summary>
@@ -57,21 +73,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>The address to access Terraform Cloud or Enterprise. Default is \&quot;https://app.terraform.io\&quot;.</value>
         [DataMember(Name = "address", EmitDefaultValue = false)]
+
         public string Address { get; set; }
+
 
         /// <summary>
         /// The base path for the Terraform Cloud or Enterprise API. Default is \&quot;/api/v2/\&quot;.
         /// </summary>
         /// <value>The base path for the Terraform Cloud or Enterprise API. Default is \&quot;/api/v2/\&quot;.</value>
         [DataMember(Name = "base_path", EmitDefaultValue = false)]
+
         public string BasePath { get; set; }
+
 
         /// <summary>
         /// The token to access Terraform Cloud
         /// </summary>
         /// <value>The token to access Terraform Cloud</value>
         [DataMember(Name = "token", IsRequired = true, EmitDefaultValue = false)]
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -123,17 +147,21 @@ namespace Vault.Model
                     this.Address == input.Address ||
                     (this.Address != null &&
                     this.Address.Equals(input.Address))
+
                 ) &&
                 (
                     this.BasePath == input.BasePath ||
                     (this.BasePath != null &&
                     this.BasePath.Equals(input.BasePath))
+
                 ) &&
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -145,18 +173,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Address != null)
                 {
                     hashCode = (hashCode * 59) + this.Address.GetHashCode();
                 }
+
                 if (this.BasePath != null)
                 {
                     hashCode = (hashCode * 59) + this.BasePath.GetHashCode();
                 }
+
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

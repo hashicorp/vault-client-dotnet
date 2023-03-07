@@ -9,10 +9,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
+
 using Xunit;
 
 using Vault.Client;
 using Vault.Api;
+
 // uncomment below to import models
 //using Vault.Model;
 
@@ -56,8 +58,7 @@ namespace Vault.Test.Api
         public void CalculateAuditHashTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //CalculateAuditHashRequest calculateAuditHashRequest = null;
+            //string path = null;//CalculateAuditHashRequest calculateAuditHashRequest = null;
             //instance.CalculateAuditHash(path, calculateAuditHashRequest);
         }
 
@@ -101,6 +102,7 @@ namespace Vault.Test.Api
         public void DeleteConfigCORSTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteConfigCORS();
         }
 
@@ -122,6 +124,7 @@ namespace Vault.Test.Api
         public void DeleteGenerateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteGenerateRoot();
         }
 
@@ -132,6 +135,7 @@ namespace Vault.Test.Api
         public void DeleteGenerateRootAttemptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteGenerateRootAttempt();
         }
 
@@ -153,6 +157,7 @@ namespace Vault.Test.Api
         public void DeleteLoggersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteLoggers();
         }
 
@@ -174,8 +179,7 @@ namespace Vault.Test.Api
         public void DeletePluginsCatalogByTypeByNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string type = null;
+            //string name = null;//string type = null;
             //instance.DeletePluginsCatalogByTypeByName(name, type);
         }
 
@@ -230,6 +234,7 @@ namespace Vault.Test.Api
         public void DeleteRawTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteRaw();
         }
 
@@ -251,6 +256,7 @@ namespace Vault.Test.Api
         public void DeleteRekeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteRekeyBackup();
         }
 
@@ -261,6 +267,7 @@ namespace Vault.Test.Api
         public void DeleteRekeyInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteRekeyInit();
         }
 
@@ -271,6 +278,7 @@ namespace Vault.Test.Api
         public void DeleteRekeyRecoveryKeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteRekeyRecoveryKeyBackup();
         }
 
@@ -281,6 +289,7 @@ namespace Vault.Test.Api
         public void DeleteRekeyVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.DeleteRekeyVerify();
         }
 
@@ -302,8 +311,7 @@ namespace Vault.Test.Api
         public void ListLeasesLookupPrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string prefix = null;
-            //string list = null;
+            //string prefix = null;//string list = null;
             //instance.ListLeasesLookupPrefix(prefix, list);
         }
 
@@ -314,8 +322,7 @@ namespace Vault.Test.Api
         public void ListPluginsCatalogByTypeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string type = null;
-            //string list = null;
+            //string type = null;//string list = null;
             //instance.ListPluginsCatalogByType(type, list);
         }
 
@@ -381,8 +388,7 @@ namespace Vault.Test.Api
         public void MonitorTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string logFormat = null;
-            //string logLevel = null;
+            //string logFormat = null;//string logLevel = null;
             //instance.Monitor(logFormat, logLevel);
         }
 
@@ -393,6 +399,7 @@ namespace Vault.Test.Api
         public void PprofReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofRead();
         }
 
@@ -403,6 +410,7 @@ namespace Vault.Test.Api
         public void PprofReadAllocsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadAllocs();
         }
 
@@ -413,6 +421,7 @@ namespace Vault.Test.Api
         public void PprofReadBlockTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadBlock();
         }
 
@@ -423,6 +432,7 @@ namespace Vault.Test.Api
         public void PprofReadCmdlineTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadCmdline();
         }
 
@@ -433,6 +443,7 @@ namespace Vault.Test.Api
         public void PprofReadGoroutineTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadGoroutine();
         }
 
@@ -443,6 +454,7 @@ namespace Vault.Test.Api
         public void PprofReadHeapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadHeap();
         }
 
@@ -453,6 +465,7 @@ namespace Vault.Test.Api
         public void PprofReadMutexTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadMutex();
         }
 
@@ -463,6 +476,7 @@ namespace Vault.Test.Api
         public void PprofReadProfileTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadProfile();
         }
 
@@ -473,6 +487,7 @@ namespace Vault.Test.Api
         public void PprofReadSymbolTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadSymbol();
         }
 
@@ -483,6 +498,7 @@ namespace Vault.Test.Api
         public void PprofReadThreadcreateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadThreadcreate();
         }
 
@@ -493,6 +509,7 @@ namespace Vault.Test.Api
         public void PprofReadTraceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.PprofReadTrace();
         }
 
@@ -503,6 +520,7 @@ namespace Vault.Test.Api
         public void ReadAuditDevicesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadAuditDevices();
         }
 
@@ -535,6 +553,7 @@ namespace Vault.Test.Api
         public void ReadAuthMethodsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadAuthMethods();
         }
 
@@ -556,6 +575,7 @@ namespace Vault.Test.Api
         public void ReadConfigAuditingRequestHeadersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadConfigAuditingRequestHeaders();
         }
 
@@ -566,6 +586,7 @@ namespace Vault.Test.Api
         public void ReadConfigCORSTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadConfigCORS();
         }
 
@@ -576,6 +597,7 @@ namespace Vault.Test.Api
         public void ReadConfigStateSanitizedTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadConfigStateSanitized();
         }
 
@@ -597,6 +619,7 @@ namespace Vault.Test.Api
         public void ReadGenerateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadGenerateRoot();
         }
 
@@ -607,6 +630,7 @@ namespace Vault.Test.Api
         public void ReadGenerateRootAttemptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadGenerateRootAttempt();
         }
 
@@ -617,6 +641,7 @@ namespace Vault.Test.Api
         public void ReadHAStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadHAStatus();
         }
 
@@ -627,6 +652,7 @@ namespace Vault.Test.Api
         public void ReadHealthTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadHealth();
         }
 
@@ -637,6 +663,7 @@ namespace Vault.Test.Api
         public void ReadHostInfoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadHostInfo();
         }
 
@@ -647,6 +674,7 @@ namespace Vault.Test.Api
         public void ReadInFlightRequestsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInFlightRequests();
         }
 
@@ -657,6 +685,7 @@ namespace Vault.Test.Api
         public void ReadInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInit();
         }
 
@@ -667,6 +696,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersActivityTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersActivity();
         }
 
@@ -677,6 +707,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersActivityExportTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersActivityExport();
         }
 
@@ -687,6 +718,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersActivityMonthlyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersActivityMonthly();
         }
 
@@ -697,6 +729,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersConfig();
         }
 
@@ -707,6 +740,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersEntitiesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersEntities();
         }
 
@@ -717,6 +751,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersRequestsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersRequests();
         }
 
@@ -727,6 +762,7 @@ namespace Vault.Test.Api
         public void ReadInternalCountersTokensTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalCountersTokens();
         }
 
@@ -748,6 +784,7 @@ namespace Vault.Test.Api
         public void ReadInternalSpecsOpenAPITest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalSpecsOpenAPI();
         }
 
@@ -758,6 +795,7 @@ namespace Vault.Test.Api
         public void ReadInternalUIFeatureFlagsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalUIFeatureFlags();
         }
 
@@ -779,6 +817,7 @@ namespace Vault.Test.Api
         public void ReadInternalUIMountsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalUIMounts();
         }
 
@@ -789,6 +828,7 @@ namespace Vault.Test.Api
         public void ReadInternalUINamespacesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalUINamespaces();
         }
 
@@ -799,6 +839,7 @@ namespace Vault.Test.Api
         public void ReadInternalUIResultantACLTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadInternalUIResultantACL();
         }
 
@@ -809,6 +850,7 @@ namespace Vault.Test.Api
         public void ReadKeyStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadKeyStatus();
         }
 
@@ -819,6 +861,7 @@ namespace Vault.Test.Api
         public void ReadLeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadLeader();
         }
 
@@ -829,6 +872,7 @@ namespace Vault.Test.Api
         public void ReadLeasesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadLeases();
         }
 
@@ -839,6 +883,7 @@ namespace Vault.Test.Api
         public void ReadLeasesCountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadLeasesCount();
         }
 
@@ -860,6 +905,7 @@ namespace Vault.Test.Api
         public void ReadLoggersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadLoggers();
         }
 
@@ -892,6 +938,7 @@ namespace Vault.Test.Api
         public void ReadMountsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadMounts();
         }
 
@@ -913,6 +960,7 @@ namespace Vault.Test.Api
         public void ReadPluginsCatalogTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadPluginsCatalog();
         }
 
@@ -923,8 +971,7 @@ namespace Vault.Test.Api
         public void ReadPluginsCatalogByTypeByNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string type = null;
+            //string name = null;//string type = null;
             //instance.ReadPluginsCatalogByTypeByName(name, type);
         }
 
@@ -990,6 +1037,7 @@ namespace Vault.Test.Api
         public void ReadQuotasConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadQuotasConfig();
         }
 
@@ -1022,8 +1070,7 @@ namespace Vault.Test.Api
         public void ReadRawPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string list = null;
+            //string path = null;//string list = null;
             //instance.ReadRawPath(path, list);
         }
 
@@ -1034,6 +1081,7 @@ namespace Vault.Test.Api
         public void ReadRekeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadRekeyBackup();
         }
 
@@ -1044,6 +1092,7 @@ namespace Vault.Test.Api
         public void ReadRekeyInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadRekeyInit();
         }
 
@@ -1054,6 +1103,7 @@ namespace Vault.Test.Api
         public void ReadRekeyRecoveryKeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadRekeyRecoveryKeyBackup();
         }
 
@@ -1064,6 +1114,7 @@ namespace Vault.Test.Api
         public void ReadRekeyVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadRekeyVerify();
         }
 
@@ -1085,6 +1136,7 @@ namespace Vault.Test.Api
         public void ReadReplicationStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadReplicationStatus();
         }
 
@@ -1095,6 +1147,7 @@ namespace Vault.Test.Api
         public void ReadRotateConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadRotateConfig();
         }
 
@@ -1105,6 +1158,7 @@ namespace Vault.Test.Api
         public void ReadSealStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.ReadSealStatus();
         }
 
@@ -1137,8 +1191,7 @@ namespace Vault.Test.Api
         public void RenewForTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlLeaseId = null;
-            //RenewForRequest renewForRequest = null;
+            //string urlLeaseId = null;//RenewForRequest renewForRequest = null;
             //instance.RenewFor(urlLeaseId, renewForRequest);
         }
 
@@ -1171,8 +1224,7 @@ namespace Vault.Test.Api
         public void RevokeLeaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlLeaseId = null;
-            //RevokeLeaseRequest revokeLeaseRequest = null;
+            //string urlLeaseId = null;//RevokeLeaseRequest revokeLeaseRequest = null;
             //instance.RevokeLease(urlLeaseId, revokeLeaseRequest);
         }
 
@@ -1183,8 +1235,7 @@ namespace Vault.Test.Api
         public void RevokePrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string prefix = null;
-            //RevokePrefixRequest revokePrefixRequest = null;
+            //string prefix = null;//RevokePrefixRequest revokePrefixRequest = null;
             //instance.RevokePrefix(prefix, revokePrefixRequest);
         }
 
@@ -1195,6 +1246,7 @@ namespace Vault.Test.Api
         public void RotateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.Rotate();
         }
 
@@ -1205,6 +1257,7 @@ namespace Vault.Test.Api
         public void SealTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.Seal();
         }
 
@@ -1215,6 +1268,7 @@ namespace Vault.Test.Api
         public void StepDownLeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.StepDownLeader();
         }
 
@@ -1258,8 +1312,7 @@ namespace Vault.Test.Api
         public void SysWriteLockedusersMountAccessorUnlockAliasIdentifierTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string aliasIdentifier = null;
-            //string mountAccessor = null;
+            //string aliasIdentifier = null;//string mountAccessor = null;
             //instance.SysWriteLockedusersMountAccessorUnlockAliasIdentifier(aliasIdentifier, mountAccessor);
         }
 
@@ -1270,8 +1323,7 @@ namespace Vault.Test.Api
         public void SysWritePluginsCatalogNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest = null;
+            //string name = null;//SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest = null;
             //instance.SysWritePluginsCatalogName(name, sysWritePluginsCatalogNameRequest);
         }
 
@@ -1282,8 +1334,7 @@ namespace Vault.Test.Api
         public void SysWriteToolsRandomUrlbytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlbytes = null;
-            //SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest = null;
+            //string urlbytes = null;//SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest = null;
             //instance.SysWriteToolsRandomUrlbytes(urlbytes, sysWriteToolsRandomUrlbytesRequest);
         }
 
@@ -1305,8 +1356,7 @@ namespace Vault.Test.Api
         public void ToolsGenerateRandomSourceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string source = null;
-            //ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest = null;
+            //string source = null;//ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest = null;
             //instance.ToolsGenerateRandomSource(source, toolsGenerateRandomSourceRequest);
         }
 
@@ -1317,9 +1367,7 @@ namespace Vault.Test.Api
         public void ToolsGenerateRandomSourceBytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string source = null;
-            //string urlbytes = null;
-            //ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest = null;
+            //string source = null;//string urlbytes = null;//ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest = null;
             //instance.ToolsGenerateRandomSourceBytes(source, urlbytes, toolsGenerateRandomSourceBytesRequest);
         }
 
@@ -1341,8 +1389,7 @@ namespace Vault.Test.Api
         public void ToolsHashWithTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlalgorithm = null;
-            //ToolsHashWithRequest toolsHashWithRequest = null;
+            //string urlalgorithm = null;//ToolsHashWithRequest toolsHashWithRequest = null;
             //instance.ToolsHashWith(urlalgorithm, toolsHashWithRequest);
         }
 
@@ -1364,6 +1411,7 @@ namespace Vault.Test.Api
         public void WrappingReadLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.WrappingReadLookup();
         }
 
@@ -1396,6 +1444,7 @@ namespace Vault.Test.Api
         public void WrappingWrapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.WrappingWrap();
         }
 
@@ -1417,8 +1466,7 @@ namespace Vault.Test.Api
         public void WriteAuditDeviceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //WriteAuditDeviceRequest writeAuditDeviceRequest = null;
+            //string path = null;//WriteAuditDeviceRequest writeAuditDeviceRequest = null;
             //instance.WriteAuditDevice(path, writeAuditDeviceRequest);
         }
 
@@ -1429,8 +1477,7 @@ namespace Vault.Test.Api
         public void WriteAuthMethodTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //WriteAuthMethodRequest writeAuthMethodRequest = null;
+            //string path = null;//WriteAuthMethodRequest writeAuthMethodRequest = null;
             //instance.WriteAuthMethod(path, writeAuthMethodRequest);
         }
 
@@ -1441,8 +1488,7 @@ namespace Vault.Test.Api
         public void WriteAuthMethodTuneTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //WriteAuthMethodTuneRequest writeAuthMethodTuneRequest = null;
+            //string path = null;//WriteAuthMethodTuneRequest writeAuthMethodTuneRequest = null;
             //instance.WriteAuthMethodTune(path, writeAuthMethodTuneRequest);
         }
 
@@ -1486,8 +1532,7 @@ namespace Vault.Test.Api
         public void WriteConfigAuditingRequestHeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string header = null;
-            //WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest = null;
+            //string header = null;//WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest = null;
             //instance.WriteConfigAuditingRequestHeader(header, writeConfigAuditingRequestHeaderRequest);
         }
 
@@ -1520,8 +1565,7 @@ namespace Vault.Test.Api
         public void WriteConfigUIHeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string header = null;
-            //WriteConfigUIHeaderRequest writeConfigUIHeaderRequest = null;
+            //string header = null;//WriteConfigUIHeaderRequest writeConfigUIHeaderRequest = null;
             //instance.WriteConfigUIHeader(header, writeConfigUIHeaderRequest);
         }
 
@@ -1609,8 +1653,7 @@ namespace Vault.Test.Api
         public void WriteLeasesRenew2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlLeaseId = null;
-            //WriteLeasesRenew2Request writeLeasesRenew2Request = null;
+            //string urlLeaseId = null;//WriteLeasesRenew2Request writeLeasesRenew2Request = null;
             //instance.WriteLeasesRenew2(urlLeaseId, writeLeasesRenew2Request);
         }
 
@@ -1632,8 +1675,7 @@ namespace Vault.Test.Api
         public void WriteLeasesRevoke2Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlLeaseId = null;
-            //WriteLeasesRevoke2Request writeLeasesRevoke2Request = null;
+            //string urlLeaseId = null;//WriteLeasesRevoke2Request writeLeasesRevoke2Request = null;
             //instance.WriteLeasesRevoke2(urlLeaseId, writeLeasesRevoke2Request);
         }
 
@@ -1655,8 +1697,7 @@ namespace Vault.Test.Api
         public void WriteLeasesRevokePrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string prefix = null;
-            //WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest = null;
+            //string prefix = null;//WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest = null;
             //instance.WriteLeasesRevokePrefix(prefix, writeLeasesRevokePrefixRequest);
         }
 
@@ -1667,6 +1708,7 @@ namespace Vault.Test.Api
         public void WriteLeasesTidyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+
             //instance.WriteLeasesTidy();
         }
 
@@ -1677,8 +1719,7 @@ namespace Vault.Test.Api
         public void WriteLoggerTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //WriteLoggerRequest writeLoggerRequest = null;
+            //string name = null;//WriteLoggerRequest writeLoggerRequest = null;
             //instance.WriteLogger(name, writeLoggerRequest);
         }
 
@@ -1700,8 +1741,7 @@ namespace Vault.Test.Api
         public void WriteMountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //WriteMountRequest writeMountRequest = null;
+            //string path = null;//WriteMountRequest writeMountRequest = null;
             //instance.WriteMount(path, writeMountRequest);
         }
 
@@ -1712,8 +1752,7 @@ namespace Vault.Test.Api
         public void WriteMountsConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //WriteMountsConfigRequest writeMountsConfigRequest = null;
+            //string path = null;//WriteMountsConfigRequest writeMountsConfigRequest = null;
             //instance.WriteMountsConfig(path, writeMountsConfigRequest);
         }
 
@@ -1724,9 +1763,7 @@ namespace Vault.Test.Api
         public void WritePluginsCatalogByTypeByNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string type = null;
-            //WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest = null;
+            //string name = null;//string type = null;//WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest = null;
             //instance.WritePluginsCatalogByTypeByName(name, type, writePluginsCatalogByTypeByNameRequest);
         }
 
@@ -1748,8 +1785,7 @@ namespace Vault.Test.Api
         public void WritePoliciesACLTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //WritePoliciesACLRequest writePoliciesACLRequest = null;
+            //string name = null;//WritePoliciesACLRequest writePoliciesACLRequest = null;
             //instance.WritePoliciesACL(name, writePoliciesACLRequest);
         }
 
@@ -1760,8 +1796,7 @@ namespace Vault.Test.Api
         public void WritePoliciesPasswordTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //WritePoliciesPasswordRequest writePoliciesPasswordRequest = null;
+            //string name = null;//WritePoliciesPasswordRequest writePoliciesPasswordRequest = null;
             //instance.WritePoliciesPassword(name, writePoliciesPasswordRequest);
         }
 
@@ -1772,8 +1807,7 @@ namespace Vault.Test.Api
         public void WritePolicyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //WritePolicyRequest writePolicyRequest = null;
+            //string name = null;//WritePolicyRequest writePolicyRequest = null;
             //instance.WritePolicy(name, writePolicyRequest);
         }
 
@@ -1795,8 +1829,7 @@ namespace Vault.Test.Api
         public void WriteQuotasRateLimitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //WriteQuotasRateLimitRequest writeQuotasRateLimitRequest = null;
+            //string name = null;//WriteQuotasRateLimitRequest writeQuotasRateLimitRequest = null;
             //instance.WriteQuotasRateLimit(name, writeQuotasRateLimitRequest);
         }
 
@@ -1818,8 +1851,7 @@ namespace Vault.Test.Api
         public void WriteRawPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //WriteRawPathRequest writeRawPathRequest = null;
+            //string path = null;//WriteRawPathRequest writeRawPathRequest = null;
             //instance.WriteRawPath(path, writeRawPathRequest);
         }
 
@@ -1866,5 +1898,6 @@ namespace Vault.Test.Api
             //WriteRotateConfigRequest writeRotateConfigRequest = null;
             //instance.WriteRotateConfig(writeRotateConfigRequest);
         }
+
     }
 }

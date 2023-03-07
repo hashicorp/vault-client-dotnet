@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "TokenWriteLookupSelfRequest")]
     public partial class TokenWriteLookupSelfRequest : IEquatable<TokenWriteLookupSelfRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenWriteLookupSelfRequest" /> class.
         /// </summary>
-        /// <param name="token">Token to look up (unused, does not need to be set).</param>
-        public TokenWriteLookupSelfRequest(string token = default(string))
+
+        /// <param name="Token">Token to look up (unused, does not need to be set).</param>
+
+
+        public TokenWriteLookupSelfRequest(string Token = default(string))
         {
-            this.Token = token;
+
+            this.Token = Token;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Token to look up (unused, does not need to be set)</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

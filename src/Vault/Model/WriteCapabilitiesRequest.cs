@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,40 +28,58 @@ namespace Vault.Model
     [DataContract(Name = "WriteCapabilitiesRequest")]
     public partial class WriteCapabilitiesRequest : IEquatable<WriteCapabilitiesRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteCapabilitiesRequest" /> class.
         /// </summary>
-        /// <param name="path">Use &#39;paths&#39; instead..</param>
-        /// <param name="paths">Paths on which capabilities are being queried..</param>
-        /// <param name="token">Token for which capabilities are being queried..</param>
-        public WriteCapabilitiesRequest(List<string> path = default(List<string>), List<string> paths = default(List<string>), string token = default(string))
+
+        /// <param name="Path">Use &#x27;paths&#x27; instead..</param>
+
+        /// <param name="Paths">Paths on which capabilities are being queried..</param>
+
+        /// <param name="Token">Token for which capabilities are being queried..</param>
+
+
+        public WriteCapabilitiesRequest(List<string> Path = default(List<string>), List<string> Paths = default(List<string>), string Token = default(string))
         {
-            this.Path = path;
-            this.Paths = paths;
-            this.Token = token;
+
+            this.Path = Path;
+
+            this.Paths = Paths;
+
+            this.Token = Token;
+
         }
 
         /// <summary>
-        /// Use &#39;paths&#39; instead.
+        /// Use &#x27;paths&#x27; instead.
         /// </summary>
-        /// <value>Use &#39;paths&#39; instead.</value>
+        /// <value>Use &#x27;paths&#x27; instead.</value>
         [DataMember(Name = "path", EmitDefaultValue = false)]
-        [Obsolete]
-        public List<string> Path { get; set; }
+
+        [Obsolete] public List<string> Path { get; set; }
+
 
         /// <summary>
         /// Paths on which capabilities are being queried.
         /// </summary>
         /// <value>Paths on which capabilities are being queried.</value>
         [DataMember(Name = "paths", EmitDefaultValue = false)]
+
         public List<string> Paths { get; set; }
+
 
         /// <summary>
         /// Token for which capabilities are being queried.
         /// </summary>
         /// <value>Token for which capabilities are being queried.</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
+
         public string Token { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -124,7 +143,9 @@ namespace Vault.Model
                     this.Token == input.Token ||
                     (this.Token != null &&
                     this.Token.Equals(input.Token))
+
                 );
+
         }
 
         /// <summary>
@@ -136,18 +157,22 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Path != null)
                 {
                     hashCode = (hashCode * 59) + this.Path.GetHashCode();
                 }
+
                 if (this.Paths != null)
                 {
                     hashCode = (hashCode * 59) + this.Paths.GetHashCode();
                 }
+
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

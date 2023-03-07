@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,21 +28,36 @@ namespace Vault.Model
     [DataContract(Name = "TerraformWriteRoleRequest")]
     public partial class TerraformWriteRoleRequest : IEquatable<TerraformWriteRoleRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TerraformWriteRoleRequest" /> class.
         /// </summary>
-        /// <param name="maxTtl">Maximum time for role. If not set or set to 0, will use system default..</param>
-        /// <param name="organization">Name of the Terraform Cloud or Enterprise organization.</param>
-        /// <param name="teamId">ID of the Terraform Cloud or Enterprise team under organization (e.g., settings/teams/team-xxxxxxxxxxxxx).</param>
-        /// <param name="ttl">Default lease for generated credentials. If not set or set to 0, will use system default..</param>
-        /// <param name="userId">ID of the Terraform Cloud or Enterprise user (e.g., user-xxxxxxxxxxxxxxxx).</param>
-        public TerraformWriteRoleRequest(int maxTtl = default(int), string organization = default(string), string teamId = default(string), int ttl = default(int), string userId = default(string))
+
+        /// <param name="MaxTtl">Maximum time for role. If not set or set to 0, will use system default..</param>
+
+        /// <param name="Organization">Name of the Terraform Cloud or Enterprise organization.</param>
+
+        /// <param name="TeamId">ID of the Terraform Cloud or Enterprise team under organization (e.g., settings/teams/team-xxxxxxxxxxxxx).</param>
+
+        /// <param name="Ttl">Default lease for generated credentials. If not set or set to 0, will use system default..</param>
+
+        /// <param name="UserId">ID of the Terraform Cloud or Enterprise user (e.g., user-xxxxxxxxxxxxxxxx).</param>
+
+
+        public TerraformWriteRoleRequest(int MaxTtl = default(int), string Organization = default(string), string TeamId = default(string), int Ttl = default(int), string UserId = default(string))
         {
-            this.MaxTtl = maxTtl;
-            this.Organization = organization;
-            this.TeamId = teamId;
-            this.Ttl = ttl;
-            this.UserId = userId;
+
+            this.MaxTtl = MaxTtl;
+
+            this.Organization = Organization;
+
+            this.TeamId = TeamId;
+
+            this.Ttl = Ttl;
+
+            this.UserId = UserId;
+
         }
 
         /// <summary>
@@ -49,35 +65,47 @@ namespace Vault.Model
         /// </summary>
         /// <value>Maximum time for role. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
+
         public int MaxTtl { get; set; }
+
 
         /// <summary>
         /// Name of the Terraform Cloud or Enterprise organization
         /// </summary>
         /// <value>Name of the Terraform Cloud or Enterprise organization</value>
         [DataMember(Name = "organization", EmitDefaultValue = false)]
+
         public string Organization { get; set; }
+
 
         /// <summary>
         /// ID of the Terraform Cloud or Enterprise team under organization (e.g., settings/teams/team-xxxxxxxxxxxxx)
         /// </summary>
         /// <value>ID of the Terraform Cloud or Enterprise team under organization (e.g., settings/teams/team-xxxxxxxxxxxxx)</value>
         [DataMember(Name = "team_id", EmitDefaultValue = false)]
+
         public string TeamId { get; set; }
+
 
         /// <summary>
         /// Default lease for generated credentials. If not set or set to 0, will use system default.
         /// </summary>
         /// <value>Default lease for generated credentials. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
+
         public int Ttl { get; set; }
+
 
         /// <summary>
         /// ID of the Terraform Cloud or Enterprise user (e.g., user-xxxxxxxxxxxxxxxx)
         /// </summary>
         /// <value>ID of the Terraform Cloud or Enterprise user (e.g., user-xxxxxxxxxxxxxxxx)</value>
         [DataMember(Name = "user_id", EmitDefaultValue = false)]
+
         public string UserId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -129,27 +157,33 @@ namespace Vault.Model
             return
                 (
                     this.MaxTtl == input.MaxTtl ||
+
                     this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Organization == input.Organization ||
                     (this.Organization != null &&
                     this.Organization.Equals(input.Organization))
+
                 ) &&
                 (
                     this.TeamId == input.TeamId ||
                     (this.TeamId != null &&
                     this.TeamId.Equals(input.TeamId))
+
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+
                     this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.UserId == input.UserId ||
                     (this.UserId != null &&
                     this.UserId.Equals(input.UserId))
+
                 );
+
         }
 
         /// <summary>
@@ -161,20 +195,26 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.Organization != null)
                 {
                     hashCode = (hashCode * 59) + this.Organization.GetHashCode();
                 }
+
                 if (this.TeamId != null)
                 {
                     hashCode = (hashCode * 59) + this.TeamId.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.UserId != null)
                 {
                     hashCode = (hashCode * 59) + this.UserId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "WriteLeasesRevokePrefixRequest")]
     public partial class WriteLeasesRevokePrefixRequest : IEquatable<WriteLeasesRevokePrefixRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteLeasesRevokePrefixRequest" /> class.
         /// </summary>
-        /// <param name="sync">Whether or not to perform the revocation synchronously (default to true).</param>
-        public WriteLeasesRevokePrefixRequest(bool sync = true)
+
+        /// <param name="Sync">Whether or not to perform the revocation synchronously (default to true).</param>
+
+
+        public WriteLeasesRevokePrefixRequest(bool Sync = true)
         {
-            this.Sync = sync;
+
+            this.Sync = Sync;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Whether or not to perform the revocation synchronously</value>
         [DataMember(Name = "sync", EmitDefaultValue = true)]
+
         public bool Sync { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.Sync == input.Sync ||
+
                     this.Sync.Equals(input.Sync)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Sync.GetHashCode();
                 return hashCode;
             }

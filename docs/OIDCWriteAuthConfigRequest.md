@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BoundIssuer** | **string** | The value against which to match the &#39;iss&#39; claim in a JWT. Optional. | [optional] 
+**BoundIssuer** | **string** | The value against which to match the &#x27;iss&#x27; claim in a JWT. Optional. | [optional] 
 **DefaultRole** | **string** | The default role to use if none is provided during login. If not set, a role is required during login. | [optional] 
 **JwksCaPem** | **string** | The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used. | [optional] 
 **JwksUrl** | **string** | JWKS URL to use to authenticate signatures. Cannot be used with \&quot;oidc_discovery_url\&quot; or \&quot;jwt_validation_pubkeys\&quot;. | [optional] 
@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **OidcClientSecret** | **string** | The OAuth Client Secret configured with your OIDC provider. | [optional] 
 **OidcDiscoveryCaPem** | **string** | The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used. | [optional] 
 **OidcDiscoveryUrl** | **string** | OIDC Discovery URL, without any .well-known component (base path). Cannot be used with \&quot;jwks_url\&quot; or \&quot;jwt_validation_pubkeys\&quot;. | [optional] 
-**OidcResponseMode** | **string** | The response mode to be used in the OAuth2 request. Allowed values are &#39;query&#39; and &#39;form_post&#39;. | [optional] 
-**OidcResponseTypes** | **List&lt;string&gt;** | The response types to request. Allowed values are &#39;code&#39; and &#39;id_token&#39;. Defaults to &#39;code&#39;. | [optional] 
+**OidcResponseMode** | **string** | The response mode to be used in the OAuth2 request. Allowed values are &#x27;query&#x27; and &#x27;form_post&#x27;. | [optional] 
+**OidcResponseTypes** | **List&lt;string&gt;** | The response types to request. Allowed values are &#x27;code&#x27; and &#x27;id_token&#x27;. Defaults to &#x27;code&#x27;. | [optional] 
 **ProviderConfig** | **Object** | Provider-specific configuration. Optional. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

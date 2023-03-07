@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,35 +28,64 @@ namespace Vault.Model
     [DataContract(Name = "WriteAuthMethodTuneRequest")]
     public partial class WriteAuthMethodTuneRequest : IEquatable<WriteAuthMethodTuneRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WriteAuthMethodTuneRequest" /> class.
         /// </summary>
-        /// <param name="allowedResponseHeaders">A list of headers to whitelist and allow a plugin to set on responses..</param>
-        /// <param name="auditNonHmacRequestKeys">The list of keys in the request data object that will not be HMAC&#39;ed by audit devices..</param>
-        /// <param name="auditNonHmacResponseKeys">The list of keys in the response data object that will not be HMAC&#39;ed by audit devices..</param>
-        /// <param name="defaultLeaseTtl">The default lease TTL for this mount..</param>
-        /// <param name="description">User-friendly description for this credential backend..</param>
-        /// <param name="listingVisibility">Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#39;unauth&#39; and &#39;hidden&#39;, with the empty default (&#39;&#39;) behaving like &#39;hidden&#39;..</param>
-        /// <param name="maxLeaseTtl">The max lease TTL for this mount..</param>
-        /// <param name="options">The options to pass into the backend. Should be a json object with string keys and values..</param>
-        /// <param name="passthroughRequestHeaders">A list of headers to whitelist and pass from the request to the plugin..</param>
-        /// <param name="pluginVersion">The semantic version of the plugin to use..</param>
-        /// <param name="tokenType">The type of token to issue (service or batch)..</param>
-        /// <param name="userLockoutConfig">The user lockout configuration to pass into the backend. Should be a json object with string keys and values..</param>
-        public WriteAuthMethodTuneRequest(List<string> allowedResponseHeaders = default(List<string>), List<string> auditNonHmacRequestKeys = default(List<string>), List<string> auditNonHmacResponseKeys = default(List<string>), string defaultLeaseTtl = default(string), string description = default(string), string listingVisibility = default(string), string maxLeaseTtl = default(string), Object options = default(Object), List<string> passthroughRequestHeaders = default(List<string>), string pluginVersion = default(string), string tokenType = default(string), Object userLockoutConfig = default(Object))
+
+        /// <param name="AllowedResponseHeaders">A list of headers to whitelist and allow a plugin to set on responses..</param>
+
+        /// <param name="AuditNonHmacRequestKeys">The list of keys in the request data object that will not be HMAC&#x27;ed by audit devices..</param>
+
+        /// <param name="AuditNonHmacResponseKeys">The list of keys in the response data object that will not be HMAC&#x27;ed by audit devices..</param>
+
+        /// <param name="DefaultLeaseTtl">The default lease TTL for this mount..</param>
+
+        /// <param name="Description">User-friendly description for this credential backend..</param>
+
+        /// <param name="ListingVisibility">Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#x27;unauth&#x27; and &#x27;hidden&#x27;, with the empty default (&#x27;&#x27;) behaving like &#x27;hidden&#x27;..</param>
+
+        /// <param name="MaxLeaseTtl">The max lease TTL for this mount..</param>
+
+        /// <param name="Options">The options to pass into the backend. Should be a json object with string keys and values..</param>
+
+        /// <param name="PassthroughRequestHeaders">A list of headers to whitelist and pass from the request to the plugin..</param>
+
+        /// <param name="PluginVersion">The semantic version of the plugin to use..</param>
+
+        /// <param name="TokenType">The type of token to issue (service or batch)..</param>
+
+        /// <param name="UserLockoutConfig">The user lockout configuration to pass into the backend. Should be a json object with string keys and values..</param>
+
+
+        public WriteAuthMethodTuneRequest(List<string> AllowedResponseHeaders = default(List<string>), List<string> AuditNonHmacRequestKeys = default(List<string>), List<string> AuditNonHmacResponseKeys = default(List<string>), string DefaultLeaseTtl = default(string), string Description = default(string), string ListingVisibility = default(string), string MaxLeaseTtl = default(string), Object Options = default(Object), List<string> PassthroughRequestHeaders = default(List<string>), string PluginVersion = default(string), string TokenType = default(string), Object UserLockoutConfig = default(Object))
         {
-            this.AllowedResponseHeaders = allowedResponseHeaders;
-            this.AuditNonHmacRequestKeys = auditNonHmacRequestKeys;
-            this.AuditNonHmacResponseKeys = auditNonHmacResponseKeys;
-            this.DefaultLeaseTtl = defaultLeaseTtl;
-            this.Description = description;
-            this.ListingVisibility = listingVisibility;
-            this.MaxLeaseTtl = maxLeaseTtl;
-            this.Options = options;
-            this.PassthroughRequestHeaders = passthroughRequestHeaders;
-            this.PluginVersion = pluginVersion;
-            this.TokenType = tokenType;
-            this.UserLockoutConfig = userLockoutConfig;
+
+            this.AllowedResponseHeaders = AllowedResponseHeaders;
+
+            this.AuditNonHmacRequestKeys = AuditNonHmacRequestKeys;
+
+            this.AuditNonHmacResponseKeys = AuditNonHmacResponseKeys;
+
+            this.DefaultLeaseTtl = DefaultLeaseTtl;
+
+            this.Description = Description;
+
+            this.ListingVisibility = ListingVisibility;
+
+            this.MaxLeaseTtl = MaxLeaseTtl;
+
+            this.Options = Options;
+
+            this.PassthroughRequestHeaders = PassthroughRequestHeaders;
+
+            this.PluginVersion = PluginVersion;
+
+            this.TokenType = TokenType;
+
+            this.UserLockoutConfig = UserLockoutConfig;
+
         }
 
         /// <summary>
@@ -63,84 +93,110 @@ namespace Vault.Model
         /// </summary>
         /// <value>A list of headers to whitelist and allow a plugin to set on responses.</value>
         [DataMember(Name = "allowed_response_headers", EmitDefaultValue = false)]
+
         public List<string> AllowedResponseHeaders { get; set; }
 
-        /// <summary>
-        /// The list of keys in the request data object that will not be HMAC&#39;ed by audit devices.
-        /// </summary>
-        /// <value>The list of keys in the request data object that will not be HMAC&#39;ed by audit devices.</value>
-        [DataMember(Name = "audit_non_hmac_request_keys", EmitDefaultValue = false)]
-        public List<string> AuditNonHmacRequestKeys { get; set; }
 
         /// <summary>
-        /// The list of keys in the response data object that will not be HMAC&#39;ed by audit devices.
+        /// The list of keys in the request data object that will not be HMAC&#x27;ed by audit devices.
         /// </summary>
-        /// <value>The list of keys in the response data object that will not be HMAC&#39;ed by audit devices.</value>
+        /// <value>The list of keys in the request data object that will not be HMAC&#x27;ed by audit devices.</value>
+        [DataMember(Name = "audit_non_hmac_request_keys", EmitDefaultValue = false)]
+
+        public List<string> AuditNonHmacRequestKeys { get; set; }
+
+
+        /// <summary>
+        /// The list of keys in the response data object that will not be HMAC&#x27;ed by audit devices.
+        /// </summary>
+        /// <value>The list of keys in the response data object that will not be HMAC&#x27;ed by audit devices.</value>
         [DataMember(Name = "audit_non_hmac_response_keys", EmitDefaultValue = false)]
+
         public List<string> AuditNonHmacResponseKeys { get; set; }
+
 
         /// <summary>
         /// The default lease TTL for this mount.
         /// </summary>
         /// <value>The default lease TTL for this mount.</value>
         [DataMember(Name = "default_lease_ttl", EmitDefaultValue = false)]
+
         public string DefaultLeaseTtl { get; set; }
+
 
         /// <summary>
         /// User-friendly description for this credential backend.
         /// </summary>
         /// <value>User-friendly description for this credential backend.</value>
         [DataMember(Name = "description", EmitDefaultValue = false)]
+
         public string Description { get; set; }
 
+
         /// <summary>
-        /// Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#39;unauth&#39; and &#39;hidden&#39;, with the empty default (&#39;&#39;) behaving like &#39;hidden&#39;.
+        /// Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#x27;unauth&#x27; and &#x27;hidden&#x27;, with the empty default (&#x27;&#x27;) behaving like &#x27;hidden&#x27;.
         /// </summary>
-        /// <value>Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#39;unauth&#39; and &#39;hidden&#39;, with the empty default (&#39;&#39;) behaving like &#39;hidden&#39;.</value>
+        /// <value>Determines the visibility of the mount in the UI-specific listing endpoint. Accepted value are &#x27;unauth&#x27; and &#x27;hidden&#x27;, with the empty default (&#x27;&#x27;) behaving like &#x27;hidden&#x27;.</value>
         [DataMember(Name = "listing_visibility", EmitDefaultValue = false)]
+
         public string ListingVisibility { get; set; }
+
 
         /// <summary>
         /// The max lease TTL for this mount.
         /// </summary>
         /// <value>The max lease TTL for this mount.</value>
         [DataMember(Name = "max_lease_ttl", EmitDefaultValue = false)]
+
         public string MaxLeaseTtl { get; set; }
+
 
         /// <summary>
         /// The options to pass into the backend. Should be a json object with string keys and values.
         /// </summary>
         /// <value>The options to pass into the backend. Should be a json object with string keys and values.</value>
         [DataMember(Name = "options", EmitDefaultValue = false)]
+
         public Object Options { get; set; }
+
 
         /// <summary>
         /// A list of headers to whitelist and pass from the request to the plugin.
         /// </summary>
         /// <value>A list of headers to whitelist and pass from the request to the plugin.</value>
         [DataMember(Name = "passthrough_request_headers", EmitDefaultValue = false)]
+
         public List<string> PassthroughRequestHeaders { get; set; }
+
 
         /// <summary>
         /// The semantic version of the plugin to use.
         /// </summary>
         /// <value>The semantic version of the plugin to use.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
+
         public string PluginVersion { get; set; }
+
 
         /// <summary>
         /// The type of token to issue (service or batch).
         /// </summary>
         /// <value>The type of token to issue (service or batch).</value>
         [DataMember(Name = "token_type", EmitDefaultValue = false)]
+
         public string TokenType { get; set; }
+
 
         /// <summary>
         /// The user lockout configuration to pass into the backend. Should be a json object with string keys and values.
         /// </summary>
         /// <value>The user lockout configuration to pass into the backend. Should be a json object with string keys and values.</value>
         [DataMember(Name = "user_lockout_config", EmitDefaultValue = false)]
+
         public Object UserLockoutConfig { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -219,26 +275,31 @@ namespace Vault.Model
                     this.DefaultLeaseTtl == input.DefaultLeaseTtl ||
                     (this.DefaultLeaseTtl != null &&
                     this.DefaultLeaseTtl.Equals(input.DefaultLeaseTtl))
+
                 ) &&
                 (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
+
                 ) &&
                 (
                     this.ListingVisibility == input.ListingVisibility ||
                     (this.ListingVisibility != null &&
                     this.ListingVisibility.Equals(input.ListingVisibility))
+
                 ) &&
                 (
                     this.MaxLeaseTtl == input.MaxLeaseTtl ||
                     (this.MaxLeaseTtl != null &&
                     this.MaxLeaseTtl.Equals(input.MaxLeaseTtl))
+
                 ) &&
                 (
                     this.Options == input.Options ||
                     (this.Options != null &&
                     this.Options.Equals(input.Options))
+
                 ) &&
                 (
                     this.PassthroughRequestHeaders == input.PassthroughRequestHeaders ||
@@ -250,17 +311,21 @@ namespace Vault.Model
                     this.PluginVersion == input.PluginVersion ||
                     (this.PluginVersion != null &&
                     this.PluginVersion.Equals(input.PluginVersion))
+
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
+
                 ) &&
                 (
                     this.UserLockoutConfig == input.UserLockoutConfig ||
                     (this.UserLockoutConfig != null &&
                     this.UserLockoutConfig.Equals(input.UserLockoutConfig))
+
                 );
+
         }
 
         /// <summary>
@@ -272,54 +337,67 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AllowedResponseHeaders != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedResponseHeaders.GetHashCode();
                 }
+
                 if (this.AuditNonHmacRequestKeys != null)
                 {
                     hashCode = (hashCode * 59) + this.AuditNonHmacRequestKeys.GetHashCode();
                 }
+
                 if (this.AuditNonHmacResponseKeys != null)
                 {
                     hashCode = (hashCode * 59) + this.AuditNonHmacResponseKeys.GetHashCode();
                 }
+
                 if (this.DefaultLeaseTtl != null)
                 {
                     hashCode = (hashCode * 59) + this.DefaultLeaseTtl.GetHashCode();
                 }
+
                 if (this.Description != null)
                 {
                     hashCode = (hashCode * 59) + this.Description.GetHashCode();
                 }
+
                 if (this.ListingVisibility != null)
                 {
                     hashCode = (hashCode * 59) + this.ListingVisibility.GetHashCode();
                 }
+
                 if (this.MaxLeaseTtl != null)
                 {
                     hashCode = (hashCode * 59) + this.MaxLeaseTtl.GetHashCode();
                 }
+
                 if (this.Options != null)
                 {
                     hashCode = (hashCode * 59) + this.Options.GetHashCode();
                 }
+
                 if (this.PassthroughRequestHeaders != null)
                 {
                     hashCode = (hashCode * 59) + this.PassthroughRequestHeaders.GetHashCode();
                 }
+
                 if (this.PluginVersion != null)
                 {
                     hashCode = (hashCode * 59) + this.PluginVersion.GetHashCode();
                 }
+
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
+
                 if (this.UserLockoutConfig != null)
                 {
                     hashCode = (hashCode * 59) + this.UserLockoutConfig.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

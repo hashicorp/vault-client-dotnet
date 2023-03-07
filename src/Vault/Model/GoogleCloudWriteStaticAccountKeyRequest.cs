@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,19 +28,32 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudWriteStaticAccountKeyRequest")]
     public partial class GoogleCloudWriteStaticAccountKeyRequest : IEquatable<GoogleCloudWriteStaticAccountKeyRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudWriteStaticAccountKeyRequest" /> class.
         /// </summary>
-        /// <param name="keyAlgorithm">Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot; (default to &quot;KEY_ALG_RSA_2048&quot;).</param>
-        /// <param name="keyType">Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot; (default to &quot;TYPE_GOOGLE_CREDENTIALS_FILE&quot;).</param>
-        /// <param name="ttl">Lifetime of the service account key.</param>
-        public GoogleCloudWriteStaticAccountKeyRequest(string keyAlgorithm = "KEY_ALG_RSA_2048", string keyType = "TYPE_GOOGLE_CREDENTIALS_FILE", int ttl = default(int))
+
+        /// <param name="KeyAlgorithm">Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot; (default to &quot;KEY_ALG_RSA_2048&quot;).</param>
+
+        /// <param name="KeyType">Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot; (default to &quot;TYPE_GOOGLE_CREDENTIALS_FILE&quot;).</param>
+
+        /// <param name="Ttl">Lifetime of the service account key.</param>
+
+
+        public GoogleCloudWriteStaticAccountKeyRequest(string KeyAlgorithm = "KEY_ALG_RSA_2048", string KeyType = "TYPE_GOOGLE_CREDENTIALS_FILE", int Ttl = default(int))
         {
-            // use default value if no "keyAlgorithm" provided
-            this.KeyAlgorithm = keyAlgorithm ?? "KEY_ALG_RSA_2048";
-            // use default value if no "keyType" provided
-            this.KeyType = keyType ?? "TYPE_GOOGLE_CREDENTIALS_FILE";
-            this.Ttl = ttl;
+
+            // use default value if no "KeyAlgorithm" provided
+            this.KeyAlgorithm = KeyAlgorithm ?? "KEY_ALG_RSA_2048";
+
+
+            // use default value if no "KeyType" provided
+            this.KeyType = KeyType ?? "TYPE_GOOGLE_CREDENTIALS_FILE";
+
+
+            this.Ttl = Ttl;
+
         }
 
         /// <summary>
@@ -47,21 +61,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot;</value>
         [DataMember(Name = "key_algorithm", EmitDefaultValue = false)]
+
         public string KeyAlgorithm { get; set; }
+
 
         /// <summary>
         /// Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot;
         /// </summary>
         /// <value>Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot;</value>
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
+
         public string KeyType { get; set; }
+
 
         /// <summary>
         /// Lifetime of the service account key
         /// </summary>
         /// <value>Lifetime of the service account key</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
+
         public int Ttl { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -113,16 +135,20 @@ namespace Vault.Model
                     this.KeyAlgorithm == input.KeyAlgorithm ||
                     (this.KeyAlgorithm != null &&
                     this.KeyAlgorithm.Equals(input.KeyAlgorithm))
+
                 ) &&
                 (
                     this.KeyType == input.KeyType ||
                     (this.KeyType != null &&
                     this.KeyType.Equals(input.KeyType))
+
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+
                     this.Ttl.Equals(input.Ttl)
                 );
+
         }
 
         /// <summary>
@@ -134,14 +160,18 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.KeyAlgorithm != null)
                 {
                     hashCode = (hashCode * 59) + this.KeyAlgorithm.GetHashCode();
                 }
+
                 if (this.KeyType != null)
                 {
                     hashCode = (hashCode * 59) + this.KeyType.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }

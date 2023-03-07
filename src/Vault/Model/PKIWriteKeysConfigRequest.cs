@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "PKIWriteKeysConfigRequest")]
     public partial class PKIWriteKeysConfigRequest : IEquatable<PKIWriteKeysConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteKeysConfigRequest" /> class.
         /// </summary>
-        /// <param name="_default">Reference (name or identifier) of the default key..</param>
-        public PKIWriteKeysConfigRequest(string _default = default(string))
+
+        /// <param name="Default">Reference (name or identifier) of the default key..</param>
+
+
+        public PKIWriteKeysConfigRequest(string Default = default(string))
         {
-            this.Default = _default;
+
+            this.Default = Default;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Reference (name or identifier) of the default key.</value>
         [DataMember(Name = "default", EmitDefaultValue = false)]
+
         public string Default { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,7 +103,9 @@ namespace Vault.Model
                     this.Default == input.Default ||
                     (this.Default != null &&
                     this.Default.Equals(input.Default))
+
                 );
+
         }
 
         /// <summary>
@@ -103,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Default != null)
                 {
                     hashCode = (hashCode * 59) + this.Default.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

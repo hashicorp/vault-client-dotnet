@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,31 +28,47 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleLoginRequest")]
     public partial class AppRoleLoginRequest : IEquatable<AppRoleLoginRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleLoginRequest" /> class.
         /// </summary>
-        /// <param name="roleId">Unique identifier of the Role. Required to be supplied when the &#39;bind_secret_id&#39; constraint is set..</param>
-        /// <param name="secretId">SecretID belong to the App role (default to &quot;&quot;).</param>
-        public AppRoleLoginRequest(string roleId = default(string), string secretId = "")
+
+        /// <param name="RoleId">Unique identifier of the Role. Required to be supplied when the &#x27;bind_secret_id&#x27; constraint is set..</param>
+
+        /// <param name="SecretId">SecretID belong to the App role (default to &quot;&quot;).</param>
+
+
+        public AppRoleLoginRequest(string RoleId = default(string), string SecretId = "")
         {
-            this.RoleId = roleId;
-            // use default value if no "secretId" provided
-            this.SecretId = secretId ?? "";
+
+            this.RoleId = RoleId;
+
+            // use default value if no "SecretId" provided
+            this.SecretId = SecretId ?? "";
+
+
         }
 
         /// <summary>
-        /// Unique identifier of the Role. Required to be supplied when the &#39;bind_secret_id&#39; constraint is set.
+        /// Unique identifier of the Role. Required to be supplied when the &#x27;bind_secret_id&#x27; constraint is set.
         /// </summary>
-        /// <value>Unique identifier of the Role. Required to be supplied when the &#39;bind_secret_id&#39; constraint is set.</value>
+        /// <value>Unique identifier of the Role. Required to be supplied when the &#x27;bind_secret_id&#x27; constraint is set.</value>
         [DataMember(Name = "role_id", EmitDefaultValue = false)]
+
         public string RoleId { get; set; }
+
 
         /// <summary>
         /// SecretID belong to the App role
         /// </summary>
         /// <value>SecretID belong to the App role</value>
         [DataMember(Name = "secret_id", EmitDefaultValue = false)]
+
         public string SecretId { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -102,12 +119,15 @@ namespace Vault.Model
                     this.RoleId == input.RoleId ||
                     (this.RoleId != null &&
                     this.RoleId.Equals(input.RoleId))
+
                 ) &&
                 (
                     this.SecretId == input.SecretId ||
                     (this.SecretId != null &&
                     this.SecretId.Equals(input.SecretId))
+
                 );
+
         }
 
         /// <summary>
@@ -119,14 +139,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.RoleId != null)
                 {
                     hashCode = (hashCode * 59) + this.RoleId.GetHashCode();
                 }
+
                 if (this.SecretId != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretId.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

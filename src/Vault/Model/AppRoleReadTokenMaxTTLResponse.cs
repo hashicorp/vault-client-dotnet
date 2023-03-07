@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleReadTokenMaxTTLResponse")]
     public partial class AppRoleReadTokenMaxTTLResponse : IEquatable<AppRoleReadTokenMaxTTLResponse>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleReadTokenMaxTTLResponse" /> class.
         /// </summary>
-        /// <param name="tokenMaxTtl">The maximum lifetime of the generated token.</param>
-        public AppRoleReadTokenMaxTTLResponse(int tokenMaxTtl = default(int))
+
+        /// <param name="TokenMaxTtl">The maximum lifetime of the generated token.</param>
+
+
+        public AppRoleReadTokenMaxTTLResponse(int TokenMaxTtl = default(int))
         {
-            this.TokenMaxTtl = tokenMaxTtl;
+
+            this.TokenMaxTtl = TokenMaxTtl;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
+
         public int TokenMaxTtl { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
                 return hashCode;
             }

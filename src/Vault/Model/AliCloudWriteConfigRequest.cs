@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "AliCloudWriteConfigRequest")]
     public partial class AliCloudWriteConfigRequest : IEquatable<AliCloudWriteConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AliCloudWriteConfigRequest" /> class.
         /// </summary>
-        /// <param name="accessKey">Access key with appropriate permissions..</param>
-        /// <param name="secretKey">Secret key with appropriate permissions..</param>
-        public AliCloudWriteConfigRequest(string accessKey = default(string), string secretKey = default(string))
+
+        /// <param name="AccessKey">Access key with appropriate permissions..</param>
+
+        /// <param name="SecretKey">Secret key with appropriate permissions..</param>
+
+
+        public AliCloudWriteConfigRequest(string AccessKey = default(string), string SecretKey = default(string))
         {
-            this.AccessKey = accessKey;
-            this.SecretKey = secretKey;
+
+            this.AccessKey = AccessKey;
+
+            this.SecretKey = SecretKey;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Access key with appropriate permissions.</value>
         [DataMember(Name = "access_key", EmitDefaultValue = false)]
+
         public string AccessKey { get; set; }
+
 
         /// <summary>
         /// Secret key with appropriate permissions.
         /// </summary>
         /// <value>Secret key with appropriate permissions.</value>
         [DataMember(Name = "secret_key", EmitDefaultValue = false)]
+
         public string SecretKey { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +117,15 @@ namespace Vault.Model
                     this.AccessKey == input.AccessKey ||
                     (this.AccessKey != null &&
                     this.AccessKey.Equals(input.AccessKey))
+
                 ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
                     this.SecretKey.Equals(input.SecretKey))
+
                 );
+
         }
 
         /// <summary>
@@ -118,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AccessKey != null)
                 {
                     hashCode = (hashCode * 59) + this.AccessKey.GetHashCode();
                 }
+
                 if (this.SecretKey != null)
                 {
                     hashCode = (hashCode * 59) + this.SecretKey.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Path** | **List&lt;string&gt;** | Use &#39;paths&#39; instead. | [optional] 
+**Path** | **List&lt;string&gt;** | Use &#x27;paths&#x27; instead. | [optional] 
 **Paths** | **List&lt;string&gt;** | Paths on which capabilities are being queried. | [optional] 
 **Token** | **string** | Token for which capabilities are being queried. | [optional] 
 

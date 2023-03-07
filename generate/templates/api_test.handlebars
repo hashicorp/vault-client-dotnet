@@ -1,21 +1,19 @@
 {{>partial_header}}
+
 using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
-{{#useRestSharp}}
-using RestSharp;
-{{/useRestSharp}}
+
 using Xunit;
 
 using {{packageName}}.Client;
 using {{packageName}}.{{apiPackage}};
-{{#hasImport}}
+{{#if hasImport}}
 // uncomment below to import models
-//using {{packageName}}.{{modelPackage}};
-{{/hasImport}}
+//using {{packageName}}.{{modelPackage}};{{/if}}
 
 namespace {{packageName}}.Test.Api
 {
@@ -28,15 +26,11 @@ namespace {{packageName}}.Test.Api
     /// </remarks>
     public class {{classname}}Tests : IDisposable
     {
-        {{^nonPublicApi}}
-        private {{packageName}}.Api.{{classname}} instance;
+        {{#unless nonPublicApi}}private {{packageName}}.Api.{{classname}} instance;{{/unless}}
 
-        {{/nonPublicApi}}
         public {{classname}}Tests()
         {
-            {{^nonPublicApi}}
-            // instance = new {{packageName}}.Api.{{classname}}();
-            {{/nonPublicApi}}
+            {{#unless nonPublicApi}}// instance = new {{packageName}}.Api.{{classname}}();{{/unless}}
         }
 
         public void Dispose()
@@ -53,9 +47,7 @@ namespace {{packageName}}.Test.Api
             // TODO uncomment below to test 'IsType' {{classname}}
             //Assert.IsType<{{classname}}>(instance);
         }
-        {{#operations}}
-        {{#operation}}
-
+        {{#with operations}}{{#each operation}}
         /// <summary>
         /// Test {{operationId}}
         /// </summary>
@@ -63,15 +55,10 @@ namespace {{packageName}}.Test.Api
         public void {{operationId}}Test()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            {{#allParams}}
-            //{{{dataType}}} {{paramName}} = null;
-            {{/allParams}}
-            //{{#returnType}}var response = {{/returnType}}instance.{{operationId}}({{#allParams}}{{paramName}}{{^-last}}, {{/-last}}{{/allParams}});
-            {{#returnType}}
-            //Assert.IsType<{{{.}}}>(response);
-            {{/returnType}}
+            {{#each allParams}}//{{{dataType}}} {{paramName}} = null;{{/each}}
+            //{{#with returnType}}var response = {{/with}}instance.{{operationId}}({{#each allParams}}{{paramName}}{{#unless @last}}, {{/unless}}{{/each}});
+            {{~#with returnType~}}//Assert.IsType<{{{.}}}>(response);{{/with}}
         }
-        {{/operation}}
-        {{/operations}}
+        {{/each}}{{/with}}
     }
 }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleWriteBoundCIDRListRequest")]
     public partial class AppRoleWriteBoundCIDRListRequest : IEquatable<AppRoleWriteBoundCIDRListRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWriteBoundCIDRListRequest" /> class.
         /// </summary>
-        /// <param name="boundCidrList">Deprecated: Please use \&quot;secret_id_bound_cidrs\&quot; instead. Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation..</param>
-        public AppRoleWriteBoundCIDRListRequest(List<string> boundCidrList = default(List<string>))
+
+        /// <param name="BoundCidrList">Deprecated: Please use \&quot;secret_id_bound_cidrs\&quot; instead. Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation..</param>
+
+
+        public AppRoleWriteBoundCIDRListRequest(List<string> BoundCidrList = default(List<string>))
         {
-            this.BoundCidrList = boundCidrList;
+
+            this.BoundCidrList = BoundCidrList;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Deprecated: Please use \&quot;secret_id_bound_cidrs\&quot; instead. Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation.</value>
         [DataMember(Name = "bound_cidr_list", EmitDefaultValue = false)]
+
         public List<string> BoundCidrList { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -93,6 +105,7 @@ namespace Vault.Model
                     input.BoundCidrList != null &&
                     this.BoundCidrList.SequenceEqual(input.BoundCidrList)
                 );
+
         }
 
         /// <summary>
@@ -104,10 +117,12 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.BoundCidrList != null)
                 {
                     hashCode = (hashCode * 59) + this.BoundCidrList.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

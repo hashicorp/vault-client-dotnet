@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,21 +28,36 @@ namespace Vault.Model
     [DataContract(Name = "TransitDecryptRequest")]
     public partial class TransitDecryptRequest : IEquatable<TransitDecryptRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitDecryptRequest" /> class.
         /// </summary>
-        /// <param name="associatedData">When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with..</param>
-        /// <param name="ciphertext">The ciphertext to decrypt, provided as returned by encrypt..</param>
-        /// <param name="context">Base64 encoded context for key derivation. Required if key derivation is enabled..</param>
-        /// <param name="nonce">Base64 encoded nonce value used during encryption. Must be provided if convergent encryption is enabled for this key and the key was generated with Vault 0.6.1. Not required for keys created in 0.6.2+..</param>
-        /// <param name="partialFailureResponseCode">Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned..</param>
-        public TransitDecryptRequest(string associatedData = default(string), string ciphertext = default(string), string context = default(string), string nonce = default(string), int partialFailureResponseCode = default(int))
+
+        /// <param name="AssociatedData">When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with..</param>
+
+        /// <param name="Ciphertext">The ciphertext to decrypt, provided as returned by encrypt..</param>
+
+        /// <param name="Context">Base64 encoded context for key derivation. Required if key derivation is enabled..</param>
+
+        /// <param name="Nonce">Base64 encoded nonce value used during encryption. Must be provided if convergent encryption is enabled for this key and the key was generated with Vault 0.6.1. Not required for keys created in 0.6.2+..</param>
+
+        /// <param name="PartialFailureResponseCode">Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned..</param>
+
+
+        public TransitDecryptRequest(string AssociatedData = default(string), string Ciphertext = default(string), string Context = default(string), string Nonce = default(string), int PartialFailureResponseCode = default(int))
         {
-            this.AssociatedData = associatedData;
-            this.Ciphertext = ciphertext;
-            this.Context = context;
-            this.Nonce = nonce;
-            this.PartialFailureResponseCode = partialFailureResponseCode;
+
+            this.AssociatedData = AssociatedData;
+
+            this.Ciphertext = Ciphertext;
+
+            this.Context = Context;
+
+            this.Nonce = Nonce;
+
+            this.PartialFailureResponseCode = PartialFailureResponseCode;
+
         }
 
         /// <summary>
@@ -49,35 +65,47 @@ namespace Vault.Model
         /// </summary>
         /// <value>When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with.</value>
         [DataMember(Name = "associated_data", EmitDefaultValue = false)]
+
         public string AssociatedData { get; set; }
+
 
         /// <summary>
         /// The ciphertext to decrypt, provided as returned by encrypt.
         /// </summary>
         /// <value>The ciphertext to decrypt, provided as returned by encrypt.</value>
         [DataMember(Name = "ciphertext", EmitDefaultValue = false)]
+
         public string Ciphertext { get; set; }
+
 
         /// <summary>
         /// Base64 encoded context for key derivation. Required if key derivation is enabled.
         /// </summary>
         /// <value>Base64 encoded context for key derivation. Required if key derivation is enabled.</value>
         [DataMember(Name = "context", EmitDefaultValue = false)]
+
         public string Context { get; set; }
+
 
         /// <summary>
         /// Base64 encoded nonce value used during encryption. Must be provided if convergent encryption is enabled for this key and the key was generated with Vault 0.6.1. Not required for keys created in 0.6.2+.
         /// </summary>
         /// <value>Base64 encoded nonce value used during encryption. Must be provided if convergent encryption is enabled for this key and the key was generated with Vault 0.6.1. Not required for keys created in 0.6.2+.</value>
         [DataMember(Name = "nonce", EmitDefaultValue = false)]
+
         public string Nonce { get; set; }
+
 
         /// <summary>
         /// Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned.
         /// </summary>
         /// <value>Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned.</value>
         [DataMember(Name = "partial_failure_response_code", EmitDefaultValue = false)]
+
         public int PartialFailureResponseCode { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -131,26 +159,32 @@ namespace Vault.Model
                     this.AssociatedData == input.AssociatedData ||
                     (this.AssociatedData != null &&
                     this.AssociatedData.Equals(input.AssociatedData))
+
                 ) &&
                 (
                     this.Ciphertext == input.Ciphertext ||
                     (this.Ciphertext != null &&
                     this.Ciphertext.Equals(input.Ciphertext))
+
                 ) &&
                 (
                     this.Context == input.Context ||
                     (this.Context != null &&
                     this.Context.Equals(input.Context))
+
                 ) &&
                 (
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&
                     this.Nonce.Equals(input.Nonce))
+
                 ) &&
                 (
                     this.PartialFailureResponseCode == input.PartialFailureResponseCode ||
+
                     this.PartialFailureResponseCode.Equals(input.PartialFailureResponseCode)
                 );
+
         }
 
         /// <summary>
@@ -162,22 +196,28 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.AssociatedData != null)
                 {
                     hashCode = (hashCode * 59) + this.AssociatedData.GetHashCode();
                 }
+
                 if (this.Ciphertext != null)
                 {
                     hashCode = (hashCode * 59) + this.Ciphertext.GetHashCode();
                 }
+
                 if (this.Context != null)
                 {
                     hashCode = (hashCode * 59) + this.Context.GetHashCode();
                 }
+
                 if (this.Nonce != null)
                 {
                     hashCode = (hashCode * 59) + this.Nonce.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.PartialFailureResponseCode.GetHashCode();
                 return hashCode;
             }

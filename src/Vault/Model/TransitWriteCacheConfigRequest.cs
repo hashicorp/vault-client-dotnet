@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "TransitWriteCacheConfigRequest")]
     public partial class TransitWriteCacheConfigRequest : IEquatable<TransitWriteCacheConfigRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitWriteCacheConfigRequest" /> class.
         /// </summary>
-        /// <param name="size">Size of cache, use 0 for an unlimited cache size, defaults to 0 (default to 0).</param>
-        public TransitWriteCacheConfigRequest(int size = 0)
+
+        /// <param name="Size">Size of cache, use 0 for an unlimited cache size, defaults to 0 (default to 0).</param>
+
+
+        public TransitWriteCacheConfigRequest(int Size = 0)
         {
-            this.Size = size;
+
+            this.Size = Size;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Size of cache, use 0 for an unlimited cache size, defaults to 0</value>
         [DataMember(Name = "size", EmitDefaultValue = false)]
+
         public int Size { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.Size == input.Size ||
+
                     this.Size.Equals(input.Size)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.Size.GetHashCode();
                 return hashCode;
             }

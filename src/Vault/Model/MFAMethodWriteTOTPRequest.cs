@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,30 +28,54 @@ namespace Vault.Model
     [DataContract(Name = "MFAMethodWriteTOTPRequest")]
     public partial class MFAMethodWriteTOTPRequest : IEquatable<MFAMethodWriteTOTPRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAMethodWriteTOTPRequest" /> class.
         /// </summary>
-        /// <param name="algorithm">The hashing algorithm used to generate the TOTP token. Options include SHA1, SHA256 and SHA512. (default to &quot;SHA1&quot;).</param>
-        /// <param name="digits">The number of digits in the generated TOTP token. This value can either be 6 or 8. (default to 6).</param>
-        /// <param name="issuer">The name of the key&#39;s issuing organization..</param>
-        /// <param name="keySize">Determines the size in bytes of the generated key. (default to 20).</param>
-        /// <param name="maxValidationAttempts">Max number of allowed validation attempts..</param>
-        /// <param name="methodId">The unique identifier for this MFA method..</param>
-        /// <param name="period">The length of time used to generate a counter for the TOTP token calculation. (default to 30).</param>
-        /// <param name="qrSize">The pixel size of the generated square QR code. (default to 200).</param>
-        /// <param name="skew">The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1. (default to 1).</param>
-        public MFAMethodWriteTOTPRequest(string algorithm = "SHA1", int digits = 6, string issuer = default(string), int keySize = 20, int maxValidationAttempts = default(int), string methodId = default(string), int period = 30, int qrSize = 200, int skew = 1)
+
+        /// <param name="Algorithm">The hashing algorithm used to generate the TOTP token. Options include SHA1, SHA256 and SHA512. (default to &quot;SHA1&quot;).</param>
+
+        /// <param name="Digits">The number of digits in the generated TOTP token. This value can either be 6 or 8. (default to 6).</param>
+
+        /// <param name="Issuer">The name of the key&#x27;s issuing organization..</param>
+
+        /// <param name="KeySize">Determines the size in bytes of the generated key. (default to 20).</param>
+
+        /// <param name="MaxValidationAttempts">Max number of allowed validation attempts..</param>
+
+        /// <param name="MethodId">The unique identifier for this MFA method..</param>
+
+        /// <param name="Period">The length of time used to generate a counter for the TOTP token calculation. (default to 30).</param>
+
+        /// <param name="QrSize">The pixel size of the generated square QR code. (default to 200).</param>
+
+        /// <param name="Skew">The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1. (default to 1).</param>
+
+
+        public MFAMethodWriteTOTPRequest(string Algorithm = "SHA1", int Digits = 6, string Issuer = default(string), int KeySize = 20, int MaxValidationAttempts = default(int), string MethodId = default(string), int Period = 30, int QrSize = 200, int Skew = 1)
         {
-            // use default value if no "algorithm" provided
-            this.Algorithm = algorithm ?? "SHA1";
-            this.Digits = digits;
-            this.Issuer = issuer;
-            this.KeySize = keySize;
-            this.MaxValidationAttempts = maxValidationAttempts;
-            this.MethodId = methodId;
-            this.Period = period;
-            this.QrSize = qrSize;
-            this.Skew = skew;
+
+            // use default value if no "Algorithm" provided
+            this.Algorithm = Algorithm ?? "SHA1";
+
+
+            this.Digits = Digits;
+
+            this.Issuer = Issuer;
+
+            this.KeySize = KeySize;
+
+            this.MaxValidationAttempts = MaxValidationAttempts;
+
+            this.MethodId = MethodId;
+
+            this.Period = Period;
+
+            this.QrSize = QrSize;
+
+            this.Skew = Skew;
+
         }
 
         /// <summary>
@@ -58,63 +83,83 @@ namespace Vault.Model
         /// </summary>
         /// <value>The hashing algorithm used to generate the TOTP token. Options include SHA1, SHA256 and SHA512.</value>
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
+
         public string Algorithm { get; set; }
+
 
         /// <summary>
         /// The number of digits in the generated TOTP token. This value can either be 6 or 8.
         /// </summary>
         /// <value>The number of digits in the generated TOTP token. This value can either be 6 or 8.</value>
         [DataMember(Name = "digits", EmitDefaultValue = false)]
+
         public int Digits { get; set; }
 
+
         /// <summary>
-        /// The name of the key&#39;s issuing organization.
+        /// The name of the key&#x27;s issuing organization.
         /// </summary>
-        /// <value>The name of the key&#39;s issuing organization.</value>
+        /// <value>The name of the key&#x27;s issuing organization.</value>
         [DataMember(Name = "issuer", EmitDefaultValue = false)]
+
         public string Issuer { get; set; }
+
 
         /// <summary>
         /// Determines the size in bytes of the generated key.
         /// </summary>
         /// <value>Determines the size in bytes of the generated key.</value>
         [DataMember(Name = "key_size", EmitDefaultValue = false)]
+
         public int KeySize { get; set; }
+
 
         /// <summary>
         /// Max number of allowed validation attempts.
         /// </summary>
         /// <value>Max number of allowed validation attempts.</value>
         [DataMember(Name = "max_validation_attempts", EmitDefaultValue = false)]
+
         public int MaxValidationAttempts { get; set; }
+
 
         /// <summary>
         /// The unique identifier for this MFA method.
         /// </summary>
         /// <value>The unique identifier for this MFA method.</value>
         [DataMember(Name = "method_id", EmitDefaultValue = false)]
+
         public string MethodId { get; set; }
+
 
         /// <summary>
         /// The length of time used to generate a counter for the TOTP token calculation.
         /// </summary>
         /// <value>The length of time used to generate a counter for the TOTP token calculation.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
+
         public int Period { get; set; }
+
 
         /// <summary>
         /// The pixel size of the generated square QR code.
         /// </summary>
         /// <value>The pixel size of the generated square QR code.</value>
         [DataMember(Name = "qr_size", EmitDefaultValue = false)]
+
         public int QrSize { get; set; }
+
 
         /// <summary>
         /// The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1.
         /// </summary>
         /// <value>The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1.</value>
         [DataMember(Name = "skew", EmitDefaultValue = false)]
+
         public int Skew { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -172,41 +217,51 @@ namespace Vault.Model
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
+
                 ) &&
                 (
                     this.Digits == input.Digits ||
+
                     this.Digits.Equals(input.Digits)
                 ) &&
                 (
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
+
                 ) &&
                 (
                     this.KeySize == input.KeySize ||
+
                     this.KeySize.Equals(input.KeySize)
                 ) &&
                 (
                     this.MaxValidationAttempts == input.MaxValidationAttempts ||
+
                     this.MaxValidationAttempts.Equals(input.MaxValidationAttempts)
                 ) &&
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&
                     this.MethodId.Equals(input.MethodId))
+
                 ) &&
                 (
                     this.Period == input.Period ||
+
                     this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.QrSize == input.QrSize ||
+
                     this.QrSize.Equals(input.QrSize)
                 ) &&
                 (
                     this.Skew == input.Skew ||
+
                     this.Skew.Equals(input.Skew)
                 );
+
         }
 
         /// <summary>
@@ -218,23 +273,33 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Algorithm != null)
                 {
                     hashCode = (hashCode * 59) + this.Algorithm.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Digits.GetHashCode();
                 if (this.Issuer != null)
                 {
                     hashCode = (hashCode * 59) + this.Issuer.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.KeySize.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.MaxValidationAttempts.GetHashCode();
                 if (this.MethodId != null)
                 {
                     hashCode = (hashCode * 59) + this.MethodId.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Period.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.QrSize.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.Skew.GetHashCode();
                 return hashCode;
             }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,13 +28,20 @@ namespace Vault.Model
     [DataContract(Name = "AppRoleWriteSecretIDTTLRequest")]
     public partial class AppRoleWriteSecretIDTTLRequest : IEquatable<AppRoleWriteSecretIDTTLRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppRoleWriteSecretIDTTLRequest" /> class.
         /// </summary>
-        /// <param name="secretIdTtl">Duration in seconds after which the issued SecretID should expire. Defaults to 0, meaning no expiration..</param>
-        public AppRoleWriteSecretIDTTLRequest(int secretIdTtl = default(int))
+
+        /// <param name="SecretIdTtl">Duration in seconds after which the issued SecretID should expire. Defaults to 0, meaning no expiration..</param>
+
+
+        public AppRoleWriteSecretIDTTLRequest(int SecretIdTtl = default(int))
         {
-            this.SecretIdTtl = secretIdTtl;
+
+            this.SecretIdTtl = SecretIdTtl;
+
         }
 
         /// <summary>
@@ -41,7 +49,11 @@ namespace Vault.Model
         /// </summary>
         /// <value>Duration in seconds after which the issued SecretID should expire. Defaults to 0, meaning no expiration.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
+
         public int SecretIdTtl { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,8 +101,10 @@ namespace Vault.Model
             return
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
+
                     this.SecretIdTtl.Equals(input.SecretIdTtl)
                 );
+
         }
 
         /// <summary>
@@ -102,6 +116,8 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+
                 hashCode = (hashCode * 59) + this.SecretIdTtl.GetHashCode();
                 return hashCode;
             }

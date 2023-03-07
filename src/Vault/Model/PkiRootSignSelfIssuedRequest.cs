@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,18 +28,30 @@ namespace Vault.Model
     [DataContract(Name = "PKIRootSignSelfIssuedRequest")]
     public partial class PKIRootSignSelfIssuedRequest : IEquatable<PKIRootSignSelfIssuedRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIRootSignSelfIssuedRequest" /> class.
         /// </summary>
-        /// <param name="certificate">PEM-format self-issued certificate to be signed..</param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. (default to &quot;default&quot;).</param>
-        /// <param name="requireMatchingCertificateAlgorithms">If true, require the public key algorithm of the signer to match that of the self issued certificate. (default to false).</param>
-        public PKIRootSignSelfIssuedRequest(string certificate = default(string), string issuerRef = "default", bool requireMatchingCertificateAlgorithms = false)
+
+        /// <param name="Certificate">PEM-format self-issued certificate to be signed..</param>
+
+        /// <param name="IssuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. (default to &quot;default&quot;).</param>
+
+        /// <param name="RequireMatchingCertificateAlgorithms">If true, require the public key algorithm of the signer to match that of the self issued certificate. (default to false).</param>
+
+
+        public PKIRootSignSelfIssuedRequest(string Certificate = default(string), string IssuerRef = "default", bool RequireMatchingCertificateAlgorithms = false)
         {
-            this.Certificate = certificate;
-            // use default value if no "issuerRef" provided
-            this.IssuerRef = issuerRef ?? "default";
-            this.RequireMatchingCertificateAlgorithms = requireMatchingCertificateAlgorithms;
+
+            this.Certificate = Certificate;
+
+            // use default value if no "IssuerRef" provided
+            this.IssuerRef = IssuerRef ?? "default";
+
+
+            this.RequireMatchingCertificateAlgorithms = RequireMatchingCertificateAlgorithms;
+
         }
 
         /// <summary>
@@ -46,21 +59,29 @@ namespace Vault.Model
         /// </summary>
         /// <value>PEM-format self-issued certificate to be signed.</value>
         [DataMember(Name = "certificate", EmitDefaultValue = false)]
+
         public string Certificate { get; set; }
+
 
         /// <summary>
         /// Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.
         /// </summary>
         /// <value>Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</value>
         [DataMember(Name = "issuer_ref", EmitDefaultValue = false)]
+
         public string IssuerRef { get; set; }
+
 
         /// <summary>
         /// If true, require the public key algorithm of the signer to match that of the self issued certificate.
         /// </summary>
         /// <value>If true, require the public key algorithm of the signer to match that of the self issued certificate.</value>
         [DataMember(Name = "require_matching_certificate_algorithms", EmitDefaultValue = true)]
+
         public bool RequireMatchingCertificateAlgorithms { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -112,16 +133,20 @@ namespace Vault.Model
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
+
                 ) &&
                 (
                     this.IssuerRef == input.IssuerRef ||
                     (this.IssuerRef != null &&
                     this.IssuerRef.Equals(input.IssuerRef))
+
                 ) &&
                 (
                     this.RequireMatchingCertificateAlgorithms == input.RequireMatchingCertificateAlgorithms ||
+
                     this.RequireMatchingCertificateAlgorithms.Equals(input.RequireMatchingCertificateAlgorithms)
                 );
+
         }
 
         /// <summary>
@@ -133,14 +158,18 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Certificate != null)
                 {
                     hashCode = (hashCode * 59) + this.Certificate.GetHashCode();
                 }
+
                 if (this.IssuerRef != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuerRef.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.RequireMatchingCertificateAlgorithms.GetHashCode();
                 return hashCode;
             }

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "UnsealRequest")]
     public partial class UnsealRequest : IEquatable<UnsealRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UnsealRequest" /> class.
         /// </summary>
-        /// <param name="key">Specifies a single unseal key share. This is required unless reset is true..</param>
-        /// <param name="reset">Specifies if previously-provided unseal keys are discarded and the unseal process is reset..</param>
-        public UnsealRequest(string key = default(string), bool reset = default(bool))
+
+        /// <param name="Key">Specifies a single unseal key share. This is required unless reset is true..</param>
+
+        /// <param name="Reset">Specifies if previously-provided unseal keys are discarded and the unseal process is reset..</param>
+
+
+        public UnsealRequest(string Key = default(string), bool Reset = default(bool))
         {
-            this.Key = key;
-            this.Reset = reset;
+
+            this.Key = Key;
+
+            this.Reset = Reset;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Specifies a single unseal key share. This is required unless reset is true.</value>
         [DataMember(Name = "key", EmitDefaultValue = false)]
+
         public string Key { get; set; }
+
 
         /// <summary>
         /// Specifies if previously-provided unseal keys are discarded and the unseal process is reset.
         /// </summary>
         /// <value>Specifies if previously-provided unseal keys are discarded and the unseal process is reset.</value>
         [DataMember(Name = "reset", EmitDefaultValue = true)]
+
         public bool Reset { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +117,14 @@ namespace Vault.Model
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
+
                 ) &&
                 (
                     this.Reset == input.Reset ||
+
                     this.Reset.Equals(input.Reset)
                 );
+
         }
 
         /// <summary>
@@ -117,10 +136,13 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Key != null)
                 {
                     hashCode = (hashCode * 59) + this.Key.GetHashCode();
                 }
+
+
                 hashCode = (hashCode * 59) + this.Reset.GetHashCode();
                 return hashCode;
             }

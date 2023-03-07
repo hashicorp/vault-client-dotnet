@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "SSHWriteCredentialsRequest")]
     public partial class SSHWriteCredentialsRequest : IEquatable<SSHWriteCredentialsRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SSHWriteCredentialsRequest" /> class.
         /// </summary>
-        /// <param name="ip">[Required] IP of the remote host.</param>
-        /// <param name="username">[Optional] Username in remote host.</param>
-        public SSHWriteCredentialsRequest(string ip = default(string), string username = default(string))
+
+        /// <param name="Ip">[Required] IP of the remote host.</param>
+
+        /// <param name="Username">[Optional] Username in remote host.</param>
+
+
+        public SSHWriteCredentialsRequest(string Ip = default(string), string Username = default(string))
         {
-            this.Ip = ip;
-            this.Username = username;
+
+            this.Ip = Ip;
+
+            this.Username = Username;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>[Required] IP of the remote host</value>
         [DataMember(Name = "ip", EmitDefaultValue = false)]
+
         public string Ip { get; set; }
+
 
         /// <summary>
         /// [Optional] Username in remote host
         /// </summary>
         /// <value>[Optional] Username in remote host</value>
         [DataMember(Name = "username", EmitDefaultValue = false)]
+
         public string Username { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,12 +117,15 @@ namespace Vault.Model
                     this.Ip == input.Ip ||
                     (this.Ip != null &&
                     this.Ip.Equals(input.Ip))
+
                 ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&
                     this.Username.Equals(input.Username))
+
                 );
+
         }
 
         /// <summary>
@@ -118,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Ip != null)
                 {
                     hashCode = (hashCode * 59) + this.Ip.GetHashCode();
                 }
+
                 if (this.Username != null)
                 {
                     hashCode = (hashCode * 59) + this.Username.GetHashCode();
                 }
+
                 return hashCode;
             }
         }

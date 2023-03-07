@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,8 +15,10 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
+
 using System.ComponentModel.DataAnnotations;
 using FileParameter = Vault.Client.FileParameter;
+
 
 namespace Vault.Model
 {
@@ -27,15 +28,24 @@ namespace Vault.Model
     [DataContract(Name = "GoogleCloudWriteRoleServiceAccountsRequest")]
     public partial class GoogleCloudWriteRoleServiceAccountsRequest : IEquatable<GoogleCloudWriteRoleServiceAccountsRequest>, IValidatableObject
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="GoogleCloudWriteRoleServiceAccountsRequest" /> class.
         /// </summary>
-        /// <param name="add">Service-account emails or IDs to add..</param>
-        /// <param name="remove">Service-account emails or IDs to remove..</param>
-        public GoogleCloudWriteRoleServiceAccountsRequest(List<string> add = default(List<string>), List<string> remove = default(List<string>))
+
+        /// <param name="Add">Service-account emails or IDs to add..</param>
+
+        /// <param name="Remove">Service-account emails or IDs to remove..</param>
+
+
+        public GoogleCloudWriteRoleServiceAccountsRequest(List<string> Add = default(List<string>), List<string> Remove = default(List<string>))
         {
-            this.Add = add;
-            this.Remove = remove;
+
+            this.Add = Add;
+
+            this.Remove = Remove;
+
         }
 
         /// <summary>
@@ -43,14 +53,20 @@ namespace Vault.Model
         /// </summary>
         /// <value>Service-account emails or IDs to add.</value>
         [DataMember(Name = "add", EmitDefaultValue = false)]
+
         public List<string> Add { get; set; }
+
 
         /// <summary>
         /// Service-account emails or IDs to remove.
         /// </summary>
         /// <value>Service-account emails or IDs to remove.</value>
         [DataMember(Name = "remove", EmitDefaultValue = false)]
+
         public List<string> Remove { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -109,6 +125,7 @@ namespace Vault.Model
                     input.Remove != null &&
                     this.Remove.SequenceEqual(input.Remove)
                 );
+
         }
 
         /// <summary>
@@ -120,14 +137,17 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
                 if (this.Add != null)
                 {
                     hashCode = (hashCode * 59) + this.Add.GetHashCode();
                 }
+
                 if (this.Remove != null)
                 {
                     hashCode = (hashCode * 59) + this.Remove.GetHashCode();
                 }
+
                 return hashCode;
             }
         }
