@@ -277,7 +277,7 @@
             foreach (var x in BaseValidate(validationContext))
             {
                 yield return x;
-            }{{/unless}}{{/unless}}{{/with}}
+            }{{/unless}}{{/unless}}{{/with ~}}
             {{#each vars}}{{#if hasValidation}}{{#unless isEnum}}{{#with maxLength}}// {{{name}}} ({{{dataType}}}) maxLength
             if (this.{{{name}}} != null && this.{{{name}}}.Length > {{maxLength}})
             {
