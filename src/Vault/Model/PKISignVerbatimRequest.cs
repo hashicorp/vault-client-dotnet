@@ -27,16 +27,10 @@ namespace Vault.Model
     /// </summary>
     [DataContract(Name = "PKISignVerbatimRequest")]
     public partial class PKISignVerbatimRequest : IEquatable<PKISignVerbatimRequest>, IValidatableObject
-    {
-
-
-
-
-
-        /// <summary>
-        /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
-        /// </summary>
-        /// <value>Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.</value>
+    {        /// <summary>
+             /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
+             /// </summary>
+             /// <value>Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FormatEnum
         {
@@ -57,7 +51,6 @@ namespace Vault.Model
             [EnumMember(Value = "pem_bundle")]
             PemBundle = 2
         }
-
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
         /// </summary>
@@ -65,11 +58,6 @@ namespace Vault.Model
 
         [DataMember(Name = "format", EmitDefaultValue = false)]
         public FormatEnum? Format { get; set; }
-
-
-
-
-
 
         /// <summary>
         /// Format for the returned private key. Generally the default will be controlled by the \&quot;format\&quot; parameter as either base64-encoded DER or PEM-encoded DER. However, this can be set to \&quot;pkcs8\&quot; to have the returned private key contain base64-encoded pkcs8 or PEM-encoded pkcs8 instead. Defaults to \&quot;der\&quot;.
@@ -100,7 +88,6 @@ namespace Vault.Model
             [EnumMember(Value = "pkcs8")]
             Pkcs8 = 3
         }
-
         /// <summary>
         /// Format for the returned private key. Generally the default will be controlled by the \&quot;format\&quot; parameter as either base64-encoded DER or PEM-encoded DER. However, this can be set to \&quot;pkcs8\&quot; to have the returned private key contain base64-encoded pkcs8 or PEM-encoded pkcs8 instead. Defaults to \&quot;der\&quot;.
         /// </summary>
@@ -108,13 +95,6 @@ namespace Vault.Model
 
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
-
-
-
-
-
-
-
 
 
 

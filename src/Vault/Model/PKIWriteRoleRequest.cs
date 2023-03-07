@@ -27,36 +27,10 @@ namespace Vault.Model
     /// </summary>
     [DataContract(Name = "PKIWriteRoleRequest")]
     public partial class PKIWriteRoleRequest : IEquatable<PKIWriteRoleRequest>, IValidatableObject
-    {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /// <summary>
-        /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.
-        /// </summary>
-        /// <value>The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.</value>
+    {        /// <summary>
+             /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.
+             /// </summary>
+             /// <value>The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum KeyTypeEnum
         {
@@ -82,7 +56,6 @@ namespace Vault.Model
             [EnumMember(Value = "any")]
             Any = 3
         }
-
         /// <summary>
         /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.
         /// </summary>
@@ -90,25 +63,6 @@ namespace Vault.Model
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
         public KeyTypeEnum? KeyType { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

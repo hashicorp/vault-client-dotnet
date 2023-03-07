@@ -27,25 +27,10 @@ namespace Vault.Model
     /// </summary>
     [DataContract(Name = "KerberosWriteLDAPConfigRequest")]
     public partial class KerberosWriteLDAPConfigRequest : IEquatable<KerberosWriteLDAPConfigRequest>, IValidatableObject
-    {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /// <summary>
-        /// Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;
-        /// </summary>
-        /// <value>Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;</value>
+    {        /// <summary>
+             /// Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;
+             /// </summary>
+             /// <value>Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TlsMaxVersionEnum
         {
@@ -71,7 +56,6 @@ namespace Vault.Model
             [EnumMember(Value = "tls13")]
             Tls13 = 3
         }
-
         /// <summary>
         /// Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;
         /// </summary>
@@ -109,7 +93,6 @@ namespace Vault.Model
             [EnumMember(Value = "tls13")]
             Tls13 = 3
         }
-
         /// <summary>
         /// Minimum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;
         /// </summary>
@@ -117,23 +100,6 @@ namespace Vault.Model
 
         [DataMember(Name = "tls_min_version", EmitDefaultValue = false)]
         public TlsMinVersionEnum? TlsMinVersion { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

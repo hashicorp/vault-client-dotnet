@@ -30,11 +30,6 @@ namespace Vault.Model
     {
 
 
-
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SSHWriteCAConfigRequest" /> class.
         /// </summary>

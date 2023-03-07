@@ -30,7 +30,6 @@ namespace Vault.Model
     {
 
 
-
         /// <summary>
         /// Initializes a new instance of the <see cref="PKIWriteCAConfigRequest" /> class.
         /// </summary>

@@ -29,8 +29,6 @@ namespace Vault.Model
     public partial class MFAValidateRequest : IEquatable<MFAValidateRequest>, IValidatableObject
     {
 
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAValidateRequest" /> class.
         /// </summary>

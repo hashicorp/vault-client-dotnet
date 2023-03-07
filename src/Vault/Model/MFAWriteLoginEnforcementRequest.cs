@@ -29,11 +29,6 @@ namespace Vault.Model
     public partial class MFAWriteLoginEnforcementRequest : IEquatable<MFAWriteLoginEnforcementRequest>, IValidatableObject
     {
 
-
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAWriteLoginEnforcementRequest" /> class.
         /// </summary>

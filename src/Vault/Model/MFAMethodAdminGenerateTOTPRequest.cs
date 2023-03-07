@@ -29,8 +29,6 @@ namespace Vault.Model
     public partial class MFAMethodAdminGenerateTOTPRequest : IEquatable<MFAMethodAdminGenerateTOTPRequest>, IValidatableObject
     {
 
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAMethodAdminGenerateTOTPRequest" /> class.
         /// </summary>

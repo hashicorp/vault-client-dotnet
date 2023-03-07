@@ -27,15 +27,10 @@ namespace Vault.Model
     /// </summary>
     [DataContract(Name = "PKIWriteIntermediateCrossSignRequest")]
     public partial class PKIWriteIntermediateCrossSignRequest : IEquatable<PKIWriteIntermediateCrossSignRequest>, IValidatableObject
-    {
-
-
-
-
-        /// <summary>
-        /// Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!
-        /// </summary>
-        /// <value>Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</value>
+    {        /// <summary>
+             /// Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!
+             /// </summary>
+             /// <value>Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ExportedEnum
         {
@@ -56,7 +51,6 @@ namespace Vault.Model
             [EnumMember(Value = "kms")]
             Kms = 2
         }
-
         /// <summary>
         /// Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!
         /// </summary>
@@ -89,7 +83,6 @@ namespace Vault.Model
             [EnumMember(Value = "pem_bundle")]
             PemBundle = 2
         }
-
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
         /// </summary>
@@ -97,10 +90,6 @@ namespace Vault.Model
 
         [DataMember(Name = "format", EmitDefaultValue = false)]
         public FormatEnum? Format { get; set; }
-
-
-
-
 
         /// <summary>
         /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot; and \&quot;ed25519\&quot; are the only valid values.
@@ -126,7 +115,6 @@ namespace Vault.Model
             [EnumMember(Value = "ed25519")]
             Ed25519 = 2
         }
-
         /// <summary>
         /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot; and \&quot;ed25519\&quot; are the only valid values.
         /// </summary>
@@ -134,15 +122,6 @@ namespace Vault.Model
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
         public KeyTypeEnum? KeyType { get; set; }
-
-
-
-
-
-
-
-
-
 
         /// <summary>
         /// Format for the returned private key. Generally the default will be controlled by the \&quot;format\&quot; parameter as either base64-encoded DER or PEM-encoded DER. However, this can be set to \&quot;pkcs8\&quot; to have the returned private key contain base64-encoded pkcs8 or PEM-encoded pkcs8 instead. Defaults to \&quot;der\&quot;.
@@ -173,7 +152,6 @@ namespace Vault.Model
             [EnumMember(Value = "pkcs8")]
             Pkcs8 = 3
         }
-
         /// <summary>
         /// Format for the returned private key. Generally the default will be controlled by the \&quot;format\&quot; parameter as either base64-encoded DER or PEM-encoded DER. However, this can be set to \&quot;pkcs8\&quot; to have the returned private key contain base64-encoded pkcs8 or PEM-encoded pkcs8 instead. Defaults to \&quot;der\&quot;.
         /// </summary>
@@ -181,12 +159,6 @@ namespace Vault.Model
 
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
-
-
-
-
-
-
 
 
 

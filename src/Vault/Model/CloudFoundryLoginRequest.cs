@@ -29,10 +29,6 @@ namespace Vault.Model
     public partial class CloudFoundryLoginRequest : IEquatable<CloudFoundryLoginRequest>, IValidatableObject
     {
 
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="CloudFoundryLoginRequest" /> class.
         /// </summary>

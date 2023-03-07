@@ -29,20 +29,6 @@ namespace Vault.Model
     public partial class GitHubWriteConfigRequest : IEquatable<GitHubWriteConfigRequest>, IValidatableObject
     {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="GitHubWriteConfigRequest" /> class.
         /// </summary>

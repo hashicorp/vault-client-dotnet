@@ -29,8 +29,6 @@ namespace Vault.Model
     public partial class MongoDBAtlasWriteConfigRequest : IEquatable<MongoDBAtlasWriteConfigRequest>, IValidatableObject
     {
 
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MongoDBAtlasWriteConfigRequest" /> class.
         /// </summary>

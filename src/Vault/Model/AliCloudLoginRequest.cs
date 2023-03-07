@@ -29,9 +29,6 @@ namespace Vault.Model
     public partial class AliCloudLoginRequest : IEquatable<AliCloudLoginRequest>, IValidatableObject
     {
 
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="AliCloudLoginRequest" /> class.
         /// </summary>

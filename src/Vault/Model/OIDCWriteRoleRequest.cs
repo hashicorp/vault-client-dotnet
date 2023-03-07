@@ -29,10 +29,6 @@ namespace Vault.Model
     public partial class OIDCWriteRoleRequest : IEquatable<OIDCWriteRoleRequest>, IValidatableObject
     {
 
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="OIDCWriteRoleRequest" /> class.
         /// </summary>

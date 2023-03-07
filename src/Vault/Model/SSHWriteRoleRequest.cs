@@ -27,11 +27,10 @@ namespace Vault.Model
     /// </summary>
     [DataContract(Name = "SSHWriteRoleRequest")]
     public partial class SSHWriteRoleRequest : IEquatable<SSHWriteRoleRequest>, IValidatableObject
-    {
-        /// <summary>
-        /// When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.
-        /// </summary>
-        /// <value>When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.</value>
+    {        /// <summary>
+             /// When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.
+             /// </summary>
+             /// <value>When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AlgorithmSignerEnum
         {
@@ -57,7 +56,6 @@ namespace Vault.Model
             [EnumMember(Value = "rsa-sha2-512")]
             RsaSha2512 = 3
         }
-
         /// <summary>
         /// When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.
         /// </summary>
@@ -65,30 +63,6 @@ namespace Vault.Model
 
         [DataMember(Name = "algorithm_signer", EmitDefaultValue = false)]
         public AlgorithmSignerEnum? AlgorithmSigner { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         /// <summary>
         /// [Required for all types] Type of key used to login to hosts. It can be either &#x27;otp&#x27;, &#x27;dynamic&#x27; or &#x27;ca&#x27;. &#x27;otp&#x27; type requires agent to be installed in remote hosts.
@@ -114,7 +88,6 @@ namespace Vault.Model
             [EnumMember(Value = "ca")]
             Ca = 2
         }
-
         /// <summary>
         /// [Required for all types] Type of key used to login to hosts. It can be either &#x27;otp&#x27;, &#x27;dynamic&#x27; or &#x27;ca&#x27;. &#x27;otp&#x27; type requires agent to be installed in remote hosts.
         /// </summary>
@@ -122,10 +95,6 @@ namespace Vault.Model
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
         public KeyTypeEnum? KeyType { get; set; }
-
-
-
-
 
 
 

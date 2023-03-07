@@ -29,14 +29,6 @@ namespace Vault.Model
     public partial class MongoDBAtlasWriteRoleRequest : IEquatable<MongoDBAtlasWriteRoleRequest>, IValidatableObject
     {
 
-
-
-
-
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MongoDBAtlasWriteRoleRequest" /> class.
         /// </summary>

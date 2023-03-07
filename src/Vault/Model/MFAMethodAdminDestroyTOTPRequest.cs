@@ -29,8 +29,6 @@ namespace Vault.Model
     public partial class MFAMethodAdminDestroyTOTPRequest : IEquatable<MFAMethodAdminDestroyTOTPRequest>, IValidatableObject
     {
 
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MFAMethodAdminDestroyTOTPRequest" /> class.
         /// </summary>

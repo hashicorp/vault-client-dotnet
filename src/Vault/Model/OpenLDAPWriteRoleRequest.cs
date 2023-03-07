@@ -29,12 +29,6 @@ namespace Vault.Model
     public partial class OpenLDAPWriteRoleRequest : IEquatable<OpenLDAPWriteRoleRequest>, IValidatableObject
     {
 
-
-
-
-
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenLDAPWriteRoleRequest" /> class.
         /// </summary>
