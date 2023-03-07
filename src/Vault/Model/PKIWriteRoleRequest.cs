@@ -53,34 +53,6 @@ namespace Vault.Model
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /// <summary>
         /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.
         /// </summary>
@@ -118,25 +90,6 @@ namespace Vault.Model
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
         public KeyTypeEnum? KeyType { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

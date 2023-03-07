@@ -33,14 +33,6 @@ namespace Vault.Model
 
 
 
-
-
-
-
-
-
-
-
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
         /// </summary>
@@ -73,12 +65,6 @@ namespace Vault.Model
 
         [DataMember(Name = "format", EmitDefaultValue = false)]
         public FormatEnum? Format { get; set; }
-
-
-
-
-
-
 
 
 
@@ -122,12 +108,6 @@ namespace Vault.Model
 
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
-
-
-
-
-
-
 
 
 

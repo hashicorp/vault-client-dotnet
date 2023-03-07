@@ -4,15 +4,15 @@
     [DataContract(Name = "{{{name}}}")]
     {{>visibility}} partial class {{classname}} : {{#with parent}}{{{.}}}, {{/with}}IEquatable<{{classname}}>{{#if validatable}}, IValidatableObject{{/if}}
     {
-        {{#each vars ~}}{{#with items.isEnum}}{{#with items}}{{#unless complexType}}{{>modelInnerEnum}}{{/unless}}{{/with}}{{/with}}
-        {{#if isEnum}}{{#unless complexType}}{{>modelInnerEnum}}{{/unless}}{{/if}}
+        {{~#each vars ~}}{{#with items.isEnum}}{{#with items}}{{#unless complexType}}{{>modelInnerEnum}}{{/unless}}{{/with}}{{/with}}
+        {{~#if isEnum ~}}{{#unless complexType}}{{>modelInnerEnum}}{{/unless}}{{/if}}
         {{#if isEnum}}/// <summary>
         /// {{description}}{{#unless description}}Gets or Sets {{{name}}}{{/unless}}
         /// </summary>
         {{#with description}}/// <value>{{.}}</value>{{/with}}
         {{#unless conditionalSerialization}}
         [DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
-        {{#if deprecated}}[Obsolete]{{/if ~}}
+        {{#if deprecated ~}}[Obsolete]{{/if ~}}
         public {{{complexType}}}{{#unless complexType}}{{{datatypeWithEnum}}}{{/unless}}{{#unless isContainer}}{{#unless required}}?{{/unless}}{{/unless}} {{name}} { get; set; }
         {{#if isReadOnly}}
         /// <summary>
@@ -25,7 +25,7 @@
         }{{/if}}{{/unless}}
         {{#with conditionalSerialization}}{{#if isReadOnly}}
         [DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
-        {{#if deprecated}}[Obsolete]{{/if ~}}
+        {{#if deprecated ~}}[Obsolete]{{/if ~}}
         public {{{complexType}}}{{#unless complexType}}{{{datatypeWithEnum}}}{{/unless}}{{#unless isContainer}}{{#unless required}}?{{/unless}}{{/unless}} {{name}} { get; set; }
 
         /// <summary>
@@ -123,7 +123,7 @@
         }{{/if}}{{/unless}}
         {{#with conditionalSerialization}}{{#if isReadOnly}}[DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
         {{#if isDate}}[JsonConverter(typeof(OpenAPIDateConverter))]{{/if}}
-        {{#if deprecated}}[Obsolete]{{/if}}
+        {{#if deprecated ~}}[Obsolete]{{/if ~}}
         public {{{dataType}}} {{name}} { get; private set; }
 
         /// <summary>
@@ -137,7 +137,7 @@
         {{#unless isReadOnly}}{{#if isDate}}
         [JsonConverter(typeof(OpenAPIDateConverter))]{{/if}}
         [DataMember(Name = "{{baseName}}"{{#with required}}, IsRequired = true{{/with}}, EmitDefaultValue = {{#with vendorExtensions.x-emit-default-value}}true{{/with}}{{#unless vendorExtensions.x-emit-default-value}}{{#if isBoolean}}true{{/if}}{{#unless isBoolean}}{{#if isNullable}}true{{/if}}{{#unless isNullable}}false{{/unless}}{{/unless}}{{/unless}})]
-        {{#if deprecated}}[Obsolete]{{/if}}
+        {{#if deprecated ~}}[Obsolete]{{/if ~}}
         public {{{dataType}}} {{name}}
         {
             get{ return _{{name}};}

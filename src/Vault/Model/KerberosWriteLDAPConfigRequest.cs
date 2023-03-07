@@ -42,23 +42,6 @@ namespace Vault.Model
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         /// <summary>
         /// Maximum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;
         /// </summary>
@@ -97,7 +80,6 @@ namespace Vault.Model
         [DataMember(Name = "tls_max_version", EmitDefaultValue = false)]
         public TlsMaxVersionEnum? TlsMaxVersion { get; set; }
 
-
         /// <summary>
         /// Minimum TLS version to use. Accepted values are &#x27;tls10&#x27;, &#x27;tls11&#x27;, &#x27;tls12&#x27; or &#x27;tls13&#x27;. Defaults to &#x27;tls12&#x27;
         /// </summary>
@@ -135,23 +117,6 @@ namespace Vault.Model
 
         [DataMember(Name = "tls_min_version", EmitDefaultValue = false)]
         public TlsMinVersionEnum? TlsMinVersion { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -29,10 +29,6 @@ namespace Vault.Model
     public partial class PKIWriteInternalExportedRequest : IEquatable<PKIWriteInternalExportedRequest>, IValidatableObject
     {
 
-
-
-
-
         /// <summary>
         /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot; and \&quot;ed25519\&quot; are the only valid values.
         /// </summary>
@@ -65,8 +61,6 @@ namespace Vault.Model
 
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
         public KeyTypeEnum? KeyType { get; set; }
-
-
 
 
 
