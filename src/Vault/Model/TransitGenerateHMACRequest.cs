@@ -214,8 +214,6 @@ namespace Vault.Model
             }
         }
 
-
-
         /// <summary>
         /// To validate all properties of the instance
         /// </summary>
@@ -223,7 +221,6 @@ namespace Vault.Model
         /// <returns>Validation Result</returns>
         public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
-
 
             yield break;
         }
