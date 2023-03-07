@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **UsernameTemplate** | **string** | Template describing how dynamic usernames are generated. | [optional] 
 **VerifyConnection** | **bool** | If set, connection_uri is verified by actually connecting to the RabbitMQ management API | [optional] [default to true]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

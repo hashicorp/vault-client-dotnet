@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **Role** | **string** | Login role to apply this quota to. Note that when set, path must be configured to a valid auth method with a concept of roles. | [optional] 
 **Type** | **string** | Type of the quota rule. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

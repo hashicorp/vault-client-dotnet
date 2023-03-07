@@ -15,6 +15,5 @@ Name | Type | Description | Notes
 **TokenTtl** | **int** | The initial ttl of the token to generate | [optional] 
 **TokenType** | **string** | The type of token to generate, service or batch | [optional] [default to "default-service"]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

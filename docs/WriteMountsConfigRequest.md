@@ -18,6 +18,5 @@ Name | Type | Description | Notes
 **TokenType** | **string** | The type of token to issue (service or batch). | [optional] 
 **UserLockoutConfig** | **Object** | The user lockout configuration to pass into the backend. Should be a json object with string keys and values. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **FromEntityIds** | **List&lt;string&gt;** | Entity IDs which need to get merged | [optional] 
 **ToEntityId** | **string** | Entity ID into which all the other entities need to get merged | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

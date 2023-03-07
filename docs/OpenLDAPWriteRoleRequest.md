@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **RollbackLdif** | **string** | LDIF string used to rollback changes in the event of a failure to create credentials. This LDIF can be templated. | [optional] 
 **UsernameTemplate** | **string** | The template used to create a username | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

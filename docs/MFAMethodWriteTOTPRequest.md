@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **QrSize** | **int** | The pixel size of the generated square QR code. | [optional] [default to 200]
 **Skew** | **int** | The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1. | [optional] [default to 1]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

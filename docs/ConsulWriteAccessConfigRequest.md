@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **Scheme** | **string** | URI scheme for the Consul address | [optional] [default to "http"]
 **Token** | **string** | Token for API calls | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

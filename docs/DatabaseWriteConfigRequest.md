@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **RootRotationStatements** | **List&lt;string&gt;** | Specifies the database statements to be executed to rotate the root user&#x27;s credentials. See the plugin&#x27;s API page for more information on support and formatting for this parameter. | [optional] 
 **VerifyConnection** | **bool** | If true, the connection details are verified by actually connecting to the database. Defaults to true. | [optional] [default to true]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

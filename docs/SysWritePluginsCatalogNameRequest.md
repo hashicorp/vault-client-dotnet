@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **Type** | **string** | The type of the plugin, may be auth, secret, or database | [optional] 
 **_Version** | **string** | The semantic version of the plugin to use. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

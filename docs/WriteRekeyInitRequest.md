@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **SecretShares** | **int** | Specifies the number of shares to split the unseal key into. | [optional] 
 **SecretThreshold** | **int** | Specifies the number of shares required to reconstruct the unseal key. This must be less than or equal secret_shares. If using Vault HSM with auto-unsealing, this value must be the same as secret_shares. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

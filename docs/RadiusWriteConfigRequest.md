@@ -22,6 +22,5 @@ Name | Type | Description | Notes
 **TokenType** | **string** | The type of token to generate, service or batch | [optional] [default to "default-service"]
 **UnregisteredUserPolicies** | **string** | Comma-separated list of policies to grant upon successful RADIUS authentication of an unregisted user (default: empty) | [optional] [default to ""]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

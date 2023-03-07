@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 {{/each}}{{/with ~}}
 {{#each vars}}**{{name}}** | {{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}[**{{dataType}}**]({{complexType}}.md){{/unless}} | {{description}} | {{#unless required}}[optional] {{/unless}}{{#if isReadOnly}}[readonly] {{/if}}{{#with defaultValue}}[default to {{{.}}}]{{/with}}
 {{/each}}
-
 [[Back to Model list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-models) [[Back to API list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-api-endpoints) [[Back to README]](../{{#if useGenericHost}}../{{/if}}README.md)
 
 {{/with ~}}

@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **PermanentlyDelete** | **bool** | Indicates whether new application objects should be permanently deleted. If not set, objects will not be permanently deleted. | [optional] [default to false]
 **Ttl** | **int** | Default lease for generated credentials. If not set or set to 0, will use system default. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

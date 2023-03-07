@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **Ttl** | **int** | The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL. | [optional] 
 **ValidPrincipals** | **string** | Valid principals, either usernames or hostnames, that the certificate should be signed for. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

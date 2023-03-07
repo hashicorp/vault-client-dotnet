@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **PrivateKey** | **string** | Private half of the SSH key that will be used to sign certificates. | [optional] 
 **PublicKey** | **string** | Public half of the SSH key that will be used to sign certificates. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

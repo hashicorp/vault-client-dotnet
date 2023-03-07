@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **RemoveInstanceName** | **bool** | Remove instance/FQDN from keytab principal names. | [optional] 
 **ServiceAccount** | **string** | Service Account | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

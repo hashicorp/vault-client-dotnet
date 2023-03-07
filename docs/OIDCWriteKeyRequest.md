@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **RotationPeriod** | **int** | How often to generate a new keypair. | [optional] 
 **VerificationTtl** | **int** | Controls how long the public portion of a key will be available for verification after being rotated. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

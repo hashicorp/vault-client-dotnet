@@ -17,6 +17,5 @@ Name | Type | Description | Notes
 **RoleArns** | **List&lt;string&gt;** | ARNs of AWS roles allowed to be assumed. Only valid when credential_type is assumed_role | [optional] 
 **UserPath** | **string** | Path for IAM User. Only valid when credential_type is iam_user | [optional] [default to "/"]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

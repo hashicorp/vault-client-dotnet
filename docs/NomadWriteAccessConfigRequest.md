@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **MaxTokenNameLength** | **int** | Max length for name of generated Nomad tokens | [optional] 
 **Token** | **string** | Token for API calls | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

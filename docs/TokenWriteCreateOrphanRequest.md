@@ -19,6 +19,5 @@ Name | Type | Description | Notes
 **Ttl** | **string** | Time to live for this token | [optional] 
 **Type** | **string** | Token type | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

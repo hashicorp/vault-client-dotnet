@@ -16,6 +16,5 @@ Name | Type | Description | Notes
 **SignatureAlgorithm** | **string** | The signature algorithm to use for signature verification. Currently only applies to RSA key types. Options are &#x27;pss&#x27; or &#x27;pkcs1v15&#x27;. Defaults to &#x27;pss&#x27; | [optional] 
 **Urlalgorithm** | **string** | Hash algorithm to use (POST URL parameter) | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

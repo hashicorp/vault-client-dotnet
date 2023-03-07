@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **StsEndpoint** | **string** | URL to override the default generated endpoint for making AWS STS API calls. | [optional] [default to ""]
 **StsRegion** | **string** | The region ID for the sts_endpoint, if set. | [optional] [default to ""]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

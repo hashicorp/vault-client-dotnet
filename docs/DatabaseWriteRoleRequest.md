@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **RevocationStatements** | **List&lt;string&gt;** | Specifies the database statements to be executed to revoke a user. See the plugin&#x27;s API page for more information on support and formatting for this parameter. | [optional] 
 **RollbackStatements** | **List&lt;string&gt;** | Specifies the database statements to be executed rollback a create operation in the event of an error. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

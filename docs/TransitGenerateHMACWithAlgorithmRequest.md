@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **Input** | **string** | The base64-encoded input data | [optional] 
 **KeyVersion** | **int** | The version of the key to use for generating the HMAC. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

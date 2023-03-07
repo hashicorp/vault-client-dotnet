@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **Production** | **bool** | (DEPRECATED) Use base_url instead. | [optional] 
 **UsernameFormat** | **string** | A template string for mapping Identity names to MFA method names. Values to substitute should be placed in {{}}. For example, \&quot;{{entity.name}}@example.com\&quot;. If blank, the Entity&#x27;s name field will be used as-is. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

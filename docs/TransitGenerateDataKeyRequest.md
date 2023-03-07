@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **KeyVersion** | **int** | The version of the Vault key to use for encryption of the data key. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key. | [optional] 
 **Nonce** | **string** | Nonce for when convergent encryption v1 is used (only in Vault 0.6.1) | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

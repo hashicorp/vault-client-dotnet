@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **StsEndpoint** | **string** | Endpoint to custom STS server URL | [optional] 
 **UsernameTemplate** | **string** | Template to generate custom IAM usernames | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

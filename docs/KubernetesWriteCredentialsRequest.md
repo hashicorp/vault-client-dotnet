@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **KubernetesNamespace** | **string** | The name of the Kubernetes namespace in which to generate the credentials | 
 **Ttl** | **int** | The TTL of the generated credentials | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

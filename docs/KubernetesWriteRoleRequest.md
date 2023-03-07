@@ -16,6 +16,5 @@ Name | Type | Description | Notes
 **TokenDefaultTtl** | **int** | The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default. | [optional] 
 **TokenMaxTtl** | **int** | The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

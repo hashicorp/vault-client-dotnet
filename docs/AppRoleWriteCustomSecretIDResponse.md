@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **SecretIdNumUses** | **int** | Number of times a secret ID can access the role, after which the secret ID will expire. | [optional] 
 **SecretIdTtl** | **int** | Duration in seconds after which the issued secret ID expires. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

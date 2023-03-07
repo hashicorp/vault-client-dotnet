@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **OcspDisable** | **bool** | If set to true, ocsp unauthorized responses will be returned. | [optional] 
 **OcspExpiry** | **string** | The amount of time an OCSP response will be valid (controls the NextUpdate field); defaults to 12 hours | [optional] [default to "1h"]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

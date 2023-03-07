@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **MaxTtl** | **int** | If set, specifies the maximum allowed token lifetime. | [optional] [default to 0]
 **Policies** | **List&lt;string&gt;** | Policies to be associated with the tag. If set, must be a subset of the role&#x27;s policies. If set, but set to an empty value, only the &#x27;default&#x27; policy will be given to issued tokens. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

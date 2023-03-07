@@ -19,6 +19,5 @@ Name | Type | Description | Notes
 **OidcResponseTypes** | **List&lt;string&gt;** | The response types to request. Allowed values are &#x27;code&#x27; and &#x27;id_token&#x27;. Defaults to &#x27;code&#x27;. | [optional] 
 **ProviderConfig** | **Object** | Provider-specific configuration. Optional. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

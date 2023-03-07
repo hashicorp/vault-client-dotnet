@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **KeyVersion** | **int** | Integer version of the crypto key version to use for verification. This field is required. | [optional] 
 **Signature** | **string** | Base64-encoded signature to use for verification. This field is required. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **MountAccessor** | **string** | Mount accessor to which this persona belongs to | [optional] 
 **Name** | **string** | Name of the persona | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

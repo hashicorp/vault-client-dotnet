@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **VmName** | **string** | The name of the virtual machine. This value is ignored if vmss_name is specified. | [optional] 
 **VmssName** | **string** | The name of the virtual machine scale set the instance is in. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

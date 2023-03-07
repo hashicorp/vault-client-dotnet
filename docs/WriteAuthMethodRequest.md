@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **SealWrap** | **bool** | Whether to turn on seal wrapping for the mount. | [optional] [default to false]
 **Type** | **string** | The type of the backend. Example: \&quot;userpass\&quot; | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

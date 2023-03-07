@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **Sha256** | **string** | The SHA256 sum of the executable used in the command field. This should be HEX encoded. | [optional] 
 **_Version** | **string** | The semantic version of the plugin to use. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

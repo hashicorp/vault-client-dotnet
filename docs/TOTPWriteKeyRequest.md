@@ -17,6 +17,5 @@ Name | Type | Description | Notes
 **Skew** | **int** | The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1. Only used if generate is true. | [optional] [default to 1]
 **Url** | **string** | A TOTP url string containing all of the parameters for key setup. Only used if generate is false. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

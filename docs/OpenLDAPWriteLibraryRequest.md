@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **ServiceAccountNames** | **List&lt;string&gt;** | The username/logon name for the service accounts with which this set will be associated. | [optional] 
 **Ttl** | **int** | In seconds, the amount of time a check-out should last. Defaults to 24 hours. | [optional] [default to 86400]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

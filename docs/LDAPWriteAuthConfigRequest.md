@@ -39,6 +39,5 @@ Name | Type | Description | Notes
 **Userfilter** | **string** | Go template for LDAP user search filer (optional) The template can access the following context variables: UserAttr, Username Default: ({{.UserAttr}}&#x3D;{{.Username}}) | [optional] [default to "({{.UserAttr}}={{.Username}})"]
 **UsernameAsAlias** | **bool** | If true, sets the alias name to the username | [optional] [default to false]
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

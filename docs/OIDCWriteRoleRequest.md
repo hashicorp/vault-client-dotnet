@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **Template** | **string** | The template string to use for generating tokens. This may be in string-ified JSON or base64 format. | [optional] 
 **Ttl** | **int** | TTL of the tokens generated against the role. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

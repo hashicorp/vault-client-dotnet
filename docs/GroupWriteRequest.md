@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **Policies** | **List&lt;string&gt;** | Policies to be tied to the group. | [optional] 
 **Type** | **string** | Type of the group, &#x27;internal&#x27; or &#x27;external&#x27;. Defaults to &#x27;internal&#x27; | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

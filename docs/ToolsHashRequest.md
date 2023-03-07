@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **Input** | **string** | The base64-encoded input data | [optional] 
 **Urlalgorithm** | **string** | Algorithm to use (POST URL parameter) | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

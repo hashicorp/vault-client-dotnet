@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **Scope** | **string** | A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. | 
 **State** | **string** | The value used to maintain state between the authentication request and client. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

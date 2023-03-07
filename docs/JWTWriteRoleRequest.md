@@ -36,6 +36,5 @@ Name | Type | Description | Notes
 **UserClaimJsonPointer** | **bool** | If true, the user_claim value will use JSON pointer syntax for referencing claims. | [optional] 
 **VerboseOidcLogging** | **bool** | Log received OIDC tokens and claims when debug-level logging is active. Not recommended in production since sensitive information may be present in OIDC responses. | [optional] 
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
