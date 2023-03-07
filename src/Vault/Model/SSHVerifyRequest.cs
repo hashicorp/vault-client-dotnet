@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SSHVerifyRequest
     /// </summary>
     [DataContract(Name = "SSHVerifyRequest")]
-
     public partial class SSHVerifyRequest : IEquatable<SSHVerifyRequest>, IValidatableObject
     {
 

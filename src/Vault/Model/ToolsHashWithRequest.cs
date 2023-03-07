@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ToolsHashWithRequest
     /// </summary>
     [DataContract(Name = "ToolsHashWithRequest")]
-
     public partial class ToolsHashWithRequest : IEquatable<ToolsHashWithRequest>, IValidatableObject
     {
 

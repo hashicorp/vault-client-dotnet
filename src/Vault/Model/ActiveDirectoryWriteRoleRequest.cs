@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ActiveDirectoryWriteRoleRequest
     /// </summary>
     [DataContract(Name = "ActiveDirectoryWriteRoleRequest")]
-
     public partial class ActiveDirectoryWriteRoleRequest : IEquatable<ActiveDirectoryWriteRoleRequest>, IValidatableObject
     {
 

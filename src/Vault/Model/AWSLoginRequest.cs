@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSLoginRequest
     /// </summary>
     [DataContract(Name = "AWSLoginRequest")]
-
     public partial class AWSLoginRequest : IEquatable<AWSLoginRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteRoleRequest
     /// </summary>
     [DataContract(Name = "AWSWriteRoleRequest")]
-
     public partial class AWSWriteRoleRequest : IEquatable<AWSWriteRoleRequest>, IValidatableObject
     {
 

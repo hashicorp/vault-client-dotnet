@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SSHSignRequest
     /// </summary>
     [DataContract(Name = "SSHSignRequest")]
-
     public partial class SSHSignRequest : IEquatable<SSHSignRequest>, IValidatableObject
     {
 

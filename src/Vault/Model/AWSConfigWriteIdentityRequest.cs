@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSConfigWriteIdentityRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteIdentityRequest")]
-
     public partial class AWSConfigWriteIdentityRequest : IEquatable<AWSConfigWriteIdentityRequest>, IValidatableObject
     {
 

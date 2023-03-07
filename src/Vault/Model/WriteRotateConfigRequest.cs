@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteRotateConfigRequest
     /// </summary>
     [DataContract(Name = "WriteRotateConfigRequest")]
-
     public partial class WriteRotateConfigRequest : IEquatable<WriteRotateConfigRequest>, IValidatableObject
     {
 

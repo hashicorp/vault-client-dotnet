@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleWriteSecretIDAccessorDestroyRequest
     /// </summary>
     [DataContract(Name = "AppRoleWriteSecretIDAccessorDestroyRequest")]
-
     public partial class AppRoleWriteSecretIDAccessorDestroyRequest : IEquatable<AppRoleWriteSecretIDAccessorDestroyRequest>, IValidatableObject
     {
 

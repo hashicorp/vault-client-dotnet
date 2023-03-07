@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KubernetesWriteRoleRequest
     /// </summary>
     [DataContract(Name = "KubernetesWriteRoleRequest")]
-
     public partial class KubernetesWriteRoleRequest : IEquatable<KubernetesWriteRoleRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenWriteCreateRequest
     /// </summary>
     [DataContract(Name = "TokenWriteCreateRequest")]
-
     public partial class TokenWriteCreateRequest : IEquatable<TokenWriteCreateRequest>, IValidatableObject
     {
 

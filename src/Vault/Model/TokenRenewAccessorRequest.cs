@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenRenewAccessorRequest
     /// </summary>
     [DataContract(Name = "TokenRenewAccessorRequest")]
-
     public partial class TokenRenewAccessorRequest : IEquatable<TokenRenewAccessorRequest>, IValidatableObject
     {
 

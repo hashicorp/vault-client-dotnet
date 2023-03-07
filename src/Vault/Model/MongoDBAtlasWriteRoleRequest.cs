@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MongoDBAtlasWriteRoleRequest
     /// </summary>
     [DataContract(Name = "MongoDBAtlasWriteRoleRequest")]
-
     public partial class MongoDBAtlasWriteRoleRequest : IEquatable<MongoDBAtlasWriteRoleRequest>, IValidatableObject
     {
 

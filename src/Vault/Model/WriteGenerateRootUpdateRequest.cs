@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteGenerateRootUpdateRequest
     /// </summary>
     [DataContract(Name = "WriteGenerateRootUpdateRequest")]
-
     public partial class WriteGenerateRootUpdateRequest : IEquatable<WriteGenerateRootUpdateRequest>, IValidatableObject
     {
 

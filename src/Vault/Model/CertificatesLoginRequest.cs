@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CertificatesLoginRequest
     /// </summary>
     [DataContract(Name = "CertificatesLoginRequest")]
-
     public partial class CertificatesLoginRequest : IEquatable<CertificatesLoginRequest>, IValidatableObject
     {
 

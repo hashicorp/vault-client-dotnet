@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteRoleTagBlackListTidySettingsRequest
     /// </summary>
     [DataContract(Name = "AWSWriteRoleTagBlackListTidySettingsRequest")]
-
     public partial class AWSWriteRoleTagBlackListTidySettingsRequest : IEquatable<AWSWriteRoleTagBlackListTidySettingsRequest>, IValidatableObject
     {
 

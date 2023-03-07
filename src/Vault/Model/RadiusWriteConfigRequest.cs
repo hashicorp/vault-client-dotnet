@@ -26,7 +26,6 @@ namespace Vault.Model
     /// RadiusWriteConfigRequest
     /// </summary>
     [DataContract(Name = "RadiusWriteConfigRequest")]
-
     public partial class RadiusWriteConfigRequest : IEquatable<RadiusWriteConfigRequest>, IValidatableObject
     {
 

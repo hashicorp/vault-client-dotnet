@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KubernetesLoginRequest
     /// </summary>
     [DataContract(Name = "KubernetesLoginRequest")]
-
     public partial class KubernetesLoginRequest : IEquatable<KubernetesLoginRequest>, IValidatableObject
     {
 

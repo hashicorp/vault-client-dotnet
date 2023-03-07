@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SSHLookupRequest
     /// </summary>
     [DataContract(Name = "SSHLookupRequest")]
-
     public partial class SSHLookupRequest : IEquatable<SSHLookupRequest>, IValidatableObject
     {
 

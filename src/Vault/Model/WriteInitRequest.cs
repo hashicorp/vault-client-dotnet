@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteInitRequest
     /// </summary>
     [DataContract(Name = "WriteInitRequest")]
-
     public partial class WriteInitRequest : IEquatable<WriteInitRequest>, IValidatableObject
     {
 

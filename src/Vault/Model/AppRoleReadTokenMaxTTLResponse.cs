@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleReadTokenMaxTTLResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadTokenMaxTTLResponse")]
-
     public partial class AppRoleReadTokenMaxTTLResponse : IEquatable<AppRoleReadTokenMaxTTLResponse>, IValidatableObject
     {
 

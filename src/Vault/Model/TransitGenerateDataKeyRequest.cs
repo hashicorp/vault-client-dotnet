@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitGenerateDataKeyRequest
     /// </summary>
     [DataContract(Name = "TransitGenerateDataKeyRequest")]
-
     public partial class TransitGenerateDataKeyRequest : IEquatable<TransitGenerateDataKeyRequest>, IValidatableObject
     {
 

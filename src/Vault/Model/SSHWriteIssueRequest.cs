@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SSHWriteIssueRequest
     /// </summary>
     [DataContract(Name = "SSHWriteIssueRequest")]
-
     public partial class SSHWriteIssueRequest : IEquatable<SSHWriteIssueRequest>, IValidatableObject
     {
 

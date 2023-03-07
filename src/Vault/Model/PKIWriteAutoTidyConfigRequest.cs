@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIWriteAutoTidyConfigRequest
     /// </summary>
     [DataContract(Name = "PKIWriteAutoTidyConfigRequest")]
-
     public partial class PKIWriteAutoTidyConfigRequest : IEquatable<PKIWriteAutoTidyConfigRequest>, IValidatableObject
     {
 

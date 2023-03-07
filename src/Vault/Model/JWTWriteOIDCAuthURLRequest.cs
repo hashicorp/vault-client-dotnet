@@ -26,7 +26,6 @@ namespace Vault.Model
     /// JWTWriteOIDCAuthURLRequest
     /// </summary>
     [DataContract(Name = "JWTWriteOIDCAuthURLRequest")]
-
     public partial class JWTWriteOIDCAuthURLRequest : IEquatable<JWTWriteOIDCAuthURLRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenWriteCreateOrphanRequest
     /// </summary>
     [DataContract(Name = "TokenWriteCreateOrphanRequest")]
-
     public partial class TokenWriteCreateOrphanRequest : IEquatable<TokenWriteCreateOrphanRequest>, IValidatableObject
     {
 

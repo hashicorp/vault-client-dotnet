@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitHashWithAlgorithmRequest
     /// </summary>
     [DataContract(Name = "TransitHashWithAlgorithmRequest")]
-
     public partial class TransitHashWithAlgorithmRequest : IEquatable<TransitHashWithAlgorithmRequest>, IValidatableObject
     {
 

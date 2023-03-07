@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKITidyRequest
     /// </summary>
     [DataContract(Name = "PKITidyRequest")]
-
     public partial class PKITidyRequest : IEquatable<PKITidyRequest>, IValidatableObject
     {
 

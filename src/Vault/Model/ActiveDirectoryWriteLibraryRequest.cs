@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ActiveDirectoryWriteLibraryRequest
     /// </summary>
     [DataContract(Name = "ActiveDirectoryWriteLibraryRequest")]
-
     public partial class ActiveDirectoryWriteLibraryRequest : IEquatable<ActiveDirectoryWriteLibraryRequest>, IValidatableObject
     {
 

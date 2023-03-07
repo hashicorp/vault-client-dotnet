@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIBundleWriteRequest
     /// </summary>
     [DataContract(Name = "PKIBundleWriteRequest")]
-
     public partial class PKIBundleWriteRequest : IEquatable<PKIBundleWriteRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitRewrapRequest
     /// </summary>
     [DataContract(Name = "TransitRewrapRequest")]
-
     public partial class TransitRewrapRequest : IEquatable<TransitRewrapRequest>, IValidatableObject
     {
 

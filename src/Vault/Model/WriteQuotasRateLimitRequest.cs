@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteQuotasRateLimitRequest
     /// </summary>
     [DataContract(Name = "WriteQuotasRateLimitRequest")]
-
     public partial class WriteQuotasRateLimitRequest : IEquatable<WriteQuotasRateLimitRequest>, IValidatableObject
     {
 

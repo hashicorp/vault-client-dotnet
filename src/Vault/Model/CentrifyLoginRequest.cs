@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CentrifyLoginRequest
     /// </summary>
     [DataContract(Name = "CentrifyLoginRequest")]
-
     public partial class CentrifyLoginRequest : IEquatable<CentrifyLoginRequest>, IValidatableObject
     {
 

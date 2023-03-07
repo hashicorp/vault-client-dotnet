@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GoogleCloudWriteConfigRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudWriteConfigRequest")]
-
     public partial class GoogleCloudWriteConfigRequest : IEquatable<GoogleCloudWriteConfigRequest>, IValidatableObject
     {
 

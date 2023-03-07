@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleWriteTokenTTLRequest
     /// </summary>
     [DataContract(Name = "AppRoleWriteTokenTTLRequest")]
-
     public partial class AppRoleWriteTokenTTLRequest : IEquatable<AppRoleWriteTokenTTLRequest>, IValidatableObject
     {
 

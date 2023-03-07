@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TerraformWriteConfigRequest
     /// </summary>
     [DataContract(Name = "TerraformWriteConfigRequest")]
-
     public partial class TerraformWriteConfigRequest : IEquatable<TerraformWriteConfigRequest>, IValidatableObject
     {
 

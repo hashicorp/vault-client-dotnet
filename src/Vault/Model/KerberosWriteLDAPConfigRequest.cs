@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KerberosWriteLDAPConfigRequest
     /// </summary>
     [DataContract(Name = "KerberosWriteLDAPConfigRequest")]
-
     public partial class KerberosWriteLDAPConfigRequest : IEquatable<KerberosWriteLDAPConfigRequest>, IValidatableObject
     {
 

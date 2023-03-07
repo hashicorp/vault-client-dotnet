@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ActiveDirectoryCheckInLibraryRequest
     /// </summary>
     [DataContract(Name = "ActiveDirectoryCheckInLibraryRequest")]
-
     public partial class ActiveDirectoryCheckInLibraryRequest : IEquatable<ActiveDirectoryCheckInLibraryRequest>, IValidatableObject
     {
 

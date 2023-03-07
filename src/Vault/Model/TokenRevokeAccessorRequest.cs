@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenRevokeAccessorRequest
     /// </summary>
     [DataContract(Name = "TokenRevokeAccessorRequest")]
-
     public partial class TokenRevokeAccessorRequest : IEquatable<TokenRevokeAccessorRequest>, IValidatableObject
     {
 

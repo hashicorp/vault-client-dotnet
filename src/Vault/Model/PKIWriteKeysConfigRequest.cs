@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIWriteKeysConfigRequest
     /// </summary>
     [DataContract(Name = "PKIWriteKeysConfigRequest")]
-
     public partial class PKIWriteKeysConfigRequest : IEquatable<PKIWriteKeysConfigRequest>, IValidatableObject
     {
 

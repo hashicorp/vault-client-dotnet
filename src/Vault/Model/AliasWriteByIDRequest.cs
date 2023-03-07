@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AliasWriteByIDRequest
     /// </summary>
     [DataContract(Name = "AliasWriteByIDRequest")]
-
     public partial class AliasWriteByIDRequest : IEquatable<AliasWriteByIDRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAMethodWriteOktaRequest
     /// </summary>
     [DataContract(Name = "MFAMethodWriteOktaRequest")]
-
     public partial class MFAMethodWriteOktaRequest : IEquatable<MFAMethodWriteOktaRequest>, IValidatableObject
     {
 

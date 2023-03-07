@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKISignVerbatimRequest
     /// </summary>
     [DataContract(Name = "PKISignVerbatimRequest")]
-
     public partial class PKISignVerbatimRequest : IEquatable<PKISignVerbatimRequest>, IValidatableObject
     {
 

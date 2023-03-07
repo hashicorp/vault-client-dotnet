@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WrappingWriteLookupRequest
     /// </summary>
     [DataContract(Name = "WrappingWriteLookupRequest")]
-
     public partial class WrappingWriteLookupRequest : IEquatable<WrappingWriteLookupRequest>, IValidatableObject
     {
 

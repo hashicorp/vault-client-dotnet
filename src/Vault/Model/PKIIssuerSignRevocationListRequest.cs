@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIIssuerSignRevocationListRequest
     /// </summary>
     [DataContract(Name = "PKIIssuerSignRevocationListRequest")]
-
     public partial class PKIIssuerSignRevocationListRequest : IEquatable<PKIIssuerSignRevocationListRequest>, IValidatableObject
     {
 

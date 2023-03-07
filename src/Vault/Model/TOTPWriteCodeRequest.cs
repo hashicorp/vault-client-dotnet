@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TOTPWriteCodeRequest
     /// </summary>
     [DataContract(Name = "TOTPWriteCodeRequest")]
-
     public partial class TOTPWriteCodeRequest : IEquatable<TOTPWriteCodeRequest>, IValidatableObject
     {
 

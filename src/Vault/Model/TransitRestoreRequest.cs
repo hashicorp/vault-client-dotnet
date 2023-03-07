@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitRestoreRequest
     /// </summary>
     [DataContract(Name = "TransitRestoreRequest")]
-
     public partial class TransitRestoreRequest : IEquatable<TransitRestoreRequest>, IValidatableObject
     {
 

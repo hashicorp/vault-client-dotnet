@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GoogleCloudKMSRegisterKeyRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudKMSRegisterKeyRequest")]
-
     public partial class GoogleCloudKMSRegisterKeyRequest : IEquatable<GoogleCloudKMSRegisterKeyRequest>, IValidatableObject
     {
 

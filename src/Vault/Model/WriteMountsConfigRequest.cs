@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteMountsConfigRequest
     /// </summary>
     [DataContract(Name = "WriteMountsConfigRequest")]
-
     public partial class WriteMountsConfigRequest : IEquatable<WriteMountsConfigRequest>, IValidatableObject
     {
 

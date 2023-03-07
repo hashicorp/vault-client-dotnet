@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenRenewSelfRequest
     /// </summary>
     [DataContract(Name = "TokenRenewSelfRequest")]
-
     public partial class TokenRenewSelfRequest : IEquatable<TokenRenewSelfRequest>, IValidatableObject
     {
 

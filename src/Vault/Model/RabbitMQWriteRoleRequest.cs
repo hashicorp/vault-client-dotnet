@@ -26,7 +26,6 @@ namespace Vault.Model
     /// RabbitMQWriteRoleRequest
     /// </summary>
     [DataContract(Name = "RabbitMQWriteRoleRequest")]
-
     public partial class RabbitMQWriteRoleRequest : IEquatable<RabbitMQWriteRoleRequest>, IValidatableObject
     {
 

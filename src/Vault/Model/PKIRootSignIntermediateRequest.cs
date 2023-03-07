@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIRootSignIntermediateRequest
     /// </summary>
     [DataContract(Name = "PKIRootSignIntermediateRequest")]
-
     public partial class PKIRootSignIntermediateRequest : IEquatable<PKIRootSignIntermediateRequest>, IValidatableObject
     {
 

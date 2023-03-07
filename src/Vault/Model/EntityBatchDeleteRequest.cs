@@ -26,7 +26,6 @@ namespace Vault.Model
     /// EntityBatchDeleteRequest
     /// </summary>
     [DataContract(Name = "EntityBatchDeleteRequest")]
-
     public partial class EntityBatchDeleteRequest : IEquatable<EntityBatchDeleteRequest>, IValidatableObject
     {
 

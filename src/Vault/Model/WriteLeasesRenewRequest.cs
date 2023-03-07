@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteLeasesRenewRequest
     /// </summary>
     [DataContract(Name = "WriteLeasesRenewRequest")]
-
     public partial class WriteLeasesRenewRequest : IEquatable<WriteLeasesRenewRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleReadBoundCIDRListResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadBoundCIDRListResponse")]
-
     public partial class AppRoleReadBoundCIDRListResponse : IEquatable<AppRoleReadBoundCIDRListResponse>, IValidatableObject
     {
 

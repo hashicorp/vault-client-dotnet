@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OCILoginWithRoleRequest
     /// </summary>
     [DataContract(Name = "OCILoginWithRoleRequest")]
-
     public partial class OCILoginWithRoleRequest : IEquatable<OCILoginWithRoleRequest>, IValidatableObject
     {
 

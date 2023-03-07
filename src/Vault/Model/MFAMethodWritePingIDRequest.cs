@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAMethodWritePingIDRequest
     /// </summary>
     [DataContract(Name = "MFAMethodWritePingIDRequest")]
-
     public partial class MFAMethodWritePingIDRequest : IEquatable<MFAMethodWritePingIDRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitGenerateRandomSourceBytesRequest
     /// </summary>
     [DataContract(Name = "TransitGenerateRandomSourceBytesRequest")]
-
     public partial class TransitGenerateRandomSourceBytesRequest : IEquatable<TransitGenerateRandomSourceBytesRequest>, IValidatableObject
     {
 

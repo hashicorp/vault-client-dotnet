@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteRekeyInitRequest
     /// </summary>
     [DataContract(Name = "WriteRekeyInitRequest")]
-
     public partial class WriteRekeyInitRequest : IEquatable<WriteRekeyInitRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleListRolesResponse
     /// </summary>
     [DataContract(Name = "AppRoleListRolesResponse")]
-
     public partial class AppRoleListRolesResponse : IEquatable<AppRoleListRolesResponse>, IValidatableObject
     {
 

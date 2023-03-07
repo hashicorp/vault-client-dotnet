@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIWriteIntermediateGenerateRequest
     /// </summary>
     [DataContract(Name = "PKIWriteIntermediateGenerateRequest")]
-
     public partial class PKIWriteIntermediateGenerateRequest : IEquatable<PKIWriteIntermediateGenerateRequest>, IValidatableObject
     {
 

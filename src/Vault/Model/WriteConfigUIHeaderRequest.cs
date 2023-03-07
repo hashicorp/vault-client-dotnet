@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteConfigUIHeaderRequest
     /// </summary>
     [DataContract(Name = "WriteConfigUIHeaderRequest")]
-
     public partial class WriteConfigUIHeaderRequest : IEquatable<WriteConfigUIHeaderRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// LDAPLoginRequest
     /// </summary>
     [DataContract(Name = "LDAPLoginRequest")]
-
     public partial class LDAPLoginRequest : IEquatable<LDAPLoginRequest>, IValidatableObject
     {
 

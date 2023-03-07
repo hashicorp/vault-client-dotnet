@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSConfigWriteRoleTagBlackListRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteRoleTagBlackListRequest")]
-
     public partial class AWSConfigWriteRoleTagBlackListRequest : IEquatable<AWSConfigWriteRoleTagBlackListRequest>, IValidatableObject
     {
 

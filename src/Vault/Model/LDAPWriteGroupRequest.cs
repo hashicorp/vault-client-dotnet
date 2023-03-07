@@ -26,7 +26,6 @@ namespace Vault.Model
     /// LDAPWriteGroupRequest
     /// </summary>
     [DataContract(Name = "LDAPWriteGroupRequest")]
-
     public partial class LDAPWriteGroupRequest : IEquatable<LDAPWriteGroupRequest>, IValidatableObject
     {
 

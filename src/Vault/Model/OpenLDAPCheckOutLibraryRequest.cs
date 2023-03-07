@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OpenLDAPCheckOutLibraryRequest
     /// </summary>
     [DataContract(Name = "OpenLDAPCheckOutLibraryRequest")]
-
     public partial class OpenLDAPCheckOutLibraryRequest : IEquatable<OpenLDAPCheckOutLibraryRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GroupWriteAliasByIDRequest
     /// </summary>
     [DataContract(Name = "GroupWriteAliasByIDRequest")]
-
     public partial class GroupWriteAliasByIDRequest : IEquatable<GroupWriteAliasByIDRequest>, IValidatableObject
     {
 

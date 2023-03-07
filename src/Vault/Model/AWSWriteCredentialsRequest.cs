@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteCredentialsRequest
     /// </summary>
     [DataContract(Name = "AWSWriteCredentialsRequest")]
-
     public partial class AWSWriteCredentialsRequest : IEquatable<AWSWriteCredentialsRequest>, IValidatableObject
     {
 

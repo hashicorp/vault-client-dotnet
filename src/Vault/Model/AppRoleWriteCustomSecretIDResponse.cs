@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleWriteCustomSecretIDResponse
     /// </summary>
     [DataContract(Name = "AppRoleWriteCustomSecretIDResponse")]
-
     public partial class AppRoleWriteCustomSecretIDResponse : IEquatable<AppRoleWriteCustomSecretIDResponse>, IValidatableObject
     {
 

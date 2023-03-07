@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSConfigWriteLeaseRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteLeaseRequest")]
-
     public partial class AWSConfigWriteLeaseRequest : IEquatable<AWSConfigWriteLeaseRequest>, IValidatableObject
     {
 

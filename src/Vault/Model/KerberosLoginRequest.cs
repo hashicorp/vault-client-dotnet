@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KerberosLoginRequest
     /// </summary>
     [DataContract(Name = "KerberosLoginRequest")]
-
     public partial class KerberosLoginRequest : IEquatable<KerberosLoginRequest>, IValidatableObject
     {
 

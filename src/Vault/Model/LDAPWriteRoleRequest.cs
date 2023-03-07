@@ -26,7 +26,6 @@ namespace Vault.Model
     /// LDAPWriteRoleRequest
     /// </summary>
     [DataContract(Name = "LDAPWriteRoleRequest")]
-
     public partial class LDAPWriteRoleRequest : IEquatable<LDAPWriteRoleRequest>, IValidatableObject
     {
 

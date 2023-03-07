@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ConsulWriteAccessConfigRequest
     /// </summary>
     [DataContract(Name = "ConsulWriteAccessConfigRequest")]
-
     public partial class ConsulWriteAccessConfigRequest : IEquatable<ConsulWriteAccessConfigRequest>, IValidatableObject
     {
 

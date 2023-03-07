@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GitHubLoginRequest
     /// </summary>
     [DataContract(Name = "GitHubLoginRequest")]
-
     public partial class GitHubLoginRequest : IEquatable<GitHubLoginRequest>, IValidatableObject
     {
 

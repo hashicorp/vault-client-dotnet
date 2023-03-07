@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitWriteCacheConfigRequest
     /// </summary>
     [DataContract(Name = "TransitWriteCacheConfigRequest")]
-
     public partial class TransitWriteCacheConfigRequest : IEquatable<TransitWriteCacheConfigRequest>, IValidatableObject
     {
 

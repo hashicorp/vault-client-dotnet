@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCWriteKeyRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteKeyRequest")]
-
     public partial class OIDCWriteKeyRequest : IEquatable<OIDCWriteKeyRequest>, IValidatableObject
     {
 

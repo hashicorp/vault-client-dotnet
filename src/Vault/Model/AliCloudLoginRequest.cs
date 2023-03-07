@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AliCloudLoginRequest
     /// </summary>
     [DataContract(Name = "AliCloudLoginRequest")]
-
     public partial class AliCloudLoginRequest : IEquatable<AliCloudLoginRequest>, IValidatableObject
     {
 

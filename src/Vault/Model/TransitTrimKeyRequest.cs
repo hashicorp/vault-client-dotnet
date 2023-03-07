@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitTrimKeyRequest
     /// </summary>
     [DataContract(Name = "TransitTrimKeyRequest")]
-
     public partial class TransitTrimKeyRequest : IEquatable<TransitTrimKeyRequest>, IValidatableObject
     {
 

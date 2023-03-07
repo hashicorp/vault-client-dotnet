@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GitHubWriteConfigRequest
     /// </summary>
     [DataContract(Name = "GitHubWriteConfigRequest")]
-
     public partial class GitHubWriteConfigRequest : IEquatable<GitHubWriteConfigRequest>, IValidatableObject
     {
 

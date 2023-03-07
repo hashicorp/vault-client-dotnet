@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WrappingUnwrapRequest
     /// </summary>
     [DataContract(Name = "WrappingUnwrapRequest")]
-
     public partial class WrappingUnwrapRequest : IEquatable<WrappingUnwrapRequest>, IValidatableObject
     {
 

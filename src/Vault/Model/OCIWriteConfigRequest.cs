@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OCIWriteConfigRequest
     /// </summary>
     [DataContract(Name = "OCIWriteConfigRequest")]
-
     public partial class OCIWriteConfigRequest : IEquatable<OCIWriteConfigRequest>, IValidatableObject
     {
 

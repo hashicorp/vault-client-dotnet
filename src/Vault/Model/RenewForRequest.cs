@@ -26,7 +26,6 @@ namespace Vault.Model
     /// RenewForRequest
     /// </summary>
     [DataContract(Name = "RenewForRequest")]
-
     public partial class RenewForRequest : IEquatable<RenewForRequest>, IValidatableObject
     {
 

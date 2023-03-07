@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteInternalCountersConfigRequest
     /// </summary>
     [DataContract(Name = "WriteInternalCountersConfigRequest")]
-
     public partial class WriteInternalCountersConfigRequest : IEquatable<WriteInternalCountersConfigRequest>, IValidatableObject
     {
 

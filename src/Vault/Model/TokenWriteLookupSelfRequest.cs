@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenWriteLookupSelfRequest
     /// </summary>
     [DataContract(Name = "TokenWriteLookupSelfRequest")]
-
     public partial class TokenWriteLookupSelfRequest : IEquatable<TokenWriteLookupSelfRequest>, IValidatableObject
     {
 

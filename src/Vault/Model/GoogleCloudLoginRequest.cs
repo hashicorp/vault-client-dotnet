@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GoogleCloudLoginRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudLoginRequest")]
-
     public partial class GoogleCloudLoginRequest : IEquatable<GoogleCloudLoginRequest>, IValidatableObject
     {
 

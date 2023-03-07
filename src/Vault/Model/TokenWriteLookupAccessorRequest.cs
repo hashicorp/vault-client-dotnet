@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenWriteLookupAccessorRequest
     /// </summary>
     [DataContract(Name = "TokenWriteLookupAccessorRequest")]
-
     public partial class TokenWriteLookupAccessorRequest : IEquatable<TokenWriteLookupAccessorRequest>, IValidatableObject
     {
 

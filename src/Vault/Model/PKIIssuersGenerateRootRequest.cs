@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIIssuersGenerateRootRequest
     /// </summary>
     [DataContract(Name = "PKIIssuersGenerateRootRequest")]
-
     public partial class PKIIssuersGenerateRootRequest : IEquatable<PKIIssuersGenerateRootRequest>, IValidatableObject
     {
 

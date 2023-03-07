@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AliasWriteRequest
     /// </summary>
     [DataContract(Name = "AliasWriteRequest")]
-
     public partial class AliasWriteRequest : IEquatable<AliasWriteRequest>, IValidatableObject
     {
 

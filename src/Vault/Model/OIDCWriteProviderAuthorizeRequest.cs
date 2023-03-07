@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCWriteProviderAuthorizeRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteProviderAuthorizeRequest")]
-
     public partial class OIDCWriteProviderAuthorizeRequest : IEquatable<OIDCWriteProviderAuthorizeRequest>, IValidatableObject
     {
 

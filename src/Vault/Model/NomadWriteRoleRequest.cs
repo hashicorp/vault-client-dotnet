@@ -26,7 +26,6 @@ namespace Vault.Model
     /// NomadWriteRoleRequest
     /// </summary>
     [DataContract(Name = "NomadWriteRoleRequest")]
-
     public partial class NomadWriteRoleRequest : IEquatable<NomadWriteRoleRequest>, IValidatableObject
     {
 

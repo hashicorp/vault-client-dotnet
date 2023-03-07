@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ToolsGenerateRandomSourceBytesRequest
     /// </summary>
     [DataContract(Name = "ToolsGenerateRandomSourceBytesRequest")]
-
     public partial class ToolsGenerateRandomSourceBytesRequest : IEquatable<ToolsGenerateRandomSourceBytesRequest>, IValidatableObject
     {
 

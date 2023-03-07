@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSConfigWriteSecurityTokenServiceAccountRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteSecurityTokenServiceAccountRequest")]
-
     public partial class AWSConfigWriteSecurityTokenServiceAccountRequest : IEquatable<AWSConfigWriteSecurityTokenServiceAccountRequest>, IValidatableObject
     {
 

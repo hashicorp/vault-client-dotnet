@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OktaLoginRequest
     /// </summary>
     [DataContract(Name = "OktaLoginRequest")]
-
     public partial class OktaLoginRequest : IEquatable<OktaLoginRequest>, IValidatableObject
     {
 

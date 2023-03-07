@@ -26,7 +26,6 @@ namespace Vault.Model
     /// UnsealRequest
     /// </summary>
     [DataContract(Name = "UnsealRequest")]
-
     public partial class UnsealRequest : IEquatable<UnsealRequest>, IValidatableObject
     {
 

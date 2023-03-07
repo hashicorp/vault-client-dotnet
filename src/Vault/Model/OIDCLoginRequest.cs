@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCLoginRequest
     /// </summary>
     [DataContract(Name = "OIDCLoginRequest")]
-
     public partial class OIDCLoginRequest : IEquatable<OIDCLoginRequest>, IValidatableObject
     {
 

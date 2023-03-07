@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAMethodWriteDuoRequest
     /// </summary>
     [DataContract(Name = "MFAMethodWriteDuoRequest")]
-
     public partial class MFAMethodWriteDuoRequest : IEquatable<MFAMethodWriteDuoRequest>, IValidatableObject
     {
 

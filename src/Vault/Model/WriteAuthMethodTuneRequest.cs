@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteAuthMethodTuneRequest
     /// </summary>
     [DataContract(Name = "WriteAuthMethodTuneRequest")]
-
     public partial class WriteAuthMethodTuneRequest : IEquatable<WriteAuthMethodTuneRequest>, IValidatableObject
     {
 

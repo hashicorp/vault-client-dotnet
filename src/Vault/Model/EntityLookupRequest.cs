@@ -26,7 +26,6 @@ namespace Vault.Model
     /// EntityLookupRequest
     /// </summary>
     [DataContract(Name = "EntityLookupRequest")]
-
     public partial class EntityLookupRequest : IEquatable<EntityLookupRequest>, IValidatableObject
     {
 

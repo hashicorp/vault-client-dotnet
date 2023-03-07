@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteLeasesLookupRequest
     /// </summary>
     [DataContract(Name = "WriteLeasesLookupRequest")]
-
     public partial class WriteLeasesLookupRequest : IEquatable<WriteLeasesLookupRequest>, IValidatableObject
     {
 

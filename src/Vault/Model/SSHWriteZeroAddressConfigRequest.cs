@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SSHWriteZeroAddressConfigRequest
     /// </summary>
     [DataContract(Name = "SSHWriteZeroAddressConfigRequest")]
-
     public partial class SSHWriteZeroAddressConfigRequest : IEquatable<SSHWriteZeroAddressConfigRequest>, IValidatableObject
     {
 

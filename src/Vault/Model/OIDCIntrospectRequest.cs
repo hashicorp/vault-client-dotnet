@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCIntrospectRequest
     /// </summary>
     [DataContract(Name = "OIDCIntrospectRequest")]
-
     public partial class OIDCIntrospectRequest : IEquatable<OIDCIntrospectRequest>, IValidatableObject
     {
 

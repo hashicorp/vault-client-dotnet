@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KVv2UndeleteVersionsRequest
     /// </summary>
     [DataContract(Name = "KVv2UndeleteVersionsRequest")]
-
     public partial class KVv2UndeleteVersionsRequest : IEquatable<KVv2UndeleteVersionsRequest>, IValidatableObject
     {
 

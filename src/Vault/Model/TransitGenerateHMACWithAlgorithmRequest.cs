@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitGenerateHMACWithAlgorithmRequest
     /// </summary>
     [DataContract(Name = "TransitGenerateHMACWithAlgorithmRequest")]
-
     public partial class TransitGenerateHMACWithAlgorithmRequest : IEquatable<TransitGenerateHMACWithAlgorithmRequest>, IValidatableObject
     {
 

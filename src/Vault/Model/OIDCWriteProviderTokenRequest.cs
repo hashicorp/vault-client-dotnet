@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCWriteProviderTokenRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteProviderTokenRequest")]
-
     public partial class OIDCWriteProviderTokenRequest : IEquatable<OIDCWriteProviderTokenRequest>, IValidatableObject
     {
 

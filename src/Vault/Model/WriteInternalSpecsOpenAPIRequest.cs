@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteInternalSpecsOpenAPIRequest
     /// </summary>
     [DataContract(Name = "WriteInternalSpecsOpenAPIRequest")]
-
     public partial class WriteInternalSpecsOpenAPIRequest : IEquatable<WriteInternalSpecsOpenAPIRequest>, IValidatableObject
     {
 

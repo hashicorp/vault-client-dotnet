@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitImportKeyVersionRequest
     /// </summary>
     [DataContract(Name = "TransitImportKeyVersionRequest")]
-
     public partial class TransitImportKeyVersionRequest : IEquatable<TransitImportKeyVersionRequest>, IValidatableObject
     {
 

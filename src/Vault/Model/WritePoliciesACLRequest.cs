@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WritePoliciesACLRequest
     /// </summary>
     [DataContract(Name = "WritePoliciesACLRequest")]
-
     public partial class WritePoliciesACLRequest : IEquatable<WritePoliciesACLRequest>, IValidatableObject
     {
 

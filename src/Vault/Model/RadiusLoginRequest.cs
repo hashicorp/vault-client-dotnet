@@ -26,7 +26,6 @@ namespace Vault.Model
     /// RadiusLoginRequest
     /// </summary>
     [DataContract(Name = "RadiusLoginRequest")]
-
     public partial class RadiusLoginRequest : IEquatable<RadiusLoginRequest>, IValidatableObject
     {
 

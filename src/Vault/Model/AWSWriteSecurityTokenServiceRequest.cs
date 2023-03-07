@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteSecurityTokenServiceRequest
     /// </summary>
     [DataContract(Name = "AWSWriteSecurityTokenServiceRequest")]
-
     public partial class AWSWriteSecurityTokenServiceRequest : IEquatable<AWSWriteSecurityTokenServiceRequest>, IValidatableObject
     {
 

@@ -2,8 +2,6 @@
     /// {{description}}{{#unless description}}{{classname}}{{/unless}}
     /// </summary>
     [DataContract(Name = "{{{name}}}")]
-    {{#with discriminator}}[JsonConverter(typeof(JsonSubtypes), "{{{discriminatorName}}}")]
-    {{#each mappedModels}}[JsonSubtypes.KnownSubType(typeof({{{modelName}}}), "{{#unless vendorExtensions.x-discriminator-value}}{{{mappingName}}}{{/unless}}{{#with vendorExtensions.x-discriminator-value}}{{{.}}}{{/with}}")]{{/each}}{{/with}}
     {{>visibility}} partial class {{classname}} : {{#with parent}}{{{.}}}, {{/with}}IEquatable<{{classname}}>{{#if validatable}}, IValidatableObject{{/if}}
     {
         {{#each vars ~}}{{#with items.isEnum}}{{#with items}}{{#unless complexType}}{{>modelInnerEnum}}{{/unless}}{{/with}}{{/with}}

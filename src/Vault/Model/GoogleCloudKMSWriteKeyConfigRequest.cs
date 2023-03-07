@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GoogleCloudKMSWriteKeyConfigRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudKMSWriteKeyConfigRequest")]
-
     public partial class GoogleCloudKMSWriteKeyConfigRequest : IEquatable<GoogleCloudKMSWriteKeyConfigRequest>, IValidatableObject
     {
 

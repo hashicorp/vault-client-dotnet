@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSConfigWriteClientRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteClientRequest")]
-
     public partial class AWSConfigWriteClientRequest : IEquatable<AWSConfigWriteClientRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// RabbitMQWriteConnectionConfigRequest
     /// </summary>
     [DataContract(Name = "RabbitMQWriteConnectionConfigRequest")]
-
     public partial class RabbitMQWriteConnectionConfigRequest : IEquatable<RabbitMQWriteConnectionConfigRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIWriteKMSRequest
     /// </summary>
     [DataContract(Name = "PKIWriteKMSRequest")]
-
     public partial class PKIWriteKMSRequest : IEquatable<PKIWriteKMSRequest>, IValidatableObject
     {
 

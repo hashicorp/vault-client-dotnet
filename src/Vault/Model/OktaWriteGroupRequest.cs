@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OktaWriteGroupRequest
     /// </summary>
     [DataContract(Name = "OktaWriteGroupRequest")]
-
     public partial class OktaWriteGroupRequest : IEquatable<OktaWriteGroupRequest>, IValidatableObject
     {
 

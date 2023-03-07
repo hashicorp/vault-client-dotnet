@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleWriteRoleIDRequest
     /// </summary>
     [DataContract(Name = "AppRoleWriteRoleIDRequest")]
-
     public partial class AppRoleWriteRoleIDRequest : IEquatable<AppRoleWriteRoleIDRequest>, IValidatableObject
     {
 

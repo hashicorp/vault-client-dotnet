@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitVerifyWithAlgorithmRequest
     /// </summary>
     [DataContract(Name = "TransitVerifyWithAlgorithmRequest")]
-
     public partial class TransitVerifyWithAlgorithmRequest : IEquatable<TransitVerifyWithAlgorithmRequest>, IValidatableObject
     {
 

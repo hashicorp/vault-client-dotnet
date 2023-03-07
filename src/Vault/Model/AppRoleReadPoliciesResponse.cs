@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleReadPoliciesResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadPoliciesResponse")]
-
     public partial class AppRoleReadPoliciesResponse : IEquatable<AppRoleReadPoliciesResponse>, IValidatableObject
     {
 

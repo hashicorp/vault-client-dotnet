@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GitHubWriteMapUserRequest
     /// </summary>
     [DataContract(Name = "GitHubWriteMapUserRequest")]
-
     public partial class GitHubWriteMapUserRequest : IEquatable<GitHubWriteMapUserRequest>, IValidatableObject
     {
 

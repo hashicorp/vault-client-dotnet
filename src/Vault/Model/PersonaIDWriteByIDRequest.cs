@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PersonaIDWriteByIDRequest
     /// </summary>
     [DataContract(Name = "PersonaIDWriteByIDRequest")]
-
     public partial class PersonaIDWriteByIDRequest : IEquatable<PersonaIDWriteByIDRequest>, IValidatableObject
     {
 

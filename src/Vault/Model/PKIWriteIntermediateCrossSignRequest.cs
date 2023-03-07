@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIWriteIntermediateCrossSignRequest
     /// </summary>
     [DataContract(Name = "PKIWriteIntermediateCrossSignRequest")]
-
     public partial class PKIWriteIntermediateCrossSignRequest : IEquatable<PKIWriteIntermediateCrossSignRequest>, IValidatableObject
     {
 

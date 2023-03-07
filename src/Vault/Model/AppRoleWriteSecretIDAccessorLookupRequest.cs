@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleWriteSecretIDAccessorLookupRequest
     /// </summary>
     [DataContract(Name = "AppRoleWriteSecretIDAccessorLookupRequest")]
-
     public partial class AppRoleWriteSecretIDAccessorLookupRequest : IEquatable<AppRoleWriteSecretIDAccessorLookupRequest>, IValidatableObject
     {
 

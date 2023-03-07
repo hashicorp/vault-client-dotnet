@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteRoleTagDenyListTidySettingsRequest
     /// </summary>
     [DataContract(Name = "AWSWriteRoleTagDenyListTidySettingsRequest")]
-
     public partial class AWSWriteRoleTagDenyListTidySettingsRequest : IEquatable<AWSWriteRoleTagDenyListTidySettingsRequest>, IValidatableObject
     {
 

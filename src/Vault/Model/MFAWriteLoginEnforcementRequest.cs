@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAWriteLoginEnforcementRequest
     /// </summary>
     [DataContract(Name = "MFAWriteLoginEnforcementRequest")]
-
     public partial class MFAWriteLoginEnforcementRequest : IEquatable<MFAWriteLoginEnforcementRequest>, IValidatableObject
     {
 

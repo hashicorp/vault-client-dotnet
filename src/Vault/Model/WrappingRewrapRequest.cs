@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WrappingRewrapRequest
     /// </summary>
     [DataContract(Name = "WrappingRewrapRequest")]
-
     public partial class WrappingRewrapRequest : IEquatable<WrappingRewrapRequest>, IValidatableObject
     {
 

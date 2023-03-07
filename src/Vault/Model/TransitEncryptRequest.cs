@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitEncryptRequest
     /// </summary>
     [DataContract(Name = "TransitEncryptRequest")]
-
     public partial class TransitEncryptRequest : IEquatable<TransitEncryptRequest>, IValidatableObject
     {
 

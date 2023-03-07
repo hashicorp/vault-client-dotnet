@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AzureLoginRequest
     /// </summary>
     [DataContract(Name = "AzureLoginRequest")]
-
     public partial class AzureLoginRequest : IEquatable<AzureLoginRequest>, IValidatableObject
     {
 

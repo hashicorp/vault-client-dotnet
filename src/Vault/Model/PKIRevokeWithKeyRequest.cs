@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIRevokeWithKeyRequest
     /// </summary>
     [DataContract(Name = "PKIRevokeWithKeyRequest")]
-
     public partial class PKIRevokeWithKeyRequest : IEquatable<PKIRevokeWithKeyRequest>, IValidatableObject
     {
 

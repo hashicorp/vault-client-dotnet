@@ -26,7 +26,6 @@ namespace Vault.Model
     /// DatabaseWriteRoleRequest
     /// </summary>
     [DataContract(Name = "DatabaseWriteRoleRequest")]
-
     public partial class DatabaseWriteRoleRequest : IEquatable<DatabaseWriteRoleRequest>, IValidatableObject
     {
 

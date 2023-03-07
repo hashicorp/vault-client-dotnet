@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitWriteConfigKeysRequest
     /// </summary>
     [DataContract(Name = "TransitWriteConfigKeysRequest")]
-
     public partial class TransitWriteConfigKeysRequest : IEquatable<TransitWriteConfigKeysRequest>, IValidatableObject
     {
 

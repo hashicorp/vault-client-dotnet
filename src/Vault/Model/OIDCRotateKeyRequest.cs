@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCRotateKeyRequest
     /// </summary>
     [DataContract(Name = "OIDCRotateKeyRequest")]
-
     public partial class OIDCRotateKeyRequest : IEquatable<OIDCRotateKeyRequest>, IValidatableObject
     {
 

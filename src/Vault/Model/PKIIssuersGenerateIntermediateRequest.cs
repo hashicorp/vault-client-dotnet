@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIIssuersGenerateIntermediateRequest
     /// </summary>
     [DataContract(Name = "PKIIssuersGenerateIntermediateRequest")]
-
     public partial class PKIIssuersGenerateIntermediateRequest : IEquatable<PKIIssuersGenerateIntermediateRequest>, IValidatableObject
     {
 

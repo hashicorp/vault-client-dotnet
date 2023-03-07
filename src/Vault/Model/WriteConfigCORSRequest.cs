@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteConfigCORSRequest
     /// </summary>
     [DataContract(Name = "WriteConfigCORSRequest")]
-
     public partial class WriteConfigCORSRequest : IEquatable<WriteConfigCORSRequest>, IValidatableObject
     {
 

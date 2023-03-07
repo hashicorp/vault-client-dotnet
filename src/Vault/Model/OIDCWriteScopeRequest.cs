@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCWriteScopeRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteScopeRequest")]
-
     public partial class OIDCWriteScopeRequest : IEquatable<OIDCWriteScopeRequest>, IValidatableObject
     {
 

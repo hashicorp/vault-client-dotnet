@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CloudFoundryLoginRequest
     /// </summary>
     [DataContract(Name = "CloudFoundryLoginRequest")]
-
     public partial class CloudFoundryLoginRequest : IEquatable<CloudFoundryLoginRequest>, IValidatableObject
     {
 

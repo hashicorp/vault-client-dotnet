@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TokenRevokeOrphanRequest
     /// </summary>
     [DataContract(Name = "TokenRevokeOrphanRequest")]
-
     public partial class TokenRevokeOrphanRequest : IEquatable<TokenRevokeOrphanRequest>, IValidatableObject
     {
 

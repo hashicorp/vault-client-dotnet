@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteIdentityAccessListTidySettingsRequest
     /// </summary>
     [DataContract(Name = "AWSWriteIdentityAccessListTidySettingsRequest")]
-
     public partial class AWSWriteIdentityAccessListTidySettingsRequest : IEquatable<AWSWriteIdentityAccessListTidySettingsRequest>, IValidatableObject
     {
 

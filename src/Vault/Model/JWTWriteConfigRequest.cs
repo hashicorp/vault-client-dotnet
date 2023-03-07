@@ -26,7 +26,6 @@ namespace Vault.Model
     /// JWTWriteConfigRequest
     /// </summary>
     [DataContract(Name = "JWTWriteConfigRequest")]
-
     public partial class JWTWriteConfigRequest : IEquatable<JWTWriteConfigRequest>, IValidatableObject
     {
 

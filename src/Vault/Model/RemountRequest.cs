@@ -26,7 +26,6 @@ namespace Vault.Model
     /// RemountRequest
     /// </summary>
     [DataContract(Name = "RemountRequest")]
-
     public partial class RemountRequest : IEquatable<RemountRequest>, IValidatableObject
     {
 

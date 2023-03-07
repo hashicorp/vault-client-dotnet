@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAMethodAdminDestroyTOTPRequest
     /// </summary>
     [DataContract(Name = "MFAMethodAdminDestroyTOTPRequest")]
-
     public partial class MFAMethodAdminDestroyTOTPRequest : IEquatable<MFAMethodAdminDestroyTOTPRequest>, IValidatableObject
     {
 

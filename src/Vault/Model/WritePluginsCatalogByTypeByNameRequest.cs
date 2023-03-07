@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WritePluginsCatalogByTypeByNameRequest
     /// </summary>
     [DataContract(Name = "WritePluginsCatalogByTypeByNameRequest")]
-
     public partial class WritePluginsCatalogByTypeByNameRequest : IEquatable<WritePluginsCatalogByTypeByNameRequest>, IValidatableObject
     {
 

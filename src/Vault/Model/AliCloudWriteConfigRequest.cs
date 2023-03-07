@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AliCloudWriteConfigRequest
     /// </summary>
     [DataContract(Name = "AliCloudWriteConfigRequest")]
-
     public partial class AliCloudWriteConfigRequest : IEquatable<AliCloudWriteConfigRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SysWriteToolsRandomUrlbytesRequest
     /// </summary>
     [DataContract(Name = "SysWriteToolsRandomUrlbytesRequest")]
-
     public partial class SysWriteToolsRandomUrlbytesRequest : IEquatable<SysWriteToolsRandomUrlbytesRequest>, IValidatableObject
     {
 

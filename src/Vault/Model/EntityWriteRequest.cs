@@ -26,7 +26,6 @@ namespace Vault.Model
     /// EntityWriteRequest
     /// </summary>
     [DataContract(Name = "EntityWriteRequest")]
-
     public partial class EntityWriteRequest : IEquatable<EntityWriteRequest>, IValidatableObject
     {
 

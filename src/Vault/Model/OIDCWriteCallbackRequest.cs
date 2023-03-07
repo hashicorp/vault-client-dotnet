@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OIDCWriteCallbackRequest
     /// </summary>
     [DataContract(Name = "OIDCWriteCallbackRequest")]
-
     public partial class OIDCWriteCallbackRequest : IEquatable<OIDCWriteCallbackRequest>, IValidatableObject
     {
 

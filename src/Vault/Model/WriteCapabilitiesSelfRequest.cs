@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteCapabilitiesSelfRequest
     /// </summary>
     [DataContract(Name = "WriteCapabilitiesSelfRequest")]
-
     public partial class WriteCapabilitiesSelfRequest : IEquatable<WriteCapabilitiesSelfRequest>, IValidatableObject
     {
 

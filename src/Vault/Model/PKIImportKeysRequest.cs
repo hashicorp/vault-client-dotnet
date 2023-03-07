@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIImportKeysRequest
     /// </summary>
     [DataContract(Name = "PKIImportKeysRequest")]
-
     public partial class PKIImportKeysRequest : IEquatable<PKIImportKeysRequest>, IValidatableObject
     {
 

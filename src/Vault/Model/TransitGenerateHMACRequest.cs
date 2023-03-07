@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitGenerateHMACRequest
     /// </summary>
     [DataContract(Name = "TransitGenerateHMACRequest")]
-
     public partial class TransitGenerateHMACRequest : IEquatable<TransitGenerateHMACRequest>, IValidatableObject
     {
 

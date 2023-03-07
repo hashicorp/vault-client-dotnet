@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GoogleCloudKMSReencryptRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudKMSReencryptRequest")]
-
     public partial class GoogleCloudKMSReencryptRequest : IEquatable<GoogleCloudKMSReencryptRequest>, IValidatableObject
     {
 

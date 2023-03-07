@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAMethodAdminGenerateTOTPRequest
     /// </summary>
     [DataContract(Name = "MFAMethodAdminGenerateTOTPRequest")]
-
     public partial class MFAMethodAdminGenerateTOTPRequest : IEquatable<MFAMethodAdminGenerateTOTPRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleReadLocalSecretIDsResponse
     /// </summary>
     [DataContract(Name = "AppRoleReadLocalSecretIDsResponse")]
-
     public partial class AppRoleReadLocalSecretIDsResponse : IEquatable<AppRoleReadLocalSecretIDsResponse>, IValidatableObject
     {
 

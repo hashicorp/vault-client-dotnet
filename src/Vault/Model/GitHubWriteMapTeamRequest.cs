@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GitHubWriteMapTeamRequest
     /// </summary>
     [DataContract(Name = "GitHubWriteMapTeamRequest")]
-
     public partial class GitHubWriteMapTeamRequest : IEquatable<GitHubWriteMapTeamRequest>, IValidatableObject
     {
 

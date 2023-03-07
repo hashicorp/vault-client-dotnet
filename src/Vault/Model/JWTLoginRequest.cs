@@ -26,7 +26,6 @@ namespace Vault.Model
     /// JWTLoginRequest
     /// </summary>
     [DataContract(Name = "JWTLoginRequest")]
-
     public partial class JWTLoginRequest : IEquatable<JWTLoginRequest>, IValidatableObject
     {
 

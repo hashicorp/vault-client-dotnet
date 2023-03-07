@@ -26,7 +26,6 @@ namespace Vault.Model
     /// ConsulWriteRoleRequest
     /// </summary>
     [DataContract(Name = "ConsulWriteRoleRequest")]
-
     public partial class ConsulWriteRoleRequest : IEquatable<ConsulWriteRoleRequest>, IValidatableObject
     {
 

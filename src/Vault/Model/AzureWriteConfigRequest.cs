@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AzureWriteConfigRequest
     /// </summary>
     [DataContract(Name = "AzureWriteConfigRequest")]
-
     public partial class AzureWriteConfigRequest : IEquatable<AzureWriteConfigRequest>, IValidatableObject
     {
 

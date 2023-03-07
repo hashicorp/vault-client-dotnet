@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIRootSignSelfIssuedRequest
     /// </summary>
     [DataContract(Name = "PKIRootSignSelfIssuedRequest")]
-
     public partial class PKIRootSignSelfIssuedRequest : IEquatable<PKIRootSignSelfIssuedRequest>, IValidatableObject
     {
 

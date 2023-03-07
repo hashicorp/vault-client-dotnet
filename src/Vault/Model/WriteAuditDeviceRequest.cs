@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteAuditDeviceRequest
     /// </summary>
     [DataContract(Name = "WriteAuditDeviceRequest")]
-
     public partial class WriteAuditDeviceRequest : IEquatable<WriteAuditDeviceRequest>, IValidatableObject
     {
 

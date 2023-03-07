@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteLoggersRequest
     /// </summary>
     [DataContract(Name = "WriteLoggersRequest")]
-
     public partial class WriteLoggersRequest : IEquatable<WriteLoggersRequest>, IValidatableObject
     {
 

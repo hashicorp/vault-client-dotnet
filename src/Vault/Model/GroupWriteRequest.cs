@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GroupWriteRequest
     /// </summary>
     [DataContract(Name = "GroupWriteRequest")]
-
     public partial class GroupWriteRequest : IEquatable<GroupWriteRequest>, IValidatableObject
     {
 

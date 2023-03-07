@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIIssuerResignCRLsRequest
     /// </summary>
     [DataContract(Name = "PKIIssuerResignCRLsRequest")]
-
     public partial class PKIIssuerResignCRLsRequest : IEquatable<PKIIssuerResignCRLsRequest>, IValidatableObject
     {
 

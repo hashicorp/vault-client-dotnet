@@ -26,7 +26,6 @@ namespace Vault.Model
     /// TransitWriteRandomUrlbytesRequest
     /// </summary>
     [DataContract(Name = "TransitWriteRandomUrlbytesRequest")]
-
     public partial class TransitWriteRandomUrlbytesRequest : IEquatable<TransitWriteRandomUrlbytesRequest>, IValidatableObject
     {
 

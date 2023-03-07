@@ -26,7 +26,6 @@ namespace Vault.Model
     /// LDAPCheckInManageLibraryRequest
     /// </summary>
     [DataContract(Name = "LDAPCheckInManageLibraryRequest")]
-
     public partial class LDAPCheckInManageLibraryRequest : IEquatable<LDAPCheckInManageLibraryRequest>, IValidatableObject
     {
 

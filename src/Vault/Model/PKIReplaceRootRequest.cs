@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIReplaceRootRequest
     /// </summary>
     [DataContract(Name = "PKIReplaceRootRequest")]
-
     public partial class PKIReplaceRootRequest : IEquatable<PKIReplaceRootRequest>, IValidatableObject
     {
 

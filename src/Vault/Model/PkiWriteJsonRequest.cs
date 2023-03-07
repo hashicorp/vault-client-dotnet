@@ -26,7 +26,6 @@ namespace Vault.Model
     /// PKIWriteJSONRequest
     /// </summary>
     [DataContract(Name = "PKIWriteJSONRequest")]
-
     public partial class PKIWriteJSONRequest : IEquatable<PKIWriteJSONRequest>, IValidatableObject
     {
 

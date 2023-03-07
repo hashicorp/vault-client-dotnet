@@ -26,7 +26,6 @@ namespace Vault.Model
     /// EntityMergeRequest
     /// </summary>
     [DataContract(Name = "EntityMergeRequest")]
-
     public partial class EntityMergeRequest : IEquatable<EntityMergeRequest>, IValidatableObject
     {
 

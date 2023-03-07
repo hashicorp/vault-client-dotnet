@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteAuthMethodRequest
     /// </summary>
     [DataContract(Name = "WriteAuthMethodRequest")]
-
     public partial class WriteAuthMethodRequest : IEquatable<WriteAuthMethodRequest>, IValidatableObject
     {
 

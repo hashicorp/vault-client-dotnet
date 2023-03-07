@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WritePluginsReloadBackendRequest
     /// </summary>
     [DataContract(Name = "WritePluginsReloadBackendRequest")]
-
     public partial class WritePluginsReloadBackendRequest : IEquatable<WritePluginsReloadBackendRequest>, IValidatableObject
     {
 

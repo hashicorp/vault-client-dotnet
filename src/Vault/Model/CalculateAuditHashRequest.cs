@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CalculateAuditHashRequest
     /// </summary>
     [DataContract(Name = "CalculateAuditHashRequest")]
-
     public partial class CalculateAuditHashRequest : IEquatable<CalculateAuditHashRequest>, IValidatableObject
     {
 

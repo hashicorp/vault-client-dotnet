@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AppRoleWriteTokenMaxTTLRequest
     /// </summary>
     [DataContract(Name = "AppRoleWriteTokenMaxTTLRequest")]
-
     public partial class AppRoleWriteTokenMaxTTLRequest : IEquatable<AppRoleWriteTokenMaxTTLRequest>, IValidatableObject
     {
 

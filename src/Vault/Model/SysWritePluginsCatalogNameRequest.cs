@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SysWritePluginsCatalogNameRequest
     /// </summary>
     [DataContract(Name = "SysWritePluginsCatalogNameRequest")]
-
     public partial class SysWritePluginsCatalogNameRequest : IEquatable<SysWritePluginsCatalogNameRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// NomadWriteAccessConfigRequest
     /// </summary>
     [DataContract(Name = "NomadWriteAccessConfigRequest")]
-
     public partial class NomadWriteAccessConfigRequest : IEquatable<NomadWriteAccessConfigRequest>, IValidatableObject
     {
 

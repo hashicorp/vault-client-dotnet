@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteConfigAuditingRequestHeaderRequest
     /// </summary>
     [DataContract(Name = "WriteConfigAuditingRequestHeaderRequest")]
-
     public partial class WriteConfigAuditingRequestHeaderRequest : IEquatable<WriteConfigAuditingRequestHeaderRequest>, IValidatableObject
     {
 

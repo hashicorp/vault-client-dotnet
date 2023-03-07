@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KerberosWriteConfigRequest
     /// </summary>
     [DataContract(Name = "KerberosWriteConfigRequest")]
-
     public partial class KerberosWriteConfigRequest : IEquatable<KerberosWriteConfigRequest>, IValidatableObject
     {
 

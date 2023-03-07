@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAValidateRequest
     /// </summary>
     [DataContract(Name = "MFAValidateRequest")]
-
     public partial class MFAValidateRequest : IEquatable<MFAValidateRequest>, IValidatableObject
     {
 

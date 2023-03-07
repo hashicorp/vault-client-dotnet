@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CloudFoundryWriteRoleRequest
     /// </summary>
     [DataContract(Name = "CloudFoundryWriteRoleRequest")]
-
     public partial class CloudFoundryWriteRoleRequest : IEquatable<CloudFoundryWriteRoleRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GoogleCloudKMSVerifyRequest
     /// </summary>
     [DataContract(Name = "GoogleCloudKMSVerifyRequest")]
-
     public partial class GoogleCloudKMSVerifyRequest : IEquatable<GoogleCloudKMSVerifyRequest>, IValidatableObject
     {
 

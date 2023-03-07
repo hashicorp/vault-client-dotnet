@@ -26,7 +26,6 @@ namespace Vault.Model
     /// JWTWriteRoleRequest
     /// </summary>
     [DataContract(Name = "JWTWriteRoleRequest")]
-
     public partial class JWTWriteRoleRequest : IEquatable<JWTWriteRoleRequest>, IValidatableObject
     {
 

@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteQuotasConfigRequest
     /// </summary>
     [DataContract(Name = "WriteQuotasConfigRequest")]
-
     public partial class WriteQuotasConfigRequest : IEquatable<WriteQuotasConfigRequest>, IValidatableObject
     {
 

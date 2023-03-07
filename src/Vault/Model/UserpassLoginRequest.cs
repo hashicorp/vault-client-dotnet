@@ -26,7 +26,6 @@ namespace Vault.Model
     /// UserpassLoginRequest
     /// </summary>
     [DataContract(Name = "UserpassLoginRequest")]
-
     public partial class UserpassLoginRequest : IEquatable<UserpassLoginRequest>, IValidatableObject
     {
 

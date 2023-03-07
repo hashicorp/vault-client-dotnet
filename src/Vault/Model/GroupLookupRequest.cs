@@ -26,7 +26,6 @@ namespace Vault.Model
     /// GroupLookupRequest
     /// </summary>
     [DataContract(Name = "GroupLookupRequest")]
-
     public partial class GroupLookupRequest : IEquatable<GroupLookupRequest>, IValidatableObject
     {
 

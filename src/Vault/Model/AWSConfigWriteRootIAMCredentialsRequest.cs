@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSConfigWriteRootIAMCredentialsRequest
     /// </summary>
     [DataContract(Name = "AWSConfigWriteRootIAMCredentialsRequest")]
-
     public partial class AWSConfigWriteRootIAMCredentialsRequest : IEquatable<AWSConfigWriteRootIAMCredentialsRequest>, IValidatableObject
     {
 

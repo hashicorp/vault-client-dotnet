@@ -26,7 +26,6 @@ namespace Vault.Model
     /// KVv2WriteRequest
     /// </summary>
     [DataContract(Name = "KVv2WriteRequest")]
-
     public partial class KVv2WriteRequest : IEquatable<KVv2WriteRequest>, IValidatableObject
     {
 

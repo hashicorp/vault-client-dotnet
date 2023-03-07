@@ -26,7 +26,6 @@ namespace Vault.Model
     /// UserpassWriteUserRequest
     /// </summary>
     [DataContract(Name = "UserpassWriteUserRequest")]
-
     public partial class UserpassWriteUserRequest : IEquatable<UserpassWriteUserRequest>, IValidatableObject
     {
 

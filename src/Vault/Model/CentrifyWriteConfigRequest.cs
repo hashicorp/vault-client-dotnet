@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CentrifyWriteConfigRequest
     /// </summary>
     [DataContract(Name = "CentrifyWriteConfigRequest")]
-
     public partial class CentrifyWriteConfigRequest : IEquatable<CentrifyWriteConfigRequest>, IValidatableObject
     {
 

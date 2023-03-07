@@ -26,7 +26,6 @@ namespace Vault.Model
     /// OktaWriteUserRequest
     /// </summary>
     [DataContract(Name = "OktaWriteUserRequest")]
-
     public partial class OktaWriteUserRequest : IEquatable<OktaWriteUserRequest>, IValidatableObject
     {
 

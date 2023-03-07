@@ -26,7 +26,6 @@ namespace Vault.Model
     /// WriteLeasesRevoke2Request
     /// </summary>
     [DataContract(Name = "WriteLeasesRevoke2Request")]
-
     public partial class WriteLeasesRevoke2Request : IEquatable<WriteLeasesRevoke2Request>, IValidatableObject
     {
 

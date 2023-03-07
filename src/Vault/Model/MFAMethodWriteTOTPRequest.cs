@@ -26,7 +26,6 @@ namespace Vault.Model
     /// MFAMethodWriteTOTPRequest
     /// </summary>
     [DataContract(Name = "MFAMethodWriteTOTPRequest")]
-
     public partial class MFAMethodWriteTOTPRequest : IEquatable<MFAMethodWriteTOTPRequest>, IValidatableObject
     {
 

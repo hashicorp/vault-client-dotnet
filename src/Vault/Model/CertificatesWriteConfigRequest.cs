@@ -26,7 +26,6 @@ namespace Vault.Model
     /// CertificatesWriteConfigRequest
     /// </summary>
     [DataContract(Name = "CertificatesWriteConfigRequest")]
-
     public partial class CertificatesWriteConfigRequest : IEquatable<CertificatesWriteConfigRequest>, IValidatableObject
     {
 

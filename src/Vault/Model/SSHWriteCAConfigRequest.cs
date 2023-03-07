@@ -26,7 +26,6 @@ namespace Vault.Model
     /// SSHWriteCAConfigRequest
     /// </summary>
     [DataContract(Name = "SSHWriteCAConfigRequest")]
-
     public partial class SSHWriteCAConfigRequest : IEquatable<SSHWriteCAConfigRequest>, IValidatableObject
     {
 

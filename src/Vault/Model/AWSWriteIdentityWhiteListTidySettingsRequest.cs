@@ -26,7 +26,6 @@ namespace Vault.Model
     /// AWSWriteIdentityWhiteListTidySettingsRequest
     /// </summary>
     [DataContract(Name = "AWSWriteIdentityWhiteListTidySettingsRequest")]
-
     public partial class AWSWriteIdentityWhiteListTidySettingsRequest : IEquatable<AWSWriteIdentityWhiteListTidySettingsRequest>, IValidatableObject
     {
 
