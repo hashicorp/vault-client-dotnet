@@ -1,12 +1,13 @@
 # Vault .NET Client Library
 
-[![Build][ci-build-badge]][ci-build]
-[![NuGet][nuget-badge]][nuget]
+[![Build][ci-build-badge]][ci-build] [![NuGet][nuget-badge]][nuget]
 
-A .NET client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
+A .NET client library [generated][openapi-generator] from `OpenAPI`
+[specification file][openapi-spec] to interact with [Hashicorp][hashicorp]
+[Vault][vault].
 
-> _**Note**_: This library is currently marked as **BETA**. Please 
-> try it out and give us feedback! Please do not use it in production.
+> _**Note**_: This library is currently marked as **BETA**. Please try it out
+> and give us feedback! Please do not use it in production.
 
 ## Contents
 
@@ -28,7 +29,8 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
 
 ## Installation
 
-Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've provided install commands below.
+Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've
+provided install commands below.
 
 Using Powershell:
 
@@ -42,13 +44,13 @@ Using Nuget CLI:
  nuget install HashiCorp.Vault -Version "0.1.0-beta"
 ```
 
-> _**Note**_: You can find the latest package version in the Release
-> tab in GitHub.
+> _**Note**_: You can find the latest package version in the Release tab in
+> GitHub.
 
 You can add the package to your .Net project using the following command:
 
 ```shell-session
-dotnet add package Hashicorp.Vault -version "0.1.0-beta" 
+dotnet add package Hashicorp.Vault -version "0.1.0-beta"
 ```
 
 ### Frameworks supported
@@ -61,9 +63,9 @@ dotnet add package Hashicorp.Vault -version "0.1.0-beta"
 
 ### Getting Started
 
-Here is a simple copy-pastable example of using the library to write a secret to the
-kv secrets engine and then read the secret back. This example 
-works with a Vault server started in dev mode with a hardcoded root token (e.g.
+Here is a simple copy-pastable example of using the library to write a secret to
+the kv secrets engine and then read the secret back. This example works with a
+Vault server started in dev mode with a hardcoded root token (e.g.
 `vault server -dev -dev-root-token-id="my-token"`);
 
 ```csharp
@@ -83,8 +85,8 @@ namespace Example
             VaultClient vaultClient = new VaultClient(config);
             vaultClient.SetToken("my-token");
 
-            try 
-            {    
+            try
+            {
                 var secretData = new Dictionary<string, string> { { "mypass", "pass" } };
 
                 // Write a secret
@@ -105,13 +107,12 @@ namespace Example
 }
 ```
 
-_**Note**_: the responses are currently generic objects that need
-to be marshalled into an appropriate model. Structured responses are 
-coming soon!
+_**Note**_: the responses are currently generic objects that need to be
+marshalled into an appropriate model. Structured responses are coming soon!
 
 ### Configuring a Vault Client
 
-The VaultClient requires you pass it a `VaultConfiguration` object. 
+The VaultClient requires you pass it a `VaultConfiguration` object.
 
 ```csharp
 VaultConfiguration config = new VaultConfiguration("http:127.0.0.1:8200");
@@ -120,7 +121,8 @@ VaultClient vaultClient = new VaultClient(config);
 
 You can also add custom configuration including a custom `HttpClientHandler`.
 This can be used to intercept requests and add custom logic before the base
-`SendAsync` is called by the HttpClient. See [HttpClientHandler docs][http-client-handler-docs] for more details.
+`SendAsync` is called by the HttpClient. See [HttpClientHandler
+docs][http-client-handler-docs] for more details.
 
 ```csharp
 // Create a custom HttpClientHandler
@@ -133,32 +135,34 @@ VaultConfiguration config = new VaultConfiguration("http://127.0.0.1:8200",
 The VaultClient also allows you to set a custom Timeout for all API calls.
 
 ```csharp
-VaultConfiguration config = new VaultConfiguration(basePath: address, 
-                                        httpClientHandler: httpClientHandler, 
+VaultConfiguration config = new VaultConfiguration(basePath: address,
+                                        httpClientHandler: httpClientHandler,
                                         timeout: TimeSpan.FromSeconds(15));
 ```
 
 ### Setting Headers
 
-The `SetToken` method can be used to set the `X-Vault-Token` header with the given token for subsequent requests.
+The `SetToken` method can be used to set the `X-Vault-Token` header with the
+given token for subsequent requests.
 
 ```csharp
 vaultClient.SetToken("my-token");
 ```
 
-The `SetNamespace` can be used to set the default namespace header. 
+The `SetNamespace` can be used to set the default namespace header.
 
 ```csharp
 vaultClient.SetNamespace("n1");
 vaultClient.ClearNamespace();
 ```
 
-The Vault client also allows for adding custom headers that will be applied to every request.
+The Vault client also allows for adding custom headers that will be applied to
+every request.
 
 ```csharp
-IDictionary<string, string> myCustomHeaders = new Dictionary<string, string> 
+IDictionary<string, string> myCustomHeaders = new Dictionary<string, string>
 {
-    { "my-custom-header", "myHeaders"}    
+    { "my-custom-header", "myHeaders"}
 };
 
 vaultClient.AddCustomHeaders(myCustomHeaders);
@@ -172,9 +176,9 @@ For production applications, it is recommended to use [approle][doc-approle] or
 one of the platform-specific authentication methods instead (e.g.
 [kubernetes][doc-kubernetes], [AWS][doc-aws], [Azure][doc-azure], etc.). The
 functions to access these authentication methods are automatically generated
-under `vaultClient.Auth`. Below is an example of how to authenticate using `approle`
-authentication method. Please refer to the [approle documentation][doc-approle]
-for more details.
+under `vaultClient.Auth`. Below is an example of how to authenticate using
+`approle` authentication method. Please refer to the [approle
+documentation][doc-approle] for more details.
 
 ```csharp
 VaultResponse<Object> vaultResp = vaultClient.Auth.PostAuthApproleLogin(
@@ -185,14 +189,16 @@ vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
 ```
 
 The secret identifier is often delivered as a wrapped token. In this case, you
-should unwrap it first as demonstrated [here](#wrapping-and-unwrapping-responses).
+should unwrap it first as demonstrated
+[here](#wrapping-and-unwrapping-responses).
 
 ### Reading a KV Secret
 
-To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
+To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown
+below.
 
-All secrets and auth calls have an optional mount path parameter that can be specified,
-otherwise we will use a default mount path.
+All secrets and auth calls have an optional mount path parameter that can be
+specified, otherwise we will use a default mount path.
 
 ```csharp
 VaultResponse<Object> resp = await vaultClient.Secrets.KVv2ReadAsync("path", secretMountPath: "myCustomMountPath");
@@ -208,8 +214,8 @@ VaultResponse<Object> respSync = vaultClient.Secrets.KVv2ReadAsync("path");
 
 ### Exception Handling
 
-For api level exceptions we provide the `VaultApiException` that provides the Vault
-specific errors, status code and original error content.
+For api level exceptions we provide the `VaultApiException` that provides the
+Vault specific errors, status code and original error content.
 
 ```csharp
 try
@@ -232,8 +238,9 @@ catch (VaultApiException e)
 
 ### Wrapping and Unwrapping Responses
 
-All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault will wrap the response and return a response-wrapping token instead.
-More documentation on response wrapping can be found [here]([doc-response-wrapping]).
+All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault
+will wrap the response and return a response-wrapping token instead. More
+documentation on response wrapping can be found [here]([doc-response-wrapping]).
 
 ```csharp
 // Get a wrapped response from Vault
@@ -251,8 +258,9 @@ Task<VaultResponse<Object>> unwrappedResp = await vauClient.UnwrapAsync<Object>(
 
 ### Performing Generic Operations
 
-We provide generic accessors for `Read`, `Write`, `List` and `Delete`, should you need to access an endpoint that is not available in the library (e.g. a plugin that is not builtin
-to Vault).
+We provide generic accessors for `Read`, `Write`, `List` and `Delete`, should
+you need to access an endpoint that is not available in the library (e.g. a
+plugin that is not builtin to Vault).
 
 Each generic operation has a synchronous and asynchronous version.
 
@@ -282,9 +290,11 @@ await vaultClient.WriteAsync<Object>(writePath, secretData);
 
 ### Local Development
 
-To develop locally with the Vault .Net Library, you can generate the DLL using your preferred tool (e.g. `dotnet build`) in the `src` folder.
+To develop locally with the Vault .Net Library, you can generate the DLL using
+your preferred tool (e.g. `dotnet build`) in the `src` folder.
 
-Then include the generated DLL (under the `bin` folder) in the C# project, and use the namespaces:
+Then include the generated DLL (under the `bin` folder) in the C# project, and
+use the namespaces:
 
 ```csharp
 using Vault;
@@ -294,6 +304,7 @@ using Vault.Model;
 ```
 
 You will also need to include the following dependencies:
+
 - [Json.Net][newtonsoft-json]
 - [Polly][polly]
 
@@ -311,6 +322,7 @@ Install-Package Polly
 - [Secrets](docs/Secrets.md)
 - [System](docs/System.md)
 
+<!-- prettier-ignore-start -->
 [doc-approle]:                  https://developer.hashicorp.com/vault/docs/auth/approle
 [doc-aws]:                      https://developer.hashicorp.com/vault/docs/auth/aws
 [doc-azure]:                    https://developer.hashicorp.com/vault/docs/auth/azure
@@ -328,3 +340,4 @@ Install-Package Polly
 [ci-build]:                     https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml?query=branch%3Amain
 [nuget-badge]:                  https://img.shields.io/nuget/v/HashiCorp.Vault.svg?style=flat&color=blue
 [nuget]:                        https://www.nuget.org/packages/HashiCorp.Vault/
+<!-- prettier-ignore-end -->
