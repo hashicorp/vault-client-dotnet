@@ -9,6 +9,11 @@ A .NET client library [generated][openapi-generator] from `OpenAPI`
 > _**Note**_: This library is currently marked as **BETA**. Please try it out
 > and give us feedback! Please do not use it in production.
 
+> _**Note**_: We take Vault's security and our users' trust very seriously. If
+> you believe you have found a security issue in Vault, _please responsibly
+> disclose_ by contacting us at
+> [security@hashicorp.com](mailto:security@hashicorp.com).
+
 ## Contents
 
 - [Vault .NET Client Library](#vault-net-client-library)
