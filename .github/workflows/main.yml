@@ -34,17 +34,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: install rename utility
+      - name: Install rename utility
         run: sudo apt-get -y install rename
 
-      - name: check regenerated files
+      - name: Check regenerated files
         run: |
           make regen
           readonly changed_files="$(git diff --stat ':!Vault.sln')"
-          if [[ "$changed_files" != "" ]]; then
-            echo "found diffs after running 'make regen'"
-            echo "please run 'make regen' & commit the changed files:"
-            echo "$changed_files"
+          if [[ "${changed_files}" != "" ]]; then
+            echo "Found diffs after running 'make regen'"
+            echo "Please run 'make regen' & commit the changed files:"
+            echo "${changed_files}"
             exit 1
           fi
 
