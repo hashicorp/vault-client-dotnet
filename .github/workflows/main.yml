@@ -47,3 +47,19 @@ jobs:
             echo "$changed_files"
             exit 1
           fi
+
+  check-readme-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+          persist-credentials: false
+
+      - name: Ensure the readme is formatted (make format-readme)
+        uses: creyD/prettier_action@v4.3
+        with:
+          dry: True
+          prettier_options: -w --prose-wrap=always README.md
+
