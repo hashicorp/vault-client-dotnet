@@ -73,3 +73,7 @@ build-prod:
 
 format:
 	dotnet format
+
+format-readme:
+	prettier -w --prose-wrap=always README.md
+
