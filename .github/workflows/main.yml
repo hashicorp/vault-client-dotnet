@@ -34,16 +34,32 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: install rename utility
+      - name: Install rename utility
         run: sudo apt-get -y install rename
 
-      - name: check regenerated files
+      - name: Check regenerated files
         run: |
           make regen
           readonly changed_files="$(git diff --stat ':!Vault.sln')"
-          if [[ "$changed_files" != "" ]]; then
-            echo "found diffs after running 'make regen'"
-            echo "please run 'make regen' & commit the changed files:"
-            echo "$changed_files"
+          if [[ "${changed_files}" != "" ]]; then
+            echo "Found diffs after running 'make regen'"
+            echo "Please run 'make regen' & commit the changed files:"
+            echo "${changed_files}"
             exit 1
           fi
+
+  check-readme-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+          persist-credentials: false
+
+      - name: Ensure the readme is formatted (make format-readme)
+        uses: creyD/prettier_action@v4.3
+        with:
+          dry: True
+          prettier_options: --write README.md
+

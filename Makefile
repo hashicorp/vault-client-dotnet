@@ -73,3 +73,7 @@ build-prod:
 
 format:
 	dotnet format
+
+format-readme:
+	prettier --write README.md
+
