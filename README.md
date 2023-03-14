@@ -34,7 +34,8 @@ A .NET client library [generated][openapi-generator] from `OpenAPI`
 
 ## Installation
 
-Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've provided install commands below.
+Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've
+provided install commands below.
 
 Using Powershell:
 
