@@ -10,7 +10,7 @@ A .NET client library [generated][openapi-generator] from `OpenAPI`
 > and give us feedback! Please do not use it in production.
 
 > _**Note**_: We take Vault's security and our users' trust very seriously. If
-> you believe you have found a security issue in Vault, _please responsibly
+> you believe you have found a security issue in Vault .Net, _please responsibly
 > disclose_ by contacting us at
 > [security@hashicorp.com](mailto:security@hashicorp.com).
 
