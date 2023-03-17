@@ -28210,14 +28210,9 @@ namespace Vault.Api
                 requestOptions.PathParameters.Add("github_mount_path", ClientUtils.ParameterToString(githubMountPath)); // path parameter
             }
 
-
-            if (list != null)
-            {
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
 
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -28485,14 +28480,9 @@ namespace Vault.Api
                 requestOptions.PathParameters.Add("github_mount_path", ClientUtils.ParameterToString(githubMountPath)); // path parameter
             }
 
-
-            if (list != null)
-            {
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
 
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
