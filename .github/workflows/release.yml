@@ -19,6 +19,6 @@ jobs:
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.5
       - name: Create NuGet Package
-        run: dotnet pack -c Release -p:PackageVersion=${{ github.event.release.tag_name }} --include-symbols
+        run: dotnet pack -c Release -p:PackageVersion=${{ github.event.release.tag_name }} --include-symbols  -p:SymbolPackageFormat=snupkg
       - name: Push NuGet Package
         run: nuget push **/*.nupkg -ApiKey ${{ secrets.NUGET_API_KEY }} -src https://api.nuget.org/v3/index.json
