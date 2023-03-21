@@ -219,10 +219,10 @@ namespace {{packageName}}.{{apiPackage}}
             {
                 requestOptions.PathParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // path parameter
             }{{/unless}}{{/each}}
-            {{#each queryParams}}{{#with required}}
+            {{#each queryParams}}{{#eq paramName "list"}}
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", "true"));
-            {{/with}}
-            {{#unless required}}
+            {{/eq}}
+            {{#neq paramName "list"}}
             if ({{paramName}} != null)
             {
                 {{#if isDeepObject}}{{#each items.vars}}
@@ -236,7 +236,7 @@ namespace {{packageName}}.{{apiPackage}}
                 {{#unless isDeepObject}}
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("{{collectionFormat}}", "{{baseName}}", {{paramName}}));
                 {{/unless}}
-            }{{/unless}}{{/each}}
+            }{{/neq}}{{/each}}
             {{#each headerParams}}{{#with required}}
             requestOptions.HeaderParameters.Add("{{baseName}}", ClientUtils.ParameterToString({{paramName}})); // header parameter
             {{/with}}

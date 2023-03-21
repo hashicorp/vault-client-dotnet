@@ -14996,14 +14996,9 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
 
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -15856,14 +15851,9 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
 
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -15990,14 +15980,9 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
 
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
