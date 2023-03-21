@@ -35,6 +35,7 @@ generate:
 				--config           /local/$(GENERATE_CONFIG_PATH) \
 				--template-dir     /local/$(GENERATE_TEMPLATES_PATH) \
 				--output           /local/$(OUTPUT_PATH) \
+				--api-name-suffix 	   ""
 
 clean:
 	dotnet clean

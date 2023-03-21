@@ -1,4 +1,4 @@
-# {{packageName}}.{{apiPackage}}.{{classname}}{{#with description}}
+# {{packageName}}.{{apiPackage}}.{{cut classname "Api"}}{{#with description}}
 {{.}}{{/with}}
 
 All URIs are relative to *{{{basePath}}}*
@@ -66,10 +66,10 @@ namespace Example
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new {{classname}}(httpClient, config, httpClientHandler);
+            var apiInstance = new {{cut classname "Api"}}(httpClient, config, httpClientHandler);
             {{/if}}
             {{#unless useHttpClient}}
-            var apiInstance = new {{classname}}(config);
+            var apiInstance = new {{cut classname "Api"}}(config);
             {{/unless}}
             {{#each allParams}}
             {{#if isPrimitiveType}}
@@ -92,7 +92,7 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling {{classname}}.{{operationId}}: " + e.Message );
+                Debug.Print("Exception when calling {{cut classname "Api"}}.{{operationId}}: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }

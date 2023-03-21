@@ -12,7 +12,7 @@ namespace {{packageName}}.{{apiPackage}}
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} interface {{interfacePrefix}}{{classname}}Sync : IApiAccessor
+    {{>visibility}} interface {{interfacePrefix}}{{cut classname "Api"}}Sync : IApiAccessor
     {
         #region Synchronous Operations
         {{#each operation}}
@@ -49,7 +49,7 @@ namespace {{packageName}}.{{apiPackage}}
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} interface {{interfacePrefix}}{{classname}}Async : IApiAccessor
+    {{>visibility}} interface {{interfacePrefix}}{{cut classname "Api"}}Async : IApiAccessor
     {
         #region Asynchronous Operations
         {{#each operation}}
@@ -87,19 +87,19 @@ namespace {{packageName}}.{{apiPackage}}
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} interface {{interfacePrefix}}{{classname}} : {{interfacePrefix}}{{classname}}Sync{{#if supportsAsync}}, {{interfacePrefix}}{{classname}}Async{{/if}} { }
+    {{>visibility}} interface {{interfacePrefix}}{{cut classname "Api"}} : {{interfacePrefix}}{{cut classname "Api"}}Sync{{#if supportsAsync}}, {{interfacePrefix}}{{cut classname "Api"}}Async{{/if}} { }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    {{>visibility}} partial class {{classname}} : {{interfacePrefix}}{{classname}}
+    {{>visibility}} partial class {{cut classname "Api"}} : {{interfacePrefix}}{{cut classname "Api"}}
     {
         private {{packageName}}.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Constructor for {{classname}}
+        /// Constructor for {{cut classname "Api"}}
         /// </summary>
-        public {{classname}}(ApiClient apiClient)
+        public {{cut classname "Api"}}(ApiClient apiClient)
         {
             if (apiClient == null) throw new ArgumentNullException("ApiClient");
             
@@ -182,12 +182,12 @@ namespace {{packageName}}.{{apiPackage}}
             {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
-                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
+                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
             {{/unless}}{{/with}}{{/each}}
             {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
-                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
+                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
             {{/unless}}{{/with}}{{/with}}
             RequestOptions requestOptions = new RequestOptions();
 
@@ -293,12 +293,12 @@ namespace {{packageName}}.{{apiPackage}}
             {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
-                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
+                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
             {{/unless}}{{/with}}{{/each}}
             {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
-                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{classname}}->{{operationId}}");
+                throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
             {{/unless}}{{/with}}{{/with}}
 
             RequestOptions requestOptions = new RequestOptions();

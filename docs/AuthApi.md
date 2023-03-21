@@ -4,268 +4,268 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AWSConfigDeleteCertificate**](Auth.md#awsconfigdeletecertificate) | **DELETE** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
-[**AWSConfigDeleteClient**](Auth.md#awsconfigdeleteclient) | **DELETE** /auth/{aws_mount_path}/config/client | 
-[**AWSConfigDeleteIdentityAccessList**](Auth.md#awsconfigdeleteidentityaccesslist) | **DELETE** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
-[**AWSConfigDeleteIdentityWhiteList**](Auth.md#awsconfigdeleteidentitywhitelist) | **DELETE** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
-[**AWSConfigDeleteRoleTagBlackList**](Auth.md#awsconfigdeleteroletagblacklist) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
-[**AWSConfigDeleteRoleTagDenyList**](Auth.md#awsconfigdeleteroletagdenylist) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
-[**AWSConfigDeleteSecurityTokenServiceAccount**](Auth.md#awsconfigdeletesecuritytokenserviceaccount) | **DELETE** /auth/{aws_mount_path}/config/sts/{account_id} | 
-[**AWSConfigListCertificates**](Auth.md#awsconfiglistcertificates) | **GET** /auth/{aws_mount_path}/config/certificates | 
-[**AWSConfigListSecurityTokenService**](Auth.md#awsconfiglistsecuritytokenservice) | **GET** /auth/{aws_mount_path}/config/sts | 
-[**AWSConfigReadCertificate**](Auth.md#awsconfigreadcertificate) | **GET** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
-[**AWSConfigReadClient**](Auth.md#awsconfigreadclient) | **GET** /auth/{aws_mount_path}/config/client | 
-[**AWSConfigReadIdentity**](Auth.md#awsconfigreadidentity) | **GET** /auth/{aws_mount_path}/config/identity | 
-[**AWSConfigReadIdentityAccessList**](Auth.md#awsconfigreadidentityaccesslist) | **GET** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
-[**AWSConfigReadIdentityWhiteList**](Auth.md#awsconfigreadidentitywhitelist) | **GET** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
-[**AWSConfigReadRoleTagBlackList**](Auth.md#awsconfigreadroletagblacklist) | **GET** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
-[**AWSConfigReadRoleTagDenyList**](Auth.md#awsconfigreadroletagdenylist) | **GET** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
-[**AWSConfigReadSecurityTokenServiceAccount**](Auth.md#awsconfigreadsecuritytokenserviceaccount) | **GET** /auth/{aws_mount_path}/config/sts/{account_id} | 
-[**AWSConfigRotateRoot**](Auth.md#awsconfigrotateroot) | **POST** /auth/{aws_mount_path}/config/rotate-root | 
-[**AWSConfigWriteCertificate**](Auth.md#awsconfigwritecertificate) | **POST** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
-[**AWSConfigWriteClient**](Auth.md#awsconfigwriteclient) | **POST** /auth/{aws_mount_path}/config/client | 
-[**AWSConfigWriteIdentity**](Auth.md#awsconfigwriteidentity) | **POST** /auth/{aws_mount_path}/config/identity | 
-[**AWSConfigWriteIdentityAccessList**](Auth.md#awsconfigwriteidentityaccesslist) | **POST** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
-[**AWSConfigWriteIdentityWhiteList**](Auth.md#awsconfigwriteidentitywhitelist) | **POST** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
-[**AWSConfigWriteRoleTagBlackList**](Auth.md#awsconfigwriteroletagblacklist) | **POST** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
-[**AWSConfigWriteRoleTagDenyList**](Auth.md#awsconfigwriteroletagdenylist) | **POST** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
-[**AWSConfigWriteSecurityTokenServiceAccount**](Auth.md#awsconfigwritesecuritytokenserviceaccount) | **POST** /auth/{aws_mount_path}/config/sts/{account_id} | 
-[**AWSDeleteAuthRole**](Auth.md#awsdeleteauthrole) | **DELETE** /auth/{aws_mount_path}/role/{role} | 
-[**AWSDeleteIdentityAccessListFor**](Auth.md#awsdeleteidentityaccesslistfor) | **DELETE** /auth/{aws_mount_path}/identity-accesslist/{instance_id} | 
-[**AWSDeleteIdentityWhiteListFor**](Auth.md#awsdeleteidentitywhitelistfor) | **DELETE** /auth/{aws_mount_path}/identity-whitelist/{instance_id} | 
-[**AWSDeleteRoleTagBlackListFor**](Auth.md#awsdeleteroletagblacklistfor) | **DELETE** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
-[**AWSDeleteRoleTagDenyListFor**](Auth.md#awsdeleteroletagdenylistfor) | **DELETE** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
-[**AWSListAuthRoles**](Auth.md#awslistauthroles) | **GET** /auth/{aws_mount_path}/role | 
-[**AWSListAuthRoles2**](Auth.md#awslistauthroles2) | **GET** /auth/{aws_mount_path}/roles | 
-[**AWSListIdentityAccessList**](Auth.md#awslistidentityaccesslist) | **GET** /auth/{aws_mount_path}/identity-accesslist | 
-[**AWSListIdentityWhiteList**](Auth.md#awslistidentitywhitelist) | **GET** /auth/{aws_mount_path}/identity-whitelist | 
-[**AWSListRoleTagBlackList**](Auth.md#awslistroletagblacklist) | **GET** /auth/{aws_mount_path}/roletag-blacklist | 
-[**AWSListRoleTagDenyList**](Auth.md#awslistroletagdenylist) | **GET** /auth/{aws_mount_path}/roletag-denylist | 
-[**AWSLogin**](Auth.md#awslogin) | **POST** /auth/{aws_mount_path}/login | 
-[**AWSReadAuthRole**](Auth.md#awsreadauthrole) | **GET** /auth/{aws_mount_path}/role/{role} | 
-[**AWSReadIdentityAccessListFor**](Auth.md#awsreadidentityaccesslistfor) | **GET** /auth/{aws_mount_path}/identity-accesslist/{instance_id} | 
-[**AWSReadIdentityWhiteListFor**](Auth.md#awsreadidentitywhitelistfor) | **GET** /auth/{aws_mount_path}/identity-whitelist/{instance_id} | 
-[**AWSReadRoleTagBlackListFor**](Auth.md#awsreadroletagblacklistfor) | **GET** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
-[**AWSReadRoleTagDenyListFor**](Auth.md#awsreadroletagdenylistfor) | **GET** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
-[**AWSWriteAuthRole**](Auth.md#awswriteauthrole) | **POST** /auth/{aws_mount_path}/role/{role} | 
-[**AWSWriteAuthRoleTag**](Auth.md#awswriteauthroletag) | **POST** /auth/{aws_mount_path}/role/{role}/tag | 
-[**AWSWriteIdentityAccessListTidySettings**](Auth.md#awswriteidentityaccesslisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/identity-accesslist | 
-[**AWSWriteIdentityWhiteListTidySettings**](Auth.md#awswriteidentitywhitelisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/identity-whitelist | 
-[**AWSWriteRoleTagBlackListFor**](Auth.md#awswriteroletagblacklistfor) | **POST** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
-[**AWSWriteRoleTagBlackListTidySettings**](Auth.md#awswriteroletagblacklisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/roletag-blacklist | 
-[**AWSWriteRoleTagDenyListFor**](Auth.md#awswriteroletagdenylistfor) | **POST** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
-[**AWSWriteRoleTagDenyListTidySettings**](Auth.md#awswriteroletagdenylisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/roletag-denylist | 
-[**AliCloudDeleteAuthRole**](Auth.md#aliclouddeleteauthrole) | **DELETE** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
-[**AliCloudListAuthRoles**](Auth.md#alicloudlistauthroles) | **GET** /auth/{alicloud_mount_path}/role | Lists all the roles that are registered with Vault.
-[**AliCloudListAuthRoles2**](Auth.md#alicloudlistauthroles2) | **GET** /auth/{alicloud_mount_path}/roles | Lists all the roles that are registered with Vault.
-[**AliCloudLogin**](Auth.md#alicloudlogin) | **POST** /auth/{alicloud_mount_path}/login | Authenticates an RAM entity with Vault.
-[**AliCloudReadAuthRole**](Auth.md#alicloudreadauthrole) | **GET** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
-[**AliCloudWriteAuthRole**](Auth.md#alicloudwriteauthrole) | **POST** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
-[**AppRoleDeleteBindSecretID**](Auth.md#approledeletebindsecretid) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
-[**AppRoleDeleteBoundCIDRList**](Auth.md#approledeleteboundcidrlist) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
-[**AppRoleDeletePeriod**](Auth.md#approledeleteperiod) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/period | 
-[**AppRoleDeletePolicies**](Auth.md#approledeletepolicies) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/policies | 
-[**AppRoleDeleteRole**](Auth.md#approledeleterole) | **DELETE** /auth/{approle_mount_path}/role/{role_name} | 
-[**AppRoleDeleteSecretIDAccessorDestroy**](Auth.md#approledeletesecretidaccessordestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**AppRoleDeleteSecretIDBoundCIDRs**](Auth.md#approledeletesecretidboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
-[**AppRoleDeleteSecretIDDestroy**](Auth.md#approledeletesecretiddestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
-[**AppRoleDeleteSecretIDNumUses**](Auth.md#approledeletesecretidnumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
-[**AppRoleDeleteSecretIDTTL**](Auth.md#approledeletesecretidttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
-[**AppRoleDeleteTokenBoundCIDRs**](Auth.md#approledeletetokenboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
-[**AppRoleDeleteTokenMaxTTL**](Auth.md#approledeletetokenmaxttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
-[**AppRoleDeleteTokenNumUses**](Auth.md#approledeletetokennumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
-[**AppRoleDeleteTokenTTL**](Auth.md#approledeletetokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
-[**AppRoleListRoles**](Auth.md#approlelistroles) | **GET** /auth/{approle_mount_path}/role | 
-[**AppRoleListSecretID**](Auth.md#approlelistsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
-[**AppRoleLogin**](Auth.md#approlelogin) | **POST** /auth/{approle_mount_path}/login | 
-[**AppRoleReadBindSecretID**](Auth.md#approlereadbindsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
-[**AppRoleReadBoundCIDRList**](Auth.md#approlereadboundcidrlist) | **GET** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
-[**AppRoleReadLocalSecretIDs**](Auth.md#approlereadlocalsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/local-secret-ids | 
-[**AppRoleReadPeriod**](Auth.md#approlereadperiod) | **GET** /auth/{approle_mount_path}/role/{role_name}/period | 
-[**AppRoleReadPolicies**](Auth.md#approlereadpolicies) | **GET** /auth/{approle_mount_path}/role/{role_name}/policies | 
-[**AppRoleReadRole**](Auth.md#approlereadrole) | **GET** /auth/{approle_mount_path}/role/{role_name} | 
-[**AppRoleReadRoleID**](Auth.md#approlereadroleid) | **GET** /auth/{approle_mount_path}/role/{role_name}/role-id | 
-[**AppRoleReadSecretIDBoundCIDRs**](Auth.md#approlereadsecretidboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
-[**AppRoleReadSecretIDNumUses**](Auth.md#approlereadsecretidnumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
-[**AppRoleReadSecretIDTTL**](Auth.md#approlereadsecretidttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
-[**AppRoleReadTokenBoundCIDRs**](Auth.md#approlereadtokenboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
-[**AppRoleReadTokenMaxTTL**](Auth.md#approlereadtokenmaxttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
-[**AppRoleReadTokenNumUses**](Auth.md#approlereadtokennumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
-[**AppRoleReadTokenTTL**](Auth.md#approlereadtokenttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
-[**AppRoleTidySecretID**](Auth.md#approletidysecretid) | **POST** /auth/{approle_mount_path}/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
-[**AppRoleWriteBindSecretID**](Auth.md#approlewritebindsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
-[**AppRoleWriteBoundCIDRList**](Auth.md#approlewriteboundcidrlist) | **POST** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
-[**AppRoleWriteCustomSecretID**](Auth.md#approlewritecustomsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/custom-secret-id | 
-[**AppRoleWritePeriod**](Auth.md#approlewriteperiod) | **POST** /auth/{approle_mount_path}/role/{role_name}/period | 
-[**AppRoleWritePolicies**](Auth.md#approlewritepolicies) | **POST** /auth/{approle_mount_path}/role/{role_name}/policies | 
-[**AppRoleWriteRole**](Auth.md#approlewriterole) | **POST** /auth/{approle_mount_path}/role/{role_name} | 
-[**AppRoleWriteRoleID**](Auth.md#approlewriteroleid) | **POST** /auth/{approle_mount_path}/role/{role_name}/role-id | 
-[**AppRoleWriteSecretID**](Auth.md#approlewritesecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
-[**AppRoleWriteSecretIDAccessorDestroy**](Auth.md#approlewritesecretidaccessordestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**AppRoleWriteSecretIDAccessorLookup**](Auth.md#approlewritesecretidaccessorlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup | 
-[**AppRoleWriteSecretIDBoundCIDRs**](Auth.md#approlewritesecretidboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
-[**AppRoleWriteSecretIDDestroy**](Auth.md#approlewritesecretiddestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
-[**AppRoleWriteSecretIDLookup**](Auth.md#approlewritesecretidlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/lookup | 
-[**AppRoleWriteSecretIDNumUses**](Auth.md#approlewritesecretidnumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
-[**AppRoleWriteSecretIDTTL**](Auth.md#approlewritesecretidttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
-[**AppRoleWriteTokenBoundCIDRs**](Auth.md#approlewritetokenboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
-[**AppRoleWriteTokenMaxTTL**](Auth.md#approlewritetokenmaxttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
-[**AppRoleWriteTokenNumUses**](Auth.md#approlewritetokennumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
-[**AppRoleWriteTokenTTL**](Auth.md#approlewritetokenttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
-[**AzureDeleteAuthConfig**](Auth.md#azuredeleteauthconfig) | **DELETE** /auth/{azure_mount_path}/config | 
-[**AzureDeleteAuthRole**](Auth.md#azuredeleteauthrole) | **DELETE** /auth/{azure_mount_path}/role/{name} | 
-[**AzureListAuthRoles**](Auth.md#azurelistauthroles) | **GET** /auth/{azure_mount_path}/role | 
-[**AzureLogin**](Auth.md#azurelogin) | **POST** /auth/{azure_mount_path}/login | 
-[**AzureReadAuthConfig**](Auth.md#azurereadauthconfig) | **GET** /auth/{azure_mount_path}/config | 
-[**AzureReadAuthRole**](Auth.md#azurereadauthrole) | **GET** /auth/{azure_mount_path}/role/{name} | 
-[**AzureWriteAuthConfig**](Auth.md#azurewriteauthconfig) | **POST** /auth/{azure_mount_path}/config | 
-[**AzureWriteAuthRole**](Auth.md#azurewriteauthrole) | **POST** /auth/{azure_mount_path}/role/{name} | 
-[**CentrifyLogin**](Auth.md#centrifylogin) | **POST** /auth/{centrify_mount_path}/login | Log in with a username and password.
-[**CentrifyReadConfig**](Auth.md#centrifyreadconfig) | **GET** /auth/{centrify_mount_path}/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-[**CentrifyWriteConfig**](Auth.md#centrifywriteconfig) | **POST** /auth/{centrify_mount_path}/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-[**CertificatesDelete**](Auth.md#certificatesdelete) | **DELETE** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
-[**CertificatesDeleteCRL**](Auth.md#certificatesdeletecrl) | **DELETE** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**CertificatesList**](Auth.md#certificateslist) | **GET** /auth/{cert_mount_path}/certs | Manage trusted certificates used for authentication.
-[**CertificatesListCRLs**](Auth.md#certificateslistcrls) | **GET** /auth/{cert_mount_path}/crls | 
-[**CertificatesLogin**](Auth.md#certificateslogin) | **POST** /auth/{cert_mount_path}/login | 
-[**CertificatesRead**](Auth.md#certificatesread) | **GET** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
-[**CertificatesReadCRL**](Auth.md#certificatesreadcrl) | **GET** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**CertificatesReadConfig**](Auth.md#certificatesreadconfig) | **GET** /auth/{cert_mount_path}/config | 
-[**CertificatesWrite**](Auth.md#certificateswrite) | **POST** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
-[**CertificatesWriteCRL**](Auth.md#certificateswritecrl) | **POST** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**CertificatesWriteConfig**](Auth.md#certificateswriteconfig) | **POST** /auth/{cert_mount_path}/config | 
-[**CloudFoundryDeleteConfig**](Auth.md#cloudfoundrydeleteconfig) | **DELETE** /auth/{cf_mount_path}/config | 
-[**CloudFoundryDeleteRole**](Auth.md#cloudfoundrydeleterole) | **DELETE** /auth/{cf_mount_path}/roles/{role} | 
-[**CloudFoundryListRoles**](Auth.md#cloudfoundrylistroles) | **GET** /auth/{cf_mount_path}/roles | 
-[**CloudFoundryLogin**](Auth.md#cloudfoundrylogin) | **POST** /auth/{cf_mount_path}/login | 
-[**CloudFoundryReadConfig**](Auth.md#cloudfoundryreadconfig) | **GET** /auth/{cf_mount_path}/config | 
-[**CloudFoundryReadRole**](Auth.md#cloudfoundryreadrole) | **GET** /auth/{cf_mount_path}/roles/{role} | 
-[**CloudFoundryWriteConfig**](Auth.md#cloudfoundrywriteconfig) | **POST** /auth/{cf_mount_path}/config | 
-[**CloudFoundryWriteRole**](Auth.md#cloudfoundrywriterole) | **POST** /auth/{cf_mount_path}/roles/{role} | 
-[**GitHubDeleteMapTeam**](Auth.md#githubdeletemapteam) | **DELETE** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**GitHubDeleteMapUser**](Auth.md#githubdeletemapuser) | **DELETE** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**GitHubLogin**](Auth.md#githublogin) | **POST** /auth/{github_mount_path}/login | 
-[**GitHubReadConfig**](Auth.md#githubreadconfig) | **GET** /auth/{github_mount_path}/config | 
-[**GitHubReadMapTeam**](Auth.md#githubreadmapteam) | **GET** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**GitHubReadMapTeams**](Auth.md#githubreadmapteams) | **GET** /auth/{github_mount_path}/map/teams | Read mappings for teams
-[**GitHubReadMapUser**](Auth.md#githubreadmapuser) | **GET** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**GitHubReadMapUsers**](Auth.md#githubreadmapusers) | **GET** /auth/{github_mount_path}/map/users | Read mappings for users
-[**GitHubWriteConfig**](Auth.md#githubwriteconfig) | **POST** /auth/{github_mount_path}/config | 
-[**GitHubWriteMapTeam**](Auth.md#githubwritemapteam) | **POST** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**GitHubWriteMapUser**](Auth.md#githubwritemapuser) | **POST** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**GoogleCloudDeleteRole**](Auth.md#googleclouddeleterole) | **DELETE** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
-[**GoogleCloudListRoles**](Auth.md#googlecloudlistroles) | **GET** /auth/{gcp_mount_path}/role | Lists all the roles that are registered with Vault.
-[**GoogleCloudListRoles2**](Auth.md#googlecloudlistroles2) | **GET** /auth/{gcp_mount_path}/roles | Lists all the roles that are registered with Vault.
-[**GoogleCloudLogin**](Auth.md#googlecloudlogin) | **POST** /auth/{gcp_mount_path}/login | 
-[**GoogleCloudReadAuthConfig**](Auth.md#googlecloudreadauthconfig) | **GET** /auth/{gcp_mount_path}/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-[**GoogleCloudReadRole**](Auth.md#googlecloudreadrole) | **GET** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
-[**GoogleCloudWriteAuthConfig**](Auth.md#googlecloudwriteauthconfig) | **POST** /auth/{gcp_mount_path}/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-[**GoogleCloudWriteRole**](Auth.md#googlecloudwriterole) | **POST** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
-[**GoogleCloudWriteRoleLabels**](Auth.md#googlecloudwriterolelabels) | **POST** /auth/{gcp_mount_path}/role/{name}/labels | Add or remove labels for an existing &#x27;gce&#x27; role
-[**GoogleCloudWriteRoleServiceAccounts**](Auth.md#googlecloudwriteroleserviceaccounts) | **POST** /auth/{gcp_mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
-[**JWTDeleteRole**](Auth.md#jwtdeleterole) | **DELETE** /auth/{jwt_mount_path}/role/{name} | Delete an existing role.
-[**JWTListRoles**](Auth.md#jwtlistroles) | **GET** /auth/{jwt_mount_path}/role | Lists all the roles registered with the backend.
-[**JWTLogin**](Auth.md#jwtlogin) | **POST** /auth/{jwt_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
-[**JWTReadConfig**](Auth.md#jwtreadconfig) | **GET** /auth/{jwt_mount_path}/config | Read the current JWT authentication backend configuration.
-[**JWTReadOIDCCallback**](Auth.md#jwtreadoidccallback) | **GET** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
-[**JWTReadRole**](Auth.md#jwtreadrole) | **GET** /auth/{jwt_mount_path}/role/{name} | Read an existing role.
-[**JWTWriteConfig**](Auth.md#jwtwriteconfig) | **POST** /auth/{jwt_mount_path}/config | Configure the JWT authentication backend.
-[**JWTWriteOIDCAuthURL**](Auth.md#jwtwriteoidcauthurl) | **POST** /auth/{jwt_mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-[**JWTWriteOIDCCallback**](Auth.md#jwtwriteoidccallback) | **POST** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
-[**JWTWriteRole**](Auth.md#jwtwriterole) | **POST** /auth/{jwt_mount_path}/role/{name} | Register an role with the backend.
-[**KerberosDeleteGroup**](Auth.md#kerberosdeletegroup) | **DELETE** /auth/{kerberos_mount_path}/groups/{name} | 
-[**KerberosListGroups**](Auth.md#kerberoslistgroups) | **GET** /auth/{kerberos_mount_path}/groups | 
-[**KerberosLogin**](Auth.md#kerberoslogin) | **POST** /auth/{kerberos_mount_path}/login | 
-[**KerberosReadConfig**](Auth.md#kerberosreadconfig) | **GET** /auth/{kerberos_mount_path}/config | 
-[**KerberosReadGroup**](Auth.md#kerberosreadgroup) | **GET** /auth/{kerberos_mount_path}/groups/{name} | 
-[**KerberosReadLDAPConfig**](Auth.md#kerberosreadldapconfig) | **GET** /auth/{kerberos_mount_path}/config/ldap | 
-[**KerberosWriteConfig**](Auth.md#kerberoswriteconfig) | **POST** /auth/{kerberos_mount_path}/config | 
-[**KerberosWriteGroup**](Auth.md#kerberoswritegroup) | **POST** /auth/{kerberos_mount_path}/groups/{name} | 
-[**KerberosWriteLDAPConfig**](Auth.md#kerberoswriteldapconfig) | **POST** /auth/{kerberos_mount_path}/config/ldap | 
-[**KubernetesDeleteAuthRole**](Auth.md#kubernetesdeleteauthrole) | **DELETE** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
-[**KubernetesListAuthRoles**](Auth.md#kuberneteslistauthroles) | **GET** /auth/{kubernetes_mount_path}/role | Lists all the roles registered with the backend.
-[**KubernetesLogin**](Auth.md#kuberneteslogin) | **POST** /auth/{kubernetes_mount_path}/login | Authenticates Kubernetes service accounts with Vault.
-[**KubernetesReadAuthConfig**](Auth.md#kubernetesreadauthconfig) | **GET** /auth/{kubernetes_mount_path}/config | Configures the JWT Public Key and Kubernetes API information.
-[**KubernetesReadAuthRole**](Auth.md#kubernetesreadauthrole) | **GET** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
-[**KubernetesWriteAuthConfig**](Auth.md#kuberneteswriteauthconfig) | **POST** /auth/{kubernetes_mount_path}/config | Configures the JWT Public Key and Kubernetes API information.
-[**KubernetesWriteAuthRole**](Auth.md#kuberneteswriteauthrole) | **POST** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
-[**LDAPDeleteGroup**](Auth.md#ldapdeletegroup) | **DELETE** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
-[**LDAPDeleteUser**](Auth.md#ldapdeleteuser) | **DELETE** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**LDAPListGroups**](Auth.md#ldaplistgroups) | **GET** /auth/{ldap_mount_path}/groups | Manage additional groups for users allowed to authenticate.
-[**LDAPListUsers**](Auth.md#ldaplistusers) | **GET** /auth/{ldap_mount_path}/users | Manage users allowed to authenticate.
-[**LDAPLogin**](Auth.md#ldaplogin) | **POST** /auth/{ldap_mount_path}/login/{username} | Log in with a username and password.
-[**LDAPReadAuthConfig**](Auth.md#ldapreadauthconfig) | **GET** /auth/{ldap_mount_path}/config | Configure the LDAP server to connect to, along with its options.
-[**LDAPReadGroup**](Auth.md#ldapreadgroup) | **GET** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
-[**LDAPReadUser**](Auth.md#ldapreaduser) | **GET** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**LDAPWriteAuthConfig**](Auth.md#ldapwriteauthconfig) | **POST** /auth/{ldap_mount_path}/config | Configure the LDAP server to connect to, along with its options.
-[**LDAPWriteGroup**](Auth.md#ldapwritegroup) | **POST** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
-[**LDAPWriteUser**](Auth.md#ldapwriteuser) | **POST** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**OCIDeleteConfig**](Auth.md#ocideleteconfig) | **DELETE** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
-[**OCIDeleteRole**](Auth.md#ocideleterole) | **DELETE** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
-[**OCIListRoles**](Auth.md#ocilistroles) | **GET** /auth/{oci_mount_path}/role | Lists all the roles that are registered with Vault.
-[**OCILoginWithRole**](Auth.md#ociloginwithrole) | **POST** /auth/{oci_mount_path}/login/{role} | Authenticates to Vault using OCI credentials
-[**OCIReadConfig**](Auth.md#ocireadconfig) | **GET** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
-[**OCIReadRole**](Auth.md#ocireadrole) | **GET** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
-[**OCIWriteConfig**](Auth.md#ociwriteconfig) | **POST** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
-[**OCIWriteRole**](Auth.md#ociwriterole) | **POST** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
-[**OIDCDeleteAuthRole**](Auth.md#oidcdeleteauthrole) | **DELETE** /auth/{oidc_mount_path}/role/{name} | Delete an existing role.
-[**OIDCListAuthRoles**](Auth.md#oidclistauthroles) | **GET** /auth/{oidc_mount_path}/role | Lists all the roles registered with the backend.
-[**OIDCLogin**](Auth.md#oidclogin) | **POST** /auth/{oidc_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
-[**OIDCReadAuthConfig**](Auth.md#oidcreadauthconfig) | **GET** /auth/{oidc_mount_path}/config | Read the current JWT authentication backend configuration.
-[**OIDCReadAuthRole**](Auth.md#oidcreadauthrole) | **GET** /auth/{oidc_mount_path}/role/{name} | Read an existing role.
-[**OIDCReadCallback**](Auth.md#oidcreadcallback) | **GET** /auth/{oidc_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
-[**OIDCWriteAuthConfig**](Auth.md#oidcwriteauthconfig) | **POST** /auth/{oidc_mount_path}/config | Configure the JWT authentication backend.
-[**OIDCWriteAuthRole**](Auth.md#oidcwriteauthrole) | **POST** /auth/{oidc_mount_path}/role/{name} | Register an role with the backend.
-[**OIDCWriteAuthURL**](Auth.md#oidcwriteauthurl) | **POST** /auth/{oidc_mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-[**OIDCWriteCallback**](Auth.md#oidcwritecallback) | **POST** /auth/{oidc_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
-[**OktaDeleteGroup**](Auth.md#oktadeletegroup) | **DELETE** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
-[**OktaDeleteUser**](Auth.md#oktadeleteuser) | **DELETE** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
-[**OktaListGroups**](Auth.md#oktalistgroups) | **GET** /auth/{okta_mount_path}/groups | Manage users allowed to authenticate.
-[**OktaListUsers**](Auth.md#oktalistusers) | **GET** /auth/{okta_mount_path}/users | Manage additional groups for users allowed to authenticate.
-[**OktaLogin**](Auth.md#oktalogin) | **POST** /auth/{okta_mount_path}/login/{username} | Log in with a username and password.
-[**OktaReadConfig**](Auth.md#oktareadconfig) | **GET** /auth/{okta_mount_path}/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-[**OktaReadGroup**](Auth.md#oktareadgroup) | **GET** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
-[**OktaReadUser**](Auth.md#oktareaduser) | **GET** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
-[**OktaVerify**](Auth.md#oktaverify) | **GET** /auth/{okta_mount_path}/verify/{nonce} | 
-[**OktaWriteConfig**](Auth.md#oktawriteconfig) | **POST** /auth/{okta_mount_path}/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-[**OktaWriteGroup**](Auth.md#oktawritegroup) | **POST** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
-[**OktaWriteUser**](Auth.md#oktawriteuser) | **POST** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
-[**RadiusDeleteUser**](Auth.md#radiusdeleteuser) | **DELETE** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**RadiusListUsers**](Auth.md#radiuslistusers) | **GET** /auth/{radius_mount_path}/users | Manage users allowed to authenticate.
-[**RadiusLogin**](Auth.md#radiuslogin) | **POST** /auth/{radius_mount_path}/login | Log in with a username and password.
-[**RadiusLoginWithUsername**](Auth.md#radiusloginwithusername) | **POST** /auth/{radius_mount_path}/login/{urlusername} | Log in with a username and password.
-[**RadiusReadConfig**](Auth.md#radiusreadconfig) | **GET** /auth/{radius_mount_path}/config | Configure the RADIUS server to connect to, along with its options.
-[**RadiusReadUser**](Auth.md#radiusreaduser) | **GET** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**RadiusWriteConfig**](Auth.md#radiuswriteconfig) | **POST** /auth/{radius_mount_path}/config | Configure the RADIUS server to connect to, along with its options.
-[**RadiusWriteUser**](Auth.md#radiuswriteuser) | **POST** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**TokenDeleteRole**](Auth.md#tokendeleterole) | **DELETE** /auth/{token_mount_path}/roles/{role_name} | 
-[**TokenListAccessors**](Auth.md#tokenlistaccessors) | **GET** /auth/{token_mount_path}/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#x27;sudo&#x27; capability in addition to &#x27;list&#x27;.
-[**TokenListRoles**](Auth.md#tokenlistroles) | **GET** /auth/{token_mount_path}/roles | This endpoint lists configured roles.
-[**TokenReadLookup**](Auth.md#tokenreadlookup) | **GET** /auth/{token_mount_path}/lookup | This endpoint will lookup a token and its properties.
-[**TokenReadLookupSelf**](Auth.md#tokenreadlookupself) | **GET** /auth/{token_mount_path}/lookup-self | This endpoint will lookup a token and its properties.
-[**TokenReadRole**](Auth.md#tokenreadrole) | **GET** /auth/{token_mount_path}/roles/{role_name} | 
-[**TokenRenew**](Auth.md#tokenrenew) | **POST** /auth/{token_mount_path}/renew | This endpoint will renew the given token and prevent expiration.
-[**TokenRenewAccessor**](Auth.md#tokenrenewaccessor) | **POST** /auth/{token_mount_path}/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-[**TokenRenewSelf**](Auth.md#tokenrenewself) | **POST** /auth/{token_mount_path}/renew-self | This endpoint will renew the token used to call it and prevent expiration.
-[**TokenRevoke**](Auth.md#tokenrevoke) | **POST** /auth/{token_mount_path}/revoke | This endpoint will delete the given token and all of its child tokens.
-[**TokenRevokeAccessor**](Auth.md#tokenrevokeaccessor) | **POST** /auth/{token_mount_path}/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
-[**TokenRevokeOrphan**](Auth.md#tokenrevokeorphan) | **POST** /auth/{token_mount_path}/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
-[**TokenRevokeSelf**](Auth.md#tokenrevokeself) | **POST** /auth/{token_mount_path}/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
-[**TokenTidy**](Auth.md#tokentidy) | **POST** /auth/{token_mount_path}/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-[**TokenWriteCreate**](Auth.md#tokenwritecreate) | **POST** /auth/{token_mount_path}/create | The token create path is used to create new tokens.
-[**TokenWriteCreateOrphan**](Auth.md#tokenwritecreateorphan) | **POST** /auth/{token_mount_path}/create-orphan | The token create path is used to create new orphan tokens.
-[**TokenWriteCreateWithRole**](Auth.md#tokenwritecreatewithrole) | **POST** /auth/{token_mount_path}/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
-[**TokenWriteLookup**](Auth.md#tokenwritelookup) | **POST** /auth/{token_mount_path}/lookup | This endpoint will lookup a token and its properties.
-[**TokenWriteLookupAccessor**](Auth.md#tokenwritelookupaccessor) | **POST** /auth/{token_mount_path}/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-[**TokenWriteLookupSelf**](Auth.md#tokenwritelookupself) | **POST** /auth/{token_mount_path}/lookup-self | This endpoint will lookup a token and its properties.
-[**TokenWriteRole**](Auth.md#tokenwriterole) | **POST** /auth/{token_mount_path}/roles/{role_name} | 
-[**UserpassDeleteUser**](Auth.md#userpassdeleteuser) | **DELETE** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
-[**UserpassListUsers**](Auth.md#userpasslistusers) | **GET** /auth/{userpass_mount_path}/users | Manage users allowed to authenticate.
-[**UserpassLogin**](Auth.md#userpasslogin) | **POST** /auth/{userpass_mount_path}/login/{username} | Log in with a username and password.
-[**UserpassReadUser**](Auth.md#userpassreaduser) | **GET** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
-[**UserpassWriteUser**](Auth.md#userpasswriteuser) | **POST** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
-[**UserpassWriteUserPassword**](Auth.md#userpasswriteuserpassword) | **POST** /auth/{userpass_mount_path}/users/{username}/password | Reset user&#x27;s password.
-[**UserpassWriteUserPolicies**](Auth.md#userpasswriteuserpolicies) | **POST** /auth/{userpass_mount_path}/users/{username}/policies | Update the policies associated with the username.
+[**AWSConfigDeleteCertificate**](AuthApi.md#awsconfigdeletecertificate) | **DELETE** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
+[**AWSConfigDeleteClient**](AuthApi.md#awsconfigdeleteclient) | **DELETE** /auth/{aws_mount_path}/config/client | 
+[**AWSConfigDeleteIdentityAccessList**](AuthApi.md#awsconfigdeleteidentityaccesslist) | **DELETE** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
+[**AWSConfigDeleteIdentityWhiteList**](AuthApi.md#awsconfigdeleteidentitywhitelist) | **DELETE** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
+[**AWSConfigDeleteRoleTagBlackList**](AuthApi.md#awsconfigdeleteroletagblacklist) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
+[**AWSConfigDeleteRoleTagDenyList**](AuthApi.md#awsconfigdeleteroletagdenylist) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
+[**AWSConfigDeleteSecurityTokenServiceAccount**](AuthApi.md#awsconfigdeletesecuritytokenserviceaccount) | **DELETE** /auth/{aws_mount_path}/config/sts/{account_id} | 
+[**AWSConfigListCertificates**](AuthApi.md#awsconfiglistcertificates) | **GET** /auth/{aws_mount_path}/config/certificates | 
+[**AWSConfigListSecurityTokenService**](AuthApi.md#awsconfiglistsecuritytokenservice) | **GET** /auth/{aws_mount_path}/config/sts | 
+[**AWSConfigReadCertificate**](AuthApi.md#awsconfigreadcertificate) | **GET** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
+[**AWSConfigReadClient**](AuthApi.md#awsconfigreadclient) | **GET** /auth/{aws_mount_path}/config/client | 
+[**AWSConfigReadIdentity**](AuthApi.md#awsconfigreadidentity) | **GET** /auth/{aws_mount_path}/config/identity | 
+[**AWSConfigReadIdentityAccessList**](AuthApi.md#awsconfigreadidentityaccesslist) | **GET** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
+[**AWSConfigReadIdentityWhiteList**](AuthApi.md#awsconfigreadidentitywhitelist) | **GET** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
+[**AWSConfigReadRoleTagBlackList**](AuthApi.md#awsconfigreadroletagblacklist) | **GET** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
+[**AWSConfigReadRoleTagDenyList**](AuthApi.md#awsconfigreadroletagdenylist) | **GET** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
+[**AWSConfigReadSecurityTokenServiceAccount**](AuthApi.md#awsconfigreadsecuritytokenserviceaccount) | **GET** /auth/{aws_mount_path}/config/sts/{account_id} | 
+[**AWSConfigRotateRoot**](AuthApi.md#awsconfigrotateroot) | **POST** /auth/{aws_mount_path}/config/rotate-root | 
+[**AWSConfigWriteCertificate**](AuthApi.md#awsconfigwritecertificate) | **POST** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
+[**AWSConfigWriteClient**](AuthApi.md#awsconfigwriteclient) | **POST** /auth/{aws_mount_path}/config/client | 
+[**AWSConfigWriteIdentity**](AuthApi.md#awsconfigwriteidentity) | **POST** /auth/{aws_mount_path}/config/identity | 
+[**AWSConfigWriteIdentityAccessList**](AuthApi.md#awsconfigwriteidentityaccesslist) | **POST** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
+[**AWSConfigWriteIdentityWhiteList**](AuthApi.md#awsconfigwriteidentitywhitelist) | **POST** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
+[**AWSConfigWriteRoleTagBlackList**](AuthApi.md#awsconfigwriteroletagblacklist) | **POST** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
+[**AWSConfigWriteRoleTagDenyList**](AuthApi.md#awsconfigwriteroletagdenylist) | **POST** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
+[**AWSConfigWriteSecurityTokenServiceAccount**](AuthApi.md#awsconfigwritesecuritytokenserviceaccount) | **POST** /auth/{aws_mount_path}/config/sts/{account_id} | 
+[**AWSDeleteAuthRole**](AuthApi.md#awsdeleteauthrole) | **DELETE** /auth/{aws_mount_path}/role/{role} | 
+[**AWSDeleteIdentityAccessListFor**](AuthApi.md#awsdeleteidentityaccesslistfor) | **DELETE** /auth/{aws_mount_path}/identity-accesslist/{instance_id} | 
+[**AWSDeleteIdentityWhiteListFor**](AuthApi.md#awsdeleteidentitywhitelistfor) | **DELETE** /auth/{aws_mount_path}/identity-whitelist/{instance_id} | 
+[**AWSDeleteRoleTagBlackListFor**](AuthApi.md#awsdeleteroletagblacklistfor) | **DELETE** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
+[**AWSDeleteRoleTagDenyListFor**](AuthApi.md#awsdeleteroletagdenylistfor) | **DELETE** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
+[**AWSListAuthRoles**](AuthApi.md#awslistauthroles) | **GET** /auth/{aws_mount_path}/role | 
+[**AWSListAuthRoles2**](AuthApi.md#awslistauthroles2) | **GET** /auth/{aws_mount_path}/roles | 
+[**AWSListIdentityAccessList**](AuthApi.md#awslistidentityaccesslist) | **GET** /auth/{aws_mount_path}/identity-accesslist | 
+[**AWSListIdentityWhiteList**](AuthApi.md#awslistidentitywhitelist) | **GET** /auth/{aws_mount_path}/identity-whitelist | 
+[**AWSListRoleTagBlackList**](AuthApi.md#awslistroletagblacklist) | **GET** /auth/{aws_mount_path}/roletag-blacklist | 
+[**AWSListRoleTagDenyList**](AuthApi.md#awslistroletagdenylist) | **GET** /auth/{aws_mount_path}/roletag-denylist | 
+[**AWSLogin**](AuthApi.md#awslogin) | **POST** /auth/{aws_mount_path}/login | 
+[**AWSReadAuthRole**](AuthApi.md#awsreadauthrole) | **GET** /auth/{aws_mount_path}/role/{role} | 
+[**AWSReadIdentityAccessListFor**](AuthApi.md#awsreadidentityaccesslistfor) | **GET** /auth/{aws_mount_path}/identity-accesslist/{instance_id} | 
+[**AWSReadIdentityWhiteListFor**](AuthApi.md#awsreadidentitywhitelistfor) | **GET** /auth/{aws_mount_path}/identity-whitelist/{instance_id} | 
+[**AWSReadRoleTagBlackListFor**](AuthApi.md#awsreadroletagblacklistfor) | **GET** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
+[**AWSReadRoleTagDenyListFor**](AuthApi.md#awsreadroletagdenylistfor) | **GET** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
+[**AWSWriteAuthRole**](AuthApi.md#awswriteauthrole) | **POST** /auth/{aws_mount_path}/role/{role} | 
+[**AWSWriteAuthRoleTag**](AuthApi.md#awswriteauthroletag) | **POST** /auth/{aws_mount_path}/role/{role}/tag | 
+[**AWSWriteIdentityAccessListTidySettings**](AuthApi.md#awswriteidentityaccesslisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/identity-accesslist | 
+[**AWSWriteIdentityWhiteListTidySettings**](AuthApi.md#awswriteidentitywhitelisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/identity-whitelist | 
+[**AWSWriteRoleTagBlackListFor**](AuthApi.md#awswriteroletagblacklistfor) | **POST** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
+[**AWSWriteRoleTagBlackListTidySettings**](AuthApi.md#awswriteroletagblacklisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/roletag-blacklist | 
+[**AWSWriteRoleTagDenyListFor**](AuthApi.md#awswriteroletagdenylistfor) | **POST** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
+[**AWSWriteRoleTagDenyListTidySettings**](AuthApi.md#awswriteroletagdenylisttidysettings) | **POST** /auth/{aws_mount_path}/tidy/roletag-denylist | 
+[**AliCloudDeleteAuthRole**](AuthApi.md#aliclouddeleteauthrole) | **DELETE** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
+[**AliCloudListAuthRoles**](AuthApi.md#alicloudlistauthroles) | **GET** /auth/{alicloud_mount_path}/role | Lists all the roles that are registered with Vault.
+[**AliCloudListAuthRoles2**](AuthApi.md#alicloudlistauthroles2) | **GET** /auth/{alicloud_mount_path}/roles | Lists all the roles that are registered with Vault.
+[**AliCloudLogin**](AuthApi.md#alicloudlogin) | **POST** /auth/{alicloud_mount_path}/login | Authenticates an RAM entity with Vault.
+[**AliCloudReadAuthRole**](AuthApi.md#alicloudreadauthrole) | **GET** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
+[**AliCloudWriteAuthRole**](AuthApi.md#alicloudwriteauthrole) | **POST** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
+[**AppRoleDeleteBindSecretID**](AuthApi.md#approledeletebindsecretid) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
+[**AppRoleDeleteBoundCIDRList**](AuthApi.md#approledeleteboundcidrlist) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
+[**AppRoleDeletePeriod**](AuthApi.md#approledeleteperiod) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/period | 
+[**AppRoleDeletePolicies**](AuthApi.md#approledeletepolicies) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/policies | 
+[**AppRoleDeleteRole**](AuthApi.md#approledeleterole) | **DELETE** /auth/{approle_mount_path}/role/{role_name} | 
+[**AppRoleDeleteSecretIDAccessorDestroy**](AuthApi.md#approledeletesecretidaccessordestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
+[**AppRoleDeleteSecretIDBoundCIDRs**](AuthApi.md#approledeletesecretidboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
+[**AppRoleDeleteSecretIDDestroy**](AuthApi.md#approledeletesecretiddestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
+[**AppRoleDeleteSecretIDNumUses**](AuthApi.md#approledeletesecretidnumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
+[**AppRoleDeleteSecretIDTTL**](AuthApi.md#approledeletesecretidttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
+[**AppRoleDeleteTokenBoundCIDRs**](AuthApi.md#approledeletetokenboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
+[**AppRoleDeleteTokenMaxTTL**](AuthApi.md#approledeletetokenmaxttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
+[**AppRoleDeleteTokenNumUses**](AuthApi.md#approledeletetokennumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
+[**AppRoleDeleteTokenTTL**](AuthApi.md#approledeletetokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
+[**AppRoleListRoles**](AuthApi.md#approlelistroles) | **GET** /auth/{approle_mount_path}/role | 
+[**AppRoleListSecretID**](AuthApi.md#approlelistsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
+[**AppRoleLogin**](AuthApi.md#approlelogin) | **POST** /auth/{approle_mount_path}/login | 
+[**AppRoleReadBindSecretID**](AuthApi.md#approlereadbindsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
+[**AppRoleReadBoundCIDRList**](AuthApi.md#approlereadboundcidrlist) | **GET** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
+[**AppRoleReadLocalSecretIDs**](AuthApi.md#approlereadlocalsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/local-secret-ids | 
+[**AppRoleReadPeriod**](AuthApi.md#approlereadperiod) | **GET** /auth/{approle_mount_path}/role/{role_name}/period | 
+[**AppRoleReadPolicies**](AuthApi.md#approlereadpolicies) | **GET** /auth/{approle_mount_path}/role/{role_name}/policies | 
+[**AppRoleReadRole**](AuthApi.md#approlereadrole) | **GET** /auth/{approle_mount_path}/role/{role_name} | 
+[**AppRoleReadRoleID**](AuthApi.md#approlereadroleid) | **GET** /auth/{approle_mount_path}/role/{role_name}/role-id | 
+[**AppRoleReadSecretIDBoundCIDRs**](AuthApi.md#approlereadsecretidboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
+[**AppRoleReadSecretIDNumUses**](AuthApi.md#approlereadsecretidnumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
+[**AppRoleReadSecretIDTTL**](AuthApi.md#approlereadsecretidttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
+[**AppRoleReadTokenBoundCIDRs**](AuthApi.md#approlereadtokenboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
+[**AppRoleReadTokenMaxTTL**](AuthApi.md#approlereadtokenmaxttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
+[**AppRoleReadTokenNumUses**](AuthApi.md#approlereadtokennumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
+[**AppRoleReadTokenTTL**](AuthApi.md#approlereadtokenttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
+[**AppRoleTidySecretID**](AuthApi.md#approletidysecretid) | **POST** /auth/{approle_mount_path}/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
+[**AppRoleWriteBindSecretID**](AuthApi.md#approlewritebindsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
+[**AppRoleWriteBoundCIDRList**](AuthApi.md#approlewriteboundcidrlist) | **POST** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
+[**AppRoleWriteCustomSecretID**](AuthApi.md#approlewritecustomsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/custom-secret-id | 
+[**AppRoleWritePeriod**](AuthApi.md#approlewriteperiod) | **POST** /auth/{approle_mount_path}/role/{role_name}/period | 
+[**AppRoleWritePolicies**](AuthApi.md#approlewritepolicies) | **POST** /auth/{approle_mount_path}/role/{role_name}/policies | 
+[**AppRoleWriteRole**](AuthApi.md#approlewriterole) | **POST** /auth/{approle_mount_path}/role/{role_name} | 
+[**AppRoleWriteRoleID**](AuthApi.md#approlewriteroleid) | **POST** /auth/{approle_mount_path}/role/{role_name}/role-id | 
+[**AppRoleWriteSecretID**](AuthApi.md#approlewritesecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
+[**AppRoleWriteSecretIDAccessorDestroy**](AuthApi.md#approlewritesecretidaccessordestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
+[**AppRoleWriteSecretIDAccessorLookup**](AuthApi.md#approlewritesecretidaccessorlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup | 
+[**AppRoleWriteSecretIDBoundCIDRs**](AuthApi.md#approlewritesecretidboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
+[**AppRoleWriteSecretIDDestroy**](AuthApi.md#approlewritesecretiddestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
+[**AppRoleWriteSecretIDLookup**](AuthApi.md#approlewritesecretidlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/lookup | 
+[**AppRoleWriteSecretIDNumUses**](AuthApi.md#approlewritesecretidnumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
+[**AppRoleWriteSecretIDTTL**](AuthApi.md#approlewritesecretidttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
+[**AppRoleWriteTokenBoundCIDRs**](AuthApi.md#approlewritetokenboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
+[**AppRoleWriteTokenMaxTTL**](AuthApi.md#approlewritetokenmaxttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
+[**AppRoleWriteTokenNumUses**](AuthApi.md#approlewritetokennumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
+[**AppRoleWriteTokenTTL**](AuthApi.md#approlewritetokenttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
+[**AzureDeleteAuthConfig**](AuthApi.md#azuredeleteauthconfig) | **DELETE** /auth/{azure_mount_path}/config | 
+[**AzureDeleteAuthRole**](AuthApi.md#azuredeleteauthrole) | **DELETE** /auth/{azure_mount_path}/role/{name} | 
+[**AzureListAuthRoles**](AuthApi.md#azurelistauthroles) | **GET** /auth/{azure_mount_path}/role | 
+[**AzureLogin**](AuthApi.md#azurelogin) | **POST** /auth/{azure_mount_path}/login | 
+[**AzureReadAuthConfig**](AuthApi.md#azurereadauthconfig) | **GET** /auth/{azure_mount_path}/config | 
+[**AzureReadAuthRole**](AuthApi.md#azurereadauthrole) | **GET** /auth/{azure_mount_path}/role/{name} | 
+[**AzureWriteAuthConfig**](AuthApi.md#azurewriteauthconfig) | **POST** /auth/{azure_mount_path}/config | 
+[**AzureWriteAuthRole**](AuthApi.md#azurewriteauthrole) | **POST** /auth/{azure_mount_path}/role/{name} | 
+[**CentrifyLogin**](AuthApi.md#centrifylogin) | **POST** /auth/{centrify_mount_path}/login | Log in with a username and password.
+[**CentrifyReadConfig**](AuthApi.md#centrifyreadconfig) | **GET** /auth/{centrify_mount_path}/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+[**CentrifyWriteConfig**](AuthApi.md#centrifywriteconfig) | **POST** /auth/{centrify_mount_path}/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+[**CertificatesDelete**](AuthApi.md#certificatesdelete) | **DELETE** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+[**CertificatesDeleteCRL**](AuthApi.md#certificatesdeletecrl) | **DELETE** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**CertificatesList**](AuthApi.md#certificateslist) | **GET** /auth/{cert_mount_path}/certs | Manage trusted certificates used for authentication.
+[**CertificatesListCRLs**](AuthApi.md#certificateslistcrls) | **GET** /auth/{cert_mount_path}/crls | 
+[**CertificatesLogin**](AuthApi.md#certificateslogin) | **POST** /auth/{cert_mount_path}/login | 
+[**CertificatesRead**](AuthApi.md#certificatesread) | **GET** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+[**CertificatesReadCRL**](AuthApi.md#certificatesreadcrl) | **GET** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**CertificatesReadConfig**](AuthApi.md#certificatesreadconfig) | **GET** /auth/{cert_mount_path}/config | 
+[**CertificatesWrite**](AuthApi.md#certificateswrite) | **POST** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+[**CertificatesWriteCRL**](AuthApi.md#certificateswritecrl) | **POST** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**CertificatesWriteConfig**](AuthApi.md#certificateswriteconfig) | **POST** /auth/{cert_mount_path}/config | 
+[**CloudFoundryDeleteConfig**](AuthApi.md#cloudfoundrydeleteconfig) | **DELETE** /auth/{cf_mount_path}/config | 
+[**CloudFoundryDeleteRole**](AuthApi.md#cloudfoundrydeleterole) | **DELETE** /auth/{cf_mount_path}/roles/{role} | 
+[**CloudFoundryListRoles**](AuthApi.md#cloudfoundrylistroles) | **GET** /auth/{cf_mount_path}/roles | 
+[**CloudFoundryLogin**](AuthApi.md#cloudfoundrylogin) | **POST** /auth/{cf_mount_path}/login | 
+[**CloudFoundryReadConfig**](AuthApi.md#cloudfoundryreadconfig) | **GET** /auth/{cf_mount_path}/config | 
+[**CloudFoundryReadRole**](AuthApi.md#cloudfoundryreadrole) | **GET** /auth/{cf_mount_path}/roles/{role} | 
+[**CloudFoundryWriteConfig**](AuthApi.md#cloudfoundrywriteconfig) | **POST** /auth/{cf_mount_path}/config | 
+[**CloudFoundryWriteRole**](AuthApi.md#cloudfoundrywriterole) | **POST** /auth/{cf_mount_path}/roles/{role} | 
+[**GitHubDeleteMapTeam**](AuthApi.md#githubdeletemapteam) | **DELETE** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+[**GitHubDeleteMapUser**](AuthApi.md#githubdeletemapuser) | **DELETE** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**GitHubLogin**](AuthApi.md#githublogin) | **POST** /auth/{github_mount_path}/login | 
+[**GitHubReadConfig**](AuthApi.md#githubreadconfig) | **GET** /auth/{github_mount_path}/config | 
+[**GitHubReadMapTeam**](AuthApi.md#githubreadmapteam) | **GET** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+[**GitHubReadMapTeams**](AuthApi.md#githubreadmapteams) | **GET** /auth/{github_mount_path}/map/teams | Read mappings for teams
+[**GitHubReadMapUser**](AuthApi.md#githubreadmapuser) | **GET** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**GitHubReadMapUsers**](AuthApi.md#githubreadmapusers) | **GET** /auth/{github_mount_path}/map/users | Read mappings for users
+[**GitHubWriteConfig**](AuthApi.md#githubwriteconfig) | **POST** /auth/{github_mount_path}/config | 
+[**GitHubWriteMapTeam**](AuthApi.md#githubwritemapteam) | **POST** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+[**GitHubWriteMapUser**](AuthApi.md#githubwritemapuser) | **POST** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**GoogleCloudDeleteRole**](AuthApi.md#googleclouddeleterole) | **DELETE** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
+[**GoogleCloudListRoles**](AuthApi.md#googlecloudlistroles) | **GET** /auth/{gcp_mount_path}/role | Lists all the roles that are registered with Vault.
+[**GoogleCloudListRoles2**](AuthApi.md#googlecloudlistroles2) | **GET** /auth/{gcp_mount_path}/roles | Lists all the roles that are registered with Vault.
+[**GoogleCloudLogin**](AuthApi.md#googlecloudlogin) | **POST** /auth/{gcp_mount_path}/login | 
+[**GoogleCloudReadAuthConfig**](AuthApi.md#googlecloudreadauthconfig) | **GET** /auth/{gcp_mount_path}/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+[**GoogleCloudReadRole**](AuthApi.md#googlecloudreadrole) | **GET** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
+[**GoogleCloudWriteAuthConfig**](AuthApi.md#googlecloudwriteauthconfig) | **POST** /auth/{gcp_mount_path}/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+[**GoogleCloudWriteRole**](AuthApi.md#googlecloudwriterole) | **POST** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
+[**GoogleCloudWriteRoleLabels**](AuthApi.md#googlecloudwriterolelabels) | **POST** /auth/{gcp_mount_path}/role/{name}/labels | Add or remove labels for an existing &#x27;gce&#x27; role
+[**GoogleCloudWriteRoleServiceAccounts**](AuthApi.md#googlecloudwriteroleserviceaccounts) | **POST** /auth/{gcp_mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
+[**JWTDeleteRole**](AuthApi.md#jwtdeleterole) | **DELETE** /auth/{jwt_mount_path}/role/{name} | Delete an existing role.
+[**JWTListRoles**](AuthApi.md#jwtlistroles) | **GET** /auth/{jwt_mount_path}/role | Lists all the roles registered with the backend.
+[**JWTLogin**](AuthApi.md#jwtlogin) | **POST** /auth/{jwt_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
+[**JWTReadConfig**](AuthApi.md#jwtreadconfig) | **GET** /auth/{jwt_mount_path}/config | Read the current JWT authentication backend configuration.
+[**JWTReadOIDCCallback**](AuthApi.md#jwtreadoidccallback) | **GET** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
+[**JWTReadRole**](AuthApi.md#jwtreadrole) | **GET** /auth/{jwt_mount_path}/role/{name} | Read an existing role.
+[**JWTWriteConfig**](AuthApi.md#jwtwriteconfig) | **POST** /auth/{jwt_mount_path}/config | Configure the JWT authentication backend.
+[**JWTWriteOIDCAuthURL**](AuthApi.md#jwtwriteoidcauthurl) | **POST** /auth/{jwt_mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+[**JWTWriteOIDCCallback**](AuthApi.md#jwtwriteoidccallback) | **POST** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
+[**JWTWriteRole**](AuthApi.md#jwtwriterole) | **POST** /auth/{jwt_mount_path}/role/{name} | Register an role with the backend.
+[**KerberosDeleteGroup**](AuthApi.md#kerberosdeletegroup) | **DELETE** /auth/{kerberos_mount_path}/groups/{name} | 
+[**KerberosListGroups**](AuthApi.md#kerberoslistgroups) | **GET** /auth/{kerberos_mount_path}/groups | 
+[**KerberosLogin**](AuthApi.md#kerberoslogin) | **POST** /auth/{kerberos_mount_path}/login | 
+[**KerberosReadConfig**](AuthApi.md#kerberosreadconfig) | **GET** /auth/{kerberos_mount_path}/config | 
+[**KerberosReadGroup**](AuthApi.md#kerberosreadgroup) | **GET** /auth/{kerberos_mount_path}/groups/{name} | 
+[**KerberosReadLDAPConfig**](AuthApi.md#kerberosreadldapconfig) | **GET** /auth/{kerberos_mount_path}/config/ldap | 
+[**KerberosWriteConfig**](AuthApi.md#kerberoswriteconfig) | **POST** /auth/{kerberos_mount_path}/config | 
+[**KerberosWriteGroup**](AuthApi.md#kerberoswritegroup) | **POST** /auth/{kerberos_mount_path}/groups/{name} | 
+[**KerberosWriteLDAPConfig**](AuthApi.md#kerberoswriteldapconfig) | **POST** /auth/{kerberos_mount_path}/config/ldap | 
+[**KubernetesDeleteAuthRole**](AuthApi.md#kubernetesdeleteauthrole) | **DELETE** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
+[**KubernetesListAuthRoles**](AuthApi.md#kuberneteslistauthroles) | **GET** /auth/{kubernetes_mount_path}/role | Lists all the roles registered with the backend.
+[**KubernetesLogin**](AuthApi.md#kuberneteslogin) | **POST** /auth/{kubernetes_mount_path}/login | Authenticates Kubernetes service accounts with Vault.
+[**KubernetesReadAuthConfig**](AuthApi.md#kubernetesreadauthconfig) | **GET** /auth/{kubernetes_mount_path}/config | Configures the JWT Public Key and Kubernetes API information.
+[**KubernetesReadAuthRole**](AuthApi.md#kubernetesreadauthrole) | **GET** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
+[**KubernetesWriteAuthConfig**](AuthApi.md#kuberneteswriteauthconfig) | **POST** /auth/{kubernetes_mount_path}/config | Configures the JWT Public Key and Kubernetes API information.
+[**KubernetesWriteAuthRole**](AuthApi.md#kuberneteswriteauthrole) | **POST** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
+[**LDAPDeleteGroup**](AuthApi.md#ldapdeletegroup) | **DELETE** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**LDAPDeleteUser**](AuthApi.md#ldapdeleteuser) | **DELETE** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**LDAPListGroups**](AuthApi.md#ldaplistgroups) | **GET** /auth/{ldap_mount_path}/groups | Manage additional groups for users allowed to authenticate.
+[**LDAPListUsers**](AuthApi.md#ldaplistusers) | **GET** /auth/{ldap_mount_path}/users | Manage users allowed to authenticate.
+[**LDAPLogin**](AuthApi.md#ldaplogin) | **POST** /auth/{ldap_mount_path}/login/{username} | Log in with a username and password.
+[**LDAPReadAuthConfig**](AuthApi.md#ldapreadauthconfig) | **GET** /auth/{ldap_mount_path}/config | Configure the LDAP server to connect to, along with its options.
+[**LDAPReadGroup**](AuthApi.md#ldapreadgroup) | **GET** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**LDAPReadUser**](AuthApi.md#ldapreaduser) | **GET** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**LDAPWriteAuthConfig**](AuthApi.md#ldapwriteauthconfig) | **POST** /auth/{ldap_mount_path}/config | Configure the LDAP server to connect to, along with its options.
+[**LDAPWriteGroup**](AuthApi.md#ldapwritegroup) | **POST** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**LDAPWriteUser**](AuthApi.md#ldapwriteuser) | **POST** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**OCIDeleteConfig**](AuthApi.md#ocideleteconfig) | **DELETE** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
+[**OCIDeleteRole**](AuthApi.md#ocideleterole) | **DELETE** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
+[**OCIListRoles**](AuthApi.md#ocilistroles) | **GET** /auth/{oci_mount_path}/role | Lists all the roles that are registered with Vault.
+[**OCILoginWithRole**](AuthApi.md#ociloginwithrole) | **POST** /auth/{oci_mount_path}/login/{role} | Authenticates to Vault using OCI credentials
+[**OCIReadConfig**](AuthApi.md#ocireadconfig) | **GET** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
+[**OCIReadRole**](AuthApi.md#ocireadrole) | **GET** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
+[**OCIWriteConfig**](AuthApi.md#ociwriteconfig) | **POST** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
+[**OCIWriteRole**](AuthApi.md#ociwriterole) | **POST** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
+[**OIDCDeleteAuthRole**](AuthApi.md#oidcdeleteauthrole) | **DELETE** /auth/{oidc_mount_path}/role/{name} | Delete an existing role.
+[**OIDCListAuthRoles**](AuthApi.md#oidclistauthroles) | **GET** /auth/{oidc_mount_path}/role | Lists all the roles registered with the backend.
+[**OIDCLogin**](AuthApi.md#oidclogin) | **POST** /auth/{oidc_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
+[**OIDCReadAuthConfig**](AuthApi.md#oidcreadauthconfig) | **GET** /auth/{oidc_mount_path}/config | Read the current JWT authentication backend configuration.
+[**OIDCReadAuthRole**](AuthApi.md#oidcreadauthrole) | **GET** /auth/{oidc_mount_path}/role/{name} | Read an existing role.
+[**OIDCReadCallback**](AuthApi.md#oidcreadcallback) | **GET** /auth/{oidc_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
+[**OIDCWriteAuthConfig**](AuthApi.md#oidcwriteauthconfig) | **POST** /auth/{oidc_mount_path}/config | Configure the JWT authentication backend.
+[**OIDCWriteAuthRole**](AuthApi.md#oidcwriteauthrole) | **POST** /auth/{oidc_mount_path}/role/{name} | Register an role with the backend.
+[**OIDCWriteAuthURL**](AuthApi.md#oidcwriteauthurl) | **POST** /auth/{oidc_mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+[**OIDCWriteCallback**](AuthApi.md#oidcwritecallback) | **POST** /auth/{oidc_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
+[**OktaDeleteGroup**](AuthApi.md#oktadeletegroup) | **DELETE** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
+[**OktaDeleteUser**](AuthApi.md#oktadeleteuser) | **DELETE** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
+[**OktaListGroups**](AuthApi.md#oktalistgroups) | **GET** /auth/{okta_mount_path}/groups | Manage users allowed to authenticate.
+[**OktaListUsers**](AuthApi.md#oktalistusers) | **GET** /auth/{okta_mount_path}/users | Manage additional groups for users allowed to authenticate.
+[**OktaLogin**](AuthApi.md#oktalogin) | **POST** /auth/{okta_mount_path}/login/{username} | Log in with a username and password.
+[**OktaReadConfig**](AuthApi.md#oktareadconfig) | **GET** /auth/{okta_mount_path}/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+[**OktaReadGroup**](AuthApi.md#oktareadgroup) | **GET** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
+[**OktaReadUser**](AuthApi.md#oktareaduser) | **GET** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
+[**OktaVerify**](AuthApi.md#oktaverify) | **GET** /auth/{okta_mount_path}/verify/{nonce} | 
+[**OktaWriteConfig**](AuthApi.md#oktawriteconfig) | **POST** /auth/{okta_mount_path}/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+[**OktaWriteGroup**](AuthApi.md#oktawritegroup) | **POST** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
+[**OktaWriteUser**](AuthApi.md#oktawriteuser) | **POST** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
+[**RadiusDeleteUser**](AuthApi.md#radiusdeleteuser) | **DELETE** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**RadiusListUsers**](AuthApi.md#radiuslistusers) | **GET** /auth/{radius_mount_path}/users | Manage users allowed to authenticate.
+[**RadiusLogin**](AuthApi.md#radiuslogin) | **POST** /auth/{radius_mount_path}/login | Log in with a username and password.
+[**RadiusLoginWithUsername**](AuthApi.md#radiusloginwithusername) | **POST** /auth/{radius_mount_path}/login/{urlusername} | Log in with a username and password.
+[**RadiusReadConfig**](AuthApi.md#radiusreadconfig) | **GET** /auth/{radius_mount_path}/config | Configure the RADIUS server to connect to, along with its options.
+[**RadiusReadUser**](AuthApi.md#radiusreaduser) | **GET** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**RadiusWriteConfig**](AuthApi.md#radiuswriteconfig) | **POST** /auth/{radius_mount_path}/config | Configure the RADIUS server to connect to, along with its options.
+[**RadiusWriteUser**](AuthApi.md#radiuswriteuser) | **POST** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**TokenDeleteRole**](AuthApi.md#tokendeleterole) | **DELETE** /auth/{token_mount_path}/roles/{role_name} | 
+[**TokenListAccessors**](AuthApi.md#tokenlistaccessors) | **GET** /auth/{token_mount_path}/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#x27;sudo&#x27; capability in addition to &#x27;list&#x27;.
+[**TokenListRoles**](AuthApi.md#tokenlistroles) | **GET** /auth/{token_mount_path}/roles | This endpoint lists configured roles.
+[**TokenReadLookup**](AuthApi.md#tokenreadlookup) | **GET** /auth/{token_mount_path}/lookup | This endpoint will lookup a token and its properties.
+[**TokenReadLookupSelf**](AuthApi.md#tokenreadlookupself) | **GET** /auth/{token_mount_path}/lookup-self | This endpoint will lookup a token and its properties.
+[**TokenReadRole**](AuthApi.md#tokenreadrole) | **GET** /auth/{token_mount_path}/roles/{role_name} | 
+[**TokenRenew**](AuthApi.md#tokenrenew) | **POST** /auth/{token_mount_path}/renew | This endpoint will renew the given token and prevent expiration.
+[**TokenRenewAccessor**](AuthApi.md#tokenrenewaccessor) | **POST** /auth/{token_mount_path}/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
+[**TokenRenewSelf**](AuthApi.md#tokenrenewself) | **POST** /auth/{token_mount_path}/renew-self | This endpoint will renew the token used to call it and prevent expiration.
+[**TokenRevoke**](AuthApi.md#tokenrevoke) | **POST** /auth/{token_mount_path}/revoke | This endpoint will delete the given token and all of its child tokens.
+[**TokenRevokeAccessor**](AuthApi.md#tokenrevokeaccessor) | **POST** /auth/{token_mount_path}/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
+[**TokenRevokeOrphan**](AuthApi.md#tokenrevokeorphan) | **POST** /auth/{token_mount_path}/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
+[**TokenRevokeSelf**](AuthApi.md#tokenrevokeself) | **POST** /auth/{token_mount_path}/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
+[**TokenTidy**](AuthApi.md#tokentidy) | **POST** /auth/{token_mount_path}/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+[**TokenWriteCreate**](AuthApi.md#tokenwritecreate) | **POST** /auth/{token_mount_path}/create | The token create path is used to create new tokens.
+[**TokenWriteCreateOrphan**](AuthApi.md#tokenwritecreateorphan) | **POST** /auth/{token_mount_path}/create-orphan | The token create path is used to create new orphan tokens.
+[**TokenWriteCreateWithRole**](AuthApi.md#tokenwritecreatewithrole) | **POST** /auth/{token_mount_path}/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
+[**TokenWriteLookup**](AuthApi.md#tokenwritelookup) | **POST** /auth/{token_mount_path}/lookup | This endpoint will lookup a token and its properties.
+[**TokenWriteLookupAccessor**](AuthApi.md#tokenwritelookupaccessor) | **POST** /auth/{token_mount_path}/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
+[**TokenWriteLookupSelf**](AuthApi.md#tokenwritelookupself) | **POST** /auth/{token_mount_path}/lookup-self | This endpoint will lookup a token and its properties.
+[**TokenWriteRole**](AuthApi.md#tokenwriterole) | **POST** /auth/{token_mount_path}/roles/{role_name} | 
+[**UserpassDeleteUser**](AuthApi.md#userpassdeleteuser) | **DELETE** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
+[**UserpassListUsers**](AuthApi.md#userpasslistusers) | **GET** /auth/{userpass_mount_path}/users | Manage users allowed to authenticate.
+[**UserpassLogin**](AuthApi.md#userpasslogin) | **POST** /auth/{userpass_mount_path}/login/{username} | Log in with a username and password.
+[**UserpassReadUser**](AuthApi.md#userpassreaduser) | **GET** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
+[**UserpassWriteUser**](AuthApi.md#userpasswriteuser) | **POST** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
+[**UserpassWriteUserPassword**](AuthApi.md#userpasswriteuserpassword) | **POST** /auth/{userpass_mount_path}/users/{username}/password | Reset user&#x27;s password.
+[**UserpassWriteUserPolicies**](AuthApi.md#userpasswriteuserpolicies) | **POST** /auth/{userpass_mount_path}/users/{username}/policies | Update the policies associated with the username.
 
 
 

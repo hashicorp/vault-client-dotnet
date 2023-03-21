@@ -4,373 +4,373 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AWSConfigReadLease**](Secrets.md#awsconfigreadlease) | **GET** /{aws_mount_path}/config/lease | Configure the default lease information for generated credentials.
-[**AWSConfigReadRootIAMCredentials**](Secrets.md#awsconfigreadrootiamcredentials) | **GET** /{aws_mount_path}/config/root | Configure the root credentials that are used to manage IAM.
-[**AWSConfigRotateRootIAMCredentials**](Secrets.md#awsconfigrotaterootiamcredentials) | **POST** /{aws_mount_path}/config/rotate-root | 
-[**AWSConfigWriteLease**](Secrets.md#awsconfigwritelease) | **POST** /{aws_mount_path}/config/lease | Configure the default lease information for generated credentials.
-[**AWSConfigWriteRootIAMCredentials**](Secrets.md#awsconfigwriterootiamcredentials) | **POST** /{aws_mount_path}/config/root | Configure the root credentials that are used to manage IAM.
-[**AWSDeleteRole**](Secrets.md#awsdeleterole) | **DELETE** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-[**AWSListRoles**](Secrets.md#awslistroles) | **GET** /{aws_mount_path}/roles | List the existing roles in this backend
-[**AWSReadCredentials**](Secrets.md#awsreadcredentials) | **GET** /{aws_mount_path}/creds | Generate AWS credentials from a specific Vault role.
-[**AWSReadRole**](Secrets.md#awsreadrole) | **GET** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-[**AWSReadSecurityTokenService**](Secrets.md#awsreadsecuritytokenservice) | **GET** /{aws_mount_path}/sts/{name} | Generate AWS credentials from a specific Vault role.
-[**AWSWriteCredentials**](Secrets.md#awswritecredentials) | **POST** /{aws_mount_path}/creds | Generate AWS credentials from a specific Vault role.
-[**AWSWriteRole**](Secrets.md#awswriterole) | **POST** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-[**AWSWriteSecurityTokenService**](Secrets.md#awswritesecuritytokenservice) | **POST** /{aws_mount_path}/sts/{name} | Generate AWS credentials from a specific Vault role.
-[**ActiveDirectoryCheckInLibrary**](Secrets.md#activedirectorycheckinlibrary) | **POST** /{ad_mount_path}/library/{name}/check-in | Check service accounts in to the library.
-[**ActiveDirectoryCheckInManageLibrary**](Secrets.md#activedirectorycheckinmanagelibrary) | **POST** /{ad_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
-[**ActiveDirectoryCheckOutLibrary**](Secrets.md#activedirectorycheckoutlibrary) | **POST** /{ad_mount_path}/library/{name}/check-out | Check a service account out from the library.
-[**ActiveDirectoryDeleteConfig**](Secrets.md#activedirectorydeleteconfig) | **DELETE** /{ad_mount_path}/config | Configure the AD server to connect to, along with password options.
-[**ActiveDirectoryDeleteLibrary**](Secrets.md#activedirectorydeletelibrary) | **DELETE** /{ad_mount_path}/library/{name} | Delete a library set.
-[**ActiveDirectoryDeleteRole**](Secrets.md#activedirectorydeleterole) | **DELETE** /{ad_mount_path}/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-[**ActiveDirectoryListLibraries**](Secrets.md#activedirectorylistlibraries) | **GET** /{ad_mount_path}/library | 
-[**ActiveDirectoryListRoles**](Secrets.md#activedirectorylistroles) | **GET** /{ad_mount_path}/roles | List the name of each role currently stored.
-[**ActiveDirectoryReadConfig**](Secrets.md#activedirectoryreadconfig) | **GET** /{ad_mount_path}/config | Configure the AD server to connect to, along with password options.
-[**ActiveDirectoryReadCredentials**](Secrets.md#activedirectoryreadcredentials) | **GET** /{ad_mount_path}/creds/{name} | 
-[**ActiveDirectoryReadLibrary**](Secrets.md#activedirectoryreadlibrary) | **GET** /{ad_mount_path}/library/{name} | Read a library set.
-[**ActiveDirectoryReadLibraryStatus**](Secrets.md#activedirectoryreadlibrarystatus) | **GET** /{ad_mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
-[**ActiveDirectoryReadRole**](Secrets.md#activedirectoryreadrole) | **GET** /{ad_mount_path}/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-[**ActiveDirectoryRotateRole**](Secrets.md#activedirectoryrotaterole) | **POST** /{ad_mount_path}/rotate-role/{name} | 
-[**ActiveDirectoryRotateRoot**](Secrets.md#activedirectoryrotateroot) | **POST** /{ad_mount_path}/rotate-root | 
-[**ActiveDirectoryWriteConfig**](Secrets.md#activedirectorywriteconfig) | **POST** /{ad_mount_path}/config | Configure the AD server to connect to, along with password options.
-[**ActiveDirectoryWriteLibrary**](Secrets.md#activedirectorywritelibrary) | **POST** /{ad_mount_path}/library/{name} | Update a library set.
-[**ActiveDirectoryWriteRole**](Secrets.md#activedirectorywriterole) | **POST** /{ad_mount_path}/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-[**AliCloudDeleteConfig**](Secrets.md#aliclouddeleteconfig) | **DELETE** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
-[**AliCloudDeleteRole**](Secrets.md#aliclouddeleterole) | **DELETE** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-[**AliCloudListRoles**](Secrets.md#alicloudlistroles) | **GET** /{alicloud_mount_path}/role | List the existing roles in this backend.
-[**AliCloudReadConfig**](Secrets.md#alicloudreadconfig) | **GET** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
-[**AliCloudReadCredentials**](Secrets.md#alicloudreadcredentials) | **GET** /{alicloud_mount_path}/creds/{name} | Generate an API key or STS credential using the given role&#x27;s configuration.&#x27;
-[**AliCloudReadRole**](Secrets.md#alicloudreadrole) | **GET** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-[**AliCloudWriteConfig**](Secrets.md#alicloudwriteconfig) | **POST** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
-[**AliCloudWriteRole**](Secrets.md#alicloudwriterole) | **POST** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-[**AzureDeleteConfig**](Secrets.md#azuredeleteconfig) | **DELETE** /{azure_mount_path}/config | 
-[**AzureDeleteRole**](Secrets.md#azuredeleterole) | **DELETE** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**AzureListRoles**](Secrets.md#azurelistroles) | **GET** /{azure_mount_path}/roles | List existing roles.
-[**AzureReadConfig**](Secrets.md#azurereadconfig) | **GET** /{azure_mount_path}/config | 
-[**AzureReadCredentials**](Secrets.md#azurereadcredentials) | **GET** /{azure_mount_path}/creds/{role} | 
-[**AzureReadRole**](Secrets.md#azurereadrole) | **GET** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**AzureRotateRoot**](Secrets.md#azurerotateroot) | **POST** /{azure_mount_path}/rotate-root | 
-[**AzureWriteConfig**](Secrets.md#azurewriteconfig) | **POST** /{azure_mount_path}/config | 
-[**AzureWriteRole**](Secrets.md#azurewriterole) | **POST** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**ConsulDeleteRole**](Secrets.md#consuldeleterole) | **DELETE** /{consul_mount_path}/roles/{name} | 
-[**ConsulListRoles**](Secrets.md#consullistroles) | **GET** /{consul_mount_path}/roles | 
-[**ConsulReadAccessConfig**](Secrets.md#consulreadaccessconfig) | **GET** /{consul_mount_path}/config/access | 
-[**ConsulReadCredentials**](Secrets.md#consulreadcredentials) | **GET** /{consul_mount_path}/creds/{role} | 
-[**ConsulReadRole**](Secrets.md#consulreadrole) | **GET** /{consul_mount_path}/roles/{name} | 
-[**ConsulWriteAccessConfig**](Secrets.md#consulwriteaccessconfig) | **POST** /{consul_mount_path}/config/access | 
-[**ConsulWriteRole**](Secrets.md#consulwriterole) | **POST** /{consul_mount_path}/roles/{name} | 
-[**CubbyholeDelete**](Secrets.md#cubbyholedelete) | **DELETE** /{cubbyhole_mount_path}/{path} | Deletes the secret at the specified location.
-[**CubbyholeRead**](Secrets.md#cubbyholeread) | **GET** /{cubbyhole_mount_path}/{path} | Retrieve the secret at the specified location.
-[**CubbyholeWrite**](Secrets.md#cubbyholewrite) | **POST** /{cubbyhole_mount_path}/{path} | Store a secret at the specified location.
-[**DatabaseDeleteConfig**](Secrets.md#databasedeleteconfig) | **DELETE** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
-[**DatabaseDeleteRole**](Secrets.md#databasedeleterole) | **DELETE** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**DatabaseDeleteStaticRole**](Secrets.md#databasedeletestaticrole) | **DELETE** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
-[**DatabaseListConfig**](Secrets.md#databaselistconfig) | **GET** /{database_mount_path}/config | Configure connection details to a database plugin.
-[**DatabaseListRoles**](Secrets.md#databaselistroles) | **GET** /{database_mount_path}/roles | Manage the roles that can be created with this backend.
-[**DatabaseListStaticRoles**](Secrets.md#databaseliststaticroles) | **GET** /{database_mount_path}/static-roles | Manage the static roles that can be created with this backend.
-[**DatabaseReadConfig**](Secrets.md#databasereadconfig) | **GET** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
-[**DatabaseReadCredentials**](Secrets.md#databasereadcredentials) | **GET** /{database_mount_path}/creds/{name} | Request database credentials for a certain role.
-[**DatabaseReadRole**](Secrets.md#databasereadrole) | **GET** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**DatabaseReadStaticCredentials**](Secrets.md#databasereadstaticcredentials) | **GET** /{database_mount_path}/static-creds/{name} | Request database credentials for a certain static role. These credentials are rotated periodically.
-[**DatabaseReadStaticRole**](Secrets.md#databasereadstaticrole) | **GET** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
-[**DatabaseReset**](Secrets.md#databasereset) | **POST** /{database_mount_path}/reset/{name} | Resets a database plugin.
-[**DatabaseRotateRole**](Secrets.md#databaserotaterole) | **POST** /{database_mount_path}/rotate-role/{name} | 
-[**DatabaseRotateRoot**](Secrets.md#databaserotateroot) | **POST** /{database_mount_path}/rotate-root/{name} | 
-[**DatabaseWriteConfig**](Secrets.md#databasewriteconfig) | **POST** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
-[**DatabaseWriteRole**](Secrets.md#databasewriterole) | **POST** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**DatabaseWriteStaticRole**](Secrets.md#databasewritestaticrole) | **POST** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
-[**GoogleCloudDeleteRoleset**](Secrets.md#googleclouddeleteroleset) | **DELETE** /{gcp_mount_path}/roleset/{name} | 
-[**GoogleCloudDeleteStaticAccount**](Secrets.md#googleclouddeletestaticaccount) | **DELETE** /{gcp_mount_path}/static-account/{name} | 
-[**GoogleCloudKMSDecrypt**](Secrets.md#googlecloudkmsdecrypt) | **POST** /{gcpkms_mount_path}/decrypt/{key} | Decrypt a ciphertext value using a named key
-[**GoogleCloudKMSDeleteConfig**](Secrets.md#googlecloudkmsdeleteconfig) | **DELETE** /{gcpkms_mount_path}/config | Configure the GCP KMS secrets engine
-[**GoogleCloudKMSDeleteKey**](Secrets.md#googlecloudkmsdeletekey) | **DELETE** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**GoogleCloudKMSDeregisterKey**](Secrets.md#googlecloudkmsderegisterkey) | **POST** /{gcpkms_mount_path}/keys/deregister/{key} | Deregister an existing key in Vault
-[**GoogleCloudKMSEncrypt**](Secrets.md#googlecloudkmsencrypt) | **POST** /{gcpkms_mount_path}/encrypt/{key} | Encrypt a plaintext value using a named key
-[**GoogleCloudKMSListKeys**](Secrets.md#googlecloudkmslistkeys) | **GET** /{gcpkms_mount_path}/keys | List named keys
-[**GoogleCloudKMSReadConfig**](Secrets.md#googlecloudkmsreadconfig) | **GET** /{gcpkms_mount_path}/config | Configure the GCP KMS secrets engine
-[**GoogleCloudKMSReadKey**](Secrets.md#googlecloudkmsreadkey) | **GET** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**GoogleCloudKMSReadKeyConfig**](Secrets.md#googlecloudkmsreadkeyconfig) | **GET** /{gcpkms_mount_path}/keys/config/{key} | Configure the key in Vault
-[**GoogleCloudKMSReadPubkey**](Secrets.md#googlecloudkmsreadpubkey) | **GET** /{gcpkms_mount_path}/pubkey/{key} | Retrieve the public key associated with the named key
-[**GoogleCloudKMSReencrypt**](Secrets.md#googlecloudkmsreencrypt) | **POST** /{gcpkms_mount_path}/reencrypt/{key} | Re-encrypt existing ciphertext data to a new version
-[**GoogleCloudKMSRegisterKey**](Secrets.md#googlecloudkmsregisterkey) | **POST** /{gcpkms_mount_path}/keys/register/{key} | Register an existing crypto key in Google Cloud KMS
-[**GoogleCloudKMSRotateKey**](Secrets.md#googlecloudkmsrotatekey) | **POST** /{gcpkms_mount_path}/keys/rotate/{key} | Rotate a crypto key to a new primary version
-[**GoogleCloudKMSSign**](Secrets.md#googlecloudkmssign) | **POST** /{gcpkms_mount_path}/sign/{key} | Signs a message or digest using a named key
-[**GoogleCloudKMSTrimKey**](Secrets.md#googlecloudkmstrimkey) | **POST** /{gcpkms_mount_path}/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
-[**GoogleCloudKMSVerify**](Secrets.md#googlecloudkmsverify) | **POST** /{gcpkms_mount_path}/verify/{key} | Verify a signature using a named key
-[**GoogleCloudKMSWriteConfig**](Secrets.md#googlecloudkmswriteconfig) | **POST** /{gcpkms_mount_path}/config | Configure the GCP KMS secrets engine
-[**GoogleCloudKMSWriteKey**](Secrets.md#googlecloudkmswritekey) | **POST** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**GoogleCloudKMSWriteKeyConfig**](Secrets.md#googlecloudkmswritekeyconfig) | **POST** /{gcpkms_mount_path}/keys/config/{key} | Configure the key in Vault
-[**GoogleCloudListRolesets**](Secrets.md#googlecloudlistrolesets) | **GET** /{gcp_mount_path}/rolesets | 
-[**GoogleCloudListStaticAccounts**](Secrets.md#googlecloudliststaticaccounts) | **GET** /{gcp_mount_path}/static-accounts | 
-[**GoogleCloudReadConfig**](Secrets.md#googlecloudreadconfig) | **GET** /{gcp_mount_path}/config | 
-[**GoogleCloudReadKey**](Secrets.md#googlecloudreadkey) | **GET** /{gcp_mount_path}/key/{roleset} | 
-[**GoogleCloudReadRoleset**](Secrets.md#googlecloudreadroleset) | **GET** /{gcp_mount_path}/roleset/{name} | 
-[**GoogleCloudReadRolesetKey**](Secrets.md#googlecloudreadrolesetkey) | **GET** /{gcp_mount_path}/roleset/{roleset}/key | 
-[**GoogleCloudReadRolesetToken**](Secrets.md#googlecloudreadrolesettoken) | **GET** /{gcp_mount_path}/roleset/{roleset}/token | 
-[**GoogleCloudReadStaticAccount**](Secrets.md#googlecloudreadstaticaccount) | **GET** /{gcp_mount_path}/static-account/{name} | 
-[**GoogleCloudReadStaticAccountKey**](Secrets.md#googlecloudreadstaticaccountkey) | **GET** /{gcp_mount_path}/static-account/{name}/key | 
-[**GoogleCloudReadStaticAccountToken**](Secrets.md#googlecloudreadstaticaccounttoken) | **GET** /{gcp_mount_path}/static-account/{name}/token | 
-[**GoogleCloudReadToken**](Secrets.md#googlecloudreadtoken) | **GET** /{gcp_mount_path}/token/{roleset} | 
-[**GoogleCloudRotateRoleset**](Secrets.md#googlecloudrotateroleset) | **POST** /{gcp_mount_path}/roleset/{name}/rotate | 
-[**GoogleCloudRotateRolesetKey**](Secrets.md#googlecloudrotaterolesetkey) | **POST** /{gcp_mount_path}/roleset/{name}/rotate-key | 
-[**GoogleCloudRotateRoot**](Secrets.md#googlecloudrotateroot) | **POST** /{gcp_mount_path}/config/rotate-root | 
-[**GoogleCloudRotateStaticAccountKey**](Secrets.md#googlecloudrotatestaticaccountkey) | **POST** /{gcp_mount_path}/static-account/{name}/rotate-key | 
-[**GoogleCloudWriteConfig**](Secrets.md#googlecloudwriteconfig) | **POST** /{gcp_mount_path}/config | 
-[**GoogleCloudWriteKey**](Secrets.md#googlecloudwritekey) | **POST** /{gcp_mount_path}/key/{roleset} | 
-[**GoogleCloudWriteRoleset**](Secrets.md#googlecloudwriteroleset) | **POST** /{gcp_mount_path}/roleset/{name} | 
-[**GoogleCloudWriteRolesetKey**](Secrets.md#googlecloudwriterolesetkey) | **POST** /{gcp_mount_path}/roleset/{roleset}/key | 
-[**GoogleCloudWriteRolesetToken**](Secrets.md#googlecloudwriterolesettoken) | **POST** /{gcp_mount_path}/roleset/{roleset}/token | 
-[**GoogleCloudWriteStaticAccount**](Secrets.md#googlecloudwritestaticaccount) | **POST** /{gcp_mount_path}/static-account/{name} | 
-[**GoogleCloudWriteStaticAccountKey**](Secrets.md#googlecloudwritestaticaccountkey) | **POST** /{gcp_mount_path}/static-account/{name}/key | 
-[**GoogleCloudWriteStaticAccountToken**](Secrets.md#googlecloudwritestaticaccounttoken) | **POST** /{gcp_mount_path}/static-account/{name}/token | 
-[**GoogleCloudWriteToken**](Secrets.md#googlecloudwritetoken) | **POST** /{gcp_mount_path}/token/{roleset} | 
-[**KVv1Delete**](Secrets.md#kvv1delete) | **DELETE** /{kv_mount_path}/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-[**KVv1Read**](Secrets.md#kvv1read) | **GET** /{kv_mount_path}/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-[**KVv1Write**](Secrets.md#kvv1write) | **POST** /{kv_mount_path}/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-[**KVv2Delete**](Secrets.md#kvv2delete) | **DELETE** /{secret_mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-[**KVv2DeleteMetadata**](Secrets.md#kvv2deletemetadata) | **DELETE** /{secret_mount_path}/metadata/{path} | Configures settings for the KV store
-[**KVv2DeleteVersions**](Secrets.md#kvv2deleteversions) | **POST** /{secret_mount_path}/delete/{path} | Marks one or more versions as deleted in the KV store.
-[**KVv2DestroyVersions**](Secrets.md#kvv2destroyversions) | **POST** /{secret_mount_path}/destroy/{path} | Permanently removes one or more versions in the KV store
-[**KVv2Read**](Secrets.md#kvv2read) | **GET** /{secret_mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-[**KVv2ReadConfig**](Secrets.md#kvv2readconfig) | **GET** /{secret_mount_path}/config | Read the backend level settings.
-[**KVv2ReadMetadata**](Secrets.md#kvv2readmetadata) | **GET** /{secret_mount_path}/metadata/{path} | Configures settings for the KV store
-[**KVv2ReadSubkeys**](Secrets.md#kvv2readsubkeys) | **GET** /{secret_mount_path}/subkeys/{path} | Read the structure of a secret entry from the Key-Value store with the values removed.
-[**KVv2UndeleteVersions**](Secrets.md#kvv2undeleteversions) | **POST** /{secret_mount_path}/undelete/{path} | Undeletes one or more versions from the KV store.
-[**KVv2Write**](Secrets.md#kvv2write) | **POST** /{secret_mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-[**KVv2WriteConfig**](Secrets.md#kvv2writeconfig) | **POST** /{secret_mount_path}/config | Configure backend level settings that are applied to every key in the key-value store.
-[**KVv2WriteMetadata**](Secrets.md#kvv2writemetadata) | **POST** /{secret_mount_path}/metadata/{path} | Configures settings for the KV store
-[**KubernetesDeleteConfig**](Secrets.md#kubernetesdeleteconfig) | **DELETE** /{kubernetes_mount_path}/config | 
-[**KubernetesDeleteRole**](Secrets.md#kubernetesdeleterole) | **DELETE** /{kubernetes_mount_path}/roles/{name} | 
-[**KubernetesListRoles**](Secrets.md#kuberneteslistroles) | **GET** /{kubernetes_mount_path}/roles | 
-[**KubernetesReadConfig**](Secrets.md#kubernetesreadconfig) | **GET** /{kubernetes_mount_path}/config | 
-[**KubernetesReadRole**](Secrets.md#kubernetesreadrole) | **GET** /{kubernetes_mount_path}/roles/{name} | 
-[**KubernetesWriteConfig**](Secrets.md#kuberneteswriteconfig) | **POST** /{kubernetes_mount_path}/config | 
-[**KubernetesWriteCredentials**](Secrets.md#kuberneteswritecredentials) | **POST** /{kubernetes_mount_path}/creds/{name} | 
-[**KubernetesWriteRole**](Secrets.md#kuberneteswriterole) | **POST** /{kubernetes_mount_path}/roles/{name} | 
-[**LDAPCheckInLibrary**](Secrets.md#ldapcheckinlibrary) | **POST** /{ldap_mount_path}/library/{name}/check-in | Check service accounts in to the library.
-[**LDAPCheckInManageLibrary**](Secrets.md#ldapcheckinmanagelibrary) | **POST** /{ldap_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
-[**LDAPCheckOutLibrary**](Secrets.md#ldapcheckoutlibrary) | **POST** /{ldap_mount_path}/library/{name}/check-out | Check a service account out from the library.
-[**LDAPDeleteConfig**](Secrets.md#ldapdeleteconfig) | **DELETE** /{ldap_mount_path}/config | 
-[**LDAPDeleteLibrary**](Secrets.md#ldapdeletelibrary) | **DELETE** /{ldap_mount_path}/library/{name} | Delete a library set.
-[**LDAPDeleteRole**](Secrets.md#ldapdeleterole) | **DELETE** /{ldap_mount_path}/role/{name} | 
-[**LDAPDeleteStaticRole**](Secrets.md#ldapdeletestaticrole) | **DELETE** /{ldap_mount_path}/static-role/{name} | 
-[**LDAPListLibraries**](Secrets.md#ldaplistlibraries) | **GET** /{ldap_mount_path}/library | 
-[**LDAPListRoles**](Secrets.md#ldaplistroles) | **GET** /{ldap_mount_path}/role | 
-[**LDAPListStaticRoles**](Secrets.md#ldapliststaticroles) | **GET** /{ldap_mount_path}/static-role | 
-[**LDAPReadConfig**](Secrets.md#ldapreadconfig) | **GET** /{ldap_mount_path}/config | 
-[**LDAPReadCredentials**](Secrets.md#ldapreadcredentials) | **GET** /{ldap_mount_path}/creds/{name} | 
-[**LDAPReadLibrary**](Secrets.md#ldapreadlibrary) | **GET** /{ldap_mount_path}/library/{name} | Read a library set.
-[**LDAPReadLibraryStatus**](Secrets.md#ldapreadlibrarystatus) | **GET** /{ldap_mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
-[**LDAPReadRole**](Secrets.md#ldapreadrole) | **GET** /{ldap_mount_path}/role/{name} | 
-[**LDAPReadStaticCredentials**](Secrets.md#ldapreadstaticcredentials) | **GET** /{ldap_mount_path}/static-cred/{name} | 
-[**LDAPReadStaticRole**](Secrets.md#ldapreadstaticrole) | **GET** /{ldap_mount_path}/static-role/{name} | 
-[**LDAPRotateRole**](Secrets.md#ldaprotaterole) | **POST** /{ldap_mount_path}/rotate-role/{name} | 
-[**LDAPRotateRoot**](Secrets.md#ldaprotateroot) | **POST** /{ldap_mount_path}/rotate-root | 
-[**LDAPWriteConfig**](Secrets.md#ldapwriteconfig) | **POST** /{ldap_mount_path}/config | 
-[**LDAPWriteLibrary**](Secrets.md#ldapwritelibrary) | **POST** /{ldap_mount_path}/library/{name} | Update a library set.
-[**LDAPWriteRole**](Secrets.md#ldapwriterole) | **POST** /{ldap_mount_path}/role/{name} | 
-[**LDAPWriteStaticRole**](Secrets.md#ldapwritestaticrole) | **POST** /{ldap_mount_path}/static-role/{name} | 
-[**MongoDBAtlasDeleteRole**](Secrets.md#mongodbatlasdeleterole) | **DELETE** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-[**MongoDBAtlasListRoles**](Secrets.md#mongodbatlaslistroles) | **GET** /{mongodbatlas_mount_path}/roles | List the existing roles in this backend
-[**MongoDBAtlasReadConfig**](Secrets.md#mongodbatlasreadconfig) | **GET** /{mongodbatlas_mount_path}/config | Configure the  credentials that are used to manage Database Users.
-[**MongoDBAtlasReadCredentials**](Secrets.md#mongodbatlasreadcredentials) | **GET** /{mongodbatlas_mount_path}/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
-[**MongoDBAtlasReadRole**](Secrets.md#mongodbatlasreadrole) | **GET** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-[**MongoDBAtlasWriteConfig**](Secrets.md#mongodbatlaswriteconfig) | **POST** /{mongodbatlas_mount_path}/config | Configure the  credentials that are used to manage Database Users.
-[**MongoDBAtlasWriteCredentials**](Secrets.md#mongodbatlaswritecredentials) | **POST** /{mongodbatlas_mount_path}/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
-[**MongoDBAtlasWriteRole**](Secrets.md#mongodbatlaswriterole) | **POST** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-[**NomadDeleteAccessConfig**](Secrets.md#nomaddeleteaccessconfig) | **DELETE** /{nomad_mount_path}/config/access | 
-[**NomadDeleteLeaseConfig**](Secrets.md#nomaddeleteleaseconfig) | **DELETE** /{nomad_mount_path}/config/lease | Configure the lease parameters for generated tokens
-[**NomadDeleteRole**](Secrets.md#nomaddeleterole) | **DELETE** /{nomad_mount_path}/role/{name} | 
-[**NomadListRoles**](Secrets.md#nomadlistroles) | **GET** /{nomad_mount_path}/role | 
-[**NomadReadAccessConfig**](Secrets.md#nomadreadaccessconfig) | **GET** /{nomad_mount_path}/config/access | 
-[**NomadReadCredentials**](Secrets.md#nomadreadcredentials) | **GET** /{nomad_mount_path}/creds/{name} | 
-[**NomadReadLeaseConfig**](Secrets.md#nomadreadleaseconfig) | **GET** /{nomad_mount_path}/config/lease | Configure the lease parameters for generated tokens
-[**NomadReadRole**](Secrets.md#nomadreadrole) | **GET** /{nomad_mount_path}/role/{name} | 
-[**NomadWriteAccessConfig**](Secrets.md#nomadwriteaccessconfig) | **POST** /{nomad_mount_path}/config/access | 
-[**NomadWriteLeaseConfig**](Secrets.md#nomadwriteleaseconfig) | **POST** /{nomad_mount_path}/config/lease | Configure the lease parameters for generated tokens
-[**NomadWriteRole**](Secrets.md#nomadwriterole) | **POST** /{nomad_mount_path}/role/{name} | 
-[**OpenLDAPCheckInLibrary**](Secrets.md#openldapcheckinlibrary) | **POST** /{openldap_mount_path}/library/{name}/check-in | Check service accounts in to the library.
-[**OpenLDAPCheckInManageLibrary**](Secrets.md#openldapcheckinmanagelibrary) | **POST** /{openldap_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
-[**OpenLDAPCheckOutLibrary**](Secrets.md#openldapcheckoutlibrary) | **POST** /{openldap_mount_path}/library/{name}/check-out | Check a service account out from the library.
-[**OpenLDAPDeleteConfig**](Secrets.md#openldapdeleteconfig) | **DELETE** /{openldap_mount_path}/config | 
-[**OpenLDAPDeleteLibrary**](Secrets.md#openldapdeletelibrary) | **DELETE** /{openldap_mount_path}/library/{name} | Delete a library set.
-[**OpenLDAPDeleteRole**](Secrets.md#openldapdeleterole) | **DELETE** /{openldap_mount_path}/role/{name} | 
-[**OpenLDAPDeleteStaticRole**](Secrets.md#openldapdeletestaticrole) | **DELETE** /{openldap_mount_path}/static-role/{name} | 
-[**OpenLDAPListLibraries**](Secrets.md#openldaplistlibraries) | **GET** /{openldap_mount_path}/library | 
-[**OpenLDAPListRoles**](Secrets.md#openldaplistroles) | **GET** /{openldap_mount_path}/role | 
-[**OpenLDAPListStaticRoles**](Secrets.md#openldapliststaticroles) | **GET** /{openldap_mount_path}/static-role | 
-[**OpenLDAPReadConfig**](Secrets.md#openldapreadconfig) | **GET** /{openldap_mount_path}/config | 
-[**OpenLDAPReadCredentials**](Secrets.md#openldapreadcredentials) | **GET** /{openldap_mount_path}/creds/{name} | 
-[**OpenLDAPReadLibrary**](Secrets.md#openldapreadlibrary) | **GET** /{openldap_mount_path}/library/{name} | Read a library set.
-[**OpenLDAPReadLibraryStatus**](Secrets.md#openldapreadlibrarystatus) | **GET** /{openldap_mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
-[**OpenLDAPReadRole**](Secrets.md#openldapreadrole) | **GET** /{openldap_mount_path}/role/{name} | 
-[**OpenLDAPReadStaticCredentials**](Secrets.md#openldapreadstaticcredentials) | **GET** /{openldap_mount_path}/static-cred/{name} | 
-[**OpenLDAPReadStaticRole**](Secrets.md#openldapreadstaticrole) | **GET** /{openldap_mount_path}/static-role/{name} | 
-[**OpenLDAPRotateRole**](Secrets.md#openldaprotaterole) | **POST** /{openldap_mount_path}/rotate-role/{name} | 
-[**OpenLDAPRotateRoot**](Secrets.md#openldaprotateroot) | **POST** /{openldap_mount_path}/rotate-root | 
-[**OpenLDAPWriteConfig**](Secrets.md#openldapwriteconfig) | **POST** /{openldap_mount_path}/config | 
-[**OpenLDAPWriteLibrary**](Secrets.md#openldapwritelibrary) | **POST** /{openldap_mount_path}/library/{name} | Update a library set.
-[**OpenLDAPWriteRole**](Secrets.md#openldapwriterole) | **POST** /{openldap_mount_path}/role/{name} | 
-[**OpenLDAPWriteStaticRole**](Secrets.md#openldapwritestaticrole) | **POST** /{openldap_mount_path}/static-role/{name} | 
-[**PKIBundleWrite**](Secrets.md#pkibundlewrite) | **POST** /{pki_mount_path}/bundle | 
-[**PKIDeleteKey**](Secrets.md#pkideletekey) | **DELETE** /{pki_mount_path}/key/{key_ref} | 
-[**PKIDeleteRole**](Secrets.md#pkideleterole) | **DELETE** /{pki_mount_path}/roles/{name} | 
-[**PKIDeleteRoot**](Secrets.md#pkideleteroot) | **DELETE** /{pki_mount_path}/root | 
-[**PKIGenerateRoot**](Secrets.md#pkigenerateroot) | **POST** /{pki_mount_path}/root/generate/{exported} | 
-[**PKIImportKeys**](Secrets.md#pkiimportkeys) | **POST** /{pki_mount_path}/keys/import | 
-[**PKIIssuerIssueRole**](Secrets.md#pkiissuerissuerole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/issue/{role} | 
-[**PKIIssuerResignCRLs**](Secrets.md#pkiissuerresigncrls) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/resign-crls | 
-[**PKIIssuerRevoke**](Secrets.md#pkiissuerrevoke) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/revoke | 
-[**PKIIssuerSignIntermediate**](Secrets.md#pkiissuersignintermediate) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-intermediate | 
-[**PKIIssuerSignRevocationList**](Secrets.md#pkiissuersignrevocationlist) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-revocation-list | 
-[**PKIIssuerSignRole**](Secrets.md#pkiissuersignrole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign/{role} | 
-[**PKIIssuerSignSelfIssued**](Secrets.md#pkiissuersignselfissued) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-self-issued | 
-[**PKIIssuerSignVerbatim**](Secrets.md#pkiissuersignverbatim) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-verbatim | 
-[**PKIIssuerSignVerbatimRole**](Secrets.md#pkiissuersignverbatimrole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-verbatim/{role} | 
-[**PKIIssuersGenerateIntermediate**](Secrets.md#pkiissuersgenerateintermediate) | **POST** /{pki_mount_path}/issuers/generate/intermediate/{exported} | 
-[**PKIIssuersGenerateRoot**](Secrets.md#pkiissuersgenerateroot) | **POST** /{pki_mount_path}/issuers/generate/root/{exported} | 
-[**PKIIssuersList**](Secrets.md#pkiissuerslist) | **GET** /{pki_mount_path}/issuers | 
-[**PKIListCerts**](Secrets.md#pkilistcerts) | **GET** /{pki_mount_path}/certs | 
-[**PKIListCertsRevoked**](Secrets.md#pkilistcertsrevoked) | **GET** /{pki_mount_path}/certs/revoked | 
-[**PKIListKeys**](Secrets.md#pkilistkeys) | **GET** /{pki_mount_path}/keys | 
-[**PKIListRoles**](Secrets.md#pkilistroles) | **GET** /{pki_mount_path}/roles | 
-[**PKIReadAutoTidyConfig**](Secrets.md#pkireadautotidyconfig) | **GET** /{pki_mount_path}/config/auto-tidy | 
-[**PKIReadCA**](Secrets.md#pkireadca) | **GET** /{pki_mount_path}/ca | 
-[**PKIReadCAChain**](Secrets.md#pkireadcachain) | **GET** /{pki_mount_path}/ca_chain | 
-[**PKIReadCAPem**](Secrets.md#pkireadcapem) | **GET** /{pki_mount_path}/ca/pem | 
-[**PKIReadCRL**](Secrets.md#pkireadcrl) | **GET** /{pki_mount_path}/crl | 
-[**PKIReadCRLConfig**](Secrets.md#pkireadcrlconfig) | **GET** /{pki_mount_path}/config/crl | 
-[**PKIReadCRLRotate**](Secrets.md#pkireadcrlrotate) | **GET** /{pki_mount_path}/crl/rotate | 
-[**PKIReadCRLRotateDelta**](Secrets.md#pkireadcrlrotatedelta) | **GET** /{pki_mount_path}/crl/rotate-delta | 
-[**PKIReadCert**](Secrets.md#pkireadcert) | **GET** /{pki_mount_path}/cert/{serial} | 
-[**PKIReadCertCAChain**](Secrets.md#pkireadcertcachain) | **GET** /{pki_mount_path}/cert/ca_chain | 
-[**PKIReadCertRaw**](Secrets.md#pkireadcertraw) | **GET** /{pki_mount_path}/cert/{serial}/raw | 
-[**PKIReadCertRawPem**](Secrets.md#pkireadcertrawpem) | **GET** /{pki_mount_path}/cert/{serial}/raw/pem | 
-[**PKIReadClusterConfig**](Secrets.md#pkireadclusterconfig) | **GET** /{pki_mount_path}/config/cluster | 
-[**PKIReadDeltaCRL**](Secrets.md#pkireaddeltacrl) | **GET** /{pki_mount_path}/delta-crl | 
-[**PKIReadIssuersConfig**](Secrets.md#pkireadissuersconfig) | **GET** /{pki_mount_path}/config/issuers | 
-[**PKIReadKey**](Secrets.md#pkireadkey) | **GET** /{pki_mount_path}/key/{key_ref} | 
-[**PKIReadKeysConfig**](Secrets.md#pkireadkeysconfig) | **GET** /{pki_mount_path}/config/keys | 
-[**PKIReadOCSPReq**](Secrets.md#pkireadocspreq) | **GET** /{pki_mount_path}/ocsp/{req} | 
-[**PKIReadRole**](Secrets.md#pkireadrole) | **GET** /{pki_mount_path}/roles/{name} | 
-[**PKIReadURLConfig**](Secrets.md#pkireadurlconfig) | **GET** /{pki_mount_path}/config/urls | 
-[**PKIReplaceRoot**](Secrets.md#pkireplaceroot) | **POST** /{pki_mount_path}/root/replace | 
-[**PKIRevoke**](Secrets.md#pkirevoke) | **POST** /{pki_mount_path}/revoke | 
-[**PKIRevokeWithKey**](Secrets.md#pkirevokewithkey) | **POST** /{pki_mount_path}/revoke-with-key | 
-[**PKIRootSignIntermediate**](Secrets.md#pkirootsignintermediate) | **POST** /{pki_mount_path}/root/sign-intermediate | 
-[**PKIRootSignSelfIssued**](Secrets.md#pkirootsignselfissued) | **POST** /{pki_mount_path}/root/sign-self-issued | 
-[**PKIRotateRoot**](Secrets.md#pkirotateroot) | **POST** /{pki_mount_path}/root/rotate/{exported} | 
-[**PKISignRole**](Secrets.md#pkisignrole) | **POST** /{pki_mount_path}/sign/{role} | 
-[**PKISignVerbatim**](Secrets.md#pkisignverbatim) | **POST** /{pki_mount_path}/sign-verbatim | 
-[**PKISignVerbatimRole**](Secrets.md#pkisignverbatimrole) | **POST** /{pki_mount_path}/sign-verbatim/{role} | 
-[**PKITidy**](Secrets.md#pkitidy) | **POST** /{pki_mount_path}/tidy | 
-[**PKITidyCancel**](Secrets.md#pkitidycancel) | **POST** /{pki_mount_path}/tidy-cancel | 
-[**PKITidyStatus**](Secrets.md#pkitidystatus) | **GET** /{pki_mount_path}/tidy-status | 
-[**PKIWriteAutoTidyConfig**](Secrets.md#pkiwriteautotidyconfig) | **POST** /{pki_mount_path}/config/auto-tidy | 
-[**PKIWriteCAConfig**](Secrets.md#pkiwritecaconfig) | **POST** /{pki_mount_path}/config/ca | 
-[**PKIWriteCRLConfig**](Secrets.md#pkiwritecrlconfig) | **POST** /{pki_mount_path}/config/crl | 
-[**PKIWriteCerts**](Secrets.md#pkiwritecerts) | **POST** /{pki_mount_path}/cert | 
-[**PKIWriteClusterConfig**](Secrets.md#pkiwriteclusterconfig) | **POST** /{pki_mount_path}/config/cluster | 
-[**PKIWriteIntermediateCrossSign**](Secrets.md#pkiwriteintermediatecrosssign) | **POST** /{pki_mount_path}/intermediate/cross-sign | 
-[**PKIWriteIntermediateGenerate**](Secrets.md#pkiwriteintermediategenerate) | **POST** /{pki_mount_path}/intermediate/generate/{exported} | 
-[**PKIWriteIntermediateSetSigned**](Secrets.md#pkiwriteintermediatesetsigned) | **POST** /{pki_mount_path}/intermediate/set-signed | 
-[**PKIWriteInternalExported**](Secrets.md#pkiwriteinternalexported) | **POST** /{pki_mount_path}/internal|exported | 
-[**PKIWriteIssueRole**](Secrets.md#pkiwriteissuerole) | **POST** /{pki_mount_path}/issue/{role} | 
-[**PKIWriteIssuerRefDerPEM**](Secrets.md#pkiwriteissuerrefderpem) | **POST** /{pki_mount_path}/{issuer_ref}/der|/pem | 
-[**PKIWriteIssuersConfig**](Secrets.md#pkiwriteissuersconfig) | **POST** /{pki_mount_path}/config/issuers | 
-[**PKIWriteJSON**](Secrets.md#pkiwritejson) | **POST** /{pki_mount_path}//json | 
-[**PKIWriteKMS**](Secrets.md#pkiwritekms) | **POST** /{pki_mount_path}/kms | 
-[**PKIWriteKey**](Secrets.md#pkiwritekey) | **POST** /{pki_mount_path}/key/{key_ref} | 
-[**PKIWriteKeysConfig**](Secrets.md#pkiwritekeysconfig) | **POST** /{pki_mount_path}/config/keys | 
-[**PKIWriteOCSP**](Secrets.md#pkiwriteocsp) | **POST** /{pki_mount_path}/ocsp | 
-[**PKIWriteRole**](Secrets.md#pkiwriterole) | **POST** /{pki_mount_path}/roles/{name} | 
-[**PKIWriteURLConfig**](Secrets.md#pkiwriteurlconfig) | **POST** /{pki_mount_path}/config/urls | 
-[**PkiDeleteIssuerRefDerPem**](Secrets.md#pkideleteissuerrefderpem) | **DELETE** /{pki_mount_path}/{issuer_ref}/der|/pem | 
-[**PkiDeleteJson**](Secrets.md#pkideletejson) | **DELETE** /{pki_mount_path}//json | 
-[**PkiReadDelta**](Secrets.md#pkireaddelta) | **GET** /{pki_mount_path}//delta | 
-[**PkiReadDeltaPem**](Secrets.md#pkireaddeltapem) | **GET** /{pki_mount_path}//delta/pem | 
-[**PkiReadDer**](Secrets.md#pkireadder) | **GET** /{pki_mount_path}//der | 
-[**PkiReadIssuerRefCrlPemDerDeltaPem**](Secrets.md#pkireadissuerrefcrlpemderdeltapem) | **GET** /{pki_mount_path}/{issuer_ref}/crl/pem|/der|/delta/pem | 
-[**PkiReadIssuerRefDerPem**](Secrets.md#pkireadissuerrefderpem) | **GET** /{pki_mount_path}/{issuer_ref}/der|/pem | 
-[**PkiReadJson**](Secrets.md#pkireadjson) | **GET** /{pki_mount_path}//json | 
-[**PkiReadPem**](Secrets.md#pkireadpem) | **GET** /{pki_mount_path}//pem | 
-[**RabbitMQDeleteRole**](Secrets.md#rabbitmqdeleterole) | **DELETE** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**RabbitMQListRoles**](Secrets.md#rabbitmqlistroles) | **GET** /{rabbitmq_mount_path}/roles | Manage the roles that can be created with this backend.
-[**RabbitMQReadCredentials**](Secrets.md#rabbitmqreadcredentials) | **GET** /{rabbitmq_mount_path}/creds/{name} | Request RabbitMQ credentials for a certain role.
-[**RabbitMQReadLeaseConfig**](Secrets.md#rabbitmqreadleaseconfig) | **GET** /{rabbitmq_mount_path}/config/lease | Configure the lease parameters for generated credentials
-[**RabbitMQReadRole**](Secrets.md#rabbitmqreadrole) | **GET** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**RabbitMQWriteConnectionConfig**](Secrets.md#rabbitmqwriteconnectionconfig) | **POST** /{rabbitmq_mount_path}/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
-[**RabbitMQWriteLeaseConfig**](Secrets.md#rabbitmqwriteleaseconfig) | **POST** /{rabbitmq_mount_path}/config/lease | Configure the lease parameters for generated credentials
-[**RabbitMQWriteRole**](Secrets.md#rabbitmqwriterole) | **POST** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**SSHDeleteCAConfig**](Secrets.md#sshdeletecaconfig) | **DELETE** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
-[**SSHDeleteKeys**](Secrets.md#sshdeletekeys) | **DELETE** /{ssh_mount_path}/keys/{key_name} | Register a shared private key with Vault.
-[**SSHDeleteRole**](Secrets.md#sshdeleterole) | **DELETE** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
-[**SSHDeleteZeroAddressConfig**](Secrets.md#sshdeletezeroaddressconfig) | **DELETE** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**SSHListRoles**](Secrets.md#sshlistroles) | **GET** /{ssh_mount_path}/roles | Manage the &#x27;roles&#x27; that can be created with this backend.
-[**SSHLookup**](Secrets.md#sshlookup) | **POST** /{ssh_mount_path}/lookup | List all the roles associated with the given IP address.
-[**SSHReadCAConfig**](Secrets.md#sshreadcaconfig) | **GET** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
-[**SSHReadPublicKey**](Secrets.md#sshreadpublickey) | **GET** /{ssh_mount_path}/public_key | Retrieve the public key.
-[**SSHReadRole**](Secrets.md#sshreadrole) | **GET** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
-[**SSHReadZeroAddressConfig**](Secrets.md#sshreadzeroaddressconfig) | **GET** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**SSHSign**](Secrets.md#sshsign) | **POST** /{ssh_mount_path}/sign/{role} | Request signing an SSH key using a certain role with the provided details.
-[**SSHVerify**](Secrets.md#sshverify) | **POST** /{ssh_mount_path}/verify | Validate the OTP provided by Vault SSH Agent.
-[**SSHWriteCAConfig**](Secrets.md#sshwritecaconfig) | **POST** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
-[**SSHWriteCredentials**](Secrets.md#sshwritecredentials) | **POST** /{ssh_mount_path}/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
-[**SSHWriteIssue**](Secrets.md#sshwriteissue) | **POST** /{ssh_mount_path}/issue/{role} | 
-[**SSHWriteKeys**](Secrets.md#sshwritekeys) | **POST** /{ssh_mount_path}/keys/{key_name} | Register a shared private key with Vault.
-[**SSHWriteRole**](Secrets.md#sshwriterole) | **POST** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
-[**SSHWriteZeroAddressConfig**](Secrets.md#sshwritezeroaddressconfig) | **POST** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-[**TOTPDeleteKey**](Secrets.md#totpdeletekey) | **DELETE** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
-[**TOTPListKeys**](Secrets.md#totplistkeys) | **GET** /{totp_mount_path}/keys | Manage the keys that can be created with this backend.
-[**TOTPReadCode**](Secrets.md#totpreadcode) | **GET** /{totp_mount_path}/code/{name} | Request time-based one-time use password or validate a password for a certain key .
-[**TOTPReadKey**](Secrets.md#totpreadkey) | **GET** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
-[**TOTPWriteCode**](Secrets.md#totpwritecode) | **POST** /{totp_mount_path}/code/{name} | Request time-based one-time use password or validate a password for a certain key .
-[**TOTPWriteKey**](Secrets.md#totpwritekey) | **POST** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
-[**TerraformDeleteConfig**](Secrets.md#terraformdeleteconfig) | **DELETE** /{terraform_mount_path}/config | 
-[**TerraformDeleteRole**](Secrets.md#terraformdeleterole) | **DELETE** /{terraform_mount_path}/role/{name} | 
-[**TerraformListRoles**](Secrets.md#terraformlistroles) | **GET** /{terraform_mount_path}/role | 
-[**TerraformReadConfig**](Secrets.md#terraformreadconfig) | **GET** /{terraform_mount_path}/config | 
-[**TerraformReadCredentials**](Secrets.md#terraformreadcredentials) | **GET** /{terraform_mount_path}/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-[**TerraformReadRole**](Secrets.md#terraformreadrole) | **GET** /{terraform_mount_path}/role/{name} | 
-[**TerraformRotateRole**](Secrets.md#terraformrotaterole) | **POST** /{terraform_mount_path}/rotate-role/{name} | 
-[**TerraformWriteConfig**](Secrets.md#terraformwriteconfig) | **POST** /{terraform_mount_path}/config | 
-[**TerraformWriteCredentials**](Secrets.md#terraformwritecredentials) | **POST** /{terraform_mount_path}/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-[**TerraformWriteRole**](Secrets.md#terraformwriterole) | **POST** /{terraform_mount_path}/role/{name} | 
-[**TransitBackup**](Secrets.md#transitbackup) | **GET** /{transit_mount_path}/backup/{name} | Backup the named key
-[**TransitDecrypt**](Secrets.md#transitdecrypt) | **POST** /{transit_mount_path}/decrypt/{name} | Decrypt a ciphertext value using a named key
-[**TransitDeleteKey**](Secrets.md#transitdeletekey) | **DELETE** /{transit_mount_path}/keys/{name} | Managed named encryption keys
-[**TransitEncrypt**](Secrets.md#transitencrypt) | **POST** /{transit_mount_path}/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
-[**TransitExport**](Secrets.md#transitexport) | **GET** /{transit_mount_path}/export/{type}/{name} | Export named encryption or signing key
-[**TransitExportVersion**](Secrets.md#transitexportversion) | **GET** /{transit_mount_path}/export/{type}/{name}/{version} | Export named encryption or signing key
-[**TransitGenerateDataKey**](Secrets.md#transitgeneratedatakey) | **POST** /{transit_mount_path}/datakey/{plaintext}/{name} | Generate a data key
-[**TransitGenerateHMAC**](Secrets.md#transitgeneratehmac) | **POST** /{transit_mount_path}/hmac/{name} | Generate an HMAC for input data using the named key
-[**TransitGenerateHMACWithAlgorithm**](Secrets.md#transitgeneratehmacwithalgorithm) | **POST** /{transit_mount_path}/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
-[**TransitGenerateRandom**](Secrets.md#transitgeneraterandom) | **POST** /{transit_mount_path}/random | Generate random bytes
-[**TransitGenerateRandomSource**](Secrets.md#transitgeneraterandomsource) | **POST** /{transit_mount_path}/random/{source} | Generate random bytes
-[**TransitGenerateRandomSourceBytes**](Secrets.md#transitgeneraterandomsourcebytes) | **POST** /{transit_mount_path}/random/{source}/{urlbytes} | Generate random bytes
-[**TransitHash**](Secrets.md#transithash) | **POST** /{transit_mount_path}/hash | Generate a hash sum for input data
-[**TransitHashWithAlgorithm**](Secrets.md#transithashwithalgorithm) | **POST** /{transit_mount_path}/hash/{urlalgorithm} | Generate a hash sum for input data
-[**TransitImportKey**](Secrets.md#transitimportkey) | **POST** /{transit_mount_path}/keys/{name}/import | Imports an externally-generated key into a new transit key
-[**TransitImportKeyVersion**](Secrets.md#transitimportkeyversion) | **POST** /{transit_mount_path}/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
-[**TransitListKeys**](Secrets.md#transitlistkeys) | **GET** /{transit_mount_path}/keys | Managed named encryption keys
-[**TransitReadCacheConfig**](Secrets.md#transitreadcacheconfig) | **GET** /{transit_mount_path}/cache-config | Returns the size of the active cache
-[**TransitReadConfigKeys**](Secrets.md#transitreadconfigkeys) | **GET** /{transit_mount_path}/config/keys | Configuration common across all keys
-[**TransitReadKey**](Secrets.md#transitreadkey) | **GET** /{transit_mount_path}/keys/{name} | Managed named encryption keys
-[**TransitReadWrappingKey**](Secrets.md#transitreadwrappingkey) | **GET** /{transit_mount_path}/wrapping_key | Returns the public key to use for wrapping imported keys
-[**TransitRestore**](Secrets.md#transitrestore) | **POST** /{transit_mount_path}/restore | Restore the named key
-[**TransitRestoreKey**](Secrets.md#transitrestorekey) | **POST** /{transit_mount_path}/restore/{name} | Restore the named key
-[**TransitRewrap**](Secrets.md#transitrewrap) | **POST** /{transit_mount_path}/rewrap/{name} | Rewrap ciphertext
-[**TransitRotateKey**](Secrets.md#transitrotatekey) | **POST** /{transit_mount_path}/keys/{name}/rotate | Rotate named encryption key
-[**TransitSign**](Secrets.md#transitsign) | **POST** /{transit_mount_path}/sign/{name} | Generate a signature for input data using the named key
-[**TransitSignWithAlgorithm**](Secrets.md#transitsignwithalgorithm) | **POST** /{transit_mount_path}/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
-[**TransitTrimKey**](Secrets.md#transittrimkey) | **POST** /{transit_mount_path}/keys/{name}/trim | Trim key versions of a named key
-[**TransitVerify**](Secrets.md#transitverify) | **POST** /{transit_mount_path}/verify/{name} | Verify a signature or HMAC for input data created using the named key
-[**TransitVerifyWithAlgorithm**](Secrets.md#transitverifywithalgorithm) | **POST** /{transit_mount_path}/verify/{name}/{urlalgorithm} | Verify a signature or HMAC for input data created using the named key
-[**TransitWriteCacheConfig**](Secrets.md#transitwritecacheconfig) | **POST** /{transit_mount_path}/cache-config | Configures a new cache of the specified size
-[**TransitWriteConfigKeys**](Secrets.md#transitwriteconfigkeys) | **POST** /{transit_mount_path}/config/keys | Configuration common across all keys
-[**TransitWriteKey**](Secrets.md#transitwritekey) | **POST** /{transit_mount_path}/keys/{name} | Managed named encryption keys
-[**TransitWriteKeyConfig**](Secrets.md#transitwritekeyconfig) | **POST** /{transit_mount_path}/keys/{name}/config | Configure a named encryption key
-[**TransitWriteRandomUrlbytes**](Secrets.md#transitwriterandomurlbytes) | **POST** /{transit_mount_path}/random/{urlbytes} | Generate random bytes
+[**AWSConfigReadLease**](SecretsApi.md#awsconfigreadlease) | **GET** /{aws_mount_path}/config/lease | Configure the default lease information for generated credentials.
+[**AWSConfigReadRootIAMCredentials**](SecretsApi.md#awsconfigreadrootiamcredentials) | **GET** /{aws_mount_path}/config/root | Configure the root credentials that are used to manage IAM.
+[**AWSConfigRotateRootIAMCredentials**](SecretsApi.md#awsconfigrotaterootiamcredentials) | **POST** /{aws_mount_path}/config/rotate-root | 
+[**AWSConfigWriteLease**](SecretsApi.md#awsconfigwritelease) | **POST** /{aws_mount_path}/config/lease | Configure the default lease information for generated credentials.
+[**AWSConfigWriteRootIAMCredentials**](SecretsApi.md#awsconfigwriterootiamcredentials) | **POST** /{aws_mount_path}/config/root | Configure the root credentials that are used to manage IAM.
+[**AWSDeleteRole**](SecretsApi.md#awsdeleterole) | **DELETE** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**AWSListRoles**](SecretsApi.md#awslistroles) | **GET** /{aws_mount_path}/roles | List the existing roles in this backend
+[**AWSReadCredentials**](SecretsApi.md#awsreadcredentials) | **GET** /{aws_mount_path}/creds | Generate AWS credentials from a specific Vault role.
+[**AWSReadRole**](SecretsApi.md#awsreadrole) | **GET** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**AWSReadSecurityTokenService**](SecretsApi.md#awsreadsecuritytokenservice) | **GET** /{aws_mount_path}/sts/{name} | Generate AWS credentials from a specific Vault role.
+[**AWSWriteCredentials**](SecretsApi.md#awswritecredentials) | **POST** /{aws_mount_path}/creds | Generate AWS credentials from a specific Vault role.
+[**AWSWriteRole**](SecretsApi.md#awswriterole) | **POST** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**AWSWriteSecurityTokenService**](SecretsApi.md#awswritesecuritytokenservice) | **POST** /{aws_mount_path}/sts/{name} | Generate AWS credentials from a specific Vault role.
+[**ActiveDirectoryCheckInLibrary**](SecretsApi.md#activedirectorycheckinlibrary) | **POST** /{ad_mount_path}/library/{name}/check-in | Check service accounts in to the library.
+[**ActiveDirectoryCheckInManageLibrary**](SecretsApi.md#activedirectorycheckinmanagelibrary) | **POST** /{ad_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
+[**ActiveDirectoryCheckOutLibrary**](SecretsApi.md#activedirectorycheckoutlibrary) | **POST** /{ad_mount_path}/library/{name}/check-out | Check a service account out from the library.
+[**ActiveDirectoryDeleteConfig**](SecretsApi.md#activedirectorydeleteconfig) | **DELETE** /{ad_mount_path}/config | Configure the AD server to connect to, along with password options.
+[**ActiveDirectoryDeleteLibrary**](SecretsApi.md#activedirectorydeletelibrary) | **DELETE** /{ad_mount_path}/library/{name} | Delete a library set.
+[**ActiveDirectoryDeleteRole**](SecretsApi.md#activedirectorydeleterole) | **DELETE** /{ad_mount_path}/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
+[**ActiveDirectoryListLibraries**](SecretsApi.md#activedirectorylistlibraries) | **GET** /{ad_mount_path}/library | 
+[**ActiveDirectoryListRoles**](SecretsApi.md#activedirectorylistroles) | **GET** /{ad_mount_path}/roles | List the name of each role currently stored.
+[**ActiveDirectoryReadConfig**](SecretsApi.md#activedirectoryreadconfig) | **GET** /{ad_mount_path}/config | Configure the AD server to connect to, along with password options.
+[**ActiveDirectoryReadCredentials**](SecretsApi.md#activedirectoryreadcredentials) | **GET** /{ad_mount_path}/creds/{name} | 
+[**ActiveDirectoryReadLibrary**](SecretsApi.md#activedirectoryreadlibrary) | **GET** /{ad_mount_path}/library/{name} | Read a library set.
+[**ActiveDirectoryReadLibraryStatus**](SecretsApi.md#activedirectoryreadlibrarystatus) | **GET** /{ad_mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
+[**ActiveDirectoryReadRole**](SecretsApi.md#activedirectoryreadrole) | **GET** /{ad_mount_path}/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
+[**ActiveDirectoryRotateRole**](SecretsApi.md#activedirectoryrotaterole) | **POST** /{ad_mount_path}/rotate-role/{name} | 
+[**ActiveDirectoryRotateRoot**](SecretsApi.md#activedirectoryrotateroot) | **POST** /{ad_mount_path}/rotate-root | 
+[**ActiveDirectoryWriteConfig**](SecretsApi.md#activedirectorywriteconfig) | **POST** /{ad_mount_path}/config | Configure the AD server to connect to, along with password options.
+[**ActiveDirectoryWriteLibrary**](SecretsApi.md#activedirectorywritelibrary) | **POST** /{ad_mount_path}/library/{name} | Update a library set.
+[**ActiveDirectoryWriteRole**](SecretsApi.md#activedirectorywriterole) | **POST** /{ad_mount_path}/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
+[**AliCloudDeleteConfig**](SecretsApi.md#aliclouddeleteconfig) | **DELETE** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
+[**AliCloudDeleteRole**](SecretsApi.md#aliclouddeleterole) | **DELETE** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
+[**AliCloudListRoles**](SecretsApi.md#alicloudlistroles) | **GET** /{alicloud_mount_path}/role | List the existing roles in this backend.
+[**AliCloudReadConfig**](SecretsApi.md#alicloudreadconfig) | **GET** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
+[**AliCloudReadCredentials**](SecretsApi.md#alicloudreadcredentials) | **GET** /{alicloud_mount_path}/creds/{name} | Generate an API key or STS credential using the given role&#x27;s configuration.&#x27;
+[**AliCloudReadRole**](SecretsApi.md#alicloudreadrole) | **GET** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
+[**AliCloudWriteConfig**](SecretsApi.md#alicloudwriteconfig) | **POST** /{alicloud_mount_path}/config | Configure the access key and secret to use for RAM and STS calls.
+[**AliCloudWriteRole**](SecretsApi.md#alicloudwriterole) | **POST** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
+[**AzureDeleteConfig**](SecretsApi.md#azuredeleteconfig) | **DELETE** /{azure_mount_path}/config | 
+[**AzureDeleteRole**](SecretsApi.md#azuredeleterole) | **DELETE** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
+[**AzureListRoles**](SecretsApi.md#azurelistroles) | **GET** /{azure_mount_path}/roles | List existing roles.
+[**AzureReadConfig**](SecretsApi.md#azurereadconfig) | **GET** /{azure_mount_path}/config | 
+[**AzureReadCredentials**](SecretsApi.md#azurereadcredentials) | **GET** /{azure_mount_path}/creds/{role} | 
+[**AzureReadRole**](SecretsApi.md#azurereadrole) | **GET** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
+[**AzureRotateRoot**](SecretsApi.md#azurerotateroot) | **POST** /{azure_mount_path}/rotate-root | 
+[**AzureWriteConfig**](SecretsApi.md#azurewriteconfig) | **POST** /{azure_mount_path}/config | 
+[**AzureWriteRole**](SecretsApi.md#azurewriterole) | **POST** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
+[**ConsulDeleteRole**](SecretsApi.md#consuldeleterole) | **DELETE** /{consul_mount_path}/roles/{name} | 
+[**ConsulListRoles**](SecretsApi.md#consullistroles) | **GET** /{consul_mount_path}/roles | 
+[**ConsulReadAccessConfig**](SecretsApi.md#consulreadaccessconfig) | **GET** /{consul_mount_path}/config/access | 
+[**ConsulReadCredentials**](SecretsApi.md#consulreadcredentials) | **GET** /{consul_mount_path}/creds/{role} | 
+[**ConsulReadRole**](SecretsApi.md#consulreadrole) | **GET** /{consul_mount_path}/roles/{name} | 
+[**ConsulWriteAccessConfig**](SecretsApi.md#consulwriteaccessconfig) | **POST** /{consul_mount_path}/config/access | 
+[**ConsulWriteRole**](SecretsApi.md#consulwriterole) | **POST** /{consul_mount_path}/roles/{name} | 
+[**CubbyholeDelete**](SecretsApi.md#cubbyholedelete) | **DELETE** /{cubbyhole_mount_path}/{path} | Deletes the secret at the specified location.
+[**CubbyholeRead**](SecretsApi.md#cubbyholeread) | **GET** /{cubbyhole_mount_path}/{path} | Retrieve the secret at the specified location.
+[**CubbyholeWrite**](SecretsApi.md#cubbyholewrite) | **POST** /{cubbyhole_mount_path}/{path} | Store a secret at the specified location.
+[**DatabaseDeleteConfig**](SecretsApi.md#databasedeleteconfig) | **DELETE** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
+[**DatabaseDeleteRole**](SecretsApi.md#databasedeleterole) | **DELETE** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**DatabaseDeleteStaticRole**](SecretsApi.md#databasedeletestaticrole) | **DELETE** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
+[**DatabaseListConfig**](SecretsApi.md#databaselistconfig) | **GET** /{database_mount_path}/config | Configure connection details to a database plugin.
+[**DatabaseListRoles**](SecretsApi.md#databaselistroles) | **GET** /{database_mount_path}/roles | Manage the roles that can be created with this backend.
+[**DatabaseListStaticRoles**](SecretsApi.md#databaseliststaticroles) | **GET** /{database_mount_path}/static-roles | Manage the static roles that can be created with this backend.
+[**DatabaseReadConfig**](SecretsApi.md#databasereadconfig) | **GET** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
+[**DatabaseReadCredentials**](SecretsApi.md#databasereadcredentials) | **GET** /{database_mount_path}/creds/{name} | Request database credentials for a certain role.
+[**DatabaseReadRole**](SecretsApi.md#databasereadrole) | **GET** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**DatabaseReadStaticCredentials**](SecretsApi.md#databasereadstaticcredentials) | **GET** /{database_mount_path}/static-creds/{name} | Request database credentials for a certain static role. These credentials are rotated periodically.
+[**DatabaseReadStaticRole**](SecretsApi.md#databasereadstaticrole) | **GET** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
+[**DatabaseReset**](SecretsApi.md#databasereset) | **POST** /{database_mount_path}/reset/{name} | Resets a database plugin.
+[**DatabaseRotateRole**](SecretsApi.md#databaserotaterole) | **POST** /{database_mount_path}/rotate-role/{name} | 
+[**DatabaseRotateRoot**](SecretsApi.md#databaserotateroot) | **POST** /{database_mount_path}/rotate-root/{name} | 
+[**DatabaseWriteConfig**](SecretsApi.md#databasewriteconfig) | **POST** /{database_mount_path}/config/{name} | Configure connection details to a database plugin.
+[**DatabaseWriteRole**](SecretsApi.md#databasewriterole) | **POST** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**DatabaseWriteStaticRole**](SecretsApi.md#databasewritestaticrole) | **POST** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
+[**GoogleCloudDeleteRoleset**](SecretsApi.md#googleclouddeleteroleset) | **DELETE** /{gcp_mount_path}/roleset/{name} | 
+[**GoogleCloudDeleteStaticAccount**](SecretsApi.md#googleclouddeletestaticaccount) | **DELETE** /{gcp_mount_path}/static-account/{name} | 
+[**GoogleCloudKMSDecrypt**](SecretsApi.md#googlecloudkmsdecrypt) | **POST** /{gcpkms_mount_path}/decrypt/{key} | Decrypt a ciphertext value using a named key
+[**GoogleCloudKMSDeleteConfig**](SecretsApi.md#googlecloudkmsdeleteconfig) | **DELETE** /{gcpkms_mount_path}/config | Configure the GCP KMS secrets engine
+[**GoogleCloudKMSDeleteKey**](SecretsApi.md#googlecloudkmsdeletekey) | **DELETE** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+[**GoogleCloudKMSDeregisterKey**](SecretsApi.md#googlecloudkmsderegisterkey) | **POST** /{gcpkms_mount_path}/keys/deregister/{key} | Deregister an existing key in Vault
+[**GoogleCloudKMSEncrypt**](SecretsApi.md#googlecloudkmsencrypt) | **POST** /{gcpkms_mount_path}/encrypt/{key} | Encrypt a plaintext value using a named key
+[**GoogleCloudKMSListKeys**](SecretsApi.md#googlecloudkmslistkeys) | **GET** /{gcpkms_mount_path}/keys | List named keys
+[**GoogleCloudKMSReadConfig**](SecretsApi.md#googlecloudkmsreadconfig) | **GET** /{gcpkms_mount_path}/config | Configure the GCP KMS secrets engine
+[**GoogleCloudKMSReadKey**](SecretsApi.md#googlecloudkmsreadkey) | **GET** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+[**GoogleCloudKMSReadKeyConfig**](SecretsApi.md#googlecloudkmsreadkeyconfig) | **GET** /{gcpkms_mount_path}/keys/config/{key} | Configure the key in Vault
+[**GoogleCloudKMSReadPubkey**](SecretsApi.md#googlecloudkmsreadpubkey) | **GET** /{gcpkms_mount_path}/pubkey/{key} | Retrieve the public key associated with the named key
+[**GoogleCloudKMSReencrypt**](SecretsApi.md#googlecloudkmsreencrypt) | **POST** /{gcpkms_mount_path}/reencrypt/{key} | Re-encrypt existing ciphertext data to a new version
+[**GoogleCloudKMSRegisterKey**](SecretsApi.md#googlecloudkmsregisterkey) | **POST** /{gcpkms_mount_path}/keys/register/{key} | Register an existing crypto key in Google Cloud KMS
+[**GoogleCloudKMSRotateKey**](SecretsApi.md#googlecloudkmsrotatekey) | **POST** /{gcpkms_mount_path}/keys/rotate/{key} | Rotate a crypto key to a new primary version
+[**GoogleCloudKMSSign**](SecretsApi.md#googlecloudkmssign) | **POST** /{gcpkms_mount_path}/sign/{key} | Signs a message or digest using a named key
+[**GoogleCloudKMSTrimKey**](SecretsApi.md#googlecloudkmstrimkey) | **POST** /{gcpkms_mount_path}/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
+[**GoogleCloudKMSVerify**](SecretsApi.md#googlecloudkmsverify) | **POST** /{gcpkms_mount_path}/verify/{key} | Verify a signature using a named key
+[**GoogleCloudKMSWriteConfig**](SecretsApi.md#googlecloudkmswriteconfig) | **POST** /{gcpkms_mount_path}/config | Configure the GCP KMS secrets engine
+[**GoogleCloudKMSWriteKey**](SecretsApi.md#googlecloudkmswritekey) | **POST** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+[**GoogleCloudKMSWriteKeyConfig**](SecretsApi.md#googlecloudkmswritekeyconfig) | **POST** /{gcpkms_mount_path}/keys/config/{key} | Configure the key in Vault
+[**GoogleCloudListRolesets**](SecretsApi.md#googlecloudlistrolesets) | **GET** /{gcp_mount_path}/rolesets | 
+[**GoogleCloudListStaticAccounts**](SecretsApi.md#googlecloudliststaticaccounts) | **GET** /{gcp_mount_path}/static-accounts | 
+[**GoogleCloudReadConfig**](SecretsApi.md#googlecloudreadconfig) | **GET** /{gcp_mount_path}/config | 
+[**GoogleCloudReadKey**](SecretsApi.md#googlecloudreadkey) | **GET** /{gcp_mount_path}/key/{roleset} | 
+[**GoogleCloudReadRoleset**](SecretsApi.md#googlecloudreadroleset) | **GET** /{gcp_mount_path}/roleset/{name} | 
+[**GoogleCloudReadRolesetKey**](SecretsApi.md#googlecloudreadrolesetkey) | **GET** /{gcp_mount_path}/roleset/{roleset}/key | 
+[**GoogleCloudReadRolesetToken**](SecretsApi.md#googlecloudreadrolesettoken) | **GET** /{gcp_mount_path}/roleset/{roleset}/token | 
+[**GoogleCloudReadStaticAccount**](SecretsApi.md#googlecloudreadstaticaccount) | **GET** /{gcp_mount_path}/static-account/{name} | 
+[**GoogleCloudReadStaticAccountKey**](SecretsApi.md#googlecloudreadstaticaccountkey) | **GET** /{gcp_mount_path}/static-account/{name}/key | 
+[**GoogleCloudReadStaticAccountToken**](SecretsApi.md#googlecloudreadstaticaccounttoken) | **GET** /{gcp_mount_path}/static-account/{name}/token | 
+[**GoogleCloudReadToken**](SecretsApi.md#googlecloudreadtoken) | **GET** /{gcp_mount_path}/token/{roleset} | 
+[**GoogleCloudRotateRoleset**](SecretsApi.md#googlecloudrotateroleset) | **POST** /{gcp_mount_path}/roleset/{name}/rotate | 
+[**GoogleCloudRotateRolesetKey**](SecretsApi.md#googlecloudrotaterolesetkey) | **POST** /{gcp_mount_path}/roleset/{name}/rotate-key | 
+[**GoogleCloudRotateRoot**](SecretsApi.md#googlecloudrotateroot) | **POST** /{gcp_mount_path}/config/rotate-root | 
+[**GoogleCloudRotateStaticAccountKey**](SecretsApi.md#googlecloudrotatestaticaccountkey) | **POST** /{gcp_mount_path}/static-account/{name}/rotate-key | 
+[**GoogleCloudWriteConfig**](SecretsApi.md#googlecloudwriteconfig) | **POST** /{gcp_mount_path}/config | 
+[**GoogleCloudWriteKey**](SecretsApi.md#googlecloudwritekey) | **POST** /{gcp_mount_path}/key/{roleset} | 
+[**GoogleCloudWriteRoleset**](SecretsApi.md#googlecloudwriteroleset) | **POST** /{gcp_mount_path}/roleset/{name} | 
+[**GoogleCloudWriteRolesetKey**](SecretsApi.md#googlecloudwriterolesetkey) | **POST** /{gcp_mount_path}/roleset/{roleset}/key | 
+[**GoogleCloudWriteRolesetToken**](SecretsApi.md#googlecloudwriterolesettoken) | **POST** /{gcp_mount_path}/roleset/{roleset}/token | 
+[**GoogleCloudWriteStaticAccount**](SecretsApi.md#googlecloudwritestaticaccount) | **POST** /{gcp_mount_path}/static-account/{name} | 
+[**GoogleCloudWriteStaticAccountKey**](SecretsApi.md#googlecloudwritestaticaccountkey) | **POST** /{gcp_mount_path}/static-account/{name}/key | 
+[**GoogleCloudWriteStaticAccountToken**](SecretsApi.md#googlecloudwritestaticaccounttoken) | **POST** /{gcp_mount_path}/static-account/{name}/token | 
+[**GoogleCloudWriteToken**](SecretsApi.md#googlecloudwritetoken) | **POST** /{gcp_mount_path}/token/{roleset} | 
+[**KVv1Delete**](SecretsApi.md#kvv1delete) | **DELETE** /{kv_mount_path}/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**KVv1Read**](SecretsApi.md#kvv1read) | **GET** /{kv_mount_path}/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**KVv1Write**](SecretsApi.md#kvv1write) | **POST** /{kv_mount_path}/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
+[**KVv2Delete**](SecretsApi.md#kvv2delete) | **DELETE** /{secret_mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+[**KVv2DeleteMetadata**](SecretsApi.md#kvv2deletemetadata) | **DELETE** /{secret_mount_path}/metadata/{path} | Configures settings for the KV store
+[**KVv2DeleteVersions**](SecretsApi.md#kvv2deleteversions) | **POST** /{secret_mount_path}/delete/{path} | Marks one or more versions as deleted in the KV store.
+[**KVv2DestroyVersions**](SecretsApi.md#kvv2destroyversions) | **POST** /{secret_mount_path}/destroy/{path} | Permanently removes one or more versions in the KV store
+[**KVv2Read**](SecretsApi.md#kvv2read) | **GET** /{secret_mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+[**KVv2ReadConfig**](SecretsApi.md#kvv2readconfig) | **GET** /{secret_mount_path}/config | Read the backend level settings.
+[**KVv2ReadMetadata**](SecretsApi.md#kvv2readmetadata) | **GET** /{secret_mount_path}/metadata/{path} | Configures settings for the KV store
+[**KVv2ReadSubkeys**](SecretsApi.md#kvv2readsubkeys) | **GET** /{secret_mount_path}/subkeys/{path} | Read the structure of a secret entry from the Key-Value store with the values removed.
+[**KVv2UndeleteVersions**](SecretsApi.md#kvv2undeleteversions) | **POST** /{secret_mount_path}/undelete/{path} | Undeletes one or more versions from the KV store.
+[**KVv2Write**](SecretsApi.md#kvv2write) | **POST** /{secret_mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+[**KVv2WriteConfig**](SecretsApi.md#kvv2writeconfig) | **POST** /{secret_mount_path}/config | Configure backend level settings that are applied to every key in the key-value store.
+[**KVv2WriteMetadata**](SecretsApi.md#kvv2writemetadata) | **POST** /{secret_mount_path}/metadata/{path} | Configures settings for the KV store
+[**KubernetesDeleteConfig**](SecretsApi.md#kubernetesdeleteconfig) | **DELETE** /{kubernetes_mount_path}/config | 
+[**KubernetesDeleteRole**](SecretsApi.md#kubernetesdeleterole) | **DELETE** /{kubernetes_mount_path}/roles/{name} | 
+[**KubernetesListRoles**](SecretsApi.md#kuberneteslistroles) | **GET** /{kubernetes_mount_path}/roles | 
+[**KubernetesReadConfig**](SecretsApi.md#kubernetesreadconfig) | **GET** /{kubernetes_mount_path}/config | 
+[**KubernetesReadRole**](SecretsApi.md#kubernetesreadrole) | **GET** /{kubernetes_mount_path}/roles/{name} | 
+[**KubernetesWriteConfig**](SecretsApi.md#kuberneteswriteconfig) | **POST** /{kubernetes_mount_path}/config | 
+[**KubernetesWriteCredentials**](SecretsApi.md#kuberneteswritecredentials) | **POST** /{kubernetes_mount_path}/creds/{name} | 
+[**KubernetesWriteRole**](SecretsApi.md#kuberneteswriterole) | **POST** /{kubernetes_mount_path}/roles/{name} | 
+[**LDAPCheckInLibrary**](SecretsApi.md#ldapcheckinlibrary) | **POST** /{ldap_mount_path}/library/{name}/check-in | Check service accounts in to the library.
+[**LDAPCheckInManageLibrary**](SecretsApi.md#ldapcheckinmanagelibrary) | **POST** /{ldap_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
+[**LDAPCheckOutLibrary**](SecretsApi.md#ldapcheckoutlibrary) | **POST** /{ldap_mount_path}/library/{name}/check-out | Check a service account out from the library.
+[**LDAPDeleteConfig**](SecretsApi.md#ldapdeleteconfig) | **DELETE** /{ldap_mount_path}/config | 
+[**LDAPDeleteLibrary**](SecretsApi.md#ldapdeletelibrary) | **DELETE** /{ldap_mount_path}/library/{name} | Delete a library set.
+[**LDAPDeleteRole**](SecretsApi.md#ldapdeleterole) | **DELETE** /{ldap_mount_path}/role/{name} | 
+[**LDAPDeleteStaticRole**](SecretsApi.md#ldapdeletestaticrole) | **DELETE** /{ldap_mount_path}/static-role/{name} | 
+[**LDAPListLibraries**](SecretsApi.md#ldaplistlibraries) | **GET** /{ldap_mount_path}/library | 
+[**LDAPListRoles**](SecretsApi.md#ldaplistroles) | **GET** /{ldap_mount_path}/role | 
+[**LDAPListStaticRoles**](SecretsApi.md#ldapliststaticroles) | **GET** /{ldap_mount_path}/static-role | 
+[**LDAPReadConfig**](SecretsApi.md#ldapreadconfig) | **GET** /{ldap_mount_path}/config | 
+[**LDAPReadCredentials**](SecretsApi.md#ldapreadcredentials) | **GET** /{ldap_mount_path}/creds/{name} | 
+[**LDAPReadLibrary**](SecretsApi.md#ldapreadlibrary) | **GET** /{ldap_mount_path}/library/{name} | Read a library set.
+[**LDAPReadLibraryStatus**](SecretsApi.md#ldapreadlibrarystatus) | **GET** /{ldap_mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
+[**LDAPReadRole**](SecretsApi.md#ldapreadrole) | **GET** /{ldap_mount_path}/role/{name} | 
+[**LDAPReadStaticCredentials**](SecretsApi.md#ldapreadstaticcredentials) | **GET** /{ldap_mount_path}/static-cred/{name} | 
+[**LDAPReadStaticRole**](SecretsApi.md#ldapreadstaticrole) | **GET** /{ldap_mount_path}/static-role/{name} | 
+[**LDAPRotateRole**](SecretsApi.md#ldaprotaterole) | **POST** /{ldap_mount_path}/rotate-role/{name} | 
+[**LDAPRotateRoot**](SecretsApi.md#ldaprotateroot) | **POST** /{ldap_mount_path}/rotate-root | 
+[**LDAPWriteConfig**](SecretsApi.md#ldapwriteconfig) | **POST** /{ldap_mount_path}/config | 
+[**LDAPWriteLibrary**](SecretsApi.md#ldapwritelibrary) | **POST** /{ldap_mount_path}/library/{name} | Update a library set.
+[**LDAPWriteRole**](SecretsApi.md#ldapwriterole) | **POST** /{ldap_mount_path}/role/{name} | 
+[**LDAPWriteStaticRole**](SecretsApi.md#ldapwritestaticrole) | **POST** /{ldap_mount_path}/static-role/{name} | 
+[**MongoDBAtlasDeleteRole**](SecretsApi.md#mongodbatlasdeleterole) | **DELETE** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+[**MongoDBAtlasListRoles**](SecretsApi.md#mongodbatlaslistroles) | **GET** /{mongodbatlas_mount_path}/roles | List the existing roles in this backend
+[**MongoDBAtlasReadConfig**](SecretsApi.md#mongodbatlasreadconfig) | **GET** /{mongodbatlas_mount_path}/config | Configure the  credentials that are used to manage Database Users.
+[**MongoDBAtlasReadCredentials**](SecretsApi.md#mongodbatlasreadcredentials) | **GET** /{mongodbatlas_mount_path}/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
+[**MongoDBAtlasReadRole**](SecretsApi.md#mongodbatlasreadrole) | **GET** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+[**MongoDBAtlasWriteConfig**](SecretsApi.md#mongodbatlaswriteconfig) | **POST** /{mongodbatlas_mount_path}/config | Configure the  credentials that are used to manage Database Users.
+[**MongoDBAtlasWriteCredentials**](SecretsApi.md#mongodbatlaswritecredentials) | **POST** /{mongodbatlas_mount_path}/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
+[**MongoDBAtlasWriteRole**](SecretsApi.md#mongodbatlaswriterole) | **POST** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
+[**NomadDeleteAccessConfig**](SecretsApi.md#nomaddeleteaccessconfig) | **DELETE** /{nomad_mount_path}/config/access | 
+[**NomadDeleteLeaseConfig**](SecretsApi.md#nomaddeleteleaseconfig) | **DELETE** /{nomad_mount_path}/config/lease | Configure the lease parameters for generated tokens
+[**NomadDeleteRole**](SecretsApi.md#nomaddeleterole) | **DELETE** /{nomad_mount_path}/role/{name} | 
+[**NomadListRoles**](SecretsApi.md#nomadlistroles) | **GET** /{nomad_mount_path}/role | 
+[**NomadReadAccessConfig**](SecretsApi.md#nomadreadaccessconfig) | **GET** /{nomad_mount_path}/config/access | 
+[**NomadReadCredentials**](SecretsApi.md#nomadreadcredentials) | **GET** /{nomad_mount_path}/creds/{name} | 
+[**NomadReadLeaseConfig**](SecretsApi.md#nomadreadleaseconfig) | **GET** /{nomad_mount_path}/config/lease | Configure the lease parameters for generated tokens
+[**NomadReadRole**](SecretsApi.md#nomadreadrole) | **GET** /{nomad_mount_path}/role/{name} | 
+[**NomadWriteAccessConfig**](SecretsApi.md#nomadwriteaccessconfig) | **POST** /{nomad_mount_path}/config/access | 
+[**NomadWriteLeaseConfig**](SecretsApi.md#nomadwriteleaseconfig) | **POST** /{nomad_mount_path}/config/lease | Configure the lease parameters for generated tokens
+[**NomadWriteRole**](SecretsApi.md#nomadwriterole) | **POST** /{nomad_mount_path}/role/{name} | 
+[**OpenLDAPCheckInLibrary**](SecretsApi.md#openldapcheckinlibrary) | **POST** /{openldap_mount_path}/library/{name}/check-in | Check service accounts in to the library.
+[**OpenLDAPCheckInManageLibrary**](SecretsApi.md#openldapcheckinmanagelibrary) | **POST** /{openldap_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
+[**OpenLDAPCheckOutLibrary**](SecretsApi.md#openldapcheckoutlibrary) | **POST** /{openldap_mount_path}/library/{name}/check-out | Check a service account out from the library.
+[**OpenLDAPDeleteConfig**](SecretsApi.md#openldapdeleteconfig) | **DELETE** /{openldap_mount_path}/config | 
+[**OpenLDAPDeleteLibrary**](SecretsApi.md#openldapdeletelibrary) | **DELETE** /{openldap_mount_path}/library/{name} | Delete a library set.
+[**OpenLDAPDeleteRole**](SecretsApi.md#openldapdeleterole) | **DELETE** /{openldap_mount_path}/role/{name} | 
+[**OpenLDAPDeleteStaticRole**](SecretsApi.md#openldapdeletestaticrole) | **DELETE** /{openldap_mount_path}/static-role/{name} | 
+[**OpenLDAPListLibraries**](SecretsApi.md#openldaplistlibraries) | **GET** /{openldap_mount_path}/library | 
+[**OpenLDAPListRoles**](SecretsApi.md#openldaplistroles) | **GET** /{openldap_mount_path}/role | 
+[**OpenLDAPListStaticRoles**](SecretsApi.md#openldapliststaticroles) | **GET** /{openldap_mount_path}/static-role | 
+[**OpenLDAPReadConfig**](SecretsApi.md#openldapreadconfig) | **GET** /{openldap_mount_path}/config | 
+[**OpenLDAPReadCredentials**](SecretsApi.md#openldapreadcredentials) | **GET** /{openldap_mount_path}/creds/{name} | 
+[**OpenLDAPReadLibrary**](SecretsApi.md#openldapreadlibrary) | **GET** /{openldap_mount_path}/library/{name} | Read a library set.
+[**OpenLDAPReadLibraryStatus**](SecretsApi.md#openldapreadlibrarystatus) | **GET** /{openldap_mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
+[**OpenLDAPReadRole**](SecretsApi.md#openldapreadrole) | **GET** /{openldap_mount_path}/role/{name} | 
+[**OpenLDAPReadStaticCredentials**](SecretsApi.md#openldapreadstaticcredentials) | **GET** /{openldap_mount_path}/static-cred/{name} | 
+[**OpenLDAPReadStaticRole**](SecretsApi.md#openldapreadstaticrole) | **GET** /{openldap_mount_path}/static-role/{name} | 
+[**OpenLDAPRotateRole**](SecretsApi.md#openldaprotaterole) | **POST** /{openldap_mount_path}/rotate-role/{name} | 
+[**OpenLDAPRotateRoot**](SecretsApi.md#openldaprotateroot) | **POST** /{openldap_mount_path}/rotate-root | 
+[**OpenLDAPWriteConfig**](SecretsApi.md#openldapwriteconfig) | **POST** /{openldap_mount_path}/config | 
+[**OpenLDAPWriteLibrary**](SecretsApi.md#openldapwritelibrary) | **POST** /{openldap_mount_path}/library/{name} | Update a library set.
+[**OpenLDAPWriteRole**](SecretsApi.md#openldapwriterole) | **POST** /{openldap_mount_path}/role/{name} | 
+[**OpenLDAPWriteStaticRole**](SecretsApi.md#openldapwritestaticrole) | **POST** /{openldap_mount_path}/static-role/{name} | 
+[**PKIBundleWrite**](SecretsApi.md#pkibundlewrite) | **POST** /{pki_mount_path}/bundle | 
+[**PKIDeleteKey**](SecretsApi.md#pkideletekey) | **DELETE** /{pki_mount_path}/key/{key_ref} | 
+[**PKIDeleteRole**](SecretsApi.md#pkideleterole) | **DELETE** /{pki_mount_path}/roles/{name} | 
+[**PKIDeleteRoot**](SecretsApi.md#pkideleteroot) | **DELETE** /{pki_mount_path}/root | 
+[**PKIGenerateRoot**](SecretsApi.md#pkigenerateroot) | **POST** /{pki_mount_path}/root/generate/{exported} | 
+[**PKIImportKeys**](SecretsApi.md#pkiimportkeys) | **POST** /{pki_mount_path}/keys/import | 
+[**PKIIssuerIssueRole**](SecretsApi.md#pkiissuerissuerole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/issue/{role} | 
+[**PKIIssuerResignCRLs**](SecretsApi.md#pkiissuerresigncrls) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/resign-crls | 
+[**PKIIssuerRevoke**](SecretsApi.md#pkiissuerrevoke) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/revoke | 
+[**PKIIssuerSignIntermediate**](SecretsApi.md#pkiissuersignintermediate) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-intermediate | 
+[**PKIIssuerSignRevocationList**](SecretsApi.md#pkiissuersignrevocationlist) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-revocation-list | 
+[**PKIIssuerSignRole**](SecretsApi.md#pkiissuersignrole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign/{role} | 
+[**PKIIssuerSignSelfIssued**](SecretsApi.md#pkiissuersignselfissued) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-self-issued | 
+[**PKIIssuerSignVerbatim**](SecretsApi.md#pkiissuersignverbatim) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-verbatim | 
+[**PKIIssuerSignVerbatimRole**](SecretsApi.md#pkiissuersignverbatimrole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-verbatim/{role} | 
+[**PKIIssuersGenerateIntermediate**](SecretsApi.md#pkiissuersgenerateintermediate) | **POST** /{pki_mount_path}/issuers/generate/intermediate/{exported} | 
+[**PKIIssuersGenerateRoot**](SecretsApi.md#pkiissuersgenerateroot) | **POST** /{pki_mount_path}/issuers/generate/root/{exported} | 
+[**PKIIssuersList**](SecretsApi.md#pkiissuerslist) | **GET** /{pki_mount_path}/issuers | 
+[**PKIListCerts**](SecretsApi.md#pkilistcerts) | **GET** /{pki_mount_path}/certs | 
+[**PKIListCertsRevoked**](SecretsApi.md#pkilistcertsrevoked) | **GET** /{pki_mount_path}/certs/revoked | 
+[**PKIListKeys**](SecretsApi.md#pkilistkeys) | **GET** /{pki_mount_path}/keys | 
+[**PKIListRoles**](SecretsApi.md#pkilistroles) | **GET** /{pki_mount_path}/roles | 
+[**PKIReadAutoTidyConfig**](SecretsApi.md#pkireadautotidyconfig) | **GET** /{pki_mount_path}/config/auto-tidy | 
+[**PKIReadCA**](SecretsApi.md#pkireadca) | **GET** /{pki_mount_path}/ca | 
+[**PKIReadCAChain**](SecretsApi.md#pkireadcachain) | **GET** /{pki_mount_path}/ca_chain | 
+[**PKIReadCAPem**](SecretsApi.md#pkireadcapem) | **GET** /{pki_mount_path}/ca/pem | 
+[**PKIReadCRL**](SecretsApi.md#pkireadcrl) | **GET** /{pki_mount_path}/crl | 
+[**PKIReadCRLConfig**](SecretsApi.md#pkireadcrlconfig) | **GET** /{pki_mount_path}/config/crl | 
+[**PKIReadCRLRotate**](SecretsApi.md#pkireadcrlrotate) | **GET** /{pki_mount_path}/crl/rotate | 
+[**PKIReadCRLRotateDelta**](SecretsApi.md#pkireadcrlrotatedelta) | **GET** /{pki_mount_path}/crl/rotate-delta | 
+[**PKIReadCert**](SecretsApi.md#pkireadcert) | **GET** /{pki_mount_path}/cert/{serial} | 
+[**PKIReadCertCAChain**](SecretsApi.md#pkireadcertcachain) | **GET** /{pki_mount_path}/cert/ca_chain | 
+[**PKIReadCertRaw**](SecretsApi.md#pkireadcertraw) | **GET** /{pki_mount_path}/cert/{serial}/raw | 
+[**PKIReadCertRawPem**](SecretsApi.md#pkireadcertrawpem) | **GET** /{pki_mount_path}/cert/{serial}/raw/pem | 
+[**PKIReadClusterConfig**](SecretsApi.md#pkireadclusterconfig) | **GET** /{pki_mount_path}/config/cluster | 
+[**PKIReadDeltaCRL**](SecretsApi.md#pkireaddeltacrl) | **GET** /{pki_mount_path}/delta-crl | 
+[**PKIReadIssuersConfig**](SecretsApi.md#pkireadissuersconfig) | **GET** /{pki_mount_path}/config/issuers | 
+[**PKIReadKey**](SecretsApi.md#pkireadkey) | **GET** /{pki_mount_path}/key/{key_ref} | 
+[**PKIReadKeysConfig**](SecretsApi.md#pkireadkeysconfig) | **GET** /{pki_mount_path}/config/keys | 
+[**PKIReadOCSPReq**](SecretsApi.md#pkireadocspreq) | **GET** /{pki_mount_path}/ocsp/{req} | 
+[**PKIReadRole**](SecretsApi.md#pkireadrole) | **GET** /{pki_mount_path}/roles/{name} | 
+[**PKIReadURLConfig**](SecretsApi.md#pkireadurlconfig) | **GET** /{pki_mount_path}/config/urls | 
+[**PKIReplaceRoot**](SecretsApi.md#pkireplaceroot) | **POST** /{pki_mount_path}/root/replace | 
+[**PKIRevoke**](SecretsApi.md#pkirevoke) | **POST** /{pki_mount_path}/revoke | 
+[**PKIRevokeWithKey**](SecretsApi.md#pkirevokewithkey) | **POST** /{pki_mount_path}/revoke-with-key | 
+[**PKIRootSignIntermediate**](SecretsApi.md#pkirootsignintermediate) | **POST** /{pki_mount_path}/root/sign-intermediate | 
+[**PKIRootSignSelfIssued**](SecretsApi.md#pkirootsignselfissued) | **POST** /{pki_mount_path}/root/sign-self-issued | 
+[**PKIRotateRoot**](SecretsApi.md#pkirotateroot) | **POST** /{pki_mount_path}/root/rotate/{exported} | 
+[**PKISignRole**](SecretsApi.md#pkisignrole) | **POST** /{pki_mount_path}/sign/{role} | 
+[**PKISignVerbatim**](SecretsApi.md#pkisignverbatim) | **POST** /{pki_mount_path}/sign-verbatim | 
+[**PKISignVerbatimRole**](SecretsApi.md#pkisignverbatimrole) | **POST** /{pki_mount_path}/sign-verbatim/{role} | 
+[**PKITidy**](SecretsApi.md#pkitidy) | **POST** /{pki_mount_path}/tidy | 
+[**PKITidyCancel**](SecretsApi.md#pkitidycancel) | **POST** /{pki_mount_path}/tidy-cancel | 
+[**PKITidyStatus**](SecretsApi.md#pkitidystatus) | **GET** /{pki_mount_path}/tidy-status | 
+[**PKIWriteAutoTidyConfig**](SecretsApi.md#pkiwriteautotidyconfig) | **POST** /{pki_mount_path}/config/auto-tidy | 
+[**PKIWriteCAConfig**](SecretsApi.md#pkiwritecaconfig) | **POST** /{pki_mount_path}/config/ca | 
+[**PKIWriteCRLConfig**](SecretsApi.md#pkiwritecrlconfig) | **POST** /{pki_mount_path}/config/crl | 
+[**PKIWriteCerts**](SecretsApi.md#pkiwritecerts) | **POST** /{pki_mount_path}/cert | 
+[**PKIWriteClusterConfig**](SecretsApi.md#pkiwriteclusterconfig) | **POST** /{pki_mount_path}/config/cluster | 
+[**PKIWriteIntermediateCrossSign**](SecretsApi.md#pkiwriteintermediatecrosssign) | **POST** /{pki_mount_path}/intermediate/cross-sign | 
+[**PKIWriteIntermediateGenerate**](SecretsApi.md#pkiwriteintermediategenerate) | **POST** /{pki_mount_path}/intermediate/generate/{exported} | 
+[**PKIWriteIntermediateSetSigned**](SecretsApi.md#pkiwriteintermediatesetsigned) | **POST** /{pki_mount_path}/intermediate/set-signed | 
+[**PKIWriteInternalExported**](SecretsApi.md#pkiwriteinternalexported) | **POST** /{pki_mount_path}/internal|exported | 
+[**PKIWriteIssueRole**](SecretsApi.md#pkiwriteissuerole) | **POST** /{pki_mount_path}/issue/{role} | 
+[**PKIWriteIssuerRefDerPEM**](SecretsApi.md#pkiwriteissuerrefderpem) | **POST** /{pki_mount_path}/{issuer_ref}/der|/pem | 
+[**PKIWriteIssuersConfig**](SecretsApi.md#pkiwriteissuersconfig) | **POST** /{pki_mount_path}/config/issuers | 
+[**PKIWriteJSON**](SecretsApi.md#pkiwritejson) | **POST** /{pki_mount_path}//json | 
+[**PKIWriteKMS**](SecretsApi.md#pkiwritekms) | **POST** /{pki_mount_path}/kms | 
+[**PKIWriteKey**](SecretsApi.md#pkiwritekey) | **POST** /{pki_mount_path}/key/{key_ref} | 
+[**PKIWriteKeysConfig**](SecretsApi.md#pkiwritekeysconfig) | **POST** /{pki_mount_path}/config/keys | 
+[**PKIWriteOCSP**](SecretsApi.md#pkiwriteocsp) | **POST** /{pki_mount_path}/ocsp | 
+[**PKIWriteRole**](SecretsApi.md#pkiwriterole) | **POST** /{pki_mount_path}/roles/{name} | 
+[**PKIWriteURLConfig**](SecretsApi.md#pkiwriteurlconfig) | **POST** /{pki_mount_path}/config/urls | 
+[**PkiDeleteIssuerRefDerPem**](SecretsApi.md#pkideleteissuerrefderpem) | **DELETE** /{pki_mount_path}/{issuer_ref}/der|/pem | 
+[**PkiDeleteJson**](SecretsApi.md#pkideletejson) | **DELETE** /{pki_mount_path}//json | 
+[**PkiReadDelta**](SecretsApi.md#pkireaddelta) | **GET** /{pki_mount_path}//delta | 
+[**PkiReadDeltaPem**](SecretsApi.md#pkireaddeltapem) | **GET** /{pki_mount_path}//delta/pem | 
+[**PkiReadDer**](SecretsApi.md#pkireadder) | **GET** /{pki_mount_path}//der | 
+[**PkiReadIssuerRefCrlPemDerDeltaPem**](SecretsApi.md#pkireadissuerrefcrlpemderdeltapem) | **GET** /{pki_mount_path}/{issuer_ref}/crl/pem|/der|/delta/pem | 
+[**PkiReadIssuerRefDerPem**](SecretsApi.md#pkireadissuerrefderpem) | **GET** /{pki_mount_path}/{issuer_ref}/der|/pem | 
+[**PkiReadJson**](SecretsApi.md#pkireadjson) | **GET** /{pki_mount_path}//json | 
+[**PkiReadPem**](SecretsApi.md#pkireadpem) | **GET** /{pki_mount_path}//pem | 
+[**RabbitMQDeleteRole**](SecretsApi.md#rabbitmqdeleterole) | **DELETE** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**RabbitMQListRoles**](SecretsApi.md#rabbitmqlistroles) | **GET** /{rabbitmq_mount_path}/roles | Manage the roles that can be created with this backend.
+[**RabbitMQReadCredentials**](SecretsApi.md#rabbitmqreadcredentials) | **GET** /{rabbitmq_mount_path}/creds/{name} | Request RabbitMQ credentials for a certain role.
+[**RabbitMQReadLeaseConfig**](SecretsApi.md#rabbitmqreadleaseconfig) | **GET** /{rabbitmq_mount_path}/config/lease | Configure the lease parameters for generated credentials
+[**RabbitMQReadRole**](SecretsApi.md#rabbitmqreadrole) | **GET** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**RabbitMQWriteConnectionConfig**](SecretsApi.md#rabbitmqwriteconnectionconfig) | **POST** /{rabbitmq_mount_path}/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
+[**RabbitMQWriteLeaseConfig**](SecretsApi.md#rabbitmqwriteleaseconfig) | **POST** /{rabbitmq_mount_path}/config/lease | Configure the lease parameters for generated credentials
+[**RabbitMQWriteRole**](SecretsApi.md#rabbitmqwriterole) | **POST** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
+[**SSHDeleteCAConfig**](SecretsApi.md#sshdeletecaconfig) | **DELETE** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
+[**SSHDeleteKeys**](SecretsApi.md#sshdeletekeys) | **DELETE** /{ssh_mount_path}/keys/{key_name} | Register a shared private key with Vault.
+[**SSHDeleteRole**](SecretsApi.md#sshdeleterole) | **DELETE** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
+[**SSHDeleteZeroAddressConfig**](SecretsApi.md#sshdeletezeroaddressconfig) | **DELETE** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+[**SSHListRoles**](SecretsApi.md#sshlistroles) | **GET** /{ssh_mount_path}/roles | Manage the &#x27;roles&#x27; that can be created with this backend.
+[**SSHLookup**](SecretsApi.md#sshlookup) | **POST** /{ssh_mount_path}/lookup | List all the roles associated with the given IP address.
+[**SSHReadCAConfig**](SecretsApi.md#sshreadcaconfig) | **GET** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
+[**SSHReadPublicKey**](SecretsApi.md#sshreadpublickey) | **GET** /{ssh_mount_path}/public_key | Retrieve the public key.
+[**SSHReadRole**](SecretsApi.md#sshreadrole) | **GET** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
+[**SSHReadZeroAddressConfig**](SecretsApi.md#sshreadzeroaddressconfig) | **GET** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+[**SSHSign**](SecretsApi.md#sshsign) | **POST** /{ssh_mount_path}/sign/{role} | Request signing an SSH key using a certain role with the provided details.
+[**SSHVerify**](SecretsApi.md#sshverify) | **POST** /{ssh_mount_path}/verify | Validate the OTP provided by Vault SSH Agent.
+[**SSHWriteCAConfig**](SecretsApi.md#sshwritecaconfig) | **POST** /{ssh_mount_path}/config/ca | Set the SSH private key used for signing certificates.
+[**SSHWriteCredentials**](SecretsApi.md#sshwritecredentials) | **POST** /{ssh_mount_path}/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
+[**SSHWriteIssue**](SecretsApi.md#sshwriteissue) | **POST** /{ssh_mount_path}/issue/{role} | 
+[**SSHWriteKeys**](SecretsApi.md#sshwritekeys) | **POST** /{ssh_mount_path}/keys/{key_name} | Register a shared private key with Vault.
+[**SSHWriteRole**](SecretsApi.md#sshwriterole) | **POST** /{ssh_mount_path}/roles/{role} | Manage the &#x27;roles&#x27; that can be created with this backend.
+[**SSHWriteZeroAddressConfig**](SecretsApi.md#sshwritezeroaddressconfig) | **POST** /{ssh_mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+[**TOTPDeleteKey**](SecretsApi.md#totpdeletekey) | **DELETE** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
+[**TOTPListKeys**](SecretsApi.md#totplistkeys) | **GET** /{totp_mount_path}/keys | Manage the keys that can be created with this backend.
+[**TOTPReadCode**](SecretsApi.md#totpreadcode) | **GET** /{totp_mount_path}/code/{name} | Request time-based one-time use password or validate a password for a certain key .
+[**TOTPReadKey**](SecretsApi.md#totpreadkey) | **GET** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
+[**TOTPWriteCode**](SecretsApi.md#totpwritecode) | **POST** /{totp_mount_path}/code/{name} | Request time-based one-time use password or validate a password for a certain key .
+[**TOTPWriteKey**](SecretsApi.md#totpwritekey) | **POST** /{totp_mount_path}/keys/{name} | Manage the keys that can be created with this backend.
+[**TerraformDeleteConfig**](SecretsApi.md#terraformdeleteconfig) | **DELETE** /{terraform_mount_path}/config | 
+[**TerraformDeleteRole**](SecretsApi.md#terraformdeleterole) | **DELETE** /{terraform_mount_path}/role/{name} | 
+[**TerraformListRoles**](SecretsApi.md#terraformlistroles) | **GET** /{terraform_mount_path}/role | 
+[**TerraformReadConfig**](SecretsApi.md#terraformreadconfig) | **GET** /{terraform_mount_path}/config | 
+[**TerraformReadCredentials**](SecretsApi.md#terraformreadcredentials) | **GET** /{terraform_mount_path}/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
+[**TerraformReadRole**](SecretsApi.md#terraformreadrole) | **GET** /{terraform_mount_path}/role/{name} | 
+[**TerraformRotateRole**](SecretsApi.md#terraformrotaterole) | **POST** /{terraform_mount_path}/rotate-role/{name} | 
+[**TerraformWriteConfig**](SecretsApi.md#terraformwriteconfig) | **POST** /{terraform_mount_path}/config | 
+[**TerraformWriteCredentials**](SecretsApi.md#terraformwritecredentials) | **POST** /{terraform_mount_path}/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
+[**TerraformWriteRole**](SecretsApi.md#terraformwriterole) | **POST** /{terraform_mount_path}/role/{name} | 
+[**TransitBackup**](SecretsApi.md#transitbackup) | **GET** /{transit_mount_path}/backup/{name} | Backup the named key
+[**TransitDecrypt**](SecretsApi.md#transitdecrypt) | **POST** /{transit_mount_path}/decrypt/{name} | Decrypt a ciphertext value using a named key
+[**TransitDeleteKey**](SecretsApi.md#transitdeletekey) | **DELETE** /{transit_mount_path}/keys/{name} | Managed named encryption keys
+[**TransitEncrypt**](SecretsApi.md#transitencrypt) | **POST** /{transit_mount_path}/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
+[**TransitExport**](SecretsApi.md#transitexport) | **GET** /{transit_mount_path}/export/{type}/{name} | Export named encryption or signing key
+[**TransitExportVersion**](SecretsApi.md#transitexportversion) | **GET** /{transit_mount_path}/export/{type}/{name}/{version} | Export named encryption or signing key
+[**TransitGenerateDataKey**](SecretsApi.md#transitgeneratedatakey) | **POST** /{transit_mount_path}/datakey/{plaintext}/{name} | Generate a data key
+[**TransitGenerateHMAC**](SecretsApi.md#transitgeneratehmac) | **POST** /{transit_mount_path}/hmac/{name} | Generate an HMAC for input data using the named key
+[**TransitGenerateHMACWithAlgorithm**](SecretsApi.md#transitgeneratehmacwithalgorithm) | **POST** /{transit_mount_path}/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
+[**TransitGenerateRandom**](SecretsApi.md#transitgeneraterandom) | **POST** /{transit_mount_path}/random | Generate random bytes
+[**TransitGenerateRandomSource**](SecretsApi.md#transitgeneraterandomsource) | **POST** /{transit_mount_path}/random/{source} | Generate random bytes
+[**TransitGenerateRandomSourceBytes**](SecretsApi.md#transitgeneraterandomsourcebytes) | **POST** /{transit_mount_path}/random/{source}/{urlbytes} | Generate random bytes
+[**TransitHash**](SecretsApi.md#transithash) | **POST** /{transit_mount_path}/hash | Generate a hash sum for input data
+[**TransitHashWithAlgorithm**](SecretsApi.md#transithashwithalgorithm) | **POST** /{transit_mount_path}/hash/{urlalgorithm} | Generate a hash sum for input data
+[**TransitImportKey**](SecretsApi.md#transitimportkey) | **POST** /{transit_mount_path}/keys/{name}/import | Imports an externally-generated key into a new transit key
+[**TransitImportKeyVersion**](SecretsApi.md#transitimportkeyversion) | **POST** /{transit_mount_path}/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
+[**TransitListKeys**](SecretsApi.md#transitlistkeys) | **GET** /{transit_mount_path}/keys | Managed named encryption keys
+[**TransitReadCacheConfig**](SecretsApi.md#transitreadcacheconfig) | **GET** /{transit_mount_path}/cache-config | Returns the size of the active cache
+[**TransitReadConfigKeys**](SecretsApi.md#transitreadconfigkeys) | **GET** /{transit_mount_path}/config/keys | Configuration common across all keys
+[**TransitReadKey**](SecretsApi.md#transitreadkey) | **GET** /{transit_mount_path}/keys/{name} | Managed named encryption keys
+[**TransitReadWrappingKey**](SecretsApi.md#transitreadwrappingkey) | **GET** /{transit_mount_path}/wrapping_key | Returns the public key to use for wrapping imported keys
+[**TransitRestore**](SecretsApi.md#transitrestore) | **POST** /{transit_mount_path}/restore | Restore the named key
+[**TransitRestoreKey**](SecretsApi.md#transitrestorekey) | **POST** /{transit_mount_path}/restore/{name} | Restore the named key
+[**TransitRewrap**](SecretsApi.md#transitrewrap) | **POST** /{transit_mount_path}/rewrap/{name} | Rewrap ciphertext
+[**TransitRotateKey**](SecretsApi.md#transitrotatekey) | **POST** /{transit_mount_path}/keys/{name}/rotate | Rotate named encryption key
+[**TransitSign**](SecretsApi.md#transitsign) | **POST** /{transit_mount_path}/sign/{name} | Generate a signature for input data using the named key
+[**TransitSignWithAlgorithm**](SecretsApi.md#transitsignwithalgorithm) | **POST** /{transit_mount_path}/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
+[**TransitTrimKey**](SecretsApi.md#transittrimkey) | **POST** /{transit_mount_path}/keys/{name}/trim | Trim key versions of a named key
+[**TransitVerify**](SecretsApi.md#transitverify) | **POST** /{transit_mount_path}/verify/{name} | Verify a signature or HMAC for input data created using the named key
+[**TransitVerifyWithAlgorithm**](SecretsApi.md#transitverifywithalgorithm) | **POST** /{transit_mount_path}/verify/{name}/{urlalgorithm} | Verify a signature or HMAC for input data created using the named key
+[**TransitWriteCacheConfig**](SecretsApi.md#transitwritecacheconfig) | **POST** /{transit_mount_path}/cache-config | Configures a new cache of the specified size
+[**TransitWriteConfigKeys**](SecretsApi.md#transitwriteconfigkeys) | **POST** /{transit_mount_path}/config/keys | Configuration common across all keys
+[**TransitWriteKey**](SecretsApi.md#transitwritekey) | **POST** /{transit_mount_path}/keys/{name} | Managed named encryption keys
+[**TransitWriteKeyConfig**](SecretsApi.md#transitwritekeyconfig) | **POST** /{transit_mount_path}/keys/{name}/config | Configure a named encryption key
+[**TransitWriteRandomUrlbytes**](SecretsApi.md#transitwriterandomurlbytes) | **POST** /{transit_mount_path}/random/{urlbytes} | Generate random bytes
 
 
 
