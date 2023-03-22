@@ -18,9 +18,9 @@ namespace {{packageName}}
         {{#with operations ~}}
 
         /// <summary>
-        /// To access {{packageName}} {{classname}} methods
+        /// To access {{packageName}} {{cut classname "Api"}} methods
         /// </summary>
-        public {{packageName}}.Api.{{classname}} {{classname}};
+        public {{packageName}}.Api.{{cut classname "Api"}} {{cut classname "Api"}};
 
         {{/with ~}}
         {{/each ~}}
@@ -42,7 +42,7 @@ namespace {{packageName}}
             {{#with apiInfo ~}}
             {{#each apis ~}}
             {{#with operations ~}}
-            this.{{classname}} = new {{packageName}}.Api.{{classname}}(_apiClient);
+            this.{{cut classname "Api"}} = new {{packageName}}.Api.{{cut classname "Api"}}(_apiClient);
             {{/with ~}}
             {{/each ~}}
             {{/with ~}}

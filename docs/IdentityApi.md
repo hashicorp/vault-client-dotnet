@@ -4,111 +4,111 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AliasDeleteByID**](Identity.md#aliasdeletebyid) | **DELETE** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**AliasListByID**](Identity.md#aliaslistbyid) | **GET** /identity/alias/id | List all the alias IDs.
-[**AliasReadByID**](Identity.md#aliasreadbyid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**AliasWrite**](Identity.md#aliaswrite) | **POST** /identity/alias | Create a new alias.
-[**AliasWriteByID**](Identity.md#aliaswritebyid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**EntityBatchDelete**](Identity.md#entitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
-[**EntityDeleteAliasByID**](Identity.md#entitydeletealiasbyid) | **DELETE** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**EntityDeleteByID**](Identity.md#entitydeletebyid) | **DELETE** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**EntityDeleteByName**](Identity.md#entitydeletebyname) | **DELETE** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**EntityListAliasesByID**](Identity.md#entitylistaliasesbyid) | **GET** /identity/entity-alias/id | List all the alias IDs.
-[**EntityListByID**](Identity.md#entitylistbyid) | **GET** /identity/entity/id | List all the entity IDs
-[**EntityListByName**](Identity.md#entitylistbyname) | **GET** /identity/entity/name | List all the entity names
-[**EntityLookup**](Identity.md#entitylookup) | **POST** /identity/lookup/entity | Query entities based on various properties.
-[**EntityMerge**](Identity.md#entitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
-[**EntityReadAliasByID**](Identity.md#entityreadaliasbyid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**EntityReadByID**](Identity.md#entityreadbyid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**EntityReadByName**](Identity.md#entityreadbyname) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**EntityWrite**](Identity.md#entitywrite) | **POST** /identity/entity | Create a new entity
-[**EntityWriteAlias**](Identity.md#entitywritealias) | **POST** /identity/entity-alias | Create a new alias.
-[**EntityWriteAliasByID**](Identity.md#entitywritealiasbyid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**EntityWriteByID**](Identity.md#entitywritebyid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**EntityWriteByName**](Identity.md#entitywritebyname) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**GroupDeleteAliasByID**](Identity.md#groupdeletealiasbyid) | **DELETE** /identity/group-alias/id/{id} | 
-[**GroupDeleteByID**](Identity.md#groupdeletebyid) | **DELETE** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**GroupDeleteByName**](Identity.md#groupdeletebyname) | **DELETE** /identity/group/name/{name} | 
-[**GroupListAliasesByID**](Identity.md#grouplistaliasesbyid) | **GET** /identity/group-alias/id | List all the group alias IDs.
-[**GroupListByID**](Identity.md#grouplistbyid) | **GET** /identity/group/id | List all the group IDs.
-[**GroupListByName**](Identity.md#grouplistbyname) | **GET** /identity/group/name | 
-[**GroupLookup**](Identity.md#grouplookup) | **POST** /identity/lookup/group | Query groups based on various properties.
-[**GroupReadAliasByID**](Identity.md#groupreadaliasbyid) | **GET** /identity/group-alias/id/{id} | 
-[**GroupReadByID**](Identity.md#groupreadbyid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**GroupReadByName**](Identity.md#groupreadbyname) | **GET** /identity/group/name/{name} | 
-[**GroupWrite**](Identity.md#groupwrite) | **POST** /identity/group | Create a new group.
-[**GroupWriteAlias**](Identity.md#groupwritealias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
-[**GroupWriteAliasByID**](Identity.md#groupwritealiasbyid) | **POST** /identity/group-alias/id/{id} | 
-[**GroupWriteByID**](Identity.md#groupwritebyid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**GroupWriteByName**](Identity.md#groupwritebyname) | **POST** /identity/group/name/{name} | 
-[**MFADeleteLoginEnforcement**](Identity.md#mfadeleteloginenforcement) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
-[**MFAListLoginEnforcements**](Identity.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement | List login enforcements
-[**MFAMethodAdminDestroyTOTP**](Identity.md#mfamethodadmindestroytotp) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
-[**MFAMethodAdminGenerateTOTP**](Identity.md#mfamethodadmingeneratetotp) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
-[**MFAMethodDeleteDuo**](Identity.md#mfamethoddeleteduo) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodDeleteOkta**](Identity.md#mfamethoddeleteokta) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodDeletePingID**](Identity.md#mfamethoddeletepingid) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodDeleteTOTP**](Identity.md#mfamethoddeletetotp) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodGenerateTOTP**](Identity.md#mfamethodgeneratetotp) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
-[**MFAMethodList**](Identity.md#mfamethodlist) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
-[**MFAMethodListDuo**](Identity.md#mfamethodlistduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
-[**MFAMethodListOkta**](Identity.md#mfamethodlistokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
-[**MFAMethodListPingID**](Identity.md#mfamethodlistpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
-[**MFAMethodListTOTP**](Identity.md#mfamethodlisttotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
-[**MFAMethodRead**](Identity.md#mfamethodread) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
-[**MFAMethodReadDuo**](Identity.md#mfamethodreadduo) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodReadOkta**](Identity.md#mfamethodreadokta) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodReadPingID**](Identity.md#mfamethodreadpingid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodReadTOTP**](Identity.md#mfamethodreadtotp) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodWriteDuo**](Identity.md#mfamethodwriteduo) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
-[**MFAMethodWriteOkta**](Identity.md#mfamethodwriteokta) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
-[**MFAMethodWritePingID**](Identity.md#mfamethodwritepingid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
-[**MFAMethodWriteTOTP**](Identity.md#mfamethodwritetotp) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
-[**MFAReadLoginEnforcement**](Identity.md#mfareadloginenforcement) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
-[**MFAWriteLoginEnforcement**](Identity.md#mfawriteloginenforcement) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
-[**OIDCDeleteAssignment**](Identity.md#oidcdeleteassignment) | **DELETE** /identity/oidc/assignment/{name} | 
-[**OIDCDeleteClient**](Identity.md#oidcdeleteclient) | **DELETE** /identity/oidc/client/{name} | 
-[**OIDCDeleteKey**](Identity.md#oidcdeletekey) | **DELETE** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**OIDCDeleteProvider**](Identity.md#oidcdeleteprovider) | **DELETE** /identity/oidc/provider/{name} | 
-[**OIDCDeleteRole**](Identity.md#oidcdeleterole) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**OIDCDeleteScope**](Identity.md#oidcdeletescope) | **DELETE** /identity/oidc/scope/{name} | 
-[**OIDCIntrospect**](Identity.md#oidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
-[**OIDCListAssignments**](Identity.md#oidclistassignments) | **GET** /identity/oidc/assignment | 
-[**OIDCListClients**](Identity.md#oidclistclients) | **GET** /identity/oidc/client | 
-[**OIDCListKeys**](Identity.md#oidclistkeys) | **GET** /identity/oidc/key | List OIDC keys
-[**OIDCListProviders**](Identity.md#oidclistproviders) | **GET** /identity/oidc/provider | 
-[**OIDCListRoles**](Identity.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
-[**OIDCListScopes**](Identity.md#oidclistscopes) | **GET** /identity/oidc/scope | 
-[**OIDCReadAssignment**](Identity.md#oidcreadassignment) | **GET** /identity/oidc/assignment/{name} | 
-[**OIDCReadClient**](Identity.md#oidcreadclient) | **GET** /identity/oidc/client/{name} | 
-[**OIDCReadConfig**](Identity.md#oidcreadconfig) | **GET** /identity/oidc/config | OIDC configuration
-[**OIDCReadKey**](Identity.md#oidcreadkey) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**OIDCReadProvider**](Identity.md#oidcreadprovider) | **GET** /identity/oidc/provider/{name} | 
-[**OIDCReadProviderAuthorize**](Identity.md#oidcreadproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
-[**OIDCReadProviderUserInfo**](Identity.md#oidcreadprovideruserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
-[**OIDCReadProviderWellKnownKeys**](Identity.md#oidcreadproviderwellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
-[**OIDCReadProviderWellKnownOpenIDConfiguration**](Identity.md#oidcreadproviderwellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
-[**OIDCReadRole**](Identity.md#oidcreadrole) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**OIDCReadScope**](Identity.md#oidcreadscope) | **GET** /identity/oidc/scope/{name} | 
-[**OIDCReadToken**](Identity.md#oidcreadtoken) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
-[**OIDCReadWellKnownKeys**](Identity.md#oidcreadwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
-[**OIDCReadWellKnownOpenIDConfiguration**](Identity.md#oidcreadwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
-[**OIDCRotateKey**](Identity.md#oidcrotatekey) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
-[**OIDCWriteAssignment**](Identity.md#oidcwriteassignment) | **POST** /identity/oidc/assignment/{name} | 
-[**OIDCWriteClient**](Identity.md#oidcwriteclient) | **POST** /identity/oidc/client/{name} | 
-[**OIDCWriteConfig**](Identity.md#oidcwriteconfig) | **POST** /identity/oidc/config | OIDC configuration
-[**OIDCWriteKey**](Identity.md#oidcwritekey) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**OIDCWriteProvider**](Identity.md#oidcwriteprovider) | **POST** /identity/oidc/provider/{name} | 
-[**OIDCWriteProviderAuthorize**](Identity.md#oidcwriteproviderauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
-[**OIDCWriteProviderToken**](Identity.md#oidcwriteprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
-[**OIDCWriteProviderUserInfo**](Identity.md#oidcwriteprovideruserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
-[**OIDCWriteRole**](Identity.md#oidcwriterole) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**OIDCWriteScope**](Identity.md#oidcwritescope) | **POST** /identity/oidc/scope/{name} | 
-[**PersonaIDDeleteByID**](Identity.md#personaiddeletebyid) | **DELETE** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PersonaIDReadByID**](Identity.md#personaidreadbyid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PersonaIDWriteByID**](Identity.md#personaidwritebyid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PersonaListByID**](Identity.md#personalistbyid) | **GET** /identity/persona/id | List all the alias IDs.
-[**PersonaWrite**](Identity.md#personawrite) | **POST** /identity/persona | Create a new alias.
+[**AliasDeleteByID**](IdentityApi.md#aliasdeletebyid) | **DELETE** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**AliasListByID**](IdentityApi.md#aliaslistbyid) | **GET** /identity/alias/id | List all the alias IDs.
+[**AliasReadByID**](IdentityApi.md#aliasreadbyid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**AliasWrite**](IdentityApi.md#aliaswrite) | **POST** /identity/alias | Create a new alias.
+[**AliasWriteByID**](IdentityApi.md#aliaswritebyid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**EntityBatchDelete**](IdentityApi.md#entitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
+[**EntityDeleteAliasByID**](IdentityApi.md#entitydeletealiasbyid) | **DELETE** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+[**EntityDeleteByID**](IdentityApi.md#entitydeletebyid) | **DELETE** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+[**EntityDeleteByName**](IdentityApi.md#entitydeletebyname) | **DELETE** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+[**EntityListAliasesByID**](IdentityApi.md#entitylistaliasesbyid) | **GET** /identity/entity-alias/id | List all the alias IDs.
+[**EntityListByID**](IdentityApi.md#entitylistbyid) | **GET** /identity/entity/id | List all the entity IDs
+[**EntityListByName**](IdentityApi.md#entitylistbyname) | **GET** /identity/entity/name | List all the entity names
+[**EntityLookup**](IdentityApi.md#entitylookup) | **POST** /identity/lookup/entity | Query entities based on various properties.
+[**EntityMerge**](IdentityApi.md#entitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
+[**EntityReadAliasByID**](IdentityApi.md#entityreadaliasbyid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+[**EntityReadByID**](IdentityApi.md#entityreadbyid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+[**EntityReadByName**](IdentityApi.md#entityreadbyname) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+[**EntityWrite**](IdentityApi.md#entitywrite) | **POST** /identity/entity | Create a new entity
+[**EntityWriteAlias**](IdentityApi.md#entitywritealias) | **POST** /identity/entity-alias | Create a new alias.
+[**EntityWriteAliasByID**](IdentityApi.md#entitywritealiasbyid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+[**EntityWriteByID**](IdentityApi.md#entitywritebyid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+[**EntityWriteByName**](IdentityApi.md#entitywritebyname) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+[**GroupDeleteAliasByID**](IdentityApi.md#groupdeletealiasbyid) | **DELETE** /identity/group-alias/id/{id} | 
+[**GroupDeleteByID**](IdentityApi.md#groupdeletebyid) | **DELETE** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**GroupDeleteByName**](IdentityApi.md#groupdeletebyname) | **DELETE** /identity/group/name/{name} | 
+[**GroupListAliasesByID**](IdentityApi.md#grouplistaliasesbyid) | **GET** /identity/group-alias/id | List all the group alias IDs.
+[**GroupListByID**](IdentityApi.md#grouplistbyid) | **GET** /identity/group/id | List all the group IDs.
+[**GroupListByName**](IdentityApi.md#grouplistbyname) | **GET** /identity/group/name | 
+[**GroupLookup**](IdentityApi.md#grouplookup) | **POST** /identity/lookup/group | Query groups based on various properties.
+[**GroupReadAliasByID**](IdentityApi.md#groupreadaliasbyid) | **GET** /identity/group-alias/id/{id} | 
+[**GroupReadByID**](IdentityApi.md#groupreadbyid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**GroupReadByName**](IdentityApi.md#groupreadbyname) | **GET** /identity/group/name/{name} | 
+[**GroupWrite**](IdentityApi.md#groupwrite) | **POST** /identity/group | Create a new group.
+[**GroupWriteAlias**](IdentityApi.md#groupwritealias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
+[**GroupWriteAliasByID**](IdentityApi.md#groupwritealiasbyid) | **POST** /identity/group-alias/id/{id} | 
+[**GroupWriteByID**](IdentityApi.md#groupwritebyid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**GroupWriteByName**](IdentityApi.md#groupwritebyname) | **POST** /identity/group/name/{name} | 
+[**MFADeleteLoginEnforcement**](IdentityApi.md#mfadeleteloginenforcement) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
+[**MFAListLoginEnforcements**](IdentityApi.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement | List login enforcements
+[**MFAMethodAdminDestroyTOTP**](IdentityApi.md#mfamethodadmindestroytotp) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
+[**MFAMethodAdminGenerateTOTP**](IdentityApi.md#mfamethodadmingeneratetotp) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
+[**MFAMethodDeleteDuo**](IdentityApi.md#mfamethoddeleteduo) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
+[**MFAMethodDeleteOkta**](IdentityApi.md#mfamethoddeleteokta) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
+[**MFAMethodDeletePingID**](IdentityApi.md#mfamethoddeletepingid) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
+[**MFAMethodDeleteTOTP**](IdentityApi.md#mfamethoddeletetotp) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
+[**MFAMethodGenerateTOTP**](IdentityApi.md#mfamethodgeneratetotp) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
+[**MFAMethodList**](IdentityApi.md#mfamethodlist) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
+[**MFAMethodListDuo**](IdentityApi.md#mfamethodlistduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
+[**MFAMethodListOkta**](IdentityApi.md#mfamethodlistokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
+[**MFAMethodListPingID**](IdentityApi.md#mfamethodlistpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
+[**MFAMethodListTOTP**](IdentityApi.md#mfamethodlisttotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
+[**MFAMethodRead**](IdentityApi.md#mfamethodread) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
+[**MFAMethodReadDuo**](IdentityApi.md#mfamethodreadduo) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
+[**MFAMethodReadOkta**](IdentityApi.md#mfamethodreadokta) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
+[**MFAMethodReadPingID**](IdentityApi.md#mfamethodreadpingid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
+[**MFAMethodReadTOTP**](IdentityApi.md#mfamethodreadtotp) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
+[**MFAMethodWriteDuo**](IdentityApi.md#mfamethodwriteduo) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
+[**MFAMethodWriteOkta**](IdentityApi.md#mfamethodwriteokta) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
+[**MFAMethodWritePingID**](IdentityApi.md#mfamethodwritepingid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
+[**MFAMethodWriteTOTP**](IdentityApi.md#mfamethodwritetotp) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
+[**MFAReadLoginEnforcement**](IdentityApi.md#mfareadloginenforcement) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
+[**MFAWriteLoginEnforcement**](IdentityApi.md#mfawriteloginenforcement) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
+[**OIDCDeleteAssignment**](IdentityApi.md#oidcdeleteassignment) | **DELETE** /identity/oidc/assignment/{name} | 
+[**OIDCDeleteClient**](IdentityApi.md#oidcdeleteclient) | **DELETE** /identity/oidc/client/{name} | 
+[**OIDCDeleteKey**](IdentityApi.md#oidcdeletekey) | **DELETE** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**OIDCDeleteProvider**](IdentityApi.md#oidcdeleteprovider) | **DELETE** /identity/oidc/provider/{name} | 
+[**OIDCDeleteRole**](IdentityApi.md#oidcdeleterole) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**OIDCDeleteScope**](IdentityApi.md#oidcdeletescope) | **DELETE** /identity/oidc/scope/{name} | 
+[**OIDCIntrospect**](IdentityApi.md#oidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
+[**OIDCListAssignments**](IdentityApi.md#oidclistassignments) | **GET** /identity/oidc/assignment | 
+[**OIDCListClients**](IdentityApi.md#oidclistclients) | **GET** /identity/oidc/client | 
+[**OIDCListKeys**](IdentityApi.md#oidclistkeys) | **GET** /identity/oidc/key | List OIDC keys
+[**OIDCListProviders**](IdentityApi.md#oidclistproviders) | **GET** /identity/oidc/provider | 
+[**OIDCListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
+[**OIDCListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope | 
+[**OIDCReadAssignment**](IdentityApi.md#oidcreadassignment) | **GET** /identity/oidc/assignment/{name} | 
+[**OIDCReadClient**](IdentityApi.md#oidcreadclient) | **GET** /identity/oidc/client/{name} | 
+[**OIDCReadConfig**](IdentityApi.md#oidcreadconfig) | **GET** /identity/oidc/config | OIDC configuration
+[**OIDCReadKey**](IdentityApi.md#oidcreadkey) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**OIDCReadProvider**](IdentityApi.md#oidcreadprovider) | **GET** /identity/oidc/provider/{name} | 
+[**OIDCReadProviderAuthorize**](IdentityApi.md#oidcreadproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
+[**OIDCReadProviderUserInfo**](IdentityApi.md#oidcreadprovideruserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
+[**OIDCReadProviderWellKnownKeys**](IdentityApi.md#oidcreadproviderwellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
+[**OIDCReadProviderWellKnownOpenIDConfiguration**](IdentityApi.md#oidcreadproviderwellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
+[**OIDCReadRole**](IdentityApi.md#oidcreadrole) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**OIDCReadScope**](IdentityApi.md#oidcreadscope) | **GET** /identity/oidc/scope/{name} | 
+[**OIDCReadToken**](IdentityApi.md#oidcreadtoken) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
+[**OIDCReadWellKnownKeys**](IdentityApi.md#oidcreadwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
+[**OIDCReadWellKnownOpenIDConfiguration**](IdentityApi.md#oidcreadwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
+[**OIDCRotateKey**](IdentityApi.md#oidcrotatekey) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
+[**OIDCWriteAssignment**](IdentityApi.md#oidcwriteassignment) | **POST** /identity/oidc/assignment/{name} | 
+[**OIDCWriteClient**](IdentityApi.md#oidcwriteclient) | **POST** /identity/oidc/client/{name} | 
+[**OIDCWriteConfig**](IdentityApi.md#oidcwriteconfig) | **POST** /identity/oidc/config | OIDC configuration
+[**OIDCWriteKey**](IdentityApi.md#oidcwritekey) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**OIDCWriteProvider**](IdentityApi.md#oidcwriteprovider) | **POST** /identity/oidc/provider/{name} | 
+[**OIDCWriteProviderAuthorize**](IdentityApi.md#oidcwriteproviderauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
+[**OIDCWriteProviderToken**](IdentityApi.md#oidcwriteprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
+[**OIDCWriteProviderUserInfo**](IdentityApi.md#oidcwriteprovideruserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
+[**OIDCWriteRole**](IdentityApi.md#oidcwriterole) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**OIDCWriteScope**](IdentityApi.md#oidcwritescope) | **POST** /identity/oidc/scope/{name} | 
+[**PersonaIDDeleteByID**](IdentityApi.md#personaiddeletebyid) | **DELETE** /identity/persona/id/{id} | Update, read or delete an alias ID.
+[**PersonaIDReadByID**](IdentityApi.md#personaidreadbyid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
+[**PersonaIDWriteByID**](IdentityApi.md#personaidwritebyid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
+[**PersonaListByID**](IdentityApi.md#personalistbyid) | **GET** /identity/persona/id | List all the alias IDs.
+[**PersonaWrite**](IdentityApi.md#personawrite) | **POST** /identity/persona | Create a new alias.
 
 
 
