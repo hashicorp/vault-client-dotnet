@@ -40,7 +40,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#if isDeprecated}}
         [Obsolete]
         {{/if ~}}
-        VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null);
+        VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null);
         {{/each}}
         #endregion Synchronous Operations
     }
@@ -78,7 +78,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#if isDeprecated}}
         [Obsolete]
         {{/if ~}}
-        Task<VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>> {{operationId}}Async({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>> {{operationId}}Async({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
         {{/each}}
         #endregion Asynchronous Operations
     }
@@ -177,13 +177,13 @@ namespace {{packageName}}.{{apiPackage}}
         {{#if isDeprecated}}
         [Obsolete]
         {{/if ~}}
-        public VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
+        public VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
         {
-            {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
+            {{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
-            {{/unless}}{{/with}}{{/each}}
+            {{/unless}}{{/endsWith}}{{/each}}
             {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
@@ -288,13 +288,13 @@ namespace {{packageName}}.{{apiPackage}}
         {{#if isDeprecated}}
         [Obsolete]
         {{/if ~}}
-        public async Task<VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>> {{operationId}}Async({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}>> {{operationId}}Async({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
+            {{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
-            {{/unless}}{{/with}}{{/each}}
+            {{/unless}}{{/endsWith}}{{/each}}
             {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
