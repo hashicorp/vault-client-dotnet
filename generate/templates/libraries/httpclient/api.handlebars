@@ -179,11 +179,11 @@ namespace {{packageName}}.{{apiPackage}}
         {{/if ~}}
         public VaultResponse<{{{returnType}}}{{#unless returnType}}Object{{/unless}}> {{operationId}}({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
         {
-            {{#each pathParams}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
+            {{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
                 throw new {{packageName}}ApiException(400, "Missing required parameter '{{paramName}}' when calling {{cut classname "Api"}}->{{operationId}}");
-            {{/unless}}{{/with}}{{/each}}
+            {{/unless}}{{/endsWith}}{{/each}}
             {{#with bodyParam}}{{#with required}}{{#unless vendorExtensions.x-csharp-value-type}}
             // verify the required parameter '{{paramName}}' is set
             if ({{paramName}} == null)
