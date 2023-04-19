@@ -13,10 +13,10 @@ jobs:
       matrix:
         dotnet-version: [ '3.1.x' ]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v2 # TSCCR: no entry for repository "actions/setup-dotnet"
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
@@ -32,7 +32,7 @@ jobs:
   check-regen:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
       - name: Install rename utility
         run: sudo apt-get -y install rename
@@ -51,14 +51,14 @@ jobs:
   check-readme-format:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
           persist-credentials: false
 
       - name: Ensure the readme is formatted (make format-readme)
-        uses: creyD/prettier_action@v4.3
+        uses: creyD/prettier_action@v4.3 # TSCCR: no entry for repository "creyD/prettier_action"
         with:
           dry: True
           prettier_options: --write README.md
