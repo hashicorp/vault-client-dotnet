@@ -305,7 +305,7 @@ namespace Vault
             if (string.IsNullOrEmpty(token)) throw new ArgumentNullException("Token", "Token cannot be null or empty");
 
             RequestOptions requestOptions = new RequestOptions();
-            requestOptions.Data = new UnwrapRequest(token);
+            requestOptions.Data = new WrappingUnwrapRequest(token);
             var response = await this._apiClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions);
 
             Exception exception = this._exceptionFactory("SystemUnwrapAsync", response);
