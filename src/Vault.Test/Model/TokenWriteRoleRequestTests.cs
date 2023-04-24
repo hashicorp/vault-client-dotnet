@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'AllowedEntityAliases'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowedEntityAliases'
         }
+
         /// <summary>
         /// Test the property 'AllowedPolicies'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowedPolicies'
         }
+
         /// <summary>
         /// Test the property 'AllowedPoliciesGlob'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowedPoliciesGlob'
         }
+
         /// <summary>
         /// Test the property 'BoundCidrs'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'BoundCidrs'
         }
+
         /// <summary>
         /// Test the property 'DisallowedPolicies'
         /// </summary>
@@ -92,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'DisallowedPolicies'
         }
+
         /// <summary>
         /// Test the property 'DisallowedPoliciesGlob'
         /// </summary>
@@ -100,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'DisallowedPoliciesGlob'
         }
+
         /// <summary>
         /// Test the property 'ExplicitMaxTtl'
         /// </summary>
@@ -108,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ExplicitMaxTtl'
         }
+
         /// <summary>
         /// Test the property 'Orphan'
         /// </summary>
@@ -116,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Orphan'
         }
+
         /// <summary>
         /// Test the property 'PathSuffix'
         /// </summary>
@@ -124,6 +135,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'PathSuffix'
         }
+
         /// <summary>
         /// Test the property 'Period'
         /// </summary>
@@ -132,6 +144,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Period'
         }
+
         /// <summary>
         /// Test the property 'Renewable'
         /// </summary>
@@ -140,6 +153,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Renewable'
         }
+
         /// <summary>
         /// Test the property 'TokenBoundCidrs'
         /// </summary>
@@ -148,6 +162,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenBoundCidrs'
         }
+
         /// <summary>
         /// Test the property 'TokenExplicitMaxTtl'
         /// </summary>
@@ -156,6 +171,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenExplicitMaxTtl'
         }
+
         /// <summary>
         /// Test the property 'TokenNoDefaultPolicy'
         /// </summary>
@@ -164,6 +180,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenNoDefaultPolicy'
         }
+
         /// <summary>
         /// Test the property 'TokenNumUses'
         /// </summary>
@@ -172,6 +189,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenNumUses'
         }
+
         /// <summary>
         /// Test the property 'TokenPeriod'
         /// </summary>
@@ -180,6 +198,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenPeriod'
         }
+
         /// <summary>
         /// Test the property 'TokenType'
         /// </summary>
@@ -189,6 +208,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'TokenType'
         }
 
+
     }
 
 }
+
+

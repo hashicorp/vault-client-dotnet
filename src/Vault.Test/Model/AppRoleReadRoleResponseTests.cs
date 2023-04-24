@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'BindSecretId'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'BindSecretId'
         }
+
         /// <summary>
         /// Test the property 'LocalSecretIds'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'LocalSecretIds'
         }
+
         /// <summary>
         /// Test the property 'Period'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Period'
         }
+
         /// <summary>
         /// Test the property 'Policies'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Policies'
         }
+
         /// <summary>
         /// Test the property 'SecretIdBoundCidrs'
         /// </summary>
@@ -92,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'SecretIdBoundCidrs'
         }
+
         /// <summary>
         /// Test the property 'SecretIdNumUses'
         /// </summary>
@@ -100,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'SecretIdNumUses'
         }
+
         /// <summary>
         /// Test the property 'SecretIdTtl'
         /// </summary>
@@ -108,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'SecretIdTtl'
         }
+
         /// <summary>
         /// Test the property 'TokenBoundCidrs'
         /// </summary>
@@ -116,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenBoundCidrs'
         }
+
         /// <summary>
         /// Test the property 'TokenExplicitMaxTtl'
         /// </summary>
@@ -124,6 +135,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenExplicitMaxTtl'
         }
+
         /// <summary>
         /// Test the property 'TokenMaxTtl'
         /// </summary>
@@ -132,6 +144,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenMaxTtl'
         }
+
         /// <summary>
         /// Test the property 'TokenNoDefaultPolicy'
         /// </summary>
@@ -140,6 +153,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenNoDefaultPolicy'
         }
+
         /// <summary>
         /// Test the property 'TokenNumUses'
         /// </summary>
@@ -148,6 +162,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenNumUses'
         }
+
         /// <summary>
         /// Test the property 'TokenPeriod'
         /// </summary>
@@ -156,6 +171,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenPeriod'
         }
+
         /// <summary>
         /// Test the property 'TokenPolicies'
         /// </summary>
@@ -164,6 +180,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenPolicies'
         }
+
         /// <summary>
         /// Test the property 'TokenTtl'
         /// </summary>
@@ -172,6 +189,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenTtl'
         }
+
         /// <summary>
         /// Test the property 'TokenType'
         /// </summary>
@@ -181,6 +199,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'TokenType'
         }
 
+
     }
 
 }
+
+

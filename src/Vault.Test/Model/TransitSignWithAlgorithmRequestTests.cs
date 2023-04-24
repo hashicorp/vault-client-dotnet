@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'Algorithm'
         /// </summary>
@@ -60,6 +63,16 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Algorithm'
         }
+
+        /// <summary>
+        /// Test the property 'BatchInput'
+        /// </summary>
+        [Fact]
+        public void BatchInputTest()
+        {
+            // TODO unit test for the property 'BatchInput'
+        }
+
         /// <summary>
         /// Test the property 'Context'
         /// </summary>
@@ -68,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Context'
         }
+
         /// <summary>
         /// Test the property 'HashAlgorithm'
         /// </summary>
@@ -76,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'HashAlgorithm'
         }
+
         /// <summary>
         /// Test the property 'Input'
         /// </summary>
@@ -84,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Input'
         }
+
         /// <summary>
         /// Test the property 'KeyVersion'
         /// </summary>
@@ -92,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'KeyVersion'
         }
+
         /// <summary>
         /// Test the property 'MarshalingAlgorithm'
         /// </summary>
@@ -100,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'MarshalingAlgorithm'
         }
+
         /// <summary>
         /// Test the property 'Prehashed'
         /// </summary>
@@ -108,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Prehashed'
         }
+
         /// <summary>
         /// Test the property 'SaltLength'
         /// </summary>
@@ -116,6 +135,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'SaltLength'
         }
+
         /// <summary>
         /// Test the property 'SignatureAlgorithm'
         /// </summary>
@@ -125,6 +145,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'SignatureAlgorithm'
         }
 
+
     }
 
 }
+
+

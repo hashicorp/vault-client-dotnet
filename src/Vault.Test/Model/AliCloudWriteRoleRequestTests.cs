@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'InlinePolicies'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'InlinePolicies'
         }
+
         /// <summary>
         /// Test the property 'MaxTtl'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'MaxTtl'
         }
+
         /// <summary>
         /// Test the property 'RemotePolicies'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'RemotePolicies'
         }
+
         /// <summary>
         /// Test the property 'RoleArn'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'RoleArn'
         }
+
         /// <summary>
         /// Test the property 'Ttl'
         /// </summary>
@@ -93,6 +100,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'Ttl'
         }
 
+
     }
 
 }
+
+

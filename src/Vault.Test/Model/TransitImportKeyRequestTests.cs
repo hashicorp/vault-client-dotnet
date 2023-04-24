@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'AllowPlaintextBackup'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowPlaintextBackup'
         }
+
         /// <summary>
         /// Test the property 'AllowRotation'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowRotation'
         }
+
         /// <summary>
         /// Test the property 'AutoRotatePeriod'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AutoRotatePeriod'
         }
+
         /// <summary>
         /// Test the property 'Ciphertext'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Ciphertext'
         }
+
         /// <summary>
         /// Test the property 'Context'
         /// </summary>
@@ -92,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Context'
         }
+
         /// <summary>
         /// Test the property 'Derived'
         /// </summary>
@@ -100,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Derived'
         }
+
         /// <summary>
         /// Test the property 'Exportable'
         /// </summary>
@@ -108,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Exportable'
         }
+
         /// <summary>
         /// Test the property 'HashFunction'
         /// </summary>
@@ -116,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'HashFunction'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -125,6 +136,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'Type'
         }
 
+
     }
 
 }
+
+
