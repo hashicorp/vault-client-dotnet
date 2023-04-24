@@ -34,9 +34,6 @@ jobs:
     steps:
       - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
-      - name: Install rename utility
-        run: sudo apt-get -y install rename
-
       - name: Check regenerated files
         run: |
           make regen
