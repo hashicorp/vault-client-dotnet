@@ -4,121 +4,121 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AliasDeleteByID**](IdentityApi.md#aliasdeletebyid) | **DELETE** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**AliasListByID**](IdentityApi.md#aliaslistbyid) | **GET** /identity/alias/id | List all the alias IDs.
-[**AliasReadByID**](IdentityApi.md#aliasreadbyid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
-[**AliasWrite**](IdentityApi.md#aliaswrite) | **POST** /identity/alias | Create a new alias.
-[**AliasWriteByID**](IdentityApi.md#aliaswritebyid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
+[**AliasCreate**](IdentityApi.md#aliascreate) | **POST** /identity/alias | Create a new alias.
+[**AliasDeleteById**](IdentityApi.md#aliasdeletebyid) | **DELETE** /identity/alias/id/{id} | 
+[**AliasListById**](IdentityApi.md#aliaslistbyid) | **GET** /identity/alias/id | List all the alias IDs.
+[**AliasReadById**](IdentityApi.md#aliasreadbyid) | **GET** /identity/alias/id/{id} | 
+[**AliasUpdateById**](IdentityApi.md#aliasupdatebyid) | **POST** /identity/alias/id/{id} | 
 [**EntityBatchDelete**](IdentityApi.md#entitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
-[**EntityDeleteAliasByID**](IdentityApi.md#entitydeletealiasbyid) | **DELETE** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**EntityDeleteByID**](IdentityApi.md#entitydeletebyid) | **DELETE** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**EntityDeleteByName**](IdentityApi.md#entitydeletebyname) | **DELETE** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**EntityListAliasesByID**](IdentityApi.md#entitylistaliasesbyid) | **GET** /identity/entity-alias/id | List all the alias IDs.
-[**EntityListByID**](IdentityApi.md#entitylistbyid) | **GET** /identity/entity/id | List all the entity IDs
+[**EntityCreate**](IdentityApi.md#entitycreate) | **POST** /identity/entity | Create a new entity
+[**EntityCreateAlias**](IdentityApi.md#entitycreatealias) | **POST** /identity/entity-alias | Create a new alias.
+[**EntityDeleteAliasById**](IdentityApi.md#entitydeletealiasbyid) | **DELETE** /identity/entity-alias/id/{id} | 
+[**EntityDeleteById**](IdentityApi.md#entitydeletebyid) | **DELETE** /identity/entity/id/{id} | 
+[**EntityDeleteByName**](IdentityApi.md#entitydeletebyname) | **DELETE** /identity/entity/name/{name} | 
+[**EntityListAliasesById**](IdentityApi.md#entitylistaliasesbyid) | **GET** /identity/entity-alias/id | List all the alias IDs.
+[**EntityListById**](IdentityApi.md#entitylistbyid) | **GET** /identity/entity/id | List all the entity IDs
 [**EntityListByName**](IdentityApi.md#entitylistbyname) | **GET** /identity/entity/name | List all the entity names
-[**EntityLookup**](IdentityApi.md#entitylookup) | **POST** /identity/lookup/entity | Query entities based on various properties.
+[**EntityLookUp**](IdentityApi.md#entitylookup) | **POST** /identity/lookup/entity | Query entities based on various properties.
 [**EntityMerge**](IdentityApi.md#entitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
-[**EntityReadAliasByID**](IdentityApi.md#entityreadaliasbyid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**EntityReadByID**](IdentityApi.md#entityreadbyid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**EntityReadByName**](IdentityApi.md#entityreadbyname) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**EntityWrite**](IdentityApi.md#entitywrite) | **POST** /identity/entity | Create a new entity
-[**EntityWriteAlias**](IdentityApi.md#entitywritealias) | **POST** /identity/entity-alias | Create a new alias.
-[**EntityWriteAliasByID**](IdentityApi.md#entitywritealiasbyid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-[**EntityWriteByID**](IdentityApi.md#entitywritebyid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-[**EntityWriteByName**](IdentityApi.md#entitywritebyname) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-[**GroupDeleteAliasByID**](IdentityApi.md#groupdeletealiasbyid) | **DELETE** /identity/group-alias/id/{id} | 
-[**GroupDeleteByID**](IdentityApi.md#groupdeletebyid) | **DELETE** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**EntityReadAliasById**](IdentityApi.md#entityreadaliasbyid) | **GET** /identity/entity-alias/id/{id} | 
+[**EntityReadById**](IdentityApi.md#entityreadbyid) | **GET** /identity/entity/id/{id} | 
+[**EntityReadByName**](IdentityApi.md#entityreadbyname) | **GET** /identity/entity/name/{name} | 
+[**EntityUpdateAliasById**](IdentityApi.md#entityupdatealiasbyid) | **POST** /identity/entity-alias/id/{id} | 
+[**EntityUpdateById**](IdentityApi.md#entityupdatebyid) | **POST** /identity/entity/id/{id} | 
+[**EntityUpdateByName**](IdentityApi.md#entityupdatebyname) | **POST** /identity/entity/name/{name} | 
+[**GroupCreate**](IdentityApi.md#groupcreate) | **POST** /identity/group | Create a new group.
+[**GroupCreateAlias**](IdentityApi.md#groupcreatealias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
+[**GroupDeleteAliasById**](IdentityApi.md#groupdeletealiasbyid) | **DELETE** /identity/group-alias/id/{id} | 
+[**GroupDeleteById**](IdentityApi.md#groupdeletebyid) | **DELETE** /identity/group/id/{id} | 
 [**GroupDeleteByName**](IdentityApi.md#groupdeletebyname) | **DELETE** /identity/group/name/{name} | 
-[**GroupListAliasesByID**](IdentityApi.md#grouplistaliasesbyid) | **GET** /identity/group-alias/id | List all the group alias IDs.
-[**GroupListByID**](IdentityApi.md#grouplistbyid) | **GET** /identity/group/id | List all the group IDs.
+[**GroupListAliasesById**](IdentityApi.md#grouplistaliasesbyid) | **GET** /identity/group-alias/id | List all the group alias IDs.
+[**GroupListById**](IdentityApi.md#grouplistbyid) | **GET** /identity/group/id | List all the group IDs.
 [**GroupListByName**](IdentityApi.md#grouplistbyname) | **GET** /identity/group/name | 
-[**GroupLookup**](IdentityApi.md#grouplookup) | **POST** /identity/lookup/group | Query groups based on various properties.
-[**GroupReadAliasByID**](IdentityApi.md#groupreadaliasbyid) | **GET** /identity/group-alias/id/{id} | 
-[**GroupReadByID**](IdentityApi.md#groupreadbyid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
+[**GroupLookUp**](IdentityApi.md#grouplookup) | **POST** /identity/lookup/group | Query groups based on various properties.
+[**GroupReadAliasById**](IdentityApi.md#groupreadaliasbyid) | **GET** /identity/group-alias/id/{id} | 
+[**GroupReadById**](IdentityApi.md#groupreadbyid) | **GET** /identity/group/id/{id} | 
 [**GroupReadByName**](IdentityApi.md#groupreadbyname) | **GET** /identity/group/name/{name} | 
-[**GroupWrite**](IdentityApi.md#groupwrite) | **POST** /identity/group | Create a new group.
-[**GroupWriteAlias**](IdentityApi.md#groupwritealias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
-[**GroupWriteAliasByID**](IdentityApi.md#groupwritealiasbyid) | **POST** /identity/group-alias/id/{id} | 
-[**GroupWriteByID**](IdentityApi.md#groupwritebyid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
-[**GroupWriteByName**](IdentityApi.md#groupwritebyname) | **POST** /identity/group/name/{name} | 
-[**MFADeleteLoginEnforcement**](IdentityApi.md#mfadeleteloginenforcement) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
-[**MFAListLoginEnforcements**](IdentityApi.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement | List login enforcements
-[**MFAMethodAdminDestroyTOTP**](IdentityApi.md#mfamethodadmindestroytotp) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
-[**MFAMethodAdminGenerateTOTP**](IdentityApi.md#mfamethodadmingeneratetotp) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
-[**MFAMethodDeleteDuo**](IdentityApi.md#mfamethoddeleteduo) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodDeleteOkta**](IdentityApi.md#mfamethoddeleteokta) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodDeletePingID**](IdentityApi.md#mfamethoddeletepingid) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodDeleteTOTP**](IdentityApi.md#mfamethoddeletetotp) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
-[**MFAMethodGenerateTOTP**](IdentityApi.md#mfamethodgeneratetotp) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
-[**MFAMethodList**](IdentityApi.md#mfamethodlist) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
-[**MFAMethodListDuo**](IdentityApi.md#mfamethodlistduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
-[**MFAMethodListOkta**](IdentityApi.md#mfamethodlistokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
-[**MFAMethodListPingID**](IdentityApi.md#mfamethodlistpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
-[**MFAMethodListTOTP**](IdentityApi.md#mfamethodlisttotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
-[**MFAMethodRead**](IdentityApi.md#mfamethodread) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
-[**MFAMethodReadDuo**](IdentityApi.md#mfamethodreadduo) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodReadOkta**](IdentityApi.md#mfamethodreadokta) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodReadPingID**](IdentityApi.md#mfamethodreadpingid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodReadTOTP**](IdentityApi.md#mfamethodreadtotp) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
-[**MFAMethodWriteDuo**](IdentityApi.md#mfamethodwriteduo) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
-[**MFAMethodWriteOkta**](IdentityApi.md#mfamethodwriteokta) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
-[**MFAMethodWritePingID**](IdentityApi.md#mfamethodwritepingid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
-[**MFAMethodWriteTOTP**](IdentityApi.md#mfamethodwritetotp) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
-[**MFAReadLoginEnforcement**](IdentityApi.md#mfareadloginenforcement) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
-[**MFAWriteLoginEnforcement**](IdentityApi.md#mfawriteloginenforcement) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
-[**OIDCDeleteAssignment**](IdentityApi.md#oidcdeleteassignment) | **DELETE** /identity/oidc/assignment/{name} | 
-[**OIDCDeleteClient**](IdentityApi.md#oidcdeleteclient) | **DELETE** /identity/oidc/client/{name} | 
-[**OIDCDeleteKey**](IdentityApi.md#oidcdeletekey) | **DELETE** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**OIDCDeleteProvider**](IdentityApi.md#oidcdeleteprovider) | **DELETE** /identity/oidc/provider/{name} | 
-[**OIDCDeleteRole**](IdentityApi.md#oidcdeleterole) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**OIDCDeleteScope**](IdentityApi.md#oidcdeletescope) | **DELETE** /identity/oidc/scope/{name} | 
-[**OIDCIntrospect**](IdentityApi.md#oidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
-[**OIDCListAssignments**](IdentityApi.md#oidclistassignments) | **GET** /identity/oidc/assignment | 
-[**OIDCListClients**](IdentityApi.md#oidclistclients) | **GET** /identity/oidc/client | 
-[**OIDCListKeys**](IdentityApi.md#oidclistkeys) | **GET** /identity/oidc/key | List OIDC keys
-[**OIDCListProviders**](IdentityApi.md#oidclistproviders) | **GET** /identity/oidc/provider | 
-[**OIDCListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
-[**OIDCListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope | 
-[**OIDCReadAssignment**](IdentityApi.md#oidcreadassignment) | **GET** /identity/oidc/assignment/{name} | 
-[**OIDCReadClient**](IdentityApi.md#oidcreadclient) | **GET** /identity/oidc/client/{name} | 
-[**OIDCReadConfig**](IdentityApi.md#oidcreadconfig) | **GET** /identity/oidc/config | OIDC configuration
-[**OIDCReadKey**](IdentityApi.md#oidcreadkey) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**OIDCReadProvider**](IdentityApi.md#oidcreadprovider) | **GET** /identity/oidc/provider/{name} | 
-[**OIDCReadProviderAuthorize**](IdentityApi.md#oidcreadproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
-[**OIDCReadProviderUserInfo**](IdentityApi.md#oidcreadprovideruserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
-[**OIDCReadProviderWellKnownKeys**](IdentityApi.md#oidcreadproviderwellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
-[**OIDCReadProviderWellKnownOpenIDConfiguration**](IdentityApi.md#oidcreadproviderwellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
-[**OIDCReadRole**](IdentityApi.md#oidcreadrole) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**OIDCReadScope**](IdentityApi.md#oidcreadscope) | **GET** /identity/oidc/scope/{name} | 
-[**OIDCReadToken**](IdentityApi.md#oidcreadtoken) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
-[**OIDCReadWellKnownKeys**](IdentityApi.md#oidcreadwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
-[**OIDCReadWellKnownOpenIDConfiguration**](IdentityApi.md#oidcreadwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
-[**OIDCRotateKey**](IdentityApi.md#oidcrotatekey) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
-[**OIDCWriteAssignment**](IdentityApi.md#oidcwriteassignment) | **POST** /identity/oidc/assignment/{name} | 
-[**OIDCWriteClient**](IdentityApi.md#oidcwriteclient) | **POST** /identity/oidc/client/{name} | 
-[**OIDCWriteConfig**](IdentityApi.md#oidcwriteconfig) | **POST** /identity/oidc/config | OIDC configuration
-[**OIDCWriteKey**](IdentityApi.md#oidcwritekey) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-[**OIDCWriteProvider**](IdentityApi.md#oidcwriteprovider) | **POST** /identity/oidc/provider/{name} | 
-[**OIDCWriteProviderAuthorize**](IdentityApi.md#oidcwriteproviderauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
-[**OIDCWriteProviderToken**](IdentityApi.md#oidcwriteprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
-[**OIDCWriteProviderUserInfo**](IdentityApi.md#oidcwriteprovideruserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
-[**OIDCWriteRole**](IdentityApi.md#oidcwriterole) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-[**OIDCWriteScope**](IdentityApi.md#oidcwritescope) | **POST** /identity/oidc/scope/{name} | 
-[**PersonaIDDeleteByID**](IdentityApi.md#personaiddeletebyid) | **DELETE** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PersonaIDReadByID**](IdentityApi.md#personaidreadbyid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PersonaIDWriteByID**](IdentityApi.md#personaidwritebyid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
-[**PersonaListByID**](IdentityApi.md#personalistbyid) | **GET** /identity/persona/id | List all the alias IDs.
-[**PersonaWrite**](IdentityApi.md#personawrite) | **POST** /identity/persona | Create a new alias.
+[**GroupUpdateAliasById**](IdentityApi.md#groupupdatealiasbyid) | **POST** /identity/group-alias/id/{id} | 
+[**GroupUpdateById**](IdentityApi.md#groupupdatebyid) | **POST** /identity/group/id/{id} | 
+[**GroupUpdateByName**](IdentityApi.md#groupupdatebyname) | **POST** /identity/group/name/{name} | 
+[**MfaAdminDestroyTotpSecret**](IdentityApi.md#mfaadmindestroytotpsecret) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
+[**MfaAdminGenerateTotpSecret**](IdentityApi.md#mfaadmingeneratetotpsecret) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
+[**MfaConfigureDuoMethod**](IdentityApi.md#mfaconfigureduomethod) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
+[**MfaConfigureOktaMethod**](IdentityApi.md#mfaconfigureoktamethod) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
+[**MfaConfigurePingIdMethod**](IdentityApi.md#mfaconfigurepingidmethod) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
+[**MfaConfigureTotpMethod**](IdentityApi.md#mfaconfiguretotpmethod) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
+[**MfaDeleteDuoMethod**](IdentityApi.md#mfadeleteduomethod) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
+[**MfaDeleteLoginEnforcement**](IdentityApi.md#mfadeleteloginenforcement) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
+[**MfaDeleteOktaMethod**](IdentityApi.md#mfadeleteoktamethod) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
+[**MfaDeletePingIdMethod**](IdentityApi.md#mfadeletepingidmethod) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
+[**MfaDeleteTotpMethod**](IdentityApi.md#mfadeletetotpmethod) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
+[**MfaGenerateTotpSecret**](IdentityApi.md#mfageneratetotpsecret) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
+[**MfaListDuoMethods**](IdentityApi.md#mfalistduomethods) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
+[**MfaListLoginEnforcements**](IdentityApi.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement | List login enforcements
+[**MfaListMethods**](IdentityApi.md#mfalistmethods) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
+[**MfaListOktaMethods**](IdentityApi.md#mfalistoktamethods) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
+[**MfaListPingIdMethods**](IdentityApi.md#mfalistpingidmethods) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
+[**MfaListTotpMethods**](IdentityApi.md#mfalisttotpmethods) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
+[**MfaReadDuoMethodConfiguration**](IdentityApi.md#mfareadduomethodconfiguration) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadLoginEnforcement**](IdentityApi.md#mfareadloginenforcement) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
+[**MfaReadMethodConfiguration**](IdentityApi.md#mfareadmethodconfiguration) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
+[**MfaReadOktaMethodConfiguration**](IdentityApi.md#mfareadoktamethodconfiguration) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadPingIdMethodConfiguration**](IdentityApi.md#mfareadpingidmethodconfiguration) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadTotpMethodConfiguration**](IdentityApi.md#mfareadtotpmethodconfiguration) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
+[**MfaWriteLoginEnforcement**](IdentityApi.md#mfawriteloginenforcement) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
+[**OidcConfigure**](IdentityApi.md#oidcconfigure) | **POST** /identity/oidc/config | 
+[**OidcDeleteAssignment**](IdentityApi.md#oidcdeleteassignment) | **DELETE** /identity/oidc/assignment/{name} | 
+[**OidcDeleteClient**](IdentityApi.md#oidcdeleteclient) | **DELETE** /identity/oidc/client/{name} | 
+[**OidcDeleteKey**](IdentityApi.md#oidcdeletekey) | **DELETE** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**OidcDeleteProvider**](IdentityApi.md#oidcdeleteprovider) | **DELETE** /identity/oidc/provider/{name} | 
+[**OidcDeleteRole**](IdentityApi.md#oidcdeleterole) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**OidcDeleteScope**](IdentityApi.md#oidcdeletescope) | **DELETE** /identity/oidc/scope/{name} | 
+[**OidcGenerateToken**](IdentityApi.md#oidcgeneratetoken) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
+[**OidcIntrospect**](IdentityApi.md#oidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
+[**OidcListAssignments**](IdentityApi.md#oidclistassignments) | **GET** /identity/oidc/assignment | 
+[**OidcListClients**](IdentityApi.md#oidclistclients) | **GET** /identity/oidc/client | 
+[**OidcListKeys**](IdentityApi.md#oidclistkeys) | **GET** /identity/oidc/key | List OIDC keys
+[**OidcListProviders**](IdentityApi.md#oidclistproviders) | **GET** /identity/oidc/provider | 
+[**OidcListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
+[**OidcListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope | 
+[**OidcProviderAuthorize**](IdentityApi.md#oidcproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
+[**OidcProviderAuthorize2**](IdentityApi.md#oidcproviderauthorize2) | **POST** /identity/oidc/provider/{name}/authorize | 
+[**OidcProviderToken**](IdentityApi.md#oidcprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
+[**OidcProviderUserInfo**](IdentityApi.md#oidcprovideruserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
+[**OidcProviderUserInfo2**](IdentityApi.md#oidcprovideruserinfo2) | **POST** /identity/oidc/provider/{name}/userinfo | 
+[**OidcReadAssignment**](IdentityApi.md#oidcreadassignment) | **GET** /identity/oidc/assignment/{name} | 
+[**OidcReadClient**](IdentityApi.md#oidcreadclient) | **GET** /identity/oidc/client/{name} | 
+[**OidcReadConfiguration**](IdentityApi.md#oidcreadconfiguration) | **GET** /identity/oidc/config | 
+[**OidcReadKey**](IdentityApi.md#oidcreadkey) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**OidcReadOpenIdConfiguration**](IdentityApi.md#oidcreadopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
+[**OidcReadProvider**](IdentityApi.md#oidcreadprovider) | **GET** /identity/oidc/provider/{name} | 
+[**OidcReadProviderOpenIdConfiguration**](IdentityApi.md#oidcreadprovideropenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
+[**OidcReadProviderPublicKeys**](IdentityApi.md#oidcreadproviderpublickeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
+[**OidcReadPublicKeys**](IdentityApi.md#oidcreadpublickeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
+[**OidcReadRole**](IdentityApi.md#oidcreadrole) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**OidcReadScope**](IdentityApi.md#oidcreadscope) | **GET** /identity/oidc/scope/{name} | 
+[**OidcRotateKey**](IdentityApi.md#oidcrotatekey) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
+[**OidcWriteAssignment**](IdentityApi.md#oidcwriteassignment) | **POST** /identity/oidc/assignment/{name} | 
+[**OidcWriteClient**](IdentityApi.md#oidcwriteclient) | **POST** /identity/oidc/client/{name} | 
+[**OidcWriteKey**](IdentityApi.md#oidcwritekey) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+[**OidcWriteProvider**](IdentityApi.md#oidcwriteprovider) | **POST** /identity/oidc/provider/{name} | 
+[**OidcWriteRole**](IdentityApi.md#oidcwriterole) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+[**OidcWriteScope**](IdentityApi.md#oidcwritescope) | **POST** /identity/oidc/scope/{name} | 
+[**PersonaCreate**](IdentityApi.md#personacreate) | **POST** /identity/persona | Create a new alias.
+[**PersonaDeleteById**](IdentityApi.md#personadeletebyid) | **DELETE** /identity/persona/id/{id} | 
+[**PersonaListById**](IdentityApi.md#personalistbyid) | **GET** /identity/persona/id | List all the alias IDs.
+[**PersonaReadById**](IdentityApi.md#personareadbyid) | **GET** /identity/persona/id/{id} | 
+[**PersonaUpdateById**](IdentityApi.md#personaupdatebyid) | **POST** /identity/persona/id/{id} | 
 
 
 
 
-<a name="aliasdeletebyid"></a>
-# **AliasDeleteByID**
+<a name="aliascreate"></a>
+# **AliasCreate**
 
-> void AliasDeleteByID (string id, TimeSpan? wrapTTL = null)
+> void AliasCreate (AliasCreateRequest aliasCreateRequest, TimeSpan? wrapTTL = null)
 
-Update, read or delete an alias ID.
+Create a new alias.
 
 ### Example
 ```csharp
@@ -133,7 +133,99 @@ using Vault.Model;
 
 namespace Example
 {
-    public class AliasDeleteByIDExample
+    public class AliasCreateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var aliasCreateRequest = new AliasCreateRequest(); // AliasCreateRequest | 
+            
+            
+
+            try
+            {
+                
+                // Create a new alias.
+                
+
+                apiInstance.AliasCreate(AliasCreateRequest aliasCreateRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.AliasCreate: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **aliasCreateRequest** | [**AliasCreateRequest**](AliasCreateRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="aliasdeletebyid"></a>
+# **AliasDeleteById**
+
+> void AliasDeleteById (string id, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AliasDeleteByIdExample
     {
         public static void Main()
         {
@@ -157,14 +249,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.AliasDeleteByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.AliasDeleteById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.AliasDeleteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.AliasDeleteById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -206,9 +296,9 @@ No authorization required
 
 
 <a name="aliaslistbyid"></a>
-# **AliasListByID**
+# **AliasListById**
 
-> void AliasListByID (TimeSpan? wrapTTL = null)
+> void AliasListById (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -225,7 +315,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class AliasListByIDExample
+    public class AliasListByIdExample
     {
         public static void Main()
         {
@@ -252,11 +342,11 @@ namespace Example
                 // List all the alias IDs.
                 
 
-                apiInstance.AliasListByID(TimeSpan? wrapTTL = null);
+                apiInstance.AliasListById(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.AliasListByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.AliasListById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -298,11 +388,11 @@ No authorization required
 
 
 <a name="aliasreadbyid"></a>
-# **AliasReadByID**
+# **AliasReadById**
 
-> void AliasReadByID (string id, TimeSpan? wrapTTL = null)
+> void AliasReadById (string id, TimeSpan? wrapTTL = null)
 
-Update, read or delete an alias ID.
+
 
 ### Example
 ```csharp
@@ -317,7 +407,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class AliasReadByIDExample
+    public class AliasReadByIdExample
     {
         public static void Main()
         {
@@ -341,14 +431,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.AliasReadByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.AliasReadById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.AliasReadByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.AliasReadById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -389,12 +477,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="aliaswrite"></a>
-# **AliasWrite**
+<a name="aliasupdatebyid"></a>
+# **AliasUpdateById**
 
-> void AliasWrite (AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null)
+> void AliasUpdateById (string id, AliasUpdateByIdRequest aliasUpdateByIdRequest, TimeSpan? wrapTTL = null)
 
-Create a new alias.
+
 
 ### Example
 ```csharp
@@ -409,99 +497,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class AliasWriteExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var aliasWriteRequest = new AliasWriteRequest(); // AliasWriteRequest | 
-            
-            
-
-            try
-            {
-                
-                // Create a new alias.
-                
-
-                apiInstance.AliasWrite(AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.AliasWrite: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **aliasWriteRequest** | [**AliasWriteRequest**](AliasWriteRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="aliaswritebyid"></a>
-# **AliasWriteByID**
-
-> void AliasWriteByID (string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null)
-
-Update, read or delete an alias ID.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class AliasWriteByIDExample
+    public class AliasUpdateByIdExample
     {
         public static void Main()
         {
@@ -523,21 +519,19 @@ namespace Example
             
             
             
-            var aliasWriteByIDRequest = new AliasWriteByIDRequest(); // AliasWriteByIDRequest | 
+            var aliasUpdateByIdRequest = new AliasUpdateByIdRequest(); // AliasUpdateByIdRequest | 
             
             
 
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.AliasWriteByID(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null);
+                apiInstance.AliasUpdateById(string id, AliasUpdateByIdRequest aliasUpdateByIdRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.AliasWriteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.AliasUpdateById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -550,7 +544,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the alias | 
- **aliasWriteByIDRequest** | [**AliasWriteByIDRequest**](AliasWriteByIDRequest.md)|  | 
+ **aliasUpdateByIdRequest** | [**AliasUpdateByIdRequest**](AliasUpdateByIdRequest.md)|  | 
 
 
 ### Return type
@@ -671,12 +665,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="entitydeletealiasbyid"></a>
-# **EntityDeleteAliasByID**
+<a name="entitycreate"></a>
+# **EntityCreate**
 
-> void EntityDeleteAliasByID (string id, TimeSpan? wrapTTL = null)
+> void EntityCreate (EntityCreateRequest entityCreateRequest, TimeSpan? wrapTTL = null)
 
-Update, read or delete an alias ID.
+Create a new entity
 
 ### Example
 ```csharp
@@ -691,7 +685,191 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityDeleteAliasByIDExample
+    public class EntityCreateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var entityCreateRequest = new EntityCreateRequest(); // EntityCreateRequest | 
+            
+            
+
+            try
+            {
+                
+                // Create a new entity
+                
+
+                apiInstance.EntityCreate(EntityCreateRequest entityCreateRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.EntityCreate: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entityCreateRequest** | [**EntityCreateRequest**](EntityCreateRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="entitycreatealias"></a>
+# **EntityCreateAlias**
+
+> void EntityCreateAlias (EntityCreateAliasRequest entityCreateAliasRequest, TimeSpan? wrapTTL = null)
+
+Create a new alias.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class EntityCreateAliasExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var entityCreateAliasRequest = new EntityCreateAliasRequest(); // EntityCreateAliasRequest | 
+            
+            
+
+            try
+            {
+                
+                // Create a new alias.
+                
+
+                apiInstance.EntityCreateAlias(EntityCreateAliasRequest entityCreateAliasRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.EntityCreateAlias: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **entityCreateAliasRequest** | [**EntityCreateAliasRequest**](EntityCreateAliasRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="entitydeletealiasbyid"></a>
+# **EntityDeleteAliasById**
+
+> void EntityDeleteAliasById (string id, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class EntityDeleteAliasByIdExample
     {
         public static void Main()
         {
@@ -715,14 +893,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.EntityDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.EntityDeleteAliasById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityDeleteAliasByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityDeleteAliasById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -764,11 +940,11 @@ No authorization required
 
 
 <a name="entitydeletebyid"></a>
-# **EntityDeleteByID**
+# **EntityDeleteById**
 
-> void EntityDeleteByID (string id, TimeSpan? wrapTTL = null)
+> void EntityDeleteById (string id, TimeSpan? wrapTTL = null)
 
-Update, read or delete an entity using entity ID
+
 
 ### Example
 ```csharp
@@ -783,7 +959,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityDeleteByIDExample
+    public class EntityDeleteByIdExample
     {
         public static void Main()
         {
@@ -807,14 +983,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an entity using entity ID
-                
 
-                apiInstance.EntityDeleteByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.EntityDeleteById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityDeleteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityDeleteById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -860,7 +1034,7 @@ No authorization required
 
 > void EntityDeleteByName (string name, TimeSpan? wrapTTL = null)
 
-Update, read or delete an entity using entity name
+
 
 ### Example
 ```csharp
@@ -898,8 +1072,6 @@ namespace Example
 
             try
             {
-                
-                // Update, read or delete an entity using entity name
                 
 
                 apiInstance.EntityDeleteByName(string name, TimeSpan? wrapTTL = null);
@@ -948,9 +1120,9 @@ No authorization required
 
 
 <a name="entitylistaliasesbyid"></a>
-# **EntityListAliasesByID**
+# **EntityListAliasesById**
 
-> void EntityListAliasesByID (TimeSpan? wrapTTL = null)
+> void EntityListAliasesById (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -967,7 +1139,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityListAliasesByIDExample
+    public class EntityListAliasesByIdExample
     {
         public static void Main()
         {
@@ -994,11 +1166,11 @@ namespace Example
                 // List all the alias IDs.
                 
 
-                apiInstance.EntityListAliasesByID(TimeSpan? wrapTTL = null);
+                apiInstance.EntityListAliasesById(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityListAliasesByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityListAliasesById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -1040,9 +1212,9 @@ No authorization required
 
 
 <a name="entitylistbyid"></a>
-# **EntityListByID**
+# **EntityListById**
 
-> void EntityListByID (TimeSpan? wrapTTL = null)
+> void EntityListById (TimeSpan? wrapTTL = null)
 
 List all the entity IDs
 
@@ -1059,7 +1231,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityListByIDExample
+    public class EntityListByIdExample
     {
         public static void Main()
         {
@@ -1086,11 +1258,11 @@ namespace Example
                 // List all the entity IDs
                 
 
-                apiInstance.EntityListByID(TimeSpan? wrapTTL = null);
+                apiInstance.EntityListById(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityListByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityListById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -1224,9 +1396,9 @@ No authorization required
 
 
 <a name="entitylookup"></a>
-# **EntityLookup**
+# **EntityLookUp**
 
-> void EntityLookup (EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null)
+> void EntityLookUp (EntityLookUpRequest entityLookUpRequest, TimeSpan? wrapTTL = null)
 
 Query entities based on various properties.
 
@@ -1243,7 +1415,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityLookupExample
+    public class EntityLookUpExample
     {
         public static void Main()
         {
@@ -1260,7 +1432,7 @@ namespace Example
             
             
             
-            var entityLookupRequest = new EntityLookupRequest(); // EntityLookupRequest | 
+            var entityLookUpRequest = new EntityLookUpRequest(); // EntityLookUpRequest | 
             
             
 
@@ -1270,11 +1442,11 @@ namespace Example
                 // Query entities based on various properties.
                 
 
-                apiInstance.EntityLookup(EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null);
+                apiInstance.EntityLookUp(EntityLookUpRequest entityLookUpRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityLookup: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityLookUp: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -1286,7 +1458,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entityLookupRequest** | [**EntityLookupRequest**](EntityLookupRequest.md)|  | 
+ **entityLookUpRequest** | [**EntityLookUpRequest**](EntityLookUpRequest.md)|  | 
 
 
 ### Return type
@@ -1408,11 +1580,11 @@ No authorization required
 
 
 <a name="entityreadaliasbyid"></a>
-# **EntityReadAliasByID**
+# **EntityReadAliasById**
 
-> void EntityReadAliasByID (string id, TimeSpan? wrapTTL = null)
+> void EntityReadAliasById (string id, TimeSpan? wrapTTL = null)
 
-Update, read or delete an alias ID.
+
 
 ### Example
 ```csharp
@@ -1427,7 +1599,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityReadAliasByIDExample
+    public class EntityReadAliasByIdExample
     {
         public static void Main()
         {
@@ -1451,14 +1623,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.EntityReadAliasByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.EntityReadAliasById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityReadAliasByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityReadAliasById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -1500,11 +1670,11 @@ No authorization required
 
 
 <a name="entityreadbyid"></a>
-# **EntityReadByID**
+# **EntityReadById**
 
-> void EntityReadByID (string id, TimeSpan? wrapTTL = null)
+> void EntityReadById (string id, TimeSpan? wrapTTL = null)
 
-Update, read or delete an entity using entity ID
+
 
 ### Example
 ```csharp
@@ -1519,7 +1689,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityReadByIDExample
+    public class EntityReadByIdExample
     {
         public static void Main()
         {
@@ -1543,14 +1713,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an entity using entity ID
-                
 
-                apiInstance.EntityReadByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.EntityReadById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityReadByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityReadById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -1596,7 +1764,7 @@ No authorization required
 
 > void EntityReadByName (string name, TimeSpan? wrapTTL = null)
 
-Update, read or delete an entity using entity name
+
 
 ### Example
 ```csharp
@@ -1634,8 +1802,6 @@ namespace Example
 
             try
             {
-                
-                // Update, read or delete an entity using entity name
                 
 
                 apiInstance.EntityReadByName(string name, TimeSpan? wrapTTL = null);
@@ -1683,12 +1849,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="entitywrite"></a>
-# **EntityWrite**
+<a name="entityupdatealiasbyid"></a>
+# **EntityUpdateAliasById**
 
-> void EntityWrite (EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null)
+> void EntityUpdateAliasById (string id, EntityUpdateAliasByIdRequest entityUpdateAliasByIdRequest, TimeSpan? wrapTTL = null)
 
-Create a new entity
+
 
 ### Example
 ```csharp
@@ -1703,191 +1869,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityWriteExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var entityWriteRequest = new EntityWriteRequest(); // EntityWriteRequest | 
-            
-            
-
-            try
-            {
-                
-                // Create a new entity
-                
-
-                apiInstance.EntityWrite(EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.EntityWrite: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **entityWriteRequest** | [**EntityWriteRequest**](EntityWriteRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="entitywritealias"></a>
-# **EntityWriteAlias**
-
-> void EntityWriteAlias (EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null)
-
-Create a new alias.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class EntityWriteAliasExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var entityWriteAliasRequest = new EntityWriteAliasRequest(); // EntityWriteAliasRequest | 
-            
-            
-
-            try
-            {
-                
-                // Create a new alias.
-                
-
-                apiInstance.EntityWriteAlias(EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.EntityWriteAlias: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **entityWriteAliasRequest** | [**EntityWriteAliasRequest**](EntityWriteAliasRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="entitywritealiasbyid"></a>
-# **EntityWriteAliasByID**
-
-> void EntityWriteAliasByID (string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null)
-
-Update, read or delete an alias ID.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class EntityWriteAliasByIDExample
+    public class EntityUpdateAliasByIdExample
     {
         public static void Main()
         {
@@ -1909,21 +1891,19 @@ namespace Example
             
             
             
-            var entityWriteAliasByIDRequest = new EntityWriteAliasByIDRequest(); // EntityWriteAliasByIDRequest | 
+            var entityUpdateAliasByIdRequest = new EntityUpdateAliasByIdRequest(); // EntityUpdateAliasByIdRequest | 
             
             
 
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.EntityWriteAliasByID(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
+                apiInstance.EntityUpdateAliasById(string id, EntityUpdateAliasByIdRequest entityUpdateAliasByIdRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityWriteAliasByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityUpdateAliasById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -1936,7 +1916,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the alias | 
- **entityWriteAliasByIDRequest** | [**EntityWriteAliasByIDRequest**](EntityWriteAliasByIDRequest.md)|  | 
+ **entityUpdateAliasByIdRequest** | [**EntityUpdateAliasByIdRequest**](EntityUpdateAliasByIdRequest.md)|  | 
 
 
 ### Return type
@@ -1965,12 +1945,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="entitywritebyid"></a>
-# **EntityWriteByID**
+<a name="entityupdatebyid"></a>
+# **EntityUpdateById**
 
-> void EntityWriteByID (string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null)
+> void EntityUpdateById (string id, EntityUpdateByIdRequest entityUpdateByIdRequest, TimeSpan? wrapTTL = null)
 
-Update, read or delete an entity using entity ID
+
 
 ### Example
 ```csharp
@@ -1985,7 +1965,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityWriteByIDExample
+    public class EntityUpdateByIdExample
     {
         public static void Main()
         {
@@ -2007,21 +1987,19 @@ namespace Example
             
             
             
-            var entityWriteByIDRequest = new EntityWriteByIDRequest(); // EntityWriteByIDRequest | 
+            var entityUpdateByIdRequest = new EntityUpdateByIdRequest(); // EntityUpdateByIdRequest | 
             
             
 
             try
             {
                 
-                // Update, read or delete an entity using entity ID
-                
 
-                apiInstance.EntityWriteByID(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null);
+                apiInstance.EntityUpdateById(string id, EntityUpdateByIdRequest entityUpdateByIdRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityWriteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityUpdateById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2034,7 +2012,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the entity. If set, updates the corresponding existing entity. | 
- **entityWriteByIDRequest** | [**EntityWriteByIDRequest**](EntityWriteByIDRequest.md)|  | 
+ **entityUpdateByIdRequest** | [**EntityUpdateByIdRequest**](EntityUpdateByIdRequest.md)|  | 
 
 
 ### Return type
@@ -2063,12 +2041,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="entitywritebyname"></a>
-# **EntityWriteByName**
+<a name="entityupdatebyname"></a>
+# **EntityUpdateByName**
 
-> void EntityWriteByName (string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null)
+> void EntityUpdateByName (string name, EntityUpdateByNameRequest entityUpdateByNameRequest, TimeSpan? wrapTTL = null)
 
-Update, read or delete an entity using entity name
+
 
 ### Example
 ```csharp
@@ -2083,7 +2061,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class EntityWriteByNameExample
+    public class EntityUpdateByNameExample
     {
         public static void Main()
         {
@@ -2105,21 +2083,19 @@ namespace Example
             
             
             
-            var entityWriteByNameRequest = new EntityWriteByNameRequest(); // EntityWriteByNameRequest | 
+            var entityUpdateByNameRequest = new EntityUpdateByNameRequest(); // EntityUpdateByNameRequest | 
             
             
 
             try
             {
                 
-                // Update, read or delete an entity using entity name
-                
 
-                apiInstance.EntityWriteByName(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null);
+                apiInstance.EntityUpdateByName(string name, EntityUpdateByNameRequest entityUpdateByNameRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.EntityWriteByName: " + e.Message );
+                Debug.Print("Exception when calling Identity.EntityUpdateByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2132,7 +2108,191 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the entity | 
- **entityWriteByNameRequest** | [**EntityWriteByNameRequest**](EntityWriteByNameRequest.md)|  | 
+ **entityUpdateByNameRequest** | [**EntityUpdateByNameRequest**](EntityUpdateByNameRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="groupcreate"></a>
+# **GroupCreate**
+
+> void GroupCreate (GroupCreateRequest groupCreateRequest, TimeSpan? wrapTTL = null)
+
+Create a new group.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GroupCreateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var groupCreateRequest = new GroupCreateRequest(); // GroupCreateRequest | 
+            
+            
+
+            try
+            {
+                
+                // Create a new group.
+                
+
+                apiInstance.GroupCreate(GroupCreateRequest groupCreateRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.GroupCreate: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupCreateRequest** | [**GroupCreateRequest**](GroupCreateRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="groupcreatealias"></a>
+# **GroupCreateAlias**
+
+> void GroupCreateAlias (GroupCreateAliasRequest groupCreateAliasRequest, TimeSpan? wrapTTL = null)
+
+Creates a new group alias, or updates an existing one.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GroupCreateAliasExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var groupCreateAliasRequest = new GroupCreateAliasRequest(); // GroupCreateAliasRequest | 
+            
+            
+
+            try
+            {
+                
+                // Creates a new group alias, or updates an existing one.
+                
+
+                apiInstance.GroupCreateAlias(GroupCreateAliasRequest groupCreateAliasRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.GroupCreateAlias: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupCreateAliasRequest** | [**GroupCreateAliasRequest**](GroupCreateAliasRequest.md)|  | 
 
 
 ### Return type
@@ -2162,9 +2322,9 @@ No authorization required
 
 
 <a name="groupdeletealiasbyid"></a>
-# **GroupDeleteAliasByID**
+# **GroupDeleteAliasById**
 
-> void GroupDeleteAliasByID (string id, TimeSpan? wrapTTL = null)
+> void GroupDeleteAliasById (string id, TimeSpan? wrapTTL = null)
 
 
 
@@ -2181,7 +2341,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupDeleteAliasByIDExample
+    public class GroupDeleteAliasByIdExample
     {
         public static void Main()
         {
@@ -2206,11 +2366,11 @@ namespace Example
             {
                 
 
-                apiInstance.GroupDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.GroupDeleteAliasById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupDeleteAliasByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupDeleteAliasById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2252,11 +2412,11 @@ No authorization required
 
 
 <a name="groupdeletebyid"></a>
-# **GroupDeleteByID**
+# **GroupDeleteById**
 
-> void GroupDeleteByID (string id, TimeSpan? wrapTTL = null)
+> void GroupDeleteById (string id, TimeSpan? wrapTTL = null)
 
-Update or delete an existing group using its ID.
+
 
 ### Example
 ```csharp
@@ -2271,7 +2431,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupDeleteByIDExample
+    public class GroupDeleteByIdExample
     {
         public static void Main()
         {
@@ -2295,14 +2455,12 @@ namespace Example
             try
             {
                 
-                // Update or delete an existing group using its ID.
-                
 
-                apiInstance.GroupDeleteByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.GroupDeleteById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupDeleteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupDeleteById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2434,9 +2592,9 @@ No authorization required
 
 
 <a name="grouplistaliasesbyid"></a>
-# **GroupListAliasesByID**
+# **GroupListAliasesById**
 
-> void GroupListAliasesByID (TimeSpan? wrapTTL = null)
+> void GroupListAliasesById (TimeSpan? wrapTTL = null)
 
 List all the group alias IDs.
 
@@ -2453,7 +2611,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupListAliasesByIDExample
+    public class GroupListAliasesByIdExample
     {
         public static void Main()
         {
@@ -2480,11 +2638,11 @@ namespace Example
                 // List all the group alias IDs.
                 
 
-                apiInstance.GroupListAliasesByID(TimeSpan? wrapTTL = null);
+                apiInstance.GroupListAliasesById(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupListAliasesByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupListAliasesById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2526,9 +2684,9 @@ No authorization required
 
 
 <a name="grouplistbyid"></a>
-# **GroupListByID**
+# **GroupListById**
 
-> void GroupListByID (TimeSpan? wrapTTL = null)
+> void GroupListById (TimeSpan? wrapTTL = null)
 
 List all the group IDs.
 
@@ -2545,7 +2703,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupListByIDExample
+    public class GroupListByIdExample
     {
         public static void Main()
         {
@@ -2572,11 +2730,11 @@ namespace Example
                 // List all the group IDs.
                 
 
-                apiInstance.GroupListByID(TimeSpan? wrapTTL = null);
+                apiInstance.GroupListById(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupListByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupListById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2708,9 +2866,9 @@ No authorization required
 
 
 <a name="grouplookup"></a>
-# **GroupLookup**
+# **GroupLookUp**
 
-> void GroupLookup (GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null)
+> void GroupLookUp (GroupLookUpRequest groupLookUpRequest, TimeSpan? wrapTTL = null)
 
 Query groups based on various properties.
 
@@ -2727,7 +2885,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupLookupExample
+    public class GroupLookUpExample
     {
         public static void Main()
         {
@@ -2744,7 +2902,7 @@ namespace Example
             
             
             
-            var groupLookupRequest = new GroupLookupRequest(); // GroupLookupRequest | 
+            var groupLookUpRequest = new GroupLookUpRequest(); // GroupLookUpRequest | 
             
             
 
@@ -2754,11 +2912,11 @@ namespace Example
                 // Query groups based on various properties.
                 
 
-                apiInstance.GroupLookup(GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null);
+                apiInstance.GroupLookUp(GroupLookUpRequest groupLookUpRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupLookup: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupLookUp: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2770,7 +2928,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupLookupRequest** | [**GroupLookupRequest**](GroupLookupRequest.md)|  | 
+ **groupLookUpRequest** | [**GroupLookUpRequest**](GroupLookUpRequest.md)|  | 
 
 
 ### Return type
@@ -2800,9 +2958,9 @@ No authorization required
 
 
 <a name="groupreadaliasbyid"></a>
-# **GroupReadAliasByID**
+# **GroupReadAliasById**
 
-> void GroupReadAliasByID (string id, TimeSpan? wrapTTL = null)
+> void GroupReadAliasById (string id, TimeSpan? wrapTTL = null)
 
 
 
@@ -2819,7 +2977,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupReadAliasByIDExample
+    public class GroupReadAliasByIdExample
     {
         public static void Main()
         {
@@ -2844,11 +3002,11 @@ namespace Example
             {
                 
 
-                apiInstance.GroupReadAliasByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.GroupReadAliasById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupReadAliasByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupReadAliasById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2890,11 +3048,11 @@ No authorization required
 
 
 <a name="groupreadbyid"></a>
-# **GroupReadByID**
+# **GroupReadById**
 
-> void GroupReadByID (string id, TimeSpan? wrapTTL = null)
+> void GroupReadById (string id, TimeSpan? wrapTTL = null)
 
-Update or delete an existing group using its ID.
+
 
 ### Example
 ```csharp
@@ -2909,7 +3067,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupReadByIDExample
+    public class GroupReadByIdExample
     {
         public static void Main()
         {
@@ -2933,14 +3091,12 @@ namespace Example
             try
             {
                 
-                // Update or delete an existing group using its ID.
-                
 
-                apiInstance.GroupReadByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.GroupReadById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupReadByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupReadById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3071,194 +3227,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="groupwrite"></a>
-# **GroupWrite**
+<a name="groupupdatealiasbyid"></a>
+# **GroupUpdateAliasById**
 
-> void GroupWrite (GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null)
-
-Create a new group.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GroupWriteExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var groupWriteRequest = new GroupWriteRequest(); // GroupWriteRequest | 
-            
-            
-
-            try
-            {
-                
-                // Create a new group.
-                
-
-                apiInstance.GroupWrite(GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.GroupWrite: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **groupWriteRequest** | [**GroupWriteRequest**](GroupWriteRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="groupwritealias"></a>
-# **GroupWriteAlias**
-
-> void GroupWriteAlias (GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null)
-
-Creates a new group alias, or updates an existing one.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GroupWriteAliasExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var groupWriteAliasRequest = new GroupWriteAliasRequest(); // GroupWriteAliasRequest | 
-            
-            
-
-            try
-            {
-                
-                // Creates a new group alias, or updates an existing one.
-                
-
-                apiInstance.GroupWriteAlias(GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.GroupWriteAlias: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **groupWriteAliasRequest** | [**GroupWriteAliasRequest**](GroupWriteAliasRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="groupwritealiasbyid"></a>
-# **GroupWriteAliasByID**
-
-> void GroupWriteAliasByID (string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null)
+> void GroupUpdateAliasById (string id, GroupUpdateAliasByIdRequest groupUpdateAliasByIdRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -3275,7 +3247,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupWriteAliasByIDExample
+    public class GroupUpdateAliasByIdExample
     {
         public static void Main()
         {
@@ -3297,7 +3269,7 @@ namespace Example
             
             
             
-            var groupWriteAliasByIDRequest = new GroupWriteAliasByIDRequest(); // GroupWriteAliasByIDRequest | 
+            var groupUpdateAliasByIdRequest = new GroupUpdateAliasByIdRequest(); // GroupUpdateAliasByIdRequest | 
             
             
 
@@ -3305,11 +3277,11 @@ namespace Example
             {
                 
 
-                apiInstance.GroupWriteAliasByID(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
+                apiInstance.GroupUpdateAliasById(string id, GroupUpdateAliasByIdRequest groupUpdateAliasByIdRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupWriteAliasByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupUpdateAliasById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3322,7 +3294,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the group alias. | 
- **groupWriteAliasByIDRequest** | [**GroupWriteAliasByIDRequest**](GroupWriteAliasByIDRequest.md)|  | 
+ **groupUpdateAliasByIdRequest** | [**GroupUpdateAliasByIdRequest**](GroupUpdateAliasByIdRequest.md)|  | 
 
 
 ### Return type
@@ -3351,12 +3323,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="groupwritebyid"></a>
-# **GroupWriteByID**
+<a name="groupupdatebyid"></a>
+# **GroupUpdateById**
 
-> void GroupWriteByID (string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null)
+> void GroupUpdateById (string id, GroupUpdateByIdRequest groupUpdateByIdRequest, TimeSpan? wrapTTL = null)
 
-Update or delete an existing group using its ID.
+
 
 ### Example
 ```csharp
@@ -3371,7 +3343,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupWriteByIDExample
+    public class GroupUpdateByIdExample
     {
         public static void Main()
         {
@@ -3393,21 +3365,19 @@ namespace Example
             
             
             
-            var groupWriteByIDRequest = new GroupWriteByIDRequest(); // GroupWriteByIDRequest | 
+            var groupUpdateByIdRequest = new GroupUpdateByIdRequest(); // GroupUpdateByIdRequest | 
             
             
 
             try
             {
                 
-                // Update or delete an existing group using its ID.
-                
 
-                apiInstance.GroupWriteByID(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null);
+                apiInstance.GroupUpdateById(string id, GroupUpdateByIdRequest groupUpdateByIdRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupWriteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupUpdateById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3420,7 +3390,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the group. If set, updates the corresponding existing group. | 
- **groupWriteByIDRequest** | [**GroupWriteByIDRequest**](GroupWriteByIDRequest.md)|  | 
+ **groupUpdateByIdRequest** | [**GroupUpdateByIdRequest**](GroupUpdateByIdRequest.md)|  | 
 
 
 ### Return type
@@ -3449,10 +3419,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="groupwritebyname"></a>
-# **GroupWriteByName**
+<a name="groupupdatebyname"></a>
+# **GroupUpdateByName**
 
-> void GroupWriteByName (string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null)
+> void GroupUpdateByName (string name, GroupUpdateByNameRequest groupUpdateByNameRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -3469,7 +3439,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class GroupWriteByNameExample
+    public class GroupUpdateByNameExample
     {
         public static void Main()
         {
@@ -3491,7 +3461,7 @@ namespace Example
             
             
             
-            var groupWriteByNameRequest = new GroupWriteByNameRequest(); // GroupWriteByNameRequest | 
+            var groupUpdateByNameRequest = new GroupUpdateByNameRequest(); // GroupUpdateByNameRequest | 
             
             
 
@@ -3499,11 +3469,11 @@ namespace Example
             {
                 
 
-                apiInstance.GroupWriteByName(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null);
+                apiInstance.GroupUpdateByName(string name, GroupUpdateByNameRequest groupUpdateByNameRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.GroupWriteByName: " + e.Message );
+                Debug.Print("Exception when calling Identity.GroupUpdateByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3516,7 +3486,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the group. | 
- **groupWriteByNameRequest** | [**GroupWriteByNameRequest**](GroupWriteByNameRequest.md)|  | 
+ **groupUpdateByNameRequest** | [**GroupUpdateByNameRequest**](GroupUpdateByNameRequest.md)|  | 
 
 
 ### Return type
@@ -3545,10 +3515,678 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfadeleteloginenforcement"></a>
-# **MFADeleteLoginEnforcement**
+<a name="mfaadmindestroytotpsecret"></a>
+# **MfaAdminDestroyTotpSecret**
 
-> void MFADeleteLoginEnforcement (string name, TimeSpan? wrapTTL = null)
+> void MfaAdminDestroyTotpSecret (MfaAdminDestroyTotpSecretRequest mfaAdminDestroyTotpSecretRequest, TimeSpan? wrapTTL = null)
+
+Destroys a TOTP secret for the given MFA method ID on the given entity
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaAdminDestroyTotpSecretExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var mfaAdminDestroyTotpSecretRequest = new MfaAdminDestroyTotpSecretRequest(); // MfaAdminDestroyTotpSecretRequest | 
+            
+            
+
+            try
+            {
+                
+                // Destroys a TOTP secret for the given MFA method ID on the given entity
+                
+
+                apiInstance.MfaAdminDestroyTotpSecret(MfaAdminDestroyTotpSecretRequest mfaAdminDestroyTotpSecretRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaAdminDestroyTotpSecret: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mfaAdminDestroyTotpSecretRequest** | [**MfaAdminDestroyTotpSecretRequest**](MfaAdminDestroyTotpSecretRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaadmingeneratetotpsecret"></a>
+# **MfaAdminGenerateTotpSecret**
+
+> void MfaAdminGenerateTotpSecret (MfaAdminGenerateTotpSecretRequest mfaAdminGenerateTotpSecretRequest, TimeSpan? wrapTTL = null)
+
+Update or create TOTP secret for the given method ID on the given entity.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaAdminGenerateTotpSecretExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var mfaAdminGenerateTotpSecretRequest = new MfaAdminGenerateTotpSecretRequest(); // MfaAdminGenerateTotpSecretRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update or create TOTP secret for the given method ID on the given entity.
+                
+
+                apiInstance.MfaAdminGenerateTotpSecret(MfaAdminGenerateTotpSecretRequest mfaAdminGenerateTotpSecretRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaAdminGenerateTotpSecret: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mfaAdminGenerateTotpSecretRequest** | [**MfaAdminGenerateTotpSecretRequest**](MfaAdminGenerateTotpSecretRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaconfigureduomethod"></a>
+# **MfaConfigureDuoMethod**
+
+> void MfaConfigureDuoMethod (string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null)
+
+Update or create a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaConfigureDuoMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaConfigureDuoMethodRequest = new MfaConfigureDuoMethodRequest(); // MfaConfigureDuoMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update or create a configuration for the given MFA method
+                
+
+                apiInstance.MfaConfigureDuoMethod(string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaConfigureDuoMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaConfigureDuoMethodRequest** | [**MfaConfigureDuoMethodRequest**](MfaConfigureDuoMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaconfigureoktamethod"></a>
+# **MfaConfigureOktaMethod**
+
+> void MfaConfigureOktaMethod (string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null)
+
+Update or create a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaConfigureOktaMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaConfigureOktaMethodRequest = new MfaConfigureOktaMethodRequest(); // MfaConfigureOktaMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update or create a configuration for the given MFA method
+                
+
+                apiInstance.MfaConfigureOktaMethod(string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaConfigureOktaMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaConfigureOktaMethodRequest** | [**MfaConfigureOktaMethodRequest**](MfaConfigureOktaMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaconfigurepingidmethod"></a>
+# **MfaConfigurePingIdMethod**
+
+> void MfaConfigurePingIdMethod (string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null)
+
+Update or create a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaConfigurePingIdMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaConfigurePingIdMethodRequest = new MfaConfigurePingIdMethodRequest(); // MfaConfigurePingIdMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update or create a configuration for the given MFA method
+                
+
+                apiInstance.MfaConfigurePingIdMethod(string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaConfigurePingIdMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaConfigurePingIdMethodRequest** | [**MfaConfigurePingIdMethodRequest**](MfaConfigurePingIdMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaconfiguretotpmethod"></a>
+# **MfaConfigureTotpMethod**
+
+> void MfaConfigureTotpMethod (string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null)
+
+Update or create a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaConfigureTotpMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaConfigureTotpMethodRequest = new MfaConfigureTotpMethodRequest(); // MfaConfigureTotpMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update or create a configuration for the given MFA method
+                
+
+                apiInstance.MfaConfigureTotpMethod(string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaConfigureTotpMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaConfigureTotpMethodRequest** | [**MfaConfigureTotpMethodRequest**](MfaConfigureTotpMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfadeleteduomethod"></a>
+# **MfaDeleteDuoMethod**
+
+> void MfaDeleteDuoMethod (string methodId, TimeSpan? wrapTTL = null)
+
+Delete a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaDeleteDuoMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a configuration for the given MFA method
+                
+
+                apiInstance.MfaDeleteDuoMethod(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaDeleteDuoMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **204** | empty body |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfadeleteloginenforcement"></a>
+# **MfaDeleteLoginEnforcement**
+
+> void MfaDeleteLoginEnforcement (string name, TimeSpan? wrapTTL = null)
 
 Delete a login enforcement
 
@@ -3565,7 +4203,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFADeleteLoginEnforcementExample
+    public class MfaDeleteLoginEnforcementExample
     {
         public static void Main()
         {
@@ -3592,11 +4230,11 @@ namespace Example
                 // Delete a login enforcement
                 
 
-                apiInstance.MFADeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
+                apiInstance.MfaDeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFADeleteLoginEnforcement: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaDeleteLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3637,10 +4275,470 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfalistloginenforcements"></a>
-# **MFAListLoginEnforcements**
+<a name="mfadeleteoktamethod"></a>
+# **MfaDeleteOktaMethod**
 
-> void MFAListLoginEnforcements (TimeSpan? wrapTTL = null)
+> void MfaDeleteOktaMethod (string methodId, TimeSpan? wrapTTL = null)
+
+Delete a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaDeleteOktaMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a configuration for the given MFA method
+                
+
+                apiInstance.MfaDeleteOktaMethod(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaDeleteOktaMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **204** | empty body |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfadeletepingidmethod"></a>
+# **MfaDeletePingIdMethod**
+
+> void MfaDeletePingIdMethod (string methodId, TimeSpan? wrapTTL = null)
+
+Delete a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaDeletePingIdMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a configuration for the given MFA method
+                
+
+                apiInstance.MfaDeletePingIdMethod(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaDeletePingIdMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **204** | empty body |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfadeletetotpmethod"></a>
+# **MfaDeleteTotpMethod**
+
+> void MfaDeleteTotpMethod (string methodId, TimeSpan? wrapTTL = null)
+
+Delete a configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaDeleteTotpMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a configuration for the given MFA method
+                
+
+                apiInstance.MfaDeleteTotpMethod(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaDeleteTotpMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **204** | empty body |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfageneratetotpsecret"></a>
+# **MfaGenerateTotpSecret**
+
+> void MfaGenerateTotpSecret (MfaGenerateTotpSecretRequest mfaGenerateTotpSecretRequest, TimeSpan? wrapTTL = null)
+
+Update or create TOTP secret for the given method ID on the given entity.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaGenerateTotpSecretExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var mfaGenerateTotpSecretRequest = new MfaGenerateTotpSecretRequest(); // MfaGenerateTotpSecretRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update or create TOTP secret for the given method ID on the given entity.
+                
+
+                apiInstance.MfaGenerateTotpSecret(MfaGenerateTotpSecretRequest mfaGenerateTotpSecretRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaGenerateTotpSecret: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mfaGenerateTotpSecretRequest** | [**MfaGenerateTotpSecretRequest**](MfaGenerateTotpSecretRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfalistduomethods"></a>
+# **MfaListDuoMethods**
+
+> void MfaListDuoMethods (TimeSpan? wrapTTL = null)
+
+List MFA method configurations for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaListDuoMethodsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+                // List MFA method configurations for the given MFA method
+                
+
+                apiInstance.MfaListDuoMethods(TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaListDuoMethods: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfalistloginenforcements"></a>
+# **MfaListLoginEnforcements**
+
+> void MfaListLoginEnforcements (TimeSpan? wrapTTL = null)
 
 List login enforcements
 
@@ -3657,7 +4755,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAListLoginEnforcementsExample
+    public class MfaListLoginEnforcementsExample
     {
         public static void Main()
         {
@@ -3684,11 +4782,11 @@ namespace Example
                 // List login enforcements
                 
 
-                apiInstance.MFAListLoginEnforcements(TimeSpan? wrapTTL = null);
+                apiInstance.MfaListLoginEnforcements(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAListLoginEnforcements: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaListLoginEnforcements: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3729,654 +4827,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfamethodadmindestroytotp"></a>
-# **MFAMethodAdminDestroyTOTP**
+<a name="mfalistmethods"></a>
+# **MfaListMethods**
 
-> void MFAMethodAdminDestroyTOTP (MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null)
-
-Destroys a TOTP secret for the given MFA method ID on the given entity
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodAdminDestroyTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var mFAMethodAdminDestroyTOTPRequest = new MFAMethodAdminDestroyTOTPRequest(); // MFAMethodAdminDestroyTOTPRequest | 
-            
-            
-
-            try
-            {
-                
-                // Destroys a TOTP secret for the given MFA method ID on the given entity
-                
-
-                apiInstance.MFAMethodAdminDestroyTOTP(MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodAdminDestroyTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mFAMethodAdminDestroyTOTPRequest** | [**MFAMethodAdminDestroyTOTPRequest**](MFAMethodAdminDestroyTOTPRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodadmingeneratetotp"></a>
-# **MFAMethodAdminGenerateTOTP**
-
-> void MFAMethodAdminGenerateTOTP (MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null)
-
-Update or create TOTP secret for the given method ID on the given entity.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodAdminGenerateTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var mFAMethodAdminGenerateTOTPRequest = new MFAMethodAdminGenerateTOTPRequest(); // MFAMethodAdminGenerateTOTPRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update or create TOTP secret for the given method ID on the given entity.
-                
-
-                apiInstance.MFAMethodAdminGenerateTOTP(MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodAdminGenerateTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mFAMethodAdminGenerateTOTPRequest** | [**MFAMethodAdminGenerateTOTPRequest**](MFAMethodAdminGenerateTOTPRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethoddeleteduo"></a>
-# **MFAMethodDeleteDuo**
-
-> void MFAMethodDeleteDuo (string methodId, TimeSpan? wrapTTL = null)
-
-Delete a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodDeleteDuoExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Delete a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodDeleteDuo(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodDeleteDuo: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | empty body |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethoddeleteokta"></a>
-# **MFAMethodDeleteOkta**
-
-> void MFAMethodDeleteOkta (string methodId, TimeSpan? wrapTTL = null)
-
-Delete a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodDeleteOktaExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Delete a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodDeleteOkta(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodDeleteOkta: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | empty body |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethoddeletepingid"></a>
-# **MFAMethodDeletePingID**
-
-> void MFAMethodDeletePingID (string methodId, TimeSpan? wrapTTL = null)
-
-Delete a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodDeletePingIDExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Delete a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodDeletePingID(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodDeletePingID: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | empty body |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethoddeletetotp"></a>
-# **MFAMethodDeleteTOTP**
-
-> void MFAMethodDeleteTOTP (string methodId, TimeSpan? wrapTTL = null)
-
-Delete a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodDeleteTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Delete a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodDeleteTOTP(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodDeleteTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | empty body |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodgeneratetotp"></a>
-# **MFAMethodGenerateTOTP**
-
-> void MFAMethodGenerateTOTP (MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null)
-
-Update or create TOTP secret for the given method ID on the given entity.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodGenerateTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var mFAMethodGenerateTOTPRequest = new MFAMethodGenerateTOTPRequest(); // MFAMethodGenerateTOTPRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update or create TOTP secret for the given method ID on the given entity.
-                
-
-                apiInstance.MFAMethodGenerateTOTP(MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodGenerateTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mFAMethodGenerateTOTPRequest** | [**MFAMethodGenerateTOTPRequest**](MFAMethodGenerateTOTPRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodlist"></a>
-# **MFAMethodList**
-
-> void MFAMethodList (TimeSpan? wrapTTL = null)
+> void MfaListMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for all MFA methods
 
@@ -4393,7 +4847,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAMethodListExample
+    public class MfaListMethodsExample
     {
         public static void Main()
         {
@@ -4420,11 +4874,11 @@ namespace Example
                 // List MFA method configurations for all MFA methods
                 
 
-                apiInstance.MFAMethodList(TimeSpan? wrapTTL = null);
+                apiInstance.MfaListMethods(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAMethodList: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaListMethods: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -4465,10 +4919,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfamethodlistduo"></a>
-# **MFAMethodListDuo**
+<a name="mfalistoktamethods"></a>
+# **MfaListOktaMethods**
 
-> void MFAMethodListDuo (TimeSpan? wrapTTL = null)
+> void MfaListOktaMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -4485,7 +4939,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAMethodListDuoExample
+    public class MfaListOktaMethodsExample
     {
         public static void Main()
         {
@@ -4512,11 +4966,11 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MFAMethodListDuo(TimeSpan? wrapTTL = null);
+                apiInstance.MfaListOktaMethods(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAMethodListDuo: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaListOktaMethods: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -4557,10 +5011,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfamethodlistokta"></a>
-# **MFAMethodListOkta**
+<a name="mfalistpingidmethods"></a>
+# **MfaListPingIdMethods**
 
-> void MFAMethodListOkta (TimeSpan? wrapTTL = null)
+> void MfaListPingIdMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -4577,7 +5031,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAMethodListOktaExample
+    public class MfaListPingIdMethodsExample
     {
         public static void Main()
         {
@@ -4604,11 +5058,11 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MFAMethodListOkta(TimeSpan? wrapTTL = null);
+                apiInstance.MfaListPingIdMethods(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAMethodListOkta: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaListPingIdMethods: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -4649,10 +5103,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfamethodlistpingid"></a>
-# **MFAMethodListPingID**
+<a name="mfalisttotpmethods"></a>
+# **MfaListTotpMethods**
 
-> void MFAMethodListPingID (TimeSpan? wrapTTL = null)
+> void MfaListTotpMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -4669,7 +5123,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAMethodListPingIDExample
+    public class MfaListTotpMethodsExample
     {
         public static void Main()
         {
@@ -4696,11 +5150,11 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MFAMethodListPingID(TimeSpan? wrapTTL = null);
+                apiInstance.MfaListTotpMethods(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAMethodListPingID: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaListTotpMethods: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -4741,194 +5195,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfamethodlisttotp"></a>
-# **MFAMethodListTOTP**
+<a name="mfareadduomethodconfiguration"></a>
+# **MfaReadDuoMethodConfiguration**
 
-> void MFAMethodListTOTP (TimeSpan? wrapTTL = null)
-
-List MFA method configurations for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodListTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var list = "true";  // string | Must be set to `true`
-            
-            
-            
-
-            try
-            {
-                
-                // List MFA method configurations for the given MFA method
-                
-
-                apiInstance.MFAMethodListTOTP(TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodListTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodread"></a>
-# **MFAMethodRead**
-
-> void MFAMethodRead (string methodId, TimeSpan? wrapTTL = null)
-
-Read the current configuration for the given ID regardless of the MFA method type
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodReadExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Read the current configuration for the given ID regardless of the MFA method type
-                
-
-                apiInstance.MFAMethodRead(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodRead: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodreadduo"></a>
-# **MFAMethodReadDuo**
-
-> void MFAMethodReadDuo (string methodId, TimeSpan? wrapTTL = null)
+> void MfaReadDuoMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -4945,7 +5215,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAMethodReadDuoExample
+    public class MfaReadDuoMethodConfigurationExample
     {
         public static void Main()
         {
@@ -4972,11 +5242,11 @@ namespace Example
                 // Read the current configuration for the given MFA method
                 
 
-                apiInstance.MFAMethodReadDuo(string methodId, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadDuoMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAMethodReadDuo: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadDuoMethodConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5002,674 +5272,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodreadokta"></a>
-# **MFAMethodReadOkta**
-
-> void MFAMethodReadOkta (string methodId, TimeSpan? wrapTTL = null)
-
-Read the current configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodReadOktaExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Read the current configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodReadOkta(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodReadOkta: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodreadpingid"></a>
-# **MFAMethodReadPingID**
-
-> void MFAMethodReadPingID (string methodId, TimeSpan? wrapTTL = null)
-
-Read the current configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodReadPingIDExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Read the current configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodReadPingID(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodReadPingID: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodreadtotp"></a>
-# **MFAMethodReadTOTP**
-
-> void MFAMethodReadTOTP (string methodId, TimeSpan? wrapTTL = null)
-
-Read the current configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodReadTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-
-            try
-            {
-                
-                // Read the current configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodReadTOTP(string methodId, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodReadTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodwriteduo"></a>
-# **MFAMethodWriteDuo**
-
-> void MFAMethodWriteDuo (string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null)
-
-Update or create a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodWriteDuoExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-            
-            
-            var mFAMethodWriteDuoRequest = new MFAMethodWriteDuoRequest(); // MFAMethodWriteDuoRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update or create a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodWriteDuo(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodWriteDuo: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mFAMethodWriteDuoRequest** | [**MFAMethodWriteDuoRequest**](MFAMethodWriteDuoRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodwriteokta"></a>
-# **MFAMethodWriteOkta**
-
-> void MFAMethodWriteOkta (string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null)
-
-Update or create a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodWriteOktaExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-            
-            
-            var mFAMethodWriteOktaRequest = new MFAMethodWriteOktaRequest(); // MFAMethodWriteOktaRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update or create a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodWriteOkta(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodWriteOkta: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mFAMethodWriteOktaRequest** | [**MFAMethodWriteOktaRequest**](MFAMethodWriteOktaRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodwritepingid"></a>
-# **MFAMethodWritePingID**
-
-> void MFAMethodWritePingID (string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null)
-
-Update or create a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodWritePingIDExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-            
-            
-            var mFAMethodWritePingIDRequest = new MFAMethodWritePingIDRequest(); // MFAMethodWritePingIDRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update or create a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodWritePingID(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodWritePingID: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mFAMethodWritePingIDRequest** | [**MFAMethodWritePingIDRequest**](MFAMethodWritePingIDRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="mfamethodwritetotp"></a>
-# **MFAMethodWriteTOTP**
-
-> void MFAMethodWriteTOTP (string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null)
-
-Update or create a configuration for the given MFA method
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class MFAMethodWriteTOTPExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
-            
-            
-            
-            
-            
-            var mFAMethodWriteTOTPRequest = new MFAMethodWriteTOTPRequest(); // MFAMethodWriteTOTPRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update or create a configuration for the given MFA method
-                
-
-                apiInstance.MFAMethodWriteTOTP(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.MFAMethodWriteTOTP: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mFAMethodWriteTOTPRequest** | [**MFAMethodWriteTOTPRequest**](MFAMethodWriteTOTPRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
  - **Accept**: Not defined
 
 
@@ -5686,9 +5288,9 @@ No authorization required
 
 
 <a name="mfareadloginenforcement"></a>
-# **MFAReadLoginEnforcement**
+# **MfaReadLoginEnforcement**
 
-> void MFAReadLoginEnforcement (string name, TimeSpan? wrapTTL = null)
+> void MfaReadLoginEnforcement (string name, TimeSpan? wrapTTL = null)
 
 Read the current login enforcement
 
@@ -5705,7 +5307,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAReadLoginEnforcementExample
+    public class MfaReadLoginEnforcementExample
     {
         public static void Main()
         {
@@ -5732,11 +5334,11 @@ namespace Example
                 // Read the current login enforcement
                 
 
-                apiInstance.MFAReadLoginEnforcement(string name, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAReadLoginEnforcement: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5749,6 +5351,374 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name for this login enforcement configuration | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfareadmethodconfiguration"></a>
+# **MfaReadMethodConfiguration**
+
+> void MfaReadMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+
+Read the current configuration for the given ID regardless of the MFA method type
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaReadMethodConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Read the current configuration for the given ID regardless of the MFA method type
+                
+
+                apiInstance.MfaReadMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaReadMethodConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfareadoktamethodconfiguration"></a>
+# **MfaReadOktaMethodConfiguration**
+
+> void MfaReadOktaMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+
+Read the current configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaReadOktaMethodConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Read the current configuration for the given MFA method
+                
+
+                apiInstance.MfaReadOktaMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaReadOktaMethodConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfareadpingidmethodconfiguration"></a>
+# **MfaReadPingIdMethodConfiguration**
+
+> void MfaReadPingIdMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+
+Read the current configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaReadPingIdMethodConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Read the current configuration for the given MFA method
+                
+
+                apiInstance.MfaReadPingIdMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaReadPingIdMethodConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfareadtotpmethodconfiguration"></a>
+# **MfaReadTotpMethodConfiguration**
+
+> void MfaReadTotpMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+
+Read the current configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaReadTotpMethodConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+
+            try
+            {
+                
+                // Read the current configuration for the given MFA method
+                
+
+                apiInstance.MfaReadTotpMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaReadTotpMethodConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
 
 
 ### Return type
@@ -5778,9 +5748,9 @@ No authorization required
 
 
 <a name="mfawriteloginenforcement"></a>
-# **MFAWriteLoginEnforcement**
+# **MfaWriteLoginEnforcement**
 
-> void MFAWriteLoginEnforcement (string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null)
+> void MfaWriteLoginEnforcement (string name, MfaWriteLoginEnforcementRequest mfaWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null)
 
 Create or update a login enforcement
 
@@ -5797,7 +5767,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MFAWriteLoginEnforcementExample
+    public class MfaWriteLoginEnforcementExample
     {
         public static void Main()
         {
@@ -5819,7 +5789,7 @@ namespace Example
             
             
             
-            var mFAWriteLoginEnforcementRequest = new MFAWriteLoginEnforcementRequest(); // MFAWriteLoginEnforcementRequest | 
+            var mfaWriteLoginEnforcementRequest = new MfaWriteLoginEnforcementRequest(); // MfaWriteLoginEnforcementRequest | 
             
             
 
@@ -5829,11 +5799,11 @@ namespace Example
                 // Create or update a login enforcement
                 
 
-                apiInstance.MFAWriteLoginEnforcement(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null);
+                apiInstance.MfaWriteLoginEnforcement(string name, MfaWriteLoginEnforcementRequest mfaWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MFAWriteLoginEnforcement: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaWriteLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5846,7 +5816,97 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name for this login enforcement configuration | 
- **mFAWriteLoginEnforcementRequest** | [**MFAWriteLoginEnforcementRequest**](MFAWriteLoginEnforcementRequest.md)|  | 
+ **mfaWriteLoginEnforcementRequest** | [**MfaWriteLoginEnforcementRequest**](MfaWriteLoginEnforcementRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcconfigure"></a>
+# **OidcConfigure**
+
+> void OidcConfigure (OidcConfigureRequest oidcConfigureRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcConfigureExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var oidcConfigureRequest = new OidcConfigureRequest(); // OidcConfigureRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcConfigure(OidcConfigureRequest oidcConfigureRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcConfigure: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcConfigureRequest** | [**OidcConfigureRequest**](OidcConfigureRequest.md)|  | 
 
 
 ### Return type
@@ -5876,9 +5936,9 @@ No authorization required
 
 
 <a name="oidcdeleteassignment"></a>
-# **OIDCDeleteAssignment**
+# **OidcDeleteAssignment**
 
-> void OIDCDeleteAssignment (string name, TimeSpan? wrapTTL = null)
+> void OidcDeleteAssignment (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5895,7 +5955,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCDeleteAssignmentExample
+    public class OidcDeleteAssignmentExample
     {
         public static void Main()
         {
@@ -5920,11 +5980,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCDeleteAssignment(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcDeleteAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCDeleteAssignment: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcDeleteAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5966,9 +6026,9 @@ No authorization required
 
 
 <a name="oidcdeleteclient"></a>
-# **OIDCDeleteClient**
+# **OidcDeleteClient**
 
-> void OIDCDeleteClient (string name, TimeSpan? wrapTTL = null)
+> void OidcDeleteClient (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5985,7 +6045,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCDeleteClientExample
+    public class OidcDeleteClientExample
     {
         public static void Main()
         {
@@ -6010,11 +6070,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCDeleteClient(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcDeleteClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCDeleteClient: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcDeleteClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6056,9 +6116,9 @@ No authorization required
 
 
 <a name="oidcdeletekey"></a>
-# **OIDCDeleteKey**
+# **OidcDeleteKey**
 
-> void OIDCDeleteKey (string name, TimeSpan? wrapTTL = null)
+> void OidcDeleteKey (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -6075,7 +6135,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCDeleteKeyExample
+    public class OidcDeleteKeyExample
     {
         public static void Main()
         {
@@ -6102,11 +6162,11 @@ namespace Example
                 // CRUD operations for OIDC keys.
                 
 
-                apiInstance.OIDCDeleteKey(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcDeleteKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCDeleteKey: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcDeleteKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6148,9 +6208,9 @@ No authorization required
 
 
 <a name="oidcdeleteprovider"></a>
-# **OIDCDeleteProvider**
+# **OidcDeleteProvider**
 
-> void OIDCDeleteProvider (string name, TimeSpan? wrapTTL = null)
+> void OidcDeleteProvider (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6167,7 +6227,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCDeleteProviderExample
+    public class OidcDeleteProviderExample
     {
         public static void Main()
         {
@@ -6192,11 +6252,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCDeleteProvider(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcDeleteProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCDeleteProvider: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcDeleteProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6238,9 +6298,9 @@ No authorization required
 
 
 <a name="oidcdeleterole"></a>
-# **OIDCDeleteRole**
+# **OidcDeleteRole**
 
-> void OIDCDeleteRole (string name, TimeSpan? wrapTTL = null)
+> void OidcDeleteRole (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -6257,7 +6317,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCDeleteRoleExample
+    public class OidcDeleteRoleExample
     {
         public static void Main()
         {
@@ -6284,11 +6344,11 @@ namespace Example
                 // CRUD operations on OIDC Roles
                 
 
-                apiInstance.OIDCDeleteRole(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcDeleteRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCDeleteRole: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6330,9 +6390,9 @@ No authorization required
 
 
 <a name="oidcdeletescope"></a>
-# **OIDCDeleteScope**
+# **OidcDeleteScope**
 
-> void OIDCDeleteScope (string name, TimeSpan? wrapTTL = null)
+> void OidcDeleteScope (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6349,7 +6409,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCDeleteScopeExample
+    public class OidcDeleteScopeExample
     {
         public static void Main()
         {
@@ -6374,11 +6434,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCDeleteScope(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcDeleteScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCDeleteScope: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcDeleteScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6419,10 +6479,102 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcintrospect"></a>
-# **OIDCIntrospect**
+<a name="oidcgeneratetoken"></a>
+# **OidcGenerateToken**
 
-> void OIDCIntrospect (OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null)
+> void OidcGenerateToken (string name, TimeSpan? wrapTTL = null)
+
+Generate an OIDC token
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcGenerateTokenExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the role
+            
+            
+            
+
+            try
+            {
+                
+                // Generate an OIDC token
+                
+
+                apiInstance.OidcGenerateToken(string name, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcGenerateToken: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcintrospect"></a>
+# **OidcIntrospect**
+
+> void OidcIntrospect (OidcIntrospectRequest oidcIntrospectRequest, TimeSpan? wrapTTL = null)
 
 Verify the authenticity of an OIDC token
 
@@ -6439,7 +6591,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCIntrospectExample
+    public class OidcIntrospectExample
     {
         public static void Main()
         {
@@ -6456,7 +6608,7 @@ namespace Example
             
             
             
-            var oIDCIntrospectRequest = new OIDCIntrospectRequest(); // OIDCIntrospectRequest | 
+            var oidcIntrospectRequest = new OidcIntrospectRequest(); // OidcIntrospectRequest | 
             
             
 
@@ -6466,11 +6618,11 @@ namespace Example
                 // Verify the authenticity of an OIDC token
                 
 
-                apiInstance.OIDCIntrospect(OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcIntrospect(OidcIntrospectRequest oidcIntrospectRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCIntrospect: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcIntrospect: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6482,7 +6634,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oIDCIntrospectRequest** | [**OIDCIntrospectRequest**](OIDCIntrospectRequest.md)|  | 
+ **oidcIntrospectRequest** | [**OidcIntrospectRequest**](OidcIntrospectRequest.md)|  | 
 
 
 ### Return type
@@ -6512,9 +6664,9 @@ No authorization required
 
 
 <a name="oidclistassignments"></a>
-# **OIDCListAssignments**
+# **OidcListAssignments**
 
-> void OIDCListAssignments (TimeSpan? wrapTTL = null)
+> void OidcListAssignments (TimeSpan? wrapTTL = null)
 
 
 
@@ -6531,7 +6683,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCListAssignmentsExample
+    public class OidcListAssignmentsExample
     {
         public static void Main()
         {
@@ -6556,11 +6708,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCListAssignments(TimeSpan? wrapTTL = null);
+                apiInstance.OidcListAssignments(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCListAssignments: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcListAssignments: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6602,9 +6754,9 @@ No authorization required
 
 
 <a name="oidclistclients"></a>
-# **OIDCListClients**
+# **OidcListClients**
 
-> void OIDCListClients (TimeSpan? wrapTTL = null)
+> void OidcListClients (TimeSpan? wrapTTL = null)
 
 
 
@@ -6621,7 +6773,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCListClientsExample
+    public class OidcListClientsExample
     {
         public static void Main()
         {
@@ -6646,11 +6798,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCListClients(TimeSpan? wrapTTL = null);
+                apiInstance.OidcListClients(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCListClients: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcListClients: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6692,9 +6844,9 @@ No authorization required
 
 
 <a name="oidclistkeys"></a>
-# **OIDCListKeys**
+# **OidcListKeys**
 
-> void OIDCListKeys (TimeSpan? wrapTTL = null)
+> void OidcListKeys (TimeSpan? wrapTTL = null)
 
 List OIDC keys
 
@@ -6711,7 +6863,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCListKeysExample
+    public class OidcListKeysExample
     {
         public static void Main()
         {
@@ -6738,11 +6890,11 @@ namespace Example
                 // List OIDC keys
                 
 
-                apiInstance.OIDCListKeys(TimeSpan? wrapTTL = null);
+                apiInstance.OidcListKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCListKeys: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcListKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6784,9 +6936,9 @@ No authorization required
 
 
 <a name="oidclistproviders"></a>
-# **OIDCListProviders**
+# **OidcListProviders**
 
-> void OIDCListProviders (string allowedClientId = default(string), TimeSpan? wrapTTL = null)
+> void OidcListProviders (string allowedClientId = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -6803,7 +6955,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCListProvidersExample
+    public class OidcListProvidersExample
     {
         public static void Main()
         {
@@ -6833,11 +6985,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.OidcListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCListProviders: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcListProviders: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6880,9 +7032,9 @@ No authorization required
 
 
 <a name="oidclistroles"></a>
-# **OIDCListRoles**
+# **OidcListRoles**
 
-> void OIDCListRoles (TimeSpan? wrapTTL = null)
+> void OidcListRoles (TimeSpan? wrapTTL = null)
 
 List configured OIDC roles
 
@@ -6899,7 +7051,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCListRolesExample
+    public class OidcListRolesExample
     {
         public static void Main()
         {
@@ -6926,11 +7078,11 @@ namespace Example
                 // List configured OIDC roles
                 
 
-                apiInstance.OIDCListRoles(TimeSpan? wrapTTL = null);
+                apiInstance.OidcListRoles(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCListRoles: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -6972,9 +7124,9 @@ No authorization required
 
 
 <a name="oidclistscopes"></a>
-# **OIDCListScopes**
+# **OidcListScopes**
 
-> void OIDCListScopes (TimeSpan? wrapTTL = null)
+> void OidcListScopes (TimeSpan? wrapTTL = null)
 
 
 
@@ -6991,7 +7143,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCListScopesExample
+    public class OidcListScopesExample
     {
         public static void Main()
         {
@@ -7016,11 +7168,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCListScopes(TimeSpan? wrapTTL = null);
+                apiInstance.OidcListScopes(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCListScopes: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcListScopes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7061,10 +7213,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcreadassignment"></a>
-# **OIDCReadAssignment**
+<a name="oidcproviderauthorize"></a>
+# **OidcProviderAuthorize**
 
-> void OIDCReadAssignment (string name, TimeSpan? wrapTTL = null)
+> void OidcProviderAuthorize (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7081,7 +7233,469 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadAssignmentExample
+    public class OidcProviderAuthorizeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the provider
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcProviderAuthorize(string name, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcProviderAuthorize: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the provider | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcproviderauthorize2"></a>
+# **OidcProviderAuthorize2**
+
+> void OidcProviderAuthorize2 (string name, OidcProviderAuthorize2Request oidcProviderAuthorize2Request, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcProviderAuthorize2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the provider
+            
+            
+            
+            
+            
+            var oidcProviderAuthorize2Request = new OidcProviderAuthorize2Request(); // OidcProviderAuthorize2Request | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcProviderAuthorize2(string name, OidcProviderAuthorize2Request oidcProviderAuthorize2Request, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcProviderAuthorize2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the provider | 
+ **oidcProviderAuthorize2Request** | [**OidcProviderAuthorize2Request**](OidcProviderAuthorize2Request.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcprovidertoken"></a>
+# **OidcProviderToken**
+
+> void OidcProviderToken (string name, OidcProviderTokenRequest oidcProviderTokenRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcProviderTokenExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the provider
+            
+            
+            
+            
+            
+            var oidcProviderTokenRequest = new OidcProviderTokenRequest(); // OidcProviderTokenRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcProviderToken(string name, OidcProviderTokenRequest oidcProviderTokenRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcProviderToken: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the provider | 
+ **oidcProviderTokenRequest** | [**OidcProviderTokenRequest**](OidcProviderTokenRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcprovideruserinfo"></a>
+# **OidcProviderUserInfo**
+
+> void OidcProviderUserInfo (string name, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcProviderUserInfoExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the provider
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcProviderUserInfo(string name, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcProviderUserInfo: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the provider | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcprovideruserinfo2"></a>
+# **OidcProviderUserInfo2**
+
+> void OidcProviderUserInfo2 (string name, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcProviderUserInfo2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the provider
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcProviderUserInfo2(string name, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcProviderUserInfo2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the provider | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcreadassignment"></a>
+# **OidcReadAssignment**
+
+> void OidcReadAssignment (string name, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcReadAssignmentExample
     {
         public static void Main()
         {
@@ -7106,11 +7720,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCReadAssignment(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadAssignment: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7152,9 +7766,9 @@ No authorization required
 
 
 <a name="oidcreadclient"></a>
-# **OIDCReadClient**
+# **OidcReadClient**
 
-> void OIDCReadClient (string name, TimeSpan? wrapTTL = null)
+> void OidcReadClient (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7171,7 +7785,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadClientExample
+    public class OidcReadClientExample
     {
         public static void Main()
         {
@@ -7196,11 +7810,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCReadClient(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadClient: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7241,12 +7855,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcreadconfig"></a>
-# **OIDCReadConfig**
+<a name="oidcreadconfiguration"></a>
+# **OidcReadConfiguration**
 
-> void OIDCReadConfig (TimeSpan? wrapTTL = null)
+> void OidcReadConfiguration (TimeSpan? wrapTTL = null)
 
-OIDC configuration
+
 
 ### Example
 ```csharp
@@ -7261,7 +7875,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadConfigExample
+    public class OidcReadConfigurationExample
     {
         public static void Main()
         {
@@ -7280,14 +7894,12 @@ namespace Example
             try
             {
                 
-                // OIDC configuration
-                
 
-                apiInstance.OIDCReadConfig(TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadConfiguration(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadConfig: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7326,9 +7938,9 @@ No authorization required
 
 
 <a name="oidcreadkey"></a>
-# **OIDCReadKey**
+# **OidcReadKey**
 
-> void OIDCReadKey (string name, TimeSpan? wrapTTL = null)
+> void OidcReadKey (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -7345,7 +7957,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadKeyExample
+    public class OidcReadKeyExample
     {
         public static void Main()
         {
@@ -7372,11 +7984,11 @@ namespace Example
                 // CRUD operations for OIDC keys.
                 
 
-                apiInstance.OIDCReadKey(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadKey: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7417,10 +8029,94 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="oidcreadopenidconfiguration"></a>
+# **OidcReadOpenIdConfiguration**
+
+> void OidcReadOpenIdConfiguration (TimeSpan? wrapTTL = null)
+
+Query OIDC configurations
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcReadOpenIdConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+
+            try
+            {
+                
+                // Query OIDC configurations
+                
+
+                apiInstance.OidcReadOpenIdConfiguration(TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcReadOpenIdConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="oidcreadprovider"></a>
-# **OIDCReadProvider**
+# **OidcReadProvider**
 
-> void OIDCReadProvider (string name, TimeSpan? wrapTTL = null)
+> void OidcReadProvider (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7437,7 +8133,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadProviderExample
+    public class OidcReadProviderExample
     {
         public static void Main()
         {
@@ -7462,11 +8158,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCReadProvider(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadProvider: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7507,10 +8203,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcreadproviderauthorize"></a>
-# **OIDCReadProviderAuthorize**
+<a name="oidcreadprovideropenidconfiguration"></a>
+# **OidcReadProviderOpenIdConfiguration**
 
-> void OIDCReadProviderAuthorize (string name, TimeSpan? wrapTTL = null)
+> void OidcReadProviderOpenIdConfiguration (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7527,7 +8223,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadProviderAuthorizeExample
+    public class OidcReadProviderOpenIdConfigurationExample
     {
         public static void Main()
         {
@@ -7552,11 +8248,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCReadProviderAuthorize(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadProviderOpenIdConfiguration(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadProviderAuthorize: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadProviderOpenIdConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7597,10 +8293,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcreadprovideruserinfo"></a>
-# **OIDCReadProviderUserInfo**
+<a name="oidcreadproviderpublickeys"></a>
+# **OidcReadProviderPublicKeys**
 
-> void OIDCReadProviderUserInfo (string name, TimeSpan? wrapTTL = null)
+> void OidcReadProviderPublicKeys (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7617,7 +8313,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadProviderUserInfoExample
+    public class OidcReadProviderPublicKeysExample
     {
         public static void Main()
         {
@@ -7642,11 +8338,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCReadProviderUserInfo(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadProviderPublicKeys(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadProviderUserInfo: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadProviderPublicKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7687,102 +8383,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcreadproviderwellknownkeys"></a>
-# **OIDCReadProviderWellKnownKeys**
+<a name="oidcreadpublickeys"></a>
+# **OidcReadPublicKeys**
 
-> void OIDCReadProviderWellKnownKeys (string name, TimeSpan? wrapTTL = null)
+> void OidcReadPublicKeys (TimeSpan? wrapTTL = null)
 
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCReadProviderWellKnownKeysExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.OIDCReadProviderWellKnownKeys(string name, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCReadProviderWellKnownKeys: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcreadproviderwellknownopenidconfiguration"></a>
-# **OIDCReadProviderWellKnownOpenIDConfiguration**
-
-> void OIDCReadProviderWellKnownOpenIDConfiguration (string name, TimeSpan? wrapTTL = null)
-
-
+Retrieve public keys
 
 ### Example
 ```csharp
@@ -7797,7 +8403,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadProviderWellKnownOpenIDConfigurationExample
+    public class OidcReadPublicKeysExample
     {
         public static void Main()
         {
@@ -7812,21 +8418,18 @@ namespace Example
             
             
             
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
 
             try
             {
                 
+                // Retrieve public keys
+                
 
-                apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadPublicKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadProviderWellKnownOpenIDConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadPublicKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7835,10 +8438,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
+This endpoint does not need any parameter.
 
 
 ### Return type
@@ -7868,9 +8468,9 @@ No authorization required
 
 
 <a name="oidcreadrole"></a>
-# **OIDCReadRole**
+# **OidcReadRole**
 
-> void OIDCReadRole (string name, TimeSpan? wrapTTL = null)
+> void OidcReadRole (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -7887,7 +8487,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadRoleExample
+    public class OidcReadRoleExample
     {
         public static void Main()
         {
@@ -7914,11 +8514,11 @@ namespace Example
                 // CRUD operations on OIDC Roles
                 
 
-                apiInstance.OIDCReadRole(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadRole: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -7960,9 +8560,9 @@ No authorization required
 
 
 <a name="oidcreadscope"></a>
-# **OIDCReadScope**
+# **OidcReadScope**
 
-> void OIDCReadScope (string name, TimeSpan? wrapTTL = null)
+> void OidcReadScope (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7979,7 +8579,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCReadScopeExample
+    public class OidcReadScopeExample
     {
         public static void Main()
         {
@@ -8004,11 +8604,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCReadScope(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcReadScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCReadScope: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcReadScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -8021,266 +8621,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the scope | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcreadtoken"></a>
-# **OIDCReadToken**
-
-> void OIDCReadToken (string name, TimeSpan? wrapTTL = null)
-
-Generate an OIDC token
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCReadTokenExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the role
-            
-            
-            
-
-            try
-            {
-                
-                // Generate an OIDC token
-                
-
-                apiInstance.OIDCReadToken(string name, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCReadToken: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the role | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcreadwellknownkeys"></a>
-# **OIDCReadWellKnownKeys**
-
-> void OIDCReadWellKnownKeys (TimeSpan? wrapTTL = null)
-
-Retrieve public keys
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCReadWellKnownKeysExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-
-            try
-            {
-                
-                // Retrieve public keys
-                
-
-                apiInstance.OIDCReadWellKnownKeys(TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCReadWellKnownKeys: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcreadwellknownopenidconfiguration"></a>
-# **OIDCReadWellKnownOpenIDConfiguration**
-
-> void OIDCReadWellKnownOpenIDConfiguration (TimeSpan? wrapTTL = null)
-
-Query OIDC configurations
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCReadWellKnownOpenIDConfigurationExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-
-            try
-            {
-                
-                // Query OIDC configurations
-                
-
-                apiInstance.OIDCReadWellKnownOpenIDConfiguration(TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCReadWellKnownOpenIDConfiguration: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
 
 
 ### Return type
@@ -8310,9 +8650,9 @@ No authorization required
 
 
 <a name="oidcrotatekey"></a>
-# **OIDCRotateKey**
+# **OidcRotateKey**
 
-> void OIDCRotateKey (string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null)
+> void OidcRotateKey (string name, OidcRotateKeyRequest oidcRotateKeyRequest, TimeSpan? wrapTTL = null)
 
 Rotate a named OIDC key.
 
@@ -8329,7 +8669,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCRotateKeyExample
+    public class OidcRotateKeyExample
     {
         public static void Main()
         {
@@ -8351,7 +8691,7 @@ namespace Example
             
             
             
-            var oIDCRotateKeyRequest = new OIDCRotateKeyRequest(); // OIDCRotateKeyRequest | 
+            var oidcRotateKeyRequest = new OidcRotateKeyRequest(); // OidcRotateKeyRequest | 
             
             
 
@@ -8361,11 +8701,11 @@ namespace Example
                 // Rotate a named OIDC key.
                 
 
-                apiInstance.OIDCRotateKey(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcRotateKey(string name, OidcRotateKeyRequest oidcRotateKeyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCRotateKey: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcRotateKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -8378,7 +8718,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the key | 
- **oIDCRotateKeyRequest** | [**OIDCRotateKeyRequest**](OIDCRotateKeyRequest.md)|  | 
+ **oidcRotateKeyRequest** | [**OidcRotateKeyRequest**](OidcRotateKeyRequest.md)|  | 
 
 
 ### Return type
@@ -8408,9 +8748,9 @@ No authorization required
 
 
 <a name="oidcwriteassignment"></a>
-# **OIDCWriteAssignment**
+# **OidcWriteAssignment**
 
-> void OIDCWriteAssignment (string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null)
+> void OidcWriteAssignment (string name, OidcWriteAssignmentRequest oidcWriteAssignmentRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -8427,7 +8767,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCWriteAssignmentExample
+    public class OidcWriteAssignmentExample
     {
         public static void Main()
         {
@@ -8449,7 +8789,7 @@ namespace Example
             
             
             
-            var oIDCWriteAssignmentRequest = new OIDCWriteAssignmentRequest(); // OIDCWriteAssignmentRequest | 
+            var oidcWriteAssignmentRequest = new OidcWriteAssignmentRequest(); // OidcWriteAssignmentRequest | 
             
             
 
@@ -8457,11 +8797,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCWriteAssignment(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcWriteAssignment(string name, OidcWriteAssignmentRequest oidcWriteAssignmentRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCWriteAssignment: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcWriteAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -8474,7 +8814,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the assignment | 
- **oIDCWriteAssignmentRequest** | [**OIDCWriteAssignmentRequest**](OIDCWriteAssignmentRequest.md)|  | 
+ **oidcWriteAssignmentRequest** | [**OidcWriteAssignmentRequest**](OidcWriteAssignmentRequest.md)|  | 
 
 
 ### Return type
@@ -8504,9 +8844,9 @@ No authorization required
 
 
 <a name="oidcwriteclient"></a>
-# **OIDCWriteClient**
+# **OidcWriteClient**
 
-> void OIDCWriteClient (string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null)
+> void OidcWriteClient (string name, OidcWriteClientRequest oidcWriteClientRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -8523,7 +8863,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCWriteClientExample
+    public class OidcWriteClientExample
     {
         public static void Main()
         {
@@ -8545,7 +8885,7 @@ namespace Example
             
             
             
-            var oIDCWriteClientRequest = new OIDCWriteClientRequest(); // OIDCWriteClientRequest | 
+            var oidcWriteClientRequest = new OidcWriteClientRequest(); // OidcWriteClientRequest | 
             
             
 
@@ -8553,11 +8893,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCWriteClient(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcWriteClient(string name, OidcWriteClientRequest oidcWriteClientRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCWriteClient: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcWriteClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -8570,99 +8910,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the client. | 
- **oIDCWriteClientRequest** | [**OIDCWriteClientRequest**](OIDCWriteClientRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcwriteconfig"></a>
-# **OIDCWriteConfig**
-
-> void OIDCWriteConfig (OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null)
-
-OIDC configuration
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCWriteConfigExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var oIDCWriteConfigRequest = new OIDCWriteConfigRequest(); // OIDCWriteConfigRequest | 
-            
-            
-
-            try
-            {
-                
-                // OIDC configuration
-                
-
-                apiInstance.OIDCWriteConfig(OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCWriteConfig: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **oIDCWriteConfigRequest** | [**OIDCWriteConfigRequest**](OIDCWriteConfigRequest.md)|  | 
+ **oidcWriteClientRequest** | [**OidcWriteClientRequest**](OidcWriteClientRequest.md)|  | 
 
 
 ### Return type
@@ -8692,9 +8940,9 @@ No authorization required
 
 
 <a name="oidcwritekey"></a>
-# **OIDCWriteKey**
+# **OidcWriteKey**
 
-> void OIDCWriteKey (string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null)
+> void OidcWriteKey (string name, OidcWriteKeyRequest oidcWriteKeyRequest, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -8711,7 +8959,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCWriteKeyExample
+    public class OidcWriteKeyExample
     {
         public static void Main()
         {
@@ -8733,7 +8981,7 @@ namespace Example
             
             
             
-            var oIDCWriteKeyRequest = new OIDCWriteKeyRequest(); // OIDCWriteKeyRequest | 
+            var oidcWriteKeyRequest = new OidcWriteKeyRequest(); // OidcWriteKeyRequest | 
             
             
 
@@ -8743,11 +8991,11 @@ namespace Example
                 // CRUD operations for OIDC keys.
                 
 
-                apiInstance.OIDCWriteKey(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcWriteKey(string name, OidcWriteKeyRequest oidcWriteKeyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCWriteKey: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcWriteKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -8760,7 +9008,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the key | 
- **oIDCWriteKeyRequest** | [**OIDCWriteKeyRequest**](OIDCWriteKeyRequest.md)|  | 
+ **oidcWriteKeyRequest** | [**OidcWriteKeyRequest**](OidcWriteKeyRequest.md)|  | 
 
 
 ### Return type
@@ -8790,9 +9038,9 @@ No authorization required
 
 
 <a name="oidcwriteprovider"></a>
-# **OIDCWriteProvider**
+# **OidcWriteProvider**
 
-> void OIDCWriteProvider (string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null)
+> void OidcWriteProvider (string name, OidcWriteProviderRequest oidcWriteProviderRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -8809,7 +9057,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCWriteProviderExample
+    public class OidcWriteProviderExample
     {
         public static void Main()
         {
@@ -8831,7 +9079,7 @@ namespace Example
             
             
             
-            var oIDCWriteProviderRequest = new OIDCWriteProviderRequest(); // OIDCWriteProviderRequest | 
+            var oidcWriteProviderRequest = new OidcWriteProviderRequest(); // OidcWriteProviderRequest | 
             
             
 
@@ -8839,11 +9087,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCWriteProvider(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcWriteProvider(string name, OidcWriteProviderRequest oidcWriteProviderRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCWriteProvider: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcWriteProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -8856,7 +9104,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
- **oIDCWriteProviderRequest** | [**OIDCWriteProviderRequest**](OIDCWriteProviderRequest.md)|  | 
+ **oidcWriteProviderRequest** | [**OidcWriteProviderRequest**](OidcWriteProviderRequest.md)|  | 
 
 
 ### Return type
@@ -8870,288 +9118,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcwriteproviderauthorize"></a>
-# **OIDCWriteProviderAuthorize**
-
-> void OIDCWriteProviderAuthorize (string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCWriteProviderAuthorizeExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
-            
-            
-            var oIDCWriteProviderAuthorizeRequest = new OIDCWriteProviderAuthorizeRequest(); // OIDCWriteProviderAuthorizeRequest | 
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.OIDCWriteProviderAuthorize(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCWriteProviderAuthorize: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
- **oIDCWriteProviderAuthorizeRequest** | [**OIDCWriteProviderAuthorizeRequest**](OIDCWriteProviderAuthorizeRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcwriteprovidertoken"></a>
-# **OIDCWriteProviderToken**
-
-> void OIDCWriteProviderToken (string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCWriteProviderTokenExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
-            
-            
-            var oIDCWriteProviderTokenRequest = new OIDCWriteProviderTokenRequest(); // OIDCWriteProviderTokenRequest | 
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.OIDCWriteProviderToken(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCWriteProviderToken: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
- **oIDCWriteProviderTokenRequest** | [**OIDCWriteProviderTokenRequest**](OIDCWriteProviderTokenRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcwriteprovideruserinfo"></a>
-# **OIDCWriteProviderUserInfo**
-
-> void OIDCWriteProviderUserInfo (string name, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OIDCWriteProviderUserInfoExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.OIDCWriteProviderUserInfo(string name, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OIDCWriteProviderUserInfo: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -9168,9 +9134,9 @@ No authorization required
 
 
 <a name="oidcwriterole"></a>
-# **OIDCWriteRole**
+# **OidcWriteRole**
 
-> void OIDCWriteRole (string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null)
+> void OidcWriteRole (string name, OidcWriteRoleRequest oidcWriteRoleRequest, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -9187,7 +9153,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCWriteRoleExample
+    public class OidcWriteRoleExample
     {
         public static void Main()
         {
@@ -9209,7 +9175,7 @@ namespace Example
             
             
             
-            var oIDCWriteRoleRequest = new OIDCWriteRoleRequest(); // OIDCWriteRoleRequest | 
+            var oidcWriteRoleRequest = new OidcWriteRoleRequest(); // OidcWriteRoleRequest | 
             
             
 
@@ -9219,11 +9185,11 @@ namespace Example
                 // CRUD operations on OIDC Roles
                 
 
-                apiInstance.OIDCWriteRole(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcWriteRole(string name, OidcWriteRoleRequest oidcWriteRoleRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCWriteRole: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -9236,7 +9202,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role | 
- **oIDCWriteRoleRequest** | [**OIDCWriteRoleRequest**](OIDCWriteRoleRequest.md)|  | 
+ **oidcWriteRoleRequest** | [**OidcWriteRoleRequest**](OidcWriteRoleRequest.md)|  | 
 
 
 ### Return type
@@ -9266,9 +9232,9 @@ No authorization required
 
 
 <a name="oidcwritescope"></a>
-# **OIDCWriteScope**
+# **OidcWriteScope**
 
-> void OIDCWriteScope (string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null)
+> void OidcWriteScope (string name, OidcWriteScopeRequest oidcWriteScopeRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -9285,7 +9251,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class OIDCWriteScopeExample
+    public class OidcWriteScopeExample
     {
         public static void Main()
         {
@@ -9307,7 +9273,7 @@ namespace Example
             
             
             
-            var oIDCWriteScopeRequest = new OIDCWriteScopeRequest(); // OIDCWriteScopeRequest | 
+            var oidcWriteScopeRequest = new OidcWriteScopeRequest(); // OidcWriteScopeRequest | 
             
             
 
@@ -9315,11 +9281,11 @@ namespace Example
             {
                 
 
-                apiInstance.OIDCWriteScope(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null);
+                apiInstance.OidcWriteScope(string name, OidcWriteScopeRequest oidcWriteScopeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.OIDCWriteScope: " + e.Message );
+                Debug.Print("Exception when calling Identity.OidcWriteScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -9332,7 +9298,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the scope | 
- **oIDCWriteScopeRequest** | [**OIDCWriteScopeRequest**](OIDCWriteScopeRequest.md)|  | 
+ **oidcWriteScopeRequest** | [**OidcWriteScopeRequest**](OidcWriteScopeRequest.md)|  | 
 
 
 ### Return type
@@ -9361,12 +9327,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="personaiddeletebyid"></a>
-# **PersonaIDDeleteByID**
+<a name="personacreate"></a>
+# **PersonaCreate**
 
-> void PersonaIDDeleteByID (string id, TimeSpan? wrapTTL = null)
+> void PersonaCreate (PersonaCreateRequest personaCreateRequest, TimeSpan? wrapTTL = null)
 
-Update, read or delete an alias ID.
+Create a new alias.
 
 ### Example
 ```csharp
@@ -9381,7 +9347,99 @@ using Vault.Model;
 
 namespace Example
 {
-    public class PersonaIDDeleteByIDExample
+    public class PersonaCreateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            
+            var personaCreateRequest = new PersonaCreateRequest(); // PersonaCreateRequest | 
+            
+            
+
+            try
+            {
+                
+                // Create a new alias.
+                
+
+                apiInstance.PersonaCreate(PersonaCreateRequest personaCreateRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.PersonaCreate: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **personaCreateRequest** | [**PersonaCreateRequest**](PersonaCreateRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="personadeletebyid"></a>
+# **PersonaDeleteById**
+
+> void PersonaDeleteById (string id, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PersonaDeleteByIdExample
     {
         public static void Main()
         {
@@ -9405,14 +9463,12 @@ namespace Example
             try
             {
                 
-                // Update, read or delete an alias ID.
-                
 
-                apiInstance.PersonaIDDeleteByID(string id, TimeSpan? wrapTTL = null);
+                apiInstance.PersonaDeleteById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.PersonaIDDeleteByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.PersonaDeleteById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -9453,200 +9509,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="personaidreadbyid"></a>
-# **PersonaIDReadByID**
-
-> void PersonaIDReadByID (string id, TimeSpan? wrapTTL = null)
-
-Update, read or delete an alias ID.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PersonaIDReadByIDExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var id = "id_example";  // string | ID of the persona
-            
-            
-            
-
-            try
-            {
-                
-                // Update, read or delete an alias ID.
-                
-
-                apiInstance.PersonaIDReadByID(string id, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.PersonaIDReadByID: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| ID of the persona | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="personaidwritebyid"></a>
-# **PersonaIDWriteByID**
-
-> void PersonaIDWriteByID (string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null)
-
-Update, read or delete an alias ID.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PersonaIDWriteByIDExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var id = "id_example";  // string | ID of the persona
-            
-            
-            
-            
-            
-            var personaIDWriteByIDRequest = new PersonaIDWriteByIDRequest(); // PersonaIDWriteByIDRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update, read or delete an alias ID.
-                
-
-                apiInstance.PersonaIDWriteByID(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.PersonaIDWriteByID: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| ID of the persona | 
- **personaIDWriteByIDRequest** | [**PersonaIDWriteByIDRequest**](PersonaIDWriteByIDRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="personalistbyid"></a>
-# **PersonaListByID**
+# **PersonaListById**
 
-> void PersonaListByID (TimeSpan? wrapTTL = null)
+> void PersonaListById (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -9663,7 +9529,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class PersonaListByIDExample
+    public class PersonaListByIdExample
     {
         public static void Main()
         {
@@ -9690,11 +9556,11 @@ namespace Example
                 // List all the alias IDs.
                 
 
-                apiInstance.PersonaListByID(TimeSpan? wrapTTL = null);
+                apiInstance.PersonaListById(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.PersonaListByID: " + e.Message );
+                Debug.Print("Exception when calling Identity.PersonaListById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -9735,12 +9601,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="personawrite"></a>
-# **PersonaWrite**
+<a name="personareadbyid"></a>
+# **PersonaReadById**
 
-> void PersonaWrite (PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null)
+> void PersonaReadById (string id, TimeSpan? wrapTTL = null)
 
-Create a new alias.
+
 
 ### Example
 ```csharp
@@ -9755,7 +9621,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class PersonaWriteExample
+    public class PersonaReadByIdExample
     {
         public static void Main()
         {
@@ -9771,22 +9637,20 @@ namespace Example
             
             
             
+            var id = "id_example";  // string | ID of the persona
             
-            var personaWriteRequest = new PersonaWriteRequest(); // PersonaWriteRequest | 
             
             
 
             try
             {
                 
-                // Create a new alias.
-                
 
-                apiInstance.PersonaWrite(PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null);
+                apiInstance.PersonaReadById(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.PersonaWrite: " + e.Message );
+                Debug.Print("Exception when calling Identity.PersonaReadById: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -9798,7 +9662,103 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **personaWriteRequest** | [**PersonaWriteRequest**](PersonaWriteRequest.md)|  | 
+ **id** | **string**| ID of the persona | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="personaupdatebyid"></a>
+# **PersonaUpdateById**
+
+> void PersonaUpdateById (string id, PersonaUpdateByIdRequest personaUpdateByIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PersonaUpdateByIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var id = "id_example";  // string | ID of the persona
+            
+            
+            
+            
+            
+            var personaUpdateByIdRequest = new PersonaUpdateByIdRequest(); // PersonaUpdateByIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PersonaUpdateById(string id, PersonaUpdateByIdRequest personaUpdateByIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.PersonaUpdateById: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| ID of the persona | 
+ **personaUpdateByIdRequest** | [**PersonaUpdateByIdRequest**](PersonaUpdateByIdRequest.md)|  | 
 
 
 ### Return type

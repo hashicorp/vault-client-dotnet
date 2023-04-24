@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'AssociatedData'
         /// </summary>
@@ -60,6 +63,16 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AssociatedData'
         }
+
+        /// <summary>
+        /// Test the property 'BatchInput'
+        /// </summary>
+        [Fact]
+        public void BatchInputTest()
+        {
+            // TODO unit test for the property 'BatchInput'
+        }
+
         /// <summary>
         /// Test the property 'Context'
         /// </summary>
@@ -68,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Context'
         }
+
         /// <summary>
         /// Test the property 'ConvergentEncryption'
         /// </summary>
@@ -76,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ConvergentEncryption'
         }
+
         /// <summary>
         /// Test the property 'KeyVersion'
         /// </summary>
@@ -84,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'KeyVersion'
         }
+
         /// <summary>
         /// Test the property 'Nonce'
         /// </summary>
@@ -92,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Nonce'
         }
+
         /// <summary>
         /// Test the property 'PartialFailureResponseCode'
         /// </summary>
@@ -100,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'PartialFailureResponseCode'
         }
+
         /// <summary>
         /// Test the property 'Plaintext'
         /// </summary>
@@ -108,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Plaintext'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -117,6 +136,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'Type'
         }
 
+
     }
 
 }
+
+

@@ -545,7 +545,7 @@ namespace Vault.Client
             string report = "C# SDK (Vault) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version + "\n";
-            report += "    Version of the API: 1.13.0\n";
+            report += "    Version of the API: 1.14.0\n";
             report += "    SDK Package Version: 0.1.0-beta\n";
 
             return report;

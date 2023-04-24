@@ -1,0 +1,13 @@
+# Vault.Model.PkiConfigureUrlsRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**CrlDistributionPoints** | **List&lt;string&gt;** | Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13. | [optional] 
+**EnableTemplating** | **bool** | Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#x27;{{issuer_id}}&#x27;, &#x27;{{cluster_path}}&#x27;, and &#x27;{{cluster_aia_path}}&#x27; are available, but the addresses are not checked for URI validity until issuance time. Using &#x27;{{cluster_path}}&#x27; requires /config/cluster&#x27;s &#x27;path&#x27; member to be set on all PR Secondary clusters and using &#x27;{{cluster_aia_path}}&#x27; requires /config/cluster&#x27;s &#x27;aia_path&#x27; member to be set on all PR secondary clusters. | [optional] [default to false]
+**IssuingCertificates** | **List&lt;string&gt;** | Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1. | [optional] 
+**OcspServers** | **List&lt;string&gt;** | Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

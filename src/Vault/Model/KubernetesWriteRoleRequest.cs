@@ -52,12 +52,14 @@ namespace Vault.Model
 
         /// <param name="ServiceAccountName">The pre-existing service account to generate tokens for. Mutually exclusive with all role parameters. If set, only a Kubernetes service account token will be created..</param>
 
+        /// <param name="TokenDefaultAudiences">The default audiences for generated Kubernetes service account tokens. If not set or set to \&quot;\&quot;, will use k8s cluster default..</param>
+
         /// <param name="TokenDefaultTtl">The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default..</param>
 
         /// <param name="TokenMaxTtl">The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default..</param>
 
 
-        public KubernetesWriteRoleRequest(string AllowedKubernetesNamespaceSelector = default(string), List<string> AllowedKubernetesNamespaces = default(List<string>), Object ExtraAnnotations = default(Object), Object ExtraLabels = default(Object), string GeneratedRoleRules = default(string), string KubernetesRoleName = default(string), string KubernetesRoleType = "Role", string NameTemplate = default(string), string ServiceAccountName = default(string), int TokenDefaultTtl = default(int), int TokenMaxTtl = default(int))
+        public KubernetesWriteRoleRequest(string AllowedKubernetesNamespaceSelector = default(string), List<string> AllowedKubernetesNamespaces = default(List<string>), Object ExtraAnnotations = default(Object), Object ExtraLabels = default(Object), string GeneratedRoleRules = default(string), string KubernetesRoleName = default(string), string KubernetesRoleType = "Role", string NameTemplate = default(string), string ServiceAccountName = default(string), List<string> TokenDefaultAudiences = default(List<string>), int TokenDefaultTtl = default(int), int TokenMaxTtl = default(int))
         {
 
             this.AllowedKubernetesNamespaceSelector = AllowedKubernetesNamespaceSelector;
@@ -79,6 +81,8 @@ namespace Vault.Model
             this.NameTemplate = NameTemplate;
 
             this.ServiceAccountName = ServiceAccountName;
+
+            this.TokenDefaultAudiences = TokenDefaultAudiences;
 
             this.TokenDefaultTtl = TokenDefaultTtl;
 
@@ -168,6 +172,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// The default audiences for generated Kubernetes service account tokens. If not set or set to \&quot;\&quot;, will use k8s cluster default.
+        /// </summary>
+        /// <value>The default audiences for generated Kubernetes service account tokens. If not set or set to \&quot;\&quot;, will use k8s cluster default.</value>
+        [DataMember(Name = "token_default_audiences", EmitDefaultValue = false)]
+
+        public List<string> TokenDefaultAudiences { get; set; }
+
+
+        /// <summary>
         /// The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default.
         /// </summary>
         /// <value>The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default.</value>
@@ -204,6 +217,7 @@ namespace Vault.Model
             sb.Append("  KubernetesRoleType: ").Append(KubernetesRoleType).Append("\n");
             sb.Append("  NameTemplate: ").Append(NameTemplate).Append("\n");
             sb.Append("  ServiceAccountName: ").Append(ServiceAccountName).Append("\n");
+            sb.Append("  TokenDefaultAudiences: ").Append(TokenDefaultAudiences).Append("\n");
             sb.Append("  TokenDefaultTtl: ").Append(TokenDefaultTtl).Append("\n");
             sb.Append("  TokenMaxTtl: ").Append(TokenMaxTtl).Append("\n");
             sb.Append("}\n");
@@ -296,6 +310,12 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.TokenDefaultAudiences == input.TokenDefaultAudiences ||
+                    this.TokenDefaultAudiences != null &&
+                    input.TokenDefaultAudiences != null &&
+                    this.TokenDefaultAudiences.SequenceEqual(input.TokenDefaultAudiences)
+                ) &&
+                (
                     this.TokenDefaultTtl == input.TokenDefaultTtl ||
 
                     this.TokenDefaultTtl.Equals(input.TokenDefaultTtl)
@@ -361,6 +381,11 @@ namespace Vault.Model
                 if (this.ServiceAccountName != null)
                 {
                     hashCode = (hashCode * 59) + this.ServiceAccountName.GetHashCode();
+                }
+
+                if (this.TokenDefaultAudiences != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenDefaultAudiences.GetHashCode();
                 }
 
 

@@ -38,6 +38,8 @@ namespace Vault.Model
 
         /// <param name="ResourceGroupName">The resource group from the instance..</param>
 
+        /// <param name="ResourceId">The fully qualified ID of the resource, includingthe resource name and resource type. Use the format, /subscriptions/{guid}/resourceGroups/{resource-group-name}/{resource-provider-namespace}/{resource-type}/{resource-name}. This value is ignored if vm_name or vmss_name is specified..</param>
+
         /// <param name="Role">The token role..</param>
 
         /// <param name="SubscriptionId">The subscription id for the instance..</param>
@@ -47,12 +49,14 @@ namespace Vault.Model
         /// <param name="VmssName">The name of the virtual machine scale set the instance is in..</param>
 
 
-        public AzureLoginRequest(string Jwt = default(string), string ResourceGroupName = default(string), string Role = default(string), string SubscriptionId = default(string), string VmName = default(string), string VmssName = default(string))
+        public AzureLoginRequest(string Jwt = default(string), string ResourceGroupName = default(string), string ResourceId = default(string), string Role = default(string), string SubscriptionId = default(string), string VmName = default(string), string VmssName = default(string))
         {
 
             this.Jwt = Jwt;
 
             this.ResourceGroupName = ResourceGroupName;
+
+            this.ResourceId = ResourceId;
 
             this.Role = Role;
 
@@ -80,6 +84,15 @@ namespace Vault.Model
         [DataMember(Name = "resource_group_name", EmitDefaultValue = false)]
 
         public string ResourceGroupName { get; set; }
+
+
+        /// <summary>
+        /// The fully qualified ID of the resource, includingthe resource name and resource type. Use the format, /subscriptions/{guid}/resourceGroups/{resource-group-name}/{resource-provider-namespace}/{resource-type}/{resource-name}. This value is ignored if vm_name or vmss_name is specified.
+        /// </summary>
+        /// <value>The fully qualified ID of the resource, includingthe resource name and resource type. Use the format, /subscriptions/{guid}/resourceGroups/{resource-group-name}/{resource-provider-namespace}/{resource-type}/{resource-name}. This value is ignored if vm_name or vmss_name is specified.</value>
+        [DataMember(Name = "resource_id", EmitDefaultValue = false)]
+
+        public string ResourceId { get; set; }
 
 
         /// <summary>
@@ -130,6 +143,7 @@ namespace Vault.Model
             sb.Append("class AzureLoginRequest {\n");
             sb.Append("  Jwt: ").Append(Jwt).Append("\n");
             sb.Append("  ResourceGroupName: ").Append(ResourceGroupName).Append("\n");
+            sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  Role: ").Append(Role).Append("\n");
             sb.Append("  SubscriptionId: ").Append(SubscriptionId).Append("\n");
             sb.Append("  VmName: ").Append(VmName).Append("\n");
@@ -182,6 +196,12 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.ResourceId == input.ResourceId ||
+                    (this.ResourceId != null &&
+                    this.ResourceId.Equals(input.ResourceId))
+
+                ) &&
+                (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
@@ -226,6 +246,11 @@ namespace Vault.Model
                 if (this.ResourceGroupName != null)
                 {
                     hashCode = (hashCode * 59) + this.ResourceGroupName.GetHashCode();
+                }
+
+                if (this.ResourceId != null)
+                {
+                    hashCode = (hashCode * 59) + this.ResourceId.GetHashCode();
                 }
 
                 if (this.Role != null)

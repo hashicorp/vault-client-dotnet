@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'AllowedKubernetesNamespaceSelector'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowedKubernetesNamespaceSelector'
         }
+
         /// <summary>
         /// Test the property 'AllowedKubernetesNamespaces'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AllowedKubernetesNamespaces'
         }
+
         /// <summary>
         /// Test the property 'ExtraAnnotations'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ExtraAnnotations'
         }
+
         /// <summary>
         /// Test the property 'ExtraLabels'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ExtraLabels'
         }
+
         /// <summary>
         /// Test the property 'GeneratedRoleRules'
         /// </summary>
@@ -92,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'GeneratedRoleRules'
         }
+
         /// <summary>
         /// Test the property 'KubernetesRoleName'
         /// </summary>
@@ -100,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'KubernetesRoleName'
         }
+
         /// <summary>
         /// Test the property 'KubernetesRoleType'
         /// </summary>
@@ -108,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'KubernetesRoleType'
         }
+
         /// <summary>
         /// Test the property 'NameTemplate'
         /// </summary>
@@ -116,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'NameTemplate'
         }
+
         /// <summary>
         /// Test the property 'ServiceAccountName'
         /// </summary>
@@ -124,6 +135,16 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ServiceAccountName'
         }
+
+        /// <summary>
+        /// Test the property 'TokenDefaultAudiences'
+        /// </summary>
+        [Fact]
+        public void TokenDefaultAudiencesTest()
+        {
+            // TODO unit test for the property 'TokenDefaultAudiences'
+        }
+
         /// <summary>
         /// Test the property 'TokenDefaultTtl'
         /// </summary>
@@ -132,6 +153,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenDefaultTtl'
         }
+
         /// <summary>
         /// Test the property 'TokenMaxTtl'
         /// </summary>
@@ -141,6 +163,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'TokenMaxTtl'
         }
 
+
     }
 
 }
+
+

@@ -36,6 +36,8 @@ namespace Vault.Model
 
         /// <param name="AssociatedData">When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with..</param>
 
+        /// <param name="BatchInput">Specifies a list of items to be decrypted in a single batch. When this parameter is set, if the parameters &#x27;ciphertext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input..</param>
+
         /// <param name="Ciphertext">The ciphertext to decrypt, provided as returned by encrypt..</param>
 
         /// <param name="Context">Base64 encoded context for key derivation. Required if key derivation is enabled..</param>
@@ -45,10 +47,12 @@ namespace Vault.Model
         /// <param name="PartialFailureResponseCode">Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned..</param>
 
 
-        public TransitDecryptRequest(string AssociatedData = default(string), string Ciphertext = default(string), string Context = default(string), string Nonce = default(string), int PartialFailureResponseCode = default(int))
+        public TransitDecryptRequest(string AssociatedData = default(string), List<Object> BatchInput = default(List<Object>), string Ciphertext = default(string), string Context = default(string), string Nonce = default(string), int PartialFailureResponseCode = default(int))
         {
 
             this.AssociatedData = AssociatedData;
+
+            this.BatchInput = BatchInput;
 
             this.Ciphertext = Ciphertext;
 
@@ -67,6 +71,15 @@ namespace Vault.Model
         [DataMember(Name = "associated_data", EmitDefaultValue = false)]
 
         public string AssociatedData { get; set; }
+
+
+        /// <summary>
+        /// Specifies a list of items to be decrypted in a single batch. When this parameter is set, if the parameters &#x27;ciphertext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input.
+        /// </summary>
+        /// <value>Specifies a list of items to be decrypted in a single batch. When this parameter is set, if the parameters &#x27;ciphertext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input.</value>
+        [DataMember(Name = "batch_input", EmitDefaultValue = false)]
+
+        public List<Object> BatchInput { get; set; }
 
 
         /// <summary>
@@ -116,6 +129,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class TransitDecryptRequest {\n");
             sb.Append("  AssociatedData: ").Append(AssociatedData).Append("\n");
+            sb.Append("  BatchInput: ").Append(BatchInput).Append("\n");
             sb.Append("  Ciphertext: ").Append(Ciphertext).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
@@ -162,6 +176,12 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.BatchInput == input.BatchInput ||
+                    this.BatchInput != null &&
+                    input.BatchInput != null &&
+                    this.BatchInput.SequenceEqual(input.BatchInput)
+                ) &&
+                (
                     this.Ciphertext == input.Ciphertext ||
                     (this.Ciphertext != null &&
                     this.Ciphertext.Equals(input.Ciphertext))
@@ -200,6 +220,11 @@ namespace Vault.Model
                 if (this.AssociatedData != null)
                 {
                     hashCode = (hashCode * 59) + this.AssociatedData.GetHashCode();
+                }
+
+                if (this.BatchInput != null)
+                {
+                    hashCode = (hashCode * 59) + this.BatchInput.GetHashCode();
                 }
 
                 if (this.Ciphertext != null)

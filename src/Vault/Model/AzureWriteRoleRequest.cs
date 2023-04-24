@@ -44,10 +44,12 @@ namespace Vault.Model
 
         /// <param name="PermanentlyDelete">Indicates whether new application objects should be permanently deleted. If not set, objects will not be permanently deleted. (default to false).</param>
 
+        /// <param name="PersistApp">Persist the app between generated credentials. Useful if the app needs to maintain owner ship of resources it creates (default to false).</param>
+
         /// <param name="Ttl">Default lease for generated credentials. If not set or set to 0, will use system default..</param>
 
 
-        public AzureWriteRoleRequest(string ApplicationObjectId = default(string), string AzureGroups = default(string), string AzureRoles = default(string), int MaxTtl = default(int), bool PermanentlyDelete = false, int Ttl = default(int))
+        public AzureWriteRoleRequest(string ApplicationObjectId = default(string), string AzureGroups = default(string), string AzureRoles = default(string), int MaxTtl = default(int), bool PermanentlyDelete = false, bool PersistApp = false, int Ttl = default(int))
         {
 
             this.ApplicationObjectId = ApplicationObjectId;
@@ -59,6 +61,8 @@ namespace Vault.Model
             this.MaxTtl = MaxTtl;
 
             this.PermanentlyDelete = PermanentlyDelete;
+
+            this.PersistApp = PersistApp;
 
             this.Ttl = Ttl;
 
@@ -110,6 +114,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Persist the app between generated credentials. Useful if the app needs to maintain owner ship of resources it creates
+        /// </summary>
+        /// <value>Persist the app between generated credentials. Useful if the app needs to maintain owner ship of resources it creates</value>
+        [DataMember(Name = "persist_app", EmitDefaultValue = true)]
+
+        public bool PersistApp { get; set; }
+
+
+        /// <summary>
         /// Default lease for generated credentials. If not set or set to 0, will use system default.
         /// </summary>
         /// <value>Default lease for generated credentials. If not set or set to 0, will use system default.</value>
@@ -133,6 +146,7 @@ namespace Vault.Model
             sb.Append("  AzureRoles: ").Append(AzureRoles).Append("\n");
             sb.Append("  MaxTtl: ").Append(MaxTtl).Append("\n");
             sb.Append("  PermanentlyDelete: ").Append(PermanentlyDelete).Append("\n");
+            sb.Append("  PersistApp: ").Append(PersistApp).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -198,6 +212,11 @@ namespace Vault.Model
                     this.PermanentlyDelete.Equals(input.PermanentlyDelete)
                 ) &&
                 (
+                    this.PersistApp == input.PersistApp ||
+
+                    this.PersistApp.Equals(input.PersistApp)
+                ) &&
+                (
                     this.Ttl == input.Ttl ||
 
                     this.Ttl.Equals(input.Ttl)
@@ -234,6 +253,8 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.PermanentlyDelete.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.PersistApp.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;

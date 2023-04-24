@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'Jwt'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Jwt'
         }
+
         /// <summary>
         /// Test the property 'ResourceGroupName'
         /// </summary>
@@ -68,6 +72,16 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ResourceGroupName'
         }
+
+        /// <summary>
+        /// Test the property 'ResourceId'
+        /// </summary>
+        [Fact]
+        public void ResourceIdTest()
+        {
+            // TODO unit test for the property 'ResourceId'
+        }
+
         /// <summary>
         /// Test the property 'Role'
         /// </summary>
@@ -76,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Role'
         }
+
         /// <summary>
         /// Test the property 'SubscriptionId'
         /// </summary>
@@ -84,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'SubscriptionId'
         }
+
         /// <summary>
         /// Test the property 'VmName'
         /// </summary>
@@ -92,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'VmName'
         }
+
         /// <summary>
         /// Test the property 'VmssName'
         /// </summary>
@@ -101,6 +118,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'VmssName'
         }
 
+
     }
 
 }
+
+

@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'ConsulNamespace'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ConsulNamespace'
         }
+
         /// <summary>
         /// Test the property 'ConsulPolicies'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ConsulPolicies'
         }
+
         /// <summary>
         /// Test the property 'ConsulRoles'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ConsulRoles'
         }
+
         /// <summary>
         /// Test the property 'Lease'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Lease'
         }
+
         /// <summary>
         /// Test the property 'Local'
         /// </summary>
@@ -92,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Local'
         }
+
         /// <summary>
         /// Test the property 'MaxTtl'
         /// </summary>
@@ -100,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'MaxTtl'
         }
+
         /// <summary>
         /// Test the property 'NodeIdentities'
         /// </summary>
@@ -108,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'NodeIdentities'
         }
+
         /// <summary>
         /// Test the property 'Partition'
         /// </summary>
@@ -116,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Partition'
         }
+
         /// <summary>
         /// Test the property 'Policies'
         /// </summary>
@@ -124,6 +135,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Policies'
         }
+
         /// <summary>
         /// Test the property 'Policy'
         /// </summary>
@@ -132,6 +144,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Policy'
         }
+
         /// <summary>
         /// Test the property 'ServiceIdentities'
         /// </summary>
@@ -140,6 +153,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'ServiceIdentities'
         }
+
         /// <summary>
         /// Test the property 'TokenType'
         /// </summary>
@@ -148,6 +162,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenType'
         }
+
         /// <summary>
         /// Test the property 'Ttl'
         /// </summary>
@@ -157,6 +172,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'Ttl'
         }
 
+
     }
 
 }
+
+

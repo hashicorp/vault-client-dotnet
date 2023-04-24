@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'Algorithm'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Algorithm'
         }
+
         /// <summary>
         /// Test the property 'Format'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Format'
         }
+
         /// <summary>
         /// Test the property 'Input'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Input'
         }
+
         /// <summary>
         /// Test the property 'Urlalgorithm'
         /// </summary>
@@ -85,6 +91,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'Urlalgorithm'
         }
 
+
     }
 
 }
+
+

@@ -36,6 +36,8 @@ namespace Vault.Model
 
         /// <param name="AssociatedData">When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with..</param>
 
+        /// <param name="BatchInput">Specifies a list of items to be encrypted in a single batch. When this parameter is set, if the parameters &#x27;plaintext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input..</param>
+
         /// <param name="Context">Base64 encoded context for key derivation. Required if key derivation is enabled.</param>
 
         /// <param name="ConvergentEncryption">This parameter will only be used when a key is expected to be created. Whether to support convergent encryption. This is only supported when using a key with key derivation enabled and will require all requests to carry both a context and 96-bit (12-byte) nonce. The given nonce will be used in place of a randomly generated nonce. As a result, when the same context and nonce are supplied, the same ciphertext is generated. It is *very important* when using this mode that you ensure that all nonces are unique for a given context. Failing to do so will severely impact the ciphertext&#x27;s security..</param>
@@ -51,10 +53,12 @@ namespace Vault.Model
         /// <param name="Type">This parameter is required when encryption key is expected to be created. When performing an upsert operation, the type of key to create. Currently, \&quot;aes128-gcm96\&quot; (symmetric) and \&quot;aes256-gcm96\&quot; (symmetric) are the only types supported. Defaults to \&quot;aes256-gcm96\&quot;. (default to &quot;aes256-gcm96&quot;).</param>
 
 
-        public TransitEncryptRequest(string AssociatedData = default(string), string Context = default(string), bool ConvergentEncryption = default(bool), int KeyVersion = default(int), string Nonce = default(string), int PartialFailureResponseCode = default(int), string Plaintext = default(string), string Type = "aes256-gcm96")
+        public TransitEncryptRequest(string AssociatedData = default(string), List<Object> BatchInput = default(List<Object>), string Context = default(string), bool ConvergentEncryption = default(bool), int KeyVersion = default(int), string Nonce = default(string), int PartialFailureResponseCode = default(int), string Plaintext = default(string), string Type = "aes256-gcm96")
         {
 
             this.AssociatedData = AssociatedData;
+
+            this.BatchInput = BatchInput;
 
             this.Context = Context;
 
@@ -81,6 +85,15 @@ namespace Vault.Model
         [DataMember(Name = "associated_data", EmitDefaultValue = false)]
 
         public string AssociatedData { get; set; }
+
+
+        /// <summary>
+        /// Specifies a list of items to be encrypted in a single batch. When this parameter is set, if the parameters &#x27;plaintext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input.
+        /// </summary>
+        /// <value>Specifies a list of items to be encrypted in a single batch. When this parameter is set, if the parameters &#x27;plaintext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input.</value>
+        [DataMember(Name = "batch_input", EmitDefaultValue = false)]
+
+        public List<Object> BatchInput { get; set; }
 
 
         /// <summary>
@@ -157,6 +170,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class TransitEncryptRequest {\n");
             sb.Append("  AssociatedData: ").Append(AssociatedData).Append("\n");
+            sb.Append("  BatchInput: ").Append(BatchInput).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  ConvergentEncryption: ").Append(ConvergentEncryption).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
@@ -204,6 +218,12 @@ namespace Vault.Model
                     (this.AssociatedData != null &&
                     this.AssociatedData.Equals(input.AssociatedData))
 
+                ) &&
+                (
+                    this.BatchInput == input.BatchInput ||
+                    this.BatchInput != null &&
+                    input.BatchInput != null &&
+                    this.BatchInput.SequenceEqual(input.BatchInput)
                 ) &&
                 (
                     this.Context == input.Context ||
@@ -260,6 +280,11 @@ namespace Vault.Model
                 if (this.AssociatedData != null)
                 {
                     hashCode = (hashCode * 59) + this.AssociatedData.GetHashCode();
+                }
+
+                if (this.BatchInput != null)
+                {
+                    hashCode = (hashCode * 59) + this.BatchInput.GetHashCode();
                 }
 
                 if (this.Context != null)

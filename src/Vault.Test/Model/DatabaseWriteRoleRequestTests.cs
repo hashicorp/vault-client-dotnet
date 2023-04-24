@@ -3,7 +3,6 @@
 //
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
-
 using Xunit;
 
 using System;
@@ -15,6 +14,8 @@ using Vault.Model;
 using Vault.Client;
 using System.Reflection;
 using Newtonsoft.Json;
+
+
 
 namespace Vault.Test.Model
 {
@@ -52,6 +53,8 @@ namespace Vault.Test.Model
         }
 
 
+
+
         /// <summary>
         /// Test the property 'CreationStatements'
         /// </summary>
@@ -60,6 +63,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'CreationStatements'
         }
+
         /// <summary>
         /// Test the property 'CredentialConfig'
         /// </summary>
@@ -68,6 +72,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'CredentialConfig'
         }
+
         /// <summary>
         /// Test the property 'CredentialType'
         /// </summary>
@@ -76,6 +81,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'CredentialType'
         }
+
         /// <summary>
         /// Test the property 'DbName'
         /// </summary>
@@ -84,6 +90,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'DbName'
         }
+
         /// <summary>
         /// Test the property 'DefaultTtl'
         /// </summary>
@@ -92,6 +99,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'DefaultTtl'
         }
+
         /// <summary>
         /// Test the property 'MaxTtl'
         /// </summary>
@@ -100,6 +108,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'MaxTtl'
         }
+
         /// <summary>
         /// Test the property 'RenewStatements'
         /// </summary>
@@ -108,6 +117,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'RenewStatements'
         }
+
         /// <summary>
         /// Test the property 'RevocationStatements'
         /// </summary>
@@ -116,6 +126,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'RevocationStatements'
         }
+
         /// <summary>
         /// Test the property 'RollbackStatements'
         /// </summary>
@@ -125,6 +136,9 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'RollbackStatements'
         }
 
+
     }
 
 }
+
+
