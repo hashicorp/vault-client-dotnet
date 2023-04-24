@@ -13,6 +13,8 @@ regen-bin: delete-generated generate format clean build
 delete-generated:
 	rm -rf \
 		docs \
+		src/Vault/Model \
+		src/Vault.Test/Model \
 		build.bat \
 		build.sh \
 		git_push.sh \
