@@ -24,7 +24,6 @@ delete-generated:
 		.openapi-generator \
 		.travis.yml
 
-# --api-name-suffix does not allow empty strings; "REPLACE~ME" is a workaround
 generate:
 	docker run \
 		--rm \
