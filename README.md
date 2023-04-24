@@ -100,8 +100,8 @@ namespace Example
                 vaultClient.Secrets.KvV2Write("mypath", kvRequestData);
 
                 // Read a secret
-                VaultResponse<Object> resp = vaultClient.Secrets.KvV2Read("mypath");
-                Console.WriteLine(resp.Data);
+                VaultResponse<KvV2ReadResponse> resp = vaultClient.Secrets.KvV2Read("mypath");
+                Console.WriteLine(resp.Data.Data);
             }
             catch (VaultApiException e)
             {
@@ -206,15 +206,15 @@ All secrets and auth calls have an optional mount path parameter that can be
 specified, otherwise we will use a default mount path.
 
 ```csharp
-VaultResponse<Object> resp = await vaultClient.Secrets.KvV2ReadAsync("path", secretMountPath: "myCustomMountPath");
+VaultResponse<KvV2ReadResponse> resp = await vaultClient.Secrets.KvV2ReadAsync("path", secretMountPath: "myCustomMountPath");
 Console.WriteLine(resp.Data);
 ```
 
 All calls have both an async and synchronous implementation. E.g.
 
 ```csharp
-VaultResponse<Object> respAsync = await vaultClient.Secrets.KvV2ReadAsync("path");
-VaultResponse<Object> respSync = vaultClient.Secrets.KvV2ReadAsync("path");
+VaultResponse<KvV2ReadResponse> respAsync = await vaultClient.Secrets.KvV2ReadAsync("path");
+VaultResponse<KvV2ReadResponse> respSync = vaultClient.Secrets.KvV2ReadAsync("path");
 ```
 
 ### Exception Handling
