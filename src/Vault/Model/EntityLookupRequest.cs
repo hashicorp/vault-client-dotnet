@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// EntityLookupRequest
+    /// EntityLookUpRequest
     /// </summary>
-    [DataContract(Name = "EntityLookupRequest")]
-    public partial class EntityLookupRequest : IEquatable<EntityLookupRequest>, IValidatableObject
+    [DataContract(Name = "EntityLookUpRequest")]
+    public partial class EntityLookUpRequest : IEquatable<EntityLookUpRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="EntityLookupRequest" /> class.
+        /// Initializes a new instance of the <see cref="EntityLookUpRequest" /> class.
         /// </summary>
 
         /// <param name="AliasId">ID of the alias..</param>
@@ -45,7 +45,7 @@ namespace Vault.Model
         /// <param name="Name">Name of the entity..</param>
 
 
-        public EntityLookupRequest(string AliasId = default(string), string AliasMountAccessor = default(string), string AliasName = default(string), string Id = default(string), string Name = default(string))
+        public EntityLookUpRequest(string AliasId = default(string), string AliasMountAccessor = default(string), string AliasName = default(string), string Id = default(string), string Name = default(string))
         {
 
             this.AliasId = AliasId;
@@ -114,7 +114,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class EntityLookupRequest {\n");
+            sb.Append("class EntityLookUpRequest {\n");
             sb.Append("  AliasId: ").Append(AliasId).Append("\n");
             sb.Append("  AliasMountAccessor: ").Append(AliasMountAccessor).Append("\n");
             sb.Append("  AliasName: ").Append(AliasName).Append("\n");
@@ -140,15 +140,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as EntityLookupRequest);
+            return this.Equals(input as EntityLookUpRequest);
         }
 
         /// <summary>
-        /// Returns true if EntityLookupRequest instances are equal
+        /// Returns true if EntityLookUpRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of EntityLookupRequest to be compared</param>
+        /// <param name="input">Instance of EntityLookUpRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EntityLookupRequest input)
+        public bool Equals(EntityLookUpRequest input)
         {
             if (input == null)
             {

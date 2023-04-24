@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleWriteCustomSecretIDRequest
+# Vault.Model.AppRoleWriteCustomSecretIdRequest
 
 ## Properties
 

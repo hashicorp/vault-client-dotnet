@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleReadBindSecretIDResponse
+    /// AppRoleReadBindSecretIdResponse
     /// </summary>
-    [DataContract(Name = "AppRoleReadBindSecretIDResponse")]
-    public partial class AppRoleReadBindSecretIDResponse : IEquatable<AppRoleReadBindSecretIDResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleReadBindSecretIdResponse")]
+    public partial class AppRoleReadBindSecretIdResponse : IEquatable<AppRoleReadBindSecretIdResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleReadBindSecretIDResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleReadBindSecretIdResponse" /> class.
         /// </summary>
 
         /// <param name="BindSecretId">Impose secret_id to be presented when logging in using this role. Defaults to &#x27;true&#x27;..</param>
 
 
-        public AppRoleReadBindSecretIDResponse(bool BindSecretId = default(bool))
+        public AppRoleReadBindSecretIdResponse(bool BindSecretId = default(bool))
         {
 
             this.BindSecretId = BindSecretId;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleReadBindSecretIDResponse {\n");
+            sb.Append("class AppRoleReadBindSecretIdResponse {\n");
             sb.Append("  BindSecretId: ").Append(BindSecretId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleReadBindSecretIDResponse);
+            return this.Equals(input as AppRoleReadBindSecretIdResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleReadBindSecretIDResponse instances are equal
+        /// Returns true if AppRoleReadBindSecretIdResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleReadBindSecretIDResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleReadBindSecretIdResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleReadBindSecretIDResponse input)
+        public bool Equals(AppRoleReadBindSecretIdResponse input)
         {
             if (input == null)
             {

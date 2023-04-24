@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleReadTokenBoundCIDRsResponse
+    /// AppRoleReadTokenBoundCidrsResponse
     /// </summary>
-    [DataContract(Name = "AppRoleReadTokenBoundCIDRsResponse")]
-    public partial class AppRoleReadTokenBoundCIDRsResponse : IEquatable<AppRoleReadTokenBoundCIDRsResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleReadTokenBoundCidrsResponse")]
+    public partial class AppRoleReadTokenBoundCidrsResponse : IEquatable<AppRoleReadTokenBoundCidrsResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleReadTokenBoundCIDRsResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleReadTokenBoundCidrsResponse" /> class.
         /// </summary>
 
         /// <param name="TokenBoundCidrs">Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. Should be a subset of the token CIDR blocks listed on the role, if any..</param>
 
 
-        public AppRoleReadTokenBoundCIDRsResponse(List<string> TokenBoundCidrs = default(List<string>))
+        public AppRoleReadTokenBoundCidrsResponse(List<string> TokenBoundCidrs = default(List<string>))
         {
 
             this.TokenBoundCidrs = TokenBoundCidrs;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleReadTokenBoundCIDRsResponse {\n");
+            sb.Append("class AppRoleReadTokenBoundCidrsResponse {\n");
             sb.Append("  TokenBoundCidrs: ").Append(TokenBoundCidrs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleReadTokenBoundCIDRsResponse);
+            return this.Equals(input as AppRoleReadTokenBoundCidrsResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleReadTokenBoundCIDRsResponse instances are equal
+        /// Returns true if AppRoleReadTokenBoundCidrsResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleReadTokenBoundCIDRsResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleReadTokenBoundCidrsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleReadTokenBoundCIDRsResponse input)
+        public bool Equals(AppRoleReadTokenBoundCidrsResponse input)
         {
             if (input == null)
             {

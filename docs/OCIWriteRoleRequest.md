@@ -1,4 +1,4 @@
-# Vault.Model.OCIWriteRoleRequest
+# Vault.Model.OciWriteRoleRequest
 
 ## Properties
 

@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIIssuerResignCRLsRequest
+    /// PkiIssuerResignCrlsRequest
     /// </summary>
-    [DataContract(Name = "PKIIssuerResignCRLsRequest")]
-    public partial class PKIIssuerResignCRLsRequest : IEquatable<PKIIssuerResignCRLsRequest>, IValidatableObject
+    [DataContract(Name = "PkiIssuerResignCrlsRequest")]
+    public partial class PkiIssuerResignCrlsRequest : IEquatable<PkiIssuerResignCrlsRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIIssuerResignCRLsRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiIssuerResignCrlsRequest" /> class.
         /// </summary>
 
         /// <param name="CrlNumber">The sequence number to be written within the CRL Number extension..</param>
@@ -45,7 +45,7 @@ namespace Vault.Model
         /// <param name="NextUpdate">The amount of time the generated CRL should be valid; defaults to 72 hours. (default to &quot;72h&quot;).</param>
 
 
-        public PKIIssuerResignCRLsRequest(int CrlNumber = default(int), List<string> Crls = default(List<string>), int DeltaCrlBaseNumber = -1, string Format = "pem", string NextUpdate = "72h")
+        public PkiIssuerResignCrlsRequest(int CrlNumber = default(int), List<string> Crls = default(List<string>), int DeltaCrlBaseNumber = -1, string Format = "pem", string NextUpdate = "72h")
         {
 
             this.CrlNumber = CrlNumber;
@@ -118,7 +118,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIIssuerResignCRLsRequest {\n");
+            sb.Append("class PkiIssuerResignCrlsRequest {\n");
             sb.Append("  CrlNumber: ").Append(CrlNumber).Append("\n");
             sb.Append("  Crls: ").Append(Crls).Append("\n");
             sb.Append("  DeltaCrlBaseNumber: ").Append(DeltaCrlBaseNumber).Append("\n");
@@ -144,15 +144,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIIssuerResignCRLsRequest);
+            return this.Equals(input as PkiIssuerResignCrlsRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIIssuerResignCRLsRequest instances are equal
+        /// Returns true if PkiIssuerResignCrlsRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIIssuerResignCRLsRequest to be compared</param>
+        /// <param name="input">Instance of PkiIssuerResignCrlsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIIssuerResignCRLsRequest input)
+        public bool Equals(PkiIssuerResignCrlsRequest input)
         {
             if (input == null)
             {

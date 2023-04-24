@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleWriteBoundCIDRListRequest
+# Vault.Model.AppRoleWriteBoundCidrListRequest
 
 ## Properties
 

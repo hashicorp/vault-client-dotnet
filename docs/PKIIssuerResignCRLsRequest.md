@@ -1,4 +1,4 @@
-# Vault.Model.PKIIssuerResignCRLsRequest
+# Vault.Model.PkiIssuerResignCrlsRequest
 
 ## Properties
 

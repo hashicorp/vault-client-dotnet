@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIReplaceRootRequest
+    /// PkiReplaceRootRequest
     /// </summary>
-    [DataContract(Name = "PKIReplaceRootRequest")]
-    public partial class PKIReplaceRootRequest : IEquatable<PKIReplaceRootRequest>, IValidatableObject
+    [DataContract(Name = "PkiReplaceRootRequest")]
+    public partial class PkiReplaceRootRequest : IEquatable<PkiReplaceRootRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIReplaceRootRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiReplaceRootRequest" /> class.
         /// </summary>
 
         /// <param name="Default">Reference (name or identifier) to the default issuer. (default to &quot;next&quot;).</param>
 
 
-        public PKIReplaceRootRequest(string Default = "next")
+        public PkiReplaceRootRequest(string Default = "next")
         {
 
             // use default value if no "Default" provided
@@ -64,7 +64,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIReplaceRootRequest {\n");
+            sb.Append("class PkiReplaceRootRequest {\n");
             sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -86,15 +86,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIReplaceRootRequest);
+            return this.Equals(input as PkiReplaceRootRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIReplaceRootRequest instances are equal
+        /// Returns true if PkiReplaceRootRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIReplaceRootRequest to be compared</param>
+        /// <param name="input">Instance of PkiReplaceRootRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIReplaceRootRequest input)
+        public bool Equals(PkiReplaceRootRequest input)
         {
             if (input == null)
             {

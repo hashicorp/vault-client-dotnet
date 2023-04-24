@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// MFAValidateRequest
+    /// MfaValidateRequest
     /// </summary>
-    [DataContract(Name = "MFAValidateRequest")]
-    public partial class MFAValidateRequest : IEquatable<MFAValidateRequest>, IValidatableObject
+    [DataContract(Name = "MfaValidateRequest")]
+    public partial class MfaValidateRequest : IEquatable<MfaValidateRequest>, IValidatableObject
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MFAValidateRequest" /> class.
+        /// Initializes a new instance of the <see cref="MfaValidateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected MFAValidateRequest() { }
+        protected MfaValidateRequest() { }
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MFAValidateRequest" /> class.
+        /// Initializes a new instance of the <see cref="MfaValidateRequest" /> class.
         /// </summary>
 
         /// <param name="MfaPayload">A map from MFA method ID to a slice of passcodes or an empty slice if the method does not use passcodes (required).</param>
@@ -45,13 +45,13 @@ namespace Vault.Model
         /// <param name="MfaRequestId">ID for this MFA request (required).</param>
 
 
-        public MFAValidateRequest(Object MfaPayload = default(Object), string MfaRequestId = default(string))
+        public MfaValidateRequest(Object MfaPayload = default(Object), string MfaRequestId = default(string))
         {
 
             // to ensure "MfaPayload" is required (not null)
             if (MfaPayload == null)
             {
-                throw new ArgumentNullException("MfaPayload is a required property for MFAValidateRequest and cannot be null");
+                throw new ArgumentNullException("MfaPayload is a required property for MfaValidateRequest and cannot be null");
             }
             this.MfaPayload = MfaPayload;
 
@@ -59,7 +59,7 @@ namespace Vault.Model
             // to ensure "MfaRequestId" is required (not null)
             if (MfaRequestId == null)
             {
-                throw new ArgumentNullException("MfaRequestId is a required property for MFAValidateRequest and cannot be null");
+                throw new ArgumentNullException("MfaRequestId is a required property for MfaValidateRequest and cannot be null");
             }
             this.MfaRequestId = MfaRequestId;
 
@@ -93,7 +93,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class MFAValidateRequest {\n");
+            sb.Append("class MfaValidateRequest {\n");
             sb.Append("  MfaPayload: ").Append(MfaPayload).Append("\n");
             sb.Append("  MfaRequestId: ").Append(MfaRequestId).Append("\n");
             sb.Append("}\n");
@@ -116,15 +116,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MFAValidateRequest);
+            return this.Equals(input as MfaValidateRequest);
         }
 
         /// <summary>
-        /// Returns true if MFAValidateRequest instances are equal
+        /// Returns true if MfaValidateRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of MFAValidateRequest to be compared</param>
+        /// <param name="input">Instance of MfaValidateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MFAValidateRequest input)
+        public bool Equals(MfaValidateRequest input)
         {
             if (input == null)
             {

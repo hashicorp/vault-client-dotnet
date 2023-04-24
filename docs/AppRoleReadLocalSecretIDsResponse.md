@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleReadLocalSecretIDsResponse
+# Vault.Model.AppRoleReadLocalSecretIdsResponse
 
 ## Properties
 

@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteRoleIDRequest
+    /// AppRoleWriteRoleIdRequest
     /// </summary>
-    [DataContract(Name = "AppRoleWriteRoleIDRequest")]
-    public partial class AppRoleWriteRoleIDRequest : IEquatable<AppRoleWriteRoleIDRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteRoleIdRequest")]
+    public partial class AppRoleWriteRoleIdRequest : IEquatable<AppRoleWriteRoleIdRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteRoleIDRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteRoleIdRequest" /> class.
         /// </summary>
 
         /// <param name="RoleId">Identifier of the role. Defaults to a UUID..</param>
 
 
-        public AppRoleWriteRoleIDRequest(string RoleId = default(string))
+        public AppRoleWriteRoleIdRequest(string RoleId = default(string))
         {
 
             this.RoleId = RoleId;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteRoleIDRequest {\n");
+            sb.Append("class AppRoleWriteRoleIdRequest {\n");
             sb.Append("  RoleId: ").Append(RoleId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteRoleIDRequest);
+            return this.Equals(input as AppRoleWriteRoleIdRequest);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteRoleIDRequest instances are equal
+        /// Returns true if AppRoleWriteRoleIdRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteRoleIDRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteRoleIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteRoleIDRequest input)
+        public bool Equals(AppRoleWriteRoleIdRequest input)
         {
             if (input == null)
             {

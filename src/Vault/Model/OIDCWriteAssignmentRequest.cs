@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCWriteAssignmentRequest
+    /// OidcWriteAssignmentRequest
     /// </summary>
-    [DataContract(Name = "OIDCWriteAssignmentRequest")]
-    public partial class OIDCWriteAssignmentRequest : IEquatable<OIDCWriteAssignmentRequest>, IValidatableObject
+    [DataContract(Name = "OidcWriteAssignmentRequest")]
+    public partial class OidcWriteAssignmentRequest : IEquatable<OidcWriteAssignmentRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteAssignmentRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteAssignmentRequest" /> class.
         /// </summary>
 
         /// <param name="EntityIds">Comma separated string or array of identity entity IDs.</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="GroupIds">Comma separated string or array of identity group IDs.</param>
 
 
-        public OIDCWriteAssignmentRequest(List<string> EntityIds = default(List<string>), List<string> GroupIds = default(List<string>))
+        public OidcWriteAssignmentRequest(List<string> EntityIds = default(List<string>), List<string> GroupIds = default(List<string>))
         {
 
             this.EntityIds = EntityIds;
@@ -75,7 +75,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCWriteAssignmentRequest {\n");
+            sb.Append("class OidcWriteAssignmentRequest {\n");
             sb.Append("  EntityIds: ").Append(EntityIds).Append("\n");
             sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
             sb.Append("}\n");
@@ -98,15 +98,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCWriteAssignmentRequest);
+            return this.Equals(input as OidcWriteAssignmentRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCWriteAssignmentRequest instances are equal
+        /// Returns true if OidcWriteAssignmentRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCWriteAssignmentRequest to be compared</param>
+        /// <param name="input">Instance of OidcWriteAssignmentRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCWriteAssignmentRequest input)
+        public bool Equals(OidcWriteAssignmentRequest input)
         {
             if (input == null)
             {

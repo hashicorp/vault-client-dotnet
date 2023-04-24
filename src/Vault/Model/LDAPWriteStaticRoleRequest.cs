@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// LDAPWriteStaticRoleRequest
+    /// LdapWriteStaticRoleRequest
     /// </summary>
-    [DataContract(Name = "LDAPWriteStaticRoleRequest")]
-    public partial class LDAPWriteStaticRoleRequest : IEquatable<LDAPWriteStaticRoleRequest>, IValidatableObject
+    [DataContract(Name = "LdapWriteStaticRoleRequest")]
+    public partial class LdapWriteStaticRoleRequest : IEquatable<LdapWriteStaticRoleRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LDAPWriteStaticRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="LdapWriteStaticRoleRequest" /> class.
         /// </summary>
 
         /// <param name="Dn">The distinguished name of the entry to manage..</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Username">The username/logon name for the entry with which this role will be associated..</param>
 
 
-        public LDAPWriteStaticRoleRequest(string Dn = default(string), int RotationPeriod = default(int), string Username = default(string))
+        public LdapWriteStaticRoleRequest(string Dn = default(string), int RotationPeriod = default(int), string Username = default(string))
         {
 
             this.Dn = Dn;
@@ -88,7 +88,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class LDAPWriteStaticRoleRequest {\n");
+            sb.Append("class LdapWriteStaticRoleRequest {\n");
             sb.Append("  Dn: ").Append(Dn).Append("\n");
             sb.Append("  RotationPeriod: ").Append(RotationPeriod).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
@@ -112,15 +112,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LDAPWriteStaticRoleRequest);
+            return this.Equals(input as LdapWriteStaticRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if LDAPWriteStaticRoleRequest instances are equal
+        /// Returns true if LdapWriteStaticRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of LDAPWriteStaticRoleRequest to be compared</param>
+        /// <param name="input">Instance of LdapWriteStaticRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LDAPWriteStaticRoleRequest input)
+        public bool Equals(LdapWriteStaticRoleRequest input)
         {
             if (input == null)
             {

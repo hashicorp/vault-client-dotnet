@@ -36,6 +36,8 @@ namespace Vault.Model
 
         /// <param name="Algorithm">Deprecated: use \&quot;hash_algorithm\&quot; instead. (default to &quot;sha2-256&quot;).</param>
 
+        /// <param name="BatchInput">Specifies a list of items for processing. When this parameter is set, any supplied &#x27;input&#x27; or &#x27;context&#x27; parameters will be ignored. Responses are returned in the &#x27;batch_results&#x27; array component of the &#x27;data&#x27; element of the response. Any batch output will preserve the order of the batch input.</param>
+
         /// <param name="Context">Base64 encoded context for key derivation. Required if key derivation is enabled; currently only available with ed25519 keys..</param>
 
         /// <param name="HashAlgorithm">Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 * none Defaults to \&quot;sha2-256\&quot;. Not valid for all key types, including ed25519. Using none requires setting prehashed&#x3D;true and signature_algorithm&#x3D;pkcs1v15, yielding a PKCSv1_5_NoOID instead of the usual PKCSv1_5_DERnull signature. (default to &quot;sha2-256&quot;).</param>
@@ -55,12 +57,14 @@ namespace Vault.Model
         /// <param name="Urlalgorithm">Hash algorithm to use (POST URL parameter).</param>
 
 
-        public TransitSignRequest(string Algorithm = "sha2-256", string Context = default(string), string HashAlgorithm = "sha2-256", string Input = default(string), int KeyVersion = default(int), string MarshalingAlgorithm = "asn1", bool Prehashed = default(bool), string SaltLength = "auto", string SignatureAlgorithm = default(string), string Urlalgorithm = default(string))
+        public TransitSignRequest(string Algorithm = "sha2-256", List<Object> BatchInput = default(List<Object>), string Context = default(string), string HashAlgorithm = "sha2-256", string Input = default(string), int KeyVersion = default(int), string MarshalingAlgorithm = "asn1", bool Prehashed = default(bool), string SaltLength = "auto", string SignatureAlgorithm = default(string), string Urlalgorithm = default(string))
         {
 
             // use default value if no "Algorithm" provided
             this.Algorithm = Algorithm ?? "sha2-256";
 
+
+            this.BatchInput = BatchInput;
 
             this.Context = Context;
 
@@ -95,6 +99,15 @@ namespace Vault.Model
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
 
         public string Algorithm { get; set; }
+
+
+        /// <summary>
+        /// Specifies a list of items for processing. When this parameter is set, any supplied &#x27;input&#x27; or &#x27;context&#x27; parameters will be ignored. Responses are returned in the &#x27;batch_results&#x27; array component of the &#x27;data&#x27; element of the response. Any batch output will preserve the order of the batch input
+        /// </summary>
+        /// <value>Specifies a list of items for processing. When this parameter is set, any supplied &#x27;input&#x27; or &#x27;context&#x27; parameters will be ignored. Responses are returned in the &#x27;batch_results&#x27; array component of the &#x27;data&#x27; element of the response. Any batch output will preserve the order of the batch input</value>
+        [DataMember(Name = "batch_input", EmitDefaultValue = false)]
+
+        public List<Object> BatchInput { get; set; }
 
 
         /// <summary>
@@ -189,6 +202,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class TransitSignRequest {\n");
             sb.Append("  Algorithm: ").Append(Algorithm).Append("\n");
+            sb.Append("  BatchInput: ").Append(BatchInput).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  HashAlgorithm: ").Append(HashAlgorithm).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
@@ -238,6 +252,12 @@ namespace Vault.Model
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
 
+                ) &&
+                (
+                    this.BatchInput == input.BatchInput ||
+                    this.BatchInput != null &&
+                    input.BatchInput != null &&
+                    this.BatchInput.SequenceEqual(input.BatchInput)
                 ) &&
                 (
                     this.Context == input.Context ||
@@ -307,6 +327,11 @@ namespace Vault.Model
                 if (this.Algorithm != null)
                 {
                     hashCode = (hashCode * 59) + this.Algorithm.GetHashCode();
+                }
+
+                if (this.BatchInput != null)
+                {
+                    hashCode = (hashCode * 59) + this.BatchInput.GetHashCode();
                 }
 
                 if (this.Context != null)

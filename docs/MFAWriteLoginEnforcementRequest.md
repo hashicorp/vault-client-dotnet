@@ -1,4 +1,4 @@
-# Vault.Model.MFAWriteLoginEnforcementRequest
+# Vault.Model.MfaWriteLoginEnforcementRequest
 
 ## Properties
 

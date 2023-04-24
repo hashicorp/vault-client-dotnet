@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleReadRoleIDResponse
+# Vault.Model.AppRoleReadRoleIdResponse
 
 ## Properties
 

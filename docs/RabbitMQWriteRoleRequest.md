@@ -1,4 +1,4 @@
-# Vault.Model.RabbitMQWriteRoleRequest
+# Vault.Model.RabbitMqWriteRoleRequest
 
 ## Properties
 

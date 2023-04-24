@@ -23,10 +23,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIWriteRoleRequest
+    /// PkiWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "PKIWriteRoleRequest")]
-    public partial class PKIWriteRoleRequest : IEquatable<PKIWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "PkiWriteRoleRequest")]
+    public partial class PkiWriteRoleRequest : IEquatable<PkiWriteRoleRequest>, IValidatableObject
     {        /// <summary>
              /// The type of key to use; defaults to RSA. \&quot;rsa\&quot; \&quot;ec\&quot;, \&quot;ed25519\&quot; and \&quot;any\&quot; are the only valid values.
              /// </summary>
@@ -68,7 +68,7 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="AllowAnyName">If set, clients can request certificates for any domain, regardless of allowed_domains restrictions. See the documentation for more information..</param>
@@ -96,6 +96,8 @@ namespace Vault.Model
         /// <param name="AllowedUriSans">If set, an array of allowed URIs for URI Subject Alternative Names. Any valid URI is accepted, these values support globbing..</param>
 
         /// <param name="AllowedUriSansTemplate">If set, Allowed URI SANs can be specified using identity template policies. Non-templated URI SANs are also permitted. (default to false).</param>
+
+        /// <param name="AllowedUserIds">If set, an array of allowed user-ids to put in user system login name specified here: https://www.rfc-editor.org/rfc/rfc1274#section-9.3.1.</param>
 
         /// <param name="Backend">Backend Type.</param>
 
@@ -164,7 +166,7 @@ namespace Vault.Model
         /// <param name="UsePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
 
 
-        public PKIWriteRoleRequest(bool AllowAnyName = default(bool), bool AllowBareDomains = default(bool), bool AllowGlobDomains = default(bool), bool AllowIpSans = true, bool AllowLocalhost = true, bool AllowSubdomains = default(bool), bool AllowWildcardCertificates = true, List<string> AllowedDomains = default(List<string>), bool AllowedDomainsTemplate = false, List<string> AllowedOtherSans = default(List<string>), List<string> AllowedSerialNumbers = default(List<string>), List<string> AllowedUriSans = default(List<string>), bool AllowedUriSansTemplate = false, string Backend = default(string), bool BasicConstraintsValidForNonCa = default(bool), bool ClientFlag = true, List<string> CnValidations = default(List<string>), bool CodeSigningFlag = default(bool), List<string> Country = default(List<string>), bool EmailProtectionFlag = default(bool), bool EnforceHostnames = true, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), bool GenerateLease = default(bool), string IssuerRef = "default", int KeyBits = 0, KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> KeyUsage = default(List<string>), List<string> Locality = default(List<string>), int MaxTtl = default(int), bool NoStore = default(bool), string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> Ou = default(List<string>), List<string> PolicyIdentifiers = default(List<string>), List<string> PostalCode = default(List<string>), List<string> Province = default(List<string>), bool RequireCn = true, bool ServerFlag = true, int SignatureBits = 0, List<string> StreetAddress = default(List<string>), int Ttl = default(int), bool UseCsrCommonName = true, bool UseCsrSans = true, bool UsePss = false)
+        public PkiWriteRoleRequest(bool AllowAnyName = default(bool), bool AllowBareDomains = default(bool), bool AllowGlobDomains = default(bool), bool AllowIpSans = true, bool AllowLocalhost = true, bool AllowSubdomains = default(bool), bool AllowWildcardCertificates = true, List<string> AllowedDomains = default(List<string>), bool AllowedDomainsTemplate = false, List<string> AllowedOtherSans = default(List<string>), List<string> AllowedSerialNumbers = default(List<string>), List<string> AllowedUriSans = default(List<string>), bool AllowedUriSansTemplate = false, List<string> AllowedUserIds = default(List<string>), string Backend = default(string), bool BasicConstraintsValidForNonCa = default(bool), bool ClientFlag = true, List<string> CnValidations = default(List<string>), bool CodeSigningFlag = default(bool), List<string> Country = default(List<string>), bool EmailProtectionFlag = default(bool), bool EnforceHostnames = true, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), bool GenerateLease = default(bool), string IssuerRef = "default", int KeyBits = 0, KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> KeyUsage = default(List<string>), List<string> Locality = default(List<string>), int MaxTtl = default(int), bool NoStore = default(bool), string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> Ou = default(List<string>), List<string> PolicyIdentifiers = default(List<string>), List<string> PostalCode = default(List<string>), List<string> Province = default(List<string>), bool RequireCn = true, bool ServerFlag = true, int SignatureBits = 0, List<string> StreetAddress = default(List<string>), int Ttl = default(int), bool UseCsrCommonName = true, bool UseCsrSans = true, bool UsePss = false)
         {
 
             this.AllowAnyName = AllowAnyName;
@@ -192,6 +194,8 @@ namespace Vault.Model
             this.AllowedUriSans = AllowedUriSans;
 
             this.AllowedUriSansTemplate = AllowedUriSansTemplate;
+
+            this.AllowedUserIds = AllowedUserIds;
 
             this.Backend = Backend;
 
@@ -378,6 +382,15 @@ namespace Vault.Model
         [DataMember(Name = "allowed_uri_sans_template", EmitDefaultValue = true)]
 
         public bool AllowedUriSansTemplate { get; set; }
+
+
+        /// <summary>
+        /// If set, an array of allowed user-ids to put in user system login name specified here: https://www.rfc-editor.org/rfc/rfc1274#section-9.3.1
+        /// </summary>
+        /// <value>If set, an array of allowed user-ids to put in user system login name specified here: https://www.rfc-editor.org/rfc/rfc1274#section-9.3.1</value>
+        [DataMember(Name = "allowed_user_ids", EmitDefaultValue = false)]
+
+        public List<string> AllowedUserIds { get; set; }
 
 
         /// <summary>
@@ -677,7 +690,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIWriteRoleRequest {\n");
+            sb.Append("class PkiWriteRoleRequest {\n");
             sb.Append("  AllowAnyName: ").Append(AllowAnyName).Append("\n");
             sb.Append("  AllowBareDomains: ").Append(AllowBareDomains).Append("\n");
             sb.Append("  AllowGlobDomains: ").Append(AllowGlobDomains).Append("\n");
@@ -691,6 +704,7 @@ namespace Vault.Model
             sb.Append("  AllowedSerialNumbers: ").Append(AllowedSerialNumbers).Append("\n");
             sb.Append("  AllowedUriSans: ").Append(AllowedUriSans).Append("\n");
             sb.Append("  AllowedUriSansTemplate: ").Append(AllowedUriSansTemplate).Append("\n");
+            sb.Append("  AllowedUserIds: ").Append(AllowedUserIds).Append("\n");
             sb.Append("  Backend: ").Append(Backend).Append("\n");
             sb.Append("  BasicConstraintsValidForNonCa: ").Append(BasicConstraintsValidForNonCa).Append("\n");
             sb.Append("  ClientFlag: ").Append(ClientFlag).Append("\n");
@@ -744,15 +758,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIWriteRoleRequest);
+            return this.Equals(input as PkiWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIWriteRoleRequest instances are equal
+        /// Returns true if PkiWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of PkiWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIWriteRoleRequest input)
+        public bool Equals(PkiWriteRoleRequest input)
         {
             if (input == null)
             {
@@ -827,6 +841,12 @@ namespace Vault.Model
                     this.AllowedUriSansTemplate == input.AllowedUriSansTemplate ||
 
                     this.AllowedUriSansTemplate.Equals(input.AllowedUriSansTemplate)
+                ) &&
+                (
+                    this.AllowedUserIds == input.AllowedUserIds ||
+                    this.AllowedUserIds != null &&
+                    input.AllowedUserIds != null &&
+                    this.AllowedUserIds.SequenceEqual(input.AllowedUserIds)
                 ) &&
                 (
                     this.Backend == input.Backend ||
@@ -1059,6 +1079,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.AllowedUriSansTemplate.GetHashCode();
+                if (this.AllowedUserIds != null)
+                {
+                    hashCode = (hashCode * 59) + this.AllowedUserIds.GetHashCode();
+                }
+
                 if (this.Backend != null)
                 {
                     hashCode = (hashCode * 59) + this.Backend.GetHashCode();

@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleReadBindSecretIDResponse
+# Vault.Model.AppRoleReadBindSecretIdResponse
 
 ## Properties
 

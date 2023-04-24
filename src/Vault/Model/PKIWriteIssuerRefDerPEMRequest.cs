@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIWriteIssuerRefDerPEMRequest
+    /// PkiWriteIssuerRefDerPemRequest
     /// </summary>
-    [DataContract(Name = "PKIWriteIssuerRefDerPEMRequest")]
-    public partial class PKIWriteIssuerRefDerPEMRequest : IEquatable<PKIWriteIssuerRefDerPEMRequest>, IValidatableObject
+    [DataContract(Name = "PkiWriteIssuerRefDerPemRequest")]
+    public partial class PkiWriteIssuerRefDerPemRequest : IEquatable<PkiWriteIssuerRefDerPemRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIWriteIssuerRefDerPEMRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiWriteIssuerRefDerPemRequest" /> class.
         /// </summary>
 
         /// <param name="CrlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
@@ -53,7 +53,7 @@ namespace Vault.Model
         /// <param name="Usage">Comma-separated list (or string slice) of usages for this issuer; valid values are \&quot;read-only\&quot;, \&quot;issuing-certificates\&quot;, \&quot;crl-signing\&quot;, and \&quot;ocsp-signing\&quot;. Multiple values may be specified. Read-only is implicit and always set..</param>
 
 
-        public PKIWriteIssuerRefDerPEMRequest(List<string> CrlDistributionPoints = default(List<string>), bool EnableAiaUrlTemplating = false, string IssuerName = default(string), List<string> IssuingCertificates = default(List<string>), string LeafNotAfterBehavior = "err", List<string> ManualChain = default(List<string>), List<string> OcspServers = default(List<string>), string RevocationSignatureAlgorithm = "", List<string> Usage = default(List<string>))
+        public PkiWriteIssuerRefDerPemRequest(List<string> CrlDistributionPoints = default(List<string>), bool EnableAiaUrlTemplating = false, string IssuerName = default(string), List<string> IssuingCertificates = default(List<string>), string LeafNotAfterBehavior = "err", List<string> ManualChain = default(List<string>), List<string> OcspServers = default(List<string>), string RevocationSignatureAlgorithm = "", List<string> Usage = default(List<string>))
         {
 
             this.CrlDistributionPoints = CrlDistributionPoints;
@@ -170,7 +170,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIWriteIssuerRefDerPEMRequest {\n");
+            sb.Append("class PkiWriteIssuerRefDerPemRequest {\n");
             sb.Append("  CrlDistributionPoints: ").Append(CrlDistributionPoints).Append("\n");
             sb.Append("  EnableAiaUrlTemplating: ").Append(EnableAiaUrlTemplating).Append("\n");
             sb.Append("  IssuerName: ").Append(IssuerName).Append("\n");
@@ -200,15 +200,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIWriteIssuerRefDerPEMRequest);
+            return this.Equals(input as PkiWriteIssuerRefDerPemRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIWriteIssuerRefDerPEMRequest instances are equal
+        /// Returns true if PkiWriteIssuerRefDerPemRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIWriteIssuerRefDerPEMRequest to be compared</param>
+        /// <param name="input">Instance of PkiWriteIssuerRefDerPemRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIWriteIssuerRefDerPEMRequest input)
+        public bool Equals(PkiWriteIssuerRefDerPemRequest input)
         {
             if (input == null)
             {

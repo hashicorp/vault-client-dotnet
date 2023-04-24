@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudKMSWriteKeyRequest
+# Vault.Model.GoogleCloudKmsWriteKeyRequest
 
 ## Properties
 

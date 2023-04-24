@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleReadSecretIDNumUsesResponse
+    /// AppRoleReadSecretIdNumUsesResponse
     /// </summary>
-    [DataContract(Name = "AppRoleReadSecretIDNumUsesResponse")]
-    public partial class AppRoleReadSecretIDNumUsesResponse : IEquatable<AppRoleReadSecretIDNumUsesResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleReadSecretIdNumUsesResponse")]
+    public partial class AppRoleReadSecretIdNumUsesResponse : IEquatable<AppRoleReadSecretIdNumUsesResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleReadSecretIDNumUsesResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleReadSecretIdNumUsesResponse" /> class.
         /// </summary>
 
         /// <param name="SecretIdNumUses">Number of times a secret ID can access the role, after which the SecretID will expire. Defaults to 0 meaning that the secret ID is of unlimited use..</param>
 
 
-        public AppRoleReadSecretIDNumUsesResponse(int SecretIdNumUses = default(int))
+        public AppRoleReadSecretIdNumUsesResponse(int SecretIdNumUses = default(int))
         {
 
             this.SecretIdNumUses = SecretIdNumUses;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleReadSecretIDNumUsesResponse {\n");
+            sb.Append("class AppRoleReadSecretIdNumUsesResponse {\n");
             sb.Append("  SecretIdNumUses: ").Append(SecretIdNumUses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleReadSecretIDNumUsesResponse);
+            return this.Equals(input as AppRoleReadSecretIdNumUsesResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleReadSecretIDNumUsesResponse instances are equal
+        /// Returns true if AppRoleReadSecretIdNumUsesResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleReadSecretIDNumUsesResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleReadSecretIdNumUsesResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleReadSecretIDNumUsesResponse input)
+        public bool Equals(AppRoleReadSecretIdNumUsesResponse input)
         {
             if (input == null)
             {

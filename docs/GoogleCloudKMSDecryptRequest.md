@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudKMSDecryptRequest
+# Vault.Model.GoogleCloudKmsDecryptRequest
 
 ## Properties
 

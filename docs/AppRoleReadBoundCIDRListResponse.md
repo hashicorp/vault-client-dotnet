@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleReadBoundCIDRListResponse
+# Vault.Model.AppRoleReadBoundCidrListResponse
 
 ## Properties
 

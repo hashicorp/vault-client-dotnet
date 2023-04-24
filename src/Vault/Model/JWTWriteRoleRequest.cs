@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// JWTWriteRoleRequest
+    /// JwtWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "JWTWriteRoleRequest")]
-    public partial class JWTWriteRoleRequest : IEquatable<JWTWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "JwtWriteRoleRequest")]
+    public partial class JwtWriteRoleRequest : IEquatable<JwtWriteRoleRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="JWTWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="JwtWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="AllowedRedirectUris">Comma-separated list of allowed values for redirect_uri.</param>
@@ -97,7 +97,7 @@ namespace Vault.Model
         /// <param name="VerboseOidcLogging">Log received OIDC tokens and claims when debug-level logging is active. Not recommended in production since sensitive information may be present in OIDC responses..</param>
 
 
-        public JWTWriteRoleRequest(List<string> AllowedRedirectUris = default(List<string>), List<string> BoundAudiences = default(List<string>), List<string> BoundCidrs = default(List<string>), Object BoundClaims = default(Object), string BoundClaimsType = "string", string BoundSubject = default(string), Object ClaimMappings = default(Object), int ClockSkewLeeway = default(int), int ExpirationLeeway = 150, string GroupsClaim = default(string), int MaxAge = default(int), int MaxTtl = default(int), int NotBeforeLeeway = 150, int NumUses = default(int), List<string> OidcScopes = default(List<string>), int Period = default(int), List<string> Policies = default(List<string>), string RoleType = default(string), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", int Ttl = default(int), string UserClaim = default(string), bool UserClaimJsonPointer = default(bool), bool VerboseOidcLogging = default(bool))
+        public JwtWriteRoleRequest(List<string> AllowedRedirectUris = default(List<string>), List<string> BoundAudiences = default(List<string>), List<string> BoundCidrs = default(List<string>), Object BoundClaims = default(Object), string BoundClaimsType = "string", string BoundSubject = default(string), Object ClaimMappings = default(Object), int ClockSkewLeeway = default(int), int ExpirationLeeway = 150, string GroupsClaim = default(string), int MaxAge = default(int), int MaxTtl = default(int), int NotBeforeLeeway = 150, int NumUses = default(int), List<string> OidcScopes = default(List<string>), int Period = default(int), List<string> Policies = default(List<string>), string RoleType = default(string), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", int Ttl = default(int), string UserClaim = default(string), bool UserClaimJsonPointer = default(bool), bool VerboseOidcLogging = default(bool))
         {
 
             this.AllowedRedirectUris = AllowedRedirectUris;
@@ -456,7 +456,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class JWTWriteRoleRequest {\n");
+            sb.Append("class JwtWriteRoleRequest {\n");
             sb.Append("  AllowedRedirectUris: ").Append(AllowedRedirectUris).Append("\n");
             sb.Append("  BoundAudiences: ").Append(BoundAudiences).Append("\n");
             sb.Append("  BoundCidrs: ").Append(BoundCidrs).Append("\n");
@@ -508,15 +508,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as JWTWriteRoleRequest);
+            return this.Equals(input as JwtWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if JWTWriteRoleRequest instances are equal
+        /// Returns true if JwtWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of JWTWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of JwtWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(JWTWriteRoleRequest input)
+        public bool Equals(JwtWriteRoleRequest input)
         {
             if (input == null)
             {

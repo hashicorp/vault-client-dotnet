@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AWSWriteRoleRequest
+    /// AwsWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "AWSWriteRoleRequest")]
-    public partial class AWSWriteRoleRequest : IEquatable<AWSWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "AwsWriteRoleRequest")]
+    public partial class AwsWriteRoleRequest : IEquatable<AwsWriteRoleRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AWSWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="AwsWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="Arn">Use role_arns or policy_arns instead..</param>
@@ -59,7 +59,7 @@ namespace Vault.Model
         /// <param name="UserPath">Path for IAM User. Only valid when credential_type is iam_user (default to &quot;/&quot;).</param>
 
 
-        public AWSWriteRoleRequest(string Arn = default(string), string CredentialType = default(string), int DefaultStsTtl = default(int), List<string> IamGroups = default(List<string>), Object IamTags = default(Object), int MaxStsTtl = default(int), string PermissionsBoundaryArn = default(string), string Policy = default(string), List<string> PolicyArns = default(List<string>), string PolicyDocument = default(string), List<string> RoleArns = default(List<string>), string UserPath = "/")
+        public AwsWriteRoleRequest(string Arn = default(string), string CredentialType = default(string), int DefaultStsTtl = default(int), List<string> IamGroups = default(List<string>), Object IamTags = default(Object), int MaxStsTtl = default(int), string PermissionsBoundaryArn = default(string), string Policy = default(string), List<string> PolicyArns = default(List<string>), string PolicyDocument = default(string), List<string> RoleArns = default(List<string>), string UserPath = "/")
         {
 
             this.Arn = Arn;
@@ -207,7 +207,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AWSWriteRoleRequest {\n");
+            sb.Append("class AwsWriteRoleRequest {\n");
             sb.Append("  Arn: ").Append(Arn).Append("\n");
             sb.Append("  CredentialType: ").Append(CredentialType).Append("\n");
             sb.Append("  DefaultStsTtl: ").Append(DefaultStsTtl).Append("\n");
@@ -240,15 +240,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AWSWriteRoleRequest);
+            return this.Equals(input as AwsWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if AWSWriteRoleRequest instances are equal
+        /// Returns true if AwsWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AWSWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of AwsWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AWSWriteRoleRequest input)
+        public bool Equals(AwsWriteRoleRequest input)
         {
             if (input == null)
             {

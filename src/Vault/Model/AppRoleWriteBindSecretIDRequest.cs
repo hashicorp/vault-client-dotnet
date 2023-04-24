@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteBindSecretIDRequest
+    /// AppRoleWriteBindSecretIdRequest
     /// </summary>
-    [DataContract(Name = "AppRoleWriteBindSecretIDRequest")]
-    public partial class AppRoleWriteBindSecretIDRequest : IEquatable<AppRoleWriteBindSecretIDRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteBindSecretIdRequest")]
+    public partial class AppRoleWriteBindSecretIdRequest : IEquatable<AppRoleWriteBindSecretIdRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteBindSecretIDRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteBindSecretIdRequest" /> class.
         /// </summary>
 
         /// <param name="BindSecretId">Impose secret_id to be presented when logging in using this role. (default to true).</param>
 
 
-        public AppRoleWriteBindSecretIDRequest(bool BindSecretId = true)
+        public AppRoleWriteBindSecretIdRequest(bool BindSecretId = true)
         {
 
             this.BindSecretId = BindSecretId;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteBindSecretIDRequest {\n");
+            sb.Append("class AppRoleWriteBindSecretIdRequest {\n");
             sb.Append("  BindSecretId: ").Append(BindSecretId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteBindSecretIDRequest);
+            return this.Equals(input as AppRoleWriteBindSecretIdRequest);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteBindSecretIDRequest instances are equal
+        /// Returns true if AppRoleWriteBindSecretIdRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteBindSecretIDRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteBindSecretIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteBindSecretIDRequest input)
+        public bool Equals(AppRoleWriteBindSecretIdRequest input)
         {
             if (input == null)
             {

@@ -23,50 +23,74 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKITidyRequest
+    /// PkiTidyRequest
     /// </summary>
-    [DataContract(Name = "PKITidyRequest")]
-    public partial class PKITidyRequest : IEquatable<PKITidyRequest>, IValidatableObject
+    [DataContract(Name = "PkiTidyRequest")]
+    public partial class PkiTidyRequest : IEquatable<PkiTidyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKITidyRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiTidyRequest" /> class.
         /// </summary>
 
         /// <param name="IssuerSafetyBuffer">The amount of extra time that must have passed beyond issuer&#x27;s expiration before it is removed from the backend storage. Defaults to 8760 hours (1 year). (default to 31536000).</param>
 
+        /// <param name="MaintainStoredCertificateCounts">This configures whether stored certificates are counted upon initialization of the backend, and whether during normal operation, a running count of certificates stored is maintained. (default to false).</param>
+
         /// <param name="PauseDuration">The amount of time to wait between processing certificates. This allows operators to change the execution profile of tidy to take consume less resources by slowing down how long it takes to run. Note that the entire list of certificates will be stored in memory during the entire tidy operation, but resources to read/process/update existing entries will be spread out over a greater period of time. By default this is zero seconds. (default to &quot;0s&quot;).</param>
+
+        /// <param name="PublishStoredCertificateCountMetrics">This configures whether the stored certificate count is published to the metrics consumer. It does not affect if the stored certificate count is maintained, and if maintained, it will be available on the tidy-status endpoint. (default to false).</param>
+
+        /// <param name="RevocationQueueSafetyBuffer">The amount of time that must pass from the cross-cluster revocation request being initiated to when it will be slated for removal. Setting this too low may remove valid revocation requests before the owning cluster has a chance to process them, especially if the cluster is offline. (default to 172800).</param>
 
         /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond certificate expiration before it is removed from the backend storage and/or revocation list. Defaults to 72 hours. (default to 259200).</param>
 
         /// <param name="TidyCertStore">Set to true to enable tidying up the certificate store.</param>
 
+        /// <param name="TidyCrossClusterRevokedCerts">Set to true to enable tidying up the cross-cluster revoked certificate store. Only runs on the active primary node..</param>
+
         /// <param name="TidyExpiredIssuers">Set to true to automatically remove expired issuers past the issuer_safety_buffer. No keys will be removed as part of this operation..</param>
 
+        /// <param name="TidyMoveLegacyCaBundle">Set to true to move the legacy ca_bundle from /config/ca_bundle to /config/ca_bundle.bak. This prevents downgrades to pre-Vault 1.11 versions (as older PKI engines do not know about the new multi-issuer storage layout), but improves the performance on seal wrapped PKI mounts. This will only occur if at least issuer_safety_buffer time has occurred after the initial storage migration. This backup is saved in case of an issue in future migrations. Operators may consider removing it via sys/raw if they desire. The backup will be removed via a DELETE /root call, but note that this removes ALL issuers within the mount (and is thus not desirable in most operational scenarios)..</param>
+
         /// <param name="TidyRevocationList">Deprecated; synonym for &#x27;tidy_revoked_certs.</param>
+
+        /// <param name="TidyRevocationQueue">Set to true to remove stale revocation queue entries that haven&#x27;t been confirmed by any active cluster. Only runs on the active primary node (default to false).</param>
 
         /// <param name="TidyRevokedCertIssuerAssociations">Set to true to validate issuer associations on revocation entries. This helps increase the performance of CRL building and OCSP responses..</param>
 
         /// <param name="TidyRevokedCerts">Set to true to expire all revoked and expired certificates, removing them both from the CRL and from storage. The CRL will be rotated if this causes any values to be removed..</param>
 
 
-        public PKITidyRequest(int IssuerSafetyBuffer = 31536000, string PauseDuration = "0s", int SafetyBuffer = 259200, bool TidyCertStore = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyRevocationList = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool))
+        public PkiTidyRequest(int IssuerSafetyBuffer = 31536000, bool MaintainStoredCertificateCounts = false, string PauseDuration = "0s", bool PublishStoredCertificateCountMetrics = false, int RevocationQueueSafetyBuffer = 172800, int SafetyBuffer = 259200, bool TidyCertStore = default(bool), bool TidyCrossClusterRevokedCerts = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationList = default(bool), bool TidyRevocationQueue = false, bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool))
         {
 
             this.IssuerSafetyBuffer = IssuerSafetyBuffer;
+
+            this.MaintainStoredCertificateCounts = MaintainStoredCertificateCounts;
 
             // use default value if no "PauseDuration" provided
             this.PauseDuration = PauseDuration ?? "0s";
 
 
+            this.PublishStoredCertificateCountMetrics = PublishStoredCertificateCountMetrics;
+
+            this.RevocationQueueSafetyBuffer = RevocationQueueSafetyBuffer;
+
             this.SafetyBuffer = SafetyBuffer;
 
             this.TidyCertStore = TidyCertStore;
 
+            this.TidyCrossClusterRevokedCerts = TidyCrossClusterRevokedCerts;
+
             this.TidyExpiredIssuers = TidyExpiredIssuers;
 
+            this.TidyMoveLegacyCaBundle = TidyMoveLegacyCaBundle;
+
             this.TidyRevocationList = TidyRevocationList;
+
+            this.TidyRevocationQueue = TidyRevocationQueue;
 
             this.TidyRevokedCertIssuerAssociations = TidyRevokedCertIssuerAssociations;
 
@@ -84,12 +108,39 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// This configures whether stored certificates are counted upon initialization of the backend, and whether during normal operation, a running count of certificates stored is maintained.
+        /// </summary>
+        /// <value>This configures whether stored certificates are counted upon initialization of the backend, and whether during normal operation, a running count of certificates stored is maintained.</value>
+        [DataMember(Name = "maintain_stored_certificate_counts", EmitDefaultValue = true)]
+
+        public bool MaintainStoredCertificateCounts { get; set; }
+
+
+        /// <summary>
         /// The amount of time to wait between processing certificates. This allows operators to change the execution profile of tidy to take consume less resources by slowing down how long it takes to run. Note that the entire list of certificates will be stored in memory during the entire tidy operation, but resources to read/process/update existing entries will be spread out over a greater period of time. By default this is zero seconds.
         /// </summary>
         /// <value>The amount of time to wait between processing certificates. This allows operators to change the execution profile of tidy to take consume less resources by slowing down how long it takes to run. Note that the entire list of certificates will be stored in memory during the entire tidy operation, but resources to read/process/update existing entries will be spread out over a greater period of time. By default this is zero seconds.</value>
         [DataMember(Name = "pause_duration", EmitDefaultValue = false)]
 
         public string PauseDuration { get; set; }
+
+
+        /// <summary>
+        /// This configures whether the stored certificate count is published to the metrics consumer. It does not affect if the stored certificate count is maintained, and if maintained, it will be available on the tidy-status endpoint.
+        /// </summary>
+        /// <value>This configures whether the stored certificate count is published to the metrics consumer. It does not affect if the stored certificate count is maintained, and if maintained, it will be available on the tidy-status endpoint.</value>
+        [DataMember(Name = "publish_stored_certificate_count_metrics", EmitDefaultValue = true)]
+
+        public bool PublishStoredCertificateCountMetrics { get; set; }
+
+
+        /// <summary>
+        /// The amount of time that must pass from the cross-cluster revocation request being initiated to when it will be slated for removal. Setting this too low may remove valid revocation requests before the owning cluster has a chance to process them, especially if the cluster is offline.
+        /// </summary>
+        /// <value>The amount of time that must pass from the cross-cluster revocation request being initiated to when it will be slated for removal. Setting this too low may remove valid revocation requests before the owning cluster has a chance to process them, especially if the cluster is offline.</value>
+        [DataMember(Name = "revocation_queue_safety_buffer", EmitDefaultValue = false)]
+
+        public int RevocationQueueSafetyBuffer { get; set; }
 
 
         /// <summary>
@@ -111,6 +162,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Set to true to enable tidying up the cross-cluster revoked certificate store. Only runs on the active primary node.
+        /// </summary>
+        /// <value>Set to true to enable tidying up the cross-cluster revoked certificate store. Only runs on the active primary node.</value>
+        [DataMember(Name = "tidy_cross_cluster_revoked_certs", EmitDefaultValue = true)]
+
+        public bool TidyCrossClusterRevokedCerts { get; set; }
+
+
+        /// <summary>
         /// Set to true to automatically remove expired issuers past the issuer_safety_buffer. No keys will be removed as part of this operation.
         /// </summary>
         /// <value>Set to true to automatically remove expired issuers past the issuer_safety_buffer. No keys will be removed as part of this operation.</value>
@@ -120,12 +180,30 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Set to true to move the legacy ca_bundle from /config/ca_bundle to /config/ca_bundle.bak. This prevents downgrades to pre-Vault 1.11 versions (as older PKI engines do not know about the new multi-issuer storage layout), but improves the performance on seal wrapped PKI mounts. This will only occur if at least issuer_safety_buffer time has occurred after the initial storage migration. This backup is saved in case of an issue in future migrations. Operators may consider removing it via sys/raw if they desire. The backup will be removed via a DELETE /root call, but note that this removes ALL issuers within the mount (and is thus not desirable in most operational scenarios).
+        /// </summary>
+        /// <value>Set to true to move the legacy ca_bundle from /config/ca_bundle to /config/ca_bundle.bak. This prevents downgrades to pre-Vault 1.11 versions (as older PKI engines do not know about the new multi-issuer storage layout), but improves the performance on seal wrapped PKI mounts. This will only occur if at least issuer_safety_buffer time has occurred after the initial storage migration. This backup is saved in case of an issue in future migrations. Operators may consider removing it via sys/raw if they desire. The backup will be removed via a DELETE /root call, but note that this removes ALL issuers within the mount (and is thus not desirable in most operational scenarios).</value>
+        [DataMember(Name = "tidy_move_legacy_ca_bundle", EmitDefaultValue = true)]
+
+        public bool TidyMoveLegacyCaBundle { get; set; }
+
+
+        /// <summary>
         /// Deprecated; synonym for &#x27;tidy_revoked_certs
         /// </summary>
         /// <value>Deprecated; synonym for &#x27;tidy_revoked_certs</value>
         [DataMember(Name = "tidy_revocation_list", EmitDefaultValue = true)]
 
         public bool TidyRevocationList { get; set; }
+
+
+        /// <summary>
+        /// Set to true to remove stale revocation queue entries that haven&#x27;t been confirmed by any active cluster. Only runs on the active primary node
+        /// </summary>
+        /// <value>Set to true to remove stale revocation queue entries that haven&#x27;t been confirmed by any active cluster. Only runs on the active primary node</value>
+        [DataMember(Name = "tidy_revocation_queue", EmitDefaultValue = true)]
+
+        public bool TidyRevocationQueue { get; set; }
 
 
         /// <summary>
@@ -155,13 +233,19 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKITidyRequest {\n");
+            sb.Append("class PkiTidyRequest {\n");
             sb.Append("  IssuerSafetyBuffer: ").Append(IssuerSafetyBuffer).Append("\n");
+            sb.Append("  MaintainStoredCertificateCounts: ").Append(MaintainStoredCertificateCounts).Append("\n");
             sb.Append("  PauseDuration: ").Append(PauseDuration).Append("\n");
+            sb.Append("  PublishStoredCertificateCountMetrics: ").Append(PublishStoredCertificateCountMetrics).Append("\n");
+            sb.Append("  RevocationQueueSafetyBuffer: ").Append(RevocationQueueSafetyBuffer).Append("\n");
             sb.Append("  SafetyBuffer: ").Append(SafetyBuffer).Append("\n");
             sb.Append("  TidyCertStore: ").Append(TidyCertStore).Append("\n");
+            sb.Append("  TidyCrossClusterRevokedCerts: ").Append(TidyCrossClusterRevokedCerts).Append("\n");
             sb.Append("  TidyExpiredIssuers: ").Append(TidyExpiredIssuers).Append("\n");
+            sb.Append("  TidyMoveLegacyCaBundle: ").Append(TidyMoveLegacyCaBundle).Append("\n");
             sb.Append("  TidyRevocationList: ").Append(TidyRevocationList).Append("\n");
+            sb.Append("  TidyRevocationQueue: ").Append(TidyRevocationQueue).Append("\n");
             sb.Append("  TidyRevokedCertIssuerAssociations: ").Append(TidyRevokedCertIssuerAssociations).Append("\n");
             sb.Append("  TidyRevokedCerts: ").Append(TidyRevokedCerts).Append("\n");
             sb.Append("}\n");
@@ -184,15 +268,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKITidyRequest);
+            return this.Equals(input as PkiTidyRequest);
         }
 
         /// <summary>
-        /// Returns true if PKITidyRequest instances are equal
+        /// Returns true if PkiTidyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKITidyRequest to be compared</param>
+        /// <param name="input">Instance of PkiTidyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKITidyRequest input)
+        public bool Equals(PkiTidyRequest input)
         {
             if (input == null)
             {
@@ -205,10 +289,25 @@ namespace Vault.Model
                     this.IssuerSafetyBuffer.Equals(input.IssuerSafetyBuffer)
                 ) &&
                 (
+                    this.MaintainStoredCertificateCounts == input.MaintainStoredCertificateCounts ||
+
+                    this.MaintainStoredCertificateCounts.Equals(input.MaintainStoredCertificateCounts)
+                ) &&
+                (
                     this.PauseDuration == input.PauseDuration ||
                     (this.PauseDuration != null &&
                     this.PauseDuration.Equals(input.PauseDuration))
 
+                ) &&
+                (
+                    this.PublishStoredCertificateCountMetrics == input.PublishStoredCertificateCountMetrics ||
+
+                    this.PublishStoredCertificateCountMetrics.Equals(input.PublishStoredCertificateCountMetrics)
+                ) &&
+                (
+                    this.RevocationQueueSafetyBuffer == input.RevocationQueueSafetyBuffer ||
+
+                    this.RevocationQueueSafetyBuffer.Equals(input.RevocationQueueSafetyBuffer)
                 ) &&
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
@@ -221,14 +320,29 @@ namespace Vault.Model
                     this.TidyCertStore.Equals(input.TidyCertStore)
                 ) &&
                 (
+                    this.TidyCrossClusterRevokedCerts == input.TidyCrossClusterRevokedCerts ||
+
+                    this.TidyCrossClusterRevokedCerts.Equals(input.TidyCrossClusterRevokedCerts)
+                ) &&
+                (
                     this.TidyExpiredIssuers == input.TidyExpiredIssuers ||
 
                     this.TidyExpiredIssuers.Equals(input.TidyExpiredIssuers)
                 ) &&
                 (
+                    this.TidyMoveLegacyCaBundle == input.TidyMoveLegacyCaBundle ||
+
+                    this.TidyMoveLegacyCaBundle.Equals(input.TidyMoveLegacyCaBundle)
+                ) &&
+                (
                     this.TidyRevocationList == input.TidyRevocationList ||
 
                     this.TidyRevocationList.Equals(input.TidyRevocationList)
+                ) &&
+                (
+                    this.TidyRevocationQueue == input.TidyRevocationQueue ||
+
+                    this.TidyRevocationQueue.Equals(input.TidyRevocationQueue)
                 ) &&
                 (
                     this.TidyRevokedCertIssuerAssociations == input.TidyRevokedCertIssuerAssociations ||
@@ -255,19 +369,31 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.IssuerSafetyBuffer.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.MaintainStoredCertificateCounts.GetHashCode();
                 if (this.PauseDuration != null)
                 {
                     hashCode = (hashCode * 59) + this.PauseDuration.GetHashCode();
                 }
 
 
+                hashCode = (hashCode * 59) + this.PublishStoredCertificateCountMetrics.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.RevocationQueueSafetyBuffer.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TidyCertStore.GetHashCode();
 
+                hashCode = (hashCode * 59) + this.TidyCrossClusterRevokedCerts.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TidyExpiredIssuers.GetHashCode();
 
+                hashCode = (hashCode * 59) + this.TidyMoveLegacyCaBundle.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.TidyRevocationList.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.TidyRevocationQueue.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TidyRevokedCertIssuerAssociations.GetHashCode();
 

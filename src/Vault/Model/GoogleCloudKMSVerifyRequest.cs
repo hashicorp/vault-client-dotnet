@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GoogleCloudKMSVerifyRequest
+    /// GoogleCloudKmsVerifyRequest
     /// </summary>
-    [DataContract(Name = "GoogleCloudKMSVerifyRequest")]
-    public partial class GoogleCloudKMSVerifyRequest : IEquatable<GoogleCloudKMSVerifyRequest>, IValidatableObject
+    [DataContract(Name = "GoogleCloudKmsVerifyRequest")]
+    public partial class GoogleCloudKmsVerifyRequest : IEquatable<GoogleCloudKmsVerifyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoogleCloudKMSVerifyRequest" /> class.
+        /// Initializes a new instance of the <see cref="GoogleCloudKmsVerifyRequest" /> class.
         /// </summary>
 
         /// <param name="Digest">Digest to verify. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required..</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Signature">Base64-encoded signature to use for verification. This field is required..</param>
 
 
-        public GoogleCloudKMSVerifyRequest(string Digest = default(string), int KeyVersion = default(int), string Signature = default(string))
+        public GoogleCloudKmsVerifyRequest(string Digest = default(string), int KeyVersion = default(int), string Signature = default(string))
         {
 
             this.Digest = Digest;
@@ -88,7 +88,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GoogleCloudKMSVerifyRequest {\n");
+            sb.Append("class GoogleCloudKmsVerifyRequest {\n");
             sb.Append("  Digest: ").Append(Digest).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
             sb.Append("  Signature: ").Append(Signature).Append("\n");
@@ -112,15 +112,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GoogleCloudKMSVerifyRequest);
+            return this.Equals(input as GoogleCloudKmsVerifyRequest);
         }
 
         /// <summary>
-        /// Returns true if GoogleCloudKMSVerifyRequest instances are equal
+        /// Returns true if GoogleCloudKmsVerifyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GoogleCloudKMSVerifyRequest to be compared</param>
+        /// <param name="input">Instance of GoogleCloudKmsVerifyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GoogleCloudKMSVerifyRequest input)
+        public bool Equals(GoogleCloudKmsVerifyRequest input)
         {
             if (input == null)
             {

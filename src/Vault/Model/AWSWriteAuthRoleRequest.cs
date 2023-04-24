@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AWSWriteAuthRoleRequest
+    /// AwsWriteAuthRoleRequest
     /// </summary>
-    [DataContract(Name = "AWSWriteAuthRoleRequest")]
-    public partial class AWSWriteAuthRoleRequest : IEquatable<AWSWriteAuthRoleRequest>, IValidatableObject
+    [DataContract(Name = "AwsWriteAuthRoleRequest")]
+    public partial class AwsWriteAuthRoleRequest : IEquatable<AwsWriteAuthRoleRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AWSWriteAuthRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="AwsWriteAuthRoleRequest" /> class.
         /// </summary>
 
         /// <param name="AllowInstanceMigration">If set, allows migration of the underlying instance where the client resides. This keys off of pendingTime in the metadata document, so essentially, this disables the client nonce check whenever the instance is migrated to a new host and pendingTime is newer than the previously-remembered time. Use with caution. This is only checked when auth_type is ec2. (default to false).</param>
@@ -93,7 +93,7 @@ namespace Vault.Model
         /// <param name="Ttl">Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used..</param>
 
 
-        public AWSWriteAuthRoleRequest(bool AllowInstanceMigration = false, string AuthType = default(string), List<string> BoundAccountId = default(List<string>), List<string> BoundAmiId = default(List<string>), List<string> BoundEc2InstanceId = default(List<string>), List<string> BoundIamInstanceProfileArn = default(List<string>), List<string> BoundIamPrincipalArn = default(List<string>), List<string> BoundIamRoleArn = default(List<string>), List<string> BoundRegion = default(List<string>), List<string> BoundSubnetId = default(List<string>), List<string> BoundVpcId = default(List<string>), bool DisallowReauthentication = false, string InferredAwsRegion = default(string), string InferredEntityType = default(string), int MaxTtl = default(int), int Period = default(int), List<string> Policies = default(List<string>), bool ResolveAwsUniqueIds = true, string RoleTag = "", List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", int Ttl = default(int))
+        public AwsWriteAuthRoleRequest(bool AllowInstanceMigration = false, string AuthType = default(string), List<string> BoundAccountId = default(List<string>), List<string> BoundAmiId = default(List<string>), List<string> BoundEc2InstanceId = default(List<string>), List<string> BoundIamInstanceProfileArn = default(List<string>), List<string> BoundIamPrincipalArn = default(List<string>), List<string> BoundIamRoleArn = default(List<string>), List<string> BoundRegion = default(List<string>), List<string> BoundSubnetId = default(List<string>), List<string> BoundVpcId = default(List<string>), bool DisallowReauthentication = false, string InferredAwsRegion = default(string), string InferredEntityType = default(string), int MaxTtl = default(int), int Period = default(int), List<string> Policies = default(List<string>), bool ResolveAwsUniqueIds = true, string RoleTag = "", List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", int Ttl = default(int))
         {
 
             this.AllowInstanceMigration = AllowInstanceMigration;
@@ -430,7 +430,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AWSWriteAuthRoleRequest {\n");
+            sb.Append("class AwsWriteAuthRoleRequest {\n");
             sb.Append("  AllowInstanceMigration: ").Append(AllowInstanceMigration).Append("\n");
             sb.Append("  AuthType: ").Append(AuthType).Append("\n");
             sb.Append("  BoundAccountId: ").Append(BoundAccountId).Append("\n");
@@ -480,15 +480,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AWSWriteAuthRoleRequest);
+            return this.Equals(input as AwsWriteAuthRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if AWSWriteAuthRoleRequest instances are equal
+        /// Returns true if AwsWriteAuthRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AWSWriteAuthRoleRequest to be compared</param>
+        /// <param name="input">Instance of AwsWriteAuthRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AWSWriteAuthRoleRequest input)
+        public bool Equals(AwsWriteAuthRoleRequest input)
         {
             if (input == null)
             {

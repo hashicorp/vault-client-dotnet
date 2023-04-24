@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudKMSRegisterKeyRequest
+# Vault.Model.GoogleCloudKmsRegisterKeyRequest
 
 ## Properties
 

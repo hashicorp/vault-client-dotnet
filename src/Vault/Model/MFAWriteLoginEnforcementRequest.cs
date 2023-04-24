@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// MFAWriteLoginEnforcementRequest
+    /// MfaWriteLoginEnforcementRequest
     /// </summary>
-    [DataContract(Name = "MFAWriteLoginEnforcementRequest")]
-    public partial class MFAWriteLoginEnforcementRequest : IEquatable<MFAWriteLoginEnforcementRequest>, IValidatableObject
+    [DataContract(Name = "MfaWriteLoginEnforcementRequest")]
+    public partial class MfaWriteLoginEnforcementRequest : IEquatable<MfaWriteLoginEnforcementRequest>, IValidatableObject
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MFAWriteLoginEnforcementRequest" /> class.
+        /// Initializes a new instance of the <see cref="MfaWriteLoginEnforcementRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected MFAWriteLoginEnforcementRequest() { }
+        protected MfaWriteLoginEnforcementRequest() { }
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MFAWriteLoginEnforcementRequest" /> class.
+        /// Initializes a new instance of the <see cref="MfaWriteLoginEnforcementRequest" /> class.
         /// </summary>
 
         /// <param name="AuthMethodAccessors">Array of auth mount accessor IDs.</param>
@@ -51,13 +51,13 @@ namespace Vault.Model
         /// <param name="MfaMethodIds">Array of Method IDs that determine what methods will be enforced (required).</param>
 
 
-        public MFAWriteLoginEnforcementRequest(List<string> AuthMethodAccessors = default(List<string>), List<string> AuthMethodTypes = default(List<string>), List<string> IdentityEntityIds = default(List<string>), List<string> IdentityGroupIds = default(List<string>), List<string> MfaMethodIds = default(List<string>))
+        public MfaWriteLoginEnforcementRequest(List<string> AuthMethodAccessors = default(List<string>), List<string> AuthMethodTypes = default(List<string>), List<string> IdentityEntityIds = default(List<string>), List<string> IdentityGroupIds = default(List<string>), List<string> MfaMethodIds = default(List<string>))
         {
 
             // to ensure "MfaMethodIds" is required (not null)
             if (MfaMethodIds == null)
             {
-                throw new ArgumentNullException("MfaMethodIds is a required property for MFAWriteLoginEnforcementRequest and cannot be null");
+                throw new ArgumentNullException("MfaMethodIds is a required property for MfaWriteLoginEnforcementRequest and cannot be null");
             }
             this.MfaMethodIds = MfaMethodIds;
 
@@ -126,7 +126,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class MFAWriteLoginEnforcementRequest {\n");
+            sb.Append("class MfaWriteLoginEnforcementRequest {\n");
             sb.Append("  AuthMethodAccessors: ").Append(AuthMethodAccessors).Append("\n");
             sb.Append("  AuthMethodTypes: ").Append(AuthMethodTypes).Append("\n");
             sb.Append("  IdentityEntityIds: ").Append(IdentityEntityIds).Append("\n");
@@ -152,15 +152,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MFAWriteLoginEnforcementRequest);
+            return this.Equals(input as MfaWriteLoginEnforcementRequest);
         }
 
         /// <summary>
-        /// Returns true if MFAWriteLoginEnforcementRequest instances are equal
+        /// Returns true if MfaWriteLoginEnforcementRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of MFAWriteLoginEnforcementRequest to be compared</param>
+        /// <param name="input">Instance of MfaWriteLoginEnforcementRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MFAWriteLoginEnforcementRequest input)
+        public bool Equals(MfaWriteLoginEnforcementRequest input)
         {
             if (input == null)
             {

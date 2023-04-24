@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteSecretIDResponse
+    /// AppRoleWriteSecretIdResponse
     /// </summary>
-    [DataContract(Name = "AppRoleWriteSecretIDResponse")]
-    public partial class AppRoleWriteSecretIDResponse : IEquatable<AppRoleWriteSecretIDResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteSecretIdResponse")]
+    public partial class AppRoleWriteSecretIdResponse : IEquatable<AppRoleWriteSecretIdResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteSecretIDResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteSecretIdResponse" /> class.
         /// </summary>
 
         /// <param name="SecretId">Secret ID attached to the role..</param>
@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="SecretIdTtl">Duration in seconds after which the issued secret ID expires..</param>
 
 
-        public AppRoleWriteSecretIDResponse(string SecretId = default(string), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), int SecretIdTtl = default(int))
+        public AppRoleWriteSecretIdResponse(string SecretId = default(string), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), int SecretIdTtl = default(int))
         {
 
             this.SecretId = SecretId;
@@ -101,7 +101,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteSecretIDResponse {\n");
+            sb.Append("class AppRoleWriteSecretIdResponse {\n");
             sb.Append("  SecretId: ").Append(SecretId).Append("\n");
             sb.Append("  SecretIdAccessor: ").Append(SecretIdAccessor).Append("\n");
             sb.Append("  SecretIdNumUses: ").Append(SecretIdNumUses).Append("\n");
@@ -126,15 +126,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteSecretIDResponse);
+            return this.Equals(input as AppRoleWriteSecretIdResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteSecretIDResponse instances are equal
+        /// Returns true if AppRoleWriteSecretIdResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteSecretIDResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteSecretIdResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteSecretIDResponse input)
+        public bool Equals(AppRoleWriteSecretIdResponse input)
         {
             if (input == null)
             {

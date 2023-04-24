@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCWriteRoleRequest
+    /// OidcWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "OIDCWriteRoleRequest")]
-    public partial class OIDCWriteRoleRequest : IEquatable<OIDCWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "OidcWriteRoleRequest")]
+    public partial class OidcWriteRoleRequest : IEquatable<OidcWriteRoleRequest>, IValidatableObject
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteRoleRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OIDCWriteRoleRequest() { }
+        protected OidcWriteRoleRequest() { }
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="ClientId">Optional client_id.</param>
@@ -49,13 +49,13 @@ namespace Vault.Model
         /// <param name="Ttl">TTL of the tokens generated against the role..</param>
 
 
-        public OIDCWriteRoleRequest(string ClientId = default(string), string Key = default(string), string Template = default(string), int Ttl = default(int))
+        public OidcWriteRoleRequest(string ClientId = default(string), string Key = default(string), string Template = default(string), int Ttl = default(int))
         {
 
             // to ensure "Key" is required (not null)
             if (Key == null)
             {
-                throw new ArgumentNullException("Key is a required property for OIDCWriteRoleRequest and cannot be null");
+                throw new ArgumentNullException("Key is a required property for OidcWriteRoleRequest and cannot be null");
             }
             this.Key = Key;
 
@@ -113,7 +113,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCWriteRoleRequest {\n");
+            sb.Append("class OidcWriteRoleRequest {\n");
             sb.Append("  ClientId: ").Append(ClientId).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
@@ -138,15 +138,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCWriteRoleRequest);
+            return this.Equals(input as OidcWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCWriteRoleRequest instances are equal
+        /// Returns true if OidcWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of OidcWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCWriteRoleRequest input)
+        public bool Equals(OidcWriteRoleRequest input)
         {
             if (input == null)
             {

@@ -1,4 +1,4 @@
-# Vault.Model.MFAValidateRequest
+# Vault.Model.MfaValidateRequest
 
 ## Properties
 

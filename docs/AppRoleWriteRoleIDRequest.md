@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleWriteRoleIDRequest
+# Vault.Model.AppRoleWriteRoleIdRequest
 
 ## Properties
 

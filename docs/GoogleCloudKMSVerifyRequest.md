@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudKMSVerifyRequest
+# Vault.Model.GoogleCloudKmsVerifyRequest
 
 ## Properties
 

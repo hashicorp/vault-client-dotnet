@@ -1,4 +1,4 @@
-# Vault.Model.PKIIssuerSignRevocationListRequest
+# Vault.Model.PkiIssuerSignRevocationListRequest
 
 ## Properties
 

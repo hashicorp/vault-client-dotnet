@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// RabbitMQWriteRoleRequest
+    /// RabbitMqWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "RabbitMQWriteRoleRequest")]
-    public partial class RabbitMQWriteRoleRequest : IEquatable<RabbitMQWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "RabbitMqWriteRoleRequest")]
+    public partial class RabbitMqWriteRoleRequest : IEquatable<RabbitMqWriteRoleRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RabbitMQWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="RabbitMqWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="Tags">Comma-separated list of tags for this role..</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Vhosts">A map of virtual hosts to permissions..</param>
 
 
-        public RabbitMQWriteRoleRequest(string Tags = default(string), string VhostTopics = default(string), string Vhosts = default(string))
+        public RabbitMqWriteRoleRequest(string Tags = default(string), string VhostTopics = default(string), string Vhosts = default(string))
         {
 
             this.Tags = Tags;
@@ -88,7 +88,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RabbitMQWriteRoleRequest {\n");
+            sb.Append("class RabbitMqWriteRoleRequest {\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  VhostTopics: ").Append(VhostTopics).Append("\n");
             sb.Append("  Vhosts: ").Append(Vhosts).Append("\n");
@@ -112,15 +112,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RabbitMQWriteRoleRequest);
+            return this.Equals(input as RabbitMqWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if RabbitMQWriteRoleRequest instances are equal
+        /// Returns true if RabbitMqWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of RabbitMQWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of RabbitMqWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RabbitMQWriteRoleRequest input)
+        public bool Equals(RabbitMqWriteRoleRequest input)
         {
             if (input == null)
             {

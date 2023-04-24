@@ -1,4 +1,4 @@
-# Vault.Model.KVv2UndeleteVersionsRequest
+# Vault.Model.KvV2UndeleteVersionsRequest
 
 ## Properties
 

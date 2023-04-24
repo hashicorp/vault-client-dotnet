@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleReadSecretIDBoundCIDRsResponse
+# Vault.Model.AppRoleReadSecretIdBoundCidrsResponse
 
 ## Properties
 

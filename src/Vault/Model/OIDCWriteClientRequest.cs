@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCWriteClientRequest
+    /// OidcWriteClientRequest
     /// </summary>
-    [DataContract(Name = "OIDCWriteClientRequest")]
-    public partial class OIDCWriteClientRequest : IEquatable<OIDCWriteClientRequest>, IValidatableObject
+    [DataContract(Name = "OidcWriteClientRequest")]
+    public partial class OidcWriteClientRequest : IEquatable<OidcWriteClientRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteClientRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteClientRequest" /> class.
         /// </summary>
 
         /// <param name="AccessTokenTtl">The time-to-live for access tokens obtained by the client..</param>
@@ -47,7 +47,7 @@ namespace Vault.Model
         /// <param name="RedirectUris">Comma separated string or array of redirect URIs used by the client. One of these values must exactly match the redirect_uri parameter value used in each authentication request..</param>
 
 
-        public OIDCWriteClientRequest(int AccessTokenTtl = default(int), List<string> Assignments = default(List<string>), string ClientType = "confidential", int IdTokenTtl = default(int), string Key = "default", List<string> RedirectUris = default(List<string>))
+        public OidcWriteClientRequest(int AccessTokenTtl = default(int), List<string> Assignments = default(List<string>), string ClientType = "confidential", int IdTokenTtl = default(int), string Key = "default", List<string> RedirectUris = default(List<string>))
         {
 
             this.AccessTokenTtl = AccessTokenTtl;
@@ -131,7 +131,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCWriteClientRequest {\n");
+            sb.Append("class OidcWriteClientRequest {\n");
             sb.Append("  AccessTokenTtl: ").Append(AccessTokenTtl).Append("\n");
             sb.Append("  Assignments: ").Append(Assignments).Append("\n");
             sb.Append("  ClientType: ").Append(ClientType).Append("\n");
@@ -158,15 +158,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCWriteClientRequest);
+            return this.Equals(input as OidcWriteClientRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCWriteClientRequest instances are equal
+        /// Returns true if OidcWriteClientRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCWriteClientRequest to be compared</param>
+        /// <param name="input">Instance of OidcWriteClientRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCWriteClientRequest input)
+        public bool Equals(OidcWriteClientRequest input)
         {
             if (input == null)
             {

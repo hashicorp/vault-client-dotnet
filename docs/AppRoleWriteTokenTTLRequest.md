@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleWriteTokenTTLRequest
+# Vault.Model.AppRoleWriteTokenTtlRequest
 
 ## Properties
 

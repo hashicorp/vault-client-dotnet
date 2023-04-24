@@ -1,4 +1,4 @@
-# Vault.Model.PKIIssuerSignVerbatimRequest
+# Vault.Model.PkiIssuerSignVerbatimRequest
 
 ## Properties
 
@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **Ttl** | **int** | The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the role max TTL. | [optional] 
 **UriSans** | **List&lt;string&gt;** | The requested URI SANs, if any, in a comma-delimited list. | [optional] 
 **UsePss** | **bool** | Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. | [optional] [default to false]
+**UserIds** | **List&lt;string&gt;** | The requested user_ids value to place in the subject, if any, in a comma-delimited list. Restricted by allowed_user_ids. Any values are added with OID 0.9.2342.19200300.100.1.1. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

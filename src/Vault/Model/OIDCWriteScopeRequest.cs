@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCWriteScopeRequest
+    /// OidcWriteScopeRequest
     /// </summary>
-    [DataContract(Name = "OIDCWriteScopeRequest")]
-    public partial class OIDCWriteScopeRequest : IEquatable<OIDCWriteScopeRequest>, IValidatableObject
+    [DataContract(Name = "OidcWriteScopeRequest")]
+    public partial class OidcWriteScopeRequest : IEquatable<OidcWriteScopeRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteScopeRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteScopeRequest" /> class.
         /// </summary>
 
         /// <param name="Description">The description of the scope.</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="Template">The template string to use for the scope. This may be in string-ified JSON or base64 format..</param>
 
 
-        public OIDCWriteScopeRequest(string Description = default(string), string Template = default(string))
+        public OidcWriteScopeRequest(string Description = default(string), string Template = default(string))
         {
 
             this.Description = Description;
@@ -75,7 +75,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCWriteScopeRequest {\n");
+            sb.Append("class OidcWriteScopeRequest {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("}\n");
@@ -98,15 +98,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCWriteScopeRequest);
+            return this.Equals(input as OidcWriteScopeRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCWriteScopeRequest instances are equal
+        /// Returns true if OidcWriteScopeRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCWriteScopeRequest to be compared</param>
+        /// <param name="input">Instance of OidcWriteScopeRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCWriteScopeRequest input)
+        public bool Equals(OidcWriteScopeRequest input)
         {
             if (input == null)
             {

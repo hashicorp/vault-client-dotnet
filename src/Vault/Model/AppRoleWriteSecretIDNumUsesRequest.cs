@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteSecretIDNumUsesRequest
+    /// AppRoleWriteSecretIdNumUsesRequest
     /// </summary>
-    [DataContract(Name = "AppRoleWriteSecretIDNumUsesRequest")]
-    public partial class AppRoleWriteSecretIDNumUsesRequest : IEquatable<AppRoleWriteSecretIDNumUsesRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteSecretIdNumUsesRequest")]
+    public partial class AppRoleWriteSecretIdNumUsesRequest : IEquatable<AppRoleWriteSecretIdNumUsesRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteSecretIDNumUsesRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteSecretIdNumUsesRequest" /> class.
         /// </summary>
 
         /// <param name="SecretIdNumUses">Number of times a SecretID can access the role, after which the SecretID will expire..</param>
 
 
-        public AppRoleWriteSecretIDNumUsesRequest(int SecretIdNumUses = default(int))
+        public AppRoleWriteSecretIdNumUsesRequest(int SecretIdNumUses = default(int))
         {
 
             this.SecretIdNumUses = SecretIdNumUses;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteSecretIDNumUsesRequest {\n");
+            sb.Append("class AppRoleWriteSecretIdNumUsesRequest {\n");
             sb.Append("  SecretIdNumUses: ").Append(SecretIdNumUses).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteSecretIDNumUsesRequest);
+            return this.Equals(input as AppRoleWriteSecretIdNumUsesRequest);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteSecretIDNumUsesRequest instances are equal
+        /// Returns true if AppRoleWriteSecretIdNumUsesRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteSecretIDNumUsesRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteSecretIdNumUsesRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteSecretIDNumUsesRequest input)
+        public bool Equals(AppRoleWriteSecretIdNumUsesRequest input)
         {
             if (input == null)
             {

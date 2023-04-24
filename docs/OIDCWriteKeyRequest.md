@@ -1,4 +1,4 @@
-# Vault.Model.OIDCWriteKeyRequest
+# Vault.Model.OidcWriteKeyRequest
 
 ## Properties
 

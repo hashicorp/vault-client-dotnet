@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleReadLocalSecretIDsResponse
+    /// AppRoleReadLocalSecretIdsResponse
     /// </summary>
-    [DataContract(Name = "AppRoleReadLocalSecretIDsResponse")]
-    public partial class AppRoleReadLocalSecretIDsResponse : IEquatable<AppRoleReadLocalSecretIDsResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleReadLocalSecretIdsResponse")]
+    public partial class AppRoleReadLocalSecretIdsResponse : IEquatable<AppRoleReadLocalSecretIdsResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleReadLocalSecretIDsResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleReadLocalSecretIdsResponse" /> class.
         /// </summary>
 
         /// <param name="LocalSecretIds">If true, the secret identifiers generated using this role will be cluster local. This can only be set during role creation and once set, it can&#x27;t be reset later.</param>
 
 
-        public AppRoleReadLocalSecretIDsResponse(bool LocalSecretIds = default(bool))
+        public AppRoleReadLocalSecretIdsResponse(bool LocalSecretIds = default(bool))
         {
 
             this.LocalSecretIds = LocalSecretIds;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleReadLocalSecretIDsResponse {\n");
+            sb.Append("class AppRoleReadLocalSecretIdsResponse {\n");
             sb.Append("  LocalSecretIds: ").Append(LocalSecretIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleReadLocalSecretIDsResponse);
+            return this.Equals(input as AppRoleReadLocalSecretIdsResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleReadLocalSecretIDsResponse instances are equal
+        /// Returns true if AppRoleReadLocalSecretIdsResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleReadLocalSecretIDsResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleReadLocalSecretIdsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleReadLocalSecretIDsResponse input)
+        public bool Equals(AppRoleReadLocalSecretIdsResponse input)
         {
             if (input == null)
             {

@@ -23,10 +23,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIIssuerSignVerbatimRequest
+    /// PkiIssuerSignVerbatimRequest
     /// </summary>
-    [DataContract(Name = "PKIIssuerSignVerbatimRequest")]
-    public partial class PKIIssuerSignVerbatimRequest : IEquatable<PKIIssuerSignVerbatimRequest>, IValidatableObject
+    [DataContract(Name = "PkiIssuerSignVerbatimRequest")]
+    public partial class PkiIssuerSignVerbatimRequest : IEquatable<PkiIssuerSignVerbatimRequest>, IValidatableObject
     {        /// <summary>
              /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
              /// </summary>
@@ -100,7 +100,7 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIIssuerSignVerbatimRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiIssuerSignVerbatimRequest" /> class.
         /// </summary>
 
         /// <param name="AltNames">The requested Subject Alternative Names, if any, in a comma-delimited list. If email protection is enabled for the role, this may contain email addresses..</param>
@@ -141,8 +141,10 @@ namespace Vault.Model
 
         /// <param name="UsePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
 
+        /// <param name="UserIds">The requested user_ids value to place in the subject, if any, in a comma-delimited list. Restricted by allowed_user_ids. Any values are added with OID 0.9.2342.19200300.100.1.1..</param>
 
-        public PKIIssuerSignVerbatimRequest(string AltNames = default(string), string CommonName = default(string), string Csr = "", bool ExcludeCnFromSans = false, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), List<string> KeyUsage = default(List<string>), string NotAfter = default(string), List<string> OtherSans = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, bool RemoveRootsFromChain = false, string Role = default(string), string SerialNumber = default(string), int SignatureBits = 0, int Ttl = default(int), List<string> UriSans = default(List<string>), bool UsePss = false)
+
+        public PkiIssuerSignVerbatimRequest(string AltNames = default(string), string CommonName = default(string), string Csr = "", bool ExcludeCnFromSans = false, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), List<string> KeyUsage = default(List<string>), string NotAfter = default(string), List<string> OtherSans = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, bool RemoveRootsFromChain = false, string Role = default(string), string SerialNumber = default(string), int SignatureBits = 0, int Ttl = default(int), List<string> UriSans = default(List<string>), bool UsePss = false, List<string> UserIds = default(List<string>))
         {
 
             this.AltNames = AltNames;
@@ -184,6 +186,8 @@ namespace Vault.Model
             this.UriSans = UriSans;
 
             this.UsePss = UsePss;
+
+            this.UserIds = UserIds;
 
         }
 
@@ -340,6 +344,15 @@ namespace Vault.Model
         public bool UsePss { get; set; }
 
 
+        /// <summary>
+        /// The requested user_ids value to place in the subject, if any, in a comma-delimited list. Restricted by allowed_user_ids. Any values are added with OID 0.9.2342.19200300.100.1.1.
+        /// </summary>
+        /// <value>The requested user_ids value to place in the subject, if any, in a comma-delimited list. Restricted by allowed_user_ids. Any values are added with OID 0.9.2342.19200300.100.1.1.</value>
+        [DataMember(Name = "user_ids", EmitDefaultValue = false)]
+
+        public List<string> UserIds { get; set; }
+
+
 
 
         /// <summary>
@@ -349,7 +362,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIIssuerSignVerbatimRequest {\n");
+            sb.Append("class PkiIssuerSignVerbatimRequest {\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Csr: ").Append(Csr).Append("\n");
@@ -369,6 +382,7 @@ namespace Vault.Model
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
             sb.Append("  UriSans: ").Append(UriSans).Append("\n");
             sb.Append("  UsePss: ").Append(UsePss).Append("\n");
+            sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -389,15 +403,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIIssuerSignVerbatimRequest);
+            return this.Equals(input as PkiIssuerSignVerbatimRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIIssuerSignVerbatimRequest instances are equal
+        /// Returns true if PkiIssuerSignVerbatimRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIIssuerSignVerbatimRequest to be compared</param>
+        /// <param name="input">Instance of PkiIssuerSignVerbatimRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIIssuerSignVerbatimRequest input)
+        public bool Equals(PkiIssuerSignVerbatimRequest input)
         {
             if (input == null)
             {
@@ -510,6 +524,12 @@ namespace Vault.Model
                     this.UsePss == input.UsePss ||
 
                     this.UsePss.Equals(input.UsePss)
+                ) &&
+                (
+                    this.UserIds == input.UserIds ||
+                    this.UserIds != null &&
+                    input.UserIds != null &&
+                    this.UserIds.SequenceEqual(input.UserIds)
                 );
 
         }
@@ -598,6 +618,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.UsePss.GetHashCode();
+                if (this.UserIds != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserIds.GetHashCode();
+                }
+
                 return hashCode;
             }
         }

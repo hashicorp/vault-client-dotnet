@@ -34,6 +34,8 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="TransitRewrapRequest" /> class.
         /// </summary>
 
+        /// <param name="BatchInput">Specifies a list of items to be re-encrypted in a single batch. When this parameter is set, if the parameters &#x27;ciphertext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input..</param>
+
         /// <param name="Ciphertext">Ciphertext value to rewrap.</param>
 
         /// <param name="Context">Base64 encoded context for key derivation. Required for derived keys..</param>
@@ -43,8 +45,10 @@ namespace Vault.Model
         /// <param name="Nonce">Nonce for when convergent encryption is used.</param>
 
 
-        public TransitRewrapRequest(string Ciphertext = default(string), string Context = default(string), int KeyVersion = default(int), string Nonce = default(string))
+        public TransitRewrapRequest(List<Object> BatchInput = default(List<Object>), string Ciphertext = default(string), string Context = default(string), int KeyVersion = default(int), string Nonce = default(string))
         {
+
+            this.BatchInput = BatchInput;
 
             this.Ciphertext = Ciphertext;
 
@@ -55,6 +59,15 @@ namespace Vault.Model
             this.Nonce = Nonce;
 
         }
+
+        /// <summary>
+        /// Specifies a list of items to be re-encrypted in a single batch. When this parameter is set, if the parameters &#x27;ciphertext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input.
+        /// </summary>
+        /// <value>Specifies a list of items to be re-encrypted in a single batch. When this parameter is set, if the parameters &#x27;ciphertext&#x27;, &#x27;context&#x27; and &#x27;nonce&#x27; are also set, they will be ignored. Any batch output will preserve the order of the batch input.</value>
+        [DataMember(Name = "batch_input", EmitDefaultValue = false)]
+
+        public List<Object> BatchInput { get; set; }
+
 
         /// <summary>
         /// Ciphertext value to rewrap
@@ -102,6 +115,7 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class TransitRewrapRequest {\n");
+            sb.Append("  BatchInput: ").Append(BatchInput).Append("\n");
             sb.Append("  Ciphertext: ").Append(Ciphertext).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
@@ -142,6 +156,12 @@ namespace Vault.Model
             }
             return
                 (
+                    this.BatchInput == input.BatchInput ||
+                    this.BatchInput != null &&
+                    input.BatchInput != null &&
+                    this.BatchInput.SequenceEqual(input.BatchInput)
+                ) &&
+                (
                     this.Ciphertext == input.Ciphertext ||
                     (this.Ciphertext != null &&
                     this.Ciphertext.Equals(input.Ciphertext))
@@ -176,6 +196,11 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+                if (this.BatchInput != null)
+                {
+                    hashCode = (hashCode * 59) + this.BatchInput.GetHashCode();
+                }
 
                 if (this.Ciphertext != null)
                 {

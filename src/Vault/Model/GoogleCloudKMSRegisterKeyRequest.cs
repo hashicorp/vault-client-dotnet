@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GoogleCloudKMSRegisterKeyRequest
+    /// GoogleCloudKmsRegisterKeyRequest
     /// </summary>
-    [DataContract(Name = "GoogleCloudKMSRegisterKeyRequest")]
-    public partial class GoogleCloudKMSRegisterKeyRequest : IEquatable<GoogleCloudKMSRegisterKeyRequest>, IValidatableObject
+    [DataContract(Name = "GoogleCloudKmsRegisterKeyRequest")]
+    public partial class GoogleCloudKmsRegisterKeyRequest : IEquatable<GoogleCloudKmsRegisterKeyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoogleCloudKMSRegisterKeyRequest" /> class.
+        /// Initializes a new instance of the <see cref="GoogleCloudKmsRegisterKeyRequest" /> class.
         /// </summary>
 
         /// <param name="CryptoKey">Full resource ID of the crypto key including the project, location, key ring, and crypto key like \&quot;projects/%s/locations/%s/keyRings/%s/cryptoKeys/%s\&quot;. This crypto key must already exist in Google Cloud KMS unless verify is set to \&quot;false\&quot;..</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="Verify">Verify that the given Google Cloud KMS crypto key exists and is accessible before creating the storage entry in Vault. Set this to \&quot;false\&quot; if the key will not exist at creation time. (default to true).</param>
 
 
-        public GoogleCloudKMSRegisterKeyRequest(string CryptoKey = default(string), bool Verify = true)
+        public GoogleCloudKmsRegisterKeyRequest(string CryptoKey = default(string), bool Verify = true)
         {
 
             this.CryptoKey = CryptoKey;
@@ -75,7 +75,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GoogleCloudKMSRegisterKeyRequest {\n");
+            sb.Append("class GoogleCloudKmsRegisterKeyRequest {\n");
             sb.Append("  CryptoKey: ").Append(CryptoKey).Append("\n");
             sb.Append("  Verify: ").Append(Verify).Append("\n");
             sb.Append("}\n");
@@ -98,15 +98,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GoogleCloudKMSRegisterKeyRequest);
+            return this.Equals(input as GoogleCloudKmsRegisterKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if GoogleCloudKMSRegisterKeyRequest instances are equal
+        /// Returns true if GoogleCloudKmsRegisterKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GoogleCloudKMSRegisterKeyRequest to be compared</param>
+        /// <param name="input">Instance of GoogleCloudKmsRegisterKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GoogleCloudKMSRegisterKeyRequest input)
+        public bool Equals(GoogleCloudKmsRegisterKeyRequest input)
         {
             if (input == null)
             {

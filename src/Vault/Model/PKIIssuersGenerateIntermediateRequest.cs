@@ -23,10 +23,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIIssuersGenerateIntermediateRequest
+    /// PkiIssuersGenerateIntermediateRequest
     /// </summary>
-    [DataContract(Name = "PKIIssuersGenerateIntermediateRequest")]
-    public partial class PKIIssuersGenerateIntermediateRequest : IEquatable<PKIIssuersGenerateIntermediateRequest>, IValidatableObject
+    [DataContract(Name = "PkiIssuersGenerateIntermediateRequest")]
+    public partial class PkiIssuersGenerateIntermediateRequest : IEquatable<PkiIssuersGenerateIntermediateRequest>, IValidatableObject
     {        /// <summary>
              /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
              /// </summary>
@@ -132,7 +132,7 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIIssuersGenerateIntermediateRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiIssuersGenerateIntermediateRequest" /> class.
         /// </summary>
 
         /// <param name="AddBasicConstraints">Whether to add a Basic Constraints extension with CA: true. Only needed as a workaround in some compatibility scenarios with Active Directory Certificate Services..</param>
@@ -190,7 +190,7 @@ namespace Vault.Model
         /// <param name="UriSans">The requested URI SANs, if any, in a comma-delimited list..</param>
 
 
-        public PKIIssuersGenerateIntermediateRequest(bool AddBasicConstraints = default(bool), string AltNames = default(string), string CommonName = default(string), List<string> Country = default(List<string>), bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), int KeyBits = 0, string KeyName = default(string), string KeyRef = "default", KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> Locality = default(List<string>), string ManagedKeyId = default(string), string ManagedKeyName = default(string), string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> OtherSans = default(List<string>), List<string> Ou = default(List<string>), List<string> PostalCode = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, List<string> Province = default(List<string>), string SerialNumber = default(string), int SignatureBits = 0, List<string> StreetAddress = default(List<string>), int Ttl = default(int), List<string> UriSans = default(List<string>))
+        public PkiIssuersGenerateIntermediateRequest(bool AddBasicConstraints = default(bool), string AltNames = default(string), string CommonName = default(string), List<string> Country = default(List<string>), bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), int KeyBits = 0, string KeyName = default(string), string KeyRef = "default", KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> Locality = default(List<string>), string ManagedKeyId = default(string), string ManagedKeyName = default(string), string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> OtherSans = default(List<string>), List<string> Ou = default(List<string>), List<string> PostalCode = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, List<string> Province = default(List<string>), string SerialNumber = default(string), int SignatureBits = 0, List<string> StreetAddress = default(List<string>), int Ttl = default(int), List<string> UriSans = default(List<string>))
         {
 
             this.AddBasicConstraints = AddBasicConstraints;
@@ -476,7 +476,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIIssuersGenerateIntermediateRequest {\n");
+            sb.Append("class PkiIssuersGenerateIntermediateRequest {\n");
             sb.Append("  AddBasicConstraints: ").Append(AddBasicConstraints).Append("\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
@@ -524,15 +524,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIIssuersGenerateIntermediateRequest);
+            return this.Equals(input as PkiIssuersGenerateIntermediateRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIIssuersGenerateIntermediateRequest instances are equal
+        /// Returns true if PkiIssuersGenerateIntermediateRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIIssuersGenerateIntermediateRequest to be compared</param>
+        /// <param name="input">Instance of PkiIssuersGenerateIntermediateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIIssuersGenerateIntermediateRequest input)
+        public bool Equals(PkiIssuersGenerateIntermediateRequest input)
         {
             if (input == null)
             {

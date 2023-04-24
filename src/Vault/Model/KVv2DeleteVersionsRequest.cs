@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// KVv2DeleteVersionsRequest
+    /// KvV2DeleteVersionsRequest
     /// </summary>
-    [DataContract(Name = "KVv2DeleteVersionsRequest")]
-    public partial class KVv2DeleteVersionsRequest : IEquatable<KVv2DeleteVersionsRequest>, IValidatableObject
+    [DataContract(Name = "KvV2DeleteVersionsRequest")]
+    public partial class KvV2DeleteVersionsRequest : IEquatable<KvV2DeleteVersionsRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="KVv2DeleteVersionsRequest" /> class.
+        /// Initializes a new instance of the <see cref="KvV2DeleteVersionsRequest" /> class.
         /// </summary>
 
         /// <param name="Versions">The versions to be archived. The versioned data will not be deleted, but it will no longer be returned in normal get requests..</param>
 
 
-        public KVv2DeleteVersionsRequest(List<int> Versions = default(List<int>))
+        public KvV2DeleteVersionsRequest(List<int> Versions = default(List<int>))
         {
 
             this.Versions = Versions;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class KVv2DeleteVersionsRequest {\n");
+            sb.Append("class KvV2DeleteVersionsRequest {\n");
             sb.Append("  Versions: ").Append(Versions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as KVv2DeleteVersionsRequest);
+            return this.Equals(input as KvV2DeleteVersionsRequest);
         }
 
         /// <summary>
-        /// Returns true if KVv2DeleteVersionsRequest instances are equal
+        /// Returns true if KvV2DeleteVersionsRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of KVv2DeleteVersionsRequest to be compared</param>
+        /// <param name="input">Instance of KvV2DeleteVersionsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KVv2DeleteVersionsRequest input)
+        public bool Equals(KvV2DeleteVersionsRequest input)
         {
             if (input == null)
             {

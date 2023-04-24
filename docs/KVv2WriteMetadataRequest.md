@@ -1,4 +1,4 @@
-# Vault.Model.KVv2WriteMetadataRequest
+# Vault.Model.KvV2WriteMetadataRequest
 
 ## Properties
 

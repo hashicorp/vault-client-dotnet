@@ -1,4 +1,4 @@
-# Vault.Model.PKIWriteKeyRequest
+# Vault.Model.PkiWriteKeyRequest
 
 ## Properties
 

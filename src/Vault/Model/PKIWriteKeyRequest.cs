@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIWriteKeyRequest
+    /// PkiWriteKeyRequest
     /// </summary>
-    [DataContract(Name = "PKIWriteKeyRequest")]
-    public partial class PKIWriteKeyRequest : IEquatable<PKIWriteKeyRequest>, IValidatableObject
+    [DataContract(Name = "PkiWriteKeyRequest")]
+    public partial class PkiWriteKeyRequest : IEquatable<PkiWriteKeyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIWriteKeyRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiWriteKeyRequest" /> class.
         /// </summary>
 
         /// <param name="KeyName">Human-readable name for this key..</param>
 
 
-        public PKIWriteKeyRequest(string KeyName = default(string))
+        public PkiWriteKeyRequest(string KeyName = default(string))
         {
 
             this.KeyName = KeyName;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIWriteKeyRequest {\n");
+            sb.Append("class PkiWriteKeyRequest {\n");
             sb.Append("  KeyName: ").Append(KeyName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIWriteKeyRequest);
+            return this.Equals(input as PkiWriteKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIWriteKeyRequest instances are equal
+        /// Returns true if PkiWriteKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIWriteKeyRequest to be compared</param>
+        /// <param name="input">Instance of PkiWriteKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIWriteKeyRequest input)
+        public bool Equals(PkiWriteKeyRequest input)
         {
             if (input == null)
             {

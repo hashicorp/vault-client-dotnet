@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OCIWriteRoleRequest
+    /// OciWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "OCIWriteRoleRequest")]
-    public partial class OCIWriteRoleRequest : IEquatable<OCIWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "OciWriteRoleRequest")]
+    public partial class OciWriteRoleRequest : IEquatable<OciWriteRoleRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OCIWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="OciWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="OcidList">A comma separated list of Group or Dynamic Group OCIDs that are allowed to take this role..</param>
@@ -55,7 +55,7 @@ namespace Vault.Model
         /// <param name="TokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
 
 
-        public OCIWriteRoleRequest(List<string> OcidList = default(List<string>), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service")
+        public OciWriteRoleRequest(List<string> OcidList = default(List<string>), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service")
         {
 
             this.OcidList = OcidList;
@@ -181,7 +181,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OCIWriteRoleRequest {\n");
+            sb.Append("class OciWriteRoleRequest {\n");
             sb.Append("  OcidList: ").Append(OcidList).Append("\n");
             sb.Append("  TokenBoundCidrs: ").Append(TokenBoundCidrs).Append("\n");
             sb.Append("  TokenExplicitMaxTtl: ").Append(TokenExplicitMaxTtl).Append("\n");
@@ -212,15 +212,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OCIWriteRoleRequest);
+            return this.Equals(input as OciWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if OCIWriteRoleRequest instances are equal
+        /// Returns true if OciWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OCIWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of OciWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OCIWriteRoleRequest input)
+        public bool Equals(OciWriteRoleRequest input)
         {
             if (input == null)
             {

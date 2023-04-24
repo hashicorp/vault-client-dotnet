@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleWriteTokenBoundCIDRsRequest
+# Vault.Model.AppRoleWriteTokenBoundCidrsRequest
 
 ## Properties
 

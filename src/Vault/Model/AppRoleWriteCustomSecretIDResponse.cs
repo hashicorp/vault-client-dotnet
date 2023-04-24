@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteCustomSecretIDResponse
+    /// AppRoleWriteCustomSecretIdResponse
     /// </summary>
-    [DataContract(Name = "AppRoleWriteCustomSecretIDResponse")]
-    public partial class AppRoleWriteCustomSecretIDResponse : IEquatable<AppRoleWriteCustomSecretIDResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteCustomSecretIdResponse")]
+    public partial class AppRoleWriteCustomSecretIdResponse : IEquatable<AppRoleWriteCustomSecretIdResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteCustomSecretIDResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteCustomSecretIdResponse" /> class.
         /// </summary>
 
         /// <param name="SecretId">Secret ID attached to the role..</param>
@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="SecretIdTtl">Duration in seconds after which the issued secret ID expires..</param>
 
 
-        public AppRoleWriteCustomSecretIDResponse(string SecretId = default(string), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), int SecretIdTtl = default(int))
+        public AppRoleWriteCustomSecretIdResponse(string SecretId = default(string), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), int SecretIdTtl = default(int))
         {
 
             this.SecretId = SecretId;
@@ -101,7 +101,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteCustomSecretIDResponse {\n");
+            sb.Append("class AppRoleWriteCustomSecretIdResponse {\n");
             sb.Append("  SecretId: ").Append(SecretId).Append("\n");
             sb.Append("  SecretIdAccessor: ").Append(SecretIdAccessor).Append("\n");
             sb.Append("  SecretIdNumUses: ").Append(SecretIdNumUses).Append("\n");
@@ -126,15 +126,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteCustomSecretIDResponse);
+            return this.Equals(input as AppRoleWriteCustomSecretIdResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteCustomSecretIDResponse instances are equal
+        /// Returns true if AppRoleWriteCustomSecretIdResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteCustomSecretIDResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteCustomSecretIdResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteCustomSecretIDResponse input)
+        public bool Equals(AppRoleWriteCustomSecretIdResponse input)
         {
             if (input == null)
             {

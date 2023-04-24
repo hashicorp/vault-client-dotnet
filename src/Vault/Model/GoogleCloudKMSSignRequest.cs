@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GoogleCloudKMSSignRequest
+    /// GoogleCloudKmsSignRequest
     /// </summary>
-    [DataContract(Name = "GoogleCloudKMSSignRequest")]
-    public partial class GoogleCloudKMSSignRequest : IEquatable<GoogleCloudKMSSignRequest>, IValidatableObject
+    [DataContract(Name = "GoogleCloudKmsSignRequest")]
+    public partial class GoogleCloudKmsSignRequest : IEquatable<GoogleCloudKmsSignRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoogleCloudKMSSignRequest" /> class.
+        /// Initializes a new instance of the <see cref="GoogleCloudKmsSignRequest" /> class.
         /// </summary>
 
         /// <param name="Digest">Digest to sign. This digest must use the same SHA algorithm as the underlying Cloud KMS key. The digest must be the base64-encoded binary value. This field is required..</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="KeyVersion">Integer version of the crypto key version to use for signing. This field is required..</param>
 
 
-        public GoogleCloudKMSSignRequest(string Digest = default(string), int KeyVersion = default(int))
+        public GoogleCloudKmsSignRequest(string Digest = default(string), int KeyVersion = default(int))
         {
 
             this.Digest = Digest;
@@ -75,7 +75,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GoogleCloudKMSSignRequest {\n");
+            sb.Append("class GoogleCloudKmsSignRequest {\n");
             sb.Append("  Digest: ").Append(Digest).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
             sb.Append("}\n");
@@ -98,15 +98,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GoogleCloudKMSSignRequest);
+            return this.Equals(input as GoogleCloudKmsSignRequest);
         }
 
         /// <summary>
-        /// Returns true if GoogleCloudKMSSignRequest instances are equal
+        /// Returns true if GoogleCloudKmsSignRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GoogleCloudKMSSignRequest to be compared</param>
+        /// <param name="input">Instance of GoogleCloudKmsSignRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GoogleCloudKMSSignRequest input)
+        public bool Equals(GoogleCloudKmsSignRequest input)
         {
             if (input == null)
             {

@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// KVv2WriteMetadataRequest
+    /// KvV2WriteMetadataRequest
     /// </summary>
-    [DataContract(Name = "KVv2WriteMetadataRequest")]
-    public partial class KVv2WriteMetadataRequest : IEquatable<KVv2WriteMetadataRequest>, IValidatableObject
+    [DataContract(Name = "KvV2WriteMetadataRequest")]
+    public partial class KvV2WriteMetadataRequest : IEquatable<KvV2WriteMetadataRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="KVv2WriteMetadataRequest" /> class.
+        /// Initializes a new instance of the <see cref="KvV2WriteMetadataRequest" /> class.
         /// </summary>
 
         /// <param name="CasRequired">If true the key will require the cas parameter to be set on all write requests. If false, the backend’s configuration will be used..</param>
@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="MaxVersions">The number of versions to keep. If not set, the backend’s configured max version is used..</param>
 
 
-        public KVv2WriteMetadataRequest(bool CasRequired = default(bool), Object CustomMetadata = default(Object), int DeleteVersionAfter = default(int), int MaxVersions = default(int))
+        public KvV2WriteMetadataRequest(bool CasRequired = default(bool), Object CustomMetadata = default(Object), int DeleteVersionAfter = default(int), int MaxVersions = default(int))
         {
 
             this.CasRequired = CasRequired;
@@ -101,7 +101,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class KVv2WriteMetadataRequest {\n");
+            sb.Append("class KvV2WriteMetadataRequest {\n");
             sb.Append("  CasRequired: ").Append(CasRequired).Append("\n");
             sb.Append("  CustomMetadata: ").Append(CustomMetadata).Append("\n");
             sb.Append("  DeleteVersionAfter: ").Append(DeleteVersionAfter).Append("\n");
@@ -126,15 +126,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as KVv2WriteMetadataRequest);
+            return this.Equals(input as KvV2WriteMetadataRequest);
         }
 
         /// <summary>
-        /// Returns true if KVv2WriteMetadataRequest instances are equal
+        /// Returns true if KvV2WriteMetadataRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of KVv2WriteMetadataRequest to be compared</param>
+        /// <param name="input">Instance of KvV2WriteMetadataRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KVv2WriteMetadataRequest input)
+        public bool Equals(KvV2WriteMetadataRequest input)
         {
             if (input == null)
             {

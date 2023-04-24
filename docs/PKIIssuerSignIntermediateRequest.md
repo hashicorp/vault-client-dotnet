@@ -1,4 +1,4 @@
-# Vault.Model.PKIIssuerSignIntermediateRequest
+# Vault.Model.PkiIssuerSignIntermediateRequest
 
 ## Properties
 

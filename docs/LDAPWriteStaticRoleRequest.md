@@ -1,4 +1,4 @@
-# Vault.Model.LDAPWriteStaticRoleRequest
+# Vault.Model.LdapWriteStaticRoleRequest
 
 ## Properties
 

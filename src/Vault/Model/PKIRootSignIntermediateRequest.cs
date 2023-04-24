@@ -23,10 +23,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIRootSignIntermediateRequest
+    /// PkiRootSignIntermediateRequest
     /// </summary>
-    [DataContract(Name = "PKIRootSignIntermediateRequest")]
-    public partial class PKIRootSignIntermediateRequest : IEquatable<PKIRootSignIntermediateRequest>, IValidatableObject
+    [DataContract(Name = "PkiRootSignIntermediateRequest")]
+    public partial class PkiRootSignIntermediateRequest : IEquatable<PkiRootSignIntermediateRequest>, IValidatableObject
     {        /// <summary>
              /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
              /// </summary>
@@ -100,7 +100,7 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIRootSignIntermediateRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiRootSignIntermediateRequest" /> class.
         /// </summary>
 
         /// <param name="AltNames">The requested Subject Alternative Names, if any, in a comma-delimited list. May contain both DNS names and email addresses..</param>
@@ -160,7 +160,7 @@ namespace Vault.Model
         /// <param name="UsePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
 
 
-        public PKIRootSignIntermediateRequest(string AltNames = default(string), string CommonName = default(string), List<string> Country = default(List<string>), string Csr = "", bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), string IssuerName = default(string), string IssuerRef = "default", List<string> Locality = default(List<string>), int MaxPathLength = -1, string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> OtherSans = default(List<string>), List<string> Ou = default(List<string>), List<string> PermittedDnsDomains = default(List<string>), List<string> PostalCode = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, List<string> Province = default(List<string>), string SerialNumber = default(string), int SignatureBits = 0, string Skid = "", List<string> StreetAddress = default(List<string>), int Ttl = default(int), List<string> UriSans = default(List<string>), bool UseCsrValues = false, bool UsePss = false)
+        public PkiRootSignIntermediateRequest(string AltNames = default(string), string CommonName = default(string), List<string> Country = default(List<string>), string Csr = "", bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), string IssuerName = default(string), string IssuerRef = "default", List<string> Locality = default(List<string>), int MaxPathLength = -1, string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> OtherSans = default(List<string>), List<string> Ou = default(List<string>), List<string> PermittedDnsDomains = default(List<string>), List<string> PostalCode = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, List<string> Province = default(List<string>), string SerialNumber = default(string), int SignatureBits = 0, string Skid = "", List<string> StreetAddress = default(List<string>), int Ttl = default(int), List<string> UriSans = default(List<string>), bool UseCsrValues = false, bool UsePss = false)
         {
 
             this.AltNames = AltNames;
@@ -470,7 +470,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIRootSignIntermediateRequest {\n");
+            sb.Append("class PkiRootSignIntermediateRequest {\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -519,15 +519,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIRootSignIntermediateRequest);
+            return this.Equals(input as PkiRootSignIntermediateRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIRootSignIntermediateRequest instances are equal
+        /// Returns true if PkiRootSignIntermediateRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIRootSignIntermediateRequest to be compared</param>
+        /// <param name="input">Instance of PkiRootSignIntermediateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIRootSignIntermediateRequest input)
+        public bool Equals(PkiRootSignIntermediateRequest input)
         {
             if (input == null)
             {

@@ -1,4 +1,4 @@
-# Vault.Model.OIDCWriteClientRequest
+# Vault.Model.OidcWriteClientRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Vault.Model.LDAPWriteUserRequest
+# Vault.Model.LdapWriteUserRequest
 
 ## Properties
 

@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleReadTokenTTLResponse
+    /// AppRoleReadTokenTtlResponse
     /// </summary>
-    [DataContract(Name = "AppRoleReadTokenTTLResponse")]
-    public partial class AppRoleReadTokenTTLResponse : IEquatable<AppRoleReadTokenTTLResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleReadTokenTtlResponse")]
+    public partial class AppRoleReadTokenTtlResponse : IEquatable<AppRoleReadTokenTtlResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleReadTokenTTLResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleReadTokenTtlResponse" /> class.
         /// </summary>
 
         /// <param name="TokenTtl">The initial ttl of the token to generate.</param>
 
 
-        public AppRoleReadTokenTTLResponse(int TokenTtl = default(int))
+        public AppRoleReadTokenTtlResponse(int TokenTtl = default(int))
         {
 
             this.TokenTtl = TokenTtl;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleReadTokenTTLResponse {\n");
+            sb.Append("class AppRoleReadTokenTtlResponse {\n");
             sb.Append("  TokenTtl: ").Append(TokenTtl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleReadTokenTTLResponse);
+            return this.Equals(input as AppRoleReadTokenTtlResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleReadTokenTTLResponse instances are equal
+        /// Returns true if AppRoleReadTokenTtlResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleReadTokenTTLResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleReadTokenTtlResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleReadTokenTTLResponse input)
+        public bool Equals(AppRoleReadTokenTtlResponse input)
         {
             if (input == null)
             {

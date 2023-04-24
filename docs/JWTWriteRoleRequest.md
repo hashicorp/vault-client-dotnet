@@ -1,4 +1,4 @@
-# Vault.Model.JWTWriteRoleRequest
+# Vault.Model.JwtWriteRoleRequest
 
 ## Properties
 

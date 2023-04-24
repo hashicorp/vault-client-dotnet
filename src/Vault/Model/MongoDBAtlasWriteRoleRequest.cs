@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// MongoDBAtlasWriteRoleRequest
+    /// MongoDbAtlasWriteRoleRequest
     /// </summary>
-    [DataContract(Name = "MongoDBAtlasWriteRoleRequest")]
-    public partial class MongoDBAtlasWriteRoleRequest : IEquatable<MongoDBAtlasWriteRoleRequest>, IValidatableObject
+    [DataContract(Name = "MongoDbAtlasWriteRoleRequest")]
+    public partial class MongoDbAtlasWriteRoleRequest : IEquatable<MongoDbAtlasWriteRoleRequest>, IValidatableObject
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MongoDBAtlasWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="MongoDbAtlasWriteRoleRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected MongoDBAtlasWriteRoleRequest() { }
+        protected MongoDbAtlasWriteRoleRequest() { }
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MongoDBAtlasWriteRoleRequest" /> class.
+        /// Initializes a new instance of the <see cref="MongoDbAtlasWriteRoleRequest" /> class.
         /// </summary>
 
         /// <param name="CidrBlocks">Access list entry in CIDR notation to be added for the API key. Optional for organization and project keys..</param>
@@ -57,13 +57,13 @@ namespace Vault.Model
         /// <param name="Ttl">Duration in seconds after which the issued credential should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults..</param>
 
 
-        public MongoDBAtlasWriteRoleRequest(List<string> CidrBlocks = default(List<string>), List<string> IpAddresses = default(List<string>), int MaxTtl = default(int), string OrganizationId = default(string), string ProjectId = default(string), List<string> ProjectRoles = default(List<string>), List<string> Roles = default(List<string>), int Ttl = default(int))
+        public MongoDbAtlasWriteRoleRequest(List<string> CidrBlocks = default(List<string>), List<string> IpAddresses = default(List<string>), int MaxTtl = default(int), string OrganizationId = default(string), string ProjectId = default(string), List<string> ProjectRoles = default(List<string>), List<string> Roles = default(List<string>), int Ttl = default(int))
         {
 
             // to ensure "Roles" is required (not null)
             if (Roles == null)
             {
-                throw new ArgumentNullException("Roles is a required property for MongoDBAtlasWriteRoleRequest and cannot be null");
+                throw new ArgumentNullException("Roles is a required property for MongoDbAtlasWriteRoleRequest and cannot be null");
             }
             this.Roles = Roles;
 
@@ -165,7 +165,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class MongoDBAtlasWriteRoleRequest {\n");
+            sb.Append("class MongoDbAtlasWriteRoleRequest {\n");
             sb.Append("  CidrBlocks: ").Append(CidrBlocks).Append("\n");
             sb.Append("  IpAddresses: ").Append(IpAddresses).Append("\n");
             sb.Append("  MaxTtl: ").Append(MaxTtl).Append("\n");
@@ -194,15 +194,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MongoDBAtlasWriteRoleRequest);
+            return this.Equals(input as MongoDbAtlasWriteRoleRequest);
         }
 
         /// <summary>
-        /// Returns true if MongoDBAtlasWriteRoleRequest instances are equal
+        /// Returns true if MongoDbAtlasWriteRoleRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of MongoDBAtlasWriteRoleRequest to be compared</param>
+        /// <param name="input">Instance of MongoDbAtlasWriteRoleRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MongoDBAtlasWriteRoleRequest input)
+        public bool Equals(MongoDbAtlasWriteRoleRequest input)
         {
             if (input == null)
             {

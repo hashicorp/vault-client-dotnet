@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCIntrospectRequest
+    /// OidcIntrospectRequest
     /// </summary>
-    [DataContract(Name = "OIDCIntrospectRequest")]
-    public partial class OIDCIntrospectRequest : IEquatable<OIDCIntrospectRequest>, IValidatableObject
+    [DataContract(Name = "OidcIntrospectRequest")]
+    public partial class OidcIntrospectRequest : IEquatable<OidcIntrospectRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCIntrospectRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcIntrospectRequest" /> class.
         /// </summary>
 
         /// <param name="ClientId">Optional client_id to verify.</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="Token">Token to verify.</param>
 
 
-        public OIDCIntrospectRequest(string ClientId = default(string), string Token = default(string))
+        public OidcIntrospectRequest(string ClientId = default(string), string Token = default(string))
         {
 
             this.ClientId = ClientId;
@@ -75,7 +75,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCIntrospectRequest {\n");
+            sb.Append("class OidcIntrospectRequest {\n");
             sb.Append("  ClientId: ").Append(ClientId).Append("\n");
             sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("}\n");
@@ -98,15 +98,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCIntrospectRequest);
+            return this.Equals(input as OidcIntrospectRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCIntrospectRequest instances are equal
+        /// Returns true if OidcIntrospectRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCIntrospectRequest to be compared</param>
+        /// <param name="input">Instance of OidcIntrospectRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCIntrospectRequest input)
+        public bool Equals(OidcIntrospectRequest input)
         {
             if (input == null)
             {

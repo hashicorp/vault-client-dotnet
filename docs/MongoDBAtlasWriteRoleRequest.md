@@ -1,4 +1,4 @@
-# Vault.Model.MongoDBAtlasWriteRoleRequest
+# Vault.Model.MongoDbAtlasWriteRoleRequest
 
 ## Properties
 

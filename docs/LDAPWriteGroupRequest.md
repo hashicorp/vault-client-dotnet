@@ -1,4 +1,4 @@
-# Vault.Model.LDAPWriteGroupRequest
+# Vault.Model.LdapWriteGroupRequest
 
 ## Properties
 

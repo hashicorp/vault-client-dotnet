@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteBoundCIDRListRequest
+    /// AppRoleWriteBoundCidrListRequest
     /// </summary>
-    [DataContract(Name = "AppRoleWriteBoundCIDRListRequest")]
-    public partial class AppRoleWriteBoundCIDRListRequest : IEquatable<AppRoleWriteBoundCIDRListRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteBoundCidrListRequest")]
+    public partial class AppRoleWriteBoundCidrListRequest : IEquatable<AppRoleWriteBoundCidrListRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteBoundCIDRListRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteBoundCidrListRequest" /> class.
         /// </summary>
 
         /// <param name="BoundCidrList">Deprecated: Please use \&quot;secret_id_bound_cidrs\&quot; instead. Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can perform the login operation..</param>
 
 
-        public AppRoleWriteBoundCIDRListRequest(List<string> BoundCidrList = default(List<string>))
+        public AppRoleWriteBoundCidrListRequest(List<string> BoundCidrList = default(List<string>))
         {
 
             this.BoundCidrList = BoundCidrList;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteBoundCIDRListRequest {\n");
+            sb.Append("class AppRoleWriteBoundCidrListRequest {\n");
             sb.Append("  BoundCidrList: ").Append(BoundCidrList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteBoundCIDRListRequest);
+            return this.Equals(input as AppRoleWriteBoundCidrListRequest);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteBoundCIDRListRequest instances are equal
+        /// Returns true if AppRoleWriteBoundCidrListRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteBoundCIDRListRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteBoundCidrListRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteBoundCIDRListRequest input)
+        public bool Equals(AppRoleWriteBoundCidrListRequest input)
         {
             if (input == null)
             {

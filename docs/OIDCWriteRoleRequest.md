@@ -1,4 +1,4 @@
-# Vault.Model.OIDCWriteRoleRequest
+# Vault.Model.OidcWriteRoleRequest
 
 ## Properties
 

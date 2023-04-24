@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GitHubLoginRequest
+    /// GithubLoginRequest
     /// </summary>
-    [DataContract(Name = "GitHubLoginRequest")]
-    public partial class GitHubLoginRequest : IEquatable<GitHubLoginRequest>, IValidatableObject
+    [DataContract(Name = "GithubLoginRequest")]
+    public partial class GithubLoginRequest : IEquatable<GithubLoginRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GitHubLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="GithubLoginRequest" /> class.
         /// </summary>
 
         /// <param name="Token">GitHub personal API token.</param>
 
 
-        public GitHubLoginRequest(string Token = default(string))
+        public GithubLoginRequest(string Token = default(string))
         {
 
             this.Token = Token;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GitHubLoginRequest {\n");
+            sb.Append("class GithubLoginRequest {\n");
             sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GitHubLoginRequest);
+            return this.Equals(input as GithubLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if GitHubLoginRequest instances are equal
+        /// Returns true if GithubLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GitHubLoginRequest to be compared</param>
+        /// <param name="input">Instance of GithubLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GitHubLoginRequest input)
+        public bool Equals(GithubLoginRequest input)
         {
             if (input == null)
             {

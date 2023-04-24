@@ -1,4 +1,4 @@
-# Vault.Model.PKIReplaceRootRequest
+# Vault.Model.PkiReplaceRootRequest
 
 ## Properties
 

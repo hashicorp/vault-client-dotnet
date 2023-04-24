@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleReadTokenMaxTTLResponse
+    /// AppRoleReadTokenMaxTtlResponse
     /// </summary>
-    [DataContract(Name = "AppRoleReadTokenMaxTTLResponse")]
-    public partial class AppRoleReadTokenMaxTTLResponse : IEquatable<AppRoleReadTokenMaxTTLResponse>, IValidatableObject
+    [DataContract(Name = "AppRoleReadTokenMaxTtlResponse")]
+    public partial class AppRoleReadTokenMaxTtlResponse : IEquatable<AppRoleReadTokenMaxTtlResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleReadTokenMaxTTLResponse" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleReadTokenMaxTtlResponse" /> class.
         /// </summary>
 
         /// <param name="TokenMaxTtl">The maximum lifetime of the generated token.</param>
 
 
-        public AppRoleReadTokenMaxTTLResponse(int TokenMaxTtl = default(int))
+        public AppRoleReadTokenMaxTtlResponse(int TokenMaxTtl = default(int))
         {
 
             this.TokenMaxTtl = TokenMaxTtl;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleReadTokenMaxTTLResponse {\n");
+            sb.Append("class AppRoleReadTokenMaxTtlResponse {\n");
             sb.Append("  TokenMaxTtl: ").Append(TokenMaxTtl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleReadTokenMaxTTLResponse);
+            return this.Equals(input as AppRoleReadTokenMaxTtlResponse);
         }
 
         /// <summary>
-        /// Returns true if AppRoleReadTokenMaxTTLResponse instances are equal
+        /// Returns true if AppRoleReadTokenMaxTtlResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleReadTokenMaxTTLResponse to be compared</param>
+        /// <param name="input">Instance of AppRoleReadTokenMaxTtlResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleReadTokenMaxTTLResponse input)
+        public bool Equals(AppRoleReadTokenMaxTtlResponse input)
         {
             if (input == null)
             {

@@ -1,4 +1,4 @@
-# Vault.Model.GroupLookupRequest
+# Vault.Model.GroupLookUpRequest
 
 ## Properties
 

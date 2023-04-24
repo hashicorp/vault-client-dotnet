@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleWriteTokenMaxTTLRequest
+# Vault.Model.AppRoleWriteTokenMaxTtlRequest
 
 ## Properties
 

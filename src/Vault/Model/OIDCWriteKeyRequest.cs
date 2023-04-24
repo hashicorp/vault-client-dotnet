@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCWriteKeyRequest
+    /// OidcWriteKeyRequest
     /// </summary>
-    [DataContract(Name = "OIDCWriteKeyRequest")]
-    public partial class OIDCWriteKeyRequest : IEquatable<OIDCWriteKeyRequest>, IValidatableObject
+    [DataContract(Name = "OidcWriteKeyRequest")]
+    public partial class OidcWriteKeyRequest : IEquatable<OidcWriteKeyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteKeyRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteKeyRequest" /> class.
         /// </summary>
 
         /// <param name="Algorithm">Signing algorithm to use. This will default to RS256. (default to &quot;RS256&quot;).</param>
@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="VerificationTtl">Controls how long the public portion of a key will be available for verification after being rotated..</param>
 
 
-        public OIDCWriteKeyRequest(string Algorithm = "RS256", List<string> AllowedClientIds = default(List<string>), int RotationPeriod = default(int), int VerificationTtl = default(int))
+        public OidcWriteKeyRequest(string Algorithm = "RS256", List<string> AllowedClientIds = default(List<string>), int RotationPeriod = default(int), int VerificationTtl = default(int))
         {
 
             // use default value if no "Algorithm" provided
@@ -103,7 +103,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCWriteKeyRequest {\n");
+            sb.Append("class OidcWriteKeyRequest {\n");
             sb.Append("  Algorithm: ").Append(Algorithm).Append("\n");
             sb.Append("  AllowedClientIds: ").Append(AllowedClientIds).Append("\n");
             sb.Append("  RotationPeriod: ").Append(RotationPeriod).Append("\n");
@@ -128,15 +128,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCWriteKeyRequest);
+            return this.Equals(input as OidcWriteKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCWriteKeyRequest instances are equal
+        /// Returns true if OidcWriteKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCWriteKeyRequest to be compared</param>
+        /// <param name="input">Instance of OidcWriteKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCWriteKeyRequest input)
+        public bool Equals(OidcWriteKeyRequest input)
         {
             if (input == null)
             {

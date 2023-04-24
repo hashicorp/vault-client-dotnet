@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GoogleCloudKMSWriteKeyRequest
+    /// GoogleCloudKmsWriteKeyRequest
     /// </summary>
-    [DataContract(Name = "GoogleCloudKMSWriteKeyRequest")]
-    public partial class GoogleCloudKMSWriteKeyRequest : IEquatable<GoogleCloudKMSWriteKeyRequest>, IValidatableObject
+    [DataContract(Name = "GoogleCloudKmsWriteKeyRequest")]
+    public partial class GoogleCloudKmsWriteKeyRequest : IEquatable<GoogleCloudKmsWriteKeyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoogleCloudKMSWriteKeyRequest" /> class.
+        /// Initializes a new instance of the <see cref="GoogleCloudKmsWriteKeyRequest" /> class.
         /// </summary>
 
         /// <param name="Algorithm">Algorithm to use for encryption, decryption, or signing. The value depends on the key purpose. The value cannot be changed after creation. For a key purpose of \&quot;encrypt_decrypt\&quot;, the valid values are: - symmetric_encryption (default) For a key purpose of \&quot;asymmetric_sign\&quot;, valid values are: - rsa_sign_pss_2048_sha256 - rsa_sign_pss_3072_sha256 - rsa_sign_pss_4096_sha256 - rsa_sign_pkcs1_2048_sha256 - rsa_sign_pkcs1_3072_sha256 - rsa_sign_pkcs1_4096_sha256 - ec_sign_p256_sha256 - ec_sign_p384_sha384 For a key purpose of \&quot;asymmetric_decrypt\&quot;, valid values are: - rsa_decrypt_oaep_2048_sha256 - rsa_decrypt_oaep_3072_sha256 - rsa_decrypt_oaep_4096_sha256.</param>
@@ -49,7 +49,7 @@ namespace Vault.Model
         /// <param name="RotationPeriod">Amount of time between crypto key version rotations. This is specified as a time duration value like 72h (72 hours). The smallest possible value is 24h. This value only applies to keys with a purpose of \&quot;encrypt_decrypt\&quot;..</param>
 
 
-        public GoogleCloudKMSWriteKeyRequest(string Algorithm = default(string), string CryptoKey = default(string), string KeyRing = default(string), Object Labels = default(Object), string ProtectionLevel = default(string), string Purpose = default(string), int RotationPeriod = default(int))
+        public GoogleCloudKmsWriteKeyRequest(string Algorithm = default(string), string CryptoKey = default(string), string KeyRing = default(string), Object Labels = default(Object), string ProtectionLevel = default(string), string Purpose = default(string), int RotationPeriod = default(int))
         {
 
             this.Algorithm = Algorithm;
@@ -140,7 +140,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GoogleCloudKMSWriteKeyRequest {\n");
+            sb.Append("class GoogleCloudKmsWriteKeyRequest {\n");
             sb.Append("  Algorithm: ").Append(Algorithm).Append("\n");
             sb.Append("  CryptoKey: ").Append(CryptoKey).Append("\n");
             sb.Append("  KeyRing: ").Append(KeyRing).Append("\n");
@@ -168,15 +168,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GoogleCloudKMSWriteKeyRequest);
+            return this.Equals(input as GoogleCloudKmsWriteKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if GoogleCloudKMSWriteKeyRequest instances are equal
+        /// Returns true if GoogleCloudKmsWriteKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GoogleCloudKMSWriteKeyRequest to be compared</param>
+        /// <param name="input">Instance of GoogleCloudKmsWriteKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GoogleCloudKMSWriteKeyRequest input)
+        public bool Equals(GoogleCloudKmsWriteKeyRequest input)
         {
             if (input == null)
             {

@@ -1,4 +1,4 @@
-# Vault.Model.OIDCWriteScopeRequest
+# Vault.Model.OidcWriteScopeRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Vault.Model.PKIWriteRoleRequest
+# Vault.Model.PkiWriteRoleRequest
 
 ## Properties
 
@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **AllowedSerialNumbers** | **List&lt;string&gt;** | If set, an array of allowed serial numbers to put in Subject. These values support globbing. | [optional] 
 **AllowedUriSans** | **List&lt;string&gt;** | If set, an array of allowed URIs for URI Subject Alternative Names. Any valid URI is accepted, these values support globbing. | [optional] 
 **AllowedUriSansTemplate** | **bool** | If set, Allowed URI SANs can be specified using identity template policies. Non-templated URI SANs are also permitted. | [optional] [default to false]
+**AllowedUserIds** | **List&lt;string&gt;** | If set, an array of allowed user-ids to put in user system login name specified here: https://www.rfc-editor.org/rfc/rfc1274#section-9.3.1 | [optional] 
 **Backend** | **string** | Backend Type | [optional] 
 **BasicConstraintsValidForNonCa** | **bool** | Mark Basic Constraints valid when issuing non-CA certificates. | [optional] 
 **ClientFlag** | **bool** | If set, certificates are flagged for client auth use. Defaults to true. See also RFC 5280 Section 4.2.1.12. | [optional] [default to true]

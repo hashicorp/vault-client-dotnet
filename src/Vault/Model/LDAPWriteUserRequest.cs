@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// LDAPWriteUserRequest
+    /// LdapWriteUserRequest
     /// </summary>
-    [DataContract(Name = "LDAPWriteUserRequest")]
-    public partial class LDAPWriteUserRequest : IEquatable<LDAPWriteUserRequest>, IValidatableObject
+    [DataContract(Name = "LdapWriteUserRequest")]
+    public partial class LdapWriteUserRequest : IEquatable<LdapWriteUserRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LDAPWriteUserRequest" /> class.
+        /// Initializes a new instance of the <see cref="LdapWriteUserRequest" /> class.
         /// </summary>
 
         /// <param name="Groups">Comma-separated list of additional groups associated with the user..</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="Policies">Comma-separated list of policies associated with the user..</param>
 
 
-        public LDAPWriteUserRequest(List<string> Groups = default(List<string>), List<string> Policies = default(List<string>))
+        public LdapWriteUserRequest(List<string> Groups = default(List<string>), List<string> Policies = default(List<string>))
         {
 
             this.Groups = Groups;
@@ -75,7 +75,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class LDAPWriteUserRequest {\n");
+            sb.Append("class LdapWriteUserRequest {\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Policies: ").Append(Policies).Append("\n");
             sb.Append("}\n");
@@ -98,15 +98,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LDAPWriteUserRequest);
+            return this.Equals(input as LdapWriteUserRequest);
         }
 
         /// <summary>
-        /// Returns true if LDAPWriteUserRequest instances are equal
+        /// Returns true if LdapWriteUserRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of LDAPWriteUserRequest to be compared</param>
+        /// <param name="input">Instance of LdapWriteUserRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LDAPWriteUserRequest input)
+        public bool Equals(LdapWriteUserRequest input)
         {
             if (input == null)
             {

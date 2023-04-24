@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleReadTokenMaxTTLResponse
+# Vault.Model.AppRoleReadTokenMaxTtlResponse
 
 ## Properties
 

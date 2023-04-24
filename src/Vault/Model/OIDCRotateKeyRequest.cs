@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCRotateKeyRequest
+    /// OidcRotateKeyRequest
     /// </summary>
-    [DataContract(Name = "OIDCRotateKeyRequest")]
-    public partial class OIDCRotateKeyRequest : IEquatable<OIDCRotateKeyRequest>, IValidatableObject
+    [DataContract(Name = "OidcRotateKeyRequest")]
+    public partial class OidcRotateKeyRequest : IEquatable<OidcRotateKeyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCRotateKeyRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcRotateKeyRequest" /> class.
         /// </summary>
 
         /// <param name="VerificationTtl">Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key..</param>
 
 
-        public OIDCRotateKeyRequest(int VerificationTtl = default(int))
+        public OidcRotateKeyRequest(int VerificationTtl = default(int))
         {
 
             this.VerificationTtl = VerificationTtl;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCRotateKeyRequest {\n");
+            sb.Append("class OidcRotateKeyRequest {\n");
             sb.Append("  VerificationTtl: ").Append(VerificationTtl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCRotateKeyRequest);
+            return this.Equals(input as OidcRotateKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCRotateKeyRequest instances are equal
+        /// Returns true if OidcRotateKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCRotateKeyRequest to be compared</param>
+        /// <param name="input">Instance of OidcRotateKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCRotateKeyRequest input)
+        public bool Equals(OidcRotateKeyRequest input)
         {
             if (input == null)
             {

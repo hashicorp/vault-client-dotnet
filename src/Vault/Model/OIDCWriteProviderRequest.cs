@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OIDCWriteProviderRequest
+    /// OidcWriteProviderRequest
     /// </summary>
-    [DataContract(Name = "OIDCWriteProviderRequest")]
-    public partial class OIDCWriteProviderRequest : IEquatable<OIDCWriteProviderRequest>, IValidatableObject
+    [DataContract(Name = "OidcWriteProviderRequest")]
+    public partial class OidcWriteProviderRequest : IEquatable<OidcWriteProviderRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OIDCWriteProviderRequest" /> class.
+        /// Initializes a new instance of the <see cref="OidcWriteProviderRequest" /> class.
         /// </summary>
 
         /// <param name="AllowedClientIds">The client IDs that are permitted to use the provider.</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="ScopesSupported">The scopes supported for requesting on the provider.</param>
 
 
-        public OIDCWriteProviderRequest(List<string> AllowedClientIds = default(List<string>), string Issuer = default(string), List<string> ScopesSupported = default(List<string>))
+        public OidcWriteProviderRequest(List<string> AllowedClientIds = default(List<string>), string Issuer = default(string), List<string> ScopesSupported = default(List<string>))
         {
 
             this.AllowedClientIds = AllowedClientIds;
@@ -88,7 +88,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OIDCWriteProviderRequest {\n");
+            sb.Append("class OidcWriteProviderRequest {\n");
             sb.Append("  AllowedClientIds: ").Append(AllowedClientIds).Append("\n");
             sb.Append("  Issuer: ").Append(Issuer).Append("\n");
             sb.Append("  ScopesSupported: ").Append(ScopesSupported).Append("\n");
@@ -112,15 +112,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OIDCWriteProviderRequest);
+            return this.Equals(input as OidcWriteProviderRequest);
         }
 
         /// <summary>
-        /// Returns true if OIDCWriteProviderRequest instances are equal
+        /// Returns true if OidcWriteProviderRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OIDCWriteProviderRequest to be compared</param>
+        /// <param name="input">Instance of OidcWriteProviderRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OIDCWriteProviderRequest input)
+        public bool Equals(OidcWriteProviderRequest input)
         {
             if (input == null)
             {

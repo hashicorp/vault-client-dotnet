@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// LDAPWriteGroupRequest
+    /// LdapWriteGroupRequest
     /// </summary>
-    [DataContract(Name = "LDAPWriteGroupRequest")]
-    public partial class LDAPWriteGroupRequest : IEquatable<LDAPWriteGroupRequest>, IValidatableObject
+    [DataContract(Name = "LdapWriteGroupRequest")]
+    public partial class LdapWriteGroupRequest : IEquatable<LdapWriteGroupRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LDAPWriteGroupRequest" /> class.
+        /// Initializes a new instance of the <see cref="LdapWriteGroupRequest" /> class.
         /// </summary>
 
         /// <param name="Policies">Comma-separated list of policies associated to the group..</param>
 
 
-        public LDAPWriteGroupRequest(List<string> Policies = default(List<string>))
+        public LdapWriteGroupRequest(List<string> Policies = default(List<string>))
         {
 
             this.Policies = Policies;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class LDAPWriteGroupRequest {\n");
+            sb.Append("class LdapWriteGroupRequest {\n");
             sb.Append("  Policies: ").Append(Policies).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LDAPWriteGroupRequest);
+            return this.Equals(input as LdapWriteGroupRequest);
         }
 
         /// <summary>
-        /// Returns true if LDAPWriteGroupRequest instances are equal
+        /// Returns true if LdapWriteGroupRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of LDAPWriteGroupRequest to be compared</param>
+        /// <param name="input">Instance of LdapWriteGroupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LDAPWriteGroupRequest input)
+        public bool Equals(LdapWriteGroupRequest input)
         {
             if (input == null)
             {

@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteTokenBoundCIDRsRequest
+    /// AppRoleWriteTokenBoundCidrsRequest
     /// </summary>
-    [DataContract(Name = "AppRoleWriteTokenBoundCIDRsRequest")]
-    public partial class AppRoleWriteTokenBoundCIDRsRequest : IEquatable<AppRoleWriteTokenBoundCIDRsRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteTokenBoundCidrsRequest")]
+    public partial class AppRoleWriteTokenBoundCidrsRequest : IEquatable<AppRoleWriteTokenBoundCidrsRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteTokenBoundCIDRsRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteTokenBoundCidrsRequest" /> class.
         /// </summary>
 
         /// <param name="TokenBoundCidrs">Comma separated string or JSON list of CIDR blocks. If set, specifies the blocks of IP addresses which are allowed to use the generated token..</param>
 
 
-        public AppRoleWriteTokenBoundCIDRsRequest(List<string> TokenBoundCidrs = default(List<string>))
+        public AppRoleWriteTokenBoundCidrsRequest(List<string> TokenBoundCidrs = default(List<string>))
         {
 
             this.TokenBoundCidrs = TokenBoundCidrs;
@@ -62,7 +62,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteTokenBoundCIDRsRequest {\n");
+            sb.Append("class AppRoleWriteTokenBoundCidrsRequest {\n");
             sb.Append("  TokenBoundCidrs: ").Append(TokenBoundCidrs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +84,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteTokenBoundCIDRsRequest);
+            return this.Equals(input as AppRoleWriteTokenBoundCidrsRequest);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteTokenBoundCIDRsRequest instances are equal
+        /// Returns true if AppRoleWriteTokenBoundCidrsRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteTokenBoundCIDRsRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteTokenBoundCidrsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteTokenBoundCIDRsRequest input)
+        public bool Equals(AppRoleWriteTokenBoundCidrsRequest input)
         {
             if (input == null)
             {

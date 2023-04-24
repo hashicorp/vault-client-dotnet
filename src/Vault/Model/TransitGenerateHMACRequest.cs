@@ -23,18 +23,20 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// TransitGenerateHMACRequest
+    /// TransitGenerateHmacRequest
     /// </summary>
-    [DataContract(Name = "TransitGenerateHMACRequest")]
-    public partial class TransitGenerateHMACRequest : IEquatable<TransitGenerateHMACRequest>, IValidatableObject
+    [DataContract(Name = "TransitGenerateHmacRequest")]
+    public partial class TransitGenerateHmacRequest : IEquatable<TransitGenerateHmacRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransitGenerateHMACRequest" /> class.
+        /// Initializes a new instance of the <see cref="TransitGenerateHmacRequest" /> class.
         /// </summary>
 
         /// <param name="Algorithm">Algorithm to use (POST body parameter). Valid values are: * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 Defaults to \&quot;sha2-256\&quot;. (default to &quot;sha2-256&quot;).</param>
+
+        /// <param name="BatchInput">Specifies a list of items to be processed in a single batch. When this parameter is set, if the parameter &#x27;input&#x27; is also set, it will be ignored. Any batch output will preserve the order of the batch input..</param>
 
         /// <param name="Input">The base64-encoded input data.</param>
 
@@ -43,12 +45,14 @@ namespace Vault.Model
         /// <param name="Urlalgorithm">Algorithm to use (POST URL parameter).</param>
 
 
-        public TransitGenerateHMACRequest(string Algorithm = "sha2-256", string Input = default(string), int KeyVersion = default(int), string Urlalgorithm = default(string))
+        public TransitGenerateHmacRequest(string Algorithm = "sha2-256", List<Object> BatchInput = default(List<Object>), string Input = default(string), int KeyVersion = default(int), string Urlalgorithm = default(string))
         {
 
             // use default value if no "Algorithm" provided
             this.Algorithm = Algorithm ?? "sha2-256";
 
+
+            this.BatchInput = BatchInput;
 
             this.Input = Input;
 
@@ -65,6 +69,15 @@ namespace Vault.Model
         [DataMember(Name = "algorithm", EmitDefaultValue = false)]
 
         public string Algorithm { get; set; }
+
+
+        /// <summary>
+        /// Specifies a list of items to be processed in a single batch. When this parameter is set, if the parameter &#x27;input&#x27; is also set, it will be ignored. Any batch output will preserve the order of the batch input.
+        /// </summary>
+        /// <value>Specifies a list of items to be processed in a single batch. When this parameter is set, if the parameter &#x27;input&#x27; is also set, it will be ignored. Any batch output will preserve the order of the batch input.</value>
+        [DataMember(Name = "batch_input", EmitDefaultValue = false)]
+
+        public List<Object> BatchInput { get; set; }
 
 
         /// <summary>
@@ -103,8 +116,9 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class TransitGenerateHMACRequest {\n");
+            sb.Append("class TransitGenerateHmacRequest {\n");
             sb.Append("  Algorithm: ").Append(Algorithm).Append("\n");
+            sb.Append("  BatchInput: ").Append(BatchInput).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
             sb.Append("  Urlalgorithm: ").Append(Urlalgorithm).Append("\n");
@@ -128,15 +142,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as TransitGenerateHMACRequest);
+            return this.Equals(input as TransitGenerateHmacRequest);
         }
 
         /// <summary>
-        /// Returns true if TransitGenerateHMACRequest instances are equal
+        /// Returns true if TransitGenerateHmacRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of TransitGenerateHMACRequest to be compared</param>
+        /// <param name="input">Instance of TransitGenerateHmacRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TransitGenerateHMACRequest input)
+        public bool Equals(TransitGenerateHmacRequest input)
         {
             if (input == null)
             {
@@ -148,6 +162,12 @@ namespace Vault.Model
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
 
+                ) &&
+                (
+                    this.BatchInput == input.BatchInput ||
+                    this.BatchInput != null &&
+                    input.BatchInput != null &&
+                    this.BatchInput.SequenceEqual(input.BatchInput)
                 ) &&
                 (
                     this.Input == input.Input ||
@@ -182,6 +202,11 @@ namespace Vault.Model
                 if (this.Algorithm != null)
                 {
                     hashCode = (hashCode * 59) + this.Algorithm.GetHashCode();
+                }
+
+                if (this.BatchInput != null)
+                {
+                    hashCode = (hashCode * 59) + this.BatchInput.GetHashCode();
                 }
 
                 if (this.Input != null)

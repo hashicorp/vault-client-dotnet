@@ -1,4 +1,4 @@
-# Vault.Model.EntityLookupRequest
+# Vault.Model.EntityLookUpRequest
 
 ## Properties
 

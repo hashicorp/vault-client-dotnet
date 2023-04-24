@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AppRoleWriteSecretIDRequest
+    /// AppRoleWriteSecretIdRequest
     /// </summary>
-    [DataContract(Name = "AppRoleWriteSecretIDRequest")]
-    public partial class AppRoleWriteSecretIDRequest : IEquatable<AppRoleWriteSecretIDRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleWriteSecretIdRequest")]
+    public partial class AppRoleWriteSecretIdRequest : IEquatable<AppRoleWriteSecretIdRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppRoleWriteSecretIDRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleWriteSecretIdRequest" /> class.
         /// </summary>
 
         /// <param name="CidrList">Comma separated string or list of CIDR blocks enforcing secret IDs to be used from specific set of IP addresses. If &#x27;bound_cidr_list&#x27; is set on the role, then the list of CIDR blocks listed here should be a subset of the CIDR blocks listed on the role..</param>
@@ -45,7 +45,7 @@ namespace Vault.Model
         /// <param name="Ttl">Duration in seconds after which this SecretID expires. Overrides secret_id_ttl role option when supplied. May not be longer than role&#x27;s secret_id_ttl..</param>
 
 
-        public AppRoleWriteSecretIDRequest(List<string> CidrList = default(List<string>), string Metadata = default(string), int NumUses = default(int), List<string> TokenBoundCidrs = default(List<string>), int Ttl = default(int))
+        public AppRoleWriteSecretIdRequest(List<string> CidrList = default(List<string>), string Metadata = default(string), int NumUses = default(int), List<string> TokenBoundCidrs = default(List<string>), int Ttl = default(int))
         {
 
             this.CidrList = CidrList;
@@ -114,7 +114,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AppRoleWriteSecretIDRequest {\n");
+            sb.Append("class AppRoleWriteSecretIdRequest {\n");
             sb.Append("  CidrList: ").Append(CidrList).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  NumUses: ").Append(NumUses).Append("\n");
@@ -140,15 +140,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AppRoleWriteSecretIDRequest);
+            return this.Equals(input as AppRoleWriteSecretIdRequest);
         }
 
         /// <summary>
-        /// Returns true if AppRoleWriteSecretIDRequest instances are equal
+        /// Returns true if AppRoleWriteSecretIdRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AppRoleWriteSecretIDRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleWriteSecretIdRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppRoleWriteSecretIDRequest input)
+        public bool Equals(AppRoleWriteSecretIdRequest input)
         {
             if (input == null)
             {

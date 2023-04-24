@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GoogleCloudKMSDecryptRequest
+    /// GoogleCloudKmsDecryptRequest
     /// </summary>
-    [DataContract(Name = "GoogleCloudKMSDecryptRequest")]
-    public partial class GoogleCloudKMSDecryptRequest : IEquatable<GoogleCloudKMSDecryptRequest>, IValidatableObject
+    [DataContract(Name = "GoogleCloudKmsDecryptRequest")]
+    public partial class GoogleCloudKmsDecryptRequest : IEquatable<GoogleCloudKmsDecryptRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoogleCloudKMSDecryptRequest" /> class.
+        /// Initializes a new instance of the <see cref="GoogleCloudKmsDecryptRequest" /> class.
         /// </summary>
 
         /// <param name="AdditionalAuthenticatedData">Optional data that was specified during encryption of this payload..</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="KeyVersion">Integer version of the crypto key version to use for decryption. This is required for asymmetric keys. For symmetric keys, Cloud KMS will choose the correct version automatically..</param>
 
 
-        public GoogleCloudKMSDecryptRequest(string AdditionalAuthenticatedData = default(string), string Ciphertext = default(string), int KeyVersion = default(int))
+        public GoogleCloudKmsDecryptRequest(string AdditionalAuthenticatedData = default(string), string Ciphertext = default(string), int KeyVersion = default(int))
         {
 
             this.AdditionalAuthenticatedData = AdditionalAuthenticatedData;
@@ -88,7 +88,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GoogleCloudKMSDecryptRequest {\n");
+            sb.Append("class GoogleCloudKmsDecryptRequest {\n");
             sb.Append("  AdditionalAuthenticatedData: ").Append(AdditionalAuthenticatedData).Append("\n");
             sb.Append("  Ciphertext: ").Append(Ciphertext).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
@@ -112,15 +112,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GoogleCloudKMSDecryptRequest);
+            return this.Equals(input as GoogleCloudKmsDecryptRequest);
         }
 
         /// <summary>
-        /// Returns true if GoogleCloudKMSDecryptRequest instances are equal
+        /// Returns true if GoogleCloudKmsDecryptRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GoogleCloudKMSDecryptRequest to be compared</param>
+        /// <param name="input">Instance of GoogleCloudKmsDecryptRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GoogleCloudKMSDecryptRequest input)
+        public bool Equals(GoogleCloudKmsDecryptRequest input)
         {
             if (input == null)
             {

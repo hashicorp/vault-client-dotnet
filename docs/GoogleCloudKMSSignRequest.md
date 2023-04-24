@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudKMSSignRequest
+# Vault.Model.GoogleCloudKmsSignRequest
 
 ## Properties
 

@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PKIIssuerSignRevocationListRequest
+    /// PkiIssuerSignRevocationListRequest
     /// </summary>
-    [DataContract(Name = "PKIIssuerSignRevocationListRequest")]
-    public partial class PKIIssuerSignRevocationListRequest : IEquatable<PKIIssuerSignRevocationListRequest>, IValidatableObject
+    [DataContract(Name = "PkiIssuerSignRevocationListRequest")]
+    public partial class PkiIssuerSignRevocationListRequest : IEquatable<PkiIssuerSignRevocationListRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PKIIssuerSignRevocationListRequest" /> class.
+        /// Initializes a new instance of the <see cref="PkiIssuerSignRevocationListRequest" /> class.
         /// </summary>
 
         /// <param name="CrlNumber">The sequence number to be written within the CRL Number extension..</param>
@@ -47,7 +47,7 @@ namespace Vault.Model
         /// <param name="RevokedCerts">A list of maps containing the keys serial_number (string), revocation_time (string), and extensions (map with keys id (string), critical (bool), value (string)).</param>
 
 
-        public PKIIssuerSignRevocationListRequest(int CrlNumber = default(int), int DeltaCrlBaseNumber = -1, List<Object> Extensions = default(List<Object>), string Format = "pem", string NextUpdate = "72h", List<Object> RevokedCerts = default(List<Object>))
+        public PkiIssuerSignRevocationListRequest(int CrlNumber = default(int), int DeltaCrlBaseNumber = -1, List<Object> Extensions = default(List<Object>), string Format = "pem", string NextUpdate = "72h", List<Object> RevokedCerts = default(List<Object>))
         {
 
             this.CrlNumber = CrlNumber;
@@ -131,7 +131,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PKIIssuerSignRevocationListRequest {\n");
+            sb.Append("class PkiIssuerSignRevocationListRequest {\n");
             sb.Append("  CrlNumber: ").Append(CrlNumber).Append("\n");
             sb.Append("  DeltaCrlBaseNumber: ").Append(DeltaCrlBaseNumber).Append("\n");
             sb.Append("  Extensions: ").Append(Extensions).Append("\n");
@@ -158,15 +158,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PKIIssuerSignRevocationListRequest);
+            return this.Equals(input as PkiIssuerSignRevocationListRequest);
         }
 
         /// <summary>
-        /// Returns true if PKIIssuerSignRevocationListRequest instances are equal
+        /// Returns true if PkiIssuerSignRevocationListRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PKIIssuerSignRevocationListRequest to be compared</param>
+        /// <param name="input">Instance of PkiIssuerSignRevocationListRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PKIIssuerSignRevocationListRequest input)
+        public bool Equals(PkiIssuerSignRevocationListRequest input)
         {
             if (input == null)
             {

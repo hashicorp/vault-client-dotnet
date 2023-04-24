@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// KVv2WriteRequest
+    /// KvV2WriteRequest
     /// </summary>
-    [DataContract(Name = "KVv2WriteRequest")]
-    public partial class KVv2WriteRequest : IEquatable<KVv2WriteRequest>, IValidatableObject
+    [DataContract(Name = "KvV2WriteRequest")]
+    public partial class KvV2WriteRequest : IEquatable<KvV2WriteRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="KVv2WriteRequest" /> class.
+        /// Initializes a new instance of the <see cref="KvV2WriteRequest" /> class.
         /// </summary>
 
         /// <param name="Data">The contents of the data map will be stored and returned on read..</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="_Version">If provided during a read, the value at the version number will be returned.</param>
 
 
-        public KVv2WriteRequest(Object Data = default(Object), Object Options = default(Object), int _Version = default(int))
+        public KvV2WriteRequest(Object Data = default(Object), Object Options = default(Object), int _Version = default(int))
         {
 
             this.Data = Data;
@@ -88,7 +88,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class KVv2WriteRequest {\n");
+            sb.Append("class KvV2WriteRequest {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  _Version: ").Append(_Version).Append("\n");
@@ -112,15 +112,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as KVv2WriteRequest);
+            return this.Equals(input as KvV2WriteRequest);
         }
 
         /// <summary>
-        /// Returns true if KVv2WriteRequest instances are equal
+        /// Returns true if KvV2WriteRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of KVv2WriteRequest to be compared</param>
+        /// <param name="input">Instance of KvV2WriteRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KVv2WriteRequest input)
+        public bool Equals(KvV2WriteRequest input)
         {
             if (input == null)
             {
