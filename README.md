@@ -95,13 +95,13 @@ namespace Example
                 var secretData = new Dictionary<string, string> { { "mypass", "pass" } };
 
                 // Write a secret
-                var kvRequestData = new KVv2WriteRequest(secretData);
+                var kvRequestData = new KvV2WriteRequest(secretData);
 
-                vaultClient.Secrets.KVv2Write("mypath", kvRequestData);
+                vaultClient.Secrets.KvV2Write("mypath", kvRequestData);
 
                 // Read a secret
-                VaultResponse<Object> resp = vaultClient.Secrets.KVv2Read("mypath");
-                Console.WriteLine(resp.Data);
+                VaultResponse<KvV2ReadResponse> resp = vaultClient.Secrets.KvV2Read("mypath");
+                Console.WriteLine(resp.Data.Data);
             }
             catch (VaultApiException e)
             {
@@ -186,11 +186,11 @@ under `vaultClient.Auth`. Below is an example of how to authenticate using
 documentation][doc-approle] for more details.
 
 ```csharp
-VaultResponse<Object> vaultResp = vaultClient.Auth.PostAuthApproleLogin(
-    new ApproleLoginRequest(roleId: "myRoleId", secretId: "mySecretId"),
-    approleMountPath: "myMountPath");
+VaultResponse<Object> resp = vaultClient.Auth.AppRoleLogin(
+    new AppRoleLoginRequest(roleId: "myRoleId", secretId: "mySecretId"),
+    approleMountPath: "my/mount/path");
 
-vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
+vaultClient.SetToken(token: resp.ResponseAuth.ClientToken);
 ```
 
 The secret identifier is often delivered as a wrapped token. In this case, you
@@ -206,15 +206,15 @@ All secrets and auth calls have an optional mount path parameter that can be
 specified, otherwise we will use a default mount path.
 
 ```csharp
-VaultResponse<Object> resp = await vaultClient.Secrets.KVv2ReadAsync("path", secretMountPath: "myCustomMountPath");
+VaultResponse<KvV2ReadResponse> resp = await vaultClient.Secrets.KvV2ReadAsync("path", secretMountPath: "myCustomMountPath");
 Console.WriteLine(resp.Data);
 ```
 
 All calls have both an async and synchronous implementation. E.g.
 
 ```csharp
-VaultResponse<Object> respAsync = await vaultClient.Secrets.KVv2ReadAsync("path");
-VaultResponse<Object> respSync = vaultClient.Secrets.KVv2ReadAsync("path");
+VaultResponse<KvV2ReadResponse> respAsync = await vaultClient.Secrets.KvV2ReadAsync("path");
+VaultResponse<KvV2ReadResponse> respSync = vaultClient.Secrets.KvV2ReadAsync("path");
 ```
 
 ### Exception Handling
@@ -226,7 +226,7 @@ Vault specific errors, status code and original error content.
 try
 {
     // Example call to Vault
-    vaultClient.System.ReadMounts();
+    vaultClient.System.MountsListSecretsEngines();
 }
 catch (VaultApiException e)
 {
@@ -249,7 +249,7 @@ documentation on response wrapping can be found [here]([doc-response-wrapping]).
 
 ```csharp
 // Get a wrapped response from Vault
-VaultResponse<Object> wrappedResp = vaultClient.System.ReadMounts(wrapTTL: TimeSpan.FromSeconds(100));
+VaultResponse<Object> wrappedResp = vaultClient.System.MountsListSecretsEngines(wrapTTL: TimeSpan.FromSeconds(100));
 
 // Unwrap the given response object
 VaultResponse<Object> unwrappedResp = vaultClient.Unwrap<Object>(wrappedResp.ResponseWrapInfo.Token);
