@@ -615,23 +615,6 @@ namespace Vault.Api
         VaultResponse<Object> InternalGenerateOpenApiDocument(bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="internalGenerateOpenApiDocument2Request"></param>
-
-        /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> InternalGenerateOpenApiDocument2(InternalGenerateOpenApiDocument2Request internalGenerateOpenApiDocument2Request, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Expose the route entry and mount entry tables present in the router
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -761,21 +744,6 @@ namespace Vault.Api
         VaultResponse<Object> LeasesForceRevokeLeaseWithPrefix(string prefix, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> LeasesForceRevokeLeaseWithPrefix2(string prefix, TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -852,21 +820,6 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLease2Request"></param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> LeasesRenewLease2(LeasesRenewLease2Request leasesRenewLease2Request, TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="leasesRenewLeaseWithIdRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -878,22 +831,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> LeasesRenewLeaseWithId(string urlLeaseId, LeasesRenewLeaseWithIdRequest leasesRenewLeaseWithIdRequest, TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> LeasesRenewLeaseWithId2(string urlLeaseId, LeasesRenewLeaseWithId2Request leasesRenewLeaseWithId2Request, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Revokes a lease immediately.
@@ -914,21 +851,6 @@ namespace Vault.Api
         /// Revokes a lease immediately.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLease2Request"></param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> LeasesRevokeLease2(LeasesRevokeLease2Request leasesRevokeLease2Request, TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="leasesRevokeLeaseWithIdRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -940,22 +862,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> LeasesRevokeLeaseWithId(string urlLeaseId, LeasesRevokeLeaseWithIdRequest leasesRevokeLeaseWithIdRequest, TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> LeasesRevokeLeaseWithId2(string urlLeaseId, LeasesRevokeLeaseWithId2Request leasesRevokeLeaseWithId2Request, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
@@ -972,22 +878,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> LeasesRevokeLeaseWithPrefix(string prefix, LeasesRevokeLeaseWithPrefixRequest leasesRevokeLeaseWithPrefixRequest, TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithPrefix2Request"></param>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> LeasesRevokeLeaseWithPrefix2(string prefix, LeasesRevokeLeaseWithPrefix2Request leasesRevokeLeaseWithPrefix2Request, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1431,21 +1321,6 @@ namespace Vault.Api
         VaultResponse<Object> PoliciesDeleteAclPolicy(string name, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Delete the policy with the given name.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> PoliciesDeleteAclPolicy2(string name, TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Delete a password policy.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -1535,21 +1410,6 @@ namespace Vault.Api
         VaultResponse<PoliciesReadAclPolicyResponse> PoliciesReadAclPolicy(string name, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Retrieve the policy body for the named policy.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns>VaultResponse of PoliciesReadAclPolicy2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<PoliciesReadAclPolicy2Response> PoliciesReadAclPolicy2(string name, TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -1579,22 +1439,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PoliciesWriteAclPolicy(string name, PoliciesWriteAclPolicyRequest policiesWriteAclPolicyRequest, TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Add a new or update an existing policy.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="policiesWriteAclPolicy2Request"></param>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> PoliciesWriteAclPolicy2(string name, PoliciesWriteAclPolicy2Request policiesWriteAclPolicy2Request, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Add a new or update an existing password policy.
@@ -1958,20 +1802,6 @@ namespace Vault.Api
         VaultResponse<ReadWrappingPropertiesResponse> ReadWrappingProperties(ReadWrappingPropertiesRequest readWrappingPropertiesRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Look up wrapping properties for the requester&#x27;s token.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of ReadWrappingProperties2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<ReadWrappingProperties2Response> ReadWrappingProperties2(TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -2217,20 +2047,6 @@ namespace Vault.Api
         VaultResponse<Object> RootTokenGenerationCancel(TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Cancels any in-progress root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> RootTokenGenerationCancel2(TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -2246,21 +2062,6 @@ namespace Vault.Api
         VaultResponse<RootTokenGenerationInitializeResponse> RootTokenGenerationInitialize(RootTokenGenerationInitializeRequest rootTokenGenerationInitializeRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Initializes a new root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="rootTokenGenerationInitialize2Request"></param>
-        /// <returns>VaultResponse of RootTokenGenerationInitialize2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<RootTokenGenerationInitialize2Response> RootTokenGenerationInitialize2(RootTokenGenerationInitialize2Request rootTokenGenerationInitialize2Request, TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -2273,20 +2074,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<RootTokenGenerationReadProgressResponse> RootTokenGenerationReadProgress(TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of RootTokenGenerationReadProgress2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<RootTokenGenerationReadProgress2Response> RootTokenGenerationReadProgress2(TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
@@ -3110,24 +2897,6 @@ namespace Vault.Api
         Task<VaultResponse<Object>> InternalGenerateOpenApiDocumentAsync(bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="internalGenerateOpenApiDocument2Request"></param>
-
-        /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> InternalGenerateOpenApiDocument2Async(InternalGenerateOpenApiDocument2Request internalGenerateOpenApiDocument2Request, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Expose the route entry and mount entry tables present in the router
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -3266,22 +3035,6 @@ namespace Vault.Api
         Task<VaultResponse<Object>> LeasesForceRevokeLeaseWithPrefixAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LeasesForceRevokeLeaseWithPrefix2Async(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -3363,22 +3116,6 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLease2Request"></param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LeasesRenewLease2Async(LeasesRenewLease2Request leasesRenewLease2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="leasesRenewLeaseWithIdRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
@@ -3391,23 +3128,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LeasesRenewLeaseWithIdAsync(string urlLeaseId, LeasesRenewLeaseWithIdRequest leasesRenewLeaseWithIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LeasesRenewLeaseWithId2Async(string urlLeaseId, LeasesRenewLeaseWithId2Request leasesRenewLeaseWithId2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Revokes a lease immediately.
@@ -3429,22 +3149,6 @@ namespace Vault.Api
         /// Revokes a lease immediately.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLease2Request"></param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LeasesRevokeLease2Async(LeasesRevokeLease2Request leasesRevokeLease2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="leasesRevokeLeaseWithIdRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
@@ -3457,23 +3161,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LeasesRevokeLeaseWithIdAsync(string urlLeaseId, LeasesRevokeLeaseWithIdRequest leasesRevokeLeaseWithIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Revokes a lease immediately.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LeasesRevokeLeaseWithId2Async(string urlLeaseId, LeasesRevokeLeaseWithId2Request leasesRevokeLeaseWithId2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
@@ -3491,23 +3178,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> LeasesRevokeLeaseWithPrefixAsync(string prefix, LeasesRevokeLeaseWithPrefixRequest leasesRevokeLeaseWithPrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithPrefix2Request"></param>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LeasesRevokeLeaseWithPrefix2Async(string prefix, LeasesRevokeLeaseWithPrefix2Request leasesRevokeLeaseWithPrefix2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -3980,22 +3650,6 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PoliciesDeleteAclPolicyAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Delete the policy with the given name.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PoliciesDeleteAclPolicy2Async(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Delete a password policy.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -4091,22 +3745,6 @@ namespace Vault.Api
         Task<VaultResponse<PoliciesReadAclPolicyResponse>> PoliciesReadAclPolicyAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Retrieve the policy body for the named policy.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PoliciesReadAclPolicy2Response)</returns>
-        Task<VaultResponse<PoliciesReadAclPolicy2Response>> PoliciesReadAclPolicy2Async(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -4138,23 +3776,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PoliciesWriteAclPolicyAsync(string name, PoliciesWriteAclPolicyRequest policiesWriteAclPolicyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Add a new or update an existing policy.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="policiesWriteAclPolicy2Request"></param>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PoliciesWriteAclPolicy2Async(string name, PoliciesWriteAclPolicy2Request policiesWriteAclPolicy2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Add a new or update an existing password policy.
@@ -4543,21 +4164,6 @@ namespace Vault.Api
         Task<VaultResponse<ReadWrappingPropertiesResponse>> ReadWrappingPropertiesAsync(ReadWrappingPropertiesRequest readWrappingPropertiesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Look up wrapping properties for the requester&#x27;s token.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (ReadWrappingProperties2Response)</returns>
-        Task<VaultResponse<ReadWrappingProperties2Response>> ReadWrappingProperties2Async(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -4820,21 +4426,6 @@ namespace Vault.Api
         Task<VaultResponse<Object>> RootTokenGenerationCancelAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Cancels any in-progress root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> RootTokenGenerationCancel2Async(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -4851,22 +4442,6 @@ namespace Vault.Api
         Task<VaultResponse<RootTokenGenerationInitializeResponse>> RootTokenGenerationInitializeAsync(RootTokenGenerationInitializeRequest rootTokenGenerationInitializeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Initializes a new root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="rootTokenGenerationInitialize2Request"></param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (RootTokenGenerationInitialize2Response)</returns>
-        Task<VaultResponse<RootTokenGenerationInitialize2Response>> RootTokenGenerationInitialize2Async(RootTokenGenerationInitialize2Request rootTokenGenerationInitialize2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Read the configuration and progress of the current root generation attempt.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -4880,21 +4455,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (RootTokenGenerationReadProgressResponse)</returns>
         Task<VaultResponse<RootTokenGenerationReadProgressResponse>> RootTokenGenerationReadProgressAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (RootTokenGenerationReadProgress2Response)</returns>
-        Task<VaultResponse<RootTokenGenerationReadProgress2Response>> RootTokenGenerationReadProgress2Async(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
@@ -9989,145 +9549,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="internalGenerateOpenApiDocument2Request"></param>
-
-        /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> InternalGenerateOpenApiDocument2(InternalGenerateOpenApiDocument2Request internalGenerateOpenApiDocument2Request, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null)
-        {
-
-
-            // verify the required parameter 'internalGenerateOpenApiDocument2Request' is set
-            if (internalGenerateOpenApiDocument2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'internalGenerateOpenApiDocument2Request' when calling System->InternalGenerateOpenApiDocument2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-            if (genericMountPaths != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "generic_mount_paths", genericMountPaths));
-
-            }
-
-
-            requestOptions.Data = internalGenerateOpenApiDocument2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/internal/specs/openapi", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("InternalGenerateOpenApiDocument2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="internalGenerateOpenApiDocument2Request"></param>
-
-        /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> InternalGenerateOpenApiDocument2Async(InternalGenerateOpenApiDocument2Request internalGenerateOpenApiDocument2Request, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-            // verify the required parameter 'internalGenerateOpenApiDocument2Request' is set
-            if (internalGenerateOpenApiDocument2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'internalGenerateOpenApiDocument2Request' when calling System->InternalGenerateOpenApiDocument2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-            if (genericMountPaths != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "generic_mount_paths", genericMountPaths));
-            }
-            requestOptions.Data = internalGenerateOpenApiDocument2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/internal/specs/openapi", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("InternalGenerateOpenApiDocument2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         /// Expose the route entry and mount entry tables present in the router 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -11157,131 +10578,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> LeasesForceRevokeLeaseWithPrefix2(string prefix, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'prefix' is set
-            if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->LeasesForceRevokeLeaseWithPrefix2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/revoke-force/{prefix}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesForceRevokeLeaseWithPrefix2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LeasesForceRevokeLeaseWithPrefix2Async(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'prefix' is set
-            if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->LeasesForceRevokeLeaseWithPrefix2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-force/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesForceRevokeLeaseWithPrefix2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -11884,128 +11180,6 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLease2Request"></param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> LeasesRenewLease2(LeasesRenewLease2Request leasesRenewLease2Request, TimeSpan? wrapTTL = null)
-        {
-
-
-            // verify the required parameter 'leasesRenewLease2Request' is set
-            if (leasesRenewLease2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRenewLease2Request' when calling System->LeasesRenewLease2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-
-            requestOptions.Data = leasesRenewLease2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/renew", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRenewLease2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLease2Request"></param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LeasesRenewLease2Async(LeasesRenewLease2Request leasesRenewLease2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-            // verify the required parameter 'leasesRenewLease2Request' is set
-            if (leasesRenewLease2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRenewLease2Request' when calling System->LeasesRenewLease2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-            requestOptions.Data = leasesRenewLease2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/renew", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRenewLease2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="leasesRenewLeaseWithIdRequest"></param>
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -12141,144 +11315,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> LeasesRenewLeaseWithId2(string urlLeaseId, LeasesRenewLeaseWithId2Request leasesRenewLeaseWithId2Request, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'urlLeaseId' is set
-            if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->LeasesRenewLeaseWithId2");
-
-
-            // verify the required parameter 'leasesRenewLeaseWithId2Request' is set
-            if (leasesRenewLeaseWithId2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRenewLeaseWithId2Request' when calling System->LeasesRenewLeaseWithId2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-
-
-
-
-
-            requestOptions.Data = leasesRenewLeaseWithId2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/renew/{url_lease_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRenewLeaseWithId2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Renews a lease, requesting to extend the lease. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRenewLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LeasesRenewLeaseWithId2Async(string urlLeaseId, LeasesRenewLeaseWithId2Request leasesRenewLeaseWithId2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'urlLeaseId' is set
-            if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->LeasesRenewLeaseWithId2");
-
-
-            // verify the required parameter 'leasesRenewLeaseWithId2Request' is set
-            if (leasesRenewLeaseWithId2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRenewLeaseWithId2Request' when calling System->LeasesRenewLeaseWithId2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-
-
-
-            requestOptions.Data = leasesRenewLeaseWithId2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/renew/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRenewLeaseWithId2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -12395,128 +11431,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("LeasesRevokeLease", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLease2Request"></param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> LeasesRevokeLease2(LeasesRevokeLease2Request leasesRevokeLease2Request, TimeSpan? wrapTTL = null)
-        {
-
-
-            // verify the required parameter 'leasesRevokeLease2Request' is set
-            if (leasesRevokeLease2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRevokeLease2Request' when calling System->LeasesRevokeLease2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-
-            requestOptions.Data = leasesRevokeLease2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/revoke", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRevokeLease2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLease2Request"></param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LeasesRevokeLease2Async(LeasesRevokeLease2Request leasesRevokeLease2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-            // verify the required parameter 'leasesRevokeLease2Request' is set
-            if (leasesRevokeLease2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRevokeLease2Request' when calling System->LeasesRevokeLease2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-            requestOptions.Data = leasesRevokeLease2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRevokeLease2", response);
                 if (exception != null) throw exception;
             }
 
@@ -12661,144 +11575,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> LeasesRevokeLeaseWithId2(string urlLeaseId, LeasesRevokeLeaseWithId2Request leasesRevokeLeaseWithId2Request, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'urlLeaseId' is set
-            if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->LeasesRevokeLeaseWithId2");
-
-
-            // verify the required parameter 'leasesRevokeLeaseWithId2Request' is set
-            if (leasesRevokeLeaseWithId2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRevokeLeaseWithId2Request' when calling System->LeasesRevokeLeaseWithId2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-
-
-
-
-
-            requestOptions.Data = leasesRevokeLeaseWithId2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/revoke/{url_lease_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRevokeLeaseWithId2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Revokes a lease immediately. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithId2Request"></param>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LeasesRevokeLeaseWithId2Async(string urlLeaseId, LeasesRevokeLeaseWithId2Request leasesRevokeLeaseWithId2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'urlLeaseId' is set
-            if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->LeasesRevokeLeaseWithId2");
-
-
-            // verify the required parameter 'leasesRevokeLeaseWithId2Request' is set
-            if (leasesRevokeLeaseWithId2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRevokeLeaseWithId2Request' when calling System->LeasesRevokeLeaseWithId2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("url_lease_id", ClientUtils.ParameterToString(urlLeaseId)); // path parameter
-
-
-
-            requestOptions.Data = leasesRevokeLeaseWithId2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke/{url_lease_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRevokeLeaseWithId2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -12931,144 +11707,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("LeasesRevokeLeaseWithPrefix", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithPrefix2Request"></param>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> LeasesRevokeLeaseWithPrefix2(string prefix, LeasesRevokeLeaseWithPrefix2Request leasesRevokeLeaseWithPrefix2Request, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'prefix' is set
-            if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->LeasesRevokeLeaseWithPrefix2");
-
-
-            // verify the required parameter 'leasesRevokeLeaseWithPrefix2Request' is set
-            if (leasesRevokeLeaseWithPrefix2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRevokeLeaseWithPrefix2Request' when calling System->LeasesRevokeLeaseWithPrefix2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-
-
-
-
-
-            requestOptions.Data = leasesRevokeLeaseWithPrefix2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/revoke-prefix/{prefix}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRevokeLeaseWithPrefix2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="leasesRevokeLeaseWithPrefix2Request"></param>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LeasesRevokeLeaseWithPrefix2Async(string prefix, LeasesRevokeLeaseWithPrefix2Request leasesRevokeLeaseWithPrefix2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'prefix' is set
-            if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->LeasesRevokeLeaseWithPrefix2");
-
-
-            // verify the required parameter 'leasesRevokeLeaseWithPrefix2Request' is set
-            if (leasesRevokeLeaseWithPrefix2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'leasesRevokeLeaseWithPrefix2Request' when calling System->LeasesRevokeLeaseWithPrefix2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-
-
-
-            requestOptions.Data = leasesRevokeLeaseWithPrefix2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/revoke-prefix/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("LeasesRevokeLeaseWithPrefix2", response);
                 if (exception != null) throw exception;
             }
 
@@ -16733,131 +15371,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Delete the policy with the given name. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> PoliciesDeleteAclPolicy2(string name, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PoliciesDeleteAclPolicy2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Delete<Object>("/sys/policy/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesDeleteAclPolicy2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Delete the policy with the given name. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PoliciesDeleteAclPolicy2Async(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PoliciesDeleteAclPolicy2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesDeleteAclPolicy2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         /// Delete a password policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -17589,131 +16102,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<PoliciesReadAclPolicyResponse>(response.RawContent);
         }
         /// <summary>
-        /// Retrieve the policy body for the named policy. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns>VaultResponse of PoliciesReadAclPolicy2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<PoliciesReadAclPolicy2Response> PoliciesReadAclPolicy2(string name, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PoliciesReadAclPolicy2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<PoliciesReadAclPolicy2Response>("/sys/policy/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesReadAclPolicy2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<PoliciesReadAclPolicy2Response>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Retrieve the policy body for the named policy. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PoliciesReadAclPolicy2Response)</returns>
-        public async Task<VaultResponse<PoliciesReadAclPolicy2Response>> PoliciesReadAclPolicy2Async(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PoliciesReadAclPolicy2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PoliciesReadAclPolicy2Response>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesReadAclPolicy2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<PoliciesReadAclPolicy2Response>(response.RawContent);
-        }
-        /// <summary>
         /// Retrieve an existing password policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -17971,144 +16359,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("PoliciesWriteAclPolicy", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        /// Add a new or update an existing policy. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="policiesWriteAclPolicy2Request"></param>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> PoliciesWriteAclPolicy2(string name, PoliciesWriteAclPolicy2Request policiesWriteAclPolicy2Request, TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PoliciesWriteAclPolicy2");
-
-
-            // verify the required parameter 'policiesWriteAclPolicy2Request' is set
-            if (policiesWriteAclPolicy2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'policiesWriteAclPolicy2Request' when calling System->PoliciesWriteAclPolicy2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-
-
-
-            requestOptions.Data = policiesWriteAclPolicy2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/sys/policy/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesWriteAclPolicy2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Add a new or update an existing policy. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="policiesWriteAclPolicy2Request"></param>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PoliciesWriteAclPolicy2Async(string name, PoliciesWriteAclPolicy2Request policiesWriteAclPolicy2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PoliciesWriteAclPolicy2");
-
-
-            // verify the required parameter 'policiesWriteAclPolicy2Request' is set
-            if (policiesWriteAclPolicy2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'policiesWriteAclPolicy2Request' when calling System->PoliciesWriteAclPolicy2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-
-            requestOptions.Data = policiesWriteAclPolicy2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/policy/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesWriteAclPolicy2", response);
                 if (exception != null) throw exception;
             }
 
@@ -21001,115 +19251,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<ReadWrappingPropertiesResponse>(response.RawContent);
         }
         /// <summary>
-        /// Look up wrapping properties for the requester&#x27;s token. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of ReadWrappingProperties2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<ReadWrappingProperties2Response> ReadWrappingProperties2(TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<ReadWrappingProperties2Response>("/sys/wrapping/lookup", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("ReadWrappingProperties2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<ReadWrappingProperties2Response>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Look up wrapping properties for the requester&#x27;s token. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (ReadWrappingProperties2Response)</returns>
-        public async Task<VaultResponse<ReadWrappingProperties2Response>> ReadWrappingProperties2Async(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<ReadWrappingProperties2Response>("/sys/wrapping/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("ReadWrappingProperties2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<ReadWrappingProperties2Response>(response.RawContent);
-        }
-        /// <summary>
         /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -23060,115 +21201,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Cancels any in-progress root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> RootTokenGenerationCancel2(TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Delete<Object>("/sys/generate-root", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("RootTokenGenerationCancel2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Cancels any in-progress root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> RootTokenGenerationCancel2Async(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("RootTokenGenerationCancel2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -23291,128 +21323,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<RootTokenGenerationInitializeResponse>(response.RawContent);
         }
         /// <summary>
-        /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="rootTokenGenerationInitialize2Request"></param>
-        /// <returns>VaultResponse of RootTokenGenerationInitialize2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<RootTokenGenerationInitialize2Response> RootTokenGenerationInitialize2(RootTokenGenerationInitialize2Request rootTokenGenerationInitialize2Request, TimeSpan? wrapTTL = null)
-        {
-
-
-            // verify the required parameter 'rootTokenGenerationInitialize2Request' is set
-            if (rootTokenGenerationInitialize2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'rootTokenGenerationInitialize2Request' when calling System->RootTokenGenerationInitialize2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-
-            requestOptions.Data = rootTokenGenerationInitialize2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<RootTokenGenerationInitialize2Response>("/sys/generate-root", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("RootTokenGenerationInitialize2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<RootTokenGenerationInitialize2Response>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="rootTokenGenerationInitialize2Request"></param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (RootTokenGenerationInitialize2Response)</returns>
-        public async Task<VaultResponse<RootTokenGenerationInitialize2Response>> RootTokenGenerationInitialize2Async(RootTokenGenerationInitialize2Request rootTokenGenerationInitialize2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-            // verify the required parameter 'rootTokenGenerationInitialize2Request' is set
-            if (rootTokenGenerationInitialize2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'rootTokenGenerationInitialize2Request' when calling System->RootTokenGenerationInitialize2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-            requestOptions.Data = rootTokenGenerationInitialize2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<RootTokenGenerationInitialize2Response>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("RootTokenGenerationInitialize2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<RootTokenGenerationInitialize2Response>(response.RawContent);
-        }
-        /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -23520,115 +21430,6 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<RootTokenGenerationReadProgressResponse>(response.RawContent);
-        }
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of RootTokenGenerationReadProgress2Response</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<RootTokenGenerationReadProgress2Response> RootTokenGenerationReadProgress2(TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<RootTokenGenerationReadProgress2Response>("/sys/generate-root", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("RootTokenGenerationReadProgress2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<RootTokenGenerationReadProgress2Response>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (RootTokenGenerationReadProgress2Response)</returns>
-        public async Task<VaultResponse<RootTokenGenerationReadProgress2Response>> RootTokenGenerationReadProgress2Async(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<RootTokenGenerationReadProgress2Response>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("RootTokenGenerationReadProgress2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<RootTokenGenerationReadProgress2Response>(response.RawContent);
         }
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
