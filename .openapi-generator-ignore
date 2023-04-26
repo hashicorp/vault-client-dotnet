@@ -35,3 +35,8 @@ docs/*2Response.md
 docs/*3Request.md
 docs/*3Response.md
 
+src/Vault/Model/*2Request.md
+src/Vault/Model/*2Response.md
+src/Vault/Model/*3Request.md
+src/Vault/Model/*3Response.md
+
