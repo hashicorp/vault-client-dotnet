@@ -82,10 +82,8 @@ Method | HTTP request | Description
 [**OidcListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
 [**OidcListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope | 
 [**OidcProviderAuthorize**](IdentityApi.md#oidcproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
-[**OidcProviderAuthorize2**](IdentityApi.md#oidcproviderauthorize2) | **POST** /identity/oidc/provider/{name}/authorize | 
 [**OidcProviderToken**](IdentityApi.md#oidcprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
 [**OidcProviderUserInfo**](IdentityApi.md#oidcprovideruserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
-[**OidcProviderUserInfo2**](IdentityApi.md#oidcprovideruserinfo2) | **POST** /identity/oidc/provider/{name}/userinfo | 
 [**OidcReadAssignment**](IdentityApi.md#oidcreadassignment) | **GET** /identity/oidc/assignment/{name} | 
 [**OidcReadClient**](IdentityApi.md#oidcreadclient) | **GET** /identity/oidc/client/{name} | 
 [**OidcReadConfiguration**](IdentityApi.md#oidcreadconfiguration) | **GET** /identity/oidc/config | 
@@ -7303,102 +7301,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="oidcproviderauthorize2"></a>
-# **OidcProviderAuthorize2**
-
-> void OidcProviderAuthorize2 (string name, OidcProviderAuthorize2Request oidcProviderAuthorize2Request, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OidcProviderAuthorize2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
-            
-            
-            var oidcProviderAuthorize2Request = new OidcProviderAuthorize2Request(); // OidcProviderAuthorize2Request | 
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.OidcProviderAuthorize2(string name, OidcProviderAuthorize2Request oidcProviderAuthorize2Request, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OidcProviderAuthorize2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
- **oidcProviderAuthorize2Request** | [**OidcProviderAuthorize2Request**](OidcProviderAuthorize2Request.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="oidcprovidertoken"></a>
 # **OidcProviderToken**
 
@@ -7545,96 +7447,6 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OidcProviderUserInfo: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the provider | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="oidcprovideruserinfo2"></a>
-# **OidcProviderUserInfo2**
-
-> void OidcProviderUserInfo2 (string name, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class OidcProviderUserInfo2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Identity(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var name = "name_example";  // string | Name of the provider
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.OidcProviderUserInfo2(string name, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Identity.OidcProviderUserInfo2: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }

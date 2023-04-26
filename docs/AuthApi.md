@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AliCloudDeleteAuthRole**](AuthApi.md#aliclouddeleteauthrole) | **DELETE** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
 [**AliCloudListAuthRoles**](AuthApi.md#alicloudlistauthroles) | **GET** /auth/{alicloud_mount_path}/role | Lists all the roles that are registered with Vault.
-[**AliCloudListAuthRoles2**](AuthApi.md#alicloudlistauthroles2) | **GET** /auth/{alicloud_mount_path}/roles | Lists all the roles that are registered with Vault.
 [**AliCloudLogin**](AuthApi.md#alicloudlogin) | **POST** /auth/{alicloud_mount_path}/login | Authenticates an RAM entity with Vault.
 [**AliCloudReadAuthRole**](AuthApi.md#alicloudreadauthrole) | **GET** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
 [**AliCloudWriteAuthRole**](AuthApi.md#alicloudwriteauthrole) | **POST** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
@@ -23,9 +22,7 @@ Method | HTTP request | Description
 [**AppRoleDeleteTokenNumUses**](AuthApi.md#approledeletetokennumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
 [**AppRoleDeleteTokenTtl**](AuthApi.md#approledeletetokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
 [**AppRoleDestroySecretId**](AuthApi.md#approledestroysecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
-[**AppRoleDestroySecretId2**](AuthApi.md#approledestroysecretid2) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
 [**AppRoleDestroySecretIdByAccessor**](AuthApi.md#approledestroysecretidbyaccessor) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**AppRoleDestroySecretIdByAccessor2**](AuthApi.md#approledestroysecretidbyaccessor2) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
 [**AppRoleListRoles**](AuthApi.md#approlelistroles) | **GET** /auth/{approle_mount_path}/role | 
 [**AppRoleListSecretIds**](AuthApi.md#approlelistsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
 [**AppRoleLogin**](AuthApi.md#approlelogin) | **POST** /auth/{approle_mount_path}/login | 
@@ -86,7 +83,6 @@ Method | HTTP request | Description
 [**AwsListIdentityWhitelist**](AuthApi.md#awslistidentitywhitelist) | **GET** /auth/{aws_mount_path}/identity-whitelist | 
 [**AwsListRoleTagBlacklists**](AuthApi.md#awslistroletagblacklists) | **GET** /auth/{aws_mount_path}/roletag-blacklist | 
 [**AwsListRoleTagDenyLists**](AuthApi.md#awslistroletagdenylists) | **GET** /auth/{aws_mount_path}/roletag-denylist | 
-[**AwsListRoles2**](AuthApi.md#awslistroles2) | **GET** /auth/{aws_mount_path}/roles | 
 [**AwsListStsRoleRelationships**](AuthApi.md#awsliststsrolerelationships) | **GET** /auth/{aws_mount_path}/config/sts | 
 [**AwsLogin**](AuthApi.md#awslogin) | **POST** /auth/{aws_mount_path}/login | 
 [**AwsReadAuthRole**](AuthApi.md#awsreadauthrole) | **GET** /auth/{aws_mount_path}/role/{role} | 
@@ -159,7 +155,6 @@ Method | HTTP request | Description
 [**GoogleCloudEditLabelsForRole**](AuthApi.md#googlecloudeditlabelsforrole) | **POST** /auth/{gcp_mount_path}/role/{name}/labels | Add or remove labels for an existing &#x27;gce&#x27; role
 [**GoogleCloudEditServiceAccountsForRole**](AuthApi.md#googlecloudeditserviceaccountsforrole) | **POST** /auth/{gcp_mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
 [**GoogleCloudListRoles**](AuthApi.md#googlecloudlistroles) | **GET** /auth/{gcp_mount_path}/role | Lists all the roles that are registered with Vault.
-[**GoogleCloudListRoles2**](AuthApi.md#googlecloudlistroles2) | **GET** /auth/{gcp_mount_path}/roles | Lists all the roles that are registered with Vault.
 [**GoogleCloudLogin**](AuthApi.md#googlecloudlogin) | **POST** /auth/{gcp_mount_path}/login | 
 [**GoogleCloudReadAuthConfiguration**](AuthApi.md#googlecloudreadauthconfiguration) | **GET** /auth/{gcp_mount_path}/config | 
 [**GoogleCloudReadRole**](AuthApi.md#googlecloudreadrole) | **GET** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
@@ -179,7 +174,6 @@ Method | HTTP request | Description
 [**KerberosDeleteGroup**](AuthApi.md#kerberosdeletegroup) | **DELETE** /auth/{kerberos_mount_path}/groups/{name} | 
 [**KerberosListGroups**](AuthApi.md#kerberoslistgroups) | **GET** /auth/{kerberos_mount_path}/groups | 
 [**KerberosLogin**](AuthApi.md#kerberoslogin) | **POST** /auth/{kerberos_mount_path}/login | 
-[**KerberosLogin2**](AuthApi.md#kerberoslogin2) | **GET** /auth/{kerberos_mount_path}/login | 
 [**KerberosReadConfiguration**](AuthApi.md#kerberosreadconfiguration) | **GET** /auth/{kerberos_mount_path}/config | 
 [**KerberosReadGroup**](AuthApi.md#kerberosreadgroup) | **GET** /auth/{kerberos_mount_path}/groups/{name} | 
 [**KerberosReadLdapConfiguration**](AuthApi.md#kerberosreadldapconfiguration) | **GET** /auth/{kerberos_mount_path}/config/ldap | 
@@ -239,8 +233,6 @@ Method | HTTP request | Description
 [**TokenLookUp**](AuthApi.md#tokenlookup) | **POST** /auth/token/lookup | 
 [**TokenLookUpAccessor**](AuthApi.md#tokenlookupaccessor) | **POST** /auth/token/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
 [**TokenLookUpSelf**](AuthApi.md#tokenlookupself) | **GET** /auth/token/lookup-self | 
-[**TokenLookUpSelf2**](AuthApi.md#tokenlookupself2) | **POST** /auth/token/lookup-self | 
-[**TokenLookUpSelf3**](AuthApi.md#tokenlookupself3) | **GET** /auth/token/lookup | 
 [**TokenReadRole**](AuthApi.md#tokenreadrole) | **GET** /auth/token/roles/{role_name} | 
 [**TokenRenew**](AuthApi.md#tokenrenew) | **POST** /auth/token/renew | This endpoint will renew the given token and prevent expiration.
 [**TokenRenewAccessor**](AuthApi.md#tokenrenewaccessor) | **POST** /auth/token/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
@@ -417,104 +409,6 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudListAuthRoles: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **alicloudMountPath** | **string**| Path that the backend was mounted at | [default to &quot;alicloud&quot;]
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="alicloudlistauthroles2"></a>
-# **AliCloudListAuthRoles2**
-
-> void AliCloudListAuthRoles2 (string alicloudMountPath, TimeSpan? wrapTTL = null)
-
-Lists all the roles that are registered with Vault.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class AliCloudListAuthRoles2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var alicloudMountPath = "\"alicloud\"";  // string | Path that the backend was mounted at (default to "alicloud")
-            
-            
-            
-            
-            var list = "true";  // string | Must be set to `true`
-            
-            
-            
-
-            try
-            {
-                
-                // Lists all the roles that are registered with Vault.
-                
-
-                apiInstance.AliCloudListAuthRoles2(string alicloudMountPath, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.AliCloudListAuthRoles2: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -2110,102 +2004,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="approledestroysecretid2"></a>
-# **AppRoleDestroySecretId2**
-
-> void AppRoleDestroySecretId2 (string roleName, string approleMountPath, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class AppRoleDestroySecretId2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            
-            
-            
-            
-            var approleMountPath = "\"approle\"";  // string | Path that the backend was mounted at (default to "approle")
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.AppRoleDestroySecretId2(string roleName, string approleMountPath, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.AppRoleDestroySecretId2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **approleMountPath** | **string**| Path that the backend was mounted at | [default to &quot;approle&quot;]
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | No Content |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="approledestroysecretidbyaccessor"></a>
 # **AppRoleDestroySecretIdByAccessor**
 
@@ -2293,102 +2091,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | No Content |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="approledestroysecretidbyaccessor2"></a>
-# **AppRoleDestroySecretIdByAccessor2**
-
-> void AppRoleDestroySecretIdByAccessor2 (string roleName, string approleMountPath, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class AppRoleDestroySecretIdByAccessor2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            
-            
-            
-            
-            var approleMountPath = "\"approle\"";  // string | Path that the backend was mounted at (default to "approle")
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.AppRoleDestroySecretIdByAccessor2(string roleName, string approleMountPath, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.AppRoleDestroySecretIdByAccessor2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **approleMountPath** | **string**| Path that the backend was mounted at | [default to &quot;approle&quot;]
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -8241,102 +7943,6 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AwsListRoleTagDenyLists: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="awslistroles2"></a>
-# **AwsListRoles2**
-
-> void AwsListRoles2 (string awsMountPath, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class AwsListRoles2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
-            
-            
-            
-            
-            var list = "true";  // string | Must be set to `true`
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.AwsListRoles2(string awsMountPath, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.AwsListRoles2: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -15306,104 +14912,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="googlecloudlistroles2"></a>
-# **GoogleCloudListRoles2**
-
-> void GoogleCloudListRoles2 (string gcpMountPath, TimeSpan? wrapTTL = null)
-
-Lists all the roles that are registered with Vault.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GoogleCloudListRoles2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var gcpMountPath = "\"gcp\"";  // string | Path that the backend was mounted at (default to "gcp")
-            
-            
-            
-            
-            var list = "true";  // string | Must be set to `true`
-            
-            
-            
-
-            try
-            {
-                
-                // Lists all the roles that are registered with Vault.
-                
-
-                apiInstance.GoogleCloudListRoles2(string gcpMountPath, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GoogleCloudListRoles2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **gcpMountPath** | **string**| Path that the backend was mounted at | [default to &quot;gcp&quot;]
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="googlecloudlogin"></a>
 # **GoogleCloudLogin**
 
@@ -19080,96 +18588,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="kerberoslogin2"></a>
-# **KerberosLogin2**
-
-> void KerberosLogin2 (string kerberosMountPath, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class KerberosLogin2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var kerberosMountPath = "\"kerberos\"";  // string | Path that the backend was mounted at (default to "kerberos")
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.KerberosLogin2(string kerberosMountPath, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.KerberosLogin2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **kerberosMountPath** | **string**| Path that the backend was mounted at | [default to &quot;kerberos&quot;]
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -24878,178 +24296,6 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenLookUpSelf: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="tokenlookupself2"></a>
-# **TokenLookUpSelf2**
-
-> void TokenLookUpSelf2 (TokenLookUpSelf2Request tokenLookUpSelf2Request, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class TokenLookUpSelf2Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            
-            var tokenLookUpSelf2Request = new TokenLookUpSelf2Request(); // TokenLookUpSelf2Request | 
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.TokenLookUpSelf2(TokenLookUpSelf2Request tokenLookUpSelf2Request, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.TokenLookUpSelf2: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tokenLookUpSelf2Request** | [**TokenLookUpSelf2Request**](TokenLookUpSelf2Request.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="tokenlookupself3"></a>
-# **TokenLookUpSelf3**
-
-> void TokenLookUpSelf3 (TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class TokenLookUpSelf3Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-
-            try
-            {
-                
-
-                apiInstance.TokenLookUpSelf3(TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.TokenLookUpSelf3: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
