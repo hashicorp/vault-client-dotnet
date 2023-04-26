@@ -213,23 +213,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> AwsGenerateCredentials2(string name, AwsGenerateCredentials2Request awsGenerateCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -241,23 +224,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> AwsGenerateStsCredentials(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateStsCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> AwsGenerateStsCredentials2(string name, AwsGenerateStsCredentials2Request awsGenerateStsCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// List the existing roles in this backend
@@ -1007,22 +973,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the impersonated account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateImpersonatedAccountAccessToken2(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1034,22 +984,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GoogleCloudGenerateRolesetAccessToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetAccessToken2(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1081,39 +1015,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetAccessTokenWithParameters2(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
         VaultResponse<Object> GoogleCloudGenerateRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetKey2(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1131,23 +1033,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GoogleCloudGenerateRolesetKeyWithParameters(string roleset, GoogleCloudGenerateRolesetKeyWithParametersRequest googleCloudGenerateRolesetKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParameters2Request"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetKeyWithParameters2(string roleset, GoogleCloudGenerateRolesetKeyWithParameters2Request googleCloudGenerateRolesetKeyWithParameters2Request, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1310,22 +1195,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GoogleCloudKmsDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudKmsDeregisterKey2(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Encrypt a plaintext value using a named key
@@ -1506,22 +1375,6 @@ namespace Vault.Api
         VaultResponse<Object> GoogleCloudKmsTrimKeyVersions(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key in Vault.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudKmsTrimKeyVersions2(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
-
-        /// <summary>
         /// Verify a signature using a named key
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -1583,21 +1436,6 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudListImpersonatedAccounts2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
         VaultResponse<Object> GoogleCloudListRolesets(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
@@ -1613,37 +1451,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudListRolesets2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
         VaultResponse<Object> GoogleCloudListStaticAccounts(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudListStaticAccounts2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2627,22 +2435,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> MongoDbAtlasGenerateCredentials(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="mongodbatlasMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> MongoDbAtlasGenerateCredentials2(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// List the existing roles in this backend
@@ -4745,22 +4537,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="terraformMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> TerraformCloudGenerateCredentials2(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="terraformMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -5735,24 +5511,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsGenerateCredentials2Async(string name, AwsGenerateCredentials2Request awsGenerateCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -5765,24 +5523,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AwsGenerateStsCredentialsAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateStsCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsGenerateStsCredentials2Async(string name, AwsGenerateStsCredentials2Request awsGenerateStsCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// List the existing roles in this backend
@@ -6579,23 +6319,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the impersonated account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateImpersonatedAccountAccessToken2Async(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -6608,23 +6331,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessTokenAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessToken2Async(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6658,41 +6364,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessTokenWithParameters2Async(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKey2Async(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6711,24 +6383,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyWithParametersAsync(string roleset, GoogleCloudGenerateRolesetKeyWithParametersRequest googleCloudGenerateRolesetKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParameters2Request"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyWithParameters2Async(string roleset, GoogleCloudGenerateRolesetKeyWithParameters2Request googleCloudGenerateRolesetKeyWithParameters2Request, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6901,23 +6555,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudKmsDeregisterKeyAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudKmsDeregisterKey2Async(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Encrypt a plaintext value using a named key
@@ -7109,23 +6746,6 @@ namespace Vault.Api
         Task<VaultResponse<Object>> GoogleCloudKmsTrimKeyVersionsAsync(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key in Vault.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudKmsTrimKeyVersions2Async(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
         /// Verify a signature using a named key
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -7191,22 +6811,6 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudListImpersonatedAccounts2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudListRolesetsAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -7223,39 +6827,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudListRolesets2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GoogleCloudListStaticAccountsAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudListStaticAccounts2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8300,23 +7872,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> MongoDbAtlasGenerateCredentialsAsync(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="mongodbatlasMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MongoDbAtlasGenerateCredentials2Async(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// List the existing roles in this backend
@@ -10546,23 +10101,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TerraformCloudGenerateCredentialsAsync(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="terraformMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TerraformCloudGenerateCredentials2Async(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -13006,152 +12544,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> AwsGenerateCredentials2(string name, AwsGenerateCredentials2Request awsGenerateCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateCredentials2");
-
-
-            // verify the required parameter 'awsGenerateCredentials2Request' is set
-            if (awsGenerateCredentials2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'awsGenerateCredentials2Request' when calling Secrets->AwsGenerateCredentials2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
-
-
-
-
-
-            requestOptions.Data = awsGenerateCredentials2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{aws_mount_path}/creds/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("AwsGenerateCredentials2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsGenerateCredentials2Async(string name, AwsGenerateCredentials2Request awsGenerateCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateCredentials2");
-
-
-            // verify the required parameter 'awsGenerateCredentials2Request' is set
-            if (awsGenerateCredentials2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'awsGenerateCredentials2Request' when calling Secrets->AwsGenerateCredentials2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
-
-
-
-            requestOptions.Data = awsGenerateCredentials2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{aws_mount_path}/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("AwsGenerateCredentials2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -13276,152 +12668,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("AwsGenerateStsCredentials", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateStsCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> AwsGenerateStsCredentials2(string name, AwsGenerateStsCredentials2Request awsGenerateStsCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateStsCredentials2");
-
-
-            // verify the required parameter 'awsGenerateStsCredentials2Request' is set
-            if (awsGenerateStsCredentials2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'awsGenerateStsCredentials2Request' when calling Secrets->AwsGenerateStsCredentials2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
-
-
-
-
-
-            requestOptions.Data = awsGenerateStsCredentials2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{aws_mount_path}/sts/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("AwsGenerateStsCredentials2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="awsGenerateStsCredentials2Request"></param>
-        /// <param name="name">Name of the role</param>
-        /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsGenerateStsCredentials2Async(string name, AwsGenerateStsCredentials2Request awsGenerateStsCredentials2Request, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateStsCredentials2");
-
-
-            // verify the required parameter 'awsGenerateStsCredentials2Request' is set
-            if (awsGenerateStsCredentials2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'awsGenerateStsCredentials2Request' when calling Secrets->AwsGenerateStsCredentials2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
-
-
-
-            requestOptions.Data = awsGenerateStsCredentials2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{aws_mount_path}/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("AwsGenerateStsCredentials2", response);
                 if (exception != null) throw exception;
             }
 
@@ -19572,139 +18818,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the impersonated account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateImpersonatedAccountAccessToken2(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateImpersonatedAccountAccessToken2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{gcp_mount_path}/impersonated-account/{name}/token", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateImpersonatedAccountAccessToken2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the impersonated account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateImpersonatedAccountAccessToken2Async(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateImpersonatedAccountAccessToken2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/impersonated-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateImpersonatedAccountAccessToken2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -19829,139 +18942,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessToken", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetAccessToken2(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetAccessToken2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/token/{roleset}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessToken2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessToken2Async(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetAccessToken2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/token/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessToken2", response);
                 if (exception != null) throw exception;
             }
 
@@ -20114,139 +19094,6 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetAccessTokenWithParameters2(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetAccessTokenWithParameters2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{gcp_mount_path}/token/{roleset}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessTokenWithParameters2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessTokenWithParameters2Async(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetAccessTokenWithParameters2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/token/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessTokenWithParameters2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
         public VaultResponse<Object> GoogleCloudGenerateRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
 
@@ -20361,139 +19208,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetKey2(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKey2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/key/{roleset}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKey2Async(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKey2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/key/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey2", response);
                 if (exception != null) throw exception;
             }
 
@@ -20640,152 +19354,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKeyWithParameters", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParameters2Request"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetKeyWithParameters2(string roleset, GoogleCloudGenerateRolesetKeyWithParameters2Request googleCloudGenerateRolesetKeyWithParameters2Request, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters2");
-
-
-            // verify the required parameter 'googleCloudGenerateRolesetKeyWithParameters2Request' is set
-            if (googleCloudGenerateRolesetKeyWithParameters2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateRolesetKeyWithParameters2Request' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters2");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-            requestOptions.Data = googleCloudGenerateRolesetKeyWithParameters2Request;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{gcp_mount_path}/key/{roleset}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKeyWithParameters2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParameters2Request"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyWithParameters2Async(string roleset, GoogleCloudGenerateRolesetKeyWithParameters2Request googleCloudGenerateRolesetKeyWithParameters2Request, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters2");
-
-
-            // verify the required parameter 'googleCloudGenerateRolesetKeyWithParameters2Request' is set
-            if (googleCloudGenerateRolesetKeyWithParameters2Request == null)
-                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateRolesetKeyWithParameters2Request' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.Data = googleCloudGenerateRolesetKeyWithParameters2Request;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/key/{roleset}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKeyWithParameters2", response);
                 if (exception != null) throw exception;
             }
 
@@ -22136,139 +20704,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("GoogleCloudKmsDeregisterKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudKmsDeregisterKey2(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'key' is set
-            if (key == null)
-                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GoogleCloudKmsDeregisterKey2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcpkms_mount_path", ClientUtils.ParameterToString(gcpkmsMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Delete<Object>("/{gcpkms_mount_path}/keys/deregister/{key}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudKmsDeregisterKey2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key to deregister in Vault. If the key exists in Google Cloud KMS, it will be left untouched.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudKmsDeregisterKey2Async(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'key' is set
-            if (key == null)
-                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GoogleCloudKmsDeregisterKey2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcpkms_mount_path", ClientUtils.ParameterToString(gcpkmsMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{gcpkms_mount_path}/keys/deregister/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudKmsDeregisterKey2", response);
                 if (exception != null) throw exception;
             }
 
@@ -23764,139 +22199,6 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key in Vault.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudKmsTrimKeyVersions2(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'key' is set
-            if (key == null)
-                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GoogleCloudKmsTrimKeyVersions2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcpkms_mount_path", ClientUtils.ParameterToString(gcpkmsMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Delete<Object>("/{gcpkms_mount_path}/keys/trim/{key}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudKmsTrimKeyVersions2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Name of the key in Vault.</param>
-        /// <param name="gcpkmsMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudKmsTrimKeyVersions2Async(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'key' is set
-            if (key == null)
-                throw new VaultApiException(400, "Missing required parameter 'key' when calling Secrets->GoogleCloudKmsTrimKeyVersions2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("key", ClientUtils.ParameterToString(key)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcpkms_mount_path", ClientUtils.ParameterToString(gcpkmsMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{gcpkms_mount_path}/keys/trim/{key}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudKmsTrimKeyVersions2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
         /// Verify a signature using a named key 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -24324,129 +22626,6 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudListImpersonatedAccounts2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/impersonated-accounts", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudListImpersonatedAccounts2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudListImpersonatedAccounts2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/impersonated-accounts", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudListImpersonatedAccounts2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
         public VaultResponse<Object> GoogleCloudListRolesets(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
 
@@ -24570,129 +22749,6 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudListRolesets2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/rolesets", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudListRolesets2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudListRolesets2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/rolesets", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudListRolesets2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
         public VaultResponse<Object> GoogleCloudListStaticAccounts(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
 
@@ -24798,129 +22854,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("GoogleCloudListStaticAccounts", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudListStaticAccounts2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/static-accounts", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudListStaticAccounts2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudListStaticAccounts2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/static-accounts", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudListStaticAccounts2", response);
                 if (exception != null) throw exception;
             }
 
@@ -33080,139 +31013,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("MongoDbAtlasGenerateCredentials", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="mongodbatlasMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> MongoDbAtlasGenerateCredentials2(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->MongoDbAtlasGenerateCredentials2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("mongodbatlas_mount_path", ClientUtils.ParameterToString(mongodbatlasMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{mongodbatlas_mount_path}/creds/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("MongoDbAtlasGenerateCredentials2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="mongodbatlasMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MongoDbAtlasGenerateCredentials2Async(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->MongoDbAtlasGenerateCredentials2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("mongodbatlas_mount_path", ClientUtils.ParameterToString(mongodbatlasMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{mongodbatlas_mount_path}/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("MongoDbAtlasGenerateCredentials2", response);
                 if (exception != null) throw exception;
             }
 
@@ -50412,139 +48212,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("TerraformCloudGenerateCredentials", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="terraformMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> TerraformCloudGenerateCredentials2(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->TerraformCloudGenerateCredentials2");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("terraform_mount_path", ClientUtils.ParameterToString(terraformMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{terraform_mount_path}/creds/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("TerraformCloudGenerateCredentials2", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="terraformMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TerraformCloudGenerateCredentials2Async(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->TerraformCloudGenerateCredentials2");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("terraform_mount_path", ClientUtils.ParameterToString(terraformMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{terraform_mount_path}/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("TerraformCloudGenerateCredentials2", response);
                 if (exception != null) throw exception;
             }
 
