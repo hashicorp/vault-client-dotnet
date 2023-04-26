@@ -29,3 +29,9 @@ src/Vault/Client/IReadableConfiguration.cs
 src/Vault/Client/OpenAPIDateConverter.cs
 src/Vault/Vault.csproj
 src/Vault.Test/Vault.Test.csproj
+
+docs/*2Request.md
+docs/*2Response.md
+docs/*3Request.md
+docs/*3Response.md
+
