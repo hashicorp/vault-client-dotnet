@@ -40,3 +40,8 @@ src/Vault/Model/*2Response.cs
 src/Vault/Model/*3Request.cs
 src/Vault/Model/*3Response.cs
 
+src/Vault.Test/Model/*2RequestTests.cs
+src/Vault.Test/Model/*2ResponseTests.cs
+src/Vault.Test/Model/*3RequestTests.cs
+src/Vault.Test/Model/*3ResponseTests.cs
+
