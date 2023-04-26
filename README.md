@@ -322,10 +322,10 @@ Install-Package Polly
 
 ## Documentation for API Endpoints
 
-- [Auth](docs/Auth.md)
-- [Identity](docs/Identity.md)
-- [Secrets](docs/Secrets.md)
-- [System](docs/System.md)
+- [Auth](docs/AuthApi.md)
+- [Identity](docs/IdentityApi.md)
+- [Secrets](docs/SecretsApi.md)
+- [System](docs/SystemApi.md)
 
 <!-- prettier-ignore-start -->
 [doc-approle]:                  https://developer.hashicorp.com/vault/docs/auth/approle
