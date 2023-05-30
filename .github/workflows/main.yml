@@ -29,17 +29,17 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --verbosity normal
 
-  check-regen:
+  check-code-regeneration:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
-      - name: Check regenerated files
+      - name: Ensure the code has been properly regenerated with 'make regen'
         run: |
           make regen
           readonly changed_files="$(git diff --stat ':!Vault.sln')"
           if [[ "${changed_files}" != "" ]]; then
-            echo "Found diffs after running 'make regen'"
+            echo "Found differences after running 'make regen'"
             echo "Please run 'make regen' & commit the changed files:"
             echo "${changed_files}"
             exit 1
@@ -51,7 +51,6 @@ jobs:
       - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
         with:
           fetch-depth: 0
-          ref: ${{ github.head_ref }}
           persist-credentials: false
 
       - name: Ensure the readme is formatted (make format-readme)
