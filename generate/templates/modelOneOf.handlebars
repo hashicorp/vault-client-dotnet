@@ -1,5 +1,5 @@
     /// <summary>
-    /// {{description}}{{#unless description}}{{classname}}{{/unless}}
+    /// {{#with description}}{{.}}{{else}}{{classname}}{{/with}}
     /// </summary>
     [JsonConverter(typeof({{classname}}JsonConverter))]
     [DataContract(Name = "{{{name}}}")]

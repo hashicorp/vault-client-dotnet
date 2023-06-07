@@ -1,5 +1,5 @@
     /// <summary>
-    /// {{description}}{{#unless description}}Defines {{{name}}}{{/unless}}
+    /// {{#with description}}{{.}}{{else}}Defines {{{name}}}{{/with}}
     /// </summary>
     {{#with description}}
     /// <value>{{.}}</value>

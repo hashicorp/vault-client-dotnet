@@ -5,7 +5,7 @@ All URIs are relative to *{{{basePath}}}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-{{#with operations}}{{#each operation}}{{#endsWith operationId "2"}}{{else}}{{#endsWith operationId "3"}}{{else}}[**{{operationId}}**]({{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{summary}}
+{{#with operations}}{{#each operation}}{{#endsWith operationId "2"}}{{else}}{{#endsWith operationId "3"}}{{else}}[**{{operationId}}**]({{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{#if summary}}{{summary}}{{/if}}
 {{/endsWith}}{{/endsWith}}{{/each}}{{/with}}
 
 {{#with operations}}
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 <a name="{{{operationIdLowerCase}}}"></a>
 # **{{{operationId}}}**
 
-> {{returnType}}{{#unless returnType}}void{{/unless}} {{operationId}} ({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
+> {{#with returnType}}{{.}}{{else}}void{{/with}} {{operationId}} ({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
 
-{{{summary}}}{{#if notes}}
+{{#if summary}}{{{summary}}}{{/if}}{{#if notes}}
 
 {{{.}}}{{/if}}
 
@@ -73,10 +73,10 @@ namespace Example
             {{/unless}}
             {{#each allParams}}
             {{#if isPrimitiveType}}
-            var {{paramName}} = {{{example}}};  // {{{dataType}}} | {{{description}}}{{#unless required}} (optional) {{/unless}}{{#with defaultValue}} (default to {{{.}}}){{/with}}
+            var {{paramName}} = {{{example}}};  // {{{dataType}}} | {{#if description}}{{{description}}}{{/if}}{{#unless required}} (optional) {{/unless}}{{#with defaultValue}} (default to {{{.}}}){{/with}}
             {{/if}}
             {{#unless isPrimitiveType}}
-            var {{paramName}} = new {{{dataType}}}(); // {{{dataType}}} | {{{description}}}{{#unless required}} (optional) {{/unless}}{{#with defaultValue}} (default to {{{.}}}){{/with}}
+            var {{paramName}} = new {{{dataType}}}(); // {{{dataType}}} | {{#if description}}{{{description}}}{{/if}}{{#unless required}} (optional) {{/unless}}{{#with defaultValue}} (default to {{{.}}}){{/with}}
             {{/unless}}
             {{/each}}
 
@@ -104,7 +104,7 @@ namespace Example
 {{#unless allParams}}This endpoint does not need any parameter.{{/unless}}{{#each allParams}}{{#if @last}}
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------{{/if}}{{/each}}
-{{#each allParams}} **{{paramName}}** | {{#if isFile}}**{{dataType}}**{{/if}}{{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}{{#unless isFile}}[**{{dataType}}**]({{#if isContainer}}{{baseType}}{{/if}}{{#unless isContainer}}{{dataType}}{{/unless}}.md){{/unless}}{{/unless}}| {{description}} | {{#unless required}}[optional] {{/unless}}{{#with defaultValue}}[default to {{.}}]{{/with}}
+{{#each allParams}} **{{paramName}}** | {{#if isFile}}**{{dataType}}**{{/if}}{{#if isPrimitiveType}}**{{dataType}}**{{/if}}{{#unless isPrimitiveType}}{{#unless isFile}}[**{{dataType}}**]({{#if isContainer}}{{baseType}}{{/if}}{{#unless isContainer}}{{dataType}}{{/unless}}.md){{/unless}}{{/unless}}| {{#if description}}{{description}}{{/if}} | {{#unless required}}[optional] {{/unless}}{{#with defaultValue}}[default to {{.}}]{{/with}}
 {{/each}}
 
 ### Return type
@@ -117,8 +117,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: {{#if consumes}}{{{mediaType}}}{{#unless @last}}, {{/unless}}{{/if}}{{#unless consumes}}Not defined{{/unless}}
- - **Accept**: {{#each produces}}{{{mediaType}}}{{#unless @last}}, {{/unless}}{{/each}}{{#unless produces}}Not defined{{/unless}}
+ - **Content-Type**: {{#if consumes}}{{#if mediaType}}{{{mediaType}}}{{/if}}{{#unless @last}}, {{/unless}}{{/if}}{{#unless consumes}}Not defined{{/unless}}
+ - **Accept**: {{#each produces}}{{#if mediaType}}{{{mediaType}}}{{/if}}{{#unless @last}}, {{/unless}}{{/each}}{{#unless produces}}Not defined{{/unless}}
 
 {{#with responses.[0]}}
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 {{#each responses}}
-| **{{code}}** | {{message}} | {{#each headers}} * {{baseName}} - {{description}} <br> {{/each}}{{#unless headers.[0]}} - {{/unless}} |
+| **{{code}}** | {{message}} | {{#each headers}} * {{baseName}} - {{#if description}}{{description}}{{/if}} <br> {{/each}}{{#unless headers.[0]}} - {{/unless}} |
 {{/each}}
 {{/with}}
 

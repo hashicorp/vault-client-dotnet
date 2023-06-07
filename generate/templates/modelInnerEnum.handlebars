@@ -1,5 +1,5 @@
         {{#unless isContainer}}/// <summary>
-        /// {{description}}{{#unless description}}Defines {{{name}}}{{/unless}}
+        /// {{#with description}}{{.}}{{else}}Defines {{{name}}}{{/with}}
         /// </summary>
         {{#with description}}/// <value>{{.}}</value>{{/with}}
         {{#if isString}}[JsonConverter(typeof(StringEnumConverter))]{{/if}}
