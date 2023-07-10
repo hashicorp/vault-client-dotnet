@@ -7,6 +7,7 @@ additionalProperties:
   packageCompany: Hashicorp
   packageName: Vault
   packageVersion: 0.1.0-beta
+  packageGuid: "{16184629-2991-4084-BCA4-2748275C24E5}"
 library: httpclient
 files:
   Client.mustache:
