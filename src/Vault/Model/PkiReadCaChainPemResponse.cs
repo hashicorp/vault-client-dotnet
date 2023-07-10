@@ -45,7 +45,7 @@ namespace Vault.Model
         /// <param name="RevocationTimeRfc3339">Revocation time RFC 3339 formatted.</param>
 
 
-        public PkiReadCaChainPemResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), string IssuerId = default(string), string RevocationTime = default(string), string RevocationTimeRfc3339 = default(string))
+        public PkiReadCaChainPemResponse(string CaChain = default(string), string Certificate = default(string), string IssuerId = default(string), long RevocationTime = default(long), string RevocationTimeRfc3339 = default(string))
         {
 
             this.CaChain = CaChain;
@@ -66,7 +66,7 @@ namespace Vault.Model
         /// <value>Issuing CA Chain</value>
         [DataMember(Name = "ca_chain", EmitDefaultValue = false)]
 
-        public List<string> CaChain { get; set; }
+        public string CaChain { get; set; }
 
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Vault.Model
         /// <value>Revocation time</value>
         [DataMember(Name = "revocation_time", EmitDefaultValue = false)]
 
-        public string RevocationTime { get; set; }
+        public long RevocationTime { get; set; }
 
 
         /// <summary>
@@ -157,9 +157,9 @@ namespace Vault.Model
             return
                 (
                     this.CaChain == input.CaChain ||
-                    this.CaChain != null &&
-                    input.CaChain != null &&
-                    this.CaChain.SequenceEqual(input.CaChain)
+                    (this.CaChain != null &&
+                    this.CaChain.Equals(input.CaChain))
+
                 ) &&
                 (
                     this.Certificate == input.Certificate ||
@@ -175,9 +175,8 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RevocationTime == input.RevocationTime ||
-                    (this.RevocationTime != null &&
-                    this.RevocationTime.Equals(input.RevocationTime))
 
+                    this.RevocationTime.Equals(input.RevocationTime)
                 ) &&
                 (
                     this.RevocationTimeRfc3339 == input.RevocationTimeRfc3339 ||
@@ -213,11 +212,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.IssuerId.GetHashCode();
                 }
 
-                if (this.RevocationTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.RevocationTime.GetHashCode();
-                }
 
+                hashCode = (hashCode * 59) + this.RevocationTime.GetHashCode();
                 if (this.RevocationTimeRfc3339 != null)
                 {
                     hashCode = (hashCode * 59) + this.RevocationTimeRfc3339.GetHashCode();

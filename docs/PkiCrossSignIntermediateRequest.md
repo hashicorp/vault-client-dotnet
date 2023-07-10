@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **ManagedKeyId** | **string** | The name of the managed key to use when the exported type is kms. When kms type is the key type, this field or managed_key_name is required. Ignored for other types. | [optional] 
 **ManagedKeyName** | **string** | The name of the managed key to use when the exported type is kms. When kms type is the key type, this field or managed_key_id is required. Ignored for other types. | [optional] 
 **NotAfter** | **string** | Set the not after field of the certificate with specified date value. The value format should be given in UTC format YYYY-MM-ddTHH:MM:SSZ | [optional] 
-**NotBeforeDuration** | **int** | The duration before now which the certificate needs to be backdated by. | [optional] [default to 30]
+**NotBeforeDuration** | **string** | The duration before now which the certificate needs to be backdated by. | [optional] [default to "30"]
 **Organization** | **List&lt;string&gt;** | If set, O (Organization) will be set to this value. | [optional] 
 **OtherSans** | **List&lt;string&gt;** | Requested other SANs, in an array with the format &lt;oid&gt;;UTF8:&lt;utf8 string value&gt; for each entry. | [optional] 
 **Ou** | **List&lt;string&gt;** | If set, OU (OrganizationalUnit) will be set to this value. | [optional] 
@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **SerialNumber** | **string** | The Subject&#x27;s requested serial number, if any. See RFC 4519 Section 2.31 &#x27;serialNumber&#x27; for a description of this field. If you want more than one, specify alternative names in the alt_names map using OID 2.5.4.5. This has no impact on the final certificate&#x27;s Serial Number field. | [optional] 
 **SignatureBits** | **int** | The number of bits to use in the signature algorithm; accepts 256 for SHA-2-256, 384 for SHA-2-384, and 512 for SHA-2-512. Defaults to 0 to automatically detect based on key length (SHA-2-256 for RSA keys, and matching the curve size for NIST P-Curves). | [optional] [default to 0]
 **StreetAddress** | **List&lt;string&gt;** | If set, Street Address will be set to this value. | [optional] 
-**Ttl** | **int** | The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the mount max TTL. Note: this only has an effect when generating a CA cert or signing a CA cert, not when generating a CSR for an intermediate CA. | [optional] 
+**Ttl** | **string** | The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the mount max TTL. Note: this only has an effect when generating a CA cert or signing a CA cert, not when generating a CSR for an intermediate CA. | [optional] 
 **UriSans** | **List&lt;string&gt;** | The requested URI SANs, if any, in a comma-delimited list. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

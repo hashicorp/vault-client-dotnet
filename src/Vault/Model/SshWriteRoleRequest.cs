@@ -149,14 +149,14 @@ namespace Vault.Model
 
         /// <param name="MaxTtl">[Not applicable for OTP type] [Optional for CA type] The maximum allowed lease duration.</param>
 
-        /// <param name="NotBeforeDuration">[Not applicable for OTP type] [Optional for CA type] The duration that the SSH certificate should be backdated by at issuance. (default to 30).</param>
+        /// <param name="NotBeforeDuration">[Not applicable for OTP type] [Optional for CA type] The duration that the SSH certificate should be backdated by at issuance. (default to &quot;30&quot;).</param>
 
         /// <param name="Port">[Optional for OTP type] [Not applicable for CA type] Port number for SSH connection. Default is &#x27;22&#x27;. Port number does not play any role in creation of OTP. For &#x27;otp&#x27; type, this is just a way to inform client about the port number to use. Port number will be returned to client by Vault server along with OTP..</param>
 
         /// <param name="Ttl">[Not applicable for OTP type] [Optional for CA type] The lease duration if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the value of max_ttl..</param>
 
 
-        public SshWriteRoleRequest(AlgorithmSignerEnum? AlgorithmSigner = default(AlgorithmSignerEnum?), bool AllowBareDomains = default(bool), bool AllowHostCertificates = false, bool AllowSubdomains = default(bool), bool AllowUserCertificates = false, bool AllowUserKeyIds = default(bool), string AllowedCriticalOptions = default(string), string AllowedDomains = default(string), bool AllowedDomainsTemplate = false, string AllowedExtensions = default(string), Object AllowedUserKeyLengths = default(Object), string AllowedUsers = default(string), bool AllowedUsersTemplate = false, string CidrList = default(string), Object DefaultCriticalOptions = default(Object), Object DefaultExtensions = default(Object), bool DefaultExtensionsTemplate = false, string DefaultUser = default(string), bool DefaultUserTemplate = false, string ExcludeCidrList = default(string), string KeyIdFormat = default(string), KeyTypeEnum? KeyType = default(KeyTypeEnum?), int MaxTtl = default(int), int NotBeforeDuration = 30, int Port = default(int), int Ttl = default(int))
+        public SshWriteRoleRequest(AlgorithmSignerEnum? AlgorithmSigner = default(AlgorithmSignerEnum?), bool AllowBareDomains = default(bool), bool AllowHostCertificates = false, bool AllowSubdomains = default(bool), bool AllowUserCertificates = false, bool AllowUserKeyIds = default(bool), string AllowedCriticalOptions = default(string), string AllowedDomains = default(string), bool AllowedDomainsTemplate = false, string AllowedExtensions = default(string), Object AllowedUserKeyLengths = default(Object), string AllowedUsers = default(string), bool AllowedUsersTemplate = false, string CidrList = default(string), Object DefaultCriticalOptions = default(Object), Object DefaultExtensions = default(Object), bool DefaultExtensionsTemplate = false, string DefaultUser = default(string), bool DefaultUserTemplate = false, string ExcludeCidrList = default(string), string KeyIdFormat = default(string), KeyTypeEnum? KeyType = default(KeyTypeEnum?), string MaxTtl = default(string), string NotBeforeDuration = "30", int Port = default(int), string Ttl = default(string))
         {
 
             this.AlgorithmSigner = AlgorithmSigner;
@@ -205,7 +205,9 @@ namespace Vault.Model
 
             this.MaxTtl = MaxTtl;
 
-            this.NotBeforeDuration = NotBeforeDuration;
+            // use default value if no "NotBeforeDuration" provided
+            this.NotBeforeDuration = NotBeforeDuration ?? "30";
+
 
             this.Port = Port;
 
@@ -399,7 +401,7 @@ namespace Vault.Model
         /// <value>[Not applicable for OTP type] [Optional for CA type] The maximum allowed lease duration</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -408,7 +410,7 @@ namespace Vault.Model
         /// <value>[Not applicable for OTP type] [Optional for CA type] The duration that the SSH certificate should be backdated by at issuance.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
 
-        public int NotBeforeDuration { get; set; }
+        public string NotBeforeDuration { get; set; }
 
 
         /// <summary>
@@ -426,7 +428,7 @@ namespace Vault.Model
         /// <value>[Not applicable for OTP type] [Optional for CA type] The lease duration if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the value of max_ttl.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -623,13 +625,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.NotBeforeDuration == input.NotBeforeDuration ||
+                    (this.NotBeforeDuration != null &&
+                    this.NotBeforeDuration.Equals(input.NotBeforeDuration))
 
-                    this.NotBeforeDuration.Equals(input.NotBeforeDuration)
                 ) &&
                 (
                     this.Port == input.Port ||
@@ -638,8 +642,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -731,14 +736,23 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.KeyType.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.NotBeforeDuration != null)
+                {
+                    hashCode = (hashCode * 59) + this.NotBeforeDuration.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.NotBeforeDuration.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Port.GetHashCode();
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

@@ -37,7 +37,7 @@ namespace Vault.Model
         /// <param name="TokenTtl">The initial ttl of the token to generate.</param>
 
 
-        public AppRoleReadTokenTtlResponse(int TokenTtl = default(int))
+        public AppRoleReadTokenTtlResponse(string TokenTtl = default(string))
         {
 
             this.TokenTtl = TokenTtl;
@@ -50,7 +50,7 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-        public int TokenTtl { get; set; }
+        public string TokenTtl { get; set; }
 
 
 
@@ -101,8 +101,9 @@ namespace Vault.Model
             return
                 (
                     this.TokenTtl == input.TokenTtl ||
+                    (this.TokenTtl != null &&
+                    this.TokenTtl.Equals(input.TokenTtl))
 
-                    this.TokenTtl.Equals(input.TokenTtl)
                 );
 
         }
@@ -117,8 +118,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.TokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 return hashCode;
             }
         }

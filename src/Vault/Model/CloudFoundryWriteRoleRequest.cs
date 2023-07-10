@@ -73,7 +73,7 @@ namespace Vault.Model
         /// <param name="Ttl">Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used..</param>
 
 
-        public CloudFoundryWriteRoleRequest(List<string> BoundApplicationIds = default(List<string>), List<string> BoundCidrs = default(List<string>), List<string> BoundInstanceIds = default(List<string>), List<string> BoundOrganizationIds = default(List<string>), List<string> BoundSpaceIds = default(List<string>), bool DisableIpMatching = false, int MaxTtl = default(int), int Period = default(int), List<string> Policies = default(List<string>), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", int Ttl = default(int))
+        public CloudFoundryWriteRoleRequest(List<string> BoundApplicationIds = default(List<string>), List<string> BoundCidrs = default(List<string>), List<string> BoundInstanceIds = default(List<string>), List<string> BoundOrganizationIds = default(List<string>), List<string> BoundSpaceIds = default(List<string>), bool DisableIpMatching = false, string MaxTtl = default(string), string Period = default(string), List<string> Policies = default(List<string>), List<string> TokenBoundCidrs = default(List<string>), string TokenExplicitMaxTtl = default(string), string TokenMaxTtl = default(string), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), string TokenPeriod = default(string), List<string> TokenPolicies = default(List<string>), string TokenTtl = default(string), string TokenType = "default-service", string Ttl = default(string))
         {
 
             this.BoundApplicationIds = BoundApplicationIds;
@@ -178,7 +178,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete] public int MaxTtl { get; set; }
+        [Obsolete] public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete] public int Period { get; set; }
+        [Obsolete] public string Period { get; set; }
 
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenExplicitMaxTtl { get; set; }
+        public string TokenExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenMaxTtl { get; set; }
+        public string TokenMaxTtl { get; set; }
 
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-        public int TokenPeriod { get; set; }
+        public string TokenPeriod { get; set; }
 
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-        public int TokenTtl { get; set; }
+        public string TokenTtl { get; set; }
 
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        [Obsolete] public int Ttl { get; set; }
+        [Obsolete] public string Ttl { get; set; }
 
 
 
@@ -390,13 +390,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
 
-                    this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.Policies == input.Policies ||
@@ -412,13 +414,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+                    (this.TokenExplicitMaxTtl != null &&
+                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl))
 
-                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+                    (this.TokenMaxTtl != null &&
+                    this.TokenMaxTtl.Equals(input.TokenMaxTtl))
 
-                    this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
@@ -432,8 +436,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+                    (this.TokenPeriod != null &&
+                    this.TokenPeriod.Equals(input.TokenPeriod))
 
-                    this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
@@ -443,8 +448,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
+                    (this.TokenTtl != null &&
+                    this.TokenTtl.Equals(input.TokenTtl))
 
-                    this.TokenTtl.Equals(input.TokenTtl)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
@@ -454,8 +460,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -497,10 +504,16 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.DisableIpMatching.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.Period != null)
+                {
+                    hashCode = (hashCode * 59) + this.Period.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Period.GetHashCode();
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();
@@ -511,30 +524,45 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
 
+                if (this.TokenExplicitMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                if (this.TokenMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+                if (this.TokenPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
 
+                if (this.TokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

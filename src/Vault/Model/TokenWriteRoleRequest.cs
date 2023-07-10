@@ -69,7 +69,7 @@ namespace Vault.Model
         /// <param name="TokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
 
 
-        public TokenWriteRoleRequest(List<string> AllowedEntityAliases = default(List<string>), List<string> AllowedPolicies = default(List<string>), List<string> AllowedPoliciesGlob = default(List<string>), List<string> BoundCidrs = default(List<string>), List<string> DisallowedPolicies = default(List<string>), List<string> DisallowedPoliciesGlob = default(List<string>), int ExplicitMaxTtl = default(int), bool Orphan = default(bool), string PathSuffix = default(string), int Period = default(int), bool Renewable = true, List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), string TokenType = "default-service")
+        public TokenWriteRoleRequest(List<string> AllowedEntityAliases = default(List<string>), List<string> AllowedPolicies = default(List<string>), List<string> AllowedPoliciesGlob = default(List<string>), List<string> BoundCidrs = default(List<string>), List<string> DisallowedPolicies = default(List<string>), List<string> DisallowedPoliciesGlob = default(List<string>), string ExplicitMaxTtl = default(string), bool Orphan = default(bool), string PathSuffix = default(string), string Period = default(string), bool Renewable = true, List<string> TokenBoundCidrs = default(List<string>), string TokenExplicitMaxTtl = default(string), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), string TokenPeriod = default(string), string TokenType = "default-service")
         {
 
             this.AllowedEntityAliases = AllowedEntityAliases;
@@ -170,7 +170,7 @@ namespace Vault.Model
         /// <value>Use &#x27;token_explicit_max_ttl&#x27; instead.</value>
         [DataMember(Name = "explicit_max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete] public int ExplicitMaxTtl { get; set; }
+        [Obsolete] public string ExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace Vault.Model
         /// <value>Use &#x27;token_period&#x27; instead.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete] public int Period { get; set; }
+        [Obsolete] public string Period { get; set; }
 
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenExplicitMaxTtl { get; set; }
+        public string TokenExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-        public int TokenPeriod { get; set; }
+        public string TokenPeriod { get; set; }
 
 
         /// <summary>
@@ -363,8 +363,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.ExplicitMaxTtl == input.ExplicitMaxTtl ||
+                    (this.ExplicitMaxTtl != null &&
+                    this.ExplicitMaxTtl.Equals(input.ExplicitMaxTtl))
 
-                    this.ExplicitMaxTtl.Equals(input.ExplicitMaxTtl)
                 ) &&
                 (
                     this.Orphan == input.Orphan ||
@@ -379,8 +380,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
 
-                    this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.Renewable == input.Renewable ||
@@ -395,8 +397,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+                    (this.TokenExplicitMaxTtl != null &&
+                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl))
 
-                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
@@ -410,8 +413,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+                    (this.TokenPeriod != null &&
+                    this.TokenPeriod.Equals(input.TokenPeriod))
 
-                    this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
@@ -462,8 +466,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.DisallowedPoliciesGlob.GetHashCode();
                 }
 
+                if (this.ExplicitMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.ExplicitMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.ExplicitMaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Orphan.GetHashCode();
                 if (this.PathSuffix != null)
@@ -471,8 +478,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.PathSuffix.GetHashCode();
                 }
 
+                if (this.Period != null)
+                {
+                    hashCode = (hashCode * 59) + this.Period.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Period.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Renewable.GetHashCode();
                 if (this.TokenBoundCidrs != null)
@@ -480,14 +490,20 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
 
+                if (this.TokenExplicitMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+                if (this.TokenPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();

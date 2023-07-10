@@ -61,7 +61,7 @@ namespace Vault.Model
         /// <param name="Ttl">TTL for the Consul token created from the role..</param>
 
 
-        public ConsulWriteRoleRequest(string ConsulNamespace = default(string), List<string> ConsulPolicies = default(List<string>), List<string> ConsulRoles = default(List<string>), int Lease = default(int), bool Local = default(bool), int MaxTtl = default(int), List<string> NodeIdentities = default(List<string>), string Partition = default(string), List<string> Policies = default(List<string>), string Policy = default(string), List<string> ServiceIdentities = default(List<string>), string TokenType = "client", int Ttl = default(int))
+        public ConsulWriteRoleRequest(string ConsulNamespace = default(string), List<string> ConsulPolicies = default(List<string>), List<string> ConsulRoles = default(List<string>), string Lease = default(string), bool Local = default(bool), string MaxTtl = default(string), List<string> NodeIdentities = default(List<string>), string Partition = default(string), List<string> Policies = default(List<string>), string Policy = default(string), List<string> ServiceIdentities = default(List<string>), string TokenType = "client", string Ttl = default(string))
         {
 
             this.ConsulNamespace = ConsulNamespace;
@@ -127,7 +127,7 @@ namespace Vault.Model
         /// <value>Use \&quot;ttl\&quot; instead.</value>
         [DataMember(Name = "lease", EmitDefaultValue = false)]
 
-        [Obsolete] public int Lease { get; set; }
+        [Obsolete] public string Lease { get; set; }
 
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Vault.Model
         /// <value>Max TTL for the Consul token created from the role.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Vault.Model
         /// <value>TTL for the Consul token created from the role.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -289,8 +289,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Lease == input.Lease ||
+                    (this.Lease != null &&
+                    this.Lease.Equals(input.Lease))
 
-                    this.Lease.Equals(input.Lease)
                 ) &&
                 (
                     this.Local == input.Local ||
@@ -299,8 +300,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.NodeIdentities == input.NodeIdentities ||
@@ -340,8 +342,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -371,12 +374,18 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.ConsulRoles.GetHashCode();
                 }
 
+                if (this.Lease != null)
+                {
+                    hashCode = (hashCode * 59) + this.Lease.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Lease.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Local.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.NodeIdentities != null)
                 {
                     hashCode = (hashCode * 59) + this.NodeIdentities.GetHashCode();
@@ -407,8 +416,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

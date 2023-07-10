@@ -51,7 +51,7 @@ namespace Vault.Model
         /// <param name="ValidPrincipals">Valid principals, either usernames or hostnames, that the certificate should be signed for..</param>
 
 
-        public SshIssueCertificateRequest(string CertType = "user", Object CriticalOptions = default(Object), Object Extensions = default(Object), int KeyBits = 0, string KeyId = default(string), string KeyType = "rsa", int Ttl = default(int), string ValidPrincipals = default(string))
+        public SshIssueCertificateRequest(string CertType = "user", Object CriticalOptions = default(Object), Object Extensions = default(Object), int KeyBits = 0, string KeyId = default(string), string KeyType = "rsa", string Ttl = default(string), string ValidPrincipals = default(string))
         {
 
             // use default value if no "CertType" provided
@@ -136,7 +136,7 @@ namespace Vault.Model
         /// <value>The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
         /// <summary>
@@ -238,8 +238,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.ValidPrincipals == input.ValidPrincipals ||
@@ -287,8 +288,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.KeyType.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.ValidPrincipals != null)
                 {
                     hashCode = (hashCode * 59) + this.ValidPrincipals.GetHashCode();

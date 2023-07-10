@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="TokenPeriod">If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;)..</param>
 
 
-        public AppRoleWritePeriodRequest(int Period = default(int), int TokenPeriod = default(int))
+        public AppRoleWritePeriodRequest(string Period = default(string), string TokenPeriod = default(string))
         {
 
             this.Period = Period;
@@ -54,7 +54,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete] public int Period { get; set; }
+        [Obsolete] public string Period { get; set; }
 
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-        public int TokenPeriod { get; set; }
+        public string TokenPeriod { get; set; }
 
 
 
@@ -115,13 +115,15 @@ namespace Vault.Model
             return
                 (
                     this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
 
-                    this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+                    (this.TokenPeriod != null &&
+                    this.TokenPeriod.Equals(input.TokenPeriod))
 
-                    this.TokenPeriod.Equals(input.TokenPeriod)
                 );
 
         }
@@ -136,10 +138,16 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.Period != null)
+                {
+                    hashCode = (hashCode * 59) + this.Period.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Period.GetHashCode();
+                if (this.TokenPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 return hashCode;
             }
         }

@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **NameTemplate** | **string** | The name template to use when generating service accounts, roles and role bindings. If unset, a default template is used. | [optional] 
 **ServiceAccountName** | **string** | The pre-existing service account to generate tokens for. Mutually exclusive with all role parameters. If set, only a Kubernetes service account token will be created. | [optional] 
 **TokenDefaultAudiences** | **List&lt;string&gt;** | The default audiences for generated Kubernetes service account tokens. If not set or set to \&quot;\&quot;, will use k8s cluster default. | [optional] 
-**TokenDefaultTtl** | **int** | The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default. | [optional] 
-**TokenMaxTtl** | **int** | The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default. | [optional] 
+**TokenDefaultTtl** | **string** | The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default. | [optional] 
+**TokenMaxTtl** | **string** | The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

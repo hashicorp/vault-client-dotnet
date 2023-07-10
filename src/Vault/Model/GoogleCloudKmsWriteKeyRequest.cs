@@ -49,7 +49,7 @@ namespace Vault.Model
         /// <param name="RotationPeriod">Amount of time between crypto key version rotations. This is specified as a time duration value like 72h (72 hours). The smallest possible value is 24h. This value only applies to keys with a purpose of \&quot;encrypt_decrypt\&quot;..</param>
 
 
-        public GoogleCloudKmsWriteKeyRequest(string Algorithm = default(string), string CryptoKey = default(string), string KeyRing = default(string), Object Labels = default(Object), string ProtectionLevel = default(string), string Purpose = default(string), int RotationPeriod = default(int))
+        public GoogleCloudKmsWriteKeyRequest(string Algorithm = default(string), string CryptoKey = default(string), string KeyRing = default(string), Object Labels = default(Object), string ProtectionLevel = default(string), string Purpose = default(string), string RotationPeriod = default(string))
         {
 
             this.Algorithm = Algorithm;
@@ -128,7 +128,7 @@ namespace Vault.Model
         /// <value>Amount of time between crypto key version rotations. This is specified as a time duration value like 72h (72 hours). The smallest possible value is 24h. This value only applies to keys with a purpose of \&quot;encrypt_decrypt\&quot;.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
-        public int RotationPeriod { get; set; }
+        public string RotationPeriod { get; set; }
 
 
 
@@ -221,8 +221,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
+                    (this.RotationPeriod != null &&
+                    this.RotationPeriod.Equals(input.RotationPeriod))
 
-                    this.RotationPeriod.Equals(input.RotationPeriod)
                 );
 
         }
@@ -267,8 +268,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Purpose.GetHashCode();
                 }
 
+                if (this.RotationPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
                 return hashCode;
             }
         }

@@ -36,7 +36,7 @@ namespace Vault.Model
 
         /// <param name="Certificate">The generated self-signed CA certificate..</param>
 
-        /// <param name="Expiration">The expiration of the given..</param>
+        /// <param name="Expiration">The expiration of the given issuer..</param>
 
         /// <param name="IssuerId">The ID of the issuer.</param>
 
@@ -53,7 +53,7 @@ namespace Vault.Model
         /// <param name="SerialNumber">The requested Subject&#x27;s named serial number..</param>
 
 
-        public PkiGenerateRootResponse(string Certificate = default(string), string Expiration = default(string), string IssuerId = default(string), string IssuerName = default(string), string IssuingCa = default(string), string KeyId = default(string), string KeyName = default(string), string PrivateKey = default(string), string SerialNumber = default(string))
+        public PkiGenerateRootResponse(string Certificate = default(string), long Expiration = default(long), string IssuerId = default(string), string IssuerName = default(string), string IssuingCa = default(string), string KeyId = default(string), string KeyName = default(string), string PrivateKey = default(string), string SerialNumber = default(string))
         {
 
             this.Certificate = Certificate;
@@ -86,12 +86,12 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The expiration of the given.
+        /// The expiration of the given issuer.
         /// </summary>
-        /// <value>The expiration of the given.</value>
+        /// <value>The expiration of the given issuer.</value>
         [DataMember(Name = "expiration", EmitDefaultValue = false)]
 
-        public string Expiration { get; set; }
+        public long Expiration { get; set; }
 
 
         /// <summary>
@@ -219,9 +219,8 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Expiration == input.Expiration ||
-                    (this.Expiration != null &&
-                    this.Expiration.Equals(input.Expiration))
 
+                    this.Expiration.Equals(input.Expiration)
                 ) &&
                 (
                     this.IssuerId == input.IssuerId ||
@@ -283,11 +282,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Certificate.GetHashCode();
                 }
 
-                if (this.Expiration != null)
-                {
-                    hashCode = (hashCode * 59) + this.Expiration.GetHashCode();
-                }
 
+                hashCode = (hashCode * 59) + this.Expiration.GetHashCode();
                 if (this.IssuerId != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuerId.GetHashCode();

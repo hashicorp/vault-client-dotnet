@@ -73,6 +73,24 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'HashFunction'
         }
 
+        /// <summary>
+        /// Test the property 'PublicKey'
+        /// </summary>
+        [Fact]
+        public void PublicKeyTest()
+        {
+            // TODO unit test for the property 'PublicKey'
+        }
+
+        /// <summary>
+        /// Test the property '_Version'
+        /// </summary>
+        [Fact]
+        public void _VersionTest()
+        {
+            // TODO unit test for the property '_Version'
+        }
+
 
     }
 

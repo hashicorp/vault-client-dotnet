@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **DateTime** |  | [optional] 
 **CurrentVersion** | **long** |  | [optional] 
 **CustomMetadata** | **Object** | User-provided key-value pairs that are used to describe arbitrary and version-agnostic information about a secret. | [optional] 
-**DeleteVersionAfter** | **int** | The length of time before a version is deleted. | [optional] 
+**DeleteVersionAfter** | **string** | The length of time before a version is deleted. | [optional] 
 **MaxVersions** | **long** | The number of versions to keep | [optional] 
 **OldestVersion** | **long** |  | [optional] 
 **UpdatedTime** | **DateTime** |  | [optional] 

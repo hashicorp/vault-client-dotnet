@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="CreationTtl">CreationTtl.</param>
 
 
-        public ReadWrappingPropertiesResponse(string CreationPath = default(string), DateTime CreationTime = default(DateTime), int CreationTtl = default(int))
+        public ReadWrappingPropertiesResponse(string CreationPath = default(string), DateTime CreationTime = default(DateTime), string CreationTtl = default(string))
         {
 
             this.CreationPath = CreationPath;
@@ -73,7 +73,7 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "creation_ttl", EmitDefaultValue = false)]
 
-        public int CreationTtl { get; set; }
+        public string CreationTtl { get; set; }
 
 
 
@@ -138,8 +138,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.CreationTtl == input.CreationTtl ||
+                    (this.CreationTtl != null &&
+                    this.CreationTtl.Equals(input.CreationTtl))
 
-                    this.CreationTtl.Equals(input.CreationTtl)
                 );
 
         }
@@ -164,8 +165,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.CreationTime.GetHashCode();
                 }
 
+                if (this.CreationTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.CreationTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.CreationTtl.GetHashCode();
                 return hashCode;
             }
         }

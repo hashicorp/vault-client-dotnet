@@ -34,21 +34,29 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiConfigureAutoTidyResponse" /> class.
         /// </summary>
 
+        /// <param name="AcmeAccountSafetyBuffer">Safety buffer after creation after which accounts lacking orders are revoked.</param>
+
         /// <param name="Enabled">Specifies whether automatic tidy is enabled or not.</param>
 
         /// <param name="IntervalDuration">Specifies the duration between automatic tidy operation.</param>
 
         /// <param name="IssuerSafetyBuffer">Issuer safety buffer.</param>
 
+        /// <param name="MaintainStoredCertificateCounts">MaintainStoredCertificateCounts.</param>
+
         /// <param name="PauseDuration">Duration to pause between tidying certificates.</param>
+
+        /// <param name="PublishStoredCertificateCountMetrics">PublishStoredCertificateCountMetrics.</param>
 
         /// <param name="RevocationQueueSafetyBuffer">RevocationQueueSafetyBuffer.</param>
 
         /// <param name="SafetyBuffer">Safety buffer time duration.</param>
 
+        /// <param name="TidyAcme">Tidy Unused Acme Accounts, and Orders.</param>
+
         /// <param name="TidyCertStore">Specifies whether to tidy up the certificate store.</param>
 
-        /// <param name="TidyCrossClusterRevokedCerts">TidyCrossClusterRevokedCerts.</param>
+        /// <param name="TidyCrossClusterRevokedCerts">Tidy the cross-cluster revoked certificate store.</param>
 
         /// <param name="TidyExpiredIssuers">Specifies whether tidy expired issuers.</param>
 
@@ -61,8 +69,10 @@ namespace Vault.Model
         /// <param name="TidyRevokedCerts">Specifies whether to remove all invalid and expired certificates from storage.</param>
 
 
-        public PkiConfigureAutoTidyResponse(bool Enabled = default(bool), int IntervalDuration = default(int), int IssuerSafetyBuffer = default(int), string PauseDuration = default(string), int RevocationQueueSafetyBuffer = default(int), int SafetyBuffer = default(int), bool TidyCertStore = default(bool), bool TidyCrossClusterRevokedCerts = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationQueue = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool))
+        public PkiConfigureAutoTidyResponse(int AcmeAccountSafetyBuffer = default(int), bool Enabled = default(bool), int IntervalDuration = default(int), int IssuerSafetyBuffer = default(int), bool MaintainStoredCertificateCounts = default(bool), string PauseDuration = default(string), bool PublishStoredCertificateCountMetrics = default(bool), int RevocationQueueSafetyBuffer = default(int), int SafetyBuffer = default(int), bool TidyAcme = default(bool), bool TidyCertStore = default(bool), bool TidyCrossClusterRevokedCerts = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationQueue = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool))
         {
+
+            this.AcmeAccountSafetyBuffer = AcmeAccountSafetyBuffer;
 
             this.Enabled = Enabled;
 
@@ -70,11 +80,17 @@ namespace Vault.Model
 
             this.IssuerSafetyBuffer = IssuerSafetyBuffer;
 
+            this.MaintainStoredCertificateCounts = MaintainStoredCertificateCounts;
+
             this.PauseDuration = PauseDuration;
+
+            this.PublishStoredCertificateCountMetrics = PublishStoredCertificateCountMetrics;
 
             this.RevocationQueueSafetyBuffer = RevocationQueueSafetyBuffer;
 
             this.SafetyBuffer = SafetyBuffer;
+
+            this.TidyAcme = TidyAcme;
 
             this.TidyCertStore = TidyCertStore;
 
@@ -91,6 +107,15 @@ namespace Vault.Model
             this.TidyRevokedCerts = TidyRevokedCerts;
 
         }
+
+        /// <summary>
+        /// Safety buffer after creation after which accounts lacking orders are revoked
+        /// </summary>
+        /// <value>Safety buffer after creation after which accounts lacking orders are revoked</value>
+        [DataMember(Name = "acme_account_safety_buffer", EmitDefaultValue = false)]
+
+        public int AcmeAccountSafetyBuffer { get; set; }
+
 
         /// <summary>
         /// Specifies whether automatic tidy is enabled or not
@@ -120,12 +145,28 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Gets or Sets MaintainStoredCertificateCounts
+        /// </summary>
+        [DataMember(Name = "maintain_stored_certificate_counts", EmitDefaultValue = true)]
+
+        public bool MaintainStoredCertificateCounts { get; set; }
+
+
+        /// <summary>
         /// Duration to pause between tidying certificates
         /// </summary>
         /// <value>Duration to pause between tidying certificates</value>
         [DataMember(Name = "pause_duration", EmitDefaultValue = false)]
 
         public string PauseDuration { get; set; }
+
+
+        /// <summary>
+        /// Gets or Sets PublishStoredCertificateCountMetrics
+        /// </summary>
+        [DataMember(Name = "publish_stored_certificate_count_metrics", EmitDefaultValue = true)]
+
+        public bool PublishStoredCertificateCountMetrics { get; set; }
 
 
         /// <summary>
@@ -146,6 +187,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Tidy Unused Acme Accounts, and Orders
+        /// </summary>
+        /// <value>Tidy Unused Acme Accounts, and Orders</value>
+        [DataMember(Name = "tidy_acme", EmitDefaultValue = true)]
+
+        public bool TidyAcme { get; set; }
+
+
+        /// <summary>
         /// Specifies whether to tidy up the certificate store
         /// </summary>
         /// <value>Specifies whether to tidy up the certificate store</value>
@@ -155,8 +205,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Gets or Sets TidyCrossClusterRevokedCerts
+        /// Tidy the cross-cluster revoked certificate store
         /// </summary>
+        /// <value>Tidy the cross-cluster revoked certificate store</value>
         [DataMember(Name = "tidy_cross_cluster_revoked_certs", EmitDefaultValue = true)]
 
         public bool TidyCrossClusterRevokedCerts { get; set; }
@@ -215,12 +266,16 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiConfigureAutoTidyResponse {\n");
+            sb.Append("  AcmeAccountSafetyBuffer: ").Append(AcmeAccountSafetyBuffer).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  IntervalDuration: ").Append(IntervalDuration).Append("\n");
             sb.Append("  IssuerSafetyBuffer: ").Append(IssuerSafetyBuffer).Append("\n");
+            sb.Append("  MaintainStoredCertificateCounts: ").Append(MaintainStoredCertificateCounts).Append("\n");
             sb.Append("  PauseDuration: ").Append(PauseDuration).Append("\n");
+            sb.Append("  PublishStoredCertificateCountMetrics: ").Append(PublishStoredCertificateCountMetrics).Append("\n");
             sb.Append("  RevocationQueueSafetyBuffer: ").Append(RevocationQueueSafetyBuffer).Append("\n");
             sb.Append("  SafetyBuffer: ").Append(SafetyBuffer).Append("\n");
+            sb.Append("  TidyAcme: ").Append(TidyAcme).Append("\n");
             sb.Append("  TidyCertStore: ").Append(TidyCertStore).Append("\n");
             sb.Append("  TidyCrossClusterRevokedCerts: ").Append(TidyCrossClusterRevokedCerts).Append("\n");
             sb.Append("  TidyExpiredIssuers: ").Append(TidyExpiredIssuers).Append("\n");
@@ -264,6 +319,11 @@ namespace Vault.Model
             }
             return
                 (
+                    this.AcmeAccountSafetyBuffer == input.AcmeAccountSafetyBuffer ||
+
+                    this.AcmeAccountSafetyBuffer.Equals(input.AcmeAccountSafetyBuffer)
+                ) &&
+                (
                     this.Enabled == input.Enabled ||
 
                     this.Enabled.Equals(input.Enabled)
@@ -279,10 +339,20 @@ namespace Vault.Model
                     this.IssuerSafetyBuffer.Equals(input.IssuerSafetyBuffer)
                 ) &&
                 (
+                    this.MaintainStoredCertificateCounts == input.MaintainStoredCertificateCounts ||
+
+                    this.MaintainStoredCertificateCounts.Equals(input.MaintainStoredCertificateCounts)
+                ) &&
+                (
                     this.PauseDuration == input.PauseDuration ||
                     (this.PauseDuration != null &&
                     this.PauseDuration.Equals(input.PauseDuration))
 
+                ) &&
+                (
+                    this.PublishStoredCertificateCountMetrics == input.PublishStoredCertificateCountMetrics ||
+
+                    this.PublishStoredCertificateCountMetrics.Equals(input.PublishStoredCertificateCountMetrics)
                 ) &&
                 (
                     this.RevocationQueueSafetyBuffer == input.RevocationQueueSafetyBuffer ||
@@ -293,6 +363,11 @@ namespace Vault.Model
                     this.SafetyBuffer == input.SafetyBuffer ||
 
                     this.SafetyBuffer.Equals(input.SafetyBuffer)
+                ) &&
+                (
+                    this.TidyAcme == input.TidyAcme ||
+
+                    this.TidyAcme.Equals(input.TidyAcme)
                 ) &&
                 (
                     this.TidyCertStore == input.TidyCertStore ||
@@ -343,20 +418,28 @@ namespace Vault.Model
                 int hashCode = 41;
 
 
+                hashCode = (hashCode * 59) + this.AcmeAccountSafetyBuffer.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.IntervalDuration.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.IssuerSafetyBuffer.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.MaintainStoredCertificateCounts.GetHashCode();
                 if (this.PauseDuration != null)
                 {
                     hashCode = (hashCode * 59) + this.PauseDuration.GetHashCode();
                 }
 
 
+                hashCode = (hashCode * 59) + this.PublishStoredCertificateCountMetrics.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.RevocationQueueSafetyBuffer.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.TidyAcme.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TidyCertStore.GetHashCode();
 

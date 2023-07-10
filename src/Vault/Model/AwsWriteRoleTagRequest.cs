@@ -40,12 +40,12 @@ namespace Vault.Model
 
         /// <param name="InstanceId">Instance ID for which this tag is intended for. If set, the created tag can only be used by the instance with the given ID..</param>
 
-        /// <param name="MaxTtl">If set, specifies the maximum allowed token lifetime. (default to 0).</param>
+        /// <param name="MaxTtl">If set, specifies the maximum allowed token lifetime. (default to &quot;0&quot;).</param>
 
         /// <param name="Policies">Policies to be associated with the tag. If set, must be a subset of the role&#x27;s policies. If set, but set to an empty value, only the &#x27;default&#x27; policy will be given to issued tokens..</param>
 
 
-        public AwsWriteRoleTagRequest(bool AllowInstanceMigration = false, bool DisallowReauthentication = false, string InstanceId = default(string), int MaxTtl = 0, List<string> Policies = default(List<string>))
+        public AwsWriteRoleTagRequest(bool AllowInstanceMigration = false, bool DisallowReauthentication = false, string InstanceId = default(string), string MaxTtl = "0", List<string> Policies = default(List<string>))
         {
 
             this.AllowInstanceMigration = AllowInstanceMigration;
@@ -54,7 +54,9 @@ namespace Vault.Model
 
             this.InstanceId = InstanceId;
 
-            this.MaxTtl = MaxTtl;
+            // use default value if no "MaxTtl" provided
+            this.MaxTtl = MaxTtl ?? "0";
+
 
             this.Policies = Policies;
 
@@ -93,7 +95,7 @@ namespace Vault.Model
         /// <value>If set, specifies the maximum allowed token lifetime.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -173,8 +175,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Policies == input.Policies ||
@@ -204,8 +207,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.InstanceId.GetHashCode();
                 }
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();

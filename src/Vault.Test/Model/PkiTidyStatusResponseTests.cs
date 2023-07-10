@@ -56,6 +56,42 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'AcmeAccountDeletedCount'
+        /// </summary>
+        [Fact]
+        public void AcmeAccountDeletedCountTest()
+        {
+            // TODO unit test for the property 'AcmeAccountDeletedCount'
+        }
+
+        /// <summary>
+        /// Test the property 'AcmeAccountRevokedCount'
+        /// </summary>
+        [Fact]
+        public void AcmeAccountRevokedCountTest()
+        {
+            // TODO unit test for the property 'AcmeAccountRevokedCount'
+        }
+
+        /// <summary>
+        /// Test the property 'AcmeAccountSafetyBuffer'
+        /// </summary>
+        [Fact]
+        public void AcmeAccountSafetyBufferTest()
+        {
+            // TODO unit test for the property 'AcmeAccountSafetyBuffer'
+        }
+
+        /// <summary>
+        /// Test the property 'AcmeOrdersDeletedCount'
+        /// </summary>
+        [Fact]
+        public void AcmeOrdersDeletedCountTest()
+        {
+            // TODO unit test for the property 'AcmeOrdersDeletedCount'
+        }
+
+        /// <summary>
         /// Test the property 'CertStoreDeletedCount'
         /// </summary>
         [Fact]
@@ -119,6 +155,15 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LastAutoTidyFinished'
+        /// </summary>
+        [Fact]
+        public void LastAutoTidyFinishedTest()
+        {
+            // TODO unit test for the property 'LastAutoTidyFinished'
+        }
+
+        /// <summary>
         /// Test the property 'Message'
         /// </summary>
         [Fact]
@@ -155,6 +200,15 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'RevocationQueueSafetyBuffer'
+        /// </summary>
+        [Fact]
+        public void RevocationQueueSafetyBufferTest()
+        {
+            // TODO unit test for the property 'RevocationQueueSafetyBuffer'
+        }
+
+        /// <summary>
         /// Test the property 'RevokedCertDeletedCount'
         /// </summary>
         [Fact]
@@ -179,6 +233,15 @@ namespace Vault.Test.Model
         public void StateTest()
         {
             // TODO unit test for the property 'State'
+        }
+
+        /// <summary>
+        /// Test the property 'TidyAcme'
+        /// </summary>
+        [Fact]
+        public void TidyAcmeTest()
+        {
+            // TODO unit test for the property 'TidyAcme'
         }
 
         /// <summary>
@@ -260,6 +323,15 @@ namespace Vault.Test.Model
         public void TimeStartedTest()
         {
             // TODO unit test for the property 'TimeStarted'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalAcmeAccountCount'
+        /// </summary>
+        [Fact]
+        public void TotalAcmeAccountCountTest()
+        {
+            // TODO unit test for the property 'TotalAcmeAccountCount'
         }
 
 

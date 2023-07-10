@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="State">Revocation State.</param>
 
 
-        public PkiRevokeResponse(int RevocationTime = default(int), DateTime RevocationTimeRfc3339 = default(DateTime), string State = default(string))
+        public PkiRevokeResponse(long RevocationTime = default(long), DateTime RevocationTimeRfc3339 = default(DateTime), string State = default(string))
         {
 
             this.RevocationTime = RevocationTime;
@@ -58,7 +58,7 @@ namespace Vault.Model
         /// <value>Revocation Time</value>
         [DataMember(Name = "revocation_time", EmitDefaultValue = false)]
 
-        public int RevocationTime { get; set; }
+        public long RevocationTime { get; set; }
 
 
         /// <summary>

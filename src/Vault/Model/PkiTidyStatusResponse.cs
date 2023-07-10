@@ -34,6 +34,14 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiTidyStatusResponse" /> class.
         /// </summary>
 
+        /// <param name="AcmeAccountDeletedCount">The number of revoked acme accounts removed.</param>
+
+        /// <param name="AcmeAccountRevokedCount">The number of unused acme accounts revoked.</param>
+
+        /// <param name="AcmeAccountSafetyBuffer">Safety buffer after creation after which accounts lacking orders are revoked.</param>
+
+        /// <param name="AcmeOrdersDeletedCount">The number of expired, unused acme orders removed.</param>
+
         /// <param name="CertStoreDeletedCount">The number of certificate storage entries deleted.</param>
 
         /// <param name="CrossRevokedCertDeletedCount">CrossRevokedCertDeletedCount.</param>
@@ -48,6 +56,8 @@ namespace Vault.Model
 
         /// <param name="IssuerSafetyBuffer">Issuer safety buffer.</param>
 
+        /// <param name="LastAutoTidyFinished">Time the last auto-tidy operation finished.</param>
+
         /// <param name="Message">Message of the operation.</param>
 
         /// <param name="MissingIssuerCertCount">MissingIssuerCertCount.</param>
@@ -56,15 +66,19 @@ namespace Vault.Model
 
         /// <param name="RevocationQueueDeletedCount">RevocationQueueDeletedCount.</param>
 
+        /// <param name="RevocationQueueSafetyBuffer">Revocation queue safety buffer.</param>
+
         /// <param name="RevokedCertDeletedCount">The number of revoked certificate entries deleted.</param>
 
         /// <param name="SafetyBuffer">Safety buffer time duration.</param>
 
         /// <param name="State">One of Inactive, Running, Finished, or Error.</param>
 
+        /// <param name="TidyAcme">Tidy Unused Acme Accounts, and Orders.</param>
+
         /// <param name="TidyCertStore">Tidy certificate store.</param>
 
-        /// <param name="TidyCrossClusterRevokedCerts">TidyCrossClusterRevokedCerts.</param>
+        /// <param name="TidyCrossClusterRevokedCerts">Tidy the cross-cluster revoked certificate store.</param>
 
         /// <param name="TidyExpiredIssuers">Tidy expired issuers.</param>
 
@@ -80,9 +94,19 @@ namespace Vault.Model
 
         /// <param name="TimeStarted">Time the operation started.</param>
 
+        /// <param name="TotalAcmeAccountCount">Total number of acme accounts iterated over.</param>
 
-        public PkiTidyStatusResponse(int CertStoreDeletedCount = default(int), int CrossRevokedCertDeletedCount = default(int), int CurrentCertStoreCount = default(int), int CurrentRevokedCertCount = default(int), string Error = default(string), string InternalBackendUuid = default(string), int IssuerSafetyBuffer = default(int), string Message = default(string), int MissingIssuerCertCount = default(int), string PauseDuration = default(string), int RevocationQueueDeletedCount = default(int), int RevokedCertDeletedCount = default(int), int SafetyBuffer = default(int), string State = default(string), bool TidyCertStore = default(bool), string TidyCrossClusterRevokedCerts = default(string), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationQueue = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool), string TimeFinished = default(string), string TimeStarted = default(string))
+
+        public PkiTidyStatusResponse(int AcmeAccountDeletedCount = default(int), int AcmeAccountRevokedCount = default(int), int AcmeAccountSafetyBuffer = default(int), int AcmeOrdersDeletedCount = default(int), int CertStoreDeletedCount = default(int), int CrossRevokedCertDeletedCount = default(int), int CurrentCertStoreCount = default(int), int CurrentRevokedCertCount = default(int), string Error = default(string), string InternalBackendUuid = default(string), int IssuerSafetyBuffer = default(int), string LastAutoTidyFinished = default(string), string Message = default(string), int MissingIssuerCertCount = default(int), string PauseDuration = default(string), int RevocationQueueDeletedCount = default(int), int RevocationQueueSafetyBuffer = default(int), int RevokedCertDeletedCount = default(int), int SafetyBuffer = default(int), string State = default(string), bool TidyAcme = default(bool), bool TidyCertStore = default(bool), bool TidyCrossClusterRevokedCerts = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationQueue = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool), string TimeFinished = default(string), string TimeStarted = default(string), int TotalAcmeAccountCount = default(int))
         {
+
+            this.AcmeAccountDeletedCount = AcmeAccountDeletedCount;
+
+            this.AcmeAccountRevokedCount = AcmeAccountRevokedCount;
+
+            this.AcmeAccountSafetyBuffer = AcmeAccountSafetyBuffer;
+
+            this.AcmeOrdersDeletedCount = AcmeOrdersDeletedCount;
 
             this.CertStoreDeletedCount = CertStoreDeletedCount;
 
@@ -98,6 +122,8 @@ namespace Vault.Model
 
             this.IssuerSafetyBuffer = IssuerSafetyBuffer;
 
+            this.LastAutoTidyFinished = LastAutoTidyFinished;
+
             this.Message = Message;
 
             this.MissingIssuerCertCount = MissingIssuerCertCount;
@@ -106,11 +132,15 @@ namespace Vault.Model
 
             this.RevocationQueueDeletedCount = RevocationQueueDeletedCount;
 
+            this.RevocationQueueSafetyBuffer = RevocationQueueSafetyBuffer;
+
             this.RevokedCertDeletedCount = RevokedCertDeletedCount;
 
             this.SafetyBuffer = SafetyBuffer;
 
             this.State = State;
+
+            this.TidyAcme = TidyAcme;
 
             this.TidyCertStore = TidyCertStore;
 
@@ -130,7 +160,45 @@ namespace Vault.Model
 
             this.TimeStarted = TimeStarted;
 
+            this.TotalAcmeAccountCount = TotalAcmeAccountCount;
+
         }
+
+        /// <summary>
+        /// The number of revoked acme accounts removed
+        /// </summary>
+        /// <value>The number of revoked acme accounts removed</value>
+        [DataMember(Name = "acme_account_deleted_count", EmitDefaultValue = false)]
+
+        public int AcmeAccountDeletedCount { get; set; }
+
+
+        /// <summary>
+        /// The number of unused acme accounts revoked
+        /// </summary>
+        /// <value>The number of unused acme accounts revoked</value>
+        [DataMember(Name = "acme_account_revoked_count", EmitDefaultValue = false)]
+
+        public int AcmeAccountRevokedCount { get; set; }
+
+
+        /// <summary>
+        /// Safety buffer after creation after which accounts lacking orders are revoked
+        /// </summary>
+        /// <value>Safety buffer after creation after which accounts lacking orders are revoked</value>
+        [DataMember(Name = "acme_account_safety_buffer", EmitDefaultValue = false)]
+
+        public int AcmeAccountSafetyBuffer { get; set; }
+
+
+        /// <summary>
+        /// The number of expired, unused acme orders removed
+        /// </summary>
+        /// <value>The number of expired, unused acme orders removed</value>
+        [DataMember(Name = "acme_orders_deleted_count", EmitDefaultValue = false)]
+
+        public int AcmeOrdersDeletedCount { get; set; }
+
 
         /// <summary>
         /// The number of certificate storage entries deleted
@@ -194,6 +262,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Time the last auto-tidy operation finished
+        /// </summary>
+        /// <value>Time the last auto-tidy operation finished</value>
+        [DataMember(Name = "last_auto_tidy_finished", EmitDefaultValue = false)]
+
+        public string LastAutoTidyFinished { get; set; }
+
+
+        /// <summary>
         /// Message of the operation
         /// </summary>
         /// <value>Message of the operation</value>
@@ -228,6 +305,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Revocation queue safety buffer
+        /// </summary>
+        /// <value>Revocation queue safety buffer</value>
+        [DataMember(Name = "revocation_queue_safety_buffer", EmitDefaultValue = false)]
+
+        public int RevocationQueueSafetyBuffer { get; set; }
+
+
+        /// <summary>
         /// The number of revoked certificate entries deleted
         /// </summary>
         /// <value>The number of revoked certificate entries deleted</value>
@@ -255,6 +341,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Tidy Unused Acme Accounts, and Orders
+        /// </summary>
+        /// <value>Tidy Unused Acme Accounts, and Orders</value>
+        [DataMember(Name = "tidy_acme", EmitDefaultValue = true)]
+
+        public bool TidyAcme { get; set; }
+
+
+        /// <summary>
         /// Tidy certificate store
         /// </summary>
         /// <value>Tidy certificate store</value>
@@ -264,11 +359,12 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Gets or Sets TidyCrossClusterRevokedCerts
+        /// Tidy the cross-cluster revoked certificate store
         /// </summary>
-        [DataMember(Name = "tidy_cross_cluster_revoked_certs", EmitDefaultValue = false)]
+        /// <value>Tidy the cross-cluster revoked certificate store</value>
+        [DataMember(Name = "tidy_cross_cluster_revoked_certs", EmitDefaultValue = true)]
 
-        public string TidyCrossClusterRevokedCerts { get; set; }
+        public bool TidyCrossClusterRevokedCerts { get; set; }
 
 
         /// <summary>
@@ -332,6 +428,15 @@ namespace Vault.Model
         public string TimeStarted { get; set; }
 
 
+        /// <summary>
+        /// Total number of acme accounts iterated over
+        /// </summary>
+        /// <value>Total number of acme accounts iterated over</value>
+        [DataMember(Name = "total_acme_account_count", EmitDefaultValue = false)]
+
+        public int TotalAcmeAccountCount { get; set; }
+
+
 
 
         /// <summary>
@@ -342,6 +447,10 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiTidyStatusResponse {\n");
+            sb.Append("  AcmeAccountDeletedCount: ").Append(AcmeAccountDeletedCount).Append("\n");
+            sb.Append("  AcmeAccountRevokedCount: ").Append(AcmeAccountRevokedCount).Append("\n");
+            sb.Append("  AcmeAccountSafetyBuffer: ").Append(AcmeAccountSafetyBuffer).Append("\n");
+            sb.Append("  AcmeOrdersDeletedCount: ").Append(AcmeOrdersDeletedCount).Append("\n");
             sb.Append("  CertStoreDeletedCount: ").Append(CertStoreDeletedCount).Append("\n");
             sb.Append("  CrossRevokedCertDeletedCount: ").Append(CrossRevokedCertDeletedCount).Append("\n");
             sb.Append("  CurrentCertStoreCount: ").Append(CurrentCertStoreCount).Append("\n");
@@ -349,13 +458,16 @@ namespace Vault.Model
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  InternalBackendUuid: ").Append(InternalBackendUuid).Append("\n");
             sb.Append("  IssuerSafetyBuffer: ").Append(IssuerSafetyBuffer).Append("\n");
+            sb.Append("  LastAutoTidyFinished: ").Append(LastAutoTidyFinished).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  MissingIssuerCertCount: ").Append(MissingIssuerCertCount).Append("\n");
             sb.Append("  PauseDuration: ").Append(PauseDuration).Append("\n");
             sb.Append("  RevocationQueueDeletedCount: ").Append(RevocationQueueDeletedCount).Append("\n");
+            sb.Append("  RevocationQueueSafetyBuffer: ").Append(RevocationQueueSafetyBuffer).Append("\n");
             sb.Append("  RevokedCertDeletedCount: ").Append(RevokedCertDeletedCount).Append("\n");
             sb.Append("  SafetyBuffer: ").Append(SafetyBuffer).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  TidyAcme: ").Append(TidyAcme).Append("\n");
             sb.Append("  TidyCertStore: ").Append(TidyCertStore).Append("\n");
             sb.Append("  TidyCrossClusterRevokedCerts: ").Append(TidyCrossClusterRevokedCerts).Append("\n");
             sb.Append("  TidyExpiredIssuers: ").Append(TidyExpiredIssuers).Append("\n");
@@ -365,6 +477,7 @@ namespace Vault.Model
             sb.Append("  TidyRevokedCerts: ").Append(TidyRevokedCerts).Append("\n");
             sb.Append("  TimeFinished: ").Append(TimeFinished).Append("\n");
             sb.Append("  TimeStarted: ").Append(TimeStarted).Append("\n");
+            sb.Append("  TotalAcmeAccountCount: ").Append(TotalAcmeAccountCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -400,6 +513,26 @@ namespace Vault.Model
                 return false;
             }
             return
+                (
+                    this.AcmeAccountDeletedCount == input.AcmeAccountDeletedCount ||
+
+                    this.AcmeAccountDeletedCount.Equals(input.AcmeAccountDeletedCount)
+                ) &&
+                (
+                    this.AcmeAccountRevokedCount == input.AcmeAccountRevokedCount ||
+
+                    this.AcmeAccountRevokedCount.Equals(input.AcmeAccountRevokedCount)
+                ) &&
+                (
+                    this.AcmeAccountSafetyBuffer == input.AcmeAccountSafetyBuffer ||
+
+                    this.AcmeAccountSafetyBuffer.Equals(input.AcmeAccountSafetyBuffer)
+                ) &&
+                (
+                    this.AcmeOrdersDeletedCount == input.AcmeOrdersDeletedCount ||
+
+                    this.AcmeOrdersDeletedCount.Equals(input.AcmeOrdersDeletedCount)
+                ) &&
                 (
                     this.CertStoreDeletedCount == input.CertStoreDeletedCount ||
 
@@ -438,6 +571,12 @@ namespace Vault.Model
                     this.IssuerSafetyBuffer.Equals(input.IssuerSafetyBuffer)
                 ) &&
                 (
+                    this.LastAutoTidyFinished == input.LastAutoTidyFinished ||
+                    (this.LastAutoTidyFinished != null &&
+                    this.LastAutoTidyFinished.Equals(input.LastAutoTidyFinished))
+
+                ) &&
+                (
                     this.Message == input.Message ||
                     (this.Message != null &&
                     this.Message.Equals(input.Message))
@@ -460,6 +599,11 @@ namespace Vault.Model
                     this.RevocationQueueDeletedCount.Equals(input.RevocationQueueDeletedCount)
                 ) &&
                 (
+                    this.RevocationQueueSafetyBuffer == input.RevocationQueueSafetyBuffer ||
+
+                    this.RevocationQueueSafetyBuffer.Equals(input.RevocationQueueSafetyBuffer)
+                ) &&
+                (
                     this.RevokedCertDeletedCount == input.RevokedCertDeletedCount ||
 
                     this.RevokedCertDeletedCount.Equals(input.RevokedCertDeletedCount)
@@ -476,15 +620,19 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.TidyAcme == input.TidyAcme ||
+
+                    this.TidyAcme.Equals(input.TidyAcme)
+                ) &&
+                (
                     this.TidyCertStore == input.TidyCertStore ||
 
                     this.TidyCertStore.Equals(input.TidyCertStore)
                 ) &&
                 (
                     this.TidyCrossClusterRevokedCerts == input.TidyCrossClusterRevokedCerts ||
-                    (this.TidyCrossClusterRevokedCerts != null &&
-                    this.TidyCrossClusterRevokedCerts.Equals(input.TidyCrossClusterRevokedCerts))
 
+                    this.TidyCrossClusterRevokedCerts.Equals(input.TidyCrossClusterRevokedCerts)
                 ) &&
                 (
                     this.TidyExpiredIssuers == input.TidyExpiredIssuers ||
@@ -522,6 +670,11 @@ namespace Vault.Model
                     (this.TimeStarted != null &&
                     this.TimeStarted.Equals(input.TimeStarted))
 
+                ) &&
+                (
+                    this.TotalAcmeAccountCount == input.TotalAcmeAccountCount ||
+
+                    this.TotalAcmeAccountCount.Equals(input.TotalAcmeAccountCount)
                 );
 
         }
@@ -536,6 +689,14 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+
+                hashCode = (hashCode * 59) + this.AcmeAccountDeletedCount.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.AcmeAccountRevokedCount.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.AcmeAccountSafetyBuffer.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.AcmeOrdersDeletedCount.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.CertStoreDeletedCount.GetHashCode();
 
@@ -556,6 +717,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.IssuerSafetyBuffer.GetHashCode();
+                if (this.LastAutoTidyFinished != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastAutoTidyFinished.GetHashCode();
+                }
+
                 if (this.Message != null)
                 {
                     hashCode = (hashCode * 59) + this.Message.GetHashCode();
@@ -571,6 +737,8 @@ namespace Vault.Model
 
                 hashCode = (hashCode * 59) + this.RevocationQueueDeletedCount.GetHashCode();
 
+                hashCode = (hashCode * 59) + this.RevocationQueueSafetyBuffer.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.RevokedCertDeletedCount.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
@@ -580,12 +748,11 @@ namespace Vault.Model
                 }
 
 
-                hashCode = (hashCode * 59) + this.TidyCertStore.GetHashCode();
-                if (this.TidyCrossClusterRevokedCerts != null)
-                {
-                    hashCode = (hashCode * 59) + this.TidyCrossClusterRevokedCerts.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.TidyAcme.GetHashCode();
 
+                hashCode = (hashCode * 59) + this.TidyCertStore.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.TidyCrossClusterRevokedCerts.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TidyExpiredIssuers.GetHashCode();
 
@@ -606,6 +773,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TimeStarted.GetHashCode();
                 }
 
+
+                hashCode = (hashCode * 59) + this.TotalAcmeAccountCount.GetHashCode();
                 return hashCode;
             }
         }

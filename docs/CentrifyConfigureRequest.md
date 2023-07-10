@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **TokenNoDefaultPolicy** | **bool** | If true, the &#x27;default&#x27; policy will not automatically be added to generated tokens | [optional] 
 **TokenNumUses** | **int** | The maximum number of times a token may be used, a value of zero means unlimited | [optional] 
 **TokenPolicies** | **List&lt;string&gt;** | Comma-separated list of policies | [optional] 
-**TokenTtl** | **int** | The initial ttl of the token to generate | [optional] 
+**TokenTtl** | **string** | The initial ttl of the token to generate | [optional] 
 **TokenType** | **string** | The type of token to generate, service or batch | [optional] [default to "default-service"]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RevocationTime** | **int** | Revocation Time | [optional] 
+**RevocationTime** | **long** | Revocation Time | [optional] 
 **RevocationTimeRfc3339** | **DateTime** | Revocation Time | [optional] 
 **State** | **string** | Revocation State | [optional] 
 

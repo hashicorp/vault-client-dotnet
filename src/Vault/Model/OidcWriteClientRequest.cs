@@ -34,23 +34,25 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="OidcWriteClientRequest" /> class.
         /// </summary>
 
-        /// <param name="AccessTokenTtl">The time-to-live for access tokens obtained by the client..</param>
+        /// <param name="AccessTokenTtl">The time-to-live for access tokens obtained by the client. (default to &quot;24h&quot;).</param>
 
         /// <param name="Assignments">Comma separated string or array of assignment resources..</param>
 
         /// <param name="ClientType">The client type based on its ability to maintain confidentiality of credentials. The following client types are supported: &#x27;confidential&#x27;, &#x27;public&#x27;. Defaults to &#x27;confidential&#x27;. (default to &quot;confidential&quot;).</param>
 
-        /// <param name="IdTokenTtl">The time-to-live for ID tokens obtained by the client..</param>
+        /// <param name="IdTokenTtl">The time-to-live for ID tokens obtained by the client. (default to &quot;24h&quot;).</param>
 
         /// <param name="Key">A reference to a named key resource. Cannot be modified after creation. Defaults to the &#x27;default&#x27; key. (default to &quot;default&quot;).</param>
 
         /// <param name="RedirectUris">Comma separated string or array of redirect URIs used by the client. One of these values must exactly match the redirect_uri parameter value used in each authentication request..</param>
 
 
-        public OidcWriteClientRequest(int AccessTokenTtl = default(int), List<string> Assignments = default(List<string>), string ClientType = "confidential", int IdTokenTtl = default(int), string Key = "default", List<string> RedirectUris = default(List<string>))
+        public OidcWriteClientRequest(string AccessTokenTtl = "24h", List<string> Assignments = default(List<string>), string ClientType = "confidential", string IdTokenTtl = "24h", string Key = "default", List<string> RedirectUris = default(List<string>))
         {
 
-            this.AccessTokenTtl = AccessTokenTtl;
+            // use default value if no "AccessTokenTtl" provided
+            this.AccessTokenTtl = AccessTokenTtl ?? "24h";
+
 
             this.Assignments = Assignments;
 
@@ -58,7 +60,9 @@ namespace Vault.Model
             this.ClientType = ClientType ?? "confidential";
 
 
-            this.IdTokenTtl = IdTokenTtl;
+            // use default value if no "IdTokenTtl" provided
+            this.IdTokenTtl = IdTokenTtl ?? "24h";
+
 
             // use default value if no "Key" provided
             this.Key = Key ?? "default";
@@ -74,7 +78,7 @@ namespace Vault.Model
         /// <value>The time-to-live for access tokens obtained by the client.</value>
         [DataMember(Name = "access_token_ttl", EmitDefaultValue = false)]
 
-        public int AccessTokenTtl { get; set; }
+        public string AccessTokenTtl { get; set; }
 
 
         /// <summary>
@@ -101,7 +105,7 @@ namespace Vault.Model
         /// <value>The time-to-live for ID tokens obtained by the client.</value>
         [DataMember(Name = "id_token_ttl", EmitDefaultValue = false)]
 
-        public int IdTokenTtl { get; set; }
+        public string IdTokenTtl { get; set; }
 
 
         /// <summary>
@@ -175,8 +179,9 @@ namespace Vault.Model
             return
                 (
                     this.AccessTokenTtl == input.AccessTokenTtl ||
+                    (this.AccessTokenTtl != null &&
+                    this.AccessTokenTtl.Equals(input.AccessTokenTtl))
 
-                    this.AccessTokenTtl.Equals(input.AccessTokenTtl)
                 ) &&
                 (
                     this.Assignments == input.Assignments ||
@@ -192,8 +197,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.IdTokenTtl == input.IdTokenTtl ||
+                    (this.IdTokenTtl != null &&
+                    this.IdTokenTtl.Equals(input.IdTokenTtl))
 
-                    this.IdTokenTtl.Equals(input.IdTokenTtl)
                 ) &&
                 (
                     this.Key == input.Key ||
@@ -220,8 +226,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.AccessTokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.AccessTokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.AccessTokenTtl.GetHashCode();
                 if (this.Assignments != null)
                 {
                     hashCode = (hashCode * 59) + this.Assignments.GetHashCode();
@@ -232,8 +241,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.ClientType.GetHashCode();
                 }
 
+                if (this.IdTokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.IdTokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.IdTokenTtl.GetHashCode();
                 if (this.Key != null)
                 {
                     hashCode = (hashCode * 59) + this.Key.GetHashCode();

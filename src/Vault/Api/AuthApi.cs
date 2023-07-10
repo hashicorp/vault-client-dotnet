@@ -37793,7 +37793,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/token/accessors/", requestOptions);
+            var response = this.Client.Get<Object>("/auth/token/accessors", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -37851,7 +37851,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/token/accessors/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/token/accessors", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

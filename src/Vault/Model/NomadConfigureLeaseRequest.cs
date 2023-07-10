@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="Ttl">Duration before which the issued token needs renewal.</param>
 
 
-        public NomadConfigureLeaseRequest(int MaxTtl = default(int), int Ttl = default(int))
+        public NomadConfigureLeaseRequest(string MaxTtl = default(string), string Ttl = default(string))
         {
 
             this.MaxTtl = MaxTtl;
@@ -54,7 +54,7 @@ namespace Vault.Model
         /// <value>Duration after which the issued token should not be allowed to be renewed</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Vault.Model
         /// <value>Duration before which the issued token needs renewal</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -115,13 +115,15 @@ namespace Vault.Model
             return
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -136,10 +138,16 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

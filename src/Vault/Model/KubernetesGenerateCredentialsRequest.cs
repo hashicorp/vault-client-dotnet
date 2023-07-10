@@ -49,7 +49,7 @@ namespace Vault.Model
         /// <param name="Ttl">The TTL of the generated credentials.</param>
 
 
-        public KubernetesGenerateCredentialsRequest(List<string> Audiences = default(List<string>), bool ClusterRoleBinding = default(bool), string KubernetesNamespace = default(string), int Ttl = default(int))
+        public KubernetesGenerateCredentialsRequest(List<string> Audiences = default(List<string>), bool ClusterRoleBinding = default(bool), string KubernetesNamespace = default(string), string Ttl = default(string))
         {
 
             // to ensure "KubernetesNamespace" is required (not null)
@@ -101,7 +101,7 @@ namespace Vault.Model
         /// <value>The TTL of the generated credentials</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -172,8 +172,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -200,8 +201,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.KubernetesNamespace.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

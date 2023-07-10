@@ -36,15 +36,17 @@ namespace Vault.Model
 
         /// <param name="DisablePeriodicTidy">If set to &#x27;true&#x27;, disables the periodic tidying of deny listed entries. (default to false).</param>
 
-        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days). (default to 15552000).</param>
+        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days). (default to &quot;15552000&quot;).</param>
 
 
-        public AwsConfigureRoleTagBlacklistTidyOperationRequest(bool DisablePeriodicTidy = false, int SafetyBuffer = 15552000)
+        public AwsConfigureRoleTagBlacklistTidyOperationRequest(bool DisablePeriodicTidy = false, string SafetyBuffer = "15552000")
         {
 
             this.DisablePeriodicTidy = DisablePeriodicTidy;
 
-            this.SafetyBuffer = SafetyBuffer;
+            // use default value if no "SafetyBuffer" provided
+            this.SafetyBuffer = SafetyBuffer ?? "15552000";
+
 
         }
 
@@ -63,7 +65,7 @@ namespace Vault.Model
         /// <value>The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. Defaults to 4320h (180 days).</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
 
-        public int SafetyBuffer { get; set; }
+        public string SafetyBuffer { get; set; }
 
 
 
@@ -120,8 +122,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
+                    (this.SafetyBuffer != null &&
+                    this.SafetyBuffer.Equals(input.SafetyBuffer))
 
-                    this.SafetyBuffer.Equals(input.SafetyBuffer)
                 );
 
         }
@@ -138,8 +141,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.DisablePeriodicTidy.GetHashCode();
+                if (this.SafetyBuffer != null)
+                {
+                    hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
                 return hashCode;
             }
         }

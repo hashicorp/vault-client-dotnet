@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Ttl">Lifetime of the service account key.</param>
 
 
-        public GoogleCloudGenerateStaticAccountKeyWithParametersRequest(string KeyAlgorithm = "KEY_ALG_RSA_2048", string KeyType = "TYPE_GOOGLE_CREDENTIALS_FILE", int Ttl = default(int))
+        public GoogleCloudGenerateStaticAccountKeyWithParametersRequest(string KeyAlgorithm = "KEY_ALG_RSA_2048", string KeyType = "TYPE_GOOGLE_CREDENTIALS_FILE", string Ttl = default(string))
         {
 
             // use default value if no "KeyAlgorithm" provided
@@ -80,7 +80,7 @@ namespace Vault.Model
         /// <value>Lifetime of the service account key</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -145,8 +145,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -171,8 +172,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.KeyType.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

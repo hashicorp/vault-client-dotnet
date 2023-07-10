@@ -48,9 +48,9 @@ namespace Vault.Model
 
         /// <param name="ClaimMappings">Mappings of claims (key) that will be copied to a metadata field (value).</param>
 
-        /// <param name="ClockSkewLeeway">Duration in seconds of leeway when validating all claims to account for clock skew. Defaults to 60 (1 minute) if set to 0 and can be disabled if set to -1..</param>
+        /// <param name="ClockSkewLeeway">Duration in seconds of leeway when validating all claims to account for clock skew. Defaults to 60 (1 minute) if set to 0 and can be disabled if set to -1. (default to &quot;60000000000&quot;).</param>
 
-        /// <param name="ExpirationLeeway">Duration in seconds of leeway when validating expiration of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1. (default to 150).</param>
+        /// <param name="ExpirationLeeway">Duration in seconds of leeway when validating expiration of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1. (default to &quot;150&quot;).</param>
 
         /// <param name="GroupsClaim">The claim to use for the Identity group alias names.</param>
 
@@ -58,7 +58,7 @@ namespace Vault.Model
 
         /// <param name="MaxTtl">Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used..</param>
 
-        /// <param name="NotBeforeLeeway">Duration in seconds of leeway when validating not before values of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1. (default to 150).</param>
+        /// <param name="NotBeforeLeeway">Duration in seconds of leeway when validating not before values of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1. (default to &quot;150&quot;).</param>
 
         /// <param name="NumUses">Use \&quot;token_num_uses\&quot; instead. If this and \&quot;token_num_uses\&quot; are both specified, only \&quot;token_num_uses\&quot; will be used..</param>
 
@@ -97,7 +97,7 @@ namespace Vault.Model
         /// <param name="VerboseOidcLogging">Log received OIDC tokens and claims when debug-level logging is active. Not recommended in production since sensitive information may be present in OIDC responses..</param>
 
 
-        public JwtWriteRoleRequest(List<string> AllowedRedirectUris = default(List<string>), List<string> BoundAudiences = default(List<string>), List<string> BoundCidrs = default(List<string>), Object BoundClaims = default(Object), string BoundClaimsType = "string", string BoundSubject = default(string), Object ClaimMappings = default(Object), int ClockSkewLeeway = default(int), int ExpirationLeeway = 150, string GroupsClaim = default(string), int MaxAge = default(int), int MaxTtl = default(int), int NotBeforeLeeway = 150, int NumUses = default(int), List<string> OidcScopes = default(List<string>), int Period = default(int), List<string> Policies = default(List<string>), string RoleType = default(string), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", int Ttl = default(int), string UserClaim = default(string), bool UserClaimJsonPointer = default(bool), bool VerboseOidcLogging = default(bool))
+        public JwtWriteRoleRequest(List<string> AllowedRedirectUris = default(List<string>), List<string> BoundAudiences = default(List<string>), List<string> BoundCidrs = default(List<string>), Object BoundClaims = default(Object), string BoundClaimsType = "string", string BoundSubject = default(string), Object ClaimMappings = default(Object), string ClockSkewLeeway = "60000000000", string ExpirationLeeway = "150", string GroupsClaim = default(string), string MaxAge = default(string), string MaxTtl = default(string), string NotBeforeLeeway = "150", int NumUses = default(int), List<string> OidcScopes = default(List<string>), string Period = default(string), List<string> Policies = default(List<string>), string RoleType = default(string), List<string> TokenBoundCidrs = default(List<string>), string TokenExplicitMaxTtl = default(string), string TokenMaxTtl = default(string), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), string TokenPeriod = default(string), List<string> TokenPolicies = default(List<string>), string TokenTtl = default(string), string TokenType = "default-service", string Ttl = default(string), string UserClaim = default(string), bool UserClaimJsonPointer = default(bool), bool VerboseOidcLogging = default(bool))
         {
 
             this.AllowedRedirectUris = AllowedRedirectUris;
@@ -116,9 +116,13 @@ namespace Vault.Model
 
             this.ClaimMappings = ClaimMappings;
 
-            this.ClockSkewLeeway = ClockSkewLeeway;
+            // use default value if no "ClockSkewLeeway" provided
+            this.ClockSkewLeeway = ClockSkewLeeway ?? "60000000000";
 
-            this.ExpirationLeeway = ExpirationLeeway;
+
+            // use default value if no "ExpirationLeeway" provided
+            this.ExpirationLeeway = ExpirationLeeway ?? "150";
+
 
             this.GroupsClaim = GroupsClaim;
 
@@ -126,7 +130,9 @@ namespace Vault.Model
 
             this.MaxTtl = MaxTtl;
 
-            this.NotBeforeLeeway = NotBeforeLeeway;
+            // use default value if no "NotBeforeLeeway" provided
+            this.NotBeforeLeeway = NotBeforeLeeway ?? "150";
+
 
             this.NumUses = NumUses;
 
@@ -237,7 +243,7 @@ namespace Vault.Model
         /// <value>Duration in seconds of leeway when validating all claims to account for clock skew. Defaults to 60 (1 minute) if set to 0 and can be disabled if set to -1.</value>
         [DataMember(Name = "clock_skew_leeway", EmitDefaultValue = false)]
 
-        public int ClockSkewLeeway { get; set; }
+        public string ClockSkewLeeway { get; set; }
 
 
         /// <summary>
@@ -246,7 +252,7 @@ namespace Vault.Model
         /// <value>Duration in seconds of leeway when validating expiration of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1.</value>
         [DataMember(Name = "expiration_leeway", EmitDefaultValue = false)]
 
-        public int ExpirationLeeway { get; set; }
+        public string ExpirationLeeway { get; set; }
 
 
         /// <summary>
@@ -264,7 +270,7 @@ namespace Vault.Model
         /// <value>Specifies the allowable elapsed time in seconds since the last time the user was actively authenticated.</value>
         [DataMember(Name = "max_age", EmitDefaultValue = false)]
 
-        public int MaxAge { get; set; }
+        public string MaxAge { get; set; }
 
 
         /// <summary>
@@ -273,7 +279,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        [Obsolete] public int MaxTtl { get; set; }
+        [Obsolete] public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -282,7 +288,7 @@ namespace Vault.Model
         /// <value>Duration in seconds of leeway when validating not before values of a token to account for clock skew. Defaults to 150 (2.5 minutes) if set to 0 and can be disabled if set to -1.</value>
         [DataMember(Name = "not_before_leeway", EmitDefaultValue = false)]
 
-        public int NotBeforeLeeway { get; set; }
+        public string NotBeforeLeeway { get; set; }
 
 
         /// <summary>
@@ -309,7 +315,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        [Obsolete] public int Period { get; set; }
+        [Obsolete] public string Period { get; set; }
 
 
         /// <summary>
@@ -345,7 +351,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenExplicitMaxTtl { get; set; }
+        public string TokenExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -354,7 +360,7 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenMaxTtl { get; set; }
+        public string TokenMaxTtl { get; set; }
 
 
         /// <summary>
@@ -381,7 +387,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-        public int TokenPeriod { get; set; }
+        public string TokenPeriod { get; set; }
 
 
         /// <summary>
@@ -399,7 +405,7 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-        public int TokenTtl { get; set; }
+        public string TokenTtl { get; set; }
 
 
         /// <summary>
@@ -417,7 +423,7 @@ namespace Vault.Model
         /// <value>Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        [Obsolete] public int Ttl { get; set; }
+        [Obsolete] public string Ttl { get; set; }
 
 
         /// <summary>
@@ -567,13 +573,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.ClockSkewLeeway == input.ClockSkewLeeway ||
+                    (this.ClockSkewLeeway != null &&
+                    this.ClockSkewLeeway.Equals(input.ClockSkewLeeway))
 
-                    this.ClockSkewLeeway.Equals(input.ClockSkewLeeway)
                 ) &&
                 (
                     this.ExpirationLeeway == input.ExpirationLeeway ||
+                    (this.ExpirationLeeway != null &&
+                    this.ExpirationLeeway.Equals(input.ExpirationLeeway))
 
-                    this.ExpirationLeeway.Equals(input.ExpirationLeeway)
                 ) &&
                 (
                     this.GroupsClaim == input.GroupsClaim ||
@@ -583,18 +591,21 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxAge == input.MaxAge ||
+                    (this.MaxAge != null &&
+                    this.MaxAge.Equals(input.MaxAge))
 
-                    this.MaxAge.Equals(input.MaxAge)
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.NotBeforeLeeway == input.NotBeforeLeeway ||
+                    (this.NotBeforeLeeway != null &&
+                    this.NotBeforeLeeway.Equals(input.NotBeforeLeeway))
 
-                    this.NotBeforeLeeway.Equals(input.NotBeforeLeeway)
                 ) &&
                 (
                     this.NumUses == input.NumUses ||
@@ -609,8 +620,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
 
-                    this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.Policies == input.Policies ||
@@ -632,13 +644,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+                    (this.TokenExplicitMaxTtl != null &&
+                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl))
 
-                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+                    (this.TokenMaxTtl != null &&
+                    this.TokenMaxTtl.Equals(input.TokenMaxTtl))
 
-                    this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
@@ -652,8 +666,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+                    (this.TokenPeriod != null &&
+                    this.TokenPeriod.Equals(input.TokenPeriod))
 
-                    this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
@@ -663,8 +678,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
+                    (this.TokenTtl != null &&
+                    this.TokenTtl.Equals(input.TokenTtl))
 
-                    this.TokenTtl.Equals(input.TokenTtl)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
@@ -674,8 +690,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.UserClaim == input.UserClaim ||
@@ -741,21 +758,36 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.ClaimMappings.GetHashCode();
                 }
 
+                if (this.ClockSkewLeeway != null)
+                {
+                    hashCode = (hashCode * 59) + this.ClockSkewLeeway.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.ClockSkewLeeway.GetHashCode();
+                if (this.ExpirationLeeway != null)
+                {
+                    hashCode = (hashCode * 59) + this.ExpirationLeeway.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.ExpirationLeeway.GetHashCode();
                 if (this.GroupsClaim != null)
                 {
                     hashCode = (hashCode * 59) + this.GroupsClaim.GetHashCode();
                 }
 
+                if (this.MaxAge != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxAge.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxAge.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.NotBeforeLeeway != null)
+                {
+                    hashCode = (hashCode * 59) + this.NotBeforeLeeway.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.NotBeforeLeeway.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.NumUses.GetHashCode();
                 if (this.OidcScopes != null)
@@ -763,8 +795,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.OidcScopes.GetHashCode();
                 }
 
+                if (this.Period != null)
+                {
+                    hashCode = (hashCode * 59) + this.Period.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Period.GetHashCode();
                 if (this.Policies != null)
                 {
                     hashCode = (hashCode * 59) + this.Policies.GetHashCode();
@@ -780,30 +815,45 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
 
+                if (this.TokenExplicitMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                if (this.TokenMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+                if (this.TokenPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
 
+                if (this.TokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.UserClaim != null)
                 {
                     hashCode = (hashCode * 59) + this.UserClaim.GetHashCode();

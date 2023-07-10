@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **CfUsername** | **string** | The username for CF’s API. | [optional] 
 **IdentityCaCertificates** | **List&lt;string&gt;** | The PEM-format CA certificates that are required to have issued the instance certificates presented for logging in. | [optional] 
 **LoginMaxSecondsNotAfter** | **int** | Duration in seconds for the maximum acceptable length in the future a \&quot;signing_time\&quot; can be. Useful for clock drift. Set low to reduce the opportunity for replay attacks. | [optional] [default to 60]
-**LoginMaxSecondsNotBefore** | **int** | Duration in seconds for the maximum acceptable age of a \&quot;signing_time\&quot;. Useful for clock drift. Set low to reduce the opportunity for replay attacks. | [optional] [default to 300]
+**LoginMaxSecondsNotBefore** | **string** | Duration in seconds for the maximum acceptable age of a \&quot;signing_time\&quot;. Useful for clock drift. Set low to reduce the opportunity for replay attacks. | [optional] [default to "300"]
 **PcfApiAddr** | **string** | Deprecated. Please use \&quot;cf_api_addr\&quot;. | [optional] 
 **PcfApiTrustedCertificates** | **List&lt;string&gt;** | Deprecated. Please use \&quot;cf_api_trusted_certificates\&quot;. | [optional] 
 **PcfPassword** | **string** | Deprecated. Please use \&quot;cf_password\&quot;. | [optional] 

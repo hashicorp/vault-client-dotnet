@@ -49,7 +49,7 @@ namespace Vault.Model
         /// <param name="SerialNumber">Serial Number.</param>
 
 
-        public PkiIssuerSignVerbatimResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), string Expiration = default(string), string IssuingCa = default(string), string PrivateKey = default(string), string PrivateKeyType = default(string), string SerialNumber = default(string))
+        public PkiIssuerSignVerbatimResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), long Expiration = default(long), string IssuingCa = default(string), string PrivateKey = default(string), string PrivateKeyType = default(string), string SerialNumber = default(string))
         {
 
             this.CaChain = CaChain;
@@ -92,7 +92,7 @@ namespace Vault.Model
         /// <value>Time of expiration</value>
         [DataMember(Name = "expiration", EmitDefaultValue = false)]
 
-        public string Expiration { get; set; }
+        public long Expiration { get; set; }
 
 
         /// <summary>
@@ -197,9 +197,8 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Expiration == input.Expiration ||
-                    (this.Expiration != null &&
-                    this.Expiration.Equals(input.Expiration))
 
+                    this.Expiration.Equals(input.Expiration)
                 ) &&
                 (
                     this.IssuingCa == input.IssuingCa ||
@@ -248,11 +247,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Certificate.GetHashCode();
                 }
 
-                if (this.Expiration != null)
-                {
-                    hashCode = (hashCode * 59) + this.Expiration.GetHashCode();
-                }
 
+                hashCode = (hashCode * 59) + this.Expiration.GetHashCode();
                 if (this.IssuingCa != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuingCa.GetHashCode();

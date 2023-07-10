@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Increment** | **int** | The desired increment in seconds to the lease | [optional] 
+**Increment** | **string** | The desired increment in seconds to the lease | [optional] 
 **LeaseId** | **string** | The lease identifier to renew. This is included with a lease. | [optional] 
 **UrlLeaseId** | **string** | The lease identifier to renew. This is included with a lease. | [optional] 
 

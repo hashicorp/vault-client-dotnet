@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="MaxOperations">The number of encryption operations performed before the barrier key is automatically rotated..</param>
 
 
-        public EncryptionKeyConfigureRotationRequest(bool Enabled = default(bool), int Interval = default(int), long MaxOperations = default(long))
+        public EncryptionKeyConfigureRotationRequest(bool Enabled = default(bool), string Interval = default(string), long MaxOperations = default(long))
         {
 
             this.Enabled = Enabled;
@@ -67,7 +67,7 @@ namespace Vault.Model
         /// <value>How long after installation of an active key term that the key will be automatically rotated.</value>
         [DataMember(Name = "interval", EmitDefaultValue = false)]
 
-        public int Interval { get; set; }
+        public string Interval { get; set; }
 
 
         /// <summary>
@@ -134,8 +134,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Interval == input.Interval ||
+                    (this.Interval != null &&
+                    this.Interval.Equals(input.Interval))
 
-                    this.Interval.Equals(input.Interval)
                 ) &&
                 (
                     this.MaxOperations == input.MaxOperations ||
@@ -157,8 +158,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
+                if (this.Interval != null)
+                {
+                    hashCode = (hashCode * 59) + this.Interval.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Interval.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.MaxOperations.GetHashCode();
                 return hashCode;

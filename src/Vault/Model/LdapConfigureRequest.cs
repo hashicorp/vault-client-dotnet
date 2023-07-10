@@ -159,7 +159,7 @@ namespace Vault.Model
 
         /// <param name="ClientTlsKey">Client certificate key to provide to the LDAP server, must be x509 PEM encoded (optional).</param>
 
-        /// <param name="ConnectionTimeout">Timeout, in seconds, when attempting to connect to the LDAP server before trying the next URL in the configuration..</param>
+        /// <param name="ConnectionTimeout">Timeout, in seconds, when attempting to connect to the LDAP server before trying the next URL in the configuration. (default to &quot;30s&quot;).</param>
 
         /// <param name="DenyNullBind">Denies an unauthenticated LDAP bind request if the user&#x27;s password is empty; defaults to true (default to true).</param>
 
@@ -177,13 +177,13 @@ namespace Vault.Model
 
         /// <param name="Length">The desired length of passwords that Vault generates..</param>
 
-        /// <param name="MaxPageSize">The maximum number of results to return for a single paged query. If not set, the server default will be used for paged searches. A requested max_page_size of 0 is interpreted as no limit by LDAP servers. If set to a negative value, search requests will not be paged. (default to 2147483647).</param>
+        /// <param name="MaxPageSize">If set to a value greater than 0, the LDAP backend will use the LDAP server&#x27;s paged search control to request pages of up to the given size. This can be used to avoid hitting the LDAP server&#x27;s maximum result size limit. Otherwise, the LDAP backend will not use the paged search control. (default to 0).</param>
 
         /// <param name="MaxTtl">The maximum password time-to-live..</param>
 
         /// <param name="PasswordPolicy">Password policy to use to generate passwords.</param>
 
-        /// <param name="RequestTimeout">Timeout, in seconds, for the connection when making requests against the server before returning back an error..</param>
+        /// <param name="RequestTimeout">Timeout, in seconds, for the connection when making requests against the server before returning back an error. (default to &quot;90s&quot;).</param>
 
         /// <param name="Schema">The desired LDAP schema used when modifying user account passwords. (default to &quot;openldap&quot;).</param>
 
@@ -212,7 +212,7 @@ namespace Vault.Model
         /// <param name="UsernameAsAlias">If true, sets the alias name to the username (default to false).</param>
 
 
-        public LdapConfigureRequest(bool AnonymousGroupSearch = false, string Binddn = default(string), string Bindpass = default(string), bool CaseSensitiveNames = default(bool), string Certificate = default(string), string ClientTlsCert = default(string), string ClientTlsKey = default(string), int ConnectionTimeout = default(int), bool DenyNullBind = true, DereferenceAliasesEnum? DereferenceAliases = DereferenceAliasesEnum.Never, bool Discoverdn = default(bool), string Groupattr = "cn", string Groupdn = default(string), string Groupfilter = "(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))", bool InsecureTls = default(bool), int Length = default(int), int MaxPageSize = 2147483647, int MaxTtl = default(int), string PasswordPolicy = default(string), int RequestTimeout = default(int), string Schema = "openldap", bool Starttls = default(bool), TlsMaxVersionEnum? TlsMaxVersion = TlsMaxVersionEnum.Tls12, TlsMinVersionEnum? TlsMinVersion = TlsMinVersionEnum.Tls12, int Ttl = default(int), string Upndomain = default(string), string Url = "ldap://127.0.0.1", bool UsePre111GroupCnBehavior = default(bool), bool UseTokenGroups = false, string Userattr = "cn", string Userdn = default(string), string Userfilter = "({{.UserAttr}}={{.Username}})", bool UsernameAsAlias = false)
+        public LdapConfigureRequest(bool AnonymousGroupSearch = false, string Binddn = default(string), string Bindpass = default(string), bool CaseSensitiveNames = default(bool), string Certificate = default(string), string ClientTlsCert = default(string), string ClientTlsKey = default(string), string ConnectionTimeout = "30s", bool DenyNullBind = true, DereferenceAliasesEnum? DereferenceAliases = DereferenceAliasesEnum.Never, bool Discoverdn = default(bool), string Groupattr = "cn", string Groupdn = default(string), string Groupfilter = "(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))", bool InsecureTls = default(bool), int Length = default(int), int MaxPageSize = 0, string MaxTtl = default(string), string PasswordPolicy = default(string), string RequestTimeout = "90s", string Schema = "openldap", bool Starttls = default(bool), TlsMaxVersionEnum? TlsMaxVersion = TlsMaxVersionEnum.Tls12, TlsMinVersionEnum? TlsMinVersion = TlsMinVersionEnum.Tls12, string Ttl = default(string), string Upndomain = default(string), string Url = "ldap://127.0.0.1", bool UsePre111GroupCnBehavior = default(bool), bool UseTokenGroups = false, string Userattr = "cn", string Userdn = default(string), string Userfilter = "({{.UserAttr}}={{.Username}})", bool UsernameAsAlias = false)
         {
 
             this.AnonymousGroupSearch = AnonymousGroupSearch;
@@ -229,7 +229,9 @@ namespace Vault.Model
 
             this.ClientTlsKey = ClientTlsKey;
 
-            this.ConnectionTimeout = ConnectionTimeout;
+            // use default value if no "ConnectionTimeout" provided
+            this.ConnectionTimeout = ConnectionTimeout ?? "30s";
+
 
             this.DenyNullBind = DenyNullBind;
 
@@ -257,7 +259,9 @@ namespace Vault.Model
 
             this.PasswordPolicy = PasswordPolicy;
 
-            this.RequestTimeout = RequestTimeout;
+            // use default value if no "RequestTimeout" provided
+            this.RequestTimeout = RequestTimeout ?? "90s";
+
 
             // use default value if no "Schema" provided
             this.Schema = Schema ?? "openldap";
@@ -364,7 +368,7 @@ namespace Vault.Model
         /// <value>Timeout, in seconds, when attempting to connect to the LDAP server before trying the next URL in the configuration.</value>
         [DataMember(Name = "connection_timeout", EmitDefaultValue = false)]
 
-        public int ConnectionTimeout { get; set; }
+        public string ConnectionTimeout { get; set; }
 
 
         /// <summary>
@@ -431,9 +435,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The maximum number of results to return for a single paged query. If not set, the server default will be used for paged searches. A requested max_page_size of 0 is interpreted as no limit by LDAP servers. If set to a negative value, search requests will not be paged.
+        /// If set to a value greater than 0, the LDAP backend will use the LDAP server&#x27;s paged search control to request pages of up to the given size. This can be used to avoid hitting the LDAP server&#x27;s maximum result size limit. Otherwise, the LDAP backend will not use the paged search control.
         /// </summary>
-        /// <value>The maximum number of results to return for a single paged query. If not set, the server default will be used for paged searches. A requested max_page_size of 0 is interpreted as no limit by LDAP servers. If set to a negative value, search requests will not be paged.</value>
+        /// <value>If set to a value greater than 0, the LDAP backend will use the LDAP server&#x27;s paged search control to request pages of up to the given size. This can be used to avoid hitting the LDAP server&#x27;s maximum result size limit. Otherwise, the LDAP backend will not use the paged search control.</value>
         [DataMember(Name = "max_page_size", EmitDefaultValue = false)]
 
         public int MaxPageSize { get; set; }
@@ -445,7 +449,7 @@ namespace Vault.Model
         /// <value>The maximum password time-to-live.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -463,7 +467,7 @@ namespace Vault.Model
         /// <value>Timeout, in seconds, for the connection when making requests against the server before returning back an error.</value>
         [DataMember(Name = "request_timeout", EmitDefaultValue = false)]
 
-        public int RequestTimeout { get; set; }
+        public string RequestTimeout { get; set; }
 
 
         /// <summary>
@@ -490,7 +494,7 @@ namespace Vault.Model
         /// <value>The default password time-to-live.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
         /// <summary>
@@ -685,8 +689,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.ConnectionTimeout == input.ConnectionTimeout ||
+                    (this.ConnectionTimeout != null &&
+                    this.ConnectionTimeout.Equals(input.ConnectionTimeout))
 
-                    this.ConnectionTimeout.Equals(input.ConnectionTimeout)
                 ) &&
                 (
                     this.DenyNullBind == input.DenyNullBind ||
@@ -738,8 +743,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.PasswordPolicy == input.PasswordPolicy ||
@@ -749,8 +755,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RequestTimeout == input.RequestTimeout ||
+                    (this.RequestTimeout != null &&
+                    this.RequestTimeout.Equals(input.RequestTimeout))
 
-                    this.RequestTimeout.Equals(input.RequestTimeout)
                 ) &&
                 (
                     this.Schema == input.Schema ||
@@ -775,8 +782,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.Upndomain == input.Upndomain ||
@@ -865,8 +873,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.ClientTlsKey.GetHashCode();
                 }
 
+                if (this.ConnectionTimeout != null)
+                {
+                    hashCode = (hashCode * 59) + this.ConnectionTimeout.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.ConnectionTimeout.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.DenyNullBind.GetHashCode();
 
@@ -894,15 +905,21 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.Length.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.MaxPageSize.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.PasswordPolicy != null)
                 {
                     hashCode = (hashCode * 59) + this.PasswordPolicy.GetHashCode();
                 }
 
+                if (this.RequestTimeout != null)
+                {
+                    hashCode = (hashCode * 59) + this.RequestTimeout.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RequestTimeout.GetHashCode();
                 if (this.Schema != null)
                 {
                     hashCode = (hashCode * 59) + this.Schema.GetHashCode();
@@ -914,8 +931,11 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.TlsMaxVersion.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TlsMinVersion.GetHashCode();
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.Upndomain != null)
                 {
                     hashCode = (hashCode * 59) + this.Upndomain.GetHashCode();

@@ -34,6 +34,8 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiReadAutoTidyConfigurationResponse" /> class.
         /// </summary>
 
+        /// <param name="AcmeAccountSafetyBuffer">Safety buffer after creation after which accounts lacking orders are revoked.</param>
+
         /// <param name="Enabled">Specifies whether automatic tidy is enabled or not.</param>
 
         /// <param name="IntervalDuration">Specifies the duration between automatic tidy operation.</param>
@@ -50,6 +52,8 @@ namespace Vault.Model
 
         /// <param name="SafetyBuffer">Safety buffer time duration.</param>
 
+        /// <param name="TidyAcme">Tidy Unused Acme Accounts, and Orders.</param>
+
         /// <param name="TidyCertStore">Specifies whether to tidy up the certificate store.</param>
 
         /// <param name="TidyCrossClusterRevokedCerts">TidyCrossClusterRevokedCerts.</param>
@@ -65,8 +69,10 @@ namespace Vault.Model
         /// <param name="TidyRevokedCerts">Specifies whether to remove all invalid and expired certificates from storage.</param>
 
 
-        public PkiReadAutoTidyConfigurationResponse(bool Enabled = default(bool), int IntervalDuration = default(int), int IssuerSafetyBuffer = default(int), bool MaintainStoredCertificateCounts = default(bool), string PauseDuration = default(string), bool PublishStoredCertificateCountMetrics = default(bool), int RevocationQueueSafetyBuffer = default(int), int SafetyBuffer = default(int), bool TidyCertStore = default(bool), bool TidyCrossClusterRevokedCerts = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationQueue = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool))
+        public PkiReadAutoTidyConfigurationResponse(int AcmeAccountSafetyBuffer = default(int), bool Enabled = default(bool), int IntervalDuration = default(int), int IssuerSafetyBuffer = default(int), bool MaintainStoredCertificateCounts = default(bool), string PauseDuration = default(string), bool PublishStoredCertificateCountMetrics = default(bool), int RevocationQueueSafetyBuffer = default(int), int SafetyBuffer = default(int), bool TidyAcme = default(bool), bool TidyCertStore = default(bool), bool TidyCrossClusterRevokedCerts = default(bool), bool TidyExpiredIssuers = default(bool), bool TidyMoveLegacyCaBundle = default(bool), bool TidyRevocationQueue = default(bool), bool TidyRevokedCertIssuerAssociations = default(bool), bool TidyRevokedCerts = default(bool))
         {
+
+            this.AcmeAccountSafetyBuffer = AcmeAccountSafetyBuffer;
 
             this.Enabled = Enabled;
 
@@ -84,6 +90,8 @@ namespace Vault.Model
 
             this.SafetyBuffer = SafetyBuffer;
 
+            this.TidyAcme = TidyAcme;
+
             this.TidyCertStore = TidyCertStore;
 
             this.TidyCrossClusterRevokedCerts = TidyCrossClusterRevokedCerts;
@@ -99,6 +107,15 @@ namespace Vault.Model
             this.TidyRevokedCerts = TidyRevokedCerts;
 
         }
+
+        /// <summary>
+        /// Safety buffer after creation after which accounts lacking orders are revoked
+        /// </summary>
+        /// <value>Safety buffer after creation after which accounts lacking orders are revoked</value>
+        [DataMember(Name = "acme_account_safety_buffer", EmitDefaultValue = false)]
+
+        public int AcmeAccountSafetyBuffer { get; set; }
+
 
         /// <summary>
         /// Specifies whether automatic tidy is enabled or not
@@ -167,6 +184,15 @@ namespace Vault.Model
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
 
         public int SafetyBuffer { get; set; }
+
+
+        /// <summary>
+        /// Tidy Unused Acme Accounts, and Orders
+        /// </summary>
+        /// <value>Tidy Unused Acme Accounts, and Orders</value>
+        [DataMember(Name = "tidy_acme", EmitDefaultValue = true)]
+
+        public bool TidyAcme { get; set; }
 
 
         /// <summary>
@@ -239,6 +265,7 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiReadAutoTidyConfigurationResponse {\n");
+            sb.Append("  AcmeAccountSafetyBuffer: ").Append(AcmeAccountSafetyBuffer).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  IntervalDuration: ").Append(IntervalDuration).Append("\n");
             sb.Append("  IssuerSafetyBuffer: ").Append(IssuerSafetyBuffer).Append("\n");
@@ -247,6 +274,7 @@ namespace Vault.Model
             sb.Append("  PublishStoredCertificateCountMetrics: ").Append(PublishStoredCertificateCountMetrics).Append("\n");
             sb.Append("  RevocationQueueSafetyBuffer: ").Append(RevocationQueueSafetyBuffer).Append("\n");
             sb.Append("  SafetyBuffer: ").Append(SafetyBuffer).Append("\n");
+            sb.Append("  TidyAcme: ").Append(TidyAcme).Append("\n");
             sb.Append("  TidyCertStore: ").Append(TidyCertStore).Append("\n");
             sb.Append("  TidyCrossClusterRevokedCerts: ").Append(TidyCrossClusterRevokedCerts).Append("\n");
             sb.Append("  TidyExpiredIssuers: ").Append(TidyExpiredIssuers).Append("\n");
@@ -290,6 +318,11 @@ namespace Vault.Model
             }
             return
                 (
+                    this.AcmeAccountSafetyBuffer == input.AcmeAccountSafetyBuffer ||
+
+                    this.AcmeAccountSafetyBuffer.Equals(input.AcmeAccountSafetyBuffer)
+                ) &&
+                (
                     this.Enabled == input.Enabled ||
 
                     this.Enabled.Equals(input.Enabled)
@@ -329,6 +362,11 @@ namespace Vault.Model
                     this.SafetyBuffer == input.SafetyBuffer ||
 
                     this.SafetyBuffer.Equals(input.SafetyBuffer)
+                ) &&
+                (
+                    this.TidyAcme == input.TidyAcme ||
+
+                    this.TidyAcme.Equals(input.TidyAcme)
                 ) &&
                 (
                     this.TidyCertStore == input.TidyCertStore ||
@@ -379,6 +417,8 @@ namespace Vault.Model
                 int hashCode = 41;
 
 
+                hashCode = (hashCode * 59) + this.AcmeAccountSafetyBuffer.GetHashCode();
+
                 hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.IntervalDuration.GetHashCode();
@@ -397,6 +437,8 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.RevocationQueueSafetyBuffer.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.TidyAcme.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TidyCertStore.GetHashCode();
 

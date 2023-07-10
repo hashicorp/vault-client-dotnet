@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Certificate** | **string** | The generated self-signed CA certificate. | [optional] 
-**Expiration** | **string** | The expiration of the given. | [optional] 
+**Expiration** | **long** | The expiration of the given issuer. | [optional] 
 **IssuerId** | **string** | The ID of the issuer | [optional] 
 **IssuerName** | **string** | The name of the issuer. | [optional] 
 **IssuingCa** | **string** | The issuing certificate authority. | [optional] 

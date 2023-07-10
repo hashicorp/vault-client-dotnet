@@ -53,7 +53,7 @@ namespace Vault.Model
         /// <param name="RollbackStatements">Specifies the database statements to be executed rollback a create operation in the event of an error. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter..</param>
 
 
-        public DatabaseWriteRoleRequest(List<string> CreationStatements = default(List<string>), Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), int DefaultTtl = default(int), int MaxTtl = default(int), List<string> RenewStatements = default(List<string>), List<string> RevocationStatements = default(List<string>), List<string> RollbackStatements = default(List<string>))
+        public DatabaseWriteRoleRequest(List<string> CreationStatements = default(List<string>), Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), string DefaultTtl = default(string), string MaxTtl = default(string), List<string> RenewStatements = default(List<string>), List<string> RevocationStatements = default(List<string>), List<string> RollbackStatements = default(List<string>))
         {
 
             this.CreationStatements = CreationStatements;
@@ -120,7 +120,7 @@ namespace Vault.Model
         /// <value>Default ttl for role.</value>
         [DataMember(Name = "default_ttl", EmitDefaultValue = false)]
 
-        public int DefaultTtl { get; set; }
+        public string DefaultTtl { get; set; }
 
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace Vault.Model
         /// <value>Maximum time a credential is valid for</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -239,13 +239,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.DefaultTtl == input.DefaultTtl ||
+                    (this.DefaultTtl != null &&
+                    this.DefaultTtl.Equals(input.DefaultTtl))
 
-                    this.DefaultTtl.Equals(input.DefaultTtl)
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.RenewStatements == input.RenewStatements ||
@@ -298,10 +300,16 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.DbName.GetHashCode();
                 }
 
+                if (this.DefaultTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.DefaultTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.DefaultTtl.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.RenewStatements != null)
                 {
                     hashCode = (hashCode * 59) + this.RenewStatements.GetHashCode();

@@ -45,7 +45,7 @@ namespace Vault.Model
         /// <param name="UserId">ID of the Terraform Cloud or Enterprise user (e.g., user-xxxxxxxxxxxxxxxx).</param>
 
 
-        public TerraformCloudWriteRoleRequest(int MaxTtl = default(int), string Organization = default(string), string TeamId = default(string), int Ttl = default(int), string UserId = default(string))
+        public TerraformCloudWriteRoleRequest(string MaxTtl = default(string), string Organization = default(string), string TeamId = default(string), string Ttl = default(string), string UserId = default(string))
         {
 
             this.MaxTtl = MaxTtl;
@@ -66,7 +66,7 @@ namespace Vault.Model
         /// <value>Maximum time for role. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Vault.Model
         /// <value>Default lease for generated credentials. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
         /// <summary>
@@ -157,8 +157,9 @@ namespace Vault.Model
             return
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Organization == input.Organization ||
@@ -174,8 +175,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.UserId == input.UserId ||
@@ -196,8 +198,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.Organization != null)
                 {
                     hashCode = (hashCode * 59) + this.Organization.GetHashCode();
@@ -208,8 +213,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TeamId.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.UserId != null)
                 {
                     hashCode = (hashCode * 59) + this.UserId.GetHashCode();

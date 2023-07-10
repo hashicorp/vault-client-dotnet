@@ -38,7 +38,7 @@ namespace Vault.Model
 
         /// <param name="AllowRotation">True if the imported key may be rotated within Vault; false otherwise..</param>
 
-        /// <param name="AutoRotatePeriod">Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key. (default to 0).</param>
+        /// <param name="AutoRotatePeriod">Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key. (default to &quot;0&quot;).</param>
 
         /// <param name="Ciphertext">The base64-encoded ciphertext of the keys. The AES key should be encrypted using OAEP with the wrapping key and then concatenated with the import key, wrapped by the AES key..</param>
 
@@ -50,17 +50,21 @@ namespace Vault.Model
 
         /// <param name="HashFunction">The hash function used as a random oracle in the OAEP wrapping of the user-generated, ephemeral AES key. Can be one of \&quot;SHA1\&quot;, \&quot;SHA224\&quot;, \&quot;SHA256\&quot; (default), \&quot;SHA384\&quot;, or \&quot;SHA512\&quot; (default to &quot;SHA256&quot;).</param>
 
+        /// <param name="PublicKey">The plaintext PEM public key to be imported. If \&quot;ciphertext\&quot; is set, this field is ignored..</param>
+
         /// <param name="Type">The type of key being imported. Currently, \&quot;aes128-gcm96\&quot; (symmetric), \&quot;aes256-gcm96\&quot; (symmetric), \&quot;ecdsa-p256\&quot; (asymmetric), \&quot;ecdsa-p384\&quot; (asymmetric), \&quot;ecdsa-p521\&quot; (asymmetric), \&quot;ed25519\&quot; (asymmetric), \&quot;rsa-2048\&quot; (asymmetric), \&quot;rsa-3072\&quot; (asymmetric), \&quot;rsa-4096\&quot; (asymmetric) are supported. Defaults to \&quot;aes256-gcm96\&quot;. (default to &quot;aes256-gcm96&quot;).</param>
 
 
-        public TransitImportKeyRequest(bool AllowPlaintextBackup = default(bool), bool AllowRotation = default(bool), int AutoRotatePeriod = 0, string Ciphertext = default(string), string Context = default(string), bool Derived = default(bool), bool Exportable = default(bool), string HashFunction = "SHA256", string Type = "aes256-gcm96")
+        public TransitImportKeyRequest(bool AllowPlaintextBackup = default(bool), bool AllowRotation = default(bool), string AutoRotatePeriod = "0", string Ciphertext = default(string), string Context = default(string), bool Derived = default(bool), bool Exportable = default(bool), string HashFunction = "SHA256", string PublicKey = default(string), string Type = "aes256-gcm96")
         {
 
             this.AllowPlaintextBackup = AllowPlaintextBackup;
 
             this.AllowRotation = AllowRotation;
 
-            this.AutoRotatePeriod = AutoRotatePeriod;
+            // use default value if no "AutoRotatePeriod" provided
+            this.AutoRotatePeriod = AutoRotatePeriod ?? "0";
+
 
             this.Ciphertext = Ciphertext;
 
@@ -73,6 +77,8 @@ namespace Vault.Model
             // use default value if no "HashFunction" provided
             this.HashFunction = HashFunction ?? "SHA256";
 
+
+            this.PublicKey = PublicKey;
 
             // use default value if no "Type" provided
             this.Type = Type ?? "aes256-gcm96";
@@ -104,7 +110,7 @@ namespace Vault.Model
         /// <value>Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key.</value>
         [DataMember(Name = "auto_rotate_period", EmitDefaultValue = false)]
 
-        public int AutoRotatePeriod { get; set; }
+        public string AutoRotatePeriod { get; set; }
 
 
         /// <summary>
@@ -153,6 +159,15 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// The plaintext PEM public key to be imported. If \&quot;ciphertext\&quot; is set, this field is ignored.
+        /// </summary>
+        /// <value>The plaintext PEM public key to be imported. If \&quot;ciphertext\&quot; is set, this field is ignored.</value>
+        [DataMember(Name = "public_key", EmitDefaultValue = false)]
+
+        public string PublicKey { get; set; }
+
+
+        /// <summary>
         /// The type of key being imported. Currently, \&quot;aes128-gcm96\&quot; (symmetric), \&quot;aes256-gcm96\&quot; (symmetric), \&quot;ecdsa-p256\&quot; (asymmetric), \&quot;ecdsa-p384\&quot; (asymmetric), \&quot;ecdsa-p521\&quot; (asymmetric), \&quot;ed25519\&quot; (asymmetric), \&quot;rsa-2048\&quot; (asymmetric), \&quot;rsa-3072\&quot; (asymmetric), \&quot;rsa-4096\&quot; (asymmetric) are supported. Defaults to \&quot;aes256-gcm96\&quot;.
         /// </summary>
         /// <value>The type of key being imported. Currently, \&quot;aes128-gcm96\&quot; (symmetric), \&quot;aes256-gcm96\&quot; (symmetric), \&quot;ecdsa-p256\&quot; (asymmetric), \&quot;ecdsa-p384\&quot; (asymmetric), \&quot;ecdsa-p521\&quot; (asymmetric), \&quot;ed25519\&quot; (asymmetric), \&quot;rsa-2048\&quot; (asymmetric), \&quot;rsa-3072\&quot; (asymmetric), \&quot;rsa-4096\&quot; (asymmetric) are supported. Defaults to \&quot;aes256-gcm96\&quot;.</value>
@@ -179,6 +194,7 @@ namespace Vault.Model
             sb.Append("  Derived: ").Append(Derived).Append("\n");
             sb.Append("  Exportable: ").Append(Exportable).Append("\n");
             sb.Append("  HashFunction: ").Append(HashFunction).Append("\n");
+            sb.Append("  PublicKey: ").Append(PublicKey).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -227,8 +243,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.AutoRotatePeriod == input.AutoRotatePeriod ||
+                    (this.AutoRotatePeriod != null &&
+                    this.AutoRotatePeriod.Equals(input.AutoRotatePeriod))
 
-                    this.AutoRotatePeriod.Equals(input.AutoRotatePeriod)
                 ) &&
                 (
                     this.Ciphertext == input.Ciphertext ||
@@ -259,6 +276,12 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.PublicKey == input.PublicKey ||
+                    (this.PublicKey != null &&
+                    this.PublicKey.Equals(input.PublicKey))
+
+                ) &&
+                (
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
@@ -281,8 +304,11 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.AllowPlaintextBackup.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.AllowRotation.GetHashCode();
+                if (this.AutoRotatePeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.AutoRotatePeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.AutoRotatePeriod.GetHashCode();
                 if (this.Ciphertext != null)
                 {
                     hashCode = (hashCode * 59) + this.Ciphertext.GetHashCode();
@@ -300,6 +326,11 @@ namespace Vault.Model
                 if (this.HashFunction != null)
                 {
                     hashCode = (hashCode * 59) + this.HashFunction.GetHashCode();
+                }
+
+                if (this.PublicKey != null)
+                {
+                    hashCode = (hashCode * 59) + this.PublicKey.GetHashCode();
                 }
 
                 if (this.Type != null)

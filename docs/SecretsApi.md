@@ -15,14 +15,20 @@ Method | HTTP request | Description
 [**AwsConfigureLease**](SecretsApi.md#awsconfigurelease) | **POST** /{aws_mount_path}/config/lease | 
 [**AwsConfigureRootIamCredentials**](SecretsApi.md#awsconfigurerootiamcredentials) | **POST** /{aws_mount_path}/config/root | 
 [**AwsDeleteRole**](SecretsApi.md#awsdeleterole) | **DELETE** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**AwsDeleteStaticRolesName**](SecretsApi.md#awsdeletestaticrolesname) | **DELETE** /{aws_mount_path}/static-roles/{name} | 
 [**AwsGenerateCredentials**](SecretsApi.md#awsgeneratecredentials) | **GET** /{aws_mount_path}/creds/{name} | 
+[**AwsGenerateCredentialsWithParameters**](SecretsApi.md#awsgeneratecredentialswithparameters) | **POST** /{aws_mount_path}/creds/{name} | 
 [**AwsGenerateStsCredentials**](SecretsApi.md#awsgeneratestscredentials) | **GET** /{aws_mount_path}/sts/{name} | 
+[**AwsGenerateStsCredentialsWithParameters**](SecretsApi.md#awsgeneratestscredentialswithparameters) | **POST** /{aws_mount_path}/sts/{name} | 
 [**AwsListRoles**](SecretsApi.md#awslistroles) | **GET** /{aws_mount_path}/roles | List the existing roles in this backend
 [**AwsReadLeaseConfiguration**](SecretsApi.md#awsreadleaseconfiguration) | **GET** /{aws_mount_path}/config/lease | 
 [**AwsReadRole**](SecretsApi.md#awsreadrole) | **GET** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
 [**AwsReadRootIamCredentialsConfiguration**](SecretsApi.md#awsreadrootiamcredentialsconfiguration) | **GET** /{aws_mount_path}/config/root | 
+[**AwsReadStaticCredsName**](SecretsApi.md#awsreadstaticcredsname) | **GET** /{aws_mount_path}/static-creds/{name} | 
+[**AwsReadStaticRolesName**](SecretsApi.md#awsreadstaticrolesname) | **GET** /{aws_mount_path}/static-roles/{name} | 
 [**AwsRotateRootIamCredentials**](SecretsApi.md#awsrotaterootiamcredentials) | **POST** /{aws_mount_path}/config/rotate-root | 
 [**AwsWriteRole**](SecretsApi.md#awswriterole) | **POST** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+[**AwsWriteStaticRolesName**](SecretsApi.md#awswritestaticrolesname) | **POST** /{aws_mount_path}/static-roles/{name} | 
 [**AzureConfigure**](SecretsApi.md#azureconfigure) | **POST** /{azure_mount_path}/config | 
 [**AzureDeleteConfiguration**](SecretsApi.md#azuredeleteconfiguration) | **DELETE** /{azure_mount_path}/config | 
 [**AzureDeleteRole**](SecretsApi.md#azuredeleterole) | **DELETE** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
@@ -114,21 +120,21 @@ Method | HTTP request | Description
 [**KubernetesReadConfiguration**](SecretsApi.md#kubernetesreadconfiguration) | **GET** /{kubernetes_mount_path}/config | 
 [**KubernetesReadRole**](SecretsApi.md#kubernetesreadrole) | **GET** /{kubernetes_mount_path}/roles/{name} | 
 [**KubernetesWriteRole**](SecretsApi.md#kuberneteswriterole) | **POST** /{kubernetes_mount_path}/roles/{name} | 
-[**KvV1Delete**](SecretsApi.md#kvv1delete) | **DELETE** /{kv-v1_mount_path}/{path} | 
-[**KvV1Read**](SecretsApi.md#kvv1read) | **GET** /{kv-v1_mount_path}/{path} | 
-[**KvV1Write**](SecretsApi.md#kvv1write) | **POST** /{kv-v1_mount_path}/{path} | 
-[**KvV2Configure**](SecretsApi.md#kvv2configure) | **POST** /{kv-v2_mount_path}/config | Configure backend level settings that are applied to every key in the key-value store.
-[**KvV2Delete**](SecretsApi.md#kvv2delete) | **DELETE** /{kv-v2_mount_path}/data/{path} | 
-[**KvV2DeleteMetadata**](SecretsApi.md#kvv2deletemetadata) | **DELETE** /{kv-v2_mount_path}/metadata/{path} | 
-[**KvV2DeleteVersions**](SecretsApi.md#kvv2deleteversions) | **POST** /{kv-v2_mount_path}/delete/{path} | 
-[**KvV2DestroyVersions**](SecretsApi.md#kvv2destroyversions) | **POST** /{kv-v2_mount_path}/destroy/{path} | 
-[**KvV2Read**](SecretsApi.md#kvv2read) | **GET** /{kv-v2_mount_path}/data/{path} | 
-[**KvV2ReadConfiguration**](SecretsApi.md#kvv2readconfiguration) | **GET** /{kv-v2_mount_path}/config | Read the backend level settings.
-[**KvV2ReadMetadata**](SecretsApi.md#kvv2readmetadata) | **GET** /{kv-v2_mount_path}/metadata/{path} | 
-[**KvV2ReadSubkeys**](SecretsApi.md#kvv2readsubkeys) | **GET** /{kv-v2_mount_path}/subkeys/{path} | 
-[**KvV2UndeleteVersions**](SecretsApi.md#kvv2undeleteversions) | **POST** /{kv-v2_mount_path}/undelete/{path} | 
-[**KvV2Write**](SecretsApi.md#kvv2write) | **POST** /{kv-v2_mount_path}/data/{path} | 
-[**KvV2WriteMetadata**](SecretsApi.md#kvv2writemetadata) | **POST** /{kv-v2_mount_path}/metadata/{path} | 
+[**KvV1Delete**](SecretsApi.md#kvv1delete) | **DELETE** /{kv_v1_mount_path}/{path} | 
+[**KvV1Read**](SecretsApi.md#kvv1read) | **GET** /{kv_v1_mount_path}/{path} | 
+[**KvV1Write**](SecretsApi.md#kvv1write) | **POST** /{kv_v1_mount_path}/{path} | 
+[**KvV2Configure**](SecretsApi.md#kvv2configure) | **POST** /{kv_v2_mount_path}/config | Configure backend level settings that are applied to every key in the key-value store.
+[**KvV2Delete**](SecretsApi.md#kvv2delete) | **DELETE** /{kv_v2_mount_path}/data/{path} | 
+[**KvV2DeleteMetadata**](SecretsApi.md#kvv2deletemetadata) | **DELETE** /{kv_v2_mount_path}/metadata/{path} | 
+[**KvV2DeleteVersions**](SecretsApi.md#kvv2deleteversions) | **POST** /{kv_v2_mount_path}/delete/{path} | 
+[**KvV2DestroyVersions**](SecretsApi.md#kvv2destroyversions) | **POST** /{kv_v2_mount_path}/destroy/{path} | 
+[**KvV2Read**](SecretsApi.md#kvv2read) | **GET** /{kv_v2_mount_path}/data/{path} | 
+[**KvV2ReadConfiguration**](SecretsApi.md#kvv2readconfiguration) | **GET** /{kv_v2_mount_path}/config | Read the backend level settings.
+[**KvV2ReadMetadata**](SecretsApi.md#kvv2readmetadata) | **GET** /{kv_v2_mount_path}/metadata/{path} | 
+[**KvV2ReadSubkeys**](SecretsApi.md#kvv2readsubkeys) | **GET** /{kv_v2_mount_path}/subkeys/{path} | 
+[**KvV2UndeleteVersions**](SecretsApi.md#kvv2undeleteversions) | **POST** /{kv_v2_mount_path}/undelete/{path} | 
+[**KvV2Write**](SecretsApi.md#kvv2write) | **POST** /{kv_v2_mount_path}/data/{path} | 
+[**KvV2WriteMetadata**](SecretsApi.md#kvv2writemetadata) | **POST** /{kv_v2_mount_path}/metadata/{path} | 
 [**LdapConfigure**](SecretsApi.md#ldapconfigure) | **POST** /{ldap_mount_path}/config | 
 [**LdapDeleteConfiguration**](SecretsApi.md#ldapdeleteconfiguration) | **DELETE** /{ldap_mount_path}/config | 
 [**LdapDeleteDynamicRole**](SecretsApi.md#ldapdeletedynamicrole) | **DELETE** /{ldap_mount_path}/role/{name} | 
@@ -170,6 +176,7 @@ Method | HTTP request | Description
 [**NomadReadLeaseConfiguration**](SecretsApi.md#nomadreadleaseconfiguration) | **GET** /{nomad_mount_path}/config/lease | 
 [**NomadReadRole**](SecretsApi.md#nomadreadrole) | **GET** /{nomad_mount_path}/role/{name} | 
 [**NomadWriteRole**](SecretsApi.md#nomadwriterole) | **POST** /{nomad_mount_path}/role/{name} | 
+[**PkiConfigureAcme**](SecretsApi.md#pkiconfigureacme) | **POST** /{pki_mount_path}/config/acme | 
 [**PkiConfigureAutoTidy**](SecretsApi.md#pkiconfigureautotidy) | **POST** /{pki_mount_path}/config/auto-tidy | 
 [**PkiConfigureCa**](SecretsApi.md#pkiconfigureca) | **POST** /{pki_mount_path}/config/ca | 
 [**PkiConfigureCluster**](SecretsApi.md#pkiconfigurecluster) | **POST** /{pki_mount_path}/config/cluster | 
@@ -178,10 +185,15 @@ Method | HTTP request | Description
 [**PkiConfigureKeys**](SecretsApi.md#pkiconfigurekeys) | **POST** /{pki_mount_path}/config/keys | 
 [**PkiConfigureUrls**](SecretsApi.md#pkiconfigureurls) | **POST** /{pki_mount_path}/config/urls | 
 [**PkiCrossSignIntermediate**](SecretsApi.md#pkicrosssignintermediate) | **POST** /{pki_mount_path}/intermediate/cross-sign | 
+[**PkiDeleteEabKey**](SecretsApi.md#pkideleteeabkey) | **DELETE** /{pki_mount_path}/eab/{key_id} | 
 [**PkiDeleteIssuer**](SecretsApi.md#pkideleteissuer) | **DELETE** /{pki_mount_path}/issuer/{issuer_ref} | 
 [**PkiDeleteKey**](SecretsApi.md#pkideletekey) | **DELETE** /{pki_mount_path}/key/{key_ref} | 
 [**PkiDeleteRole**](SecretsApi.md#pkideleterole) | **DELETE** /{pki_mount_path}/roles/{name} | 
 [**PkiDeleteRoot**](SecretsApi.md#pkideleteroot) | **DELETE** /{pki_mount_path}/root | 
+[**PkiGenerateEabKey**](SecretsApi.md#pkigenerateeabkey) | **POST** /{pki_mount_path}/acme/new-eab | 
+[**PkiGenerateEabKeyForIssuer**](SecretsApi.md#pkigenerateeabkeyforissuer) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/new-eab | 
+[**PkiGenerateEabKeyForIssuerAndRole**](SecretsApi.md#pkigenerateeabkeyforissuerandrole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-eab | 
+[**PkiGenerateEabKeyForRole**](SecretsApi.md#pkigenerateeabkeyforrole) | **POST** /{pki_mount_path}/roles/{role}/acme/new-eab | 
 [**PkiGenerateExportedKey**](SecretsApi.md#pkigenerateexportedkey) | **POST** /{pki_mount_path}/keys/generate/exported | 
 [**PkiGenerateIntermediate**](SecretsApi.md#pkigenerateintermediate) | **POST** /{pki_mount_path}/intermediate/generate/{exported} | 
 [**PkiGenerateInternalKey**](SecretsApi.md#pkigenerateinternalkey) | **POST** /{pki_mount_path}/keys/generate/internal | 
@@ -207,14 +219,17 @@ Method | HTTP request | Description
 [**PkiIssuersGenerateRoot**](SecretsApi.md#pkiissuersgenerateroot) | **POST** /{pki_mount_path}/issuers/generate/root/{exported} | 
 [**PkiIssuersImportBundle**](SecretsApi.md#pkiissuersimportbundle) | **POST** /{pki_mount_path}/issuers/import/bundle | 
 [**PkiIssuersImportCert**](SecretsApi.md#pkiissuersimportcert) | **POST** /{pki_mount_path}/issuers/import/cert | 
-[**PkiIssuersRotateRoot**](SecretsApi.md#pkiissuersrotateroot) | **POST** /{pki_mount_path}/root/rotate/{exported} | 
 [**PkiListCerts**](SecretsApi.md#pkilistcerts) | **GET** /{pki_mount_path}/certs | 
+[**PkiListEabKeys**](SecretsApi.md#pkilisteabkeys) | **GET** /{pki_mount_path}/eab | 
 [**PkiListIssuers**](SecretsApi.md#pkilistissuers) | **GET** /{pki_mount_path}/issuers | 
 [**PkiListKeys**](SecretsApi.md#pkilistkeys) | **GET** /{pki_mount_path}/keys | 
 [**PkiListRevokedCerts**](SecretsApi.md#pkilistrevokedcerts) | **GET** /{pki_mount_path}/certs/revoked | 
 [**PkiListRoles**](SecretsApi.md#pkilistroles) | **GET** /{pki_mount_path}/roles | 
 [**PkiQueryOcsp**](SecretsApi.md#pkiqueryocsp) | **POST** /{pki_mount_path}/ocsp | 
 [**PkiQueryOcspWithGetReq**](SecretsApi.md#pkiqueryocspwithgetreq) | **GET** /{pki_mount_path}/ocsp/{req} | 
+[**PkiReadAcmeConfiguration**](SecretsApi.md#pkireadacmeconfiguration) | **GET** /{pki_mount_path}/config/acme | 
+[**PkiReadAcmeDirectory**](SecretsApi.md#pkireadacmedirectory) | **GET** /{pki_mount_path}/acme/directory | 
+[**PkiReadAcmeNewNonce**](SecretsApi.md#pkireadacmenewnonce) | **GET** /{pki_mount_path}/acme/new-nonce | 
 [**PkiReadAutoTidyConfiguration**](SecretsApi.md#pkireadautotidyconfiguration) | **GET** /{pki_mount_path}/config/auto-tidy | 
 [**PkiReadCaChainPem**](SecretsApi.md#pkireadcachainpem) | **GET** /{pki_mount_path}/ca_chain | 
 [**PkiReadCaDer**](SecretsApi.md#pkireadcader) | **GET** /{pki_mount_path}/ca | 
@@ -233,12 +248,18 @@ Method | HTTP request | Description
 [**PkiReadCrlPem**](SecretsApi.md#pkireadcrlpem) | **GET** /{pki_mount_path}/crl/pem | 
 [**PkiReadIssuer**](SecretsApi.md#pkireadissuer) | **GET** /{pki_mount_path}/issuer/{issuer_ref} | 
 [**PkiReadIssuerDer**](SecretsApi.md#pkireadissuerder) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/der | 
+[**PkiReadIssuerIssuerRefAcmeDirectory**](SecretsApi.md#pkireadissuerissuerrefacmedirectory) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/acme/directory | 
+[**PkiReadIssuerIssuerRefAcmeNewNonce**](SecretsApi.md#pkireadissuerissuerrefacmenewnonce) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/acme/new-nonce | 
+[**PkiReadIssuerIssuerRefRolesRoleAcmeDirectory**](SecretsApi.md#pkireadissuerissuerrefrolesroleacmedirectory) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/directory | 
+[**PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce**](SecretsApi.md#pkireadissuerissuerrefrolesroleacmenewnonce) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-nonce | 
 [**PkiReadIssuerJson**](SecretsApi.md#pkireadissuerjson) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/json | 
 [**PkiReadIssuerPem**](SecretsApi.md#pkireadissuerpem) | **GET** /{pki_mount_path}/issuer/{issuer_ref}/pem | 
 [**PkiReadIssuersConfiguration**](SecretsApi.md#pkireadissuersconfiguration) | **GET** /{pki_mount_path}/config/issuers | 
 [**PkiReadKey**](SecretsApi.md#pkireadkey) | **GET** /{pki_mount_path}/key/{key_ref} | 
 [**PkiReadKeysConfiguration**](SecretsApi.md#pkireadkeysconfiguration) | **GET** /{pki_mount_path}/config/keys | 
 [**PkiReadRole**](SecretsApi.md#pkireadrole) | **GET** /{pki_mount_path}/roles/{name} | 
+[**PkiReadRolesRoleAcmeDirectory**](SecretsApi.md#pkireadrolesroleacmedirectory) | **GET** /{pki_mount_path}/roles/{role}/acme/directory | 
+[**PkiReadRolesRoleAcmeNewNonce**](SecretsApi.md#pkireadrolesroleacmenewnonce) | **GET** /{pki_mount_path}/roles/{role}/acme/new-nonce | 
 [**PkiReadUrlsConfiguration**](SecretsApi.md#pkireadurlsconfiguration) | **GET** /{pki_mount_path}/config/urls | 
 [**PkiReplaceRoot**](SecretsApi.md#pkireplaceroot) | **POST** /{pki_mount_path}/root/replace | 
 [**PkiRevoke**](SecretsApi.md#pkirevoke) | **POST** /{pki_mount_path}/revoke | 
@@ -248,6 +269,7 @@ Method | HTTP request | Description
 [**PkiRootSignSelfIssued**](SecretsApi.md#pkirootsignselfissued) | **POST** /{pki_mount_path}/root/sign-self-issued | 
 [**PkiRotateCrl**](SecretsApi.md#pkirotatecrl) | **GET** /{pki_mount_path}/crl/rotate | 
 [**PkiRotateDeltaCrl**](SecretsApi.md#pkirotatedeltacrl) | **GET** /{pki_mount_path}/crl/rotate-delta | 
+[**PkiRotateRoot**](SecretsApi.md#pkirotateroot) | **POST** /{pki_mount_path}/root/rotate/{exported} | 
 [**PkiSetSignedIntermediate**](SecretsApi.md#pkisetsignedintermediate) | **POST** /{pki_mount_path}/intermediate/set-signed | 
 [**PkiSignVerbatim**](SecretsApi.md#pkisignverbatim) | **POST** /{pki_mount_path}/sign-verbatim | 
 [**PkiSignVerbatimWithRole**](SecretsApi.md#pkisignverbatimwithrole) | **POST** /{pki_mount_path}/sign-verbatim/{role} | 
@@ -255,9 +277,49 @@ Method | HTTP request | Description
 [**PkiTidy**](SecretsApi.md#pkitidy) | **POST** /{pki_mount_path}/tidy | 
 [**PkiTidyCancel**](SecretsApi.md#pkitidycancel) | **POST** /{pki_mount_path}/tidy-cancel | 
 [**PkiTidyStatus**](SecretsApi.md#pkitidystatus) | **GET** /{pki_mount_path}/tidy-status | 
+[**PkiWriteAcmeAccountKid**](SecretsApi.md#pkiwriteacmeaccountkid) | **POST** /{pki_mount_path}/acme/account/{kid} | 
+[**PkiWriteAcmeAuthorizationAuthId**](SecretsApi.md#pkiwriteacmeauthorizationauthid) | **POST** /{pki_mount_path}/acme/authorization/{auth_id} | 
+[**PkiWriteAcmeChallengeAuthIdChallengeType**](SecretsApi.md#pkiwriteacmechallengeauthidchallengetype) | **POST** /{pki_mount_path}/acme/challenge/{auth_id}/{challenge_type} | 
+[**PkiWriteAcmeNewAccount**](SecretsApi.md#pkiwriteacmenewaccount) | **POST** /{pki_mount_path}/acme/new-account | 
+[**PkiWriteAcmeNewOrder**](SecretsApi.md#pkiwriteacmeneworder) | **POST** /{pki_mount_path}/acme/new-order | 
+[**PkiWriteAcmeOrderOrderId**](SecretsApi.md#pkiwriteacmeorderorderid) | **POST** /{pki_mount_path}/acme/order/{order_id} | 
+[**PkiWriteAcmeOrderOrderIdCert**](SecretsApi.md#pkiwriteacmeorderorderidcert) | **POST** /{pki_mount_path}/acme/order/{order_id}/cert | 
+[**PkiWriteAcmeOrderOrderIdFinalize**](SecretsApi.md#pkiwriteacmeorderorderidfinalize) | **POST** /{pki_mount_path}/acme/order/{order_id}/finalize | 
+[**PkiWriteAcmeOrders**](SecretsApi.md#pkiwriteacmeorders) | **POST** /{pki_mount_path}/acme/orders | 
+[**PkiWriteAcmeRevokeCert**](SecretsApi.md#pkiwriteacmerevokecert) | **POST** /{pki_mount_path}/acme/revoke-cert | 
 [**PkiWriteIssuer**](SecretsApi.md#pkiwriteissuer) | **POST** /{pki_mount_path}/issuer/{issuer_ref} | 
+[**PkiWriteIssuerIssuerRefAcmeAccountKid**](SecretsApi.md#pkiwriteissuerissuerrefacmeaccountkid) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/account/{kid} | 
+[**PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId**](SecretsApi.md#pkiwriteissuerissuerrefacmeauthorizationauthid) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/authorization/{auth_id} | 
+[**PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType**](SecretsApi.md#pkiwriteissuerissuerrefacmechallengeauthidchallengetype) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/challenge/{auth_id}/{challenge_type} | 
+[**PkiWriteIssuerIssuerRefAcmeNewAccount**](SecretsApi.md#pkiwriteissuerissuerrefacmenewaccount) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/new-account | 
+[**PkiWriteIssuerIssuerRefAcmeNewOrder**](SecretsApi.md#pkiwriteissuerissuerrefacmeneworder) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/new-order | 
+[**PkiWriteIssuerIssuerRefAcmeOrderOrderId**](SecretsApi.md#pkiwriteissuerissuerrefacmeorderorderid) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id} | 
+[**PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert**](SecretsApi.md#pkiwriteissuerissuerrefacmeorderorderidcert) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}/cert | 
+[**PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize**](SecretsApi.md#pkiwriteissuerissuerrefacmeorderorderidfinalize) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}/finalize | 
+[**PkiWriteIssuerIssuerRefAcmeOrders**](SecretsApi.md#pkiwriteissuerissuerrefacmeorders) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/orders | 
+[**PkiWriteIssuerIssuerRefAcmeRevokeCert**](SecretsApi.md#pkiwriteissuerissuerrefacmerevokecert) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/acme/revoke-cert | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeaccountkid) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/account/{kid} | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeauthorizationauthid) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/authorization/{auth_id} | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmechallengeauthidchallengetype) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/challenge/{auth_id}/{challenge_type} | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmenewaccount) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-account | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeneworder) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-order | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeorderorderid) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id} | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeorderorderidcert) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}/cert | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeorderorderidfinalize) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}/finalize | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeOrders**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmeorders) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/orders | 
+[**PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert**](SecretsApi.md#pkiwriteissuerissuerrefrolesroleacmerevokecert) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/revoke-cert | 
 [**PkiWriteKey**](SecretsApi.md#pkiwritekey) | **POST** /{pki_mount_path}/key/{key_ref} | 
 [**PkiWriteRole**](SecretsApi.md#pkiwriterole) | **POST** /{pki_mount_path}/roles/{name} | 
+[**PkiWriteRolesRoleAcmeAccountKid**](SecretsApi.md#pkiwriterolesroleacmeaccountkid) | **POST** /{pki_mount_path}/roles/{role}/acme/account/{kid} | 
+[**PkiWriteRolesRoleAcmeAuthorizationAuthId**](SecretsApi.md#pkiwriterolesroleacmeauthorizationauthid) | **POST** /{pki_mount_path}/roles/{role}/acme/authorization/{auth_id} | 
+[**PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType**](SecretsApi.md#pkiwriterolesroleacmechallengeauthidchallengetype) | **POST** /{pki_mount_path}/roles/{role}/acme/challenge/{auth_id}/{challenge_type} | 
+[**PkiWriteRolesRoleAcmeNewAccount**](SecretsApi.md#pkiwriterolesroleacmenewaccount) | **POST** /{pki_mount_path}/roles/{role}/acme/new-account | 
+[**PkiWriteRolesRoleAcmeNewOrder**](SecretsApi.md#pkiwriterolesroleacmeneworder) | **POST** /{pki_mount_path}/roles/{role}/acme/new-order | 
+[**PkiWriteRolesRoleAcmeOrderOrderId**](SecretsApi.md#pkiwriterolesroleacmeorderorderid) | **POST** /{pki_mount_path}/roles/{role}/acme/order/{order_id} | 
+[**PkiWriteRolesRoleAcmeOrderOrderIdCert**](SecretsApi.md#pkiwriterolesroleacmeorderorderidcert) | **POST** /{pki_mount_path}/roles/{role}/acme/order/{order_id}/cert | 
+[**PkiWriteRolesRoleAcmeOrderOrderIdFinalize**](SecretsApi.md#pkiwriterolesroleacmeorderorderidfinalize) | **POST** /{pki_mount_path}/roles/{role}/acme/order/{order_id}/finalize | 
+[**PkiWriteRolesRoleAcmeOrders**](SecretsApi.md#pkiwriterolesroleacmeorders) | **POST** /{pki_mount_path}/roles/{role}/acme/orders | 
+[**PkiWriteRolesRoleAcmeRevokeCert**](SecretsApi.md#pkiwriterolesroleacmerevokecert) | **POST** /{pki_mount_path}/roles/{role}/acme/revoke-cert | 
 [**RabbitMqConfigureConnection**](SecretsApi.md#rabbitmqconfigureconnection) | **POST** /{rabbitmq_mount_path}/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
 [**RabbitMqConfigureLease**](SecretsApi.md#rabbitmqconfigurelease) | **POST** /{rabbitmq_mount_path}/config/lease | 
 [**RabbitMqDeleteRole**](SecretsApi.md#rabbitmqdeleterole) | **DELETE** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
@@ -299,6 +361,8 @@ Method | HTTP request | Description
 [**TotpReadKey**](SecretsApi.md#totpreadkey) | **GET** /{totp_mount_path}/keys/{name} | 
 [**TotpValidateCode**](SecretsApi.md#totpvalidatecode) | **POST** /{totp_mount_path}/code/{name} | 
 [**TransitBackUpKey**](SecretsApi.md#transitbackupkey) | **GET** /{transit_mount_path}/backup/{name} | Backup the named key
+[**TransitByokKey**](SecretsApi.md#transitbyokkey) | **GET** /{transit_mount_path}/byok-export/{destination}/{source} | Securely export named encryption or signing key
+[**TransitByokKeyVersion**](SecretsApi.md#transitbyokkeyversion) | **GET** /{transit_mount_path}/byok-export/{destination}/{source}/{version} | Securely export named encryption or signing key
 [**TransitConfigureCache**](SecretsApi.md#transitconfigurecache) | **POST** /{transit_mount_path}/cache-config | Configures a new cache of the specified size
 [**TransitConfigureKey**](SecretsApi.md#transitconfigurekey) | **POST** /{transit_mount_path}/keys/{name}/config | Configure a named encryption key
 [**TransitConfigureKeys**](SecretsApi.md#transitconfigurekeys) | **POST** /{transit_mount_path}/config/keys | 
@@ -1337,7 +1401,7 @@ namespace Example
             
             
             
-            var name = "name_example";  // string | Name of the policy
+            var name = "name_example";  // string | Name of the role
             
             
             
@@ -1369,7 +1433,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the policy | 
+ **name** | **string**| Name of the role | 
  **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
 
 
@@ -1393,6 +1457,102 @@ No authorization required
 |-------------|-------------|------------------|
 
 | **204** | empty body |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="awsdeletestaticrolesname"></a>
+# **AwsDeleteStaticRolesName**
+
+> void AwsDeleteStaticRolesName (string name, string awsMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AwsDeleteStaticRolesNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of this role.
+            
+            
+            
+            
+            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.AwsDeleteStaticRolesName(string name, string awsMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.AwsDeleteStaticRolesName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of this role. | 
+ **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **204** | No Content |  -  |
 
 
 
@@ -1495,6 +1655,108 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="awsgeneratecredentialswithparameters"></a>
+# **AwsGenerateCredentialsWithParameters**
+
+> void AwsGenerateCredentialsWithParameters (string name, string awsMountPath, AwsGenerateCredentialsWithParametersRequest awsGenerateCredentialsWithParametersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AwsGenerateCredentialsWithParametersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
+            
+            
+            
+            
+            
+            var awsGenerateCredentialsWithParametersRequest = new AwsGenerateCredentialsWithParametersRequest(); // AwsGenerateCredentialsWithParametersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.AwsGenerateCredentialsWithParameters(string name, string awsMountPath, AwsGenerateCredentialsWithParametersRequest awsGenerateCredentialsWithParametersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.AwsGenerateCredentialsWithParameters: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role | 
+ **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+ **awsGenerateCredentialsWithParametersRequest** | [**AwsGenerateCredentialsWithParametersRequest**](AwsGenerateCredentialsWithParametersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="awsgeneratestscredentials"></a>
 # **AwsGenerateStsCredentials**
 
@@ -1576,6 +1838,108 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="awsgeneratestscredentialswithparameters"></a>
+# **AwsGenerateStsCredentialsWithParameters**
+
+> void AwsGenerateStsCredentialsWithParameters (string name, string awsMountPath, AwsGenerateStsCredentialsWithParametersRequest awsGenerateStsCredentialsWithParametersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AwsGenerateStsCredentialsWithParametersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the role
+            
+            
+            
+            
+            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
+            
+            
+            
+            
+            
+            var awsGenerateStsCredentialsWithParametersRequest = new AwsGenerateStsCredentialsWithParametersRequest(); // AwsGenerateStsCredentialsWithParametersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.AwsGenerateStsCredentialsWithParameters(string name, string awsMountPath, AwsGenerateStsCredentialsWithParametersRequest awsGenerateStsCredentialsWithParametersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.AwsGenerateStsCredentialsWithParameters: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role | 
+ **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+ **awsGenerateStsCredentialsWithParametersRequest** | [**AwsGenerateStsCredentialsWithParametersRequest**](AwsGenerateStsCredentialsWithParametersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
  - **Accept**: Not defined
 
 
@@ -1815,7 +2179,7 @@ namespace Example
             
             
             
-            var name = "name_example";  // string | Name of the policy
+            var name = "name_example";  // string | Name of the role
             
             
             
@@ -1847,7 +2211,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the policy | 
+ **name** | **string**| Name of the role | 
  **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
 
 
@@ -1953,6 +2317,202 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="awsreadstaticcredsname"></a>
+# **AwsReadStaticCredsName**
+
+> AwsReadStaticCredsNameResponse AwsReadStaticCredsName (string name, string awsMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AwsReadStaticCredsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of this role.
+            
+            
+            
+            
+            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
+            
+            
+            
+
+            try
+            {
+                
+
+                AwsReadStaticCredsNameResponse result = apiInstance.AwsReadStaticCredsName(string name, string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.AwsReadStaticCredsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of this role. | 
+ **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+
+
+### Return type
+
+[**AwsReadStaticCredsNameResponse**](AwsReadStaticCredsNameResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="awsreadstaticrolesname"></a>
+# **AwsReadStaticRolesName**
+
+> AwsReadStaticRolesNameResponse AwsReadStaticRolesName (string name, string awsMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AwsReadStaticRolesNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of this role.
+            
+            
+            
+            
+            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
+            
+            
+            
+
+            try
+            {
+                
+
+                AwsReadStaticRolesNameResponse result = apiInstance.AwsReadStaticRolesName(string name, string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.AwsReadStaticRolesName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of this role. | 
+ **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+
+
+### Return type
+
+[**AwsReadStaticRolesNameResponse**](AwsReadStaticRolesNameResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -2093,7 +2653,7 @@ namespace Example
             
             
             
-            var name = "name_example";  // string | Name of the policy
+            var name = "name_example";  // string | Name of the role
             
             
             
@@ -2130,7 +2690,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the policy | 
+ **name** | **string**| Name of the role | 
  **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
  **awsWriteRoleRequest** | [**AwsWriteRoleRequest**](AwsWriteRoleRequest.md)|  | 
 
@@ -2147,6 +2707,110 @@ No authorization required
 
  - **Content-Type**: , 
  - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="awswritestaticrolesname"></a>
+# **AwsWriteStaticRolesName**
+
+> AwsWriteStaticRolesNameResponse AwsWriteStaticRolesName (string name, string awsMountPath, AwsWriteStaticRolesNameRequest awsWriteStaticRolesNameRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class AwsWriteStaticRolesNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of this role.
+            
+            
+            
+            
+            var awsMountPath = "\"aws\"";  // string | Path that the backend was mounted at (default to "aws")
+            
+            
+            
+            
+            
+            var awsWriteStaticRolesNameRequest = new AwsWriteStaticRolesNameRequest(); // AwsWriteStaticRolesNameRequest | 
+            
+            
+
+            try
+            {
+                
+
+                AwsWriteStaticRolesNameResponse result = apiInstance.AwsWriteStaticRolesName(string name, string awsMountPath, AwsWriteStaticRolesNameRequest awsWriteStaticRolesNameRequest, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.AwsWriteStaticRolesName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of this role. | 
+ **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+ **awsWriteStaticRolesNameRequest** | [**AwsWriteStaticRolesNameRequest**](AwsWriteStaticRolesNameRequest.md)|  | 
+
+
+### Return type
+
+[**AwsWriteStaticRolesNameResponse**](AwsWriteStaticRolesNameResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: application/json
 
 
 
@@ -16449,6 +17113,102 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="pkiconfigureacme"></a>
+# **PkiConfigureAcme**
+
+> void PkiConfigureAcme (string pkiMountPath, PkiConfigureAcmeRequest pkiConfigureAcmeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiConfigureAcmeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiConfigureAcmeRequest = new PkiConfigureAcmeRequest(); // PkiConfigureAcmeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiConfigureAcme(string pkiMountPath, PkiConfigureAcmeRequest pkiConfigureAcmeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiConfigureAcme: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiConfigureAcmeRequest** | [**PkiConfigureAcmeRequest**](PkiConfigureAcmeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="pkiconfigureautotidy"></a>
 # **PkiConfigureAutoTidy**
 
@@ -17233,6 +17993,102 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="pkideleteeabkey"></a>
+# **PkiDeleteEabKey**
+
+> void PkiDeleteEabKey (string keyId, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiDeleteEabKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var keyId = "keyId_example";  // string | EAB key identifier
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiDeleteEabKey(string keyId, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiDeleteEabKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **keyId** | **string**| EAB key identifier | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **204** | empty body |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="pkideleteissuer"></a>
 # **PkiDeleteIssuer**
 
@@ -17597,6 +18453,398 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkigenerateeabkey"></a>
+# **PkiGenerateEabKey**
+
+> PkiGenerateEabKeyResponse PkiGenerateEabKey (string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiGenerateEabKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                PkiGenerateEabKeyResponse result = apiInstance.PkiGenerateEabKey(string pkiMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiGenerateEabKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+[**PkiGenerateEabKeyResponse**](PkiGenerateEabKeyResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkigenerateeabkeyforissuer"></a>
+# **PkiGenerateEabKeyForIssuer**
+
+> PkiGenerateEabKeyForIssuerResponse PkiGenerateEabKeyForIssuer (string issuerRef, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiGenerateEabKeyForIssuerExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                PkiGenerateEabKeyForIssuerResponse result = apiInstance.PkiGenerateEabKeyForIssuer(string issuerRef, string pkiMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiGenerateEabKeyForIssuer: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+[**PkiGenerateEabKeyForIssuerResponse**](PkiGenerateEabKeyForIssuerResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkigenerateeabkeyforissuerandrole"></a>
+# **PkiGenerateEabKeyForIssuerAndRole**
+
+> PkiGenerateEabKeyForIssuerAndRoleResponse PkiGenerateEabKeyForIssuerAndRole (string issuerRef, string role, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiGenerateEabKeyForIssuerAndRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                PkiGenerateEabKeyForIssuerAndRoleResponse result = apiInstance.PkiGenerateEabKeyForIssuerAndRole(string issuerRef, string role, string pkiMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiGenerateEabKeyForIssuerAndRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+[**PkiGenerateEabKeyForIssuerAndRoleResponse**](PkiGenerateEabKeyForIssuerAndRoleResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkigenerateeabkeyforrole"></a>
+# **PkiGenerateEabKeyForRole**
+
+> PkiGenerateEabKeyForRoleResponse PkiGenerateEabKeyForRole (string role, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiGenerateEabKeyForRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                PkiGenerateEabKeyForRoleResponse result = apiInstance.PkiGenerateEabKeyForRole(string role, string pkiMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiGenerateEabKeyForRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+[**PkiGenerateEabKeyForRoleResponse**](PkiGenerateEabKeyForRoleResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -20157,110 +21405,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="pkiissuersrotateroot"></a>
-# **PkiIssuersRotateRoot**
-
-> PkiIssuersRotateRootResponse PkiIssuersRotateRoot (string exported, string pkiMountPath, PkiIssuersRotateRootRequest pkiIssuersRotateRootRequest, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PkiIssuersRotateRootExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
-            
-            
-            
-            
-            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
-            
-            
-            
-            
-            
-            var pkiIssuersRotateRootRequest = new PkiIssuersRotateRootRequest(); // PkiIssuersRotateRootRequest | 
-            
-            
-
-            try
-            {
-                
-
-                PkiIssuersRotateRootResponse result = apiInstance.PkiIssuersRotateRoot(string exported, string pkiMountPath, PkiIssuersRotateRootRequest pkiIssuersRotateRootRequest, TimeSpan? wrapTTL = null);
-
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PkiIssuersRotateRoot: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exported** | **string**| Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key! | 
- **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
- **pkiIssuersRotateRootRequest** | [**PkiIssuersRotateRootRequest**](PkiIssuersRotateRootRequest.md)|  | 
-
-
-### Return type
-
-[**PkiIssuersRotateRootResponse**](PkiIssuersRotateRootResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: application/json
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="pkilistcerts"></a>
 # **PkiListCerts**
 
@@ -20336,6 +21480,104 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PkiListCertsResponse**](PkiListCertsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkilisteabkeys"></a>
+# **PkiListEabKeys**
+
+> PkiListEabKeysResponse PkiListEabKeys (string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiListEabKeysExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+
+                PkiListEabKeysResponse result = apiInstance.PkiListEabKeys(string pkiMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiListEabKeys: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+[**PkiListEabKeysResponse**](PkiListEabKeysResponse.md)
 
 ### Authorization
 
@@ -20908,6 +22150,276 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **req** | **string**| base-64 encoded ocsp request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadacmeconfiguration"></a>
+# **PkiReadAcmeConfiguration**
+
+> void PkiReadAcmeConfiguration (string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadAcmeConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadAcmeConfiguration(string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadAcmeConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadacmedirectory"></a>
+# **PkiReadAcmeDirectory**
+
+> void PkiReadAcmeDirectory (string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadAcmeDirectoryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadAcmeDirectory(string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadAcmeDirectory: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadacmenewnonce"></a>
+# **PkiReadAcmeNewNonce**
+
+> void PkiReadAcmeNewNonce (string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadAcmeNewNonceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadAcmeNewNonce(string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadAcmeNewNonce: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
  **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
 
 
@@ -22625,6 +24137,402 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="pkireadissuerissuerrefacmedirectory"></a>
+# **PkiReadIssuerIssuerRefAcmeDirectory**
+
+> void PkiReadIssuerIssuerRefAcmeDirectory (string issuerRef, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadIssuerIssuerRefAcmeDirectoryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadIssuerIssuerRefAcmeDirectory(string issuerRef, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadIssuerIssuerRefAcmeDirectory: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadissuerissuerrefacmenewnonce"></a>
+# **PkiReadIssuerIssuerRefAcmeNewNonce**
+
+> void PkiReadIssuerIssuerRefAcmeNewNonce (string issuerRef, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadIssuerIssuerRefAcmeNewNonceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadIssuerIssuerRefAcmeNewNonce(string issuerRef, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadIssuerIssuerRefAcmeNewNonce: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadissuerissuerrefrolesroleacmedirectory"></a>
+# **PkiReadIssuerIssuerRefRolesRoleAcmeDirectory**
+
+> void PkiReadIssuerIssuerRefRolesRoleAcmeDirectory (string issuerRef, string role, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadIssuerIssuerRefRolesRoleAcmeDirectoryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadIssuerIssuerRefRolesRoleAcmeDirectory(string issuerRef, string role, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadIssuerIssuerRefRolesRoleAcmeDirectory: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadissuerissuerrefrolesroleacmenewnonce"></a>
+# **PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce**
+
+> void PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce (string issuerRef, string role, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadIssuerIssuerRefRolesRoleAcmeNewNonceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce(string issuerRef, string role, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="pkireadissuerjson"></a>
 # **PkiReadIssuerJson**
 
@@ -23191,6 +25099,198 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadrolesroleacmedirectory"></a>
+# **PkiReadRolesRoleAcmeDirectory**
+
+> void PkiReadRolesRoleAcmeDirectory (string role, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadRolesRoleAcmeDirectoryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadRolesRoleAcmeDirectory(string role, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadRolesRoleAcmeDirectory: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkireadrolesroleacmenewnonce"></a>
+# **PkiReadRolesRoleAcmeNewNonce**
+
+> void PkiReadRolesRoleAcmeNewNonce (string role, string pkiMountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiReadRolesRoleAcmeNewNonceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiReadRolesRoleAcmeNewNonce(string role, string pkiMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiReadRolesRoleAcmeNewNonce: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 
@@ -24069,6 +26169,110 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="pkirotateroot"></a>
+# **PkiRotateRoot**
+
+> PkiRotateRootResponse PkiRotateRoot (string exported, string pkiMountPath, PkiRotateRootRequest pkiRotateRootRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiRotateRootExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var exported = "internal";  // string | Must be \"internal\", \"exported\" or \"kms\". If set to \"exported\", the generated private key will be returned. This is your *only* chance to retrieve the private key!
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiRotateRootRequest = new PkiRotateRootRequest(); // PkiRotateRootRequest | 
+            
+            
+
+            try
+            {
+                
+
+                PkiRotateRootResponse result = apiInstance.PkiRotateRoot(string exported, string pkiMountPath, PkiRotateRootRequest pkiRotateRootRequest, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiRotateRoot: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exported** | **string**| Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key! | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiRotateRootRequest** | [**PkiRotateRootRequest**](PkiRotateRootRequest.md)|  | 
+
+
+### Return type
+
+[**PkiRotateRootResponse**](PkiRotateRootResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="pkisetsignedintermediate"></a>
 # **PkiSetSignedIntermediate**
 
@@ -24753,6 +26957,1008 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="pkiwriteacmeaccountkid"></a>
+# **PkiWriteAcmeAccountKid**
+
+> void PkiWriteAcmeAccountKid (string kid, string pkiMountPath, PkiWriteAcmeAccountKidRequest pkiWriteAcmeAccountKidRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeAccountKidExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var kid = "kid_example";  // string | The key identifier provided by the CA
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeAccountKidRequest = new PkiWriteAcmeAccountKidRequest(); // PkiWriteAcmeAccountKidRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeAccountKid(string kid, string pkiMountPath, PkiWriteAcmeAccountKidRequest pkiWriteAcmeAccountKidRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeAccountKid: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kid** | **string**| The key identifier provided by the CA | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeAccountKidRequest** | [**PkiWriteAcmeAccountKidRequest**](PkiWriteAcmeAccountKidRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmeauthorizationauthid"></a>
+# **PkiWriteAcmeAuthorizationAuthId**
+
+> void PkiWriteAcmeAuthorizationAuthId (string authId, string pkiMountPath, PkiWriteAcmeAuthorizationAuthIdRequest pkiWriteAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeAuthorizationAuthIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeAuthorizationAuthIdRequest = new PkiWriteAcmeAuthorizationAuthIdRequest(); // PkiWriteAcmeAuthorizationAuthIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeAuthorizationAuthId(string authId, string pkiMountPath, PkiWriteAcmeAuthorizationAuthIdRequest pkiWriteAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeAuthorizationAuthId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeAuthorizationAuthIdRequest** | [**PkiWriteAcmeAuthorizationAuthIdRequest**](PkiWriteAcmeAuthorizationAuthIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmechallengeauthidchallengetype"></a>
+# **PkiWriteAcmeChallengeAuthIdChallengeType**
+
+> void PkiWriteAcmeChallengeAuthIdChallengeType (string authId, string challengeType, string pkiMountPath, PkiWriteAcmeChallengeAuthIdChallengeTypeRequest pkiWriteAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeChallengeAuthIdChallengeTypeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var challengeType = "challengeType_example";  // string | ACME challenge type
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeChallengeAuthIdChallengeTypeRequest = new PkiWriteAcmeChallengeAuthIdChallengeTypeRequest(); // PkiWriteAcmeChallengeAuthIdChallengeTypeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string pkiMountPath, PkiWriteAcmeChallengeAuthIdChallengeTypeRequest pkiWriteAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeChallengeAuthIdChallengeType: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **challengeType** | **string**| ACME challenge type | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeChallengeAuthIdChallengeTypeRequest** | [**PkiWriteAcmeChallengeAuthIdChallengeTypeRequest**](PkiWriteAcmeChallengeAuthIdChallengeTypeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmenewaccount"></a>
+# **PkiWriteAcmeNewAccount**
+
+> void PkiWriteAcmeNewAccount (string pkiMountPath, PkiWriteAcmeNewAccountRequest pkiWriteAcmeNewAccountRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeNewAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeNewAccountRequest = new PkiWriteAcmeNewAccountRequest(); // PkiWriteAcmeNewAccountRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeNewAccount(string pkiMountPath, PkiWriteAcmeNewAccountRequest pkiWriteAcmeNewAccountRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeNewAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeNewAccountRequest** | [**PkiWriteAcmeNewAccountRequest**](PkiWriteAcmeNewAccountRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmeneworder"></a>
+# **PkiWriteAcmeNewOrder**
+
+> void PkiWriteAcmeNewOrder (string pkiMountPath, PkiWriteAcmeNewOrderRequest pkiWriteAcmeNewOrderRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeNewOrderExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeNewOrderRequest = new PkiWriteAcmeNewOrderRequest(); // PkiWriteAcmeNewOrderRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeNewOrder(string pkiMountPath, PkiWriteAcmeNewOrderRequest pkiWriteAcmeNewOrderRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeNewOrder: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeNewOrderRequest** | [**PkiWriteAcmeNewOrderRequest**](PkiWriteAcmeNewOrderRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmeorderorderid"></a>
+# **PkiWriteAcmeOrderOrderId**
+
+> void PkiWriteAcmeOrderOrderId (string orderId, string pkiMountPath, PkiWriteAcmeOrderOrderIdRequest pkiWriteAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeOrderOrderIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeOrderOrderIdRequest = new PkiWriteAcmeOrderOrderIdRequest(); // PkiWriteAcmeOrderOrderIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeOrderOrderId(string orderId, string pkiMountPath, PkiWriteAcmeOrderOrderIdRequest pkiWriteAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeOrderOrderId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeOrderOrderIdRequest** | [**PkiWriteAcmeOrderOrderIdRequest**](PkiWriteAcmeOrderOrderIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmeorderorderidcert"></a>
+# **PkiWriteAcmeOrderOrderIdCert**
+
+> void PkiWriteAcmeOrderOrderIdCert (string orderId, string pkiMountPath, PkiWriteAcmeOrderOrderIdCertRequest pkiWriteAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeOrderOrderIdCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeOrderOrderIdCertRequest = new PkiWriteAcmeOrderOrderIdCertRequest(); // PkiWriteAcmeOrderOrderIdCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeOrderOrderIdCert(string orderId, string pkiMountPath, PkiWriteAcmeOrderOrderIdCertRequest pkiWriteAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeOrderOrderIdCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeOrderOrderIdCertRequest** | [**PkiWriteAcmeOrderOrderIdCertRequest**](PkiWriteAcmeOrderOrderIdCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmeorderorderidfinalize"></a>
+# **PkiWriteAcmeOrderOrderIdFinalize**
+
+> void PkiWriteAcmeOrderOrderIdFinalize (string orderId, string pkiMountPath, PkiWriteAcmeOrderOrderIdFinalizeRequest pkiWriteAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeOrderOrderIdFinalizeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeOrderOrderIdFinalizeRequest = new PkiWriteAcmeOrderOrderIdFinalizeRequest(); // PkiWriteAcmeOrderOrderIdFinalizeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeOrderOrderIdFinalize(string orderId, string pkiMountPath, PkiWriteAcmeOrderOrderIdFinalizeRequest pkiWriteAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeOrderOrderIdFinalize: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeOrderOrderIdFinalizeRequest** | [**PkiWriteAcmeOrderOrderIdFinalizeRequest**](PkiWriteAcmeOrderOrderIdFinalizeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmeorders"></a>
+# **PkiWriteAcmeOrders**
+
+> void PkiWriteAcmeOrders (string pkiMountPath, PkiWriteAcmeOrdersRequest pkiWriteAcmeOrdersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeOrdersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeOrdersRequest = new PkiWriteAcmeOrdersRequest(); // PkiWriteAcmeOrdersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeOrders(string pkiMountPath, PkiWriteAcmeOrdersRequest pkiWriteAcmeOrdersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeOrders: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeOrdersRequest** | [**PkiWriteAcmeOrdersRequest**](PkiWriteAcmeOrdersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteacmerevokecert"></a>
+# **PkiWriteAcmeRevokeCert**
+
+> void PkiWriteAcmeRevokeCert (string pkiMountPath, PkiWriteAcmeRevokeCertRequest pkiWriteAcmeRevokeCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteAcmeRevokeCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteAcmeRevokeCertRequest = new PkiWriteAcmeRevokeCertRequest(); // PkiWriteAcmeRevokeCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteAcmeRevokeCert(string pkiMountPath, PkiWriteAcmeRevokeCertRequest pkiWriteAcmeRevokeCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteAcmeRevokeCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteAcmeRevokeCertRequest** | [**PkiWriteAcmeRevokeCertRequest**](PkiWriteAcmeRevokeCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="pkiwriteissuer"></a>
 # **PkiWriteIssuer**
 
@@ -24843,6 +28049,2190 @@ No authorization required
 
  - **Content-Type**: , 
  - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeaccountkid"></a>
+# **PkiWriteIssuerIssuerRefAcmeAccountKid**
+
+> void PkiWriteIssuerIssuerRefAcmeAccountKid (string issuerRef, string kid, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeAccountKidRequest pkiWriteIssuerIssuerRefAcmeAccountKidRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeAccountKidExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var kid = "kid_example";  // string | The key identifier provided by the CA
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeAccountKidRequest = new PkiWriteIssuerIssuerRefAcmeAccountKidRequest(); // PkiWriteIssuerIssuerRefAcmeAccountKidRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeAccountKid(string issuerRef, string kid, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeAccountKidRequest pkiWriteIssuerIssuerRefAcmeAccountKidRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeAccountKid: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **kid** | **string**| The key identifier provided by the CA | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeAccountKidRequest** | [**PkiWriteIssuerIssuerRefAcmeAccountKidRequest**](PkiWriteIssuerIssuerRefAcmeAccountKidRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeauthorizationauthid"></a>
+# **PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId**
+
+> void PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId (string authId, string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest = new PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest(); // PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId(string authId, string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest** | [**PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest**](PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmechallengeauthidchallengetype"></a>
+# **PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType**
+
+> void PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType (string authId, string challengeType, string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var challengeType = "challengeType_example";  // string | ACME challenge type
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest = new PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest(); // PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **challengeType** | **string**| ACME challenge type | 
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest** | [**PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest**](PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmenewaccount"></a>
+# **PkiWriteIssuerIssuerRefAcmeNewAccount**
+
+> void PkiWriteIssuerIssuerRefAcmeNewAccount (string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeNewAccountRequest pkiWriteIssuerIssuerRefAcmeNewAccountRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeNewAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeNewAccountRequest = new PkiWriteIssuerIssuerRefAcmeNewAccountRequest(); // PkiWriteIssuerIssuerRefAcmeNewAccountRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeNewAccount(string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeNewAccountRequest pkiWriteIssuerIssuerRefAcmeNewAccountRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeNewAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeNewAccountRequest** | [**PkiWriteIssuerIssuerRefAcmeNewAccountRequest**](PkiWriteIssuerIssuerRefAcmeNewAccountRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeneworder"></a>
+# **PkiWriteIssuerIssuerRefAcmeNewOrder**
+
+> void PkiWriteIssuerIssuerRefAcmeNewOrder (string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeNewOrderRequest pkiWriteIssuerIssuerRefAcmeNewOrderRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeNewOrderExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeNewOrderRequest = new PkiWriteIssuerIssuerRefAcmeNewOrderRequest(); // PkiWriteIssuerIssuerRefAcmeNewOrderRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeNewOrder(string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeNewOrderRequest pkiWriteIssuerIssuerRefAcmeNewOrderRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeNewOrder: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeNewOrderRequest** | [**PkiWriteIssuerIssuerRefAcmeNewOrderRequest**](PkiWriteIssuerIssuerRefAcmeNewOrderRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeorderorderid"></a>
+# **PkiWriteIssuerIssuerRefAcmeOrderOrderId**
+
+> void PkiWriteIssuerIssuerRefAcmeOrderOrderId (string issuerRef, string orderId, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeOrderOrderIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest = new PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest(); // PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeOrderOrderId(string issuerRef, string orderId, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeOrderOrderId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest** | [**PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest**](PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeorderorderidcert"></a>
+# **PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert**
+
+> void PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert (string issuerRef, string orderId, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest = new PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest(); // PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert(string issuerRef, string orderId, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest** | [**PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest**](PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeorderorderidfinalize"></a>
+# **PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize**
+
+> void PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize (string issuerRef, string orderId, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest = new PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest(); // PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize(string issuerRef, string orderId, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest** | [**PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest**](PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmeorders"></a>
+# **PkiWriteIssuerIssuerRefAcmeOrders**
+
+> void PkiWriteIssuerIssuerRefAcmeOrders (string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrdersRequest pkiWriteIssuerIssuerRefAcmeOrdersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeOrdersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeOrdersRequest = new PkiWriteIssuerIssuerRefAcmeOrdersRequest(); // PkiWriteIssuerIssuerRefAcmeOrdersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeOrders(string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeOrdersRequest pkiWriteIssuerIssuerRefAcmeOrdersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeOrders: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeOrdersRequest** | [**PkiWriteIssuerIssuerRefAcmeOrdersRequest**](PkiWriteIssuerIssuerRefAcmeOrdersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefacmerevokecert"></a>
+# **PkiWriteIssuerIssuerRefAcmeRevokeCert**
+
+> void PkiWriteIssuerIssuerRefAcmeRevokeCert (string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeRevokeCertRequest pkiWriteIssuerIssuerRefAcmeRevokeCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefAcmeRevokeCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefAcmeRevokeCertRequest = new PkiWriteIssuerIssuerRefAcmeRevokeCertRequest(); // PkiWriteIssuerIssuerRefAcmeRevokeCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefAcmeRevokeCert(string issuerRef, string pkiMountPath, PkiWriteIssuerIssuerRefAcmeRevokeCertRequest pkiWriteIssuerIssuerRefAcmeRevokeCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefAcmeRevokeCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefAcmeRevokeCertRequest** | [**PkiWriteIssuerIssuerRefAcmeRevokeCertRequest**](PkiWriteIssuerIssuerRefAcmeRevokeCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeaccountkid"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid (string issuerRef, string kid, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var kid = "kid_example";  // string | The key identifier provided by the CA
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid(string issuerRef, string kid, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **kid** | **string**| The key identifier provided by the CA | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeauthorizationauthid"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId (string authId, string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId(string authId, string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmechallengeauthidchallengetype"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType (string authId, string challengeType, string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var challengeType = "challengeType_example";  // string | ACME challenge type
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **challengeType** | **string**| ACME challenge type | 
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmenewaccount"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount (string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount(string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeneworder"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder (string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder(string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeorderorderid"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId (string issuerRef, string orderId, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId(string issuerRef, string orderId, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeorderorderidcert"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert (string issuerRef, string orderId, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert(string issuerRef, string orderId, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeorderorderidfinalize"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize (string issuerRef, string orderId, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize(string issuerRef, string orderId, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmeorders"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeOrders**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeOrders (string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeOrders(string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeOrders: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriteissuerissuerrefrolesroleacmerevokecert"></a>
+# **PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert**
+
+> void PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert (string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var issuerRef = "issuerRef_example";  // string | Reference to an existing issuer name or issuer id
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest = new PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest(); // PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert(string issuerRef, string role, string pkiMountPath, PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to an existing issuer name or issuer id | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest** | [**PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest**](PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
 
 
 
@@ -25051,6 +30441,1068 @@ No authorization required
 
  - **Content-Type**: , 
  - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeaccountkid"></a>
+# **PkiWriteRolesRoleAcmeAccountKid**
+
+> void PkiWriteRolesRoleAcmeAccountKid (string kid, string role, string pkiMountPath, PkiWriteRolesRoleAcmeAccountKidRequest pkiWriteRolesRoleAcmeAccountKidRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeAccountKidExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var kid = "kid_example";  // string | The key identifier provided by the CA
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeAccountKidRequest = new PkiWriteRolesRoleAcmeAccountKidRequest(); // PkiWriteRolesRoleAcmeAccountKidRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeAccountKid(string kid, string role, string pkiMountPath, PkiWriteRolesRoleAcmeAccountKidRequest pkiWriteRolesRoleAcmeAccountKidRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeAccountKid: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kid** | **string**| The key identifier provided by the CA | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeAccountKidRequest** | [**PkiWriteRolesRoleAcmeAccountKidRequest**](PkiWriteRolesRoleAcmeAccountKidRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeauthorizationauthid"></a>
+# **PkiWriteRolesRoleAcmeAuthorizationAuthId**
+
+> void PkiWriteRolesRoleAcmeAuthorizationAuthId (string authId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeAuthorizationAuthIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest = new PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest(); // PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeAuthorizationAuthId(string authId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeAuthorizationAuthId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest** | [**PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest**](PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmechallengeauthidchallengetype"></a>
+# **PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType**
+
+> void PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType (string authId, string challengeType, string role, string pkiMountPath, PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var authId = "authId_example";  // string | ACME authorization identifier value
+            
+            
+            
+            
+            var challengeType = "challengeType_example";  // string | ACME challenge type
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest = new PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest(); // PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string role, string pkiMountPath, PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authId** | **string**| ACME authorization identifier value | 
+ **challengeType** | **string**| ACME challenge type | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest** | [**PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest**](PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmenewaccount"></a>
+# **PkiWriteRolesRoleAcmeNewAccount**
+
+> void PkiWriteRolesRoleAcmeNewAccount (string role, string pkiMountPath, PkiWriteRolesRoleAcmeNewAccountRequest pkiWriteRolesRoleAcmeNewAccountRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeNewAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeNewAccountRequest = new PkiWriteRolesRoleAcmeNewAccountRequest(); // PkiWriteRolesRoleAcmeNewAccountRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeNewAccount(string role, string pkiMountPath, PkiWriteRolesRoleAcmeNewAccountRequest pkiWriteRolesRoleAcmeNewAccountRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeNewAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeNewAccountRequest** | [**PkiWriteRolesRoleAcmeNewAccountRequest**](PkiWriteRolesRoleAcmeNewAccountRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeneworder"></a>
+# **PkiWriteRolesRoleAcmeNewOrder**
+
+> void PkiWriteRolesRoleAcmeNewOrder (string role, string pkiMountPath, PkiWriteRolesRoleAcmeNewOrderRequest pkiWriteRolesRoleAcmeNewOrderRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeNewOrderExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeNewOrderRequest = new PkiWriteRolesRoleAcmeNewOrderRequest(); // PkiWriteRolesRoleAcmeNewOrderRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeNewOrder(string role, string pkiMountPath, PkiWriteRolesRoleAcmeNewOrderRequest pkiWriteRolesRoleAcmeNewOrderRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeNewOrder: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeNewOrderRequest** | [**PkiWriteRolesRoleAcmeNewOrderRequest**](PkiWriteRolesRoleAcmeNewOrderRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeorderorderid"></a>
+# **PkiWriteRolesRoleAcmeOrderOrderId**
+
+> void PkiWriteRolesRoleAcmeOrderOrderId (string orderId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrderOrderIdRequest pkiWriteRolesRoleAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeOrderOrderIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeOrderOrderIdRequest = new PkiWriteRolesRoleAcmeOrderOrderIdRequest(); // PkiWriteRolesRoleAcmeOrderOrderIdRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeOrderOrderId(string orderId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrderOrderIdRequest pkiWriteRolesRoleAcmeOrderOrderIdRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeOrderOrderId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeOrderOrderIdRequest** | [**PkiWriteRolesRoleAcmeOrderOrderIdRequest**](PkiWriteRolesRoleAcmeOrderOrderIdRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeorderorderidcert"></a>
+# **PkiWriteRolesRoleAcmeOrderOrderIdCert**
+
+> void PkiWriteRolesRoleAcmeOrderOrderIdCert (string orderId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrderOrderIdCertRequest pkiWriteRolesRoleAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeOrderOrderIdCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeOrderOrderIdCertRequest = new PkiWriteRolesRoleAcmeOrderOrderIdCertRequest(); // PkiWriteRolesRoleAcmeOrderOrderIdCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeOrderOrderIdCert(string orderId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrderOrderIdCertRequest pkiWriteRolesRoleAcmeOrderOrderIdCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeOrderOrderIdCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeOrderOrderIdCertRequest** | [**PkiWriteRolesRoleAcmeOrderOrderIdCertRequest**](PkiWriteRolesRoleAcmeOrderOrderIdCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeorderorderidfinalize"></a>
+# **PkiWriteRolesRoleAcmeOrderOrderIdFinalize**
+
+> void PkiWriteRolesRoleAcmeOrderOrderIdFinalize (string orderId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeOrderOrderIdFinalizeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var orderId = "orderId_example";  // string | The ACME order identifier to fetch
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest = new PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest(); // PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeOrderOrderIdFinalize(string orderId, string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeOrderOrderIdFinalize: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **string**| The ACME order identifier to fetch | 
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest** | [**PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest**](PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmeorders"></a>
+# **PkiWriteRolesRoleAcmeOrders**
+
+> void PkiWriteRolesRoleAcmeOrders (string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrdersRequest pkiWriteRolesRoleAcmeOrdersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeOrdersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeOrdersRequest = new PkiWriteRolesRoleAcmeOrdersRequest(); // PkiWriteRolesRoleAcmeOrdersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeOrders(string role, string pkiMountPath, PkiWriteRolesRoleAcmeOrdersRequest pkiWriteRolesRoleAcmeOrdersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeOrders: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeOrdersRequest** | [**PkiWriteRolesRoleAcmeOrdersRequest**](PkiWriteRolesRoleAcmeOrdersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="pkiwriterolesroleacmerevokecert"></a>
+# **PkiWriteRolesRoleAcmeRevokeCert**
+
+> void PkiWriteRolesRoleAcmeRevokeCert (string role, string pkiMountPath, PkiWriteRolesRoleAcmeRevokeCertRequest pkiWriteRolesRoleAcmeRevokeCertRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PkiWriteRolesRoleAcmeRevokeCertExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var role = "role_example";  // string | The desired role for the acme request
+            
+            
+            
+            
+            var pkiMountPath = "\"pki\"";  // string | Path that the backend was mounted at (default to "pki")
+            
+            
+            
+            
+            
+            var pkiWriteRolesRoleAcmeRevokeCertRequest = new PkiWriteRolesRoleAcmeRevokeCertRequest(); // PkiWriteRolesRoleAcmeRevokeCertRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.PkiWriteRolesRoleAcmeRevokeCert(string role, string pkiMountPath, PkiWriteRolesRoleAcmeRevokeCertRequest pkiWriteRolesRoleAcmeRevokeCertRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PkiWriteRolesRoleAcmeRevokeCert: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The desired role for the acme request | 
+ **pkiMountPath** | **string**| Path that the backend was mounted at | [default to &quot;pki&quot;]
+ **pkiWriteRolesRoleAcmeRevokeCertRequest** | [**PkiWriteRolesRoleAcmeRevokeCertRequest**](PkiWriteRolesRoleAcmeRevokeCertRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
 
 
 
@@ -29031,6 +35483,220 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="transitbyokkey"></a>
+# **TransitByokKey**
+
+> void TransitByokKey (string destination, string source, string transitMountPath, TimeSpan? wrapTTL = null)
+
+Securely export named encryption or signing key
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class TransitByokKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var destination = "destination_example";  // string | Destination key to export to; usually the public wrapping key of another Transit instance.
+            
+            
+            
+            
+            var source = "source_example";  // string | Source key to export; could be any present key within Transit.
+            
+            
+            
+            
+            var transitMountPath = "\"transit\"";  // string | Path that the backend was mounted at (default to "transit")
+            
+            
+            
+
+            try
+            {
+                
+                // Securely export named encryption or signing key
+                
+
+                apiInstance.TransitByokKey(string destination, string source, string transitMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.TransitByokKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination** | **string**| Destination key to export to; usually the public wrapping key of another Transit instance. | 
+ **source** | **string**| Source key to export; could be any present key within Transit. | 
+ **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="transitbyokkeyversion"></a>
+# **TransitByokKeyVersion**
+
+> void TransitByokKeyVersion (string destination, string source, string version, string transitMountPath, TimeSpan? wrapTTL = null)
+
+Securely export named encryption or signing key
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class TransitByokKeyVersionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var destination = "destination_example";  // string | Destination key to export to; usually the public wrapping key of another Transit instance.
+            
+            
+            
+            
+            var source = "source_example";  // string | Source key to export; could be any present key within Transit.
+            
+            
+            
+            
+            var version = "version_example";  // string | Optional version of the key to export, else all key versions are exported.
+            
+            
+            
+            
+            var transitMountPath = "\"transit\"";  // string | Path that the backend was mounted at (default to "transit")
+            
+            
+            
+
+            try
+            {
+                
+                // Securely export named encryption or signing key
+                
+
+                apiInstance.TransitByokKeyVersion(string destination, string source, string version, string transitMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.TransitByokKeyVersion: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **destination** | **string**| Destination key to export to; usually the public wrapping key of another Transit instance. | 
+ **source** | **string**| Source key to export; could be any present key within Transit. | 
+ **version** | **string**| Optional version of the key to export, else all key versions are exported. | 
+ **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="transitconfigurecache"></a>
 # **TransitConfigureCache**
 
@@ -29776,7 +36442,7 @@ namespace Example
             
             
             
-            var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
+            var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key, public-key)
             
             
             
@@ -29809,7 +36475,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the key | 
- **type** | **string**| Type of key to export (encryption-key, signing-key, hmac-key) | 
+ **type** | **string**| Type of key to export (encryption-key, signing-key, hmac-key, public-key) | 
  **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
 
 
@@ -29880,7 +36546,7 @@ namespace Example
             
             
             
-            var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key)
+            var type = "type_example";  // string | Type of key to export (encryption-key, signing-key, hmac-key, public-key)
             
             
             
@@ -29918,7 +36584,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the key | 
- **type** | **string**| Type of key to export (encryption-key, signing-key, hmac-key) | 
+ **type** | **string**| Type of key to export (encryption-key, signing-key, hmac-key, public-key) | 
  **version** | **string**| Version of the key | 
  **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
 

@@ -59,7 +59,7 @@ namespace Vault.Model
         /// <param name="UserPath">Path for IAM User. Only valid when credential_type is iam_user (default to &quot;/&quot;).</param>
 
 
-        public AwsWriteRoleRequest(string Arn = default(string), string CredentialType = default(string), int DefaultStsTtl = default(int), List<string> IamGroups = default(List<string>), Object IamTags = default(Object), int MaxStsTtl = default(int), string PermissionsBoundaryArn = default(string), string Policy = default(string), List<string> PolicyArns = default(List<string>), string PolicyDocument = default(string), List<string> RoleArns = default(List<string>), string UserPath = "/")
+        public AwsWriteRoleRequest(string Arn = default(string), string CredentialType = default(string), string DefaultStsTtl = default(string), List<string> IamGroups = default(List<string>), Object IamTags = default(Object), string MaxStsTtl = default(string), string PermissionsBoundaryArn = default(string), string Policy = default(string), List<string> PolicyArns = default(List<string>), string PolicyDocument = default(string), List<string> RoleArns = default(List<string>), string UserPath = "/")
         {
 
             this.Arn = Arn;
@@ -114,7 +114,7 @@ namespace Vault.Model
         /// <value>Default TTL for assumed_role and federation_token credential types when no TTL is explicitly requested with the credentials</value>
         [DataMember(Name = "default_sts_ttl", EmitDefaultValue = false)]
 
-        public int DefaultStsTtl { get; set; }
+        public string DefaultStsTtl { get; set; }
 
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Vault.Model
         /// <value>Max allowed TTL for assumed_role and federation_token credential types</value>
         [DataMember(Name = "max_sts_ttl", EmitDefaultValue = false)]
 
-        public int MaxStsTtl { get; set; }
+        public string MaxStsTtl { get; set; }
 
 
         /// <summary>
@@ -269,8 +269,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.DefaultStsTtl == input.DefaultStsTtl ||
+                    (this.DefaultStsTtl != null &&
+                    this.DefaultStsTtl.Equals(input.DefaultStsTtl))
 
-                    this.DefaultStsTtl.Equals(input.DefaultStsTtl)
                 ) &&
                 (
                     this.IamGroups == input.IamGroups ||
@@ -286,8 +287,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxStsTtl == input.MaxStsTtl ||
+                    (this.MaxStsTtl != null &&
+                    this.MaxStsTtl.Equals(input.MaxStsTtl))
 
-                    this.MaxStsTtl.Equals(input.MaxStsTtl)
                 ) &&
                 (
                     this.PermissionsBoundaryArn == input.PermissionsBoundaryArn ||
@@ -348,8 +350,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.CredentialType.GetHashCode();
                 }
 
+                if (this.DefaultStsTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.DefaultStsTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.DefaultStsTtl.GetHashCode();
                 if (this.IamGroups != null)
                 {
                     hashCode = (hashCode * 59) + this.IamGroups.GetHashCode();
@@ -360,8 +365,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.IamTags.GetHashCode();
                 }
 
+                if (this.MaxStsTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxStsTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxStsTtl.GetHashCode();
                 if (this.PermissionsBoundaryArn != null)
                 {
                     hashCode = (hashCode * 59) + this.PermissionsBoundaryArn.GetHashCode();

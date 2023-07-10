@@ -137,7 +137,7 @@ namespace Vault.Model
 
         /// <param name="NotAfter">Set the not after field of the certificate with specified date value. The value format should be given in UTC format YYYY-MM-ddTHH:MM:SSZ..</param>
 
-        /// <param name="NotBeforeDuration">The duration before now which the certificate needs to be backdated by. (default to 30).</param>
+        /// <param name="NotBeforeDuration">The duration before now which the certificate needs to be backdated by. (default to &quot;30&quot;).</param>
 
         /// <param name="Organization">If set, O (Organization) will be set to this value in certificates issued by this role..</param>
 
@@ -166,7 +166,7 @@ namespace Vault.Model
         /// <param name="UsePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
 
 
-        public PkiWriteRoleRequest(bool AllowAnyName = default(bool), bool AllowBareDomains = default(bool), bool AllowGlobDomains = default(bool), bool AllowIpSans = true, bool AllowLocalhost = true, bool AllowSubdomains = default(bool), bool AllowWildcardCertificates = true, List<string> AllowedDomains = default(List<string>), bool AllowedDomainsTemplate = false, List<string> AllowedOtherSans = default(List<string>), List<string> AllowedSerialNumbers = default(List<string>), List<string> AllowedUriSans = default(List<string>), bool AllowedUriSansTemplate = false, List<string> AllowedUserIds = default(List<string>), string Backend = default(string), bool BasicConstraintsValidForNonCa = default(bool), bool ClientFlag = true, List<string> CnValidations = default(List<string>), bool CodeSigningFlag = default(bool), List<string> Country = default(List<string>), bool EmailProtectionFlag = default(bool), bool EnforceHostnames = true, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), bool GenerateLease = default(bool), string IssuerRef = "default", int KeyBits = 0, KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> KeyUsage = default(List<string>), List<string> Locality = default(List<string>), int MaxTtl = default(int), bool NoStore = default(bool), string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> Ou = default(List<string>), List<string> PolicyIdentifiers = default(List<string>), List<string> PostalCode = default(List<string>), List<string> Province = default(List<string>), bool RequireCn = true, bool ServerFlag = true, int SignatureBits = 0, List<string> StreetAddress = default(List<string>), int Ttl = default(int), bool UseCsrCommonName = true, bool UseCsrSans = true, bool UsePss = false)
+        public PkiWriteRoleRequest(bool AllowAnyName = default(bool), bool AllowBareDomains = default(bool), bool AllowGlobDomains = default(bool), bool AllowIpSans = true, bool AllowLocalhost = true, bool AllowSubdomains = default(bool), bool AllowWildcardCertificates = true, List<string> AllowedDomains = default(List<string>), bool AllowedDomainsTemplate = false, List<string> AllowedOtherSans = default(List<string>), List<string> AllowedSerialNumbers = default(List<string>), List<string> AllowedUriSans = default(List<string>), bool AllowedUriSansTemplate = false, List<string> AllowedUserIds = default(List<string>), string Backend = default(string), bool BasicConstraintsValidForNonCa = default(bool), bool ClientFlag = true, List<string> CnValidations = default(List<string>), bool CodeSigningFlag = default(bool), List<string> Country = default(List<string>), bool EmailProtectionFlag = default(bool), bool EnforceHostnames = true, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), bool GenerateLease = default(bool), string IssuerRef = "default", int KeyBits = 0, KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> KeyUsage = default(List<string>), List<string> Locality = default(List<string>), string MaxTtl = default(string), bool NoStore = default(bool), string NotAfter = default(string), string NotBeforeDuration = "30", List<string> Organization = default(List<string>), List<string> Ou = default(List<string>), List<string> PolicyIdentifiers = default(List<string>), List<string> PostalCode = default(List<string>), List<string> Province = default(List<string>), bool RequireCn = true, bool ServerFlag = true, int SignatureBits = 0, List<string> StreetAddress = default(List<string>), string Ttl = default(string), bool UseCsrCommonName = true, bool UseCsrSans = true, bool UsePss = false)
         {
 
             this.AllowAnyName = AllowAnyName;
@@ -237,7 +237,9 @@ namespace Vault.Model
 
             this.NotAfter = NotAfter;
 
-            this.NotBeforeDuration = NotBeforeDuration;
+            // use default value if no "NotBeforeDuration" provided
+            this.NotBeforeDuration = NotBeforeDuration ?? "30";
+
 
             this.Organization = Organization;
 
@@ -534,7 +536,7 @@ namespace Vault.Model
         /// <value>The maximum allowed lease duration. If not set, defaults to the system maximum lease TTL.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -561,7 +563,7 @@ namespace Vault.Model
         /// <value>The duration before now which the certificate needs to be backdated by.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
 
-        public int NotBeforeDuration { get; set; }
+        public string NotBeforeDuration { get; set; }
 
 
         /// <summary>
@@ -651,7 +653,7 @@ namespace Vault.Model
         /// <value>The lease duration (validity period of the certificate) if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the system default value or the value of max_ttl, whichever is shorter.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
         /// <summary>
@@ -938,8 +940,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.NoStore == input.NoStore ||
@@ -954,8 +957,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.NotBeforeDuration == input.NotBeforeDuration ||
+                    (this.NotBeforeDuration != null &&
+                    this.NotBeforeDuration.Equals(input.NotBeforeDuration))
 
-                    this.NotBeforeDuration.Equals(input.NotBeforeDuration)
                 ) &&
                 (
                     this.Organization == input.Organization ||
@@ -1010,8 +1014,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.UseCsrCommonName == input.UseCsrCommonName ||
@@ -1140,8 +1145,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Locality.GetHashCode();
                 }
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.NoStore.GetHashCode();
                 if (this.NotAfter != null)
@@ -1149,8 +1157,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.NotAfter.GetHashCode();
                 }
 
+                if (this.NotBeforeDuration != null)
+                {
+                    hashCode = (hashCode * 59) + this.NotBeforeDuration.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.NotBeforeDuration.GetHashCode();
                 if (this.Organization != null)
                 {
                     hashCode = (hashCode * 59) + this.Organization.GetHashCode();
@@ -1187,8 +1198,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.StreetAddress.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.UseCsrCommonName.GetHashCode();
 

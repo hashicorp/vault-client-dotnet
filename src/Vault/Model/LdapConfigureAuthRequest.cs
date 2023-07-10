@@ -159,7 +159,7 @@ namespace Vault.Model
 
         /// <param name="ClientTlsKey">Client certificate key to provide to the LDAP server, must be x509 PEM encoded (optional).</param>
 
-        /// <param name="ConnectionTimeout">Timeout, in seconds, when attempting to connect to the LDAP server before trying the next URL in the configuration..</param>
+        /// <param name="ConnectionTimeout">Timeout, in seconds, when attempting to connect to the LDAP server before trying the next URL in the configuration. (default to &quot;30s&quot;).</param>
 
         /// <param name="DenyNullBind">Denies an unauthenticated LDAP bind request if the user&#x27;s password is empty; defaults to true (default to true).</param>
 
@@ -175,9 +175,9 @@ namespace Vault.Model
 
         /// <param name="InsecureTls">Skip LDAP server SSL Certificate verification - VERY insecure (optional).</param>
 
-        /// <param name="MaxPageSize">The maximum number of results to return for a single paged query. If not set, the server default will be used for paged searches. A requested max_page_size of 0 is interpreted as no limit by LDAP servers. If set to a negative value, search requests will not be paged. (default to 2147483647).</param>
+        /// <param name="MaxPageSize">If set to a value greater than 0, the LDAP backend will use the LDAP server&#x27;s paged search control to request pages of up to the given size. This can be used to avoid hitting the LDAP server&#x27;s maximum result size limit. Otherwise, the LDAP backend will not use the paged search control. (default to 0).</param>
 
-        /// <param name="RequestTimeout">Timeout, in seconds, for the connection when making requests against the server before returning back an error..</param>
+        /// <param name="RequestTimeout">Timeout, in seconds, for the connection when making requests against the server before returning back an error. (default to &quot;90s&quot;).</param>
 
         /// <param name="Starttls">Issue a StartTLS command after establishing unencrypted connection (optional).</param>
 
@@ -220,7 +220,7 @@ namespace Vault.Model
         /// <param name="UsernameAsAlias">If true, sets the alias name to the username (default to false).</param>
 
 
-        public LdapConfigureAuthRequest(bool AnonymousGroupSearch = false, string Binddn = default(string), string Bindpass = default(string), bool CaseSensitiveNames = default(bool), string Certificate = default(string), string ClientTlsCert = default(string), string ClientTlsKey = default(string), int ConnectionTimeout = default(int), bool DenyNullBind = true, DereferenceAliasesEnum? DereferenceAliases = DereferenceAliasesEnum.Never, bool Discoverdn = default(bool), string Groupattr = "cn", string Groupdn = default(string), string Groupfilter = "(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))", bool InsecureTls = default(bool), int MaxPageSize = 2147483647, int RequestTimeout = default(int), bool Starttls = default(bool), TlsMaxVersionEnum? TlsMaxVersion = TlsMaxVersionEnum.Tls12, TlsMinVersionEnum? TlsMinVersion = TlsMinVersionEnum.Tls12, List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", string Upndomain = default(string), string Url = "ldap://127.0.0.1", bool UsePre111GroupCnBehavior = default(bool), bool UseTokenGroups = false, string Userattr = "cn", string Userdn = default(string), string Userfilter = "({{.UserAttr}}={{.Username}})", bool UsernameAsAlias = false)
+        public LdapConfigureAuthRequest(bool AnonymousGroupSearch = false, string Binddn = default(string), string Bindpass = default(string), bool CaseSensitiveNames = default(bool), string Certificate = default(string), string ClientTlsCert = default(string), string ClientTlsKey = default(string), string ConnectionTimeout = "30s", bool DenyNullBind = true, DereferenceAliasesEnum? DereferenceAliases = DereferenceAliasesEnum.Never, bool Discoverdn = default(bool), string Groupattr = "cn", string Groupdn = default(string), string Groupfilter = "(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))", bool InsecureTls = default(bool), int MaxPageSize = 0, string RequestTimeout = "90s", bool Starttls = default(bool), TlsMaxVersionEnum? TlsMaxVersion = TlsMaxVersionEnum.Tls12, TlsMinVersionEnum? TlsMinVersion = TlsMinVersionEnum.Tls12, List<string> TokenBoundCidrs = default(List<string>), string TokenExplicitMaxTtl = default(string), string TokenMaxTtl = default(string), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), string TokenPeriod = default(string), List<string> TokenPolicies = default(List<string>), string TokenTtl = default(string), string TokenType = "default-service", string Upndomain = default(string), string Url = "ldap://127.0.0.1", bool UsePre111GroupCnBehavior = default(bool), bool UseTokenGroups = false, string Userattr = "cn", string Userdn = default(string), string Userfilter = "({{.UserAttr}}={{.Username}})", bool UsernameAsAlias = false)
         {
 
             this.AnonymousGroupSearch = AnonymousGroupSearch;
@@ -237,7 +237,9 @@ namespace Vault.Model
 
             this.ClientTlsKey = ClientTlsKey;
 
-            this.ConnectionTimeout = ConnectionTimeout;
+            // use default value if no "ConnectionTimeout" provided
+            this.ConnectionTimeout = ConnectionTimeout ?? "30s";
+
 
             this.DenyNullBind = DenyNullBind;
 
@@ -259,7 +261,9 @@ namespace Vault.Model
 
             this.MaxPageSize = MaxPageSize;
 
-            this.RequestTimeout = RequestTimeout;
+            // use default value if no "RequestTimeout" provided
+            this.RequestTimeout = RequestTimeout ?? "90s";
+
 
             this.Starttls = Starttls;
 
@@ -380,7 +384,7 @@ namespace Vault.Model
         /// <value>Timeout, in seconds, when attempting to connect to the LDAP server before trying the next URL in the configuration.</value>
         [DataMember(Name = "connection_timeout", EmitDefaultValue = false)]
 
-        public int ConnectionTimeout { get; set; }
+        public string ConnectionTimeout { get; set; }
 
 
         /// <summary>
@@ -438,9 +442,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The maximum number of results to return for a single paged query. If not set, the server default will be used for paged searches. A requested max_page_size of 0 is interpreted as no limit by LDAP servers. If set to a negative value, search requests will not be paged.
+        /// If set to a value greater than 0, the LDAP backend will use the LDAP server&#x27;s paged search control to request pages of up to the given size. This can be used to avoid hitting the LDAP server&#x27;s maximum result size limit. Otherwise, the LDAP backend will not use the paged search control.
         /// </summary>
-        /// <value>The maximum number of results to return for a single paged query. If not set, the server default will be used for paged searches. A requested max_page_size of 0 is interpreted as no limit by LDAP servers. If set to a negative value, search requests will not be paged.</value>
+        /// <value>If set to a value greater than 0, the LDAP backend will use the LDAP server&#x27;s paged search control to request pages of up to the given size. This can be used to avoid hitting the LDAP server&#x27;s maximum result size limit. Otherwise, the LDAP backend will not use the paged search control.</value>
         [DataMember(Name = "max_page_size", EmitDefaultValue = false)]
 
         public int MaxPageSize { get; set; }
@@ -452,7 +456,7 @@ namespace Vault.Model
         /// <value>Timeout, in seconds, for the connection when making requests against the server before returning back an error.</value>
         [DataMember(Name = "request_timeout", EmitDefaultValue = false)]
 
-        public int RequestTimeout { get; set; }
+        public string RequestTimeout { get; set; }
 
 
         /// <summary>
@@ -479,7 +483,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenExplicitMaxTtl { get; set; }
+        public string TokenExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -488,7 +492,7 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenMaxTtl { get; set; }
+        public string TokenMaxTtl { get; set; }
 
 
         /// <summary>
@@ -515,7 +519,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-        public int TokenPeriod { get; set; }
+        public string TokenPeriod { get; set; }
 
 
         /// <summary>
@@ -533,7 +537,7 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-        public int TokenTtl { get; set; }
+        public string TokenTtl { get; set; }
 
 
         /// <summary>
@@ -741,8 +745,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.ConnectionTimeout == input.ConnectionTimeout ||
+                    (this.ConnectionTimeout != null &&
+                    this.ConnectionTimeout.Equals(input.ConnectionTimeout))
 
-                    this.ConnectionTimeout.Equals(input.ConnectionTimeout)
                 ) &&
                 (
                     this.DenyNullBind == input.DenyNullBind ||
@@ -789,8 +794,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RequestTimeout == input.RequestTimeout ||
+                    (this.RequestTimeout != null &&
+                    this.RequestTimeout.Equals(input.RequestTimeout))
 
-                    this.RequestTimeout.Equals(input.RequestTimeout)
                 ) &&
                 (
                     this.Starttls == input.Starttls ||
@@ -815,13 +821,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+                    (this.TokenExplicitMaxTtl != null &&
+                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl))
 
-                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+                    (this.TokenMaxTtl != null &&
+                    this.TokenMaxTtl.Equals(input.TokenMaxTtl))
 
-                    this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
@@ -835,8 +843,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+                    (this.TokenPeriod != null &&
+                    this.TokenPeriod.Equals(input.TokenPeriod))
 
-                    this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
@@ -846,8 +855,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
+                    (this.TokenTtl != null &&
+                    this.TokenTtl.Equals(input.TokenTtl))
 
-                    this.TokenTtl.Equals(input.TokenTtl)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
@@ -942,8 +952,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.ClientTlsKey.GetHashCode();
                 }
 
+                if (this.ConnectionTimeout != null)
+                {
+                    hashCode = (hashCode * 59) + this.ConnectionTimeout.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.ConnectionTimeout.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.DenyNullBind.GetHashCode();
 
@@ -969,8 +982,11 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.InsecureTls.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.MaxPageSize.GetHashCode();
+                if (this.RequestTimeout != null)
+                {
+                    hashCode = (hashCode * 59) + this.RequestTimeout.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RequestTimeout.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Starttls.GetHashCode();
 
@@ -982,23 +998,35 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
 
+                if (this.TokenExplicitMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                if (this.TokenMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+                if (this.TokenPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
 
+                if (this.TokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();

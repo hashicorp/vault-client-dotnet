@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="MaxOperations">MaxOperations.</param>
 
 
-        public EncryptionKeyReadRotationConfigurationResponse(bool Enabled = default(bool), int Interval = default(int), long MaxOperations = default(long))
+        public EncryptionKeyReadRotationConfigurationResponse(bool Enabled = default(bool), string Interval = default(string), long MaxOperations = default(long))
         {
 
             this.Enabled = Enabled;
@@ -65,7 +65,7 @@ namespace Vault.Model
         /// </summary>
         [DataMember(Name = "interval", EmitDefaultValue = false)]
 
-        public int Interval { get; set; }
+        public string Interval { get; set; }
 
 
         /// <summary>
@@ -131,8 +131,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Interval == input.Interval ||
+                    (this.Interval != null &&
+                    this.Interval.Equals(input.Interval))
 
-                    this.Interval.Equals(input.Interval)
                 ) &&
                 (
                     this.MaxOperations == input.MaxOperations ||
@@ -154,8 +155,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
+                if (this.Interval != null)
+                {
+                    hashCode = (hashCode * 59) + this.Interval.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Interval.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.MaxOperations.GetHashCode();
                 return hashCode;

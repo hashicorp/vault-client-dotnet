@@ -59,7 +59,7 @@ namespace Vault.Model
         /// <param name="TokenMaxTtl">The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default..</param>
 
 
-        public KubernetesWriteRoleRequest(string AllowedKubernetesNamespaceSelector = default(string), List<string> AllowedKubernetesNamespaces = default(List<string>), Object ExtraAnnotations = default(Object), Object ExtraLabels = default(Object), string GeneratedRoleRules = default(string), string KubernetesRoleName = default(string), string KubernetesRoleType = "Role", string NameTemplate = default(string), string ServiceAccountName = default(string), List<string> TokenDefaultAudiences = default(List<string>), int TokenDefaultTtl = default(int), int TokenMaxTtl = default(int))
+        public KubernetesWriteRoleRequest(string AllowedKubernetesNamespaceSelector = default(string), List<string> AllowedKubernetesNamespaces = default(List<string>), Object ExtraAnnotations = default(Object), Object ExtraLabels = default(Object), string GeneratedRoleRules = default(string), string KubernetesRoleName = default(string), string KubernetesRoleType = "Role", string NameTemplate = default(string), string ServiceAccountName = default(string), List<string> TokenDefaultAudiences = default(List<string>), string TokenDefaultTtl = default(string), string TokenMaxTtl = default(string))
         {
 
             this.AllowedKubernetesNamespaceSelector = AllowedKubernetesNamespaceSelector;
@@ -186,7 +186,7 @@ namespace Vault.Model
         /// <value>The default ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "token_default_ttl", EmitDefaultValue = false)]
 
-        public int TokenDefaultTtl { get; set; }
+        public string TokenDefaultTtl { get; set; }
 
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace Vault.Model
         /// <value>The maximum ttl for generated Kubernetes service account tokens. If not set or set to 0, will use system default.</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenMaxTtl { get; set; }
+        public string TokenMaxTtl { get; set; }
 
 
 
@@ -317,13 +317,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenDefaultTtl == input.TokenDefaultTtl ||
+                    (this.TokenDefaultTtl != null &&
+                    this.TokenDefaultTtl.Equals(input.TokenDefaultTtl))
 
-                    this.TokenDefaultTtl.Equals(input.TokenDefaultTtl)
                 ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+                    (this.TokenMaxTtl != null &&
+                    this.TokenMaxTtl.Equals(input.TokenMaxTtl))
 
-                    this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 );
 
         }
@@ -388,10 +390,16 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenDefaultAudiences.GetHashCode();
                 }
 
+                if (this.TokenDefaultTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenDefaultTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenDefaultTtl.GetHashCode();
+                if (this.TokenMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
                 return hashCode;
             }
         }

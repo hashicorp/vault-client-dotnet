@@ -37,7 +37,7 @@ namespace Vault.Model
         /// <param name="VerificationTtl">Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key..</param>
 
 
-        public OidcRotateKeyRequest(int VerificationTtl = default(int))
+        public OidcRotateKeyRequest(string VerificationTtl = default(string))
         {
 
             this.VerificationTtl = VerificationTtl;
@@ -50,7 +50,7 @@ namespace Vault.Model
         /// <value>Controls how long the public portion of a key will be available for verification after being rotated. Setting verification_ttl here will override the verification_ttl set on the key.</value>
         [DataMember(Name = "verification_ttl", EmitDefaultValue = false)]
 
-        public int VerificationTtl { get; set; }
+        public string VerificationTtl { get; set; }
 
 
 
@@ -101,8 +101,9 @@ namespace Vault.Model
             return
                 (
                     this.VerificationTtl == input.VerificationTtl ||
+                    (this.VerificationTtl != null &&
+                    this.VerificationTtl.Equals(input.VerificationTtl))
 
-                    this.VerificationTtl.Equals(input.VerificationTtl)
                 );
 
         }
@@ -117,8 +118,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.VerificationTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.VerificationTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.VerificationTtl.GetHashCode();
                 return hashCode;
             }
         }

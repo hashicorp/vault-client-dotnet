@@ -47,7 +47,7 @@ namespace Vault.Model
         /// <param name="Type">Type of the quota rule..</param>
 
 
-        public RateLimitQuotasWriteRequest(int BlockInterval = default(int), int Interval = default(int), string Path = default(string), float Rate = default(float), string Role = default(string), string Type = default(string))
+        public RateLimitQuotasWriteRequest(string BlockInterval = default(string), string Interval = default(string), string Path = default(string), float Rate = default(float), string Role = default(string), string Type = default(string))
         {
 
             this.BlockInterval = BlockInterval;
@@ -70,7 +70,7 @@ namespace Vault.Model
         /// <value>If set, when a client reaches a rate limit threshold, the client will be prohibited from any further requests until after the &#x27;block_interval&#x27; has elapsed.</value>
         [DataMember(Name = "block_interval", EmitDefaultValue = false)]
 
-        public int BlockInterval { get; set; }
+        public string BlockInterval { get; set; }
 
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Vault.Model
         /// <value>The duration to enforce rate limiting for (default &#x27;1s&#x27;).</value>
         [DataMember(Name = "interval", EmitDefaultValue = false)]
 
-        public int Interval { get; set; }
+        public string Interval { get; set; }
 
 
         /// <summary>
@@ -171,13 +171,15 @@ namespace Vault.Model
             return
                 (
                     this.BlockInterval == input.BlockInterval ||
+                    (this.BlockInterval != null &&
+                    this.BlockInterval.Equals(input.BlockInterval))
 
-                    this.BlockInterval.Equals(input.BlockInterval)
                 ) &&
                 (
                     this.Interval == input.Interval ||
+                    (this.Interval != null &&
+                    this.Interval.Equals(input.Interval))
 
-                    this.Interval.Equals(input.Interval)
                 ) &&
                 (
                     this.Path == input.Path ||
@@ -215,10 +217,16 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.BlockInterval != null)
+                {
+                    hashCode = (hashCode * 59) + this.BlockInterval.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.BlockInterval.GetHashCode();
+                if (this.Interval != null)
+                {
+                    hashCode = (hashCode * 59) + this.Interval.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Interval.GetHashCode();
                 if (this.Path != null)
                 {
                     hashCode = (hashCode * 59) + this.Path.GetHashCode();

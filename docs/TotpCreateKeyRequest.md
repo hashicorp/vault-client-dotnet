@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Issuer** | **string** | The name of the key&#x27;s issuing organization. Required if generate is true. | [optional] 
 **Key** | **string** | The shared master key used to generate a TOTP token. Only used if generate is false. | [optional] 
 **KeySize** | **int** | Determines the size in bytes of the generated key. Only used if generate is true. | [optional] [default to 20]
-**Period** | **int** | The length of time used to generate a counter for the TOTP token calculation. | [optional] [default to 30]
+**Period** | **string** | The length of time used to generate a counter for the TOTP token calculation. | [optional] [default to "30"]
 **QrSize** | **int** | The pixel size of the generated square QR code. Only used if generate is true and exported is true. If this value is 0, a QR code will not be returned. | [optional] [default to 200]
 **Skew** | **int** | The number of delay periods that are allowed when validating a TOTP token. This value can either be 0 or 1. Only used if generate is true. | [optional] [default to 1]
 **Url** | **string** | A TOTP url string containing all of the parameters for key setup. Only used if generate is false. | [optional] 

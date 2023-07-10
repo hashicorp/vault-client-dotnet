@@ -100,7 +100,7 @@ namespace Vault.Model
 
         /// <param name="NotAfter">Set the not after field of the certificate with specified date value. The value format should be given in UTC format YYYY-MM-ddTHH:MM:SSZ..</param>
 
-        /// <param name="NotBeforeDuration">The duration before now which the certificate needs to be backdated by..</param>
+        /// <param name="NotBeforeDuration">The duration in seconds before now which the certificate needs to be backdated by..</param>
 
         /// <param name="Organization">If set, O (Organization) will be set to this value in certificates issued by this role..</param>
 
@@ -129,7 +129,7 @@ namespace Vault.Model
         /// <param name="UsePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false..</param>
 
 
-        public PkiPatchRoleResponse(bool AllowAnyName = default(bool), bool AllowBareDomains = default(bool), bool AllowGlobDomains = default(bool), bool AllowIpSans = default(bool), bool AllowLocalhost = default(bool), bool AllowSubdomains = default(bool), bool AllowTokenDisplayname = default(bool), bool AllowWildcardCertificates = default(bool), List<string> AllowedDomains = default(List<string>), bool AllowedDomainsTemplate = default(bool), List<string> AllowedOtherSans = default(List<string>), List<string> AllowedSerialNumbers = default(List<string>), List<string> AllowedUriSans = default(List<string>), bool AllowedUriSansTemplate = default(bool), List<string> AllowedUserIds = default(List<string>), bool BasicConstraintsValidForNonCa = default(bool), bool ClientFlag = default(bool), List<string> CnValidations = default(List<string>), bool CodeSigningFlag = default(bool), List<string> Country = default(List<string>), bool EmailProtectionFlag = default(bool), bool EnforceHostnames = default(bool), List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), bool GenerateLease = default(bool), string IssuerRef = default(string), int KeyBits = default(int), string KeyType = default(string), List<string> KeyUsage = default(List<string>), List<string> Locality = default(List<string>), int MaxTtl = default(int), bool NoStore = default(bool), string NotAfter = default(string), int NotBeforeDuration = default(int), List<string> Organization = default(List<string>), List<string> Ou = default(List<string>), List<string> PolicyIdentifiers = default(List<string>), List<string> PostalCode = default(List<string>), List<string> Province = default(List<string>), bool RequireCn = default(bool), bool ServerFlag = true, int SignatureBits = default(int), List<string> StreetAddress = default(List<string>), int Ttl = default(int), bool UseCsrCommonName = default(bool), bool UseCsrSans = default(bool), bool UsePss = default(bool))
+        public PkiPatchRoleResponse(bool AllowAnyName = default(bool), bool AllowBareDomains = default(bool), bool AllowGlobDomains = default(bool), bool AllowIpSans = default(bool), bool AllowLocalhost = default(bool), bool AllowSubdomains = default(bool), bool AllowTokenDisplayname = default(bool), bool AllowWildcardCertificates = default(bool), List<string> AllowedDomains = default(List<string>), bool AllowedDomainsTemplate = default(bool), List<string> AllowedOtherSans = default(List<string>), List<string> AllowedSerialNumbers = default(List<string>), List<string> AllowedUriSans = default(List<string>), bool AllowedUriSansTemplate = default(bool), List<string> AllowedUserIds = default(List<string>), bool BasicConstraintsValidForNonCa = default(bool), bool ClientFlag = default(bool), List<string> CnValidations = default(List<string>), bool CodeSigningFlag = default(bool), List<string> Country = default(List<string>), bool EmailProtectionFlag = default(bool), bool EnforceHostnames = default(bool), List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), bool GenerateLease = default(bool), string IssuerRef = default(string), int KeyBits = default(int), string KeyType = default(string), List<string> KeyUsage = default(List<string>), List<string> Locality = default(List<string>), long MaxTtl = default(long), bool NoStore = default(bool), string NotAfter = default(string), long NotBeforeDuration = default(long), List<string> Organization = default(List<string>), List<string> Ou = default(List<string>), List<string> PolicyIdentifiers = default(List<string>), List<string> PostalCode = default(List<string>), List<string> Province = default(List<string>), bool RequireCn = default(bool), bool ServerFlag = true, int SignatureBits = default(int), List<string> StreetAddress = default(List<string>), long Ttl = default(long), bool UseCsrCommonName = default(bool), bool UseCsrSans = default(bool), bool UsePss = default(bool))
         {
 
             this.AllowAnyName = AllowAnyName;
@@ -504,7 +504,7 @@ namespace Vault.Model
         /// <value>The maximum allowed lease duration. If not set, defaults to the system maximum lease TTL.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public long MaxTtl { get; set; }
 
 
         /// <summary>
@@ -526,12 +526,12 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The duration before now which the certificate needs to be backdated by.
+        /// The duration in seconds before now which the certificate needs to be backdated by.
         /// </summary>
-        /// <value>The duration before now which the certificate needs to be backdated by.</value>
+        /// <value>The duration in seconds before now which the certificate needs to be backdated by.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
 
-        public int NotBeforeDuration { get; set; }
+        public long NotBeforeDuration { get; set; }
 
 
         /// <summary>
@@ -621,7 +621,7 @@ namespace Vault.Model
         /// <value>The lease duration (validity period of the certificate) if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the system default value or the value of max_ttl, whichever is shorter.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public long Ttl { get; set; }
 
 
         /// <summary>

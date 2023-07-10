@@ -34,6 +34,10 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiConfigureCaResponse" /> class.
         /// </summary>
 
+        /// <param name="ExistingIssuers">Existing issuers specified as part of the import bundle of this request.</param>
+
+        /// <param name="ExistingKeys">Existing keys specified as part of the import bundle of this request.</param>
+
         /// <param name="ImportedIssuers">Net-new issuers imported as a part of this request.</param>
 
         /// <param name="ImportedKeys">Net-new keys imported as a part of this request.</param>
@@ -41,8 +45,12 @@ namespace Vault.Model
         /// <param name="Mapping">A mapping of issuer_id to key_id for all issuers included in this request.</param>
 
 
-        public PkiConfigureCaResponse(List<string> ImportedIssuers = default(List<string>), List<string> ImportedKeys = default(List<string>), Object Mapping = default(Object))
+        public PkiConfigureCaResponse(List<string> ExistingIssuers = default(List<string>), List<string> ExistingKeys = default(List<string>), List<string> ImportedIssuers = default(List<string>), List<string> ImportedKeys = default(List<string>), Object Mapping = default(Object))
         {
+
+            this.ExistingIssuers = ExistingIssuers;
+
+            this.ExistingKeys = ExistingKeys;
 
             this.ImportedIssuers = ImportedIssuers;
 
@@ -51,6 +59,24 @@ namespace Vault.Model
             this.Mapping = Mapping;
 
         }
+
+        /// <summary>
+        /// Existing issuers specified as part of the import bundle of this request
+        /// </summary>
+        /// <value>Existing issuers specified as part of the import bundle of this request</value>
+        [DataMember(Name = "existing_issuers", EmitDefaultValue = false)]
+
+        public List<string> ExistingIssuers { get; set; }
+
+
+        /// <summary>
+        /// Existing keys specified as part of the import bundle of this request
+        /// </summary>
+        /// <value>Existing keys specified as part of the import bundle of this request</value>
+        [DataMember(Name = "existing_keys", EmitDefaultValue = false)]
+
+        public List<string> ExistingKeys { get; set; }
+
 
         /// <summary>
         /// Net-new issuers imported as a part of this request
@@ -89,6 +115,8 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiConfigureCaResponse {\n");
+            sb.Append("  ExistingIssuers: ").Append(ExistingIssuers).Append("\n");
+            sb.Append("  ExistingKeys: ").Append(ExistingKeys).Append("\n");
             sb.Append("  ImportedIssuers: ").Append(ImportedIssuers).Append("\n");
             sb.Append("  ImportedKeys: ").Append(ImportedKeys).Append("\n");
             sb.Append("  Mapping: ").Append(Mapping).Append("\n");
@@ -128,6 +156,18 @@ namespace Vault.Model
             }
             return
                 (
+                    this.ExistingIssuers == input.ExistingIssuers ||
+                    this.ExistingIssuers != null &&
+                    input.ExistingIssuers != null &&
+                    this.ExistingIssuers.SequenceEqual(input.ExistingIssuers)
+                ) &&
+                (
+                    this.ExistingKeys == input.ExistingKeys ||
+                    this.ExistingKeys != null &&
+                    input.ExistingKeys != null &&
+                    this.ExistingKeys.SequenceEqual(input.ExistingKeys)
+                ) &&
+                (
                     this.ImportedIssuers == input.ImportedIssuers ||
                     this.ImportedIssuers != null &&
                     input.ImportedIssuers != null &&
@@ -157,6 +197,16 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+
+                if (this.ExistingIssuers != null)
+                {
+                    hashCode = (hashCode * 59) + this.ExistingIssuers.GetHashCode();
+                }
+
+                if (this.ExistingKeys != null)
+                {
+                    hashCode = (hashCode * 59) + this.ExistingKeys.GetHashCode();
+                }
 
                 if (this.ImportedIssuers != null)
                 {

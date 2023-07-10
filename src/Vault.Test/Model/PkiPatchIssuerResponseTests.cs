@@ -83,6 +83,15 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EnableAiaUrlTemplating'
+        /// </summary>
+        [Fact]
+        public void EnableAiaUrlTemplatingTest()
+        {
+            // TODO unit test for the property 'EnableAiaUrlTemplating'
+        }
+
+        /// <summary>
         /// Test the property 'IssuerId'
         /// </summary>
         [Fact]

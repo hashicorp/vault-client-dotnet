@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="MaxVersions">The number of versions to keep for each key. Defaults to 10.</param>
 
 
-        public KvV2ConfigureRequest(bool CasRequired = default(bool), int DeleteVersionAfter = default(int), int MaxVersions = default(int))
+        public KvV2ConfigureRequest(bool CasRequired = default(bool), string DeleteVersionAfter = default(string), int MaxVersions = default(int))
         {
 
             this.CasRequired = CasRequired;
@@ -67,7 +67,7 @@ namespace Vault.Model
         /// <value>If set, the length of time before a version is deleted. A negative duration disables the use of delete_version_after on all keys. A zero duration clears the current setting. Accepts a Go duration format string.</value>
         [DataMember(Name = "delete_version_after", EmitDefaultValue = false)]
 
-        public int DeleteVersionAfter { get; set; }
+        public string DeleteVersionAfter { get; set; }
 
 
         /// <summary>
@@ -134,8 +134,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.DeleteVersionAfter == input.DeleteVersionAfter ||
+                    (this.DeleteVersionAfter != null &&
+                    this.DeleteVersionAfter.Equals(input.DeleteVersionAfter))
 
-                    this.DeleteVersionAfter.Equals(input.DeleteVersionAfter)
                 ) &&
                 (
                     this.MaxVersions == input.MaxVersions ||
@@ -157,8 +158,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.CasRequired.GetHashCode();
+                if (this.DeleteVersionAfter != null)
+                {
+                    hashCode = (hashCode * 59) + this.DeleteVersionAfter.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.DeleteVersionAfter.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.MaxVersions.GetHashCode();
                 return hashCode;

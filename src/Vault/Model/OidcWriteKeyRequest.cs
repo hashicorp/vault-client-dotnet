@@ -38,12 +38,12 @@ namespace Vault.Model
 
         /// <param name="AllowedClientIds">Comma separated string or array of role client ids allowed to use this key for signing. If empty no roles are allowed. If \&quot;*\&quot; all roles are allowed..</param>
 
-        /// <param name="RotationPeriod">How often to generate a new keypair..</param>
+        /// <param name="RotationPeriod">How often to generate a new keypair. (default to &quot;24h&quot;).</param>
 
-        /// <param name="VerificationTtl">Controls how long the public portion of a key will be available for verification after being rotated..</param>
+        /// <param name="VerificationTtl">Controls how long the public portion of a key will be available for verification after being rotated. (default to &quot;24h&quot;).</param>
 
 
-        public OidcWriteKeyRequest(string Algorithm = "RS256", List<string> AllowedClientIds = default(List<string>), int RotationPeriod = default(int), int VerificationTtl = default(int))
+        public OidcWriteKeyRequest(string Algorithm = "RS256", List<string> AllowedClientIds = default(List<string>), string RotationPeriod = "24h", string VerificationTtl = "24h")
         {
 
             // use default value if no "Algorithm" provided
@@ -52,9 +52,13 @@ namespace Vault.Model
 
             this.AllowedClientIds = AllowedClientIds;
 
-            this.RotationPeriod = RotationPeriod;
+            // use default value if no "RotationPeriod" provided
+            this.RotationPeriod = RotationPeriod ?? "24h";
 
-            this.VerificationTtl = VerificationTtl;
+
+            // use default value if no "VerificationTtl" provided
+            this.VerificationTtl = VerificationTtl ?? "24h";
+
 
         }
 
@@ -82,7 +86,7 @@ namespace Vault.Model
         /// <value>How often to generate a new keypair.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
-        public int RotationPeriod { get; set; }
+        public string RotationPeriod { get; set; }
 
 
         /// <summary>
@@ -91,7 +95,7 @@ namespace Vault.Model
         /// <value>Controls how long the public portion of a key will be available for verification after being rotated.</value>
         [DataMember(Name = "verification_ttl", EmitDefaultValue = false)]
 
-        public int VerificationTtl { get; set; }
+        public string VerificationTtl { get; set; }
 
 
 
@@ -157,13 +161,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
+                    (this.RotationPeriod != null &&
+                    this.RotationPeriod.Equals(input.RotationPeriod))
 
-                    this.RotationPeriod.Equals(input.RotationPeriod)
                 ) &&
                 (
                     this.VerificationTtl == input.VerificationTtl ||
+                    (this.VerificationTtl != null &&
+                    this.VerificationTtl.Equals(input.VerificationTtl))
 
-                    this.VerificationTtl.Equals(input.VerificationTtl)
                 );
 
         }
@@ -188,10 +194,16 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.AllowedClientIds.GetHashCode();
                 }
 
+                if (this.RotationPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
+                if (this.VerificationTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.VerificationTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.VerificationTtl.GetHashCode();
                 return hashCode;
             }
         }
