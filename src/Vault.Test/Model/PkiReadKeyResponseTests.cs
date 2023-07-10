@@ -100,6 +100,15 @@ namespace Vault.Test.Model
             // TODO unit test for the property 'ManagedKeyName'
         }
 
+        /// <summary>
+        /// Test the property 'SubjectKeyId'
+        /// </summary>
+        [Fact]
+        public void SubjectKeyIdTest()
+        {
+            // TODO unit test for the property 'SubjectKeyId'
+        }
+
 
     }
 

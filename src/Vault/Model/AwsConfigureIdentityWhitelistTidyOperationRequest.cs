@@ -36,15 +36,17 @@ namespace Vault.Model
 
         /// <param name="DisablePeriodicTidy">If set to &#x27;true&#x27;, disables the periodic tidying of the &#x27;identity-accesslist/&lt;instance_id&gt;&#x27; entries. (default to false).</param>
 
-        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the identity&#x27;s expiration, before it is removed from the backend storage. (default to 259200).</param>
+        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the identity&#x27;s expiration, before it is removed from the backend storage. (default to &quot;259200&quot;).</param>
 
 
-        public AwsConfigureIdentityWhitelistTidyOperationRequest(bool DisablePeriodicTidy = false, int SafetyBuffer = 259200)
+        public AwsConfigureIdentityWhitelistTidyOperationRequest(bool DisablePeriodicTidy = false, string SafetyBuffer = "259200")
         {
 
             this.DisablePeriodicTidy = DisablePeriodicTidy;
 
-            this.SafetyBuffer = SafetyBuffer;
+            // use default value if no "SafetyBuffer" provided
+            this.SafetyBuffer = SafetyBuffer ?? "259200";
+
 
         }
 
@@ -63,7 +65,7 @@ namespace Vault.Model
         /// <value>The amount of extra time that must have passed beyond the identity&#x27;s expiration, before it is removed from the backend storage.</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
 
-        public int SafetyBuffer { get; set; }
+        public string SafetyBuffer { get; set; }
 
 
 
@@ -120,8 +122,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
+                    (this.SafetyBuffer != null &&
+                    this.SafetyBuffer.Equals(input.SafetyBuffer))
 
-                    this.SafetyBuffer.Equals(input.SafetyBuffer)
                 );
 
         }
@@ -138,8 +141,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.DisablePeriodicTidy.GetHashCode();
+                if (this.SafetyBuffer != null)
+                {
+                    hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
                 return hashCode;
             }
         }

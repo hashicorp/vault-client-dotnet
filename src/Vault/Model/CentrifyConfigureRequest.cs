@@ -59,7 +59,7 @@ namespace Vault.Model
         /// <param name="TokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
 
 
-        public CentrifyConfigureRequest(string AppId = "vault_io_integration", string ClientId = default(string), string ClientSecret = default(string), List<string> Policies = default(List<string>), string Scope = "vault_io_integration", string ServiceUrl = default(string), List<string> TokenBoundCidrs = default(List<string>), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service")
+        public CentrifyConfigureRequest(string AppId = "vault_io_integration", string ClientId = default(string), string ClientSecret = default(string), List<string> Policies = default(List<string>), string Scope = "vault_io_integration", string ServiceUrl = default(string), List<string> TokenBoundCidrs = default(List<string>), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), List<string> TokenPolicies = default(List<string>), string TokenTtl = default(string), string TokenType = "default-service")
         {
 
             // use default value if no "AppId" provided
@@ -190,7 +190,7 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-        public int TokenTtl { get; set; }
+        public string TokenTtl { get; set; }
 
 
         /// <summary>
@@ -319,8 +319,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
+                    (this.TokenTtl != null &&
+                    this.TokenTtl.Equals(input.TokenTtl))
 
-                    this.TokenTtl.Equals(input.TokenTtl)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
@@ -385,8 +386,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
 
+                if (this.TokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();

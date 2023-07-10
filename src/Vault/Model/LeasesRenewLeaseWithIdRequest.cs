@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="LeaseId">The lease identifier to renew. This is included with a lease..</param>
 
 
-        public LeasesRenewLeaseWithIdRequest(int Increment = default(int), string LeaseId = default(string))
+        public LeasesRenewLeaseWithIdRequest(string Increment = default(string), string LeaseId = default(string))
         {
 
             this.Increment = Increment;
@@ -54,7 +54,7 @@ namespace Vault.Model
         /// <value>The desired increment in seconds to the lease</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
 
-        public int Increment { get; set; }
+        public string Increment { get; set; }
 
 
         /// <summary>
@@ -115,8 +115,9 @@ namespace Vault.Model
             return
                 (
                     this.Increment == input.Increment ||
+                    (this.Increment != null &&
+                    this.Increment.Equals(input.Increment))
 
-                    this.Increment.Equals(input.Increment)
                 ) &&
                 (
                     this.LeaseId == input.LeaseId ||
@@ -137,8 +138,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.Increment != null)
+                {
+                    hashCode = (hashCode * 59) + this.Increment.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Increment.GetHashCode();
                 if (this.LeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.LeaseId.GetHashCode();

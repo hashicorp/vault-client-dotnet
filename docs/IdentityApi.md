@@ -26,7 +26,7 @@ Method | HTTP request | Description
 [**EntityUpdateAliasById**](IdentityApi.md#entityupdatealiasbyid) | **POST** /identity/entity-alias/id/{id} | 
 [**EntityUpdateById**](IdentityApi.md#entityupdatebyid) | **POST** /identity/entity/id/{id} | 
 [**EntityUpdateByName**](IdentityApi.md#entityupdatebyname) | **POST** /identity/entity/name/{name} | 
-[**GroupCreate**](IdentityApi.md#groupcreate) | **POST** /identity/group | Create a new group.
+[**GroupCreate**](IdentityApi.md#groupcreate) | **POST** /identity/group | 
 [**GroupCreateAlias**](IdentityApi.md#groupcreatealias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
 [**GroupDeleteAliasById**](IdentityApi.md#groupdeletealiasbyid) | **DELETE** /identity/group-alias/id/{id} | 
 [**GroupDeleteById**](IdentityApi.md#groupdeletebyid) | **DELETE** /identity/group/id/{id} | 
@@ -43,15 +43,15 @@ Method | HTTP request | Description
 [**GroupUpdateByName**](IdentityApi.md#groupupdatebyname) | **POST** /identity/group/name/{name} | 
 [**MfaAdminDestroyTotpSecret**](IdentityApi.md#mfaadmindestroytotpsecret) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
 [**MfaAdminGenerateTotpSecret**](IdentityApi.md#mfaadmingeneratetotpsecret) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
-[**MfaConfigureDuoMethod**](IdentityApi.md#mfaconfigureduomethod) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
-[**MfaConfigureOktaMethod**](IdentityApi.md#mfaconfigureoktamethod) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
-[**MfaConfigurePingIdMethod**](IdentityApi.md#mfaconfigurepingidmethod) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
-[**MfaConfigureTotpMethod**](IdentityApi.md#mfaconfiguretotpmethod) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
-[**MfaDeleteDuoMethod**](IdentityApi.md#mfadeleteduomethod) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete a configuration for the given MFA method
+[**MfaCreateDuoMethod**](IdentityApi.md#mfacreateduomethod) | **POST** /identity/mfa/method/duo | Create the given MFA method
+[**MfaCreateOktaMethod**](IdentityApi.md#mfacreateoktamethod) | **POST** /identity/mfa/method/okta | Create the given MFA method
+[**MfaCreatePingIdMethod**](IdentityApi.md#mfacreatepingidmethod) | **POST** /identity/mfa/method/pingid | Create the given MFA method
+[**MfaCreateTotpMethod**](IdentityApi.md#mfacreatetotpmethod) | **POST** /identity/mfa/method/totp | Create the given MFA method
+[**MfaDeleteDuoMethod**](IdentityApi.md#mfadeleteduomethod) | **DELETE** /identity/mfa/method/duo/{method_id} | Delete the given MFA method
 [**MfaDeleteLoginEnforcement**](IdentityApi.md#mfadeleteloginenforcement) | **DELETE** /identity/mfa/login-enforcement/{name} | Delete a login enforcement
-[**MfaDeleteOktaMethod**](IdentityApi.md#mfadeleteoktamethod) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete a configuration for the given MFA method
-[**MfaDeletePingIdMethod**](IdentityApi.md#mfadeletepingidmethod) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete a configuration for the given MFA method
-[**MfaDeleteTotpMethod**](IdentityApi.md#mfadeletetotpmethod) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete a configuration for the given MFA method
+[**MfaDeleteOktaMethod**](IdentityApi.md#mfadeleteoktamethod) | **DELETE** /identity/mfa/method/okta/{method_id} | Delete the given MFA method
+[**MfaDeletePingIdMethod**](IdentityApi.md#mfadeletepingidmethod) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete the given MFA method
+[**MfaDeleteTotpMethod**](IdentityApi.md#mfadeletetotpmethod) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete the given MFA method
 [**MfaGenerateTotpSecret**](IdentityApi.md#mfageneratetotpsecret) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
 [**MfaListDuoMethods**](IdentityApi.md#mfalistduomethods) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
 [**MfaListLoginEnforcements**](IdentityApi.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement | List login enforcements
@@ -59,12 +59,16 @@ Method | HTTP request | Description
 [**MfaListOktaMethods**](IdentityApi.md#mfalistoktamethods) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
 [**MfaListPingIdMethods**](IdentityApi.md#mfalistpingidmethods) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
 [**MfaListTotpMethods**](IdentityApi.md#mfalisttotpmethods) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
-[**MfaReadDuoMethodConfiguration**](IdentityApi.md#mfareadduomethodconfiguration) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadDuoMethod**](IdentityApi.md#mfareadduomethod) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
 [**MfaReadLoginEnforcement**](IdentityApi.md#mfareadloginenforcement) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
-[**MfaReadMethodConfiguration**](IdentityApi.md#mfareadmethodconfiguration) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
-[**MfaReadOktaMethodConfiguration**](IdentityApi.md#mfareadoktamethodconfiguration) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
-[**MfaReadPingIdMethodConfiguration**](IdentityApi.md#mfareadpingidmethodconfiguration) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
-[**MfaReadTotpMethodConfiguration**](IdentityApi.md#mfareadtotpmethodconfiguration) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadMethod**](IdentityApi.md#mfareadmethod) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
+[**MfaReadOktaMethod**](IdentityApi.md#mfareadoktamethod) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadPingIdMethod**](IdentityApi.md#mfareadpingidmethod) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
+[**MfaReadTotpMethod**](IdentityApi.md#mfareadtotpmethod) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
+[**MfaUpdateDuoMethod**](IdentityApi.md#mfaupdateduomethod) | **POST** /identity/mfa/method/duo/{method_id} | Update the configuration for the given MFA method
+[**MfaUpdateOktaMethod**](IdentityApi.md#mfaupdateoktamethod) | **POST** /identity/mfa/method/okta/{method_id} | Update the configuration for the given MFA method
+[**MfaUpdatePingIdMethod**](IdentityApi.md#mfaupdatepingidmethod) | **POST** /identity/mfa/method/pingid/{method_id} | Update the configuration for the given MFA method
+[**MfaUpdateTotpMethod**](IdentityApi.md#mfaupdatetotpmethod) | **POST** /identity/mfa/method/totp/{method_id} | Update the configuration for the given MFA method
 [**MfaWriteLoginEnforcement**](IdentityApi.md#mfawriteloginenforcement) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
 [**OidcConfigure**](IdentityApi.md#oidcconfigure) | **POST** /identity/oidc/config | 
 [**OidcDeleteAssignment**](IdentityApi.md#oidcdeleteassignment) | **DELETE** /identity/oidc/assignment/{name} | 
@@ -82,6 +86,7 @@ Method | HTTP request | Description
 [**OidcListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
 [**OidcListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope | 
 [**OidcProviderAuthorize**](IdentityApi.md#oidcproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
+[**OidcProviderAuthorizeWithParameters**](IdentityApi.md#oidcproviderauthorizewithparameters) | **POST** /identity/oidc/provider/{name}/authorize | 
 [**OidcProviderToken**](IdentityApi.md#oidcprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
 [**OidcProviderUserInfo**](IdentityApi.md#oidcprovideruserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
 [**OidcReadAssignment**](IdentityApi.md#oidcreadassignment) | **GET** /identity/oidc/assignment/{name} | 
@@ -2140,7 +2145,7 @@ No authorization required
 
 > void GroupCreate (GroupCreateRequest groupCreateRequest, TimeSpan? wrapTTL = null)
 
-Create a new group.
+
 
 ### Example
 ```csharp
@@ -2178,8 +2183,6 @@ namespace Example
 
             try
             {
-                
-                // Create a new group.
                 
 
                 apiInstance.GroupCreate(GroupCreateRequest groupCreateRequest, TimeSpan? wrapTTL = null);
@@ -3697,12 +3700,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfaconfigureduomethod"></a>
-# **MfaConfigureDuoMethod**
+<a name="mfacreateduomethod"></a>
+# **MfaCreateDuoMethod**
 
-> void MfaConfigureDuoMethod (string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null)
+> void MfaCreateDuoMethod (MfaCreateDuoMethodRequest mfaCreateDuoMethodRequest, TimeSpan? wrapTTL = null)
 
-Update or create a configuration for the given MFA method
+Create the given MFA method
 
 ### Example
 ```csharp
@@ -3717,7 +3720,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaConfigureDuoMethodExample
+    public class MfaCreateDuoMethodExample
     {
         public static void Main()
         {
@@ -3733,27 +3736,22 @@ namespace Example
             
             
             
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             
-            
-            
-            
-            
-            var mfaConfigureDuoMethodRequest = new MfaConfigureDuoMethodRequest(); // MfaConfigureDuoMethodRequest | 
+            var mfaCreateDuoMethodRequest = new MfaCreateDuoMethodRequest(); // MfaCreateDuoMethodRequest | 
             
             
 
             try
             {
                 
-                // Update or create a configuration for the given MFA method
+                // Create the given MFA method
                 
 
-                apiInstance.MfaConfigureDuoMethod(string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null);
+                apiInstance.MfaCreateDuoMethod(MfaCreateDuoMethodRequest mfaCreateDuoMethodRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaConfigureDuoMethod: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaCreateDuoMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3765,8 +3763,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mfaConfigureDuoMethodRequest** | [**MfaConfigureDuoMethodRequest**](MfaConfigureDuoMethodRequest.md)|  | 
+ **mfaCreateDuoMethodRequest** | [**MfaCreateDuoMethodRequest**](MfaCreateDuoMethodRequest.md)|  | 
 
 
 ### Return type
@@ -3795,12 +3792,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfaconfigureoktamethod"></a>
-# **MfaConfigureOktaMethod**
+<a name="mfacreateoktamethod"></a>
+# **MfaCreateOktaMethod**
 
-> void MfaConfigureOktaMethod (string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null)
+> void MfaCreateOktaMethod (MfaCreateOktaMethodRequest mfaCreateOktaMethodRequest, TimeSpan? wrapTTL = null)
 
-Update or create a configuration for the given MFA method
+Create the given MFA method
 
 ### Example
 ```csharp
@@ -3815,7 +3812,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaConfigureOktaMethodExample
+    public class MfaCreateOktaMethodExample
     {
         public static void Main()
         {
@@ -3831,27 +3828,22 @@ namespace Example
             
             
             
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             
-            
-            
-            
-            
-            var mfaConfigureOktaMethodRequest = new MfaConfigureOktaMethodRequest(); // MfaConfigureOktaMethodRequest | 
+            var mfaCreateOktaMethodRequest = new MfaCreateOktaMethodRequest(); // MfaCreateOktaMethodRequest | 
             
             
 
             try
             {
                 
-                // Update or create a configuration for the given MFA method
+                // Create the given MFA method
                 
 
-                apiInstance.MfaConfigureOktaMethod(string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null);
+                apiInstance.MfaCreateOktaMethod(MfaCreateOktaMethodRequest mfaCreateOktaMethodRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaConfigureOktaMethod: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaCreateOktaMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3863,8 +3855,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mfaConfigureOktaMethodRequest** | [**MfaConfigureOktaMethodRequest**](MfaConfigureOktaMethodRequest.md)|  | 
+ **mfaCreateOktaMethodRequest** | [**MfaCreateOktaMethodRequest**](MfaCreateOktaMethodRequest.md)|  | 
 
 
 ### Return type
@@ -3893,12 +3884,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfaconfigurepingidmethod"></a>
-# **MfaConfigurePingIdMethod**
+<a name="mfacreatepingidmethod"></a>
+# **MfaCreatePingIdMethod**
 
-> void MfaConfigurePingIdMethod (string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null)
+> void MfaCreatePingIdMethod (MfaCreatePingIdMethodRequest mfaCreatePingIdMethodRequest, TimeSpan? wrapTTL = null)
 
-Update or create a configuration for the given MFA method
+Create the given MFA method
 
 ### Example
 ```csharp
@@ -3913,7 +3904,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaConfigurePingIdMethodExample
+    public class MfaCreatePingIdMethodExample
     {
         public static void Main()
         {
@@ -3929,27 +3920,22 @@ namespace Example
             
             
             
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             
-            
-            
-            
-            
-            var mfaConfigurePingIdMethodRequest = new MfaConfigurePingIdMethodRequest(); // MfaConfigurePingIdMethodRequest | 
+            var mfaCreatePingIdMethodRequest = new MfaCreatePingIdMethodRequest(); // MfaCreatePingIdMethodRequest | 
             
             
 
             try
             {
                 
-                // Update or create a configuration for the given MFA method
+                // Create the given MFA method
                 
 
-                apiInstance.MfaConfigurePingIdMethod(string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null);
+                apiInstance.MfaCreatePingIdMethod(MfaCreatePingIdMethodRequest mfaCreatePingIdMethodRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaConfigurePingIdMethod: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaCreatePingIdMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -3961,8 +3947,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mfaConfigurePingIdMethodRequest** | [**MfaConfigurePingIdMethodRequest**](MfaConfigurePingIdMethodRequest.md)|  | 
+ **mfaCreatePingIdMethodRequest** | [**MfaCreatePingIdMethodRequest**](MfaCreatePingIdMethodRequest.md)|  | 
 
 
 ### Return type
@@ -3991,12 +3976,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfaconfiguretotpmethod"></a>
-# **MfaConfigureTotpMethod**
+<a name="mfacreatetotpmethod"></a>
+# **MfaCreateTotpMethod**
 
-> void MfaConfigureTotpMethod (string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null)
+> void MfaCreateTotpMethod (MfaCreateTotpMethodRequest mfaCreateTotpMethodRequest, TimeSpan? wrapTTL = null)
 
-Update or create a configuration for the given MFA method
+Create the given MFA method
 
 ### Example
 ```csharp
@@ -4011,7 +3996,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaConfigureTotpMethodExample
+    public class MfaCreateTotpMethodExample
     {
         public static void Main()
         {
@@ -4027,27 +4012,22 @@ namespace Example
             
             
             
-            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
             
-            
-            
-            
-            
-            var mfaConfigureTotpMethodRequest = new MfaConfigureTotpMethodRequest(); // MfaConfigureTotpMethodRequest | 
+            var mfaCreateTotpMethodRequest = new MfaCreateTotpMethodRequest(); // MfaCreateTotpMethodRequest | 
             
             
 
             try
             {
                 
-                // Update or create a configuration for the given MFA method
+                // Create the given MFA method
                 
 
-                apiInstance.MfaConfigureTotpMethod(string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null);
+                apiInstance.MfaCreateTotpMethod(MfaCreateTotpMethodRequest mfaCreateTotpMethodRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaConfigureTotpMethod: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaCreateTotpMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -4059,8 +4039,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **methodId** | **string**| The unique identifier for this MFA method. | 
- **mfaConfigureTotpMethodRequest** | [**MfaConfigureTotpMethodRequest**](MfaConfigureTotpMethodRequest.md)|  | 
+ **mfaCreateTotpMethodRequest** | [**MfaCreateTotpMethodRequest**](MfaCreateTotpMethodRequest.md)|  | 
 
 
 ### Return type
@@ -4094,7 +4073,7 @@ No authorization required
 
 > void MfaDeleteDuoMethod (string methodId, TimeSpan? wrapTTL = null)
 
-Delete a configuration for the given MFA method
+Delete the given MFA method
 
 ### Example
 ```csharp
@@ -4133,7 +4112,7 @@ namespace Example
             try
             {
                 
-                // Delete a configuration for the given MFA method
+                // Delete the given MFA method
                 
 
                 apiInstance.MfaDeleteDuoMethod(string methodId, TimeSpan? wrapTTL = null);
@@ -4278,7 +4257,7 @@ No authorization required
 
 > void MfaDeleteOktaMethod (string methodId, TimeSpan? wrapTTL = null)
 
-Delete a configuration for the given MFA method
+Delete the given MFA method
 
 ### Example
 ```csharp
@@ -4317,7 +4296,7 @@ namespace Example
             try
             {
                 
-                // Delete a configuration for the given MFA method
+                // Delete the given MFA method
                 
 
                 apiInstance.MfaDeleteOktaMethod(string methodId, TimeSpan? wrapTTL = null);
@@ -4370,7 +4349,7 @@ No authorization required
 
 > void MfaDeletePingIdMethod (string methodId, TimeSpan? wrapTTL = null)
 
-Delete a configuration for the given MFA method
+Delete the given MFA method
 
 ### Example
 ```csharp
@@ -4409,7 +4388,7 @@ namespace Example
             try
             {
                 
-                // Delete a configuration for the given MFA method
+                // Delete the given MFA method
                 
 
                 apiInstance.MfaDeletePingIdMethod(string methodId, TimeSpan? wrapTTL = null);
@@ -4462,7 +4441,7 @@ No authorization required
 
 > void MfaDeleteTotpMethod (string methodId, TimeSpan? wrapTTL = null)
 
-Delete a configuration for the given MFA method
+Delete the given MFA method
 
 ### Example
 ```csharp
@@ -4501,7 +4480,7 @@ namespace Example
             try
             {
                 
-                // Delete a configuration for the given MFA method
+                // Delete the given MFA method
                 
 
                 apiInstance.MfaDeleteTotpMethod(string methodId, TimeSpan? wrapTTL = null);
@@ -5193,10 +5172,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfareadduomethodconfiguration"></a>
-# **MfaReadDuoMethodConfiguration**
+<a name="mfareadduomethod"></a>
+# **MfaReadDuoMethod**
 
-> void MfaReadDuoMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+> void MfaReadDuoMethod (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -5213,7 +5192,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaReadDuoMethodConfigurationExample
+    public class MfaReadDuoMethodExample
     {
         public static void Main()
         {
@@ -5240,11 +5219,11 @@ namespace Example
                 // Read the current configuration for the given MFA method
                 
 
-                apiInstance.MfaReadDuoMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadDuoMethod(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaReadDuoMethodConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadDuoMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5377,10 +5356,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfareadmethodconfiguration"></a>
-# **MfaReadMethodConfiguration**
+<a name="mfareadmethod"></a>
+# **MfaReadMethod**
 
-> void MfaReadMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+> void MfaReadMethod (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given ID regardless of the MFA method type
 
@@ -5397,7 +5376,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaReadMethodConfigurationExample
+    public class MfaReadMethodExample
     {
         public static void Main()
         {
@@ -5424,11 +5403,11 @@ namespace Example
                 // Read the current configuration for the given ID regardless of the MFA method type
                 
 
-                apiInstance.MfaReadMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadMethod(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaReadMethodConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5469,10 +5448,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfareadoktamethodconfiguration"></a>
-# **MfaReadOktaMethodConfiguration**
+<a name="mfareadoktamethod"></a>
+# **MfaReadOktaMethod**
 
-> void MfaReadOktaMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+> void MfaReadOktaMethod (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -5489,7 +5468,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaReadOktaMethodConfigurationExample
+    public class MfaReadOktaMethodExample
     {
         public static void Main()
         {
@@ -5516,11 +5495,11 @@ namespace Example
                 // Read the current configuration for the given MFA method
                 
 
-                apiInstance.MfaReadOktaMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadOktaMethod(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaReadOktaMethodConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadOktaMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5561,10 +5540,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfareadpingidmethodconfiguration"></a>
-# **MfaReadPingIdMethodConfiguration**
+<a name="mfareadpingidmethod"></a>
+# **MfaReadPingIdMethod**
 
-> void MfaReadPingIdMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+> void MfaReadPingIdMethod (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -5581,7 +5560,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaReadPingIdMethodConfigurationExample
+    public class MfaReadPingIdMethodExample
     {
         public static void Main()
         {
@@ -5608,11 +5587,11 @@ namespace Example
                 // Read the current configuration for the given MFA method
                 
 
-                apiInstance.MfaReadPingIdMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadPingIdMethod(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaReadPingIdMethodConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadPingIdMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5653,10 +5632,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="mfareadtotpmethodconfiguration"></a>
-# **MfaReadTotpMethodConfiguration**
+<a name="mfareadtotpmethod"></a>
+# **MfaReadTotpMethod**
 
-> void MfaReadTotpMethodConfiguration (string methodId, TimeSpan? wrapTTL = null)
+> void MfaReadTotpMethod (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -5673,7 +5652,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class MfaReadTotpMethodConfigurationExample
+    public class MfaReadTotpMethodExample
     {
         public static void Main()
         {
@@ -5700,11 +5679,11 @@ namespace Example
                 // Read the current configuration for the given MFA method
                 
 
-                apiInstance.MfaReadTotpMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+                apiInstance.MfaReadTotpMethod(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Identity.MfaReadTotpMethodConfiguration: " + e.Message );
+                Debug.Print("Exception when calling Identity.MfaReadTotpMethod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -5730,6 +5709,398 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaupdateduomethod"></a>
+# **MfaUpdateDuoMethod**
+
+> void MfaUpdateDuoMethod (string methodId, MfaUpdateDuoMethodRequest mfaUpdateDuoMethodRequest, TimeSpan? wrapTTL = null)
+
+Update the configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaUpdateDuoMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaUpdateDuoMethodRequest = new MfaUpdateDuoMethodRequest(); // MfaUpdateDuoMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update the configuration for the given MFA method
+                
+
+                apiInstance.MfaUpdateDuoMethod(string methodId, MfaUpdateDuoMethodRequest mfaUpdateDuoMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaUpdateDuoMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaUpdateDuoMethodRequest** | [**MfaUpdateDuoMethodRequest**](MfaUpdateDuoMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaupdateoktamethod"></a>
+# **MfaUpdateOktaMethod**
+
+> void MfaUpdateOktaMethod (string methodId, MfaUpdateOktaMethodRequest mfaUpdateOktaMethodRequest, TimeSpan? wrapTTL = null)
+
+Update the configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaUpdateOktaMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaUpdateOktaMethodRequest = new MfaUpdateOktaMethodRequest(); // MfaUpdateOktaMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update the configuration for the given MFA method
+                
+
+                apiInstance.MfaUpdateOktaMethod(string methodId, MfaUpdateOktaMethodRequest mfaUpdateOktaMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaUpdateOktaMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaUpdateOktaMethodRequest** | [**MfaUpdateOktaMethodRequest**](MfaUpdateOktaMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaupdatepingidmethod"></a>
+# **MfaUpdatePingIdMethod**
+
+> void MfaUpdatePingIdMethod (string methodId, MfaUpdatePingIdMethodRequest mfaUpdatePingIdMethodRequest, TimeSpan? wrapTTL = null)
+
+Update the configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaUpdatePingIdMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaUpdatePingIdMethodRequest = new MfaUpdatePingIdMethodRequest(); // MfaUpdatePingIdMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update the configuration for the given MFA method
+                
+
+                apiInstance.MfaUpdatePingIdMethod(string methodId, MfaUpdatePingIdMethodRequest mfaUpdatePingIdMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaUpdatePingIdMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaUpdatePingIdMethodRequest** | [**MfaUpdatePingIdMethodRequest**](MfaUpdatePingIdMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="mfaupdatetotpmethod"></a>
+# **MfaUpdateTotpMethod**
+
+> void MfaUpdateTotpMethod (string methodId, MfaUpdateTotpMethodRequest mfaUpdateTotpMethodRequest, TimeSpan? wrapTTL = null)
+
+Update the configuration for the given MFA method
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class MfaUpdateTotpMethodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var methodId = "methodId_example";  // string | The unique identifier for this MFA method.
+            
+            
+            
+            
+            
+            var mfaUpdateTotpMethodRequest = new MfaUpdateTotpMethodRequest(); // MfaUpdateTotpMethodRequest | 
+            
+            
+
+            try
+            {
+                
+                // Update the configuration for the given MFA method
+                
+
+                apiInstance.MfaUpdateTotpMethod(string methodId, MfaUpdateTotpMethodRequest mfaUpdateTotpMethodRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.MfaUpdateTotpMethod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **methodId** | **string**| The unique identifier for this MFA method. | 
+ **mfaUpdateTotpMethodRequest** | [**MfaUpdateTotpMethodRequest**](MfaUpdateTotpMethodRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
  - **Accept**: Not defined
 
 
@@ -7286,6 +7657,102 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="oidcproviderauthorizewithparameters"></a>
+# **OidcProviderAuthorizeWithParameters**
+
+> void OidcProviderAuthorizeWithParameters (string name, OidcProviderAuthorizeWithParametersRequest oidcProviderAuthorizeWithParametersRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class OidcProviderAuthorizeWithParametersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Identity(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the provider
+            
+            
+            
+            
+            
+            var oidcProviderAuthorizeWithParametersRequest = new OidcProviderAuthorizeWithParametersRequest(); // OidcProviderAuthorizeWithParametersRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.OidcProviderAuthorizeWithParameters(string name, OidcProviderAuthorizeWithParametersRequest oidcProviderAuthorizeWithParametersRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Identity.OidcProviderAuthorizeWithParameters: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the provider | 
+ **oidcProviderAuthorizeWithParametersRequest** | [**OidcProviderAuthorizeWithParametersRequest**](OidcProviderAuthorizeWithParametersRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
  - **Accept**: Not defined
 
 

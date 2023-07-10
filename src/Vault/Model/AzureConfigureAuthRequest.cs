@@ -42,12 +42,12 @@ namespace Vault.Model
 
         /// <param name="Resource">The resource URL for the vault application in Azure Active Directory. This value can also be provided with the AZURE_AD_RESOURCE environment variable..</param>
 
-        /// <param name="RootPasswordTtl">The TTL of the root password in Azure. This can be either a number of seconds or a time formatted duration (ex: 24h, 48ds).</param>
+        /// <param name="RootPasswordTtl">The TTL of the root password in Azure. This can be either a number of seconds or a time formatted duration (ex: 24h, 48ds) (default to &quot;15768000000000000&quot;).</param>
 
         /// <param name="TenantId">The tenant id for the Azure Active Directory. This is sometimes referred to as Directory ID in AD. This value can also be provided with the AZURE_TENANT_ID environment variable..</param>
 
 
-        public AzureConfigureAuthRequest(string ClientId = default(string), string ClientSecret = default(string), string Environment = default(string), string Resource = default(string), int RootPasswordTtl = default(int), string TenantId = default(string))
+        public AzureConfigureAuthRequest(string ClientId = default(string), string ClientSecret = default(string), string Environment = default(string), string Resource = default(string), string RootPasswordTtl = "15768000000000000", string TenantId = default(string))
         {
 
             this.ClientId = ClientId;
@@ -58,7 +58,9 @@ namespace Vault.Model
 
             this.Resource = Resource;
 
-            this.RootPasswordTtl = RootPasswordTtl;
+            // use default value if no "RootPasswordTtl" provided
+            this.RootPasswordTtl = RootPasswordTtl ?? "15768000000000000";
+
 
             this.TenantId = TenantId;
 
@@ -106,7 +108,7 @@ namespace Vault.Model
         /// <value>The TTL of the root password in Azure. This can be either a number of seconds or a time formatted duration (ex: 24h, 48ds)</value>
         [DataMember(Name = "root_password_ttl", EmitDefaultValue = false)]
 
-        public int RootPasswordTtl { get; set; }
+        public string RootPasswordTtl { get; set; }
 
 
         /// <summary>
@@ -195,8 +197,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RootPasswordTtl == input.RootPasswordTtl ||
+                    (this.RootPasswordTtl != null &&
+                    this.RootPasswordTtl.Equals(input.RootPasswordTtl))
 
-                    this.RootPasswordTtl.Equals(input.RootPasswordTtl)
                 ) &&
                 (
                     this.TenantId == input.TenantId ||
@@ -237,8 +240,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Resource.GetHashCode();
                 }
 
+                if (this.RootPasswordTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.RootPasswordTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RootPasswordTtl.GetHashCode();
                 if (this.TenantId != null)
                 {
                     hashCode = (hashCode * 59) + this.TenantId.GetHashCode();

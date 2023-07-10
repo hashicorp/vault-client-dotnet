@@ -56,6 +56,15 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'AcmeAccountSafetyBuffer'
+        /// </summary>
+        [Fact]
+        public void AcmeAccountSafetyBufferTest()
+        {
+            // TODO unit test for the property 'AcmeAccountSafetyBuffer'
+        }
+
+        /// <summary>
         /// Test the property 'Enabled'
         /// </summary>
         [Fact]
@@ -125,6 +134,15 @@ namespace Vault.Test.Model
         public void SafetyBufferTest()
         {
             // TODO unit test for the property 'SafetyBuffer'
+        }
+
+        /// <summary>
+        /// Test the property 'TidyAcme'
+        /// </summary>
+        [Fact]
+        public void TidyAcmeTest()
+        {
+            // TODO unit test for the property 'TidyAcme'
         }
 
         /// <summary>

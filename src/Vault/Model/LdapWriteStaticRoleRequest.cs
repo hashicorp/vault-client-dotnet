@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Username">The username/logon name for the entry with which this role will be associated..</param>
 
 
-        public LdapWriteStaticRoleRequest(string Dn = default(string), int RotationPeriod = default(int), string Username = default(string))
+        public LdapWriteStaticRoleRequest(string Dn = default(string), string RotationPeriod = default(string), string Username = default(string))
         {
 
             this.Dn = Dn;
@@ -67,7 +67,7 @@ namespace Vault.Model
         /// <value>Period for automatic credential rotation of the given entry.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
-        public int RotationPeriod { get; set; }
+        public string RotationPeriod { get; set; }
 
 
         /// <summary>
@@ -135,8 +135,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
+                    (this.RotationPeriod != null &&
+                    this.RotationPeriod.Equals(input.RotationPeriod))
 
-                    this.RotationPeriod.Equals(input.RotationPeriod)
                 ) &&
                 (
                     this.Username == input.Username ||
@@ -162,8 +163,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Dn.GetHashCode();
                 }
 
+                if (this.RotationPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
                 if (this.Username != null)
                 {
                     hashCode = (hashCode * 59) + this.Username.GetHashCode();

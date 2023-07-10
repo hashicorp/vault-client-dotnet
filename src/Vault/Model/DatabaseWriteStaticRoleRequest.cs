@@ -47,7 +47,7 @@ namespace Vault.Model
         /// <param name="Username">Name of the static user account for Vault to manage. Requires \&quot;rotation_period\&quot; to be specified.</param>
 
 
-        public DatabaseWriteStaticRoleRequest(Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), int RotationPeriod = default(int), List<string> RotationStatements = default(List<string>), string Username = default(string))
+        public DatabaseWriteStaticRoleRequest(Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), string RotationPeriod = default(string), List<string> RotationStatements = default(List<string>), string Username = default(string))
         {
 
             this.CredentialConfig = CredentialConfig;
@@ -99,7 +99,7 @@ namespace Vault.Model
         /// <value>Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;.</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
-        public int RotationPeriod { get; set; }
+        public string RotationPeriod { get; set; }
 
 
         /// <summary>
@@ -191,8 +191,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
+                    (this.RotationPeriod != null &&
+                    this.RotationPeriod.Equals(input.RotationPeriod))
 
-                    this.RotationPeriod.Equals(input.RotationPeriod)
                 ) &&
                 (
                     this.RotationStatements == input.RotationStatements ||
@@ -234,8 +235,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.DbName.GetHashCode();
                 }
 
+                if (this.RotationPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
                 if (this.RotationStatements != null)
                 {
                     hashCode = (hashCode * 59) + this.RotationStatements.GetHashCode();

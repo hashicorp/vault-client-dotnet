@@ -45,7 +45,7 @@ namespace Vault.Model
         /// <param name="Ttl">Duration in seconds after which the issued token should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults..</param>
 
 
-        public AliCloudWriteRoleRequest(string InlinePolicies = default(string), int MaxTtl = default(int), List<string> RemotePolicies = default(List<string>), string RoleArn = default(string), int Ttl = default(int))
+        public AliCloudWriteRoleRequest(string InlinePolicies = default(string), string MaxTtl = default(string), List<string> RemotePolicies = default(List<string>), string RoleArn = default(string), string Ttl = default(string))
         {
 
             this.InlinePolicies = InlinePolicies;
@@ -75,7 +75,7 @@ namespace Vault.Model
         /// <value>The maximum allowed lifetime of tokens issued using this role.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Vault.Model
         /// <value>Duration in seconds after which the issued token should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -163,8 +163,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.RemotePolicies == input.RemotePolicies ||
@@ -180,8 +181,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -201,8 +203,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.InlinePolicies.GetHashCode();
                 }
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.RemotePolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.RemotePolicies.GetHashCode();
@@ -213,8 +218,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.RoleArn.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

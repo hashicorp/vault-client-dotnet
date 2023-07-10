@@ -38,8 +38,12 @@ namespace Vault.Model
 
         /// <param name="HashFunction">The hash function used as a random oracle in the OAEP wrapping of the user-generated, ephemeral AES key. Can be one of \&quot;SHA1\&quot;, \&quot;SHA224\&quot;, \&quot;SHA256\&quot; (default), \&quot;SHA384\&quot;, or \&quot;SHA512\&quot; (default to &quot;SHA256&quot;).</param>
 
+        /// <param name="PublicKey">The plaintext public key to be imported. If \&quot;ciphertext\&quot; is set, this field is ignored..</param>
 
-        public TransitImportKeyVersionRequest(string Ciphertext = default(string), string HashFunction = "SHA256")
+        /// <param name="_Version">Key version to be updated, if left empty, a new version will be created unless a private key is specified and the &#x27;Latest&#x27; key is missing a private key..</param>
+
+
+        public TransitImportKeyVersionRequest(string Ciphertext = default(string), string HashFunction = "SHA256", string PublicKey = default(string), int _Version = default(int))
         {
 
             this.Ciphertext = Ciphertext;
@@ -47,6 +51,10 @@ namespace Vault.Model
             // use default value if no "HashFunction" provided
             this.HashFunction = HashFunction ?? "SHA256";
 
+
+            this.PublicKey = PublicKey;
+
+            this._Version = _Version;
 
         }
 
@@ -68,6 +76,24 @@ namespace Vault.Model
         public string HashFunction { get; set; }
 
 
+        /// <summary>
+        /// The plaintext public key to be imported. If \&quot;ciphertext\&quot; is set, this field is ignored.
+        /// </summary>
+        /// <value>The plaintext public key to be imported. If \&quot;ciphertext\&quot; is set, this field is ignored.</value>
+        [DataMember(Name = "public_key", EmitDefaultValue = false)]
+
+        public string PublicKey { get; set; }
+
+
+        /// <summary>
+        /// Key version to be updated, if left empty, a new version will be created unless a private key is specified and the &#x27;Latest&#x27; key is missing a private key.
+        /// </summary>
+        /// <value>Key version to be updated, if left empty, a new version will be created unless a private key is specified and the &#x27;Latest&#x27; key is missing a private key.</value>
+        [DataMember(Name = "version", EmitDefaultValue = false)]
+
+        public int _Version { get; set; }
+
+
 
 
         /// <summary>
@@ -80,6 +106,8 @@ namespace Vault.Model
             sb.Append("class TransitImportKeyVersionRequest {\n");
             sb.Append("  Ciphertext: ").Append(Ciphertext).Append("\n");
             sb.Append("  HashFunction: ").Append(HashFunction).Append("\n");
+            sb.Append("  PublicKey: ").Append(PublicKey).Append("\n");
+            sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +154,17 @@ namespace Vault.Model
                     (this.HashFunction != null &&
                     this.HashFunction.Equals(input.HashFunction))
 
+                ) &&
+                (
+                    this.PublicKey == input.PublicKey ||
+                    (this.PublicKey != null &&
+                    this.PublicKey.Equals(input.PublicKey))
+
+                ) &&
+                (
+                    this._Version == input._Version ||
+
+                    this._Version.Equals(input._Version)
                 );
 
         }
@@ -150,6 +189,13 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.HashFunction.GetHashCode();
                 }
 
+                if (this.PublicKey != null)
+                {
+                    hashCode = (hashCode * 59) + this.PublicKey.GetHashCode();
+                }
+
+
+                hashCode = (hashCode * 59) + this._Version.GetHashCode();
                 return hashCode;
             }
         }

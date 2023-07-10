@@ -34,17 +34,21 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="RabbitMqConfigureLeaseRequest" /> class.
         /// </summary>
 
-        /// <param name="MaxTtl">Duration after which the issued credentials should not be allowed to be renewed (default to 0).</param>
+        /// <param name="MaxTtl">Duration after which the issued credentials should not be allowed to be renewed (default to &quot;0&quot;).</param>
 
-        /// <param name="Ttl">Duration before which the issued credentials needs renewal (default to 0).</param>
+        /// <param name="Ttl">Duration before which the issued credentials needs renewal (default to &quot;0&quot;).</param>
 
 
-        public RabbitMqConfigureLeaseRequest(int MaxTtl = 0, int Ttl = 0)
+        public RabbitMqConfigureLeaseRequest(string MaxTtl = "0", string Ttl = "0")
         {
 
-            this.MaxTtl = MaxTtl;
+            // use default value if no "MaxTtl" provided
+            this.MaxTtl = MaxTtl ?? "0";
 
-            this.Ttl = Ttl;
+
+            // use default value if no "Ttl" provided
+            this.Ttl = Ttl ?? "0";
+
 
         }
 
@@ -54,7 +58,7 @@ namespace Vault.Model
         /// <value>Duration after which the issued credentials should not be allowed to be renewed</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -63,7 +67,7 @@ namespace Vault.Model
         /// <value>Duration before which the issued credentials needs renewal</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -115,13 +119,15 @@ namespace Vault.Model
             return
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -136,10 +142,16 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

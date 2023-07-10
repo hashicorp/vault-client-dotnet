@@ -53,7 +53,7 @@ namespace Vault.Model
         /// <param name="UsernameTemplate">The template used to create a username.</param>
 
 
-        public LdapWriteDynamicRoleRequest(string CreationLdif = default(string), int DefaultTtl = default(int), string DeletionLdif = default(string), int MaxTtl = default(int), string RollbackLdif = default(string), string UsernameTemplate = default(string))
+        public LdapWriteDynamicRoleRequest(string CreationLdif = default(string), string DefaultTtl = default(string), string DeletionLdif = default(string), string MaxTtl = default(string), string RollbackLdif = default(string), string UsernameTemplate = default(string))
         {
 
             // to ensure "CreationLdif" is required (not null)
@@ -97,7 +97,7 @@ namespace Vault.Model
         /// <value>Default TTL for dynamic credentials</value>
         [DataMember(Name = "default_ttl", EmitDefaultValue = false)]
 
-        public int DefaultTtl { get; set; }
+        public string DefaultTtl { get; set; }
 
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Vault.Model
         /// <value>Max TTL a dynamic credential can be extended to</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -195,8 +195,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.DefaultTtl == input.DefaultTtl ||
+                    (this.DefaultTtl != null &&
+                    this.DefaultTtl.Equals(input.DefaultTtl))
 
-                    this.DefaultTtl.Equals(input.DefaultTtl)
                 ) &&
                 (
                     this.DeletionLdif == input.DeletionLdif ||
@@ -206,8 +207,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.RollbackLdif == input.RollbackLdif ||
@@ -239,15 +241,21 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.CreationLdif.GetHashCode();
                 }
 
+                if (this.DefaultTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.DefaultTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.DefaultTtl.GetHashCode();
                 if (this.DeletionLdif != null)
                 {
                     hashCode = (hashCode * 59) + this.DeletionLdif.GetHashCode();
                 }
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.RollbackLdif != null)
                 {
                     hashCode = (hashCode * 59) + this.RollbackLdif.GetHashCode();

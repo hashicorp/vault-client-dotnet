@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **KeyType** | **string** | Key Type | [optional] 
 **ManagedKeyId** | **string** | Managed Key Id | [optional] 
 **ManagedKeyName** | **string** | Managed Key Name | [optional] 
+**SubjectKeyId** | **string** | RFC 5280 Subject Key Identifier of the public counterpart | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

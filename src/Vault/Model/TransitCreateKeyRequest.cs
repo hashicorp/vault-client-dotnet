@@ -36,7 +36,7 @@ namespace Vault.Model
 
         /// <param name="AllowPlaintextBackup">Enables taking a backup of the named key in plaintext format. Once set, this cannot be disabled..</param>
 
-        /// <param name="AutoRotatePeriod">Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key. (default to 0).</param>
+        /// <param name="AutoRotatePeriod">Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key. (default to &quot;0&quot;).</param>
 
         /// <param name="Context">Base64 encoded context for key derivation. When reading a key with key derivation enabled, if the key type supports public keys, this will return the public key for the given context..</param>
 
@@ -55,12 +55,14 @@ namespace Vault.Model
         /// <param name="Type">The type of key to create. Currently, \&quot;aes128-gcm96\&quot; (symmetric), \&quot;aes256-gcm96\&quot; (symmetric), \&quot;ecdsa-p256\&quot; (asymmetric), \&quot;ecdsa-p384\&quot; (asymmetric), \&quot;ecdsa-p521\&quot; (asymmetric), \&quot;ed25519\&quot; (asymmetric), \&quot;rsa-2048\&quot; (asymmetric), \&quot;rsa-3072\&quot; (asymmetric), \&quot;rsa-4096\&quot; (asymmetric) are supported. Defaults to \&quot;aes256-gcm96\&quot;. (default to &quot;aes256-gcm96&quot;).</param>
 
 
-        public TransitCreateKeyRequest(bool AllowPlaintextBackup = default(bool), int AutoRotatePeriod = 0, string Context = default(string), bool ConvergentEncryption = default(bool), bool Derived = default(bool), bool Exportable = default(bool), int KeySize = 0, string ManagedKeyId = default(string), string ManagedKeyName = default(string), string Type = "aes256-gcm96")
+        public TransitCreateKeyRequest(bool AllowPlaintextBackup = default(bool), string AutoRotatePeriod = "0", string Context = default(string), bool ConvergentEncryption = default(bool), bool Derived = default(bool), bool Exportable = default(bool), int KeySize = 0, string ManagedKeyId = default(string), string ManagedKeyName = default(string), string Type = "aes256-gcm96")
         {
 
             this.AllowPlaintextBackup = AllowPlaintextBackup;
 
-            this.AutoRotatePeriod = AutoRotatePeriod;
+            // use default value if no "AutoRotatePeriod" provided
+            this.AutoRotatePeriod = AutoRotatePeriod ?? "0";
+
 
             this.Context = Context;
 
@@ -97,7 +99,7 @@ namespace Vault.Model
         /// <value>Amount of time the key should live before being automatically rotated. A value of 0 (default) disables automatic rotation for the key.</value>
         [DataMember(Name = "auto_rotate_period", EmitDefaultValue = false)]
 
-        public int AutoRotatePeriod { get; set; }
+        public string AutoRotatePeriod { get; set; }
 
 
         /// <summary>
@@ -234,8 +236,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.AutoRotatePeriod == input.AutoRotatePeriod ||
+                    (this.AutoRotatePeriod != null &&
+                    this.AutoRotatePeriod.Equals(input.AutoRotatePeriod))
 
-                    this.AutoRotatePeriod.Equals(input.AutoRotatePeriod)
                 ) &&
                 (
                     this.Context == input.Context ||
@@ -296,8 +299,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.AllowPlaintextBackup.GetHashCode();
+                if (this.AutoRotatePeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.AutoRotatePeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.AutoRotatePeriod.GetHashCode();
                 if (this.Context != null)
                 {
                     hashCode = (hashCode * 59) + this.Context.GetHashCode();

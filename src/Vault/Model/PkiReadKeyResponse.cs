@@ -44,8 +44,10 @@ namespace Vault.Model
 
         /// <param name="ManagedKeyName">Managed Key Name.</param>
 
+        /// <param name="SubjectKeyId">RFC 5280 Subject Key Identifier of the public counterpart.</param>
 
-        public PkiReadKeyResponse(string KeyId = default(string), string KeyName = default(string), string KeyType = default(string), string ManagedKeyId = default(string), string ManagedKeyName = default(string))
+
+        public PkiReadKeyResponse(string KeyId = default(string), string KeyName = default(string), string KeyType = default(string), string ManagedKeyId = default(string), string ManagedKeyName = default(string), string SubjectKeyId = default(string))
         {
 
             this.KeyId = KeyId;
@@ -57,6 +59,8 @@ namespace Vault.Model
             this.ManagedKeyId = ManagedKeyId;
 
             this.ManagedKeyName = ManagedKeyName;
+
+            this.SubjectKeyId = SubjectKeyId;
 
         }
 
@@ -105,6 +109,15 @@ namespace Vault.Model
         public string ManagedKeyName { get; set; }
 
 
+        /// <summary>
+        /// RFC 5280 Subject Key Identifier of the public counterpart
+        /// </summary>
+        /// <value>RFC 5280 Subject Key Identifier of the public counterpart</value>
+        [DataMember(Name = "subject_key_id", EmitDefaultValue = false)]
+
+        public string SubjectKeyId { get; set; }
+
+
 
 
         /// <summary>
@@ -120,6 +133,7 @@ namespace Vault.Model
             sb.Append("  KeyType: ").Append(KeyType).Append("\n");
             sb.Append("  ManagedKeyId: ").Append(ManagedKeyId).Append("\n");
             sb.Append("  ManagedKeyName: ").Append(ManagedKeyName).Append("\n");
+            sb.Append("  SubjectKeyId: ").Append(SubjectKeyId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,6 +198,12 @@ namespace Vault.Model
                     (this.ManagedKeyName != null &&
                     this.ManagedKeyName.Equals(input.ManagedKeyName))
 
+                ) &&
+                (
+                    this.SubjectKeyId == input.SubjectKeyId ||
+                    (this.SubjectKeyId != null &&
+                    this.SubjectKeyId.Equals(input.SubjectKeyId))
+
                 );
 
         }
@@ -221,6 +241,11 @@ namespace Vault.Model
                 if (this.ManagedKeyName != null)
                 {
                     hashCode = (hashCode * 59) + this.ManagedKeyName.GetHashCode();
+                }
+
+                if (this.SubjectKeyId != null)
+                {
+                    hashCode = (hashCode * 59) + this.SubjectKeyId.GetHashCode();
                 }
 
                 return hashCode;

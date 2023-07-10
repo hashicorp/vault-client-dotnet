@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Ttl">Lifetime of the token for the impersonated account..</param>
 
 
-        public GoogleCloudWriteImpersonatedAccountRequest(string ServiceAccountEmail = default(string), List<string> TokenScopes = default(List<string>), int Ttl = default(int))
+        public GoogleCloudWriteImpersonatedAccountRequest(string ServiceAccountEmail = default(string), List<string> TokenScopes = default(List<string>), string Ttl = default(string))
         {
 
             this.ServiceAccountEmail = ServiceAccountEmail;
@@ -76,7 +76,7 @@ namespace Vault.Model
         /// <value>Lifetime of the token for the impersonated account.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -141,8 +141,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -167,8 +168,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenScopes.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

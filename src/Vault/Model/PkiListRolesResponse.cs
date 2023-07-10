@@ -34,10 +34,10 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiListRolesResponse" /> class.
         /// </summary>
 
-        /// <param name="Keys">List of keys.</param>
+        /// <param name="Keys">List of roles.</param>
 
 
-        public PkiListRolesResponse(Object Keys = default(Object))
+        public PkiListRolesResponse(List<string> Keys = default(List<string>))
         {
 
             this.Keys = Keys;
@@ -45,12 +45,12 @@ namespace Vault.Model
         }
 
         /// <summary>
-        /// List of keys
+        /// List of roles
         /// </summary>
-        /// <value>List of keys</value>
+        /// <value>List of roles</value>
         [DataMember(Name = "keys", EmitDefaultValue = false)]
 
-        public Object Keys { get; set; }
+        public List<string> Keys { get; set; }
 
 
 
@@ -101,9 +101,9 @@ namespace Vault.Model
             return
                 (
                     this.Keys == input.Keys ||
-                    (this.Keys != null &&
-                    this.Keys.Equals(input.Keys))
-
+                    this.Keys != null &&
+                    input.Keys != null &&
+                    this.Keys.SequenceEqual(input.Keys)
                 );
 
         }

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CaChain** | **List&lt;string&gt;** | Certificate Chain | [optional] 
 **Certificate** | **string** | Certificate | [optional] 
-**Expiration** | **string** | Time of expiration | [optional] 
+**Expiration** | **long** | Time of expiration | [optional] 
 **IssuingCa** | **string** | Issuing Certificate Authority | [optional] 
 **PrivateKey** | **string** | Private key | [optional] 
 **PrivateKeyType** | **string** | Private key type | [optional] 

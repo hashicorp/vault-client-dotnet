@@ -56,6 +56,15 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'AcmeAccountSafetyBuffer'
+        /// </summary>
+        [Fact]
+        public void AcmeAccountSafetyBufferTest()
+        {
+            // TODO unit test for the property 'AcmeAccountSafetyBuffer'
+        }
+
+        /// <summary>
         /// Test the property 'IssuerSafetyBuffer'
         /// </summary>
         [Fact]
@@ -65,30 +74,12 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'MaintainStoredCertificateCounts'
-        /// </summary>
-        [Fact]
-        public void MaintainStoredCertificateCountsTest()
-        {
-            // TODO unit test for the property 'MaintainStoredCertificateCounts'
-        }
-
-        /// <summary>
         /// Test the property 'PauseDuration'
         /// </summary>
         [Fact]
         public void PauseDurationTest()
         {
             // TODO unit test for the property 'PauseDuration'
-        }
-
-        /// <summary>
-        /// Test the property 'PublishStoredCertificateCountMetrics'
-        /// </summary>
-        [Fact]
-        public void PublishStoredCertificateCountMetricsTest()
-        {
-            // TODO unit test for the property 'PublishStoredCertificateCountMetrics'
         }
 
         /// <summary>
@@ -107,6 +98,15 @@ namespace Vault.Test.Model
         public void SafetyBufferTest()
         {
             // TODO unit test for the property 'SafetyBuffer'
+        }
+
+        /// <summary>
+        /// Test the property 'TidyAcme'
+        /// </summary>
+        [Fact]
+        public void TidyAcmeTest()
+        {
+            // TODO unit test for the property 'TidyAcme'
         }
 
         /// <summary>

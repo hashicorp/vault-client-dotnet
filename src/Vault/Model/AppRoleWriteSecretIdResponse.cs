@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="SecretIdTtl">Duration in seconds after which the issued secret ID expires..</param>
 
 
-        public AppRoleWriteSecretIdResponse(string SecretId = default(string), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), int SecretIdTtl = default(int))
+        public AppRoleWriteSecretIdResponse(string SecretId = default(string), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), string SecretIdTtl = default(string))
         {
 
             this.SecretId = SecretId;
@@ -89,7 +89,7 @@ namespace Vault.Model
         /// <value>Duration in seconds after which the issued secret ID expires.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
 
-        public int SecretIdTtl { get; set; }
+        public string SecretIdTtl { get; set; }
 
 
 
@@ -160,8 +160,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
+                    (this.SecretIdTtl != null &&
+                    this.SecretIdTtl.Equals(input.SecretIdTtl))
 
-                    this.SecretIdTtl.Equals(input.SecretIdTtl)
                 );
 
         }
@@ -188,8 +189,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.SecretIdNumUses.GetHashCode();
+                if (this.SecretIdTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.SecretIdTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.SecretIdTtl.GetHashCode();
                 return hashCode;
             }
         }

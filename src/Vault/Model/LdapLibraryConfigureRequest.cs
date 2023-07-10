@@ -36,23 +36,27 @@ namespace Vault.Model
 
         /// <param name="DisableCheckInEnforcement">Disable the default behavior of requiring that check-ins are performed by the entity that checked them out. (default to false).</param>
 
-        /// <param name="MaxTtl">In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours. (default to 86400).</param>
+        /// <param name="MaxTtl">In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours. (default to &quot;86400&quot;).</param>
 
         /// <param name="ServiceAccountNames">The username/logon name for the service accounts with which this set will be associated..</param>
 
-        /// <param name="Ttl">In seconds, the amount of time a check-out should last. Defaults to 24 hours. (default to 86400).</param>
+        /// <param name="Ttl">In seconds, the amount of time a check-out should last. Defaults to 24 hours. (default to &quot;86400&quot;).</param>
 
 
-        public LdapLibraryConfigureRequest(bool DisableCheckInEnforcement = false, int MaxTtl = 86400, List<string> ServiceAccountNames = default(List<string>), int Ttl = 86400)
+        public LdapLibraryConfigureRequest(bool DisableCheckInEnforcement = false, string MaxTtl = "86400", List<string> ServiceAccountNames = default(List<string>), string Ttl = "86400")
         {
 
             this.DisableCheckInEnforcement = DisableCheckInEnforcement;
 
-            this.MaxTtl = MaxTtl;
+            // use default value if no "MaxTtl" provided
+            this.MaxTtl = MaxTtl ?? "86400";
+
 
             this.ServiceAccountNames = ServiceAccountNames;
 
-            this.Ttl = Ttl;
+            // use default value if no "Ttl" provided
+            this.Ttl = Ttl ?? "86400";
+
 
         }
 
@@ -71,7 +75,7 @@ namespace Vault.Model
         /// <value>In seconds, the max amount of time a check-out&#x27;s renewals should last. Defaults to 24 hours.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -89,7 +93,7 @@ namespace Vault.Model
         /// <value>In seconds, the amount of time a check-out should last. Defaults to 24 hours.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -148,8 +152,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.ServiceAccountNames == input.ServiceAccountNames ||
@@ -159,8 +164,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -177,15 +183,21 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.DisableCheckInEnforcement.GetHashCode();
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.ServiceAccountNames != null)
                 {
                     hashCode = (hashCode * 59) + this.ServiceAccountNames.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

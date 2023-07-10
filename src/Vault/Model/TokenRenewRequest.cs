@@ -34,15 +34,17 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="TokenRenewRequest" /> class.
         /// </summary>
 
-        /// <param name="Increment">The desired increment in seconds to the token expiration (default to 0).</param>
+        /// <param name="Increment">The desired increment in seconds to the token expiration (default to &quot;0&quot;).</param>
 
         /// <param name="Token">Token to renew (request body).</param>
 
 
-        public TokenRenewRequest(int Increment = 0, string Token = default(string))
+        public TokenRenewRequest(string Increment = "0", string Token = default(string))
         {
 
-            this.Increment = Increment;
+            // use default value if no "Increment" provided
+            this.Increment = Increment ?? "0";
+
 
             this.Token = Token;
 
@@ -54,7 +56,7 @@ namespace Vault.Model
         /// <value>The desired increment in seconds to the token expiration</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
 
-        public int Increment { get; set; }
+        public string Increment { get; set; }
 
 
         /// <summary>
@@ -115,8 +117,9 @@ namespace Vault.Model
             return
                 (
                     this.Increment == input.Increment ||
+                    (this.Increment != null &&
+                    this.Increment.Equals(input.Increment))
 
-                    this.Increment.Equals(input.Increment)
                 ) &&
                 (
                     this.Token == input.Token ||
@@ -137,8 +140,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.Increment != null)
+                {
+                    hashCode = (hashCode * 59) + this.Increment.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Increment.GetHashCode();
                 if (this.Token != null)
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();

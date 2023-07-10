@@ -57,7 +57,7 @@ namespace Vault.Model
         /// <param name="Ttl">Duration in seconds after which the issued credential should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults..</param>
 
 
-        public MongoDbAtlasWriteRoleRequest(List<string> CidrBlocks = default(List<string>), List<string> IpAddresses = default(List<string>), int MaxTtl = default(int), string OrganizationId = default(string), string ProjectId = default(string), List<string> ProjectRoles = default(List<string>), List<string> Roles = default(List<string>), int Ttl = default(int))
+        public MongoDbAtlasWriteRoleRequest(List<string> CidrBlocks = default(List<string>), List<string> IpAddresses = default(List<string>), string MaxTtl = default(string), string OrganizationId = default(string), string ProjectId = default(string), List<string> ProjectRoles = default(List<string>), List<string> Roles = default(List<string>), string Ttl = default(string))
         {
 
             // to ensure "Roles" is required (not null)
@@ -108,7 +108,7 @@ namespace Vault.Model
         /// <value>The maximum allowed lifetime of credentials issued using this role.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Vault.Model
         /// <value>Duration in seconds after which the issued credential should expire. Defaults to 0, in which case the value will fallback to the system/mount defaults.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -223,8 +223,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.OrganizationId == input.OrganizationId ||
@@ -252,8 +253,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -278,8 +280,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.IpAddresses.GetHashCode();
                 }
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
                 if (this.OrganizationId != null)
                 {
                     hashCode = (hashCode * 59) + this.OrganizationId.GetHashCode();
@@ -300,8 +305,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Roles.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

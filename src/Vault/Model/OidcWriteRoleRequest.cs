@@ -46,10 +46,10 @@ namespace Vault.Model
 
         /// <param name="Template">The template string to use for generating tokens. This may be in string-ified JSON or base64 format..</param>
 
-        /// <param name="Ttl">TTL of the tokens generated against the role..</param>
+        /// <param name="Ttl">TTL of the tokens generated against the role. (default to &quot;24h&quot;).</param>
 
 
-        public OidcWriteRoleRequest(string ClientId = default(string), string Key = default(string), string Template = default(string), int Ttl = default(int))
+        public OidcWriteRoleRequest(string ClientId = default(string), string Key = default(string), string Template = default(string), string Ttl = "24h")
         {
 
             // to ensure "Key" is required (not null)
@@ -64,7 +64,9 @@ namespace Vault.Model
 
             this.Template = Template;
 
-            this.Ttl = Ttl;
+            // use default value if no "Ttl" provided
+            this.Ttl = Ttl ?? "24h";
+
 
         }
 
@@ -101,7 +103,7 @@ namespace Vault.Model
         /// <value>TTL of the tokens generated against the role.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -173,8 +175,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -204,8 +207,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Template.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

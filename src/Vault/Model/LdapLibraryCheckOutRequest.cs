@@ -37,7 +37,7 @@ namespace Vault.Model
         /// <param name="Ttl">The length of time before the check-out will expire, in seconds..</param>
 
 
-        public LdapLibraryCheckOutRequest(int Ttl = default(int))
+        public LdapLibraryCheckOutRequest(string Ttl = default(string))
         {
 
             this.Ttl = Ttl;
@@ -50,7 +50,7 @@ namespace Vault.Model
         /// <value>The length of time before the check-out will expire, in seconds.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -101,8 +101,9 @@ namespace Vault.Model
             return
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -117,8 +118,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

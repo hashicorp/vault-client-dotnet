@@ -128,6 +128,15 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PublicKey'
+        /// </summary>
+        [Fact]
+        public void PublicKeyTest()
+        {
+            // TODO unit test for the property 'PublicKey'
+        }
+
+        /// <summary>
         /// Test the property 'Type'
         /// </summary>
         [Fact]

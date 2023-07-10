@@ -53,7 +53,7 @@ namespace Vault.Model
         /// <param name="Versions">Versions.</param>
 
 
-        public KvV2ReadMetadataResponse(bool CasRequired = default(bool), DateTime CreatedTime = default(DateTime), long CurrentVersion = default(long), Object CustomMetadata = default(Object), int DeleteVersionAfter = default(int), long MaxVersions = default(long), long OldestVersion = default(long), DateTime UpdatedTime = default(DateTime), Object Versions = default(Object))
+        public KvV2ReadMetadataResponse(bool CasRequired = default(bool), DateTime CreatedTime = default(DateTime), long CurrentVersion = default(long), Object CustomMetadata = default(Object), string DeleteVersionAfter = default(string), long MaxVersions = default(long), long OldestVersion = default(long), DateTime UpdatedTime = default(DateTime), Object Versions = default(Object))
         {
 
             this.CasRequired = CasRequired;
@@ -115,7 +115,7 @@ namespace Vault.Model
         /// <value>The length of time before a version is deleted.</value>
         [DataMember(Name = "delete_version_after", EmitDefaultValue = false)]
 
-        public int DeleteVersionAfter { get; set; }
+        public string DeleteVersionAfter { get; set; }
 
 
         /// <summary>
@@ -229,8 +229,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.DeleteVersionAfter == input.DeleteVersionAfter ||
+                    (this.DeleteVersionAfter != null &&
+                    this.DeleteVersionAfter.Equals(input.DeleteVersionAfter))
 
-                    this.DeleteVersionAfter.Equals(input.DeleteVersionAfter)
                 ) &&
                 (
                     this.MaxVersions == input.MaxVersions ||
@@ -281,8 +282,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.CustomMetadata.GetHashCode();
                 }
 
+                if (this.DeleteVersionAfter != null)
+                {
+                    hashCode = (hashCode * 59) + this.DeleteVersionAfter.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.DeleteVersionAfter.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.MaxVersions.GetHashCode();
 

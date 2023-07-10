@@ -130,7 +130,7 @@ namespace Vault.Model
         /// <param name="UserIds">The requested user_ids value to place in the subject, if any, in a comma-delimited list. Restricted by allowed_user_ids. Any values are added with OID 0.9.2342.19200300.100.1.1..</param>
 
 
-        public PkiIssuerIssueWithRoleRequest(string AltNames = default(string), string CommonName = default(string), bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), string NotAfter = default(string), List<string> OtherSans = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, bool RemoveRootsFromChain = false, string SerialNumber = default(string), int Ttl = default(int), List<string> UriSans = default(List<string>), List<string> UserIds = default(List<string>))
+        public PkiIssuerIssueWithRoleRequest(string AltNames = default(string), string CommonName = default(string), bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), string NotAfter = default(string), List<string> OtherSans = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, bool RemoveRootsFromChain = false, string SerialNumber = default(string), string Ttl = default(string), List<string> UriSans = default(List<string>), List<string> UserIds = default(List<string>))
         {
 
             this.AltNames = AltNames;
@@ -239,7 +239,7 @@ namespace Vault.Model
         /// <value>The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the role max TTL.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
         /// <summary>
@@ -376,8 +376,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.UriSans == input.UriSans ||
@@ -442,8 +443,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.SerialNumber.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.UriSans != null)
                 {
                     hashCode = (hashCode * 59) + this.UriSans.GetHashCode();

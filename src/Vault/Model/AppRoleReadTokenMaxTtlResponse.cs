@@ -37,7 +37,7 @@ namespace Vault.Model
         /// <param name="TokenMaxTtl">The maximum lifetime of the generated token.</param>
 
 
-        public AppRoleReadTokenMaxTtlResponse(int TokenMaxTtl = default(int))
+        public AppRoleReadTokenMaxTtlResponse(string TokenMaxTtl = default(string))
         {
 
             this.TokenMaxTtl = TokenMaxTtl;
@@ -50,7 +50,7 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenMaxTtl { get; set; }
+        public string TokenMaxTtl { get; set; }
 
 
 
@@ -101,8 +101,9 @@ namespace Vault.Model
             return
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+                    (this.TokenMaxTtl != null &&
+                    this.TokenMaxTtl.Equals(input.TokenMaxTtl))
 
-                    this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 );
 
         }
@@ -117,8 +118,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.TokenMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
                 return hashCode;
             }
         }

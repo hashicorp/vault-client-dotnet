@@ -36,15 +36,17 @@ namespace Vault.Model
 
         /// <param name="Accessor">Accessor of the token to renew (request body).</param>
 
-        /// <param name="Increment">The desired increment in seconds to the token expiration (default to 0).</param>
+        /// <param name="Increment">The desired increment in seconds to the token expiration (default to &quot;0&quot;).</param>
 
 
-        public TokenRenewAccessorRequest(string Accessor = default(string), int Increment = 0)
+        public TokenRenewAccessorRequest(string Accessor = default(string), string Increment = "0")
         {
 
             this.Accessor = Accessor;
 
-            this.Increment = Increment;
+            // use default value if no "Increment" provided
+            this.Increment = Increment ?? "0";
+
 
         }
 
@@ -63,7 +65,7 @@ namespace Vault.Model
         /// <value>The desired increment in seconds to the token expiration</value>
         [DataMember(Name = "increment", EmitDefaultValue = false)]
 
-        public int Increment { get; set; }
+        public string Increment { get; set; }
 
 
 
@@ -121,8 +123,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Increment == input.Increment ||
+                    (this.Increment != null &&
+                    this.Increment.Equals(input.Increment))
 
-                    this.Increment.Equals(input.Increment)
                 );
 
         }
@@ -142,8 +145,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Accessor.GetHashCode();
                 }
 
+                if (this.Increment != null)
+                {
+                    hashCode = (hashCode * 59) + this.Increment.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Increment.GetHashCode();
                 return hashCode;
             }
         }

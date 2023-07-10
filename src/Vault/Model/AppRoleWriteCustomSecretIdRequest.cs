@@ -47,7 +47,7 @@ namespace Vault.Model
         /// <param name="Ttl">Duration in seconds after which this SecretID expires. Overrides secret_id_ttl role option when supplied. May not be longer than role&#x27;s secret_id_ttl..</param>
 
 
-        public AppRoleWriteCustomSecretIdRequest(List<string> CidrList = default(List<string>), string Metadata = default(string), int NumUses = default(int), string SecretId = default(string), List<string> TokenBoundCidrs = default(List<string>), int Ttl = default(int))
+        public AppRoleWriteCustomSecretIdRequest(List<string> CidrList = default(List<string>), string Metadata = default(string), int NumUses = default(int), string SecretId = default(string), List<string> TokenBoundCidrs = default(List<string>), string Ttl = default(string))
         {
 
             this.CidrList = CidrList;
@@ -115,7 +115,7 @@ namespace Vault.Model
         /// <value>Duration in seconds after which this SecretID expires. Overrides secret_id_ttl role option when supplied. May not be longer than role&#x27;s secret_id_ttl.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -200,8 +200,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -238,8 +239,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

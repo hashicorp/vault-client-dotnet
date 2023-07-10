@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AcmeAccountSafetyBuffer** | **int** | Safety buffer after creation after which accounts lacking orders are revoked | [optional] 
 **Enabled** | **bool** | Specifies whether automatic tidy is enabled or not | [optional] 
 **IntervalDuration** | **int** | Specifies the duration between automatic tidy operation | [optional] 
 **IssuerSafetyBuffer** | **int** | Issuer safety buffer | [optional] 
+**MaintainStoredCertificateCounts** | **bool** |  | [optional] 
 **PauseDuration** | **string** | Duration to pause between tidying certificates | [optional] 
+**PublishStoredCertificateCountMetrics** | **bool** |  | [optional] 
 **RevocationQueueSafetyBuffer** | **int** |  | [optional] 
 **SafetyBuffer** | **int** | Safety buffer time duration | [optional] 
+**TidyAcme** | **bool** | Tidy Unused Acme Accounts, and Orders | [optional] 
 **TidyCertStore** | **bool** | Specifies whether to tidy up the certificate store | [optional] 
-**TidyCrossClusterRevokedCerts** | **bool** |  | [optional] 
+**TidyCrossClusterRevokedCerts** | **bool** | Tidy the cross-cluster revoked certificate store | [optional] 
 **TidyExpiredIssuers** | **bool** | Specifies whether tidy expired issuers | [optional] 
 **TidyMoveLegacyCaBundle** | **bool** |  | [optional] 
 **TidyRevocationQueue** | **bool** |  | [optional] 

@@ -54,7 +54,7 @@ namespace Vault.Model
 
         /// <param name="LoginMaxSecondsNotAfter">Duration in seconds for the maximum acceptable length in the future a \&quot;signing_time\&quot; can be. Useful for clock drift. Set low to reduce the opportunity for replay attacks. (default to 60).</param>
 
-        /// <param name="LoginMaxSecondsNotBefore">Duration in seconds for the maximum acceptable age of a \&quot;signing_time\&quot;. Useful for clock drift. Set low to reduce the opportunity for replay attacks. (default to 300).</param>
+        /// <param name="LoginMaxSecondsNotBefore">Duration in seconds for the maximum acceptable age of a \&quot;signing_time\&quot;. Useful for clock drift. Set low to reduce the opportunity for replay attacks. (default to &quot;300&quot;).</param>
 
         /// <param name="PcfApiAddr">Deprecated. Please use \&quot;cf_api_addr\&quot;..</param>
 
@@ -65,7 +65,7 @@ namespace Vault.Model
         /// <param name="PcfUsername">Deprecated. Please use \&quot;cf_username\&quot;..</param>
 
 
-        public CloudFoundryConfigureRequest(string CfApiAddr = default(string), string CfApiMutualTlsCertificate = default(string), string CfApiMutualTlsKey = default(string), List<string> CfApiTrustedCertificates = default(List<string>), string CfClientId = default(string), string CfClientSecret = default(string), string CfPassword = default(string), string CfUsername = default(string), List<string> IdentityCaCertificates = default(List<string>), int LoginMaxSecondsNotAfter = 60, int LoginMaxSecondsNotBefore = 300, string PcfApiAddr = default(string), List<string> PcfApiTrustedCertificates = default(List<string>), string PcfPassword = default(string), string PcfUsername = default(string))
+        public CloudFoundryConfigureRequest(string CfApiAddr = default(string), string CfApiMutualTlsCertificate = default(string), string CfApiMutualTlsKey = default(string), List<string> CfApiTrustedCertificates = default(List<string>), string CfClientId = default(string), string CfClientSecret = default(string), string CfPassword = default(string), string CfUsername = default(string), List<string> IdentityCaCertificates = default(List<string>), int LoginMaxSecondsNotAfter = 60, string LoginMaxSecondsNotBefore = "300", string PcfApiAddr = default(string), List<string> PcfApiTrustedCertificates = default(List<string>), string PcfPassword = default(string), string PcfUsername = default(string))
         {
 
             this.CfApiAddr = CfApiAddr;
@@ -88,7 +88,9 @@ namespace Vault.Model
 
             this.LoginMaxSecondsNotAfter = LoginMaxSecondsNotAfter;
 
-            this.LoginMaxSecondsNotBefore = LoginMaxSecondsNotBefore;
+            // use default value if no "LoginMaxSecondsNotBefore" provided
+            this.LoginMaxSecondsNotBefore = LoginMaxSecondsNotBefore ?? "300";
+
 
             this.PcfApiAddr = PcfApiAddr;
 
@@ -196,7 +198,7 @@ namespace Vault.Model
         /// <value>Duration in seconds for the maximum acceptable age of a \&quot;signing_time\&quot;. Useful for clock drift. Set low to reduce the opportunity for replay attacks.</value>
         [DataMember(Name = "login_max_seconds_not_before", EmitDefaultValue = false)]
 
-        public int LoginMaxSecondsNotBefore { get; set; }
+        public string LoginMaxSecondsNotBefore { get; set; }
 
 
         /// <summary>
@@ -356,8 +358,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.LoginMaxSecondsNotBefore == input.LoginMaxSecondsNotBefore ||
+                    (this.LoginMaxSecondsNotBefore != null &&
+                    this.LoginMaxSecondsNotBefore.Equals(input.LoginMaxSecondsNotBefore))
 
-                    this.LoginMaxSecondsNotBefore.Equals(input.LoginMaxSecondsNotBefore)
                 ) &&
                 (
                     this.PcfApiAddr == input.PcfApiAddr ||
@@ -443,8 +446,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.LoginMaxSecondsNotAfter.GetHashCode();
+                if (this.LoginMaxSecondsNotBefore != null)
+                {
+                    hashCode = (hashCode * 59) + this.LoginMaxSecondsNotBefore.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.LoginMaxSecondsNotBefore.GetHashCode();
                 if (this.PcfApiAddr != null)
                 {
                     hashCode = (hashCode * 59) + this.PcfApiAddr.GetHashCode();

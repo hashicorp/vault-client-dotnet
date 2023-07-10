@@ -34,13 +34,15 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="AwsTidyRoleTagDenyListRequest" /> class.
         /// </summary>
 
-        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. (default to 259200).</param>
+        /// <param name="SafetyBuffer">The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage. (default to &quot;259200&quot;).</param>
 
 
-        public AwsTidyRoleTagDenyListRequest(int SafetyBuffer = 259200)
+        public AwsTidyRoleTagDenyListRequest(string SafetyBuffer = "259200")
         {
 
-            this.SafetyBuffer = SafetyBuffer;
+            // use default value if no "SafetyBuffer" provided
+            this.SafetyBuffer = SafetyBuffer ?? "259200";
+
 
         }
 
@@ -50,7 +52,7 @@ namespace Vault.Model
         /// <value>The amount of extra time that must have passed beyond the roletag expiration, before it is removed from the backend storage.</value>
         [DataMember(Name = "safety_buffer", EmitDefaultValue = false)]
 
-        public int SafetyBuffer { get; set; }
+        public string SafetyBuffer { get; set; }
 
 
 
@@ -101,8 +103,9 @@ namespace Vault.Model
             return
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
+                    (this.SafetyBuffer != null &&
+                    this.SafetyBuffer.Equals(input.SafetyBuffer))
 
-                    this.SafetyBuffer.Equals(input.SafetyBuffer)
                 );
 
         }
@@ -117,8 +120,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.SafetyBuffer != null)
+                {
+                    hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.SafetyBuffer.GetHashCode();
                 return hashCode;
             }
         }

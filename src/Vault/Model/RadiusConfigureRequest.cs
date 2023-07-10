@@ -34,7 +34,7 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="RadiusConfigureRequest" /> class.
         /// </summary>
 
-        /// <param name="DialTimeout">Number of seconds before connect times out (default: 10) (default to 10).</param>
+        /// <param name="DialTimeout">Number of seconds before connect times out (default: 10) (default to &quot;10&quot;).</param>
 
         /// <param name="Host">RADIUS server host.</param>
 
@@ -44,7 +44,7 @@ namespace Vault.Model
 
         /// <param name="Port">RADIUS server port (default: 1812) (default to 1812).</param>
 
-        /// <param name="ReadTimeout">Number of seconds before response times out (default: 10) (default to 10).</param>
+        /// <param name="ReadTimeout">Number of seconds before response times out (default: 10) (default to &quot;10&quot;).</param>
 
         /// <param name="Secret">Secret shared with the RADIUS server.</param>
 
@@ -69,10 +69,12 @@ namespace Vault.Model
         /// <param name="UnregisteredUserPolicies">Comma-separated list of policies to grant upon successful RADIUS authentication of an unregistered user (default: empty) (default to &quot;&quot;).</param>
 
 
-        public RadiusConfigureRequest(int DialTimeout = 10, string Host = default(string), string NasIdentifier = "", int NasPort = 10, int Port = 1812, int ReadTimeout = 10, string Secret = default(string), List<string> TokenBoundCidrs = default(List<string>), int TokenExplicitMaxTtl = default(int), int TokenMaxTtl = default(int), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), int TokenPeriod = default(int), List<string> TokenPolicies = default(List<string>), int TokenTtl = default(int), string TokenType = "default-service", string UnregisteredUserPolicies = "")
+        public RadiusConfigureRequest(string DialTimeout = "10", string Host = default(string), string NasIdentifier = "", int NasPort = 10, int Port = 1812, string ReadTimeout = "10", string Secret = default(string), List<string> TokenBoundCidrs = default(List<string>), string TokenExplicitMaxTtl = default(string), string TokenMaxTtl = default(string), bool TokenNoDefaultPolicy = default(bool), int TokenNumUses = default(int), string TokenPeriod = default(string), List<string> TokenPolicies = default(List<string>), string TokenTtl = default(string), string TokenType = "default-service", string UnregisteredUserPolicies = "")
         {
 
-            this.DialTimeout = DialTimeout;
+            // use default value if no "DialTimeout" provided
+            this.DialTimeout = DialTimeout ?? "10";
+
 
             this.Host = Host;
 
@@ -84,7 +86,9 @@ namespace Vault.Model
 
             this.Port = Port;
 
-            this.ReadTimeout = ReadTimeout;
+            // use default value if no "ReadTimeout" provided
+            this.ReadTimeout = ReadTimeout ?? "10";
+
 
             this.Secret = Secret;
 
@@ -120,7 +124,7 @@ namespace Vault.Model
         /// <value>Number of seconds before connect times out (default: 10)</value>
         [DataMember(Name = "dial_timeout", EmitDefaultValue = false)]
 
-        public int DialTimeout { get; set; }
+        public string DialTimeout { get; set; }
 
 
         /// <summary>
@@ -165,7 +169,7 @@ namespace Vault.Model
         /// <value>Number of seconds before response times out (default: 10)</value>
         [DataMember(Name = "read_timeout", EmitDefaultValue = false)]
 
-        public int ReadTimeout { get; set; }
+        public string ReadTimeout { get; set; }
 
 
         /// <summary>
@@ -192,7 +196,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role carry an explicit maximum TTL. During renewal, the current maximum TTL values of the role and the mount are not checked for changes, and any updates to these values will have no effect on the token being renewed.</value>
         [DataMember(Name = "token_explicit_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenExplicitMaxTtl { get; set; }
+        public string TokenExplicitMaxTtl { get; set; }
 
 
         /// <summary>
@@ -201,7 +205,7 @@ namespace Vault.Model
         /// <value>The maximum lifetime of the generated token</value>
         [DataMember(Name = "token_max_ttl", EmitDefaultValue = false)]
 
-        public int TokenMaxTtl { get; set; }
+        public string TokenMaxTtl { get; set; }
 
 
         /// <summary>
@@ -228,7 +232,7 @@ namespace Vault.Model
         /// <value>If set, tokens created via this role will have no max lifetime; instead, their renewal period will be fixed to this value. This takes an integer number of seconds, or a string duration (e.g. \&quot;24h\&quot;).</value>
         [DataMember(Name = "token_period", EmitDefaultValue = false)]
 
-        public int TokenPeriod { get; set; }
+        public string TokenPeriod { get; set; }
 
 
         /// <summary>
@@ -246,7 +250,7 @@ namespace Vault.Model
         /// <value>The initial ttl of the token to generate</value>
         [DataMember(Name = "token_ttl", EmitDefaultValue = false)]
 
-        public int TokenTtl { get; set; }
+        public string TokenTtl { get; set; }
 
 
         /// <summary>
@@ -331,8 +335,9 @@ namespace Vault.Model
             return
                 (
                     this.DialTimeout == input.DialTimeout ||
+                    (this.DialTimeout != null &&
+                    this.DialTimeout.Equals(input.DialTimeout))
 
-                    this.DialTimeout.Equals(input.DialTimeout)
                 ) &&
                 (
                     this.Host == input.Host ||
@@ -358,8 +363,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.ReadTimeout == input.ReadTimeout ||
+                    (this.ReadTimeout != null &&
+                    this.ReadTimeout.Equals(input.ReadTimeout))
 
-                    this.ReadTimeout.Equals(input.ReadTimeout)
                 ) &&
                 (
                     this.Secret == input.Secret ||
@@ -375,13 +381,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
+                    (this.TokenExplicitMaxTtl != null &&
+                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl))
 
-                    this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
                 ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
+                    (this.TokenMaxTtl != null &&
+                    this.TokenMaxTtl.Equals(input.TokenMaxTtl))
 
-                    this.TokenMaxTtl.Equals(input.TokenMaxTtl)
                 ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
@@ -395,8 +403,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
+                    (this.TokenPeriod != null &&
+                    this.TokenPeriod.Equals(input.TokenPeriod))
 
-                    this.TokenPeriod.Equals(input.TokenPeriod)
                 ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
@@ -406,8 +415,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
+                    (this.TokenTtl != null &&
+                    this.TokenTtl.Equals(input.TokenTtl))
 
-                    this.TokenTtl.Equals(input.TokenTtl)
                 ) &&
                 (
                     this.TokenType == input.TokenType ||
@@ -434,8 +444,11 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+                if (this.DialTimeout != null)
+                {
+                    hashCode = (hashCode * 59) + this.DialTimeout.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.DialTimeout.GetHashCode();
                 if (this.Host != null)
                 {
                     hashCode = (hashCode * 59) + this.Host.GetHashCode();
@@ -450,8 +463,11 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.NasPort.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Port.GetHashCode();
+                if (this.ReadTimeout != null)
+                {
+                    hashCode = (hashCode * 59) + this.ReadTimeout.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.ReadTimeout.GetHashCode();
                 if (this.Secret != null)
                 {
                     hashCode = (hashCode * 59) + this.Secret.GetHashCode();
@@ -462,23 +478,35 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();
                 }
 
+                if (this.TokenExplicitMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenExplicitMaxTtl.GetHashCode();
+                if (this.TokenMaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenMaxTtl.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNoDefaultPolicy.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.TokenNumUses.GetHashCode();
+                if (this.TokenPeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenPeriod.GetHashCode();
                 if (this.TokenPolicies != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenPolicies.GetHashCode();
                 }
 
+                if (this.TokenTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.TokenTtl.GetHashCode();
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();

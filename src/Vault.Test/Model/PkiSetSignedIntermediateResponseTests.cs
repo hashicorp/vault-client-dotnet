@@ -56,6 +56,24 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'ExistingIssuers'
+        /// </summary>
+        [Fact]
+        public void ExistingIssuersTest()
+        {
+            // TODO unit test for the property 'ExistingIssuers'
+        }
+
+        /// <summary>
+        /// Test the property 'ExistingKeys'
+        /// </summary>
+        [Fact]
+        public void ExistingKeysTest()
+        {
+            // TODO unit test for the property 'ExistingKeys'
+        }
+
+        /// <summary>
         /// Test the property 'ImportedIssuers'
         /// </summary>
         [Fact]

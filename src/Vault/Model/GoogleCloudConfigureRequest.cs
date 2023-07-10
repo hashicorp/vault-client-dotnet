@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="Ttl">Default lease for generated keys. If &lt;&#x3D; 0, will use system default..</param>
 
 
-        public GoogleCloudConfigureRequest(string Credentials = default(string), int MaxTtl = default(int), int Ttl = default(int))
+        public GoogleCloudConfigureRequest(string Credentials = default(string), string MaxTtl = default(string), string Ttl = default(string))
         {
 
             this.Credentials = Credentials;
@@ -67,7 +67,7 @@ namespace Vault.Model
         /// <value>Maximum time a service account key is valid for. If &lt;&#x3D; 0, will use system default.</value>
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
 
-        public int MaxTtl { get; set; }
+        public string MaxTtl { get; set; }
 
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Vault.Model
         /// <value>Default lease for generated keys. If &lt;&#x3D; 0, will use system default.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
 
@@ -135,13 +135,15 @@ namespace Vault.Model
                 ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
+                    (this.MaxTtl != null &&
+                    this.MaxTtl.Equals(input.MaxTtl))
 
-                    this.MaxTtl.Equals(input.MaxTtl)
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 );
 
         }
@@ -161,10 +163,16 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Credentials.GetHashCode();
                 }
 
+                if (this.MaxTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 return hashCode;
             }
         }

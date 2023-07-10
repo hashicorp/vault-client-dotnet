@@ -50,7 +50,7 @@ namespace Vault.Model
 
         /// <param name="KeySize">Determines the size in bytes of the generated key. Only used if generate is true. (default to 20).</param>
 
-        /// <param name="Period">The length of time used to generate a counter for the TOTP token calculation. (default to 30).</param>
+        /// <param name="Period">The length of time used to generate a counter for the TOTP token calculation. (default to &quot;30&quot;).</param>
 
         /// <param name="QrSize">The pixel size of the generated square QR code. Only used if generate is true and exported is true. If this value is 0, a QR code will not be returned. (default to 200).</param>
 
@@ -59,7 +59,7 @@ namespace Vault.Model
         /// <param name="Url">A TOTP url string containing all of the parameters for key setup. Only used if generate is false..</param>
 
 
-        public TotpCreateKeyRequest(string AccountName = default(string), string Algorithm = "SHA1", int Digits = 6, bool Exported = true, bool Generate = false, string Issuer = default(string), string Key = default(string), int KeySize = 20, int Period = 30, int QrSize = 200, int Skew = 1, string Url = default(string))
+        public TotpCreateKeyRequest(string AccountName = default(string), string Algorithm = "SHA1", int Digits = 6, bool Exported = true, bool Generate = false, string Issuer = default(string), string Key = default(string), int KeySize = 20, string Period = "30", int QrSize = 200, int Skew = 1, string Url = default(string))
         {
 
             this.AccountName = AccountName;
@@ -80,7 +80,9 @@ namespace Vault.Model
 
             this.KeySize = KeySize;
 
-            this.Period = Period;
+            // use default value if no "Period" provided
+            this.Period = Period ?? "30";
+
 
             this.QrSize = QrSize;
 
@@ -168,7 +170,7 @@ namespace Vault.Model
         /// <value>The length of time used to generate a counter for the TOTP token calculation.</value>
         [DataMember(Name = "period", EmitDefaultValue = false)]
 
-        public int Period { get; set; }
+        public string Period { get; set; }
 
 
         /// <summary>
@@ -301,8 +303,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
 
-                    this.Period.Equals(input.Period)
                 ) &&
                 (
                     this.QrSize == input.QrSize ||
@@ -361,8 +364,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.KeySize.GetHashCode();
+                if (this.Period != null)
+                {
+                    hashCode = (hashCode * 59) + this.Period.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Period.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.QrSize.GetHashCode();
 

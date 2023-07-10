@@ -181,7 +181,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -192,6 +192,22 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> AwsDeleteRole(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> AwsDeleteStaticRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -213,6 +229,23 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> AwsGenerateCredentialsWithParameters(string name, AwsGenerateCredentialsWithParametersRequest awsGenerateCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -224,6 +257,23 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> AwsGenerateStsCredentials(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateStsCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> AwsGenerateStsCredentialsWithParameters(string name, AwsGenerateStsCredentialsWithParametersRequest awsGenerateStsCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// List the existing roles in this backend
@@ -259,7 +309,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -290,6 +340,38 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of AwsReadStaticCredsNameResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<AwsReadStaticCredsNameResponse> AwsReadStaticCredsName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of AwsReadStaticRolesNameResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<AwsReadStaticRolesNameResponse> AwsReadStaticRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -306,7 +388,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsWriteRoleRequest"></param>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -317,6 +399,23 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> AwsWriteRole(string name, AwsWriteRoleRequest awsWriteRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsWriteStaticRolesNameRequest"></param>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of AwsWriteStaticRolesNameResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<AwsWriteStaticRolesNameResponse> AwsWriteStaticRolesName(string name, AwsWriteStaticRolesNameRequest awsWriteStaticRolesNameRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2675,6 +2774,22 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiConfigureAcmeRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiConfigureAcme(PkiConfigureAcmeRequest pkiConfigureAcmeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigureAutoTidyRequest"></param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiConfigureAutoTidyResponse</returns>
@@ -2803,6 +2918,22 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyId">EAB key identifier</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiDeleteEabKey(string keyId, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -2861,6 +2992,70 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PkiDeleteRoot(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PkiGenerateEabKeyResponse> PkiGenerateEabKey(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyForIssuerResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PkiGenerateEabKeyForIssuerResponse> PkiGenerateEabKeyForIssuer(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyForIssuerAndRoleResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse> PkiGenerateEabKeyForIssuerAndRole(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyForRoleResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PkiGenerateEabKeyForRoleResponse> PkiGenerateEabKeyForRole(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -3282,23 +3477,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiIssuersRotateRootRequest"></param>
-        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
-        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of PkiIssuersRotateRootResponse</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<PkiIssuersRotateRootResponse> PkiIssuersRotateRoot(string exported, PkiIssuersRotateRootRequest pkiIssuersRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiListCertsResponse</returns>
         /// <param name="wrapTTL">
@@ -3309,6 +3487,21 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<PkiListCertsResponse> PkiListCerts(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiListEabKeysResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PkiListEabKeysResponse> PkiListEabKeys(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -3400,6 +3593,51 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PkiQueryOcspWithGetReq(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadAcmeConfiguration(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadAcmeDirectory(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadAcmeNewNonce(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -3680,6 +3918,72 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadIssuerIssuerRefAcmeDirectory(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadIssuerIssuerRefAcmeNewNonce(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadIssuerIssuerRefRolesRoleAcmeDirectory(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiReadIssuerJsonResponse</returns>
@@ -3769,6 +4073,38 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<PkiReadRoleResponse> PkiReadRole(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadRolesRoleAcmeDirectory(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiReadRolesRoleAcmeNewNonce(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -3915,6 +4251,23 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRotateRootRequest"></param>
+        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiRotateRootResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PkiRotateRootResponse> PkiRotateRoot(string exported, PkiRotateRootRequest pkiRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSetSignedIntermediateRequest"></param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiSetSignedIntermediateResponse</returns>
@@ -4027,6 +4380,173 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeAccountKid(string kid, PkiWriteAcmeAccountKidRequest pkiWriteAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeAuthorizationAuthId(string authId, PkiWriteAcmeAuthorizationAuthIdRequest pkiWriteAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeChallengeAuthIdChallengeType(string authId, string challengeType, PkiWriteAcmeChallengeAuthIdChallengeTypeRequest pkiWriteAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewAccountRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeNewAccount(PkiWriteAcmeNewAccountRequest pkiWriteAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewOrderRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeNewOrder(PkiWriteAcmeNewOrderRequest pkiWriteAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeOrderOrderId(string orderId, PkiWriteAcmeOrderOrderIdRequest pkiWriteAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeOrderOrderIdCert(string orderId, PkiWriteAcmeOrderOrderIdCertRequest pkiWriteAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeOrderOrderIdFinalize(string orderId, PkiWriteAcmeOrderOrderIdFinalizeRequest pkiWriteAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrdersRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeOrders(PkiWriteAcmeOrdersRequest pkiWriteAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeRevokeCertRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteAcmeRevokeCert(PkiWriteAcmeRevokeCertRequest pkiWriteAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWriteIssuerRequest"></param>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
@@ -4039,6 +4559,370 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<PkiWriteIssuerResponse> PkiWriteIssuer(string issuerRef, PkiWriteIssuerRequest pkiWriteIssuerRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeAccountKid(string issuerRef, string kid, PkiWriteIssuerIssuerRefAcmeAccountKidRequest pkiWriteIssuerIssuerRefAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId(string authId, string issuerRef, PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string issuerRef, PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeNewAccount(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewAccountRequest pkiWriteIssuerIssuerRefAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeNewOrder(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewOrderRequest pkiWriteIssuerIssuerRefAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrderOrderId(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrders(string issuerRef, PkiWriteIssuerIssuerRefAcmeOrdersRequest pkiWriteIssuerIssuerRefAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeRevokeCert(string issuerRef, PkiWriteIssuerIssuerRefAcmeRevokeCertRequest pkiWriteIssuerIssuerRefAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid(string issuerRef, string kid, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId(string authId, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrders(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -4073,6 +4957,183 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<PkiWriteRoleResponse> PkiWriteRole(string name, PkiWriteRoleRequest pkiWriteRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeAccountKid(string kid, string role, PkiWriteRolesRoleAcmeAccountKidRequest pkiWriteRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeAuthorizationAuthId(string authId, string role, PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string role, PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeNewAccount(string role, PkiWriteRolesRoleAcmeNewAccountRequest pkiWriteRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeNewOrder(string role, PkiWriteRolesRoleAcmeNewOrderRequest pkiWriteRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeOrderOrderId(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdRequest pkiWriteRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeOrderOrderIdCert(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdCertRequest pkiWriteRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeOrderOrderIdFinalize(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeOrders(string role, PkiWriteRolesRoleAcmeOrdersRequest pkiWriteRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PkiWriteRolesRoleAcmeRevokeCert(string role, PkiWriteRolesRoleAcmeRevokeCertRequest pkiWriteRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
@@ -4726,6 +5787,41 @@ namespace Vault.Api
         VaultResponse<Object> TransitBackUpKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
 
         /// <summary>
+        /// Securely export named encryption or signing key
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> TransitByokKey(string destination, string source, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Securely export named encryption or signing key
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="version">Optional version of the key to export, else all key versions are exported.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> TransitByokKeyVersion(string destination, string source, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
+
+        /// <summary>
         /// Configures a new cache of the specified size
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -4846,7 +5942,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4863,7 +5959,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="version">Version of the key</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -5477,7 +6573,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5489,6 +6585,23 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AwsDeleteRoleAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> AwsDeleteStaticRolesNameAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5511,6 +6624,24 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> AwsGenerateCredentialsWithParametersAsync(string name, AwsGenerateCredentialsWithParametersRequest awsGenerateCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -5523,6 +6654,24 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AwsGenerateStsCredentialsAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateStsCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> AwsGenerateStsCredentialsWithParametersAsync(string name, AwsGenerateStsCredentialsWithParametersRequest awsGenerateStsCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// List the existing roles in this backend
@@ -5560,7 +6709,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5593,6 +6742,40 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (AwsReadStaticCredsNameResponse)</returns>
+        Task<VaultResponse<AwsReadStaticCredsNameResponse>> AwsReadStaticCredsNameAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (AwsReadStaticRolesNameResponse)</returns>
+        Task<VaultResponse<AwsReadStaticRolesNameResponse>> AwsReadStaticRolesNameAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5610,7 +6793,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsWriteRoleRequest"></param>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5622,6 +6805,24 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> AwsWriteRoleAsync(string name, AwsWriteRoleRequest awsWriteRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsWriteStaticRolesNameRequest"></param>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (AwsWriteStaticRolesNameResponse)</returns>
+        Task<VaultResponse<AwsWriteStaticRolesNameResponse>> AwsWriteStaticRolesNameAsync(string name, AwsWriteStaticRolesNameRequest awsWriteStaticRolesNameRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8127,6 +9328,23 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiConfigureAcmeRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiConfigureAcmeAsync(PkiConfigureAcmeRequest pkiConfigureAcmeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigureAutoTidyRequest"></param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -8263,6 +9481,23 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyId">EAB key identifier</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiDeleteEabKeyAsync(string keyId, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -8325,6 +9560,74 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiDeleteRootAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyResponse)</returns>
+        Task<VaultResponse<PkiGenerateEabKeyResponse>> PkiGenerateEabKeyAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyForIssuerResponse)</returns>
+        Task<VaultResponse<PkiGenerateEabKeyForIssuerResponse>> PkiGenerateEabKeyForIssuerAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyForIssuerAndRoleResponse)</returns>
+        Task<VaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse>> PkiGenerateEabKeyForIssuerAndRoleAsync(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyForRoleResponse)</returns>
+        Task<VaultResponse<PkiGenerateEabKeyForRoleResponse>> PkiGenerateEabKeyForRoleAsync(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8771,8 +10074,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiIssuersRotateRootRequest"></param>
-        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8782,8 +10083,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PkiIssuersRotateRootResponse)</returns>
-        Task<VaultResponse<PkiIssuersRotateRootResponse>> PkiIssuersRotateRootAsync(string exported, PkiIssuersRotateRootRequest pkiIssuersRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (PkiListCertsResponse)</returns>
+        Task<VaultResponse<PkiListCertsResponse>> PkiListCertsAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8798,8 +10099,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PkiListCertsResponse)</returns>
-        Task<VaultResponse<PkiListCertsResponse>> PkiListCertsAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (PkiListEabKeysResponse)</returns>
+        Task<VaultResponse<PkiListEabKeysResponse>> PkiListEabKeysAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8897,6 +10198,54 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiQueryOcspWithGetReqAsync(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadAcmeConfigurationAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadAcmeDirectoryAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadAcmeNewNonceAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -9195,6 +10544,76 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadIssuerIssuerRefAcmeDirectoryAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadIssuerIssuerRefAcmeNewNonceAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadIssuerIssuerRefRolesRoleAcmeDirectoryAsync(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadIssuerIssuerRefRolesRoleAcmeNewNonceAsync(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -9290,6 +10709,40 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (PkiReadRoleResponse)</returns>
         Task<VaultResponse<PkiReadRoleResponse>> PkiReadRoleAsync(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadRolesRoleAcmeDirectoryAsync(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiReadRolesRoleAcmeNewNonceAsync(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -9445,6 +10898,24 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRotateRootRequest"></param>
+        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiRotateRootResponse)</returns>
+        Task<VaultResponse<PkiRotateRootResponse>> PkiRotateRootAsync(string exported, PkiRotateRootRequest pkiRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSetSignedIntermediateRequest"></param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -9564,6 +11035,183 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeAccountKidAsync(string kid, PkiWriteAcmeAccountKidRequest pkiWriteAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeAuthorizationAuthIdAsync(string authId, PkiWriteAcmeAuthorizationAuthIdRequest pkiWriteAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, PkiWriteAcmeChallengeAuthIdChallengeTypeRequest pkiWriteAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewAccountRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeNewAccountAsync(PkiWriteAcmeNewAccountRequest pkiWriteAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewOrderRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeNewOrderAsync(PkiWriteAcmeNewOrderRequest pkiWriteAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeOrderOrderIdAsync(string orderId, PkiWriteAcmeOrderOrderIdRequest pkiWriteAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeOrderOrderIdCertAsync(string orderId, PkiWriteAcmeOrderOrderIdCertRequest pkiWriteAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeOrderOrderIdFinalizeAsync(string orderId, PkiWriteAcmeOrderOrderIdFinalizeRequest pkiWriteAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrdersRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeOrdersAsync(PkiWriteAcmeOrdersRequest pkiWriteAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeRevokeCertRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteAcmeRevokeCertAsync(PkiWriteAcmeRevokeCertRequest pkiWriteAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWriteIssuerRequest"></param>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
@@ -9577,6 +11225,390 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (PkiWriteIssuerResponse)</returns>
         Task<VaultResponse<PkiWriteIssuerResponse>> PkiWriteIssuerAsync(string issuerRef, PkiWriteIssuerRequest pkiWriteIssuerRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeAccountKidAsync(string issuerRef, string kid, PkiWriteIssuerIssuerRefAcmeAccountKidRequest pkiWriteIssuerIssuerRefAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdAsync(string authId, string issuerRef, PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, string issuerRef, PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeNewAccountAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewAccountRequest pkiWriteIssuerIssuerRefAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeNewOrderAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewOrderRequest pkiWriteIssuerIssuerRefAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrderOrderIdAsync(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertAsync(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeAsync(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrdersAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeOrdersRequest pkiWriteIssuerIssuerRefAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeRevokeCertAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeRevokeCertRequest pkiWriteIssuerIssuerRefAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidAsync(string issuerRef, string kid, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdAsync(string authId, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdAsync(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertAsync(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeAsync(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -9613,6 +11645,193 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (PkiWriteRoleResponse)</returns>
         Task<VaultResponse<PkiWriteRoleResponse>> PkiWriteRoleAsync(string name, PkiWriteRoleRequest pkiWriteRoleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeAccountKidAsync(string kid, string role, PkiWriteRolesRoleAcmeAccountKidRequest pkiWriteRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeAuthorizationAuthIdAsync(string authId, string role, PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, string role, PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeNewAccountAsync(string role, PkiWriteRolesRoleAcmeNewAccountRequest pkiWriteRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeNewOrderAsync(string role, PkiWriteRolesRoleAcmeNewOrderRequest pkiWriteRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrderOrderIdAsync(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdRequest pkiWriteRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrderOrderIdCertAsync(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdCertRequest pkiWriteRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrderOrderIdFinalizeAsync(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrdersAsync(string role, PkiWriteRolesRoleAcmeOrdersRequest pkiWriteRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeRevokeCertAsync(string role, PkiWriteRolesRoleAcmeRevokeCertRequest pkiWriteRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
@@ -10307,6 +12526,43 @@ namespace Vault.Api
         Task<VaultResponse<Object>> TransitBackUpKeyAsync(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// Securely export named encryption or signing key
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> TransitByokKeyAsync(string destination, string source, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Securely export named encryption or signing key
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="version">Optional version of the key to export, else all key versions are exported.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> TransitByokKeyVersionAsync(string destination, string source, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// Configures a new cache of the specified size
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -10434,7 +12690,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -10452,7 +12708,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="version">Version of the key</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -12278,7 +14534,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -12346,7 +14602,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -12402,6 +14658,139 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("AwsDeleteRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> AwsDeleteStaticRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsDeleteStaticRolesName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Delete<Object>("/{aws_mount_path}/static-roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsDeleteStaticRolesName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> AwsDeleteStaticRolesNameAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsDeleteStaticRolesName");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{aws_mount_path}/static-roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsDeleteStaticRolesName", response);
                 if (exception != null) throw exception;
             }
 
@@ -12544,6 +14933,152 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> AwsGenerateCredentialsWithParameters(string name, AwsGenerateCredentialsWithParametersRequest awsGenerateCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateCredentialsWithParameters");
+
+
+            // verify the required parameter 'awsGenerateCredentialsWithParametersRequest' is set
+            if (awsGenerateCredentialsWithParametersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'awsGenerateCredentialsWithParametersRequest' when calling Secrets->AwsGenerateCredentialsWithParameters");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = awsGenerateCredentialsWithParametersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{aws_mount_path}/creds/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsGenerateCredentialsWithParameters", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> AwsGenerateCredentialsWithParametersAsync(string name, AwsGenerateCredentialsWithParametersRequest awsGenerateCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateCredentialsWithParameters");
+
+
+            // verify the required parameter 'awsGenerateCredentialsWithParametersRequest' is set
+            if (awsGenerateCredentialsWithParametersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'awsGenerateCredentialsWithParametersRequest' when calling Secrets->AwsGenerateCredentialsWithParameters");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+            requestOptions.Data = awsGenerateCredentialsWithParametersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{aws_mount_path}/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsGenerateCredentialsWithParameters", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -12668,6 +15203,152 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("AwsGenerateStsCredentials", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateStsCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> AwsGenerateStsCredentialsWithParameters(string name, AwsGenerateStsCredentialsWithParametersRequest awsGenerateStsCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateStsCredentialsWithParameters");
+
+
+            // verify the required parameter 'awsGenerateStsCredentialsWithParametersRequest' is set
+            if (awsGenerateStsCredentialsWithParametersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'awsGenerateStsCredentialsWithParametersRequest' when calling Secrets->AwsGenerateStsCredentialsWithParameters");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = awsGenerateStsCredentialsWithParametersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{aws_mount_path}/sts/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsGenerateStsCredentialsWithParameters", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsGenerateStsCredentialsWithParametersRequest"></param>
+        /// <param name="name">Name of the role</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> AwsGenerateStsCredentialsWithParametersAsync(string name, AwsGenerateStsCredentialsWithParametersRequest awsGenerateStsCredentialsWithParametersRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsGenerateStsCredentialsWithParameters");
+
+
+            // verify the required parameter 'awsGenerateStsCredentialsWithParametersRequest' is set
+            if (awsGenerateStsCredentialsWithParametersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'awsGenerateStsCredentialsWithParametersRequest' when calling Secrets->AwsGenerateStsCredentialsWithParameters");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+            requestOptions.Data = awsGenerateStsCredentialsWithParametersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{aws_mount_path}/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsGenerateStsCredentialsWithParameters", response);
                 if (exception != null) throw exception;
             }
 
@@ -12917,7 +15598,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -12985,7 +15666,7 @@ namespace Vault.Api
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13167,6 +15848,272 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of AwsReadStaticCredsNameResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<AwsReadStaticCredsNameResponse> AwsReadStaticCredsName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsReadStaticCredsName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<AwsReadStaticCredsNameResponse>("/{aws_mount_path}/static-creds/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsReadStaticCredsName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<AwsReadStaticCredsNameResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (AwsReadStaticCredsNameResponse)</returns>
+        public async Task<VaultResponse<AwsReadStaticCredsNameResponse>> AwsReadStaticCredsNameAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsReadStaticCredsName");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<AwsReadStaticCredsNameResponse>("/{aws_mount_path}/static-creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsReadStaticCredsName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<AwsReadStaticCredsNameResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of AwsReadStaticRolesNameResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<AwsReadStaticRolesNameResponse> AwsReadStaticRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsReadStaticRolesName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<AwsReadStaticRolesNameResponse>("/{aws_mount_path}/static-roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsReadStaticRolesName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<AwsReadStaticRolesNameResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (AwsReadStaticRolesNameResponse)</returns>
+        public async Task<VaultResponse<AwsReadStaticRolesNameResponse>> AwsReadStaticRolesNameAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsReadStaticRolesName");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<AwsReadStaticRolesNameResponse>("/{aws_mount_path}/static-roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsReadStaticRolesName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<AwsReadStaticRolesNameResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13285,7 +16232,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsWriteRoleRequest"></param>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13360,7 +16307,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsWriteRoleRequest"></param>
-        /// <param name="name">Name of the policy</param>
+        /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13425,6 +16372,152 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsWriteStaticRolesNameRequest"></param>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of AwsWriteStaticRolesNameResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<AwsWriteStaticRolesNameResponse> AwsWriteStaticRolesName(string name, AwsWriteStaticRolesNameRequest awsWriteStaticRolesNameRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsWriteStaticRolesName");
+
+
+            // verify the required parameter 'awsWriteStaticRolesNameRequest' is set
+            if (awsWriteStaticRolesNameRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'awsWriteStaticRolesNameRequest' when calling Secrets->AwsWriteStaticRolesName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = awsWriteStaticRolesNameRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<AwsWriteStaticRolesNameResponse>("/{aws_mount_path}/static-roles/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsWriteStaticRolesName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<AwsWriteStaticRolesNameResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsWriteStaticRolesNameRequest"></param>
+        /// <param name="name">The name of this role.</param>
+        /// <param name="awsMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (AwsWriteStaticRolesNameResponse)</returns>
+        public async Task<VaultResponse<AwsWriteStaticRolesNameResponse>> AwsWriteStaticRolesNameAsync(string name, AwsWriteStaticRolesNameRequest awsWriteStaticRolesNameRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->AwsWriteStaticRolesName");
+
+
+            // verify the required parameter 'awsWriteStaticRolesNameRequest' is set
+            if (awsWriteStaticRolesNameRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'awsWriteStaticRolesNameRequest' when calling Secrets->AwsWriteStaticRolesName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
+
+
+
+            requestOptions.Data = awsWriteStaticRolesNameRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<AwsWriteStaticRolesNameResponse>("/{aws_mount_path}/static-roles/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("AwsWriteStaticRolesName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<AwsWriteStaticRolesNameResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -25539,7 +28632,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
 
 
 
@@ -25547,7 +28640,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Delete<Object>("/{kv-v1_mount_path}/{path}", requestOptions);
+            var response = this.Client.Delete<Object>("/{kv_v1_mount_path}/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25609,12 +28702,12 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{kv-v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{kv_v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25674,7 +28767,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
 
 
 
@@ -25690,7 +28783,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{kv-v1_mount_path}/{path}", requestOptions);
+            var response = this.Client.Get<Object>("/{kv_v1_mount_path}/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25754,7 +28847,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
 
 
 
@@ -25764,7 +28857,7 @@ namespace Vault.Api
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{kv-v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{kv_v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25822,7 +28915,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
 
 
 
@@ -25830,7 +28923,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/{kv-v1_mount_path}/{path}", requestOptions);
+            var response = this.Client.Post<Object>("/{kv_v1_mount_path}/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25892,12 +28985,12 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv-v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25952,7 +29045,7 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -25962,7 +29055,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/{kv-v2_mount_path}/config", requestOptions);
+            var response = this.Client.Post<Object>("/{kv_v2_mount_path}/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26021,13 +29114,13 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             requestOptions.Data = kvV2ConfigureRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv-v2_mount_path}/config", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v2_mount_path}/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26085,7 +29178,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26093,7 +29186,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Delete<Object>("/{kv-v2_mount_path}/data/{path}", requestOptions);
+            var response = this.Client.Delete<Object>("/{kv_v2_mount_path}/data/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26155,12 +29248,12 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{kv-v2_mount_path}/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{kv_v2_mount_path}/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26218,7 +29311,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26226,7 +29319,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Delete<Object>("/{kv-v2_mount_path}/metadata/{path}", requestOptions);
+            var response = this.Client.Delete<Object>("/{kv_v2_mount_path}/metadata/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26288,12 +29381,12 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{kv-v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{kv_v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26356,7 +29449,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26366,7 +29459,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/{kv-v2_mount_path}/delete/{path}", requestOptions);
+            var response = this.Client.Post<Object>("/{kv_v2_mount_path}/delete/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26433,13 +29526,13 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             requestOptions.Data = kvV2DeleteVersionsRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv-v2_mount_path}/delete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v2_mount_path}/delete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26502,7 +29595,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26512,7 +29605,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/{kv-v2_mount_path}/destroy/{path}", requestOptions);
+            var response = this.Client.Post<Object>("/{kv_v2_mount_path}/destroy/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26579,13 +29672,13 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             requestOptions.Data = kvV2DestroyVersionsRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv-v2_mount_path}/destroy/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v2_mount_path}/destroy/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26643,7 +29736,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26651,7 +29744,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<KvV2ReadResponse>("/{kv-v2_mount_path}/data/{path}", requestOptions);
+            var response = this.Client.Get<KvV2ReadResponse>("/{kv_v2_mount_path}/data/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26713,12 +29806,12 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<KvV2ReadResponse>("/{kv-v2_mount_path}/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<KvV2ReadResponse>("/{kv_v2_mount_path}/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26768,7 +29861,7 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26776,7 +29869,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<KvV2ReadConfigurationResponse>("/{kv-v2_mount_path}/config", requestOptions);
+            var response = this.Client.Get<KvV2ReadConfigurationResponse>("/{kv_v2_mount_path}/config", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26830,12 +29923,12 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<KvV2ReadConfigurationResponse>("/{kv-v2_mount_path}/config", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<KvV2ReadConfigurationResponse>("/{kv_v2_mount_path}/config", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26895,7 +29988,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26911,7 +30004,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<KvV2ReadMetadataResponse>("/{kv-v2_mount_path}/metadata/{path}", requestOptions);
+            var response = this.Client.Get<KvV2ReadMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26975,7 +30068,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -26985,7 +30078,7 @@ namespace Vault.Api
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
             }
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<KvV2ReadMetadataResponse>("/{kv-v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<KvV2ReadMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27043,7 +30136,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -27051,7 +30144,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<KvV2ReadSubkeysResponse>("/{kv-v2_mount_path}/subkeys/{path}", requestOptions);
+            var response = this.Client.Get<KvV2ReadSubkeysResponse>("/{kv_v2_mount_path}/subkeys/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27113,12 +30206,12 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<KvV2ReadSubkeysResponse>("/{kv-v2_mount_path}/subkeys/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<KvV2ReadSubkeysResponse>("/{kv_v2_mount_path}/subkeys/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27181,7 +30274,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -27191,7 +30284,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/{kv-v2_mount_path}/undelete/{path}", requestOptions);
+            var response = this.Client.Post<Object>("/{kv_v2_mount_path}/undelete/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27258,13 +30351,13 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             requestOptions.Data = kvV2UndeleteVersionsRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv-v2_mount_path}/undelete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v2_mount_path}/undelete/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27327,7 +30420,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -27337,7 +30430,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<KvV2WriteResponse>("/{kv-v2_mount_path}/data/{path}", requestOptions);
+            var response = this.Client.Post<KvV2WriteResponse>("/{kv_v2_mount_path}/data/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27404,13 +30497,13 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             requestOptions.Data = kvV2WriteRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<KvV2WriteResponse>("/{kv-v2_mount_path}/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<KvV2WriteResponse>("/{kv_v2_mount_path}/data/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27473,7 +30566,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
@@ -27483,7 +30576,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/{kv-v2_mount_path}/metadata/{path}", requestOptions);
+            var response = this.Client.Post<Object>("/{kv_v2_mount_path}/metadata/{path}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27550,13 +30643,13 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
 
 
-            requestOptions.PathParameters.Add("kv-v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
 
 
 
             requestOptions.Data = kvV2WriteMetadataRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv-v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32937,6 +36030,136 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiConfigureAcmeRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiConfigureAcme(PkiConfigureAcmeRequest pkiConfigureAcmeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            // verify the required parameter 'pkiConfigureAcmeRequest' is set
+            if (pkiConfigureAcmeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiConfigureAcmeRequest' when calling Secrets->PkiConfigureAcme");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiConfigureAcmeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/config/acme", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiConfigureAcme", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiConfigureAcmeRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiConfigureAcmeAsync(PkiConfigureAcmeRequest pkiConfigureAcmeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+            // verify the required parameter 'pkiConfigureAcmeRequest' is set
+            if (pkiConfigureAcmeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiConfigureAcmeRequest' when calling Secrets->PkiConfigureAcme");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiConfigureAcmeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/config/acme", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiConfigureAcme", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiConfigureAutoTidyRequest"></param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiConfigureAutoTidyResponse</returns>
@@ -33977,6 +37200,139 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyId">EAB key identifier</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiDeleteEabKey(string keyId, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'keyId' is set
+            if (keyId == null)
+                throw new VaultApiException(400, "Missing required parameter 'keyId' when calling Secrets->PkiDeleteEabKey");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("key_id", ClientUtils.ParameterToString(keyId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Delete<Object>("/{pki_mount_path}/eab/{key_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiDeleteEabKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyId">EAB key identifier</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiDeleteEabKeyAsync(string keyId, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'keyId' is set
+            if (keyId == null)
+                throw new VaultApiException(400, "Missing required parameter 'keyId' when calling Secrets->PkiDeleteEabKey");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("key_id", ClientUtils.ParameterToString(keyId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/{pki_mount_path}/eab/{key_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiDeleteEabKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -34488,6 +37844,538 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PkiGenerateEabKeyResponse> PkiGenerateEabKey(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Post<PkiGenerateEabKeyResponse>("/{pki_mount_path}/acme/new-eab", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyResponse)</returns>
+        public async Task<VaultResponse<PkiGenerateEabKeyResponse>> PkiGenerateEabKeyAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<PkiGenerateEabKeyResponse>("/{pki_mount_path}/acme/new-eab", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyForIssuerResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PkiGenerateEabKeyForIssuerResponse> PkiGenerateEabKeyForIssuer(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiGenerateEabKeyForIssuer");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Post<PkiGenerateEabKeyForIssuerResponse>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-eab", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKeyForIssuer", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForIssuerResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyForIssuerResponse)</returns>
+        public async Task<VaultResponse<PkiGenerateEabKeyForIssuerResponse>> PkiGenerateEabKeyForIssuerAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiGenerateEabKeyForIssuer");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<PkiGenerateEabKeyForIssuerResponse>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-eab", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKeyForIssuer", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForIssuerResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyForIssuerAndRoleResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse> PkiGenerateEabKeyForIssuerAndRole(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiGenerateEabKeyForIssuerAndRole");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiGenerateEabKeyForIssuerAndRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Post<PkiGenerateEabKeyForIssuerAndRoleResponse>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-eab", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKeyForIssuerAndRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyForIssuerAndRoleResponse)</returns>
+        public async Task<VaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse>> PkiGenerateEabKeyForIssuerAndRoleAsync(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiGenerateEabKeyForIssuerAndRole");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiGenerateEabKeyForIssuerAndRole");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<PkiGenerateEabKeyForIssuerAndRoleResponse>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-eab", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKeyForIssuerAndRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiGenerateEabKeyForRoleResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PkiGenerateEabKeyForRoleResponse> PkiGenerateEabKeyForRole(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiGenerateEabKeyForRole");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Post<PkiGenerateEabKeyForRoleResponse>("/{pki_mount_path}/roles/{role}/acme/new-eab", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKeyForRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForRoleResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiGenerateEabKeyForRoleResponse)</returns>
+        public async Task<VaultResponse<PkiGenerateEabKeyForRoleResponse>> PkiGenerateEabKeyForRoleAsync(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiGenerateEabKeyForRole");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<PkiGenerateEabKeyForRoleResponse>("/{pki_mount_path}/roles/{role}/acme/new-eab", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiGenerateEabKeyForRole", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForRoleResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -38017,152 +41905,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiIssuersRotateRootRequest"></param>
-        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
-        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of PkiIssuersRotateRootResponse</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<PkiIssuersRotateRootResponse> PkiIssuersRotateRoot(string exported, PkiIssuersRotateRootRequest pkiIssuersRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'exported' is set
-            if (exported == null)
-                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PkiIssuersRotateRoot");
-
-
-            // verify the required parameter 'pkiIssuersRotateRootRequest' is set
-            if (pkiIssuersRotateRootRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiIssuersRotateRootRequest' when calling Secrets->PkiIssuersRotateRoot");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
-
-
-            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-
-
-
-
-
-            requestOptions.Data = pkiIssuersRotateRootRequest;
-
-
-            // make the HTTP request
-            var response = this.Client.Post<PkiIssuersRotateRootResponse>("/{pki_mount_path}/root/rotate/{exported}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiIssuersRotateRoot", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<PkiIssuersRotateRootResponse>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiIssuersRotateRootRequest"></param>
-        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
-        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PkiIssuersRotateRootResponse)</returns>
-        public async Task<VaultResponse<PkiIssuersRotateRootResponse>> PkiIssuersRotateRootAsync(string exported, PkiIssuersRotateRootRequest pkiIssuersRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'exported' is set
-            if (exported == null)
-                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PkiIssuersRotateRoot");
-
-
-            // verify the required parameter 'pkiIssuersRotateRootRequest' is set
-            if (pkiIssuersRotateRootRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiIssuersRotateRootRequest' when calling Secrets->PkiIssuersRotateRoot");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "",
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
-
-
-            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-
-
-
-            requestOptions.Data = pkiIssuersRotateRootRequest;
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<PkiIssuersRotateRootResponse>("/{pki_mount_path}/root/rotate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiIssuersRotateRoot", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<PkiIssuersRotateRootResponse>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiListCertsResponse</returns>
         /// <param name="wrapTTL">
@@ -38281,6 +42023,129 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<PkiListCertsResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiListEabKeysResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PkiListEabKeysResponse> PkiListEabKeys(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<PkiListEabKeysResponse>("/{pki_mount_path}/eab", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiListEabKeys", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiListEabKeysResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiListEabKeysResponse)</returns>
+        public async Task<VaultResponse<PkiListEabKeysResponse>> PkiListEabKeysAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<PkiListEabKeysResponse>("/{pki_mount_path}/eab", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiListEabKeys", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiListEabKeysResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -39019,6 +42884,357 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("PkiQueryOcspWithGetReq", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadAcmeConfiguration(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/config/acme", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadAcmeConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadAcmeConfigurationAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/config/acme", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadAcmeConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadAcmeDirectory(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/acme/directory", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadAcmeDirectoryAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/acme/directory", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadAcmeNewNonce(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/acme/new-nonce", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadAcmeNewNonceAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/acme/new-nonce", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadAcmeNewNonce", response);
                 if (exception != null) throw exception;
             }
 
@@ -41214,6 +45430,570 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadIssuerIssuerRefAcmeDirectory(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefAcmeDirectory");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/directory", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadIssuerIssuerRefAcmeDirectoryAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefAcmeDirectory");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/directory", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadIssuerIssuerRefAcmeNewNonce(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefAcmeNewNonce");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-nonce", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadIssuerIssuerRefAcmeNewNonceAsync(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefAcmeNewNonce");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-nonce", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadIssuerIssuerRefRolesRoleAcmeDirectory(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeDirectory");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeDirectory");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/directory", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefRolesRoleAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadIssuerIssuerRefRolesRoleAcmeDirectoryAsync(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeDirectory");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeDirectory");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/directory", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefRolesRoleAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-nonce", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadIssuerIssuerRefRolesRoleAcmeNewNonceAsync(string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-nonce", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadIssuerIssuerRefRolesRoleAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiReadIssuerJsonResponse</returns>
@@ -41975,6 +46755,272 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<PkiReadRoleResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadRolesRoleAcmeDirectory(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadRolesRoleAcmeDirectory");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/roles/{role}/acme/directory", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadRolesRoleAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadRolesRoleAcmeDirectoryAsync(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadRolesRoleAcmeDirectory");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/roles/{role}/acme/directory", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadRolesRoleAcmeDirectory", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiReadRolesRoleAcmeNewNonce(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadRolesRoleAcmeNewNonce");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{pki_mount_path}/roles/{role}/acme/new-nonce", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadRolesRoleAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiReadRolesRoleAcmeNewNonceAsync(string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiReadRolesRoleAcmeNewNonce");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{pki_mount_path}/roles/{role}/acme/new-nonce", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiReadRolesRoleAcmeNewNonce", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -43114,6 +48160,152 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRotateRootRequest"></param>
+        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of PkiRotateRootResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PkiRotateRootResponse> PkiRotateRoot(string exported, PkiRotateRootRequest pkiRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'exported' is set
+            if (exported == null)
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PkiRotateRoot");
+
+
+            // verify the required parameter 'pkiRotateRootRequest' is set
+            if (pkiRotateRootRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiRotateRootRequest' when calling Secrets->PkiRotateRoot");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiRotateRootRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<PkiRotateRootResponse>("/{pki_mount_path}/root/rotate/{exported}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiRotateRoot", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiRotateRootResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRotateRootRequest"></param>
+        /// <param name="exported">Must be \&quot;internal\&quot;, \&quot;exported\&quot; or \&quot;kms\&quot;. If set to \&quot;exported\&quot;, the generated private key will be returned. This is your *only* chance to retrieve the private key!</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PkiRotateRootResponse)</returns>
+        public async Task<VaultResponse<PkiRotateRootResponse>> PkiRotateRootAsync(string exported, PkiRotateRootRequest pkiRotateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'exported' is set
+            if (exported == null)
+                throw new VaultApiException(400, "Missing required parameter 'exported' when calling Secrets->PkiRotateRoot");
+
+
+            // verify the required parameter 'pkiRotateRootRequest' is set
+            if (pkiRotateRootRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiRotateRootRequest' when calling Secrets->PkiRotateRoot");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("exported", ClientUtils.ParameterToString(exported)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiRotateRootRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<PkiRotateRootResponse>("/{pki_mount_path}/root/rotate/{exported}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiRotateRoot", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PkiRotateRootResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSetSignedIntermediateRequest"></param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of PkiSetSignedIntermediateResponse</returns>
@@ -44030,6 +49222,1418 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeAccountKid(string kid, PkiWriteAcmeAccountKidRequest pkiWriteAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteAcmeAccountKidRequest' is set
+            if (pkiWriteAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeAccountKidRequest' when calling Secrets->PkiWriteAcmeAccountKid");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeAccountKidRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/account/{kid}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeAccountKidAsync(string kid, PkiWriteAcmeAccountKidRequest pkiWriteAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteAcmeAccountKidRequest' is set
+            if (pkiWriteAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeAccountKidRequest' when calling Secrets->PkiWriteAcmeAccountKid");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeAccountKidRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/account/{kid}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeAuthorizationAuthId(string authId, PkiWriteAcmeAuthorizationAuthIdRequest pkiWriteAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteAcmeAuthorizationAuthId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeAuthorizationAuthIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/authorization/{auth_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeAuthorizationAuthIdAsync(string authId, PkiWriteAcmeAuthorizationAuthIdRequest pkiWriteAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteAcmeAuthorizationAuthId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeAuthorizationAuthIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/authorization/{auth_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeChallengeAuthIdChallengeType(string authId, string challengeType, PkiWriteAcmeChallengeAuthIdChallengeTypeRequest pkiWriteAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteAcmeChallengeAuthIdChallengeType");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeChallengeAuthIdChallengeTypeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/challenge/{auth_id}/{challenge_type}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, PkiWriteAcmeChallengeAuthIdChallengeTypeRequest pkiWriteAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteAcmeChallengeAuthIdChallengeType");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeChallengeAuthIdChallengeTypeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/challenge/{auth_id}/{challenge_type}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewAccountRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeNewAccount(PkiWriteAcmeNewAccountRequest pkiWriteAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeNewAccountRequest' is set
+            if (pkiWriteAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeNewAccountRequest' when calling Secrets->PkiWriteAcmeNewAccount");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeNewAccountRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/new-account", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewAccountRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeNewAccountAsync(PkiWriteAcmeNewAccountRequest pkiWriteAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeNewAccountRequest' is set
+            if (pkiWriteAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeNewAccountRequest' when calling Secrets->PkiWriteAcmeNewAccount");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeNewAccountRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/new-account", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewOrderRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeNewOrder(PkiWriteAcmeNewOrderRequest pkiWriteAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeNewOrderRequest' is set
+            if (pkiWriteAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeNewOrderRequest' when calling Secrets->PkiWriteAcmeNewOrder");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeNewOrderRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/new-order", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeNewOrderRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeNewOrderAsync(PkiWriteAcmeNewOrderRequest pkiWriteAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeNewOrderRequest' is set
+            if (pkiWriteAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeNewOrderRequest' when calling Secrets->PkiWriteAcmeNewOrder");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeNewOrderRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/new-order", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeOrderOrderId(string orderId, PkiWriteAcmeOrderOrderIdRequest pkiWriteAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteAcmeOrderOrderIdRequest' is set
+            if (pkiWriteAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteAcmeOrderOrderId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrderOrderIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/order/{order_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeOrderOrderIdAsync(string orderId, PkiWriteAcmeOrderOrderIdRequest pkiWriteAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteAcmeOrderOrderIdRequest' is set
+            if (pkiWriteAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteAcmeOrderOrderId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrderOrderIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/order/{order_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeOrderOrderIdCert(string orderId, PkiWriteAcmeOrderOrderIdCertRequest pkiWriteAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteAcmeOrderOrderIdCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrderOrderIdCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/order/{order_id}/cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeOrderOrderIdCertAsync(string orderId, PkiWriteAcmeOrderOrderIdCertRequest pkiWriteAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteAcmeOrderOrderIdCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrderOrderIdCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/order/{order_id}/cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeOrderOrderIdFinalize(string orderId, PkiWriteAcmeOrderOrderIdFinalizeRequest pkiWriteAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteAcmeOrderOrderIdFinalize");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrderOrderIdFinalizeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/order/{order_id}/finalize", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeOrderOrderIdFinalizeAsync(string orderId, PkiWriteAcmeOrderOrderIdFinalizeRequest pkiWriteAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteAcmeOrderOrderIdFinalize");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrderOrderIdFinalizeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/order/{order_id}/finalize", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrdersRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeOrders(PkiWriteAcmeOrdersRequest pkiWriteAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeOrdersRequest' is set
+            if (pkiWriteAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrdersRequest' when calling Secrets->PkiWriteAcmeOrders");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrdersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/orders", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeOrdersRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeOrdersAsync(PkiWriteAcmeOrdersRequest pkiWriteAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeOrdersRequest' is set
+            if (pkiWriteAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeOrdersRequest' when calling Secrets->PkiWriteAcmeOrders");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeOrdersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/orders", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeRevokeCertRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteAcmeRevokeCert(PkiWriteAcmeRevokeCertRequest pkiWriteAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeRevokeCertRequest' is set
+            if (pkiWriteAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeRevokeCertRequest' when calling Secrets->PkiWriteAcmeRevokeCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteAcmeRevokeCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/acme/revoke-cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteAcmeRevokeCertRequest"></param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteAcmeRevokeCertAsync(PkiWriteAcmeRevokeCertRequest pkiWriteAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+            // verify the required parameter 'pkiWriteAcmeRevokeCertRequest' is set
+            if (pkiWriteAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteAcmeRevokeCertRequest' when calling Secrets->PkiWriteAcmeRevokeCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteAcmeRevokeCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/acme/revoke-cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWriteIssuerRequest"></param>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
         /// <param name="pkiMountPath">Path that the backend was mounted at</param>
@@ -44171,6 +50775,3310 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<PkiWriteIssuerResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeAccountKid(string issuerRef, string kid, PkiWriteIssuerIssuerRefAcmeAccountKidRequest pkiWriteIssuerIssuerRefAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAccountKid");
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeAccountKidRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeAccountKidRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAccountKid");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeAccountKidRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/account/{kid}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeAccountKidAsync(string issuerRef, string kid, PkiWriteIssuerIssuerRefAcmeAccountKidRequest pkiWriteIssuerIssuerRefAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAccountKid");
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeAccountKidRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeAccountKidRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAccountKid");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeAccountKidRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/account/{kid}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId(string authId, string issuerRef, PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/authorization/{auth_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdAsync(string authId, string issuerRef, PkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeAuthorizationAuthIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/authorization/{auth_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string issuerRef, PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/challenge/{auth_id}/{challenge_type}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, string issuerRef, PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeTypeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/challenge/{auth_id}/{challenge_type}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeNewAccount(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewAccountRequest pkiWriteIssuerIssuerRefAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewAccount");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeNewAccountRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeNewAccountRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewAccount");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeNewAccountRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-account", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeNewAccountAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewAccountRequest pkiWriteIssuerIssuerRefAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewAccount");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeNewAccountRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeNewAccountRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewAccount");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeNewAccountRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-account", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeNewOrder(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewOrderRequest pkiWriteIssuerIssuerRefAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewOrder");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeNewOrderRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeNewOrderRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewOrder");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeNewOrderRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-order", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeNewOrderAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeNewOrderRequest pkiWriteIssuerIssuerRefAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewOrder");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeNewOrderRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeNewOrderRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeNewOrder");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeNewOrderRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/new-order", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrderOrderId(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderId");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrderOrderIdAsync(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderId");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrderOrderIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}/cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertAsync(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrderOrderIdCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}/cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}/finalize", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeAsync(string issuerRef, string orderId, PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalizeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/order/{order_id}/finalize", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeOrders(string issuerRef, PkiWriteIssuerIssuerRefAcmeOrdersRequest pkiWriteIssuerIssuerRefAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrders");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrdersRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrdersRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrders");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrdersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/orders", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeOrdersAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeOrdersRequest pkiWriteIssuerIssuerRefAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrders");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeOrdersRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeOrdersRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeOrders");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeOrdersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/orders", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefAcmeRevokeCert(string issuerRef, PkiWriteIssuerIssuerRefAcmeRevokeCertRequest pkiWriteIssuerIssuerRefAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeRevokeCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeRevokeCertRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeRevokeCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeRevokeCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeRevokeCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/revoke-cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefAcmeRevokeCertAsync(string issuerRef, PkiWriteIssuerIssuerRefAcmeRevokeCertRequest pkiWriteIssuerIssuerRefAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefAcmeRevokeCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefAcmeRevokeCertRequest' is set
+            if (pkiWriteIssuerIssuerRefAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefAcmeRevokeCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefAcmeRevokeCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefAcmeRevokeCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/acme/revoke-cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid(string issuerRef, string kid, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/account/{kid}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidAsync(string issuerRef, string kid, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeAccountKidRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/account/{kid}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId(string authId, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/authorization/{auth_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdAsync(string authId, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/authorization/{auth_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/challenge/{auth_id}/{challenge_type}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeTypeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/challenge/{auth_id}/{challenge_type}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-account", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeNewAccountRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-account", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-order", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeNewOrderRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/new-order", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdAsync(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}/cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertAsync(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}/cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}/finalize", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeAsync(string issuerRef, string orderId, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalizeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/order/{order_id}/finalize", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeOrders(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrders");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrders");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrders");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/orders", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrders");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrders");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeOrders");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeOrdersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/orders", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/revoke-cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="issuerRef">Reference to an existing issuer name or issuer id</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertAsync(string issuerRef, string role, PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert");
+
+
+            // verify the required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest' is set
+            if (pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest' when calling Secrets->PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/issuer/{issuer_ref}/roles/{role}/acme/revoke-cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteIssuerIssuerRefRolesRoleAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -44463,6 +54371,1578 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<PkiWriteRoleResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeAccountKid(string kid, string role, PkiWriteRolesRoleAcmeAccountKidRequest pkiWriteRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteRolesRoleAcmeAccountKid");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeAccountKidRequest' is set
+            if (pkiWriteRolesRoleAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeAccountKidRequest' when calling Secrets->PkiWriteRolesRoleAcmeAccountKid");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeAccountKidRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/account/{kid}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAccountKidRequest"></param>
+        /// <param name="kid">The key identifier provided by the CA</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeAccountKidAsync(string kid, string role, PkiWriteRolesRoleAcmeAccountKidRequest pkiWriteRolesRoleAcmeAccountKidRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'kid' is set
+            if (kid == null)
+                throw new VaultApiException(400, "Missing required parameter 'kid' when calling Secrets->PkiWriteRolesRoleAcmeAccountKid");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeAccountKid");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeAccountKidRequest' is set
+            if (pkiWriteRolesRoleAcmeAccountKidRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeAccountKidRequest' when calling Secrets->PkiWriteRolesRoleAcmeAccountKid");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("kid", ClientUtils.ParameterToString(kid)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeAccountKidRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/account/{kid}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeAccountKid", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeAuthorizationAuthId(string authId, string role, PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteRolesRoleAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteRolesRoleAcmeAuthorizationAuthId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/authorization/{auth_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeAuthorizationAuthIdAsync(string authId, string role, PkiWriteRolesRoleAcmeAuthorizationAuthIdRequest pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteRolesRoleAcmeAuthorizationAuthId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeAuthorizationAuthId");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest' is set
+            if (pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest' when calling Secrets->PkiWriteRolesRoleAcmeAuthorizationAuthId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeAuthorizationAuthIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/authorization/{auth_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeAuthorizationAuthId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType(string authId, string challengeType, string role, PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/challenge/{auth_id}/{challenge_type}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest"></param>
+        /// <param name="authId">ACME authorization identifier value</param>
+        /// <param name="challengeType">ACME challenge type</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeAsync(string authId, string challengeType, string role, PkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'authId' is set
+            if (authId == null)
+                throw new VaultApiException(400, "Missing required parameter 'authId' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'challengeType' is set
+            if (challengeType == null)
+                throw new VaultApiException(400, "Missing required parameter 'challengeType' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' is set
+            if (pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest' when calling Secrets->PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("auth_id", ClientUtils.ParameterToString(authId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("challenge_type", ClientUtils.ParameterToString(challengeType)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeChallengeAuthIdChallengeTypeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/challenge/{auth_id}/{challenge_type}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeChallengeAuthIdChallengeType", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeNewAccount(string role, PkiWriteRolesRoleAcmeNewAccountRequest pkiWriteRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeNewAccount");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeNewAccountRequest' is set
+            if (pkiWriteRolesRoleAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeNewAccountRequest' when calling Secrets->PkiWriteRolesRoleAcmeNewAccount");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeNewAccountRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/new-account", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewAccountRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeNewAccountAsync(string role, PkiWriteRolesRoleAcmeNewAccountRequest pkiWriteRolesRoleAcmeNewAccountRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeNewAccount");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeNewAccountRequest' is set
+            if (pkiWriteRolesRoleAcmeNewAccountRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeNewAccountRequest' when calling Secrets->PkiWriteRolesRoleAcmeNewAccount");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeNewAccountRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/new-account", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeNewAccount", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeNewOrder(string role, PkiWriteRolesRoleAcmeNewOrderRequest pkiWriteRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeNewOrder");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeNewOrderRequest' is set
+            if (pkiWriteRolesRoleAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeNewOrderRequest' when calling Secrets->PkiWriteRolesRoleAcmeNewOrder");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeNewOrderRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/new-order", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeNewOrderRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeNewOrderAsync(string role, PkiWriteRolesRoleAcmeNewOrderRequest pkiWriteRolesRoleAcmeNewOrderRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeNewOrder");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeNewOrderRequest' is set
+            if (pkiWriteRolesRoleAcmeNewOrderRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeNewOrderRequest' when calling Secrets->PkiWriteRolesRoleAcmeNewOrder");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeNewOrderRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/new-order", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeNewOrder", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeOrderOrderId(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdRequest pkiWriteRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdRequest' is set
+            if (pkiWriteRolesRoleAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrderOrderIdRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/order/{order_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrderOrderIdAsync(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdRequest pkiWriteRolesRoleAcmeOrderOrderIdRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderId");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderId");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdRequest' is set
+            if (pkiWriteRolesRoleAcmeOrderOrderIdRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrderOrderIdRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/order/{order_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrderOrderId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeOrderOrderIdCert(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdCertRequest pkiWriteRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteRolesRoleAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrderOrderIdCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/order/{order_id}/cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdCertRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrderOrderIdCertAsync(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdCertRequest pkiWriteRolesRoleAcmeOrderOrderIdCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdCert");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdCert");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdCertRequest' is set
+            if (pkiWriteRolesRoleAcmeOrderOrderIdCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdCertRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrderOrderIdCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/order/{order_id}/cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrderOrderIdCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeOrderOrderIdFinalize(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdFinalize");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/order/{order_id}/finalize", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest"></param>
+        /// <param name="orderId">The ACME order identifier to fetch</param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrderOrderIdFinalizeAsync(string orderId, string role, PkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'orderId' is set
+            if (orderId == null)
+                throw new VaultApiException(400, "Missing required parameter 'orderId' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdFinalize");
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdFinalize");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest' is set
+            if (pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrderOrderIdFinalize");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("order_id", ClientUtils.ParameterToString(orderId)); // path parameter
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrderOrderIdFinalizeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/order/{order_id}/finalize", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrderOrderIdFinalize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeOrders(string role, PkiWriteRolesRoleAcmeOrdersRequest pkiWriteRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrders");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrdersRequest' is set
+            if (pkiWriteRolesRoleAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrdersRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrders");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrdersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/orders", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeOrdersRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeOrdersAsync(string role, PkiWriteRolesRoleAcmeOrdersRequest pkiWriteRolesRoleAcmeOrdersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeOrders");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeOrdersRequest' is set
+            if (pkiWriteRolesRoleAcmeOrdersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeOrdersRequest' when calling Secrets->PkiWriteRolesRoleAcmeOrders");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeOrdersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/orders", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeOrders", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PkiWriteRolesRoleAcmeRevokeCert(string role, PkiWriteRolesRoleAcmeRevokeCertRequest pkiWriteRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeRevokeCert");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeRevokeCertRequest' is set
+            if (pkiWriteRolesRoleAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeRevokeCertRequest' when calling Secrets->PkiWriteRolesRoleAcmeRevokeCert");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeRevokeCertRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/roles/{role}/acme/revoke-cert", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiWriteRolesRoleAcmeRevokeCertRequest"></param>
+        /// <param name="role">The desired role for the acme request</param>
+        /// <param name="pkiMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PkiWriteRolesRoleAcmeRevokeCertAsync(string role, PkiWriteRolesRoleAcmeRevokeCertRequest pkiWriteRolesRoleAcmeRevokeCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'role' is set
+            if (role == null)
+                throw new VaultApiException(400, "Missing required parameter 'role' when calling Secrets->PkiWriteRolesRoleAcmeRevokeCert");
+
+
+            // verify the required parameter 'pkiWriteRolesRoleAcmeRevokeCertRequest' is set
+            if (pkiWriteRolesRoleAcmeRevokeCertRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pkiWriteRolesRoleAcmeRevokeCertRequest' when calling Secrets->PkiWriteRolesRoleAcmeRevokeCert");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("role", ClientUtils.ParameterToString(role)); // path parameter
+
+
+            requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+
+
+
+            requestOptions.Data = pkiWriteRolesRoleAcmeRevokeCertRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/roles/{role}/acme/revoke-cert", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PkiWriteRolesRoleAcmeRevokeCert", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API. 
@@ -49817,6 +61297,320 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
+        /// Securely export named encryption or signing key 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> TransitByokKey(string destination, string source, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'destination' is set
+            if (destination == null)
+                throw new VaultApiException(400, "Missing required parameter 'destination' when calling Secrets->TransitByokKey");
+
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->TransitByokKey");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("destination", ClientUtils.ParameterToString(destination)); // path parameter
+
+
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{transit_mount_path}/byok-export/{destination}/{source}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitByokKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Securely export named encryption or signing key 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> TransitByokKeyAsync(string destination, string source, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'destination' is set
+            if (destination == null)
+                throw new VaultApiException(400, "Missing required parameter 'destination' when calling Secrets->TransitByokKey");
+
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->TransitByokKey");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("destination", ClientUtils.ParameterToString(destination)); // path parameter
+
+
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{transit_mount_path}/byok-export/{destination}/{source}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitByokKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        /// Securely export named encryption or signing key 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="version">Optional version of the key to export, else all key versions are exported.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> TransitByokKeyVersion(string destination, string source, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'destination' is set
+            if (destination == null)
+                throw new VaultApiException(400, "Missing required parameter 'destination' when calling Secrets->TransitByokKeyVersion");
+
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->TransitByokKeyVersion");
+
+            // verify the required parameter 'version' is set
+            if (version == null)
+                throw new VaultApiException(400, "Missing required parameter 'version' when calling Secrets->TransitByokKeyVersion");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("destination", ClientUtils.ParameterToString(destination)); // path parameter
+
+
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+            requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/{transit_mount_path}/byok-export/{destination}/{source}/{version}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitByokKeyVersion", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Securely export named encryption or signing key 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="destination">Destination key to export to; usually the public wrapping key of another Transit instance.</param>
+        /// <param name="source">Source key to export; could be any present key within Transit.</param>
+        /// <param name="version">Optional version of the key to export, else all key versions are exported.</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> TransitByokKeyVersionAsync(string destination, string source, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'destination' is set
+            if (destination == null)
+                throw new VaultApiException(400, "Missing required parameter 'destination' when calling Secrets->TransitByokKeyVersion");
+
+            // verify the required parameter 'source' is set
+            if (source == null)
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling Secrets->TransitByokKeyVersion");
+
+            // verify the required parameter 'version' is set
+            if (version == null)
+                throw new VaultApiException(400, "Missing required parameter 'version' when calling Secrets->TransitByokKeyVersion");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("destination", ClientUtils.ParameterToString(destination)); // path parameter
+
+
+            requestOptions.PathParameters.Add("source", ClientUtils.ParameterToString(source)); // path parameter
+
+
+            requestOptions.PathParameters.Add("version", ClientUtils.ParameterToString(version)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{transit_mount_path}/byok-export/{destination}/{source}/{version}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitByokKeyVersion", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
         /// Configures a new cache of the specified size 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -50798,7 +62592,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -50874,7 +62668,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -50947,7 +62741,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="version">Version of the key</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -51031,7 +62825,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
-        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key)</param>
+        /// <param name="type">Type of key to export (encryption-key, signing-key, hmac-key, public-key)</param>
         /// <param name="version">Version of the key</param>
         /// <param name="transitMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">

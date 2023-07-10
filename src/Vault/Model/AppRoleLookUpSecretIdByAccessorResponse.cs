@@ -53,7 +53,7 @@ namespace Vault.Model
         /// <param name="TokenBoundCidrs">List of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. Should be a subset of the token CIDR blocks listed on the role, if any..</param>
 
 
-        public AppRoleLookUpSecretIdByAccessorResponse(List<string> CidrList = default(List<string>), DateTime CreationTime = default(DateTime), DateTime ExpirationTime = default(DateTime), DateTime LastUpdatedTime = default(DateTime), Object Metadata = default(Object), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), int SecretIdTtl = default(int), List<string> TokenBoundCidrs = default(List<string>))
+        public AppRoleLookUpSecretIdByAccessorResponse(List<string> CidrList = default(List<string>), DateTime CreationTime = default(DateTime), DateTime ExpirationTime = default(DateTime), DateTime LastUpdatedTime = default(DateTime), Object Metadata = default(Object), string SecretIdAccessor = default(string), int SecretIdNumUses = default(int), string SecretIdTtl = default(string), List<string> TokenBoundCidrs = default(List<string>))
         {
 
             this.CidrList = CidrList;
@@ -141,7 +141,7 @@ namespace Vault.Model
         /// <value>Duration in seconds after which the issued secret ID expires.</value>
         [DataMember(Name = "secret_id_ttl", EmitDefaultValue = false)]
 
-        public int SecretIdTtl { get; set; }
+        public string SecretIdTtl { get; set; }
 
 
         /// <summary>
@@ -250,8 +250,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
+                    (this.SecretIdTtl != null &&
+                    this.SecretIdTtl.Equals(input.SecretIdTtl))
 
-                    this.SecretIdTtl.Equals(input.SecretIdTtl)
                 ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
@@ -304,8 +305,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.SecretIdNumUses.GetHashCode();
+                if (this.SecretIdTtl != null)
+                {
+                    hashCode = (hashCode * 59) + this.SecretIdTtl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.SecretIdTtl.GetHashCode();
                 if (this.TokenBoundCidrs != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenBoundCidrs.GetHashCode();

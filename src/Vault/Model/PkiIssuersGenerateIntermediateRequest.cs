@@ -165,7 +165,7 @@ namespace Vault.Model
 
         /// <param name="NotAfter">Set the not after field of the certificate with specified date value. The value format should be given in UTC format YYYY-MM-ddTHH:MM:SSZ.</param>
 
-        /// <param name="NotBeforeDuration">The duration before now which the certificate needs to be backdated by. (default to 30).</param>
+        /// <param name="NotBeforeDuration">The duration before now which the certificate needs to be backdated by. (default to &quot;30&quot;).</param>
 
         /// <param name="Organization">If set, O (Organization) will be set to this value..</param>
 
@@ -190,7 +190,7 @@ namespace Vault.Model
         /// <param name="UriSans">The requested URI SANs, if any, in a comma-delimited list..</param>
 
 
-        public PkiIssuersGenerateIntermediateRequest(bool AddBasicConstraints = default(bool), string AltNames = default(string), string CommonName = default(string), List<string> Country = default(List<string>), bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), int KeyBits = 0, string KeyName = default(string), string KeyRef = "default", KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> Locality = default(List<string>), string ManagedKeyId = default(string), string ManagedKeyName = default(string), string NotAfter = default(string), int NotBeforeDuration = 30, List<string> Organization = default(List<string>), List<string> OtherSans = default(List<string>), List<string> Ou = default(List<string>), List<string> PostalCode = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, List<string> Province = default(List<string>), string SerialNumber = default(string), int SignatureBits = 0, List<string> StreetAddress = default(List<string>), int Ttl = default(int), List<string> UriSans = default(List<string>))
+        public PkiIssuersGenerateIntermediateRequest(bool AddBasicConstraints = default(bool), string AltNames = default(string), string CommonName = default(string), List<string> Country = default(List<string>), bool ExcludeCnFromSans = false, FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), int KeyBits = 0, string KeyName = default(string), string KeyRef = "default", KeyTypeEnum? KeyType = KeyTypeEnum.Rsa, List<string> Locality = default(List<string>), string ManagedKeyId = default(string), string ManagedKeyName = default(string), string NotAfter = default(string), string NotBeforeDuration = "30", List<string> Organization = default(List<string>), List<string> OtherSans = default(List<string>), List<string> Ou = default(List<string>), List<string> PostalCode = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, List<string> Province = default(List<string>), string SerialNumber = default(string), int SignatureBits = 0, List<string> StreetAddress = default(List<string>), string Ttl = default(string), List<string> UriSans = default(List<string>))
         {
 
             this.AddBasicConstraints = AddBasicConstraints;
@@ -225,7 +225,9 @@ namespace Vault.Model
 
             this.NotAfter = NotAfter;
 
-            this.NotBeforeDuration = NotBeforeDuration;
+            // use default value if no "NotBeforeDuration" provided
+            this.NotBeforeDuration = NotBeforeDuration ?? "30";
+
 
             this.Organization = Organization;
 
@@ -374,7 +376,7 @@ namespace Vault.Model
         /// <value>The duration before now which the certificate needs to be backdated by.</value>
         [DataMember(Name = "not_before_duration", EmitDefaultValue = false)]
 
-        public int NotBeforeDuration { get; set; }
+        public string NotBeforeDuration { get; set; }
 
 
         /// <summary>
@@ -455,7 +457,7 @@ namespace Vault.Model
         /// <value>The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the mount max TTL. Note: this only has an effect when generating a CA cert or signing a CA cert, not when generating a CSR for an intermediate CA.</value>
         [DataMember(Name = "ttl", EmitDefaultValue = false)]
 
-        public int Ttl { get; set; }
+        public string Ttl { get; set; }
 
 
         /// <summary>
@@ -626,8 +628,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.NotBeforeDuration == input.NotBeforeDuration ||
+                    (this.NotBeforeDuration != null &&
+                    this.NotBeforeDuration.Equals(input.NotBeforeDuration))
 
-                    this.NotBeforeDuration.Equals(input.NotBeforeDuration)
                 ) &&
                 (
                     this.Organization == input.Organization ||
@@ -683,8 +686,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
+                    (this.Ttl != null &&
+                    this.Ttl.Equals(input.Ttl))
 
-                    this.Ttl.Equals(input.Ttl)
                 ) &&
                 (
                     this.UriSans == input.UriSans ||
@@ -765,8 +769,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.NotAfter.GetHashCode();
                 }
 
+                if (this.NotBeforeDuration != null)
+                {
+                    hashCode = (hashCode * 59) + this.NotBeforeDuration.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.NotBeforeDuration.GetHashCode();
                 if (this.Organization != null)
                 {
                     hashCode = (hashCode * 59) + this.Organization.GetHashCode();
@@ -806,8 +813,11 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.StreetAddress.GetHashCode();
                 }
 
+                if (this.Ttl != null)
+                {
+                    hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.Ttl.GetHashCode();
                 if (this.UriSans != null)
                 {
                     hashCode = (hashCode * 59) + this.UriSans.GetHashCode();

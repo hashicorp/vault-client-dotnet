@@ -47,7 +47,7 @@ namespace Vault.Model
         /// <param name="MinEncryptionVersion">If set, the minimum version of the key allowed to be used for encryption; or for signing keys, to be used for signing. If set to zero, only the latest version of the key is allowed..</param>
 
 
-        public TransitConfigureKeyRequest(bool AllowPlaintextBackup = default(bool), int AutoRotatePeriod = default(int), bool DeletionAllowed = default(bool), bool Exportable = default(bool), int MinDecryptionVersion = default(int), int MinEncryptionVersion = default(int))
+        public TransitConfigureKeyRequest(bool AllowPlaintextBackup = default(bool), string AutoRotatePeriod = default(string), bool DeletionAllowed = default(bool), bool Exportable = default(bool), int MinDecryptionVersion = default(int), int MinEncryptionVersion = default(int))
         {
 
             this.AllowPlaintextBackup = AllowPlaintextBackup;
@@ -79,7 +79,7 @@ namespace Vault.Model
         /// <value>Amount of time the key should live before being automatically rotated. A value of 0 disables automatic rotation for the key.</value>
         [DataMember(Name = "auto_rotate_period", EmitDefaultValue = false)]
 
-        public int AutoRotatePeriod { get; set; }
+        public string AutoRotatePeriod { get; set; }
 
 
         /// <summary>
@@ -176,8 +176,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.AutoRotatePeriod == input.AutoRotatePeriod ||
+                    (this.AutoRotatePeriod != null &&
+                    this.AutoRotatePeriod.Equals(input.AutoRotatePeriod))
 
-                    this.AutoRotatePeriod.Equals(input.AutoRotatePeriod)
                 ) &&
                 (
                     this.DeletionAllowed == input.DeletionAllowed ||
@@ -214,8 +215,11 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.AllowPlaintextBackup.GetHashCode();
+                if (this.AutoRotatePeriod != null)
+                {
+                    hashCode = (hashCode * 59) + this.AutoRotatePeriod.GetHashCode();
+                }
 
-                hashCode = (hashCode * 59) + this.AutoRotatePeriod.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.DeletionAllowed.GetHashCode();
 

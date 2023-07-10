@@ -1,0 +1,11 @@
+# Vault.Model.DecodeRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**EncodedToken** | **string** | Specifies the encoded token (result from generate-root). | [optional] 
+**Otp** | **string** | Specifies the otp code for decode. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

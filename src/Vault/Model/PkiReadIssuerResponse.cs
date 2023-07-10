@@ -40,6 +40,8 @@ namespace Vault.Model
 
         /// <param name="CrlDistributionPoints">CRL Distribution Points.</param>
 
+        /// <param name="EnableAiaUrlTemplating">Whether or not templating is enabled for AIA fields.</param>
+
         /// <param name="IssuerId">Issuer Id.</param>
 
         /// <param name="IssuerName">Issuer Name.</param>
@@ -65,7 +67,7 @@ namespace Vault.Model
         /// <param name="Usage">Usage.</param>
 
 
-        public PkiReadIssuerResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), List<string> CrlDistributionPoints = default(List<string>), string IssuerId = default(string), string IssuerName = default(string), List<string> IssuingCertificates = default(List<string>), string KeyId = default(string), string LeafNotAfterBehavior = default(string), List<string> ManualChain = default(List<string>), List<string> OcspServers = default(List<string>), string RevocationSignatureAlgorithm = default(string), int RevocationTime = default(int), string RevocationTimeRfc3339 = default(string), bool Revoked = default(bool), List<string> Usage = default(List<string>))
+        public PkiReadIssuerResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), List<string> CrlDistributionPoints = default(List<string>), bool EnableAiaUrlTemplating = default(bool), string IssuerId = default(string), string IssuerName = default(string), List<string> IssuingCertificates = default(List<string>), string KeyId = default(string), string LeafNotAfterBehavior = default(string), List<string> ManualChain = default(List<string>), List<string> OcspServers = default(List<string>), string RevocationSignatureAlgorithm = default(string), int RevocationTime = default(int), string RevocationTimeRfc3339 = default(string), bool Revoked = default(bool), string Usage = default(string))
         {
 
             this.CaChain = CaChain;
@@ -73,6 +75,8 @@ namespace Vault.Model
             this.Certificate = Certificate;
 
             this.CrlDistributionPoints = CrlDistributionPoints;
+
+            this.EnableAiaUrlTemplating = EnableAiaUrlTemplating;
 
             this.IssuerId = IssuerId;
 
@@ -125,6 +129,15 @@ namespace Vault.Model
         [DataMember(Name = "crl_distribution_points", EmitDefaultValue = false)]
 
         public List<string> CrlDistributionPoints { get; set; }
+
+
+        /// <summary>
+        /// Whether or not templating is enabled for AIA fields
+        /// </summary>
+        /// <value>Whether or not templating is enabled for AIA fields</value>
+        [DataMember(Name = "enable_aia_url_templating", EmitDefaultValue = true)]
+
+        public bool EnableAiaUrlTemplating { get; set; }
 
 
         /// <summary>
@@ -230,7 +243,7 @@ namespace Vault.Model
         /// <value>Usage</value>
         [DataMember(Name = "usage", EmitDefaultValue = false)]
 
-        public List<string> Usage { get; set; }
+        public string Usage { get; set; }
 
 
 
@@ -246,6 +259,7 @@ namespace Vault.Model
             sb.Append("  CaChain: ").Append(CaChain).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  CrlDistributionPoints: ").Append(CrlDistributionPoints).Append("\n");
+            sb.Append("  EnableAiaUrlTemplating: ").Append(EnableAiaUrlTemplating).Append("\n");
             sb.Append("  IssuerId: ").Append(IssuerId).Append("\n");
             sb.Append("  IssuerName: ").Append(IssuerName).Append("\n");
             sb.Append("  IssuingCertificates: ").Append(IssuingCertificates).Append("\n");
@@ -310,6 +324,11 @@ namespace Vault.Model
                     this.CrlDistributionPoints != null &&
                     input.CrlDistributionPoints != null &&
                     this.CrlDistributionPoints.SequenceEqual(input.CrlDistributionPoints)
+                ) &&
+                (
+                    this.EnableAiaUrlTemplating == input.EnableAiaUrlTemplating ||
+
+                    this.EnableAiaUrlTemplating.Equals(input.EnableAiaUrlTemplating)
                 ) &&
                 (
                     this.IssuerId == input.IssuerId ||
@@ -377,9 +396,9 @@ namespace Vault.Model
                 ) &&
                 (
                     this.Usage == input.Usage ||
-                    this.Usage != null &&
-                    input.Usage != null &&
-                    this.Usage.SequenceEqual(input.Usage)
+                    (this.Usage != null &&
+                    this.Usage.Equals(input.Usage))
+
                 );
 
         }
@@ -409,6 +428,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.CrlDistributionPoints.GetHashCode();
                 }
 
+
+                hashCode = (hashCode * 59) + this.EnableAiaUrlTemplating.GetHashCode();
                 if (this.IssuerId != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuerId.GetHashCode();

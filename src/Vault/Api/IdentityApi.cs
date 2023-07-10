@@ -350,7 +350,7 @@ namespace Vault.Api
         VaultResponse<Object> EntityUpdateByName(string name, EntityUpdateByNameRequest entityUpdateByNameRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Create a new group.
+        /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="groupCreateRequest"></param>
@@ -605,11 +605,10 @@ namespace Vault.Api
         VaultResponse<Object> MfaAdminGenerateTotpSecret(MfaAdminGenerateTotpSecretRequest mfaAdminGenerateTotpSecretRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureDuoMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateDuoMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -618,14 +617,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaConfigureDuoMethod(string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaCreateDuoMethod(MfaCreateDuoMethodRequest mfaCreateDuoMethodRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureOktaMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateOktaMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -634,14 +632,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaConfigureOktaMethod(string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaCreateOktaMethod(MfaCreateOktaMethodRequest mfaCreateOktaMethodRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigurePingIdMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreatePingIdMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -650,14 +647,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaConfigurePingIdMethod(string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaCreatePingIdMethod(MfaCreatePingIdMethodRequest mfaCreatePingIdMethodRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureTotpMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateTotpMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -666,10 +662,10 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaConfigureTotpMethod(string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaCreateTotpMethod(MfaCreateTotpMethodRequest mfaCreateTotpMethodRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -699,7 +695,7 @@ namespace Vault.Api
         VaultResponse<Object> MfaDeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -714,7 +710,7 @@ namespace Vault.Api
         VaultResponse<Object> MfaDeleteOktaMethod(string methodId, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -729,7 +725,7 @@ namespace Vault.Api
         VaultResponse<Object> MfaDeletePingIdMethod(string methodId, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -855,7 +851,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaReadDuoMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaReadDuoMethod(string methodId, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Read the current login enforcement
@@ -885,7 +881,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaReadMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaReadMethod(string methodId, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -900,7 +896,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaReadOktaMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaReadOktaMethod(string methodId, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -915,7 +911,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaReadPingIdMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaReadPingIdMethod(string methodId, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -930,7 +926,71 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MfaReadTotpMethodConfiguration(string methodId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MfaReadTotpMethod(string methodId, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateDuoMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> MfaUpdateDuoMethod(string methodId, MfaUpdateDuoMethodRequest mfaUpdateDuoMethodRequest, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateOktaMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> MfaUpdateOktaMethod(string methodId, MfaUpdateOktaMethodRequest mfaUpdateOktaMethodRequest, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdatePingIdMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> MfaUpdatePingIdMethod(string methodId, MfaUpdatePingIdMethodRequest mfaUpdatePingIdMethodRequest, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateTotpMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> MfaUpdateTotpMethod(string methodId, MfaUpdateTotpMethodRequest mfaUpdateTotpMethodRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Create or update a login enforcement
@@ -1183,6 +1243,22 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> OidcProviderAuthorize(string name, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="oidcProviderAuthorizeWithParametersRequest"></param>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> OidcProviderAuthorizeWithParameters(string name, OidcProviderAuthorizeWithParametersRequest oidcProviderAuthorizeWithParametersRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1928,7 +2004,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> EntityUpdateByNameAsync(string name, EntityUpdateByNameRequest entityUpdateByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Create a new group.
+        /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="groupCreateRequest"></param>
@@ -2200,11 +2276,10 @@ namespace Vault.Api
         Task<VaultResponse<Object>> MfaAdminGenerateTotpSecretAsync(MfaAdminGenerateTotpSecretRequest mfaAdminGenerateTotpSecretRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureDuoMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateDuoMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2214,14 +2289,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaConfigureDuoMethodAsync(string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaCreateDuoMethodAsync(MfaCreateDuoMethodRequest mfaCreateDuoMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureOktaMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateOktaMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2231,14 +2305,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaConfigureOktaMethodAsync(string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaCreateOktaMethodAsync(MfaCreateOktaMethodRequest mfaCreateOktaMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigurePingIdMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreatePingIdMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2248,14 +2321,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaConfigurePingIdMethodAsync(string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaCreatePingIdMethodAsync(MfaCreatePingIdMethodRequest mfaCreatePingIdMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method
+        /// Create the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureTotpMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateTotpMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2265,10 +2337,10 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaConfigureTotpMethodAsync(string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaCreateTotpMethodAsync(MfaCreateTotpMethodRequest mfaCreateTotpMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -2300,7 +2372,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> MfaDeleteLoginEnforcementAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -2316,7 +2388,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> MfaDeleteOktaMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -2332,7 +2404,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> MfaDeletePingIdMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Delete a configuration for the given MFA method
+        /// Delete the given MFA method
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -2467,7 +2539,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaReadDuoMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaReadDuoMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Read the current login enforcement
@@ -2499,7 +2571,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaReadMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaReadMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -2515,7 +2587,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaReadOktaMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaReadOktaMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -2531,7 +2603,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaReadPingIdMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaReadPingIdMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -2547,7 +2619,75 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MfaReadTotpMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MfaReadTotpMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateDuoMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> MfaUpdateDuoMethodAsync(string methodId, MfaUpdateDuoMethodRequest mfaUpdateDuoMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateOktaMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> MfaUpdateOktaMethodAsync(string methodId, MfaUpdateOktaMethodRequest mfaUpdateOktaMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdatePingIdMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> MfaUpdatePingIdMethodAsync(string methodId, MfaUpdatePingIdMethodRequest mfaUpdatePingIdMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Update the configuration for the given MFA method
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateTotpMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> MfaUpdateTotpMethodAsync(string methodId, MfaUpdateTotpMethodRequest mfaUpdateTotpMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create or update a login enforcement
@@ -2817,6 +2957,23 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> OidcProviderAuthorizeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="oidcProviderAuthorizeWithParametersRequest"></param>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> OidcProviderAuthorizeWithParametersAsync(string name, OidcProviderAuthorizeWithParametersRequest oidcProviderAuthorizeWithParametersRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6041,7 +6198,7 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Create a new group. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="groupCreateRequest"></param>
@@ -6104,7 +6261,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Create a new group. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="groupCreateRequest"></param>
@@ -8160,11 +8317,10 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureDuoMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateDuoMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8173,17 +8329,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaConfigureDuoMethod(string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaCreateDuoMethod(MfaCreateDuoMethodRequest mfaCreateDuoMethodRequest, TimeSpan? wrapTTL = null)
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigureDuoMethod");
 
-
-            // verify the required parameter 'mfaConfigureDuoMethodRequest' is set
-            if (mfaConfigureDuoMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigureDuoMethodRequest' when calling Identity->MfaConfigureDuoMethod");
+            // verify the required parameter 'mfaCreateDuoMethodRequest' is set
+            if (mfaCreateDuoMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreateDuoMethodRequest' when calling Identity->MfaCreateDuoMethod");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8208,21 +8360,18 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
 
 
-
-
-            requestOptions.Data = mfaConfigureDuoMethodRequest;
+            requestOptions.Data = mfaCreateDuoMethodRequest;
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/duo", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigureDuoMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreateDuoMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -8231,11 +8380,10 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureDuoMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateDuoMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8245,17 +8393,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaConfigureDuoMethodAsync(string methodId, MfaConfigureDuoMethodRequest mfaConfigureDuoMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaCreateDuoMethodAsync(MfaCreateDuoMethodRequest mfaCreateDuoMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigureDuoMethod");
 
-
-            // verify the required parameter 'mfaConfigureDuoMethodRequest' is set
-            if (mfaConfigureDuoMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigureDuoMethodRequest' when calling Identity->MfaConfigureDuoMethod");
+            // verify the required parameter 'mfaCreateDuoMethodRequest' is set
+            if (mfaCreateDuoMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreateDuoMethodRequest' when calling Identity->MfaCreateDuoMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8281,28 +8425,24 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
-
-
-            requestOptions.Data = mfaConfigureDuoMethodRequest;
+            requestOptions.Data = mfaCreateDuoMethodRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigureDuoMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreateDuoMethod", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureOktaMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateOktaMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8311,17 +8451,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaConfigureOktaMethod(string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaCreateOktaMethod(MfaCreateOktaMethodRequest mfaCreateOktaMethodRequest, TimeSpan? wrapTTL = null)
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigureOktaMethod");
 
-
-            // verify the required parameter 'mfaConfigureOktaMethodRequest' is set
-            if (mfaConfigureOktaMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigureOktaMethodRequest' when calling Identity->MfaConfigureOktaMethod");
+            // verify the required parameter 'mfaCreateOktaMethodRequest' is set
+            if (mfaCreateOktaMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreateOktaMethodRequest' when calling Identity->MfaCreateOktaMethod");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8346,21 +8482,18 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
 
 
-
-
-            requestOptions.Data = mfaConfigureOktaMethodRequest;
+            requestOptions.Data = mfaCreateOktaMethodRequest;
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/okta", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigureOktaMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreateOktaMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -8369,11 +8502,10 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureOktaMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateOktaMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8383,17 +8515,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaConfigureOktaMethodAsync(string methodId, MfaConfigureOktaMethodRequest mfaConfigureOktaMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaCreateOktaMethodAsync(MfaCreateOktaMethodRequest mfaCreateOktaMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigureOktaMethod");
 
-
-            // verify the required parameter 'mfaConfigureOktaMethodRequest' is set
-            if (mfaConfigureOktaMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigureOktaMethodRequest' when calling Identity->MfaConfigureOktaMethod");
+            // verify the required parameter 'mfaCreateOktaMethodRequest' is set
+            if (mfaCreateOktaMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreateOktaMethodRequest' when calling Identity->MfaCreateOktaMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8419,28 +8547,24 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
-
-
-            requestOptions.Data = mfaConfigureOktaMethodRequest;
+            requestOptions.Data = mfaCreateOktaMethodRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigureOktaMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreateOktaMethod", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigurePingIdMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreatePingIdMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8449,17 +8573,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaConfigurePingIdMethod(string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaCreatePingIdMethod(MfaCreatePingIdMethodRequest mfaCreatePingIdMethodRequest, TimeSpan? wrapTTL = null)
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigurePingIdMethod");
 
-
-            // verify the required parameter 'mfaConfigurePingIdMethodRequest' is set
-            if (mfaConfigurePingIdMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigurePingIdMethodRequest' when calling Identity->MfaConfigurePingIdMethod");
+            // verify the required parameter 'mfaCreatePingIdMethodRequest' is set
+            if (mfaCreatePingIdMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreatePingIdMethodRequest' when calling Identity->MfaCreatePingIdMethod");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8484,21 +8604,18 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
 
 
-
-
-            requestOptions.Data = mfaConfigurePingIdMethodRequest;
+            requestOptions.Data = mfaCreatePingIdMethodRequest;
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/pingid", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigurePingIdMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreatePingIdMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -8507,11 +8624,10 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigurePingIdMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreatePingIdMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8521,17 +8637,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaConfigurePingIdMethodAsync(string methodId, MfaConfigurePingIdMethodRequest mfaConfigurePingIdMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaCreatePingIdMethodAsync(MfaCreatePingIdMethodRequest mfaCreatePingIdMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigurePingIdMethod");
 
-
-            // verify the required parameter 'mfaConfigurePingIdMethodRequest' is set
-            if (mfaConfigurePingIdMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigurePingIdMethodRequest' when calling Identity->MfaConfigurePingIdMethod");
+            // verify the required parameter 'mfaCreatePingIdMethodRequest' is set
+            if (mfaCreatePingIdMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreatePingIdMethodRequest' when calling Identity->MfaCreatePingIdMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8557,28 +8669,24 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
-
-
-            requestOptions.Data = mfaConfigurePingIdMethodRequest;
+            requestOptions.Data = mfaCreatePingIdMethodRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigurePingIdMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreatePingIdMethod", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureTotpMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateTotpMethodRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8587,17 +8695,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaConfigureTotpMethod(string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaCreateTotpMethod(MfaCreateTotpMethodRequest mfaCreateTotpMethodRequest, TimeSpan? wrapTTL = null)
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigureTotpMethod");
 
-
-            // verify the required parameter 'mfaConfigureTotpMethodRequest' is set
-            if (mfaConfigureTotpMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigureTotpMethodRequest' when calling Identity->MfaConfigureTotpMethod");
+            // verify the required parameter 'mfaCreateTotpMethodRequest' is set
+            if (mfaCreateTotpMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreateTotpMethodRequest' when calling Identity->MfaCreateTotpMethod");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8622,21 +8726,18 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
 
 
-
-
-            requestOptions.Data = mfaConfigureTotpMethodRequest;
+            requestOptions.Data = mfaCreateTotpMethodRequest;
 
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigureTotpMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreateTotpMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -8645,11 +8746,10 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Update or create a configuration for the given MFA method 
+        /// Create the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="mfaConfigureTotpMethodRequest"></param>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="mfaCreateTotpMethodRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8659,17 +8759,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaConfigureTotpMethodAsync(string methodId, MfaConfigureTotpMethodRequest mfaConfigureTotpMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaCreateTotpMethodAsync(MfaCreateTotpMethodRequest mfaCreateTotpMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaConfigureTotpMethod");
 
-
-            // verify the required parameter 'mfaConfigureTotpMethodRequest' is set
-            if (mfaConfigureTotpMethodRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'mfaConfigureTotpMethodRequest' when calling Identity->MfaConfigureTotpMethod");
+            // verify the required parameter 'mfaCreateTotpMethodRequest' is set
+            if (mfaCreateTotpMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaCreateTotpMethodRequest' when calling Identity->MfaCreateTotpMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8695,24 +8791,21 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
 
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
 
-
-
-            requestOptions.Data = mfaConfigureTotpMethodRequest;
+            requestOptions.Data = mfaCreateTotpMethodRequest;
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaConfigureTotpMethod", response);
+                Exception exception = this.ExceptionFactory("MfaCreateTotpMethod", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -8776,7 +8869,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -8962,7 +9055,7 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -9026,7 +9119,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -9087,7 +9180,7 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -9151,7 +9244,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -9212,7 +9305,7 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -9276,7 +9369,7 @@ namespace Vault.Api
 
 
         /// <summary>
-        /// Delete a configuration for the given MFA method 
+        /// Delete the given MFA method 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
@@ -10161,12 +10254,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaReadDuoMethodConfiguration(string methodId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaReadDuoMethod(string methodId, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadDuoMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadDuoMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10204,7 +10297,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadDuoMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadDuoMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10226,12 +10319,12 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaReadDuoMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaReadDuoMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadDuoMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadDuoMethod");
 
 
 
@@ -10267,7 +10360,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadDuoMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadDuoMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10411,12 +10504,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaReadMethodConfiguration(string methodId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaReadMethod(string methodId, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10454,7 +10547,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10476,12 +10569,12 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaReadMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaReadMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadMethod");
 
 
 
@@ -10517,7 +10610,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10536,12 +10629,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaReadOktaMethodConfiguration(string methodId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaReadOktaMethod(string methodId, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadOktaMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadOktaMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10579,7 +10672,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadOktaMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadOktaMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10601,12 +10694,12 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaReadOktaMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaReadOktaMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadOktaMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadOktaMethod");
 
 
 
@@ -10642,7 +10735,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadOktaMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadOktaMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10661,12 +10754,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaReadPingIdMethodConfiguration(string methodId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaReadPingIdMethod(string methodId, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadPingIdMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadPingIdMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10704,7 +10797,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadPingIdMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadPingIdMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10726,12 +10819,12 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaReadPingIdMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaReadPingIdMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadPingIdMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadPingIdMethod");
 
 
 
@@ -10767,7 +10860,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadPingIdMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadPingIdMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10786,12 +10879,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MfaReadTotpMethodConfiguration(string methodId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MfaReadTotpMethod(string methodId, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadTotpMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadTotpMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10829,7 +10922,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadTotpMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadTotpMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -10851,12 +10944,12 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MfaReadTotpMethodConfigurationAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MfaReadTotpMethodAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadTotpMethodConfiguration");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaReadTotpMethod");
 
 
 
@@ -10892,7 +10985,559 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("MfaReadTotpMethodConfiguration", response);
+                Exception exception = this.ExceptionFactory("MfaReadTotpMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateDuoMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> MfaUpdateDuoMethod(string methodId, MfaUpdateDuoMethodRequest mfaUpdateDuoMethodRequest, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdateDuoMethod");
+
+
+            // verify the required parameter 'mfaUpdateDuoMethodRequest' is set
+            if (mfaUpdateDuoMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdateDuoMethodRequest' when calling Identity->MfaUpdateDuoMethod");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+
+
+            requestOptions.Data = mfaUpdateDuoMethodRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdateDuoMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateDuoMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> MfaUpdateDuoMethodAsync(string methodId, MfaUpdateDuoMethodRequest mfaUpdateDuoMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdateDuoMethod");
+
+
+            // verify the required parameter 'mfaUpdateDuoMethodRequest' is set
+            if (mfaUpdateDuoMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdateDuoMethodRequest' when calling Identity->MfaUpdateDuoMethod");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+            requestOptions.Data = mfaUpdateDuoMethodRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdateDuoMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateOktaMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> MfaUpdateOktaMethod(string methodId, MfaUpdateOktaMethodRequest mfaUpdateOktaMethodRequest, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdateOktaMethod");
+
+
+            // verify the required parameter 'mfaUpdateOktaMethodRequest' is set
+            if (mfaUpdateOktaMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdateOktaMethodRequest' when calling Identity->MfaUpdateOktaMethod");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+
+
+            requestOptions.Data = mfaUpdateOktaMethodRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdateOktaMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateOktaMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> MfaUpdateOktaMethodAsync(string methodId, MfaUpdateOktaMethodRequest mfaUpdateOktaMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdateOktaMethod");
+
+
+            // verify the required parameter 'mfaUpdateOktaMethodRequest' is set
+            if (mfaUpdateOktaMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdateOktaMethodRequest' when calling Identity->MfaUpdateOktaMethod");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+            requestOptions.Data = mfaUpdateOktaMethodRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdateOktaMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdatePingIdMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> MfaUpdatePingIdMethod(string methodId, MfaUpdatePingIdMethodRequest mfaUpdatePingIdMethodRequest, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdatePingIdMethod");
+
+
+            // verify the required parameter 'mfaUpdatePingIdMethodRequest' is set
+            if (mfaUpdatePingIdMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdatePingIdMethodRequest' when calling Identity->MfaUpdatePingIdMethod");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+
+
+            requestOptions.Data = mfaUpdatePingIdMethodRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdatePingIdMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdatePingIdMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> MfaUpdatePingIdMethodAsync(string methodId, MfaUpdatePingIdMethodRequest mfaUpdatePingIdMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdatePingIdMethod");
+
+
+            // verify the required parameter 'mfaUpdatePingIdMethodRequest' is set
+            if (mfaUpdatePingIdMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdatePingIdMethodRequest' when calling Identity->MfaUpdatePingIdMethod");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+            requestOptions.Data = mfaUpdatePingIdMethodRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdatePingIdMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateTotpMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> MfaUpdateTotpMethod(string methodId, MfaUpdateTotpMethodRequest mfaUpdateTotpMethodRequest, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdateTotpMethod");
+
+
+            // verify the required parameter 'mfaUpdateTotpMethodRequest' is set
+            if (mfaUpdateTotpMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdateTotpMethodRequest' when calling Identity->MfaUpdateTotpMethod");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+
+
+            requestOptions.Data = mfaUpdateTotpMethodRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdateTotpMethod", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update the configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="mfaUpdateTotpMethodRequest"></param>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> MfaUpdateTotpMethodAsync(string methodId, MfaUpdateTotpMethodRequest mfaUpdateTotpMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->MfaUpdateTotpMethod");
+
+
+            // verify the required parameter 'mfaUpdateTotpMethodRequest' is set
+            if (mfaUpdateTotpMethodRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'mfaUpdateTotpMethodRequest' when calling Identity->MfaUpdateTotpMethod");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+
+
+            requestOptions.Data = mfaUpdateTotpMethodRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("MfaUpdateTotpMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -12982,6 +13627,144 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("OidcProviderAuthorize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="oidcProviderAuthorizeWithParametersRequest"></param>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> OidcProviderAuthorizeWithParameters(string name, OidcProviderAuthorizeWithParametersRequest oidcProviderAuthorizeWithParametersRequest, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->OidcProviderAuthorizeWithParameters");
+
+
+            // verify the required parameter 'oidcProviderAuthorizeWithParametersRequest' is set
+            if (oidcProviderAuthorizeWithParametersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'oidcProviderAuthorizeWithParametersRequest' when calling Identity->OidcProviderAuthorizeWithParameters");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+
+
+            requestOptions.Data = oidcProviderAuthorizeWithParametersRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("OidcProviderAuthorizeWithParameters", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="oidcProviderAuthorizeWithParametersRequest"></param>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> OidcProviderAuthorizeWithParametersAsync(string name, OidcProviderAuthorizeWithParametersRequest oidcProviderAuthorizeWithParametersRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->OidcProviderAuthorizeWithParameters");
+
+
+            // verify the required parameter 'oidcProviderAuthorizeWithParametersRequest' is set
+            if (oidcProviderAuthorizeWithParametersRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'oidcProviderAuthorizeWithParametersRequest' when calling Identity->OidcProviderAuthorizeWithParameters");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+
+            requestOptions.Data = oidcProviderAuthorizeWithParametersRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("OidcProviderAuthorizeWithParameters", response);
                 if (exception != null) throw exception;
             }
 
