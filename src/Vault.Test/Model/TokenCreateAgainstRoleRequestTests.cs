@@ -92,12 +92,21 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Metadata'
+        /// Test the property 'Lease'
         /// </summary>
         [Fact]
-        public void MetadataTest()
+        public void LeaseTest()
         {
-            // TODO unit test for the property 'Metadata'
+            // TODO unit test for the property 'Lease'
+        }
+
+        /// <summary>
+        /// Test the property 'Meta'
+        /// </summary>
+        [Fact]
+        public void MetaTest()
+        {
+            // TODO unit test for the property 'Meta'
         }
 
         /// <summary>

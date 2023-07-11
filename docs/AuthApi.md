@@ -23503,7 +23503,7 @@ No authorization required
 <a name="tokencreate"></a>
 # **TokenCreate**
 
-> void TokenCreate (TokenCreateRequest tokenCreateRequest, string format = default(string), TimeSpan? wrapTTL = null)
+> void TokenCreate (TokenCreateRequest tokenCreateRequest, TimeSpan? wrapTTL = null)
 
 The token create path is used to create new tokens.
 
@@ -23540,11 +23540,6 @@ namespace Example
             var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest | 
             
             
-            
-            var format = "format_example";  // string | Return json formatted output (optional) 
-            
-            
-            
 
             try
             {
@@ -23552,7 +23547,7 @@ namespace Example
                 // The token create path is used to create new tokens.
                 
 
-                apiInstance.TokenCreate(TokenCreateRequest tokenCreateRequest, string format = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.TokenCreate(TokenCreateRequest tokenCreateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23569,7 +23564,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] 
 
 
 ### Return type
@@ -23601,7 +23595,7 @@ No authorization required
 <a name="tokencreateagainstrole"></a>
 # **TokenCreateAgainstRole**
 
-> void TokenCreateAgainstRole (string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, string format = default(string), TimeSpan? wrapTTL = null)
+> void TokenCreateAgainstRole (string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, TimeSpan? wrapTTL = null)
 
 This token create path is used to create new tokens adhering to the given role.
 
@@ -23643,11 +23637,6 @@ namespace Example
             var tokenCreateAgainstRoleRequest = new TokenCreateAgainstRoleRequest(); // TokenCreateAgainstRoleRequest | 
             
             
-            
-            var format = "format_example";  // string | Return json formatted output (optional) 
-            
-            
-            
 
             try
             {
@@ -23655,7 +23644,7 @@ namespace Example
                 // This token create path is used to create new tokens adhering to the given role.
                 
 
-                apiInstance.TokenCreateAgainstRole(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, string format = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.TokenCreateAgainstRole(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23673,7 +23662,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
  **tokenCreateAgainstRoleRequest** | [**TokenCreateAgainstRoleRequest**](TokenCreateAgainstRoleRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] 
 
 
 ### Return type
@@ -23705,7 +23693,7 @@ No authorization required
 <a name="tokencreateorphan"></a>
 # **TokenCreateOrphan**
 
-> void TokenCreateOrphan (TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), TimeSpan? wrapTTL = null)
+> void TokenCreateOrphan (TokenCreateOrphanRequest tokenCreateOrphanRequest, TimeSpan? wrapTTL = null)
 
 The token create path is used to create new orphan tokens.
 
@@ -23742,11 +23730,6 @@ namespace Example
             var tokenCreateOrphanRequest = new TokenCreateOrphanRequest(); // TokenCreateOrphanRequest | 
             
             
-            
-            var format = "format_example";  // string | Return json formatted output (optional) 
-            
-            
-            
 
             try
             {
@@ -23754,7 +23737,7 @@ namespace Example
                 // The token create path is used to create new orphan tokens.
                 
 
-                apiInstance.TokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.TokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23771,7 +23754,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenCreateOrphanRequest** | [**TokenCreateOrphanRequest**](TokenCreateOrphanRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] 
 
 
 ### Return type

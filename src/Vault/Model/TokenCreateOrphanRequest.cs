@@ -42,7 +42,9 @@ namespace Vault.Model
 
         /// <param name="Id">Value for the token.</param>
 
-        /// <param name="Metadata">Arbitrary key&#x3D;value metadata to associate with the token.</param>
+        /// <param name="Lease">Use &#x27;ttl&#x27; instead.</param>
+
+        /// <param name="Meta">Arbitrary key&#x3D;value metadata to associate with the token.</param>
 
         /// <param name="NoDefaultPolicy">Do not include default policy for this token.</param>
 
@@ -54,16 +56,14 @@ namespace Vault.Model
 
         /// <param name="Policies">List of policies for the token.</param>
 
-        /// <param name="Renewable">Allow token to be renewed past its initial TTL up to system/mount maximum TTL.</param>
-
-        /// <param name="RoleName">Name of the role.</param>
+        /// <param name="Renewable">Allow token to be renewed past its initial TTL up to system/mount maximum TTL (default to true).</param>
 
         /// <param name="Ttl">Time to live for this token.</param>
 
         /// <param name="Type">Token type.</param>
 
 
-        public TokenCreateOrphanRequest(string DisplayName = default(string), string EntityAlias = default(string), string ExplicitMaxTtl = default(string), string Id = default(string), Object Metadata = default(Object), bool NoDefaultPolicy = default(bool), bool NoParent = default(bool), int NumUses = default(int), string Period = default(string), List<string> Policies = default(List<string>), bool Renewable = default(bool), string RoleName = default(string), string Ttl = default(string), string Type = default(string))
+        public TokenCreateOrphanRequest(string DisplayName = default(string), string EntityAlias = default(string), string ExplicitMaxTtl = default(string), string Id = default(string), string Lease = default(string), Object Meta = default(Object), bool NoDefaultPolicy = default(bool), bool NoParent = default(bool), int NumUses = default(int), string Period = default(string), List<string> Policies = default(List<string>), bool Renewable = true, string Ttl = default(string), string Type = default(string))
         {
 
             this.DisplayName = DisplayName;
@@ -74,7 +74,9 @@ namespace Vault.Model
 
             this.Id = Id;
 
-            this.Metadata = Metadata;
+            this.Lease = Lease;
+
+            this.Meta = Meta;
 
             this.NoDefaultPolicy = NoDefaultPolicy;
 
@@ -87,8 +89,6 @@ namespace Vault.Model
             this.Policies = Policies;
 
             this.Renewable = Renewable;
-
-            this.RoleName = RoleName;
 
             this.Ttl = Ttl;
 
@@ -133,12 +133,21 @@ namespace Vault.Model
 
 
         /// <summary>
+        /// Use &#x27;ttl&#x27; instead
+        /// </summary>
+        /// <value>Use &#x27;ttl&#x27; instead</value>
+        [DataMember(Name = "lease", EmitDefaultValue = false)]
+
+        [Obsolete] public string Lease { get; set; }
+
+
+        /// <summary>
         /// Arbitrary key&#x3D;value metadata to associate with the token
         /// </summary>
         /// <value>Arbitrary key&#x3D;value metadata to associate with the token</value>
-        [DataMember(Name = "metadata", EmitDefaultValue = false)]
+        [DataMember(Name = "meta", EmitDefaultValue = false)]
 
-        public Object Metadata { get; set; }
+        public Object Meta { get; set; }
 
 
         /// <summary>
@@ -196,15 +205,6 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Name of the role
-        /// </summary>
-        /// <value>Name of the role</value>
-        [DataMember(Name = "role_name", EmitDefaultValue = false)]
-
-        public string RoleName { get; set; }
-
-
-        /// <summary>
         /// Time to live for this token
         /// </summary>
         /// <value>Time to live for this token</value>
@@ -236,14 +236,14 @@ namespace Vault.Model
             sb.Append("  EntityAlias: ").Append(EntityAlias).Append("\n");
             sb.Append("  ExplicitMaxTtl: ").Append(ExplicitMaxTtl).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  Lease: ").Append(Lease).Append("\n");
+            sb.Append("  Meta: ").Append(Meta).Append("\n");
             sb.Append("  NoDefaultPolicy: ").Append(NoDefaultPolicy).Append("\n");
             sb.Append("  NoParent: ").Append(NoParent).Append("\n");
             sb.Append("  NumUses: ").Append(NumUses).Append("\n");
             sb.Append("  Period: ").Append(Period).Append("\n");
             sb.Append("  Policies: ").Append(Policies).Append("\n");
             sb.Append("  Renewable: ").Append(Renewable).Append("\n");
-            sb.Append("  RoleName: ").Append(RoleName).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
@@ -306,9 +306,15 @@ namespace Vault.Model
 
                 ) &&
                 (
-                    this.Metadata == input.Metadata ||
-                    (this.Metadata != null &&
-                    this.Metadata.Equals(input.Metadata))
+                    this.Lease == input.Lease ||
+                    (this.Lease != null &&
+                    this.Lease.Equals(input.Lease))
+
+                ) &&
+                (
+                    this.Meta == input.Meta ||
+                    (this.Meta != null &&
+                    this.Meta.Equals(input.Meta))
 
                 ) &&
                 (
@@ -342,12 +348,6 @@ namespace Vault.Model
                     this.Renewable == input.Renewable ||
 
                     this.Renewable.Equals(input.Renewable)
-                ) &&
-                (
-                    this.RoleName == input.RoleName ||
-                    (this.RoleName != null &&
-                    this.RoleName.Equals(input.RoleName))
-
                 ) &&
                 (
                     this.Ttl == input.Ttl ||
@@ -394,9 +394,14 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Id.GetHashCode();
                 }
 
-                if (this.Metadata != null)
+                if (this.Lease != null)
                 {
-                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Lease.GetHashCode();
+                }
+
+                if (this.Meta != null)
+                {
+                    hashCode = (hashCode * 59) + this.Meta.GetHashCode();
                 }
 
 
@@ -417,11 +422,6 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.Renewable.GetHashCode();
-                if (this.RoleName != null)
-                {
-                    hashCode = (hashCode * 59) + this.RoleName.GetHashCode();
-                }
-
                 if (this.Ttl != null)
                 {
                     hashCode = (hashCode * 59) + this.Ttl.GetHashCode();

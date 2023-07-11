@@ -3537,8 +3537,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3547,7 +3545,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenCreate(TokenCreateRequest tokenCreateRequest, string format = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenCreate(TokenCreateRequest tokenCreateRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
@@ -3555,8 +3553,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateAgainstRoleRequest"></param>
         /// <param name="roleName">Name of the role</param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3565,15 +3561,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenCreateAgainstRole(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, string format = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenCreateAgainstRole(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// The token create path is used to create new orphan tokens.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3582,7 +3576,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -7684,8 +7678,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7695,7 +7687,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenCreateAsync(TokenCreateRequest tokenCreateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
@@ -7703,8 +7695,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateAgainstRoleRequest"></param>
         /// <param name="roleName">Name of the role</param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7714,15 +7704,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenCreateAgainstRoleAsync(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenCreateAgainstRoleAsync(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// The token create path is used to create new orphan tokens.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7732,7 +7720,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -37193,8 +37181,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -37203,7 +37189,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenCreate(TokenCreateRequest tokenCreateRequest, string format = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenCreate(TokenCreateRequest tokenCreateRequest, TimeSpan? wrapTTL = null)
         {
 
 
@@ -37235,14 +37221,6 @@ namespace Vault.Api
 
 
 
-
-            if (format != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
-
-            }
 
 
             requestOptions.Data = tokenCreateRequest;
@@ -37266,8 +37244,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -37277,7 +37253,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenCreateAsync(TokenCreateRequest tokenCreateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -37310,11 +37286,6 @@ namespace Vault.Api
 
 
 
-
-            if (format != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
-            }
             requestOptions.Data = tokenCreateRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -37333,8 +37304,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateAgainstRoleRequest"></param>
         /// <param name="roleName">Name of the role</param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -37343,7 +37312,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenCreateAgainstRole(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, string format = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenCreateAgainstRole(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'roleName' is set
@@ -37382,14 +37351,6 @@ namespace Vault.Api
 
 
 
-
-            if (format != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
-
-            }
 
 
             requestOptions.Data = tokenCreateAgainstRoleRequest;
@@ -37414,8 +37375,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateAgainstRoleRequest"></param>
         /// <param name="roleName">Name of the role</param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -37425,7 +37384,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenCreateAgainstRoleAsync(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenCreateAgainstRoleAsync(string roleName, TokenCreateAgainstRoleRequest tokenCreateAgainstRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'roleName' is set
@@ -37465,11 +37424,6 @@ namespace Vault.Api
 
 
 
-
-            if (format != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
-            }
             requestOptions.Data = tokenCreateAgainstRoleRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create/{role_name}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -37487,8 +37441,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -37497,7 +37449,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, TimeSpan? wrapTTL = null)
         {
 
 
@@ -37529,14 +37481,6 @@ namespace Vault.Api
 
 
 
-
-            if (format != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
-
-            }
 
 
             requestOptions.Data = tokenCreateOrphanRequest;
@@ -37560,8 +37504,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -37571,7 +37513,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -37604,11 +37546,6 @@ namespace Vault.Api
 
 
 
-
-            if (format != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "format", format));
-            }
             requestOptions.Data = tokenCreateOrphanRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/auth/token/create-orphan", requestOptions, cancellationToken).ConfigureAwait(false);
