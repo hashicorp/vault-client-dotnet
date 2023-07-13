@@ -23,28 +23,24 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PoliciesListResponse
+    /// RawListResponse
     /// </summary>
-    [DataContract(Name = "PoliciesListResponse")]
-    public partial class PoliciesListResponse : IEquatable<PoliciesListResponse>, IValidatableObject
+    [DataContract(Name = "RawListResponse")]
+    public partial class RawListResponse : IEquatable<RawListResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PoliciesListResponse" /> class.
+        /// Initializes a new instance of the <see cref="RawListResponse" /> class.
         /// </summary>
 
         /// <param name="Keys">Keys.</param>
 
-        /// <param name="Policies">Policies.</param>
 
-
-        public PoliciesListResponse(List<string> Keys = default(List<string>), List<string> Policies = default(List<string>))
+        public RawListResponse(List<string> Keys = default(List<string>))
         {
 
             this.Keys = Keys;
-
-            this.Policies = Policies;
 
         }
 
@@ -56,14 +52,6 @@ namespace Vault.Model
         public List<string> Keys { get; set; }
 
 
-        /// <summary>
-        /// Gets or Sets Policies
-        /// </summary>
-        [DataMember(Name = "policies", EmitDefaultValue = false)]
-
-        public List<string> Policies { get; set; }
-
-
 
 
         /// <summary>
@@ -73,9 +61,8 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PoliciesListResponse {\n");
+            sb.Append("class RawListResponse {\n");
             sb.Append("  Keys: ").Append(Keys).Append("\n");
-            sb.Append("  Policies: ").Append(Policies).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,15 +83,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PoliciesListResponse);
+            return this.Equals(input as RawListResponse);
         }
 
         /// <summary>
-        /// Returns true if PoliciesListResponse instances are equal
+        /// Returns true if RawListResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of PoliciesListResponse to be compared</param>
+        /// <param name="input">Instance of RawListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PoliciesListResponse input)
+        public bool Equals(RawListResponse input)
         {
             if (input == null)
             {
@@ -116,12 +103,6 @@ namespace Vault.Model
                     this.Keys != null &&
                     input.Keys != null &&
                     this.Keys.SequenceEqual(input.Keys)
-                ) &&
-                (
-                    this.Policies == input.Policies ||
-                    this.Policies != null &&
-                    input.Policies != null &&
-                    this.Policies.SequenceEqual(input.Policies)
                 );
 
         }
@@ -139,11 +120,6 @@ namespace Vault.Model
                 if (this.Keys != null)
                 {
                     hashCode = (hashCode * 59) + this.Keys.GetHashCode();
-                }
-
-                if (this.Policies != null)
-                {
-                    hashCode = (hashCode * 59) + this.Policies.GetHashCode();
                 }
 
                 return hashCode;

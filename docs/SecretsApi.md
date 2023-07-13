@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**AliCloudDeleteConfiguration**](SecretsApi.md#aliclouddeleteconfiguration) | **DELETE** /{alicloud_mount_path}/config | 
 [**AliCloudDeleteRole**](SecretsApi.md#aliclouddeleterole) | **DELETE** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
 [**AliCloudGenerateCredentials**](SecretsApi.md#alicloudgeneratecredentials) | **GET** /{alicloud_mount_path}/creds/{name} | Generate an API key or STS credential using the given role&#x27;s configuration.&#x27;
-[**AliCloudListRoles**](SecretsApi.md#alicloudlistroles) | **GET** /{alicloud_mount_path}/role | List the existing roles in this backend.
+[**AliCloudListRoles**](SecretsApi.md#alicloudlistroles) | **GET** /{alicloud_mount_path}/role/ | List the existing roles in this backend.
 [**AliCloudReadConfiguration**](SecretsApi.md#alicloudreadconfiguration) | **GET** /{alicloud_mount_path}/config | 
 [**AliCloudReadRole**](SecretsApi.md#alicloudreadrole) | **GET** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
 [**AliCloudWriteRole**](SecretsApi.md#alicloudwriterole) | **POST** /{alicloud_mount_path}/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**AwsGenerateCredentialsWithParameters**](SecretsApi.md#awsgeneratecredentialswithparameters) | **POST** /{aws_mount_path}/creds/{name} | 
 [**AwsGenerateStsCredentials**](SecretsApi.md#awsgeneratestscredentials) | **GET** /{aws_mount_path}/sts/{name} | 
 [**AwsGenerateStsCredentialsWithParameters**](SecretsApi.md#awsgeneratestscredentialswithparameters) | **POST** /{aws_mount_path}/sts/{name} | 
-[**AwsListRoles**](SecretsApi.md#awslistroles) | **GET** /{aws_mount_path}/roles | List the existing roles in this backend
+[**AwsListRoles**](SecretsApi.md#awslistroles) | **GET** /{aws_mount_path}/roles/ | List the existing roles in this backend
 [**AwsReadLeaseConfiguration**](SecretsApi.md#awsreadleaseconfiguration) | **GET** /{aws_mount_path}/config/lease | 
 [**AwsReadRole**](SecretsApi.md#awsreadrole) | **GET** /{aws_mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
 [**AwsReadRootIamCredentialsConfiguration**](SecretsApi.md#awsreadrootiamcredentialsconfiguration) | **GET** /{aws_mount_path}/config/root | 
@@ -32,7 +32,7 @@ Method | HTTP request | Description
 [**AzureConfigure**](SecretsApi.md#azureconfigure) | **POST** /{azure_mount_path}/config | 
 [**AzureDeleteConfiguration**](SecretsApi.md#azuredeleteconfiguration) | **DELETE** /{azure_mount_path}/config | 
 [**AzureDeleteRole**](SecretsApi.md#azuredeleterole) | **DELETE** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-[**AzureListRoles**](SecretsApi.md#azurelistroles) | **GET** /{azure_mount_path}/roles | List existing roles.
+[**AzureListRoles**](SecretsApi.md#azurelistroles) | **GET** /{azure_mount_path}/roles/ | List existing roles.
 [**AzureReadConfiguration**](SecretsApi.md#azurereadconfiguration) | **GET** /{azure_mount_path}/config | 
 [**AzureReadRole**](SecretsApi.md#azurereadrole) | **GET** /{azure_mount_path}/roles/{name} | Manage the Vault roles used to generate Azure credentials.
 [**AzureRequestServicePrincipalCredentials**](SecretsApi.md#azurerequestserviceprincipalcredentials) | **GET** /{azure_mount_path}/creds/{role} | 
@@ -41,11 +41,12 @@ Method | HTTP request | Description
 [**ConsulConfigureAccess**](SecretsApi.md#consulconfigureaccess) | **POST** /{consul_mount_path}/config/access | 
 [**ConsulDeleteRole**](SecretsApi.md#consuldeleterole) | **DELETE** /{consul_mount_path}/roles/{name} | 
 [**ConsulGenerateCredentials**](SecretsApi.md#consulgeneratecredentials) | **GET** /{consul_mount_path}/creds/{role} | 
-[**ConsulListRoles**](SecretsApi.md#consullistroles) | **GET** /{consul_mount_path}/roles | 
+[**ConsulListRoles**](SecretsApi.md#consullistroles) | **GET** /{consul_mount_path}/roles/ | 
 [**ConsulReadAccessConfiguration**](SecretsApi.md#consulreadaccessconfiguration) | **GET** /{consul_mount_path}/config/access | 
 [**ConsulReadRole**](SecretsApi.md#consulreadrole) | **GET** /{consul_mount_path}/roles/{name} | 
 [**ConsulWriteRole**](SecretsApi.md#consulwriterole) | **POST** /{consul_mount_path}/roles/{name} | 
 [**CubbyholeDelete**](SecretsApi.md#cubbyholedelete) | **DELETE** /cubbyhole/{path} | Deletes the secret at the specified location.
+[**CubbyholeList**](SecretsApi.md#cubbyholelist) | **GET** /cubbyhole/{path}/ | List secret entries at the specified location.
 [**CubbyholeRead**](SecretsApi.md#cubbyholeread) | **GET** /cubbyhole/{path} | Retrieve the secret at the specified location.
 [**CubbyholeWrite**](SecretsApi.md#cubbyholewrite) | **POST** /cubbyhole/{path} | Store a secret at the specified location.
 [**DatabaseConfigureConnection**](SecretsApi.md#databaseconfigureconnection) | **POST** /{database_mount_path}/config/{name} | 
@@ -53,9 +54,9 @@ Method | HTTP request | Description
 [**DatabaseDeleteRole**](SecretsApi.md#databasedeleterole) | **DELETE** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
 [**DatabaseDeleteStaticRole**](SecretsApi.md#databasedeletestaticrole) | **DELETE** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
 [**DatabaseGenerateCredentials**](SecretsApi.md#databasegeneratecredentials) | **GET** /{database_mount_path}/creds/{name} | Request database credentials for a certain role.
-[**DatabaseListConnections**](SecretsApi.md#databaselistconnections) | **GET** /{database_mount_path}/config | Configure connection details to a database plugin.
-[**DatabaseListRoles**](SecretsApi.md#databaselistroles) | **GET** /{database_mount_path}/roles | Manage the roles that can be created with this backend.
-[**DatabaseListStaticRoles**](SecretsApi.md#databaseliststaticroles) | **GET** /{database_mount_path}/static-roles | Manage the static roles that can be created with this backend.
+[**DatabaseListConnections**](SecretsApi.md#databaselistconnections) | **GET** /{database_mount_path}/config/ | Configure connection details to a database plugin.
+[**DatabaseListRoles**](SecretsApi.md#databaselistroles) | **GET** /{database_mount_path}/roles/ | Manage the roles that can be created with this backend.
+[**DatabaseListStaticRoles**](SecretsApi.md#databaseliststaticroles) | **GET** /{database_mount_path}/static-roles/ | Manage the static roles that can be created with this backend.
 [**DatabaseReadConnectionConfiguration**](SecretsApi.md#databasereadconnectionconfiguration) | **GET** /{database_mount_path}/config/{name} | 
 [**DatabaseReadRole**](SecretsApi.md#databasereadrole) | **GET** /{database_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
 [**DatabaseReadStaticRole**](SecretsApi.md#databasereadstaticrole) | **GET** /{database_mount_path}/static-roles/{name} | Manage the static roles that can be created with this backend.
@@ -85,7 +86,7 @@ Method | HTTP request | Description
 [**GoogleCloudKmsDeleteKey**](SecretsApi.md#googlecloudkmsdeletekey) | **DELETE** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
 [**GoogleCloudKmsDeregisterKey**](SecretsApi.md#googlecloudkmsderegisterkey) | **POST** /{gcpkms_mount_path}/keys/deregister/{key} | 
 [**GoogleCloudKmsEncrypt**](SecretsApi.md#googlecloudkmsencrypt) | **POST** /{gcpkms_mount_path}/encrypt/{key} | Encrypt a plaintext value using a named key
-[**GoogleCloudKmsListKeys**](SecretsApi.md#googlecloudkmslistkeys) | **GET** /{gcpkms_mount_path}/keys | List named keys
+[**GoogleCloudKmsListKeys**](SecretsApi.md#googlecloudkmslistkeys) | **GET** /{gcpkms_mount_path}/keys/ | List named keys
 [**GoogleCloudKmsReadConfiguration**](SecretsApi.md#googlecloudkmsreadconfiguration) | **GET** /{gcpkms_mount_path}/config | 
 [**GoogleCloudKmsReadKey**](SecretsApi.md#googlecloudkmsreadkey) | **GET** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
 [**GoogleCloudKmsReadKeyConfiguration**](SecretsApi.md#googlecloudkmsreadkeyconfiguration) | **GET** /{gcpkms_mount_path}/keys/config/{key} | 
@@ -97,9 +98,9 @@ Method | HTTP request | Description
 [**GoogleCloudKmsTrimKeyVersions**](SecretsApi.md#googlecloudkmstrimkeyversions) | **POST** /{gcpkms_mount_path}/keys/trim/{key} | 
 [**GoogleCloudKmsVerify**](SecretsApi.md#googlecloudkmsverify) | **POST** /{gcpkms_mount_path}/verify/{key} | Verify a signature using a named key
 [**GoogleCloudKmsWriteKey**](SecretsApi.md#googlecloudkmswritekey) | **POST** /{gcpkms_mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-[**GoogleCloudListImpersonatedAccounts**](SecretsApi.md#googlecloudlistimpersonatedaccounts) | **GET** /{gcp_mount_path}/impersonated-account | 
-[**GoogleCloudListRolesets**](SecretsApi.md#googlecloudlistrolesets) | **GET** /{gcp_mount_path}/roleset | 
-[**GoogleCloudListStaticAccounts**](SecretsApi.md#googlecloudliststaticaccounts) | **GET** /{gcp_mount_path}/static-account | 
+[**GoogleCloudListImpersonatedAccounts**](SecretsApi.md#googlecloudlistimpersonatedaccounts) | **GET** /{gcp_mount_path}/impersonated-account/ | 
+[**GoogleCloudListRolesets**](SecretsApi.md#googlecloudlistrolesets) | **GET** /{gcp_mount_path}/roleset/ | 
+[**GoogleCloudListStaticAccounts**](SecretsApi.md#googlecloudliststaticaccounts) | **GET** /{gcp_mount_path}/static-account/ | 
 [**GoogleCloudReadConfiguration**](SecretsApi.md#googlecloudreadconfiguration) | **GET** /{gcp_mount_path}/config | 
 [**GoogleCloudReadImpersonatedAccount**](SecretsApi.md#googlecloudreadimpersonatedaccount) | **GET** /{gcp_mount_path}/impersonated-account/{name} | 
 [**GoogleCloudReadRoleset**](SecretsApi.md#googlecloudreadroleset) | **GET** /{gcp_mount_path}/roleset/{name} | 
@@ -116,11 +117,12 @@ Method | HTTP request | Description
 [**KubernetesDeleteConfiguration**](SecretsApi.md#kubernetesdeleteconfiguration) | **DELETE** /{kubernetes_mount_path}/config | 
 [**KubernetesDeleteRole**](SecretsApi.md#kubernetesdeleterole) | **DELETE** /{kubernetes_mount_path}/roles/{name} | 
 [**KubernetesGenerateCredentials**](SecretsApi.md#kubernetesgeneratecredentials) | **POST** /{kubernetes_mount_path}/creds/{name} | 
-[**KubernetesListRoles**](SecretsApi.md#kuberneteslistroles) | **GET** /{kubernetes_mount_path}/roles | 
+[**KubernetesListRoles**](SecretsApi.md#kuberneteslistroles) | **GET** /{kubernetes_mount_path}/roles/ | 
 [**KubernetesReadConfiguration**](SecretsApi.md#kubernetesreadconfiguration) | **GET** /{kubernetes_mount_path}/config | 
 [**KubernetesReadRole**](SecretsApi.md#kubernetesreadrole) | **GET** /{kubernetes_mount_path}/roles/{name} | 
 [**KubernetesWriteRole**](SecretsApi.md#kuberneteswriterole) | **POST** /{kubernetes_mount_path}/roles/{name} | 
 [**KvV1Delete**](SecretsApi.md#kvv1delete) | **DELETE** /{kv_v1_mount_path}/{path} | 
+[**KvV1List**](SecretsApi.md#kvv1list) | **GET** /{kv_v1_mount_path}/{path}/ | 
 [**KvV1Read**](SecretsApi.md#kvv1read) | **GET** /{kv_v1_mount_path}/{path} | 
 [**KvV1Write**](SecretsApi.md#kvv1write) | **POST** /{kv_v1_mount_path}/{path} | 
 [**KvV2Configure**](SecretsApi.md#kvv2configure) | **POST** /{kv_v2_mount_path}/config | Configure backend level settings that are applied to every key in the key-value store.
@@ -128,6 +130,7 @@ Method | HTTP request | Description
 [**KvV2DeleteMetadata**](SecretsApi.md#kvv2deletemetadata) | **DELETE** /{kv_v2_mount_path}/metadata/{path} | 
 [**KvV2DeleteVersions**](SecretsApi.md#kvv2deleteversions) | **POST** /{kv_v2_mount_path}/delete/{path} | 
 [**KvV2DestroyVersions**](SecretsApi.md#kvv2destroyversions) | **POST** /{kv_v2_mount_path}/destroy/{path} | 
+[**KvV2ListMetadata**](SecretsApi.md#kvv2listmetadata) | **GET** /{kv_v2_mount_path}/metadata/{path}/ | 
 [**KvV2Read**](SecretsApi.md#kvv2read) | **GET** /{kv_v2_mount_path}/data/{path} | 
 [**KvV2ReadConfiguration**](SecretsApi.md#kvv2readconfiguration) | **GET** /{kv_v2_mount_path}/config | Read the backend level settings.
 [**KvV2ReadMetadata**](SecretsApi.md#kvv2readmetadata) | **GET** /{kv_v2_mount_path}/metadata/{path} | 
@@ -145,10 +148,10 @@ Method | HTTP request | Description
 [**LdapLibraryConfigure**](SecretsApi.md#ldaplibraryconfigure) | **POST** /{ldap_mount_path}/library/{name} | Update a library set.
 [**LdapLibraryDelete**](SecretsApi.md#ldaplibrarydelete) | **DELETE** /{ldap_mount_path}/library/{name} | Delete a library set.
 [**LdapLibraryForceCheckIn**](SecretsApi.md#ldaplibraryforcecheckin) | **POST** /{ldap_mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
-[**LdapLibraryList**](SecretsApi.md#ldaplibrarylist) | **GET** /{ldap_mount_path}/library | 
+[**LdapLibraryList**](SecretsApi.md#ldaplibrarylist) | **GET** /{ldap_mount_path}/library/ | 
 [**LdapLibraryRead**](SecretsApi.md#ldaplibraryread) | **GET** /{ldap_mount_path}/library/{name} | Read a library set.
-[**LdapListDynamicRoles**](SecretsApi.md#ldaplistdynamicroles) | **GET** /{ldap_mount_path}/role | 
-[**LdapListStaticRoles**](SecretsApi.md#ldapliststaticroles) | **GET** /{ldap_mount_path}/static-role | 
+[**LdapListDynamicRoles**](SecretsApi.md#ldaplistdynamicroles) | **GET** /{ldap_mount_path}/role/ | 
+[**LdapListStaticRoles**](SecretsApi.md#ldapliststaticroles) | **GET** /{ldap_mount_path}/static-role/ | 
 [**LdapReadConfiguration**](SecretsApi.md#ldapreadconfiguration) | **GET** /{ldap_mount_path}/config | 
 [**LdapReadDynamicRole**](SecretsApi.md#ldapreaddynamicrole) | **GET** /{ldap_mount_path}/role/{name} | 
 [**LdapReadStaticRole**](SecretsApi.md#ldapreadstaticrole) | **GET** /{ldap_mount_path}/static-role/{name} | 
@@ -161,7 +164,7 @@ Method | HTTP request | Description
 [**MongoDbAtlasConfigure**](SecretsApi.md#mongodbatlasconfigure) | **POST** /{mongodbatlas_mount_path}/config | 
 [**MongoDbAtlasDeleteRole**](SecretsApi.md#mongodbatlasdeleterole) | **DELETE** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 [**MongoDbAtlasGenerateCredentials**](SecretsApi.md#mongodbatlasgeneratecredentials) | **GET** /{mongodbatlas_mount_path}/creds/{name} | 
-[**MongoDbAtlasListRoles**](SecretsApi.md#mongodbatlaslistroles) | **GET** /{mongodbatlas_mount_path}/roles | List the existing roles in this backend
+[**MongoDbAtlasListRoles**](SecretsApi.md#mongodbatlaslistroles) | **GET** /{mongodbatlas_mount_path}/roles/ | List the existing roles in this backend
 [**MongoDbAtlasReadConfiguration**](SecretsApi.md#mongodbatlasreadconfiguration) | **GET** /{mongodbatlas_mount_path}/config | 
 [**MongoDbAtlasReadRole**](SecretsApi.md#mongodbatlasreadrole) | **GET** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
 [**MongoDbAtlasWriteRole**](SecretsApi.md#mongodbatlaswriterole) | **POST** /{mongodbatlas_mount_path}/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
@@ -171,7 +174,7 @@ Method | HTTP request | Description
 [**NomadDeleteLeaseConfiguration**](SecretsApi.md#nomaddeleteleaseconfiguration) | **DELETE** /{nomad_mount_path}/config/lease | 
 [**NomadDeleteRole**](SecretsApi.md#nomaddeleterole) | **DELETE** /{nomad_mount_path}/role/{name} | 
 [**NomadGenerateCredentials**](SecretsApi.md#nomadgeneratecredentials) | **GET** /{nomad_mount_path}/creds/{name} | 
-[**NomadListRoles**](SecretsApi.md#nomadlistroles) | **GET** /{nomad_mount_path}/role | 
+[**NomadListRoles**](SecretsApi.md#nomadlistroles) | **GET** /{nomad_mount_path}/role/ | 
 [**NomadReadAccessConfiguration**](SecretsApi.md#nomadreadaccessconfiguration) | **GET** /{nomad_mount_path}/config/access | 
 [**NomadReadLeaseConfiguration**](SecretsApi.md#nomadreadleaseconfiguration) | **GET** /{nomad_mount_path}/config/lease | 
 [**NomadReadRole**](SecretsApi.md#nomadreadrole) | **GET** /{nomad_mount_path}/role/{name} | 
@@ -219,12 +222,12 @@ Method | HTTP request | Description
 [**PkiIssuersGenerateRoot**](SecretsApi.md#pkiissuersgenerateroot) | **POST** /{pki_mount_path}/issuers/generate/root/{exported} | 
 [**PkiIssuersImportBundle**](SecretsApi.md#pkiissuersimportbundle) | **POST** /{pki_mount_path}/issuers/import/bundle | 
 [**PkiIssuersImportCert**](SecretsApi.md#pkiissuersimportcert) | **POST** /{pki_mount_path}/issuers/import/cert | 
-[**PkiListCerts**](SecretsApi.md#pkilistcerts) | **GET** /{pki_mount_path}/certs | 
-[**PkiListEabKeys**](SecretsApi.md#pkilisteabkeys) | **GET** /{pki_mount_path}/eab | 
-[**PkiListIssuers**](SecretsApi.md#pkilistissuers) | **GET** /{pki_mount_path}/issuers | 
-[**PkiListKeys**](SecretsApi.md#pkilistkeys) | **GET** /{pki_mount_path}/keys | 
-[**PkiListRevokedCerts**](SecretsApi.md#pkilistrevokedcerts) | **GET** /{pki_mount_path}/certs/revoked | 
-[**PkiListRoles**](SecretsApi.md#pkilistroles) | **GET** /{pki_mount_path}/roles | 
+[**PkiListCerts**](SecretsApi.md#pkilistcerts) | **GET** /{pki_mount_path}/certs/ | 
+[**PkiListEabKeys**](SecretsApi.md#pkilisteabkeys) | **GET** /{pki_mount_path}/eab/ | 
+[**PkiListIssuers**](SecretsApi.md#pkilistissuers) | **GET** /{pki_mount_path}/issuers/ | 
+[**PkiListKeys**](SecretsApi.md#pkilistkeys) | **GET** /{pki_mount_path}/keys/ | 
+[**PkiListRevokedCerts**](SecretsApi.md#pkilistrevokedcerts) | **GET** /{pki_mount_path}/certs/revoked/ | 
+[**PkiListRoles**](SecretsApi.md#pkilistroles) | **GET** /{pki_mount_path}/roles/ | 
 [**PkiQueryOcsp**](SecretsApi.md#pkiqueryocsp) | **POST** /{pki_mount_path}/ocsp | 
 [**PkiQueryOcspWithGetReq**](SecretsApi.md#pkiqueryocspwithgetreq) | **GET** /{pki_mount_path}/ocsp/{req} | 
 [**PkiReadAcmeConfiguration**](SecretsApi.md#pkireadacmeconfiguration) | **GET** /{pki_mount_path}/config/acme | 
@@ -323,7 +326,7 @@ Method | HTTP request | Description
 [**RabbitMqConfigureConnection**](SecretsApi.md#rabbitmqconfigureconnection) | **POST** /{rabbitmq_mount_path}/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
 [**RabbitMqConfigureLease**](SecretsApi.md#rabbitmqconfigurelease) | **POST** /{rabbitmq_mount_path}/config/lease | 
 [**RabbitMqDeleteRole**](SecretsApi.md#rabbitmqdeleterole) | **DELETE** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
-[**RabbitMqListRoles**](SecretsApi.md#rabbitmqlistroles) | **GET** /{rabbitmq_mount_path}/roles | Manage the roles that can be created with this backend.
+[**RabbitMqListRoles**](SecretsApi.md#rabbitmqlistroles) | **GET** /{rabbitmq_mount_path}/roles/ | Manage the roles that can be created with this backend.
 [**RabbitMqReadLeaseConfiguration**](SecretsApi.md#rabbitmqreadleaseconfiguration) | **GET** /{rabbitmq_mount_path}/config/lease | 
 [**RabbitMqReadRole**](SecretsApi.md#rabbitmqreadrole) | **GET** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
 [**RabbitMqRequestCredentials**](SecretsApi.md#rabbitmqrequestcredentials) | **GET** /{rabbitmq_mount_path}/creds/{name} | Request RabbitMQ credentials for a certain role.
@@ -335,7 +338,7 @@ Method | HTTP request | Description
 [**SshDeleteZeroAddressConfiguration**](SecretsApi.md#sshdeletezeroaddressconfiguration) | **DELETE** /{ssh_mount_path}/config/zeroaddress | 
 [**SshGenerateCredentials**](SecretsApi.md#sshgeneratecredentials) | **POST** /{ssh_mount_path}/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
 [**SshIssueCertificate**](SecretsApi.md#sshissuecertificate) | **POST** /{ssh_mount_path}/issue/{role} | 
-[**SshListRoles**](SecretsApi.md#sshlistroles) | **GET** /{ssh_mount_path}/roles | Manage the &#x27;roles&#x27; that can be created with this backend.
+[**SshListRoles**](SecretsApi.md#sshlistroles) | **GET** /{ssh_mount_path}/roles/ | Manage the &#x27;roles&#x27; that can be created with this backend.
 [**SshListRolesByIp**](SecretsApi.md#sshlistrolesbyip) | **POST** /{ssh_mount_path}/lookup | List all the roles associated with the given IP address.
 [**SshReadCaConfiguration**](SecretsApi.md#sshreadcaconfiguration) | **GET** /{ssh_mount_path}/config/ca | 
 [**SshReadPublicKey**](SecretsApi.md#sshreadpublickey) | **GET** /{ssh_mount_path}/public_key | Retrieve the public key.
@@ -349,7 +352,7 @@ Method | HTTP request | Description
 [**TerraformCloudDeleteConfiguration**](SecretsApi.md#terraformclouddeleteconfiguration) | **DELETE** /{terraform_mount_path}/config | 
 [**TerraformCloudDeleteRole**](SecretsApi.md#terraformclouddeleterole) | **DELETE** /{terraform_mount_path}/role/{name} | 
 [**TerraformCloudGenerateCredentials**](SecretsApi.md#terraformcloudgeneratecredentials) | **GET** /{terraform_mount_path}/creds/{name} | 
-[**TerraformCloudListRoles**](SecretsApi.md#terraformcloudlistroles) | **GET** /{terraform_mount_path}/role | 
+[**TerraformCloudListRoles**](SecretsApi.md#terraformcloudlistroles) | **GET** /{terraform_mount_path}/role/ | 
 [**TerraformCloudReadConfiguration**](SecretsApi.md#terraformcloudreadconfiguration) | **GET** /{terraform_mount_path}/config | 
 [**TerraformCloudReadRole**](SecretsApi.md#terraformcloudreadrole) | **GET** /{terraform_mount_path}/role/{name} | 
 [**TerraformCloudRotateRole**](SecretsApi.md#terraformcloudrotaterole) | **POST** /{terraform_mount_path}/rotate-role/{name} | 
@@ -357,7 +360,7 @@ Method | HTTP request | Description
 [**TotpCreateKey**](SecretsApi.md#totpcreatekey) | **POST** /{totp_mount_path}/keys/{name} | 
 [**TotpDeleteKey**](SecretsApi.md#totpdeletekey) | **DELETE** /{totp_mount_path}/keys/{name} | 
 [**TotpGenerateCode**](SecretsApi.md#totpgeneratecode) | **GET** /{totp_mount_path}/code/{name} | 
-[**TotpListKeys**](SecretsApi.md#totplistkeys) | **GET** /{totp_mount_path}/keys | Manage the keys that can be created with this backend.
+[**TotpListKeys**](SecretsApi.md#totplistkeys) | **GET** /{totp_mount_path}/keys/ | Manage the keys that can be created with this backend.
 [**TotpReadKey**](SecretsApi.md#totpreadkey) | **GET** /{totp_mount_path}/keys/{name} | 
 [**TotpValidateCode**](SecretsApi.md#totpvalidatecode) | **POST** /{totp_mount_path}/code/{name} | 
 [**TransitBackUpKey**](SecretsApi.md#transitbackupkey) | **GET** /{transit_mount_path}/backup/{name} | Backup the named key
@@ -383,7 +386,7 @@ Method | HTTP request | Description
 [**TransitHashWithAlgorithm**](SecretsApi.md#transithashwithalgorithm) | **POST** /{transit_mount_path}/hash/{urlalgorithm} | Generate a hash sum for input data
 [**TransitImportKey**](SecretsApi.md#transitimportkey) | **POST** /{transit_mount_path}/keys/{name}/import | Imports an externally-generated key into a new transit key
 [**TransitImportKeyVersion**](SecretsApi.md#transitimportkeyversion) | **POST** /{transit_mount_path}/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
-[**TransitListKeys**](SecretsApi.md#transitlistkeys) | **GET** /{transit_mount_path}/keys | Managed named encryption keys
+[**TransitListKeys**](SecretsApi.md#transitlistkeys) | **GET** /{transit_mount_path}/keys/ | Managed named encryption keys
 [**TransitReadCacheConfiguration**](SecretsApi.md#transitreadcacheconfiguration) | **GET** /{transit_mount_path}/cache-config | Returns the size of the active cache
 [**TransitReadKey**](SecretsApi.md#transitreadkey) | **GET** /{transit_mount_path}/keys/{name} | 
 [**TransitReadKeysConfiguration**](SecretsApi.md#transitreadkeysconfiguration) | **GET** /{transit_mount_path}/config/keys | 
@@ -4449,10 +4452,220 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="cubbyholelist"></a>
+# **CubbyholeList**
+
+> void CubbyholeList (string path, TimeSpan? wrapTTL = null)
+
+List secret entries at the specified location.
+
+CodegenOperation{responseHeaders=[], hasAuthMethods=false, hasConsumes=false, hasProduces=false, hasParams=true, hasOptionalParams=false, hasRequiredParams=true, returnTypeIsPrimitive=false, returnSimpleType=false, subresourceOperation=false, isMap=false, returnProperty=null, isArray=false, isMultipart=false, isResponseBinary=false, isResponseFile=false, isResponseFile=false, hasReference=false, hasDefaultResponse=false, hasErrorResponseObject=false, isRestfulIndex=false, isRestfulShow=false, isRestfulCreate=false, isRestfulUpdate=false, isRestfulDestroy=false, isRestful=false, isDeprecated=false, isCallbackRequest=false, uniqueItems='false, path='/cubbyhole/{path}/', operationId='CubbyholeList', returnType='null', httpMethod='GET', returnBaseType='null', returnContainer='null', summary='List secret entries at the specified location.', unescapedNotes='Folders are suffixed with /. The input must be a folder; list on a file will not return a value. The values themselves are not accessible via this command.', notes='Folders are suffixed with /. The input must be a folder; list on a file will not return a value. The values themselves are not accessible via this command.', baseName='Secrets', defaultResponse='null', discriminator=null, consumes=null, produces=null, prioritizedContentTypes=null, servers=[], bodyParam=null, allParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='path', paramName='path', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Specifies the path of the secret.', unescapedDescription='Specifies the path of the secret.', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"path_example"', jsonSchema='{
+  "name" : "path",
+  "in" : "path",
+  "description" : "Specifies the path of the secret.",
+  "required" : true,
+  "style" : "simple",
+  "explode" : false,
+  "schema" : {
+    "type" : "string"
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=false, _enum=null, allowableValues=null, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='path', complexType='null', getter='getPath', setter='setPath', description='null', dataType='string', datatypeWithEnum='string', dataFormat='null', name='Path', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.path;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string"
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=false, isInnerEnum=false, isEnumRef=false, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=null, allowableValues=null, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='Path', nameInSnakeCase='PATH', enumName='null', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}, CodegenParameter{isFormParam=false, isQueryParam=true, isPathParam=false, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=true, baseName='list', paramName='list', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', collectionFormat='null', description='Must be set to `true`', unescapedDescription='Must be set to `true`', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='ListEnum', style='form', deepObject='false', allowEmptyValue='false', example='"true"', jsonSchema='{
+  "name" : "list",
+  "in" : "query",
+  "description" : "Must be set to `true`",
+  "required" : true,
+  "style" : "form",
+  "explode" : true,
+  "schema" : {
+    "type" : "string",
+    "enum" : [ "true" ]
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=true, _enum=[true], allowableValues={values=[true], enumVars=[{name=True, isString=true, value=true}]}, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='list', complexType='null', getter='getList', setter='setList', description='null', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', name='List', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.list;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string",
+  "enum" : [ "true" ]
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=true, isInnerEnum=true, isEnumRef=true, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=[true], allowableValues={values=[true], enumVars=[{name=True, isString=true, value=true}]}, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='List', nameInSnakeCase='LIST', enumName='ListEnum', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], bodyParams=[], pathParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='path', paramName='path', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Specifies the path of the secret.', unescapedDescription='Specifies the path of the secret.', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"path_example"', jsonSchema='{
+  "name" : "path",
+  "in" : "path",
+  "description" : "Specifies the path of the secret.",
+  "required" : true,
+  "style" : "simple",
+  "explode" : false,
+  "schema" : {
+    "type" : "string"
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=false, _enum=null, allowableValues=null, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='path', complexType='null', getter='getPath', setter='setPath', description='null', dataType='string', datatypeWithEnum='string', dataFormat='null', name='Path', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.path;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string"
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=false, isInnerEnum=false, isEnumRef=false, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=null, allowableValues=null, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='Path', nameInSnakeCase='PATH', enumName='null', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], queryParams=[CodegenParameter{isFormParam=false, isQueryParam=true, isPathParam=false, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=true, baseName='list', paramName='list', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', collectionFormat='null', description='Must be set to `true`', unescapedDescription='Must be set to `true`', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='ListEnum', style='form', deepObject='false', allowEmptyValue='false', example='"true"', jsonSchema='{
+  "name" : "list",
+  "in" : "query",
+  "description" : "Must be set to `true`",
+  "required" : true,
+  "style" : "form",
+  "explode" : true,
+  "schema" : {
+    "type" : "string",
+    "enum" : [ "true" ]
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=true, _enum=[true], allowableValues={enumVars=[{name=True, isString=true, value=true}], values=[true]}, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='list', complexType='null', getter='getList', setter='setList', description='null', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', name='List', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.list;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string",
+  "enum" : [ "true" ]
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=true, isInnerEnum=true, isEnumRef=true, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=[true], allowableValues={values=[true], enumVars=[{name=True, isString=true, value=true}]}, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='List', nameInSnakeCase='LIST', enumName='ListEnum', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], headerParams=[], formParams=[], cookieParams=[], requiredParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='path', paramName='path', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Specifies the path of the secret.', unescapedDescription='Specifies the path of the secret.', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"path_example"', jsonSchema='{
+  "name" : "path",
+  "in" : "path",
+  "description" : "Specifies the path of the secret.",
+  "required" : true,
+  "style" : "simple",
+  "explode" : false,
+  "schema" : {
+    "type" : "string"
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=false, _enum=null, allowableValues=null, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='path', complexType='null', getter='getPath', setter='setPath', description='null', dataType='string', datatypeWithEnum='string', dataFormat='null', name='Path', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.path;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string"
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=false, isInnerEnum=false, isEnumRef=false, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=null, allowableValues=null, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='Path', nameInSnakeCase='PATH', enumName='null', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}, CodegenParameter{isFormParam=false, isQueryParam=true, isPathParam=false, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=true, baseName='list', paramName='list', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', collectionFormat='null', description='Must be set to `true`', unescapedDescription='Must be set to `true`', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='ListEnum', style='form', deepObject='false', allowEmptyValue='false', example='"true"', jsonSchema='{
+  "name" : "list",
+  "in" : "query",
+  "description" : "Must be set to `true`",
+  "required" : true,
+  "style" : "form",
+  "explode" : true,
+  "schema" : {
+    "type" : "string",
+    "enum" : [ "true" ]
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=true, _enum=[true], allowableValues={enumVars=[{name=True, isString=true, value=true}], values=[true]}, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='list', complexType='null', getter='getList', setter='setList', description='null', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', name='List', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.list;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string",
+  "enum" : [ "true" ]
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=true, isInnerEnum=true, isEnumRef=true, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=[true], allowableValues={values=[true], enumVars=[{name=True, isString=true, value=true}]}, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='List', nameInSnakeCase='LIST', enumName='ListEnum', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], optionalParams=[], requiredAndNotNullableParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='path', paramName='path', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Specifies the path of the secret.', unescapedDescription='Specifies the path of the secret.', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"path_example"', jsonSchema='{
+  "name" : "path",
+  "in" : "path",
+  "description" : "Specifies the path of the secret.",
+  "required" : true,
+  "style" : "simple",
+  "explode" : false,
+  "schema" : {
+    "type" : "string"
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=false, _enum=null, allowableValues=null, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='path', complexType='null', getter='getPath', setter='setPath', description='null', dataType='string', datatypeWithEnum='string', dataFormat='null', name='Path', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.path;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string"
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=false, isInnerEnum=false, isEnumRef=false, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=null, allowableValues=null, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='Path', nameInSnakeCase='PATH', enumName='null', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}, CodegenParameter{isFormParam=false, isQueryParam=true, isPathParam=false, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=true, baseName='list', paramName='list', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', collectionFormat='null', description='Must be set to `true`', unescapedDescription='Must be set to `true`', baseType='null', defaultValue='null', enumDefaultValue='null', enumName='ListEnum', style='form', deepObject='false', allowEmptyValue='false', example='"true"', jsonSchema='{
+  "name" : "list",
+  "in" : "query",
+  "description" : "Must be set to `true`",
+  "required" : true,
+  "style" : "form",
+  "explode" : true,
+  "schema" : {
+    "type" : "string",
+    "enum" : [ "true" ]
+  }
+}', isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isAnyType=false, isArray=false, isMap=false, isFile=false, isEnum=true, _enum=[true], allowableValues={enumVars=[{name=True, isString=true, value=true}], values=[true]}, items=null, mostInnerItems=null, additionalProperties=null, vars=[], requiredVars=[], vendorExtensions={x-emit-default-value=false}, hasValidation=false, maxProperties=null, minProperties=null, isNullable=false, isDeprecated=false, required=true, maximum='null', exclusiveMaximum=false, minimum='null', exclusiveMinimum=false, maxLength=null, minLength=null, pattern='null', maxItems=null, minItems=null, uniqueItems=false, uniqueItemsBoolean=null, contentType=null, multipleOf=null, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, schema=CodegenProperty{openApiType='string', baseName='list', complexType='null', getter='getList', setter='setList', description='null', dataType='string', datatypeWithEnum='ListEnum', dataFormat='null', name='List', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.list;', baseType='string', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "type" : "string",
+  "enum" : [ "true" ]
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=true, isModel=false, isContainer=false, isString=true, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=true, isInnerEnum=true, isEnumRef=true, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=[true], allowableValues={values=[true], enumVars=[{name=True, isString=true, value=true}]}, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='List', nameInSnakeCase='LIST', enumName='ListEnum', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], authMethods=null, tags=[class Tag {
+    name: secrets
+    description: null
+    externalDocs: null
+}], responses=[CodegenResponse{headers=[], code='200', is1xx='false', is2xx='true', is3xx='false', is4xx='false', is5xx='false', message='OK', examples=null, dataType='null', baseType='null', containerType='null', hasHeaders=false, isString=false, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isEmail=false, isModel=false, isFreeFormObject=false, isAnyType=false, isDefault=false, simpleType=true, primitiveType=true, isMap=false, isArray=false, isBinary=false, isFile=false, schema=null, jsonSchema='{
+  "description" : "OK"
+}', vendorExtensions={}, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, maxItems=null, minItems=null, maxLength=null, minLength=null, exclusiveMinimum=false, exclusiveMaximum=false, minimum='null', maximum='null', pattern='null', multipleOf='null', items='null', additionalProperties='null', vars='[]', requiredVars='[]', isNull='false, hasValidation='false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, responseHeaders=[], content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], callbacks=[], imports=[], examples=null, requestBodyExamples=null, externalDocs=null, vendorExtensions={}, nickname='CubbyholeList', operationIdOriginal='cubbyhole-list', operationIdLowerCase='cubbyholelist', operationIdCamelCase='CubbyholeList', operationIdSnakeCase='cubbyhole_list'}
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class CubbyholeListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var path = "path_example";  // string | Specifies the path of the secret.
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+                // List secret entries at the specified location.
+                
+
+                apiInstance.CubbyholeList(string path, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.CubbyholeList: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| Specifies the path of the secret. | 
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="cubbyholeread"></a>
 # **CubbyholeRead**
 
-> void CubbyholeRead (string path, string list = default(string), TimeSpan? wrapTTL = null)
+> void CubbyholeRead (string path, TimeSpan? wrapTTL = null)
 
 Retrieve the secret at the specified location.
 
@@ -4489,11 +4702,6 @@ namespace Example
             
             
             
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
 
             try
             {
@@ -4501,7 +4709,7 @@ namespace Example
                 // Retrieve the secret at the specified location.
                 
 
-                apiInstance.CubbyholeRead(string path, string list = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.CubbyholeRead(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4518,7 +4726,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Specifies the path of the secret. | 
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 
 ### Return type
@@ -11761,10 +11968,114 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="kvv1list"></a>
+# **KvV1List**
+
+> KvV1ListResponse KvV1List (string path, string kvV1MountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class KvV1ListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            var kvV1MountPath = "\"kv-v1\"";  // string | Path that the backend was mounted at (default to "kv-v1")
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+
+                KvV1ListResponse result = apiInstance.KvV1List(string path, string kvV1MountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.KvV1List: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| Location of the secret. | 
+ **kvV1MountPath** | **string**| Path that the backend was mounted at | [default to &quot;kv-v1&quot;]
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+[**KvV1ListResponse**](KvV1ListResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="kvv1read"></a>
 # **KvV1Read**
 
-> void KvV1Read (string path, string kvV1MountPath, string list = default(string), TimeSpan? wrapTTL = null)
+> void KvV1Read (string path, string kvV1MountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -11806,17 +12117,12 @@ namespace Example
             
             
             
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
 
             try
             {
                 
 
-                apiInstance.KvV1Read(string path, string kvV1MountPath, string list = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.KvV1Read(string path, string kvV1MountPath, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11834,7 +12140,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Location of the secret. | 
  **kvV1MountPath** | **string**| Path that the backend was mounted at | [default to &quot;kv-v1&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 
 ### Return type
@@ -12453,6 +12758,110 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="kvv2listmetadata"></a>
+# **KvV2ListMetadata**
+
+> KvV2ListMetadataResponse KvV2ListMetadata (string path, string kvV2MountPath, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class KvV2ListMetadataExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var path = "path_example";  // string | Location of the secret.
+            
+            
+            
+            
+            var kvV2MountPath = "\"kv-v2\"";  // string | Path that the backend was mounted at (default to "kv-v2")
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+
+                KvV2ListMetadataResponse result = apiInstance.KvV2ListMetadata(string path, string kvV2MountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.KvV2ListMetadata: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| Location of the secret. | 
+ **kvV2MountPath** | **string**| Path that the backend was mounted at | [default to &quot;kv-v2&quot;]
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+[**KvV2ListMetadataResponse**](KvV2ListMetadataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="kvv2read"></a>
 # **KvV2Read**
 
@@ -12648,7 +13057,7 @@ No authorization required
 <a name="kvv2readmetadata"></a>
 # **KvV2ReadMetadata**
 
-> KvV2ReadMetadataResponse KvV2ReadMetadata (string path, string kvV2MountPath, string list = default(string), TimeSpan? wrapTTL = null)
+> KvV2ReadMetadataResponse KvV2ReadMetadata (string path, string kvV2MountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -12690,17 +13099,12 @@ namespace Example
             
             
             
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
 
             try
             {
                 
 
-                KvV2ReadMetadataResponse result = apiInstance.KvV2ReadMetadata(string path, string kvV2MountPath, string list = default(string), TimeSpan? wrapTTL = null);
+                KvV2ReadMetadataResponse result = apiInstance.KvV2ReadMetadata(string path, string kvV2MountPath, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12720,7 +13124,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Location of the secret. | 
  **kvV2MountPath** | **string**| Path that the backend was mounted at | [default to &quot;kv-v2&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 
 ### Return type

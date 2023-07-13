@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AliCloudDeleteAuthRole**](AuthApi.md#aliclouddeleteauthrole) | **DELETE** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
-[**AliCloudListAuthRoles**](AuthApi.md#alicloudlistauthroles) | **GET** /auth/{alicloud_mount_path}/role | Lists all the roles that are registered with Vault.
+[**AliCloudListAuthRoles**](AuthApi.md#alicloudlistauthroles) | **GET** /auth/{alicloud_mount_path}/role/ | Lists all the roles that are registered with Vault.
 [**AliCloudLogin**](AuthApi.md#alicloudlogin) | **POST** /auth/{alicloud_mount_path}/login | Authenticates an RAM entity with Vault.
 [**AliCloudReadAuthRole**](AuthApi.md#alicloudreadauthrole) | **GET** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
 [**AliCloudWriteAuthRole**](AuthApi.md#alicloudwriteauthrole) | **POST** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
@@ -23,8 +23,8 @@ Method | HTTP request | Description
 [**AppRoleDeleteTokenTtl**](AuthApi.md#approledeletetokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
 [**AppRoleDestroySecretId**](AuthApi.md#approledestroysecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
 [**AppRoleDestroySecretIdByAccessor**](AuthApi.md#approledestroysecretidbyaccessor) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**AppRoleListRoles**](AuthApi.md#approlelistroles) | **GET** /auth/{approle_mount_path}/role | 
-[**AppRoleListSecretIds**](AuthApi.md#approlelistsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
+[**AppRoleListRoles**](AuthApi.md#approlelistroles) | **GET** /auth/{approle_mount_path}/role/ | 
+[**AppRoleListSecretIds**](AuthApi.md#approlelistsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id/ | 
 [**AppRoleLogin**](AuthApi.md#approlelogin) | **POST** /auth/{approle_mount_path}/login | 
 [**AppRoleLookUpSecretId**](AuthApi.md#approlelookupsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/lookup | 
 [**AppRoleLookUpSecretIdByAccessor**](AuthApi.md#approlelookupsecretidbyaccessor) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup | 
@@ -77,13 +77,13 @@ Method | HTTP request | Description
 [**AwsDeleteRoleTagDenyList**](AuthApi.md#awsdeleteroletagdenylist) | **DELETE** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
 [**AwsDeleteRoleTagDenyListTidySettings**](AuthApi.md#awsdeleteroletagdenylisttidysettings) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
 [**AwsDeleteStsRole**](AuthApi.md#awsdeletestsrole) | **DELETE** /auth/{aws_mount_path}/config/sts/{account_id} | 
-[**AwsListAuthRoles**](AuthApi.md#awslistauthroles) | **GET** /auth/{aws_mount_path}/role | 
-[**AwsListCertificateConfigurations**](AuthApi.md#awslistcertificateconfigurations) | **GET** /auth/{aws_mount_path}/config/certificates | 
-[**AwsListIdentityAccessList**](AuthApi.md#awslistidentityaccesslist) | **GET** /auth/{aws_mount_path}/identity-accesslist | 
-[**AwsListIdentityWhitelist**](AuthApi.md#awslistidentitywhitelist) | **GET** /auth/{aws_mount_path}/identity-whitelist | 
-[**AwsListRoleTagBlacklists**](AuthApi.md#awslistroletagblacklists) | **GET** /auth/{aws_mount_path}/roletag-blacklist | 
-[**AwsListRoleTagDenyLists**](AuthApi.md#awslistroletagdenylists) | **GET** /auth/{aws_mount_path}/roletag-denylist | 
-[**AwsListStsRoleRelationships**](AuthApi.md#awsliststsrolerelationships) | **GET** /auth/{aws_mount_path}/config/sts | 
+[**AwsListAuthRoles**](AuthApi.md#awslistauthroles) | **GET** /auth/{aws_mount_path}/role/ | 
+[**AwsListCertificateConfigurations**](AuthApi.md#awslistcertificateconfigurations) | **GET** /auth/{aws_mount_path}/config/certificates/ | 
+[**AwsListIdentityAccessList**](AuthApi.md#awslistidentityaccesslist) | **GET** /auth/{aws_mount_path}/identity-accesslist/ | 
+[**AwsListIdentityWhitelist**](AuthApi.md#awslistidentitywhitelist) | **GET** /auth/{aws_mount_path}/identity-whitelist/ | 
+[**AwsListRoleTagBlacklists**](AuthApi.md#awslistroletagblacklists) | **GET** /auth/{aws_mount_path}/roletag-blacklist/ | 
+[**AwsListRoleTagDenyLists**](AuthApi.md#awslistroletagdenylists) | **GET** /auth/{aws_mount_path}/roletag-denylist/ | 
+[**AwsListStsRoleRelationships**](AuthApi.md#awsliststsrolerelationships) | **GET** /auth/{aws_mount_path}/config/sts/ | 
 [**AwsLogin**](AuthApi.md#awslogin) | **POST** /auth/{aws_mount_path}/login | 
 [**AwsReadAuthRole**](AuthApi.md#awsreadauthrole) | **GET** /auth/{aws_mount_path}/role/{role} | 
 [**AwsReadCertificateConfiguration**](AuthApi.md#awsreadcertificateconfiguration) | **GET** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
@@ -111,7 +111,7 @@ Method | HTTP request | Description
 [**AzureConfigureAuth**](AuthApi.md#azureconfigureauth) | **POST** /auth/{azure_mount_path}/config | 
 [**AzureDeleteAuthConfiguration**](AuthApi.md#azuredeleteauthconfiguration) | **DELETE** /auth/{azure_mount_path}/config | 
 [**AzureDeleteAuthRole**](AuthApi.md#azuredeleteauthrole) | **DELETE** /auth/{azure_mount_path}/role/{name} | 
-[**AzureListAuthRoles**](AuthApi.md#azurelistauthroles) | **GET** /auth/{azure_mount_path}/role | 
+[**AzureListAuthRoles**](AuthApi.md#azurelistauthroles) | **GET** /auth/{azure_mount_path}/role/ | 
 [**AzureLogin**](AuthApi.md#azurelogin) | **POST** /auth/{azure_mount_path}/login | 
 [**AzureReadAuthConfiguration**](AuthApi.md#azurereadauthconfiguration) | **GET** /auth/{azure_mount_path}/config | 
 [**AzureReadAuthRole**](AuthApi.md#azurereadauthrole) | **GET** /auth/{azure_mount_path}/role/{name} | 
@@ -123,8 +123,8 @@ Method | HTTP request | Description
 [**CertConfigure**](AuthApi.md#certconfigure) | **POST** /auth/{cert_mount_path}/config | 
 [**CertDeleteCertificate**](AuthApi.md#certdeletecertificate) | **DELETE** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
 [**CertDeleteCrl**](AuthApi.md#certdeletecrl) | **DELETE** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**CertListCertificates**](AuthApi.md#certlistcertificates) | **GET** /auth/{cert_mount_path}/certs | Manage trusted certificates used for authentication.
-[**CertListCrls**](AuthApi.md#certlistcrls) | **GET** /auth/{cert_mount_path}/crls | 
+[**CertListCertificates**](AuthApi.md#certlistcertificates) | **GET** /auth/{cert_mount_path}/certs/ | Manage trusted certificates used for authentication.
+[**CertListCrls**](AuthApi.md#certlistcrls) | **GET** /auth/{cert_mount_path}/crls/ | 
 [**CertLogin**](AuthApi.md#certlogin) | **POST** /auth/{cert_mount_path}/login | 
 [**CertReadCertificate**](AuthApi.md#certreadcertificate) | **GET** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
 [**CertReadConfiguration**](AuthApi.md#certreadconfiguration) | **GET** /auth/{cert_mount_path}/config | 
@@ -134,7 +134,7 @@ Method | HTTP request | Description
 [**CloudFoundryConfigure**](AuthApi.md#cloudfoundryconfigure) | **POST** /auth/{cf_mount_path}/config | 
 [**CloudFoundryDeleteConfiguration**](AuthApi.md#cloudfoundrydeleteconfiguration) | **DELETE** /auth/{cf_mount_path}/config | 
 [**CloudFoundryDeleteRole**](AuthApi.md#cloudfoundrydeleterole) | **DELETE** /auth/{cf_mount_path}/roles/{role} | 
-[**CloudFoundryListRoles**](AuthApi.md#cloudfoundrylistroles) | **GET** /auth/{cf_mount_path}/roles | 
+[**CloudFoundryListRoles**](AuthApi.md#cloudfoundrylistroles) | **GET** /auth/{cf_mount_path}/roles/ | 
 [**CloudFoundryLogin**](AuthApi.md#cloudfoundrylogin) | **POST** /auth/{cf_mount_path}/login | 
 [**CloudFoundryReadConfiguration**](AuthApi.md#cloudfoundryreadconfiguration) | **GET** /auth/{cf_mount_path}/config | 
 [**CloudFoundryReadRole**](AuthApi.md#cloudfoundryreadrole) | **GET** /auth/{cf_mount_path}/roles/{role} | 
@@ -142,26 +142,26 @@ Method | HTTP request | Description
 [**GithubConfigure**](AuthApi.md#githubconfigure) | **POST** /auth/{github_mount_path}/config | 
 [**GithubDeleteTeamMapping**](AuthApi.md#githubdeleteteammapping) | **DELETE** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
 [**GithubDeleteUserMapping**](AuthApi.md#githubdeleteusermapping) | **DELETE** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**GithubListTeams**](AuthApi.md#githublistteams) | **GET** /auth/{github_mount_path}/map/teams/ | Read mappings for teams
+[**GithubListUsers**](AuthApi.md#githublistusers) | **GET** /auth/{github_mount_path}/map/users/ | Read mappings for users
 [**GithubLogin**](AuthApi.md#githublogin) | **POST** /auth/{github_mount_path}/login | 
 [**GithubReadConfiguration**](AuthApi.md#githubreadconfiguration) | **GET** /auth/{github_mount_path}/config | 
 [**GithubReadTeamMapping**](AuthApi.md#githubreadteammapping) | **GET** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**GithubReadTeams**](AuthApi.md#githubreadteams) | **GET** /auth/{github_mount_path}/map/teams | Read mappings for teams
 [**GithubReadUserMapping**](AuthApi.md#githubreadusermapping) | **GET** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**GithubReadUsers**](AuthApi.md#githubreadusers) | **GET** /auth/{github_mount_path}/map/users | Read mappings for users
 [**GithubWriteTeamMapping**](AuthApi.md#githubwriteteammapping) | **POST** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
 [**GithubWriteUserMapping**](AuthApi.md#githubwriteusermapping) | **POST** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
 [**GoogleCloudConfigureAuth**](AuthApi.md#googlecloudconfigureauth) | **POST** /auth/{gcp_mount_path}/config | 
 [**GoogleCloudDeleteRole**](AuthApi.md#googleclouddeleterole) | **DELETE** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
 [**GoogleCloudEditLabelsForRole**](AuthApi.md#googlecloudeditlabelsforrole) | **POST** /auth/{gcp_mount_path}/role/{name}/labels | Add or remove labels for an existing &#x27;gce&#x27; role
 [**GoogleCloudEditServiceAccountsForRole**](AuthApi.md#googlecloudeditserviceaccountsforrole) | **POST** /auth/{gcp_mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
-[**GoogleCloudListRoles**](AuthApi.md#googlecloudlistroles) | **GET** /auth/{gcp_mount_path}/role | Lists all the roles that are registered with Vault.
+[**GoogleCloudListRoles**](AuthApi.md#googlecloudlistroles) | **GET** /auth/{gcp_mount_path}/role/ | Lists all the roles that are registered with Vault.
 [**GoogleCloudLogin**](AuthApi.md#googlecloudlogin) | **POST** /auth/{gcp_mount_path}/login | 
 [**GoogleCloudReadAuthConfiguration**](AuthApi.md#googlecloudreadauthconfiguration) | **GET** /auth/{gcp_mount_path}/config | 
 [**GoogleCloudReadRole**](AuthApi.md#googlecloudreadrole) | **GET** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
 [**GoogleCloudWriteRole**](AuthApi.md#googlecloudwriterole) | **POST** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
 [**JwtConfigure**](AuthApi.md#jwtconfigure) | **POST** /auth/{jwt_mount_path}/config | Configure the JWT authentication backend.
 [**JwtDeleteRole**](AuthApi.md#jwtdeleterole) | **DELETE** /auth/{jwt_mount_path}/role/{name} | Delete an existing role.
-[**JwtListRoles**](AuthApi.md#jwtlistroles) | **GET** /auth/{jwt_mount_path}/role | Lists all the roles registered with the backend.
+[**JwtListRoles**](AuthApi.md#jwtlistroles) | **GET** /auth/{jwt_mount_path}/role/ | Lists all the roles registered with the backend.
 [**JwtLogin**](AuthApi.md#jwtlogin) | **POST** /auth/{jwt_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
 [**JwtOidcCallback**](AuthApi.md#jwtoidccallback) | **GET** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
 [**JwtOidcCallbackWithParameters**](AuthApi.md#jwtoidccallbackwithparameters) | **POST** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
@@ -172,7 +172,7 @@ Method | HTTP request | Description
 [**KerberosConfigure**](AuthApi.md#kerberosconfigure) | **POST** /auth/{kerberos_mount_path}/config | 
 [**KerberosConfigureLdap**](AuthApi.md#kerberosconfigureldap) | **POST** /auth/{kerberos_mount_path}/config/ldap | 
 [**KerberosDeleteGroup**](AuthApi.md#kerberosdeletegroup) | **DELETE** /auth/{kerberos_mount_path}/groups/{name} | 
-[**KerberosListGroups**](AuthApi.md#kerberoslistgroups) | **GET** /auth/{kerberos_mount_path}/groups | 
+[**KerberosListGroups**](AuthApi.md#kerberoslistgroups) | **GET** /auth/{kerberos_mount_path}/groups/ | 
 [**KerberosLogin**](AuthApi.md#kerberoslogin) | **POST** /auth/{kerberos_mount_path}/login | 
 [**KerberosReadConfiguration**](AuthApi.md#kerberosreadconfiguration) | **GET** /auth/{kerberos_mount_path}/config | 
 [**KerberosReadGroup**](AuthApi.md#kerberosreadgroup) | **GET** /auth/{kerberos_mount_path}/groups/{name} | 
@@ -180,7 +180,7 @@ Method | HTTP request | Description
 [**KerberosWriteGroup**](AuthApi.md#kerberoswritegroup) | **POST** /auth/{kerberos_mount_path}/groups/{name} | 
 [**KubernetesConfigureAuth**](AuthApi.md#kubernetesconfigureauth) | **POST** /auth/{kubernetes_mount_path}/config | 
 [**KubernetesDeleteAuthRole**](AuthApi.md#kubernetesdeleteauthrole) | **DELETE** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
-[**KubernetesListAuthRoles**](AuthApi.md#kuberneteslistauthroles) | **GET** /auth/{kubernetes_mount_path}/role | Lists all the roles registered with the backend.
+[**KubernetesListAuthRoles**](AuthApi.md#kuberneteslistauthroles) | **GET** /auth/{kubernetes_mount_path}/role/ | Lists all the roles registered with the backend.
 [**KubernetesLogin**](AuthApi.md#kuberneteslogin) | **POST** /auth/{kubernetes_mount_path}/login | Authenticates Kubernetes service accounts with Vault.
 [**KubernetesReadAuthConfiguration**](AuthApi.md#kubernetesreadauthconfiguration) | **GET** /auth/{kubernetes_mount_path}/config | 
 [**KubernetesReadAuthRole**](AuthApi.md#kubernetesreadauthrole) | **GET** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
@@ -188,8 +188,8 @@ Method | HTTP request | Description
 [**LdapConfigureAuth**](AuthApi.md#ldapconfigureauth) | **POST** /auth/{ldap_mount_path}/config | 
 [**LdapDeleteGroup**](AuthApi.md#ldapdeletegroup) | **DELETE** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
 [**LdapDeleteUser**](AuthApi.md#ldapdeleteuser) | **DELETE** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**LdapListGroups**](AuthApi.md#ldaplistgroups) | **GET** /auth/{ldap_mount_path}/groups | Manage additional groups for users allowed to authenticate.
-[**LdapListUsers**](AuthApi.md#ldaplistusers) | **GET** /auth/{ldap_mount_path}/users | Manage users allowed to authenticate.
+[**LdapListGroups**](AuthApi.md#ldaplistgroups) | **GET** /auth/{ldap_mount_path}/groups/ | Manage additional groups for users allowed to authenticate.
+[**LdapListUsers**](AuthApi.md#ldaplistusers) | **GET** /auth/{ldap_mount_path}/users/ | Manage users allowed to authenticate.
 [**LdapLogin**](AuthApi.md#ldaplogin) | **POST** /auth/{ldap_mount_path}/login/{username} | Log in with a username and password.
 [**LdapReadAuthConfiguration**](AuthApi.md#ldapreadauthconfiguration) | **GET** /auth/{ldap_mount_path}/config | 
 [**LdapReadGroup**](AuthApi.md#ldapreadgroup) | **GET** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
@@ -199,7 +199,7 @@ Method | HTTP request | Description
 [**OciConfigure**](AuthApi.md#ociconfigure) | **POST** /auth/{oci_mount_path}/config | 
 [**OciDeleteConfiguration**](AuthApi.md#ocideleteconfiguration) | **DELETE** /auth/{oci_mount_path}/config | 
 [**OciDeleteRole**](AuthApi.md#ocideleterole) | **DELETE** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
-[**OciListRoles**](AuthApi.md#ocilistroles) | **GET** /auth/{oci_mount_path}/role | Lists all the roles that are registered with Vault.
+[**OciListRoles**](AuthApi.md#ocilistroles) | **GET** /auth/{oci_mount_path}/role/ | Lists all the roles that are registered with Vault.
 [**OciLogin**](AuthApi.md#ocilogin) | **POST** /auth/{oci_mount_path}/login/{role} | Authenticates to Vault using OCI credentials
 [**OciReadConfiguration**](AuthApi.md#ocireadconfiguration) | **GET** /auth/{oci_mount_path}/config | 
 [**OciReadRole**](AuthApi.md#ocireadrole) | **GET** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
@@ -207,8 +207,8 @@ Method | HTTP request | Description
 [**OktaConfigure**](AuthApi.md#oktaconfigure) | **POST** /auth/{okta_mount_path}/config | 
 [**OktaDeleteGroup**](AuthApi.md#oktadeletegroup) | **DELETE** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
 [**OktaDeleteUser**](AuthApi.md#oktadeleteuser) | **DELETE** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
-[**OktaListGroups**](AuthApi.md#oktalistgroups) | **GET** /auth/{okta_mount_path}/groups | Manage users allowed to authenticate.
-[**OktaListUsers**](AuthApi.md#oktalistusers) | **GET** /auth/{okta_mount_path}/users | Manage additional groups for users allowed to authenticate.
+[**OktaListGroups**](AuthApi.md#oktalistgroups) | **GET** /auth/{okta_mount_path}/groups/ | Manage users allowed to authenticate.
+[**OktaListUsers**](AuthApi.md#oktalistusers) | **GET** /auth/{okta_mount_path}/users/ | Manage additional groups for users allowed to authenticate.
 [**OktaLogin**](AuthApi.md#oktalogin) | **POST** /auth/{okta_mount_path}/login/{username} | Log in with a username and password.
 [**OktaReadConfiguration**](AuthApi.md#oktareadconfiguration) | **GET** /auth/{okta_mount_path}/config | 
 [**OktaReadGroup**](AuthApi.md#oktareadgroup) | **GET** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
@@ -218,7 +218,7 @@ Method | HTTP request | Description
 [**OktaWriteUser**](AuthApi.md#oktawriteuser) | **POST** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
 [**RadiusConfigure**](AuthApi.md#radiusconfigure) | **POST** /auth/{radius_mount_path}/config | 
 [**RadiusDeleteUser**](AuthApi.md#radiusdeleteuser) | **DELETE** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
-[**RadiusListUsers**](AuthApi.md#radiuslistusers) | **GET** /auth/{radius_mount_path}/users | Manage users allowed to authenticate.
+[**RadiusListUsers**](AuthApi.md#radiuslistusers) | **GET** /auth/{radius_mount_path}/users/ | Manage users allowed to authenticate.
 [**RadiusLogin**](AuthApi.md#radiuslogin) | **POST** /auth/{radius_mount_path}/login | Log in with a username and password.
 [**RadiusLoginWithUsername**](AuthApi.md#radiusloginwithusername) | **POST** /auth/{radius_mount_path}/login/{urlusername} | Log in with a username and password.
 [**RadiusReadConfiguration**](AuthApi.md#radiusreadconfiguration) | **GET** /auth/{radius_mount_path}/config | 
@@ -228,8 +228,8 @@ Method | HTTP request | Description
 [**TokenCreateAgainstRole**](AuthApi.md#tokencreateagainstrole) | **POST** /auth/token/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
 [**TokenCreateOrphan**](AuthApi.md#tokencreateorphan) | **POST** /auth/token/create-orphan | The token create path is used to create new orphan tokens.
 [**TokenDeleteRole**](AuthApi.md#tokendeleterole) | **DELETE** /auth/token/roles/{role_name} | 
-[**TokenListAccessors**](AuthApi.md#tokenlistaccessors) | **GET** /auth/token/accessors | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#x27;sudo&#x27; capability in addition to &#x27;list&#x27;.
-[**TokenListRoles**](AuthApi.md#tokenlistroles) | **GET** /auth/token/roles | This endpoint lists configured roles.
+[**TokenListAccessors**](AuthApi.md#tokenlistaccessors) | **GET** /auth/token/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#x27;sudo&#x27; capability in addition to &#x27;list&#x27;.
+[**TokenListRoles**](AuthApi.md#tokenlistroles) | **GET** /auth/token/roles/ | This endpoint lists configured roles.
 [**TokenLookUp**](AuthApi.md#tokenlookup) | **POST** /auth/token/lookup | 
 [**TokenLookUpAccessor**](AuthApi.md#tokenlookupaccessor) | **POST** /auth/token/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
 [**TokenLookUpSelf**](AuthApi.md#tokenlookupself) | **GET** /auth/token/lookup-self | 
@@ -244,7 +244,7 @@ Method | HTTP request | Description
 [**TokenTidy**](AuthApi.md#tokentidy) | **POST** /auth/token/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
 [**TokenWriteRole**](AuthApi.md#tokenwriterole) | **POST** /auth/token/roles/{role_name} | 
 [**UserpassDeleteUser**](AuthApi.md#userpassdeleteuser) | **DELETE** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
-[**UserpassListUsers**](AuthApi.md#userpasslistusers) | **GET** /auth/{userpass_mount_path}/users | Manage users allowed to authenticate.
+[**UserpassListUsers**](AuthApi.md#userpasslistusers) | **GET** /auth/{userpass_mount_path}/users/ | Manage users allowed to authenticate.
 [**UserpassLogin**](AuthApi.md#userpasslogin) | **POST** /auth/{userpass_mount_path}/login/{username} | Log in with a username and password.
 [**UserpassReadUser**](AuthApi.md#userpassreaduser) | **GET** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
 [**UserpassResetPassword**](AuthApi.md#userpassresetpassword) | **POST** /auth/{userpass_mount_path}/users/{username}/password | Reset user&#x27;s password.
@@ -13626,6 +13626,202 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="githublistteams"></a>
+# **GithubListTeams**
+
+> void GithubListTeams (string githubMountPath, TimeSpan? wrapTTL = null)
+
+Read mappings for teams
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GithubListTeamsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var githubMountPath = "\"github\"";  // string | Path that the backend was mounted at (default to "github")
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+                // Read mappings for teams
+                
+
+                apiInstance.GithubListTeams(string githubMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GithubListTeams: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubMountPath** | **string**| Path that the backend was mounted at | [default to &quot;github&quot;]
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="githublistusers"></a>
+# **GithubListUsers**
+
+> void GithubListUsers (string githubMountPath, TimeSpan? wrapTTL = null)
+
+Read mappings for users
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GithubListUsersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var githubMountPath = "\"github\"";  // string | Path that the backend was mounted at (default to "github")
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+                // Read mappings for users
+                
+
+                apiInstance.GithubListUsers(string githubMountPath, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GithubListUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubMountPath** | **string**| Path that the backend was mounted at | [default to &quot;github&quot;]
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="githublogin"></a>
 # **GithubLogin**
 
@@ -13910,104 +14106,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="githubreadteams"></a>
-# **GithubReadTeams**
-
-> void GithubReadTeams (string githubMountPath, string list = default(string), TimeSpan? wrapTTL = null)
-
-Read mappings for teams
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GithubReadTeamsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var githubMountPath = "\"github\"";  // string | Path that the backend was mounted at (default to "github")
-            
-            
-            
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
-
-            try
-            {
-                
-                // Read mappings for teams
-                
-
-                apiInstance.GithubReadTeams(string githubMountPath, string list = default(string), TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GithubReadTeams: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **githubMountPath** | **string**| Path that the backend was mounted at | [default to &quot;github&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="githubreadusermapping"></a>
 # **GithubReadUserMapping**
 
@@ -14078,104 +14176,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Key for the users mapping | 
  **githubMountPath** | **string**| Path that the backend was mounted at | [default to &quot;github&quot;]
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="githubreadusers"></a>
-# **GithubReadUsers**
-
-> void GithubReadUsers (string githubMountPath, string list = default(string), TimeSpan? wrapTTL = null)
-
-Read mappings for users
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class GithubReadUsersExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var githubMountPath = "\"github\"";  // string | Path that the backend was mounted at (default to "github")
-            
-            
-            
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
-
-            try
-            {
-                
-                // Read mappings for users
-                
-
-                apiInstance.GithubReadUsers(string githubMountPath, string list = default(string), TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.GithubReadUsers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **githubMountPath** | **string**| Path that the backend was mounted at | [default to &quot;github&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 
 ### Return type
@@ -16015,7 +16015,7 @@ No authorization required
 
 Lists all the roles registered with the backend.
 
-CodegenOperation{responseHeaders=[], hasAuthMethods=false, hasConsumes=false, hasProduces=false, hasParams=true, hasOptionalParams=false, hasRequiredParams=true, returnTypeIsPrimitive=false, returnSimpleType=false, subresourceOperation=false, isMap=false, returnProperty=null, isArray=false, isMultipart=false, isResponseBinary=false, isResponseFile=false, isResponseFile=false, hasReference=false, hasDefaultResponse=false, hasErrorResponseObject=false, isRestfulIndex=false, isRestfulShow=false, isRestfulCreate=false, isRestfulUpdate=false, isRestfulDestroy=false, isRestful=false, isDeprecated=false, isCallbackRequest=false, uniqueItems='false, path='/auth/{jwt_mount_path}/role', operationId='JwtListRoles', returnType='null', httpMethod='GET', returnBaseType='null', returnContainer='null', summary='Lists all the roles registered with the backend.', unescapedNotes='The list will contain the names of the roles.', notes='The list will contain the names of the roles.', baseName='Auth', defaultResponse='null', discriminator=null, consumes=null, produces=null, prioritizedContentTypes=null, servers=[], bodyParam=null, allParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='jwt_mount_path', paramName='jwtMountPath', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Path that the backend was mounted at', unescapedDescription='Path that the backend was mounted at', baseType='null', defaultValue='"jwt"', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"\"jwt\""', jsonSchema='{
+CodegenOperation{responseHeaders=[], hasAuthMethods=false, hasConsumes=false, hasProduces=false, hasParams=true, hasOptionalParams=false, hasRequiredParams=true, returnTypeIsPrimitive=false, returnSimpleType=false, subresourceOperation=false, isMap=false, returnProperty=null, isArray=false, isMultipart=false, isResponseBinary=false, isResponseFile=false, isResponseFile=false, hasReference=false, hasDefaultResponse=false, hasErrorResponseObject=false, isRestfulIndex=false, isRestfulShow=false, isRestfulCreate=false, isRestfulUpdate=false, isRestfulDestroy=false, isRestful=false, isDeprecated=false, isCallbackRequest=false, uniqueItems='false, path='/auth/{jwt_mount_path}/role/', operationId='JwtListRoles', returnType='null', httpMethod='GET', returnBaseType='null', returnContainer='null', summary='Lists all the roles registered with the backend.', unescapedNotes='The list will contain the names of the roles.', notes='The list will contain the names of the roles.', baseName='Auth', defaultResponse='null', discriminator=null, consumes=null, produces=null, prioritizedContentTypes=null, servers=[], bodyParam=null, allParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='jwt_mount_path', paramName='jwtMountPath', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Path that the backend was mounted at', unescapedDescription='Path that the backend was mounted at', baseType='null', defaultValue='"jwt"', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"\"jwt\""', jsonSchema='{
   "name" : "jwt_mount_path",
   "in" : "path",
   "description" : "Path that the backend was mounted at",
