@@ -1386,22 +1386,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns>VaultResponse of PoliciesListResponse</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<PoliciesListResponse> PoliciesList(string list = default(string), TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of PoliciesListAclPoliciesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1806,11 +1790,38 @@ namespace Vault.Api
         VaultResponse<Object> RawDeletePath(string path, TimeSpan? wrapTTL = null);
 
         /// <summary>
+        /// Return a list keys for a given path prefix.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of RawListResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<RawListResponse> RawList(TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Return a list keys for a given path prefix.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path"></param>
+        /// <returns>VaultResponse of RawListPathResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<RawListPathResponse> RawListPath(string path, TimeSpan? wrapTTL = null);
+
+        /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of RawReadResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1819,15 +1830,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<RawReadResponse> RawRead(string list = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<RawReadResponse> RawRead(TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of RawReadPathResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1836,7 +1845,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<RawReadPathResponse> RawReadPath(string path, string list = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<RawReadPathResponse> RawReadPath(string path, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Update the value of the key at the given path.
@@ -5294,23 +5303,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PoliciesListResponse)</returns>
-        Task<VaultResponse<PoliciesListResponse>> PoliciesListAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5743,11 +5735,40 @@ namespace Vault.Api
         Task<VaultResponse<Object>> RawDeletePathAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// Return a list keys for a given path prefix.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (RawListResponse)</returns>
+        Task<VaultResponse<RawListResponse>> RawListAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Return a list keys for a given path prefix.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (RawListPathResponse)</returns>
+        Task<VaultResponse<RawListPathResponse>> RawListPathAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5757,15 +5778,13 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (RawReadResponse)</returns>
-        Task<VaultResponse<RawReadResponse>> RawReadAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<RawReadResponse>> RawReadAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5775,7 +5794,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (RawReadPathResponse)</returns>
-        Task<VaultResponse<RawReadPathResponse>> RawReadPathAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<RawReadPathResponse>> RawReadPathAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Update the value of the key at the given path.
@@ -14375,7 +14394,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<LeasesLookUpWithPrefixResponse>("/sys/leases/lookup/{prefix}", requestOptions);
+            var response = this.Client.Get<LeasesLookUpWithPrefixResponse>("/sys/leases/lookup/{prefix}/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -14441,7 +14460,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<LeasesLookUpWithPrefixResponse>("/sys/leases/lookup/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<LeasesLookUpWithPrefixResponse>("/sys/leases/lookup/{prefix}/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17742,7 +17761,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PluginsCatalogListPluginsWithTypeResponse>("/sys/plugins/catalog/{type}", requestOptions);
+            var response = this.Client.Get<PluginsCatalogListPluginsWithTypeResponse>("/sys/plugins/catalog/{type}/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17808,7 +17827,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PluginsCatalogListPluginsWithTypeResponse>("/sys/plugins/catalog/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PluginsCatalogListPluginsWithTypeResponse>("/sys/plugins/catalog/{type}/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19143,132 +19162,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns>VaultResponse of PoliciesListResponse</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<PoliciesListResponse> PoliciesList(string list = default(string), TimeSpan? wrapTTL = null)
-        {
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-            if (list != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<PoliciesListResponse>("/sys/policy", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesList", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<PoliciesListResponse>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (PoliciesListResponse)</returns>
-        public async Task<VaultResponse<PoliciesListResponse>> PoliciesListAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-
-
-            if (list != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-            }
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PoliciesListResponse>("/sys/policy", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PoliciesList", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<PoliciesListResponse>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of PoliciesListAclPoliciesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19312,7 +19205,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PoliciesListAclPoliciesResponse>("/sys/policies/acl", requestOptions);
+            var response = this.Client.Get<PoliciesListAclPoliciesResponse>("/sys/policies/acl/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19370,7 +19263,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PoliciesListAclPoliciesResponse>("/sys/policies/acl", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PoliciesListAclPoliciesResponse>("/sys/policies/acl/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19427,7 +19320,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PoliciesListPasswordPoliciesResponse>("/sys/policies/password", requestOptions);
+            var response = this.Client.Get<PoliciesListPasswordPoliciesResponse>("/sys/policies/password/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19485,7 +19378,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PoliciesListPasswordPoliciesResponse>("/sys/policies/password", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PoliciesListPasswordPoliciesResponse>("/sys/policies/password/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -21880,7 +21773,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<RateLimitQuotasListResponse>("/sys/quotas/rate-limit", requestOptions);
+            var response = this.Client.Get<RateLimitQuotasListResponse>("/sys/quotas/rate-limit/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -21938,7 +21831,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<RateLimitQuotasListResponse>("/sys/quotas/rate-limit", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<RateLimitQuotasListResponse>("/sys/quotas/rate-limit/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22555,12 +22448,10 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Read the value of the key at the given path. 
+        /// Return a list keys for a given path prefix. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
-        /// <returns>VaultResponse of RawReadResponse</returns>
+        /// <returns>VaultResponse of RawListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22568,7 +22459,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<RawReadResponse> RawRead(string list = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<RawListResponse> RawList(TimeSpan? wrapTTL = null)
         {
 
 
@@ -22596,14 +22487,252 @@ namespace Vault.Api
 
 
 
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
-            if (list != null)
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<RawListResponse>("/sys/raw/", requestOptions);
+
+            if (this.ExceptionFactory != null)
             {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
+                Exception exception = this.ExceptionFactory("RawList", response);
+                if (exception != null) throw exception;
             }
+
+            return ClientUtils.ToVaultResponse<RawListResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Return a list keys for a given path prefix. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (RawListResponse)</returns>
+        public async Task<VaultResponse<RawListResponse>> RawListAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<RawListResponse>("/sys/raw/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("RawList", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<RawListResponse>(response.RawContent);
+        }
+        /// <summary>
+        /// Return a list keys for a given path prefix. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path"></param>
+        /// <returns>VaultResponse of RawListPathResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<RawListPathResponse> RawListPath(string path, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->RawListPath");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<RawListPathResponse>("/sys/raw/{path}/", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("RawListPath", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<RawListPathResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Return a list keys for a given path prefix. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (RawListPathResponse)</returns>
+        public async Task<VaultResponse<RawListPathResponse>> RawListPathAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->RawListPath");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<RawListPathResponse>("/sys/raw/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("RawListPath", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<RawListPathResponse>(response.RawContent);
+        }
+        /// <summary>
+        /// Read the value of the key at the given path. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of RawReadResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<RawReadResponse> RawRead(TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
 
 
 
@@ -22624,8 +22753,6 @@ namespace Vault.Api
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22635,7 +22762,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (RawReadResponse)</returns>
-        public async Task<VaultResponse<RawReadResponse>> RawReadAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<RawReadResponse>> RawReadAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -22664,11 +22791,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<RawReadResponse>("/sys/raw", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -22685,8 +22807,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of RawReadPathResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22695,7 +22815,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<RawReadPathResponse> RawReadPath(string path, string list = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<RawReadPathResponse> RawReadPath(string path, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
@@ -22730,14 +22850,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -22759,8 +22871,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22770,7 +22880,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (RawReadPathResponse)</returns>
-        public async Task<VaultResponse<RawReadPathResponse>> RawReadPathAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<RawReadPathResponse>> RawReadPathAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
@@ -22806,11 +22916,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<RawReadPathResponse>("/sys/raw/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -27607,7 +27712,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/managed-keys/{type}", requestOptions);
+            var response = this.Client.Get<Object>("/sys/managed-keys/{type}/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27673,7 +27778,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/managed-keys/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/managed-keys/{type}/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27730,7 +27835,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/mfa/method", requestOptions);
+            var response = this.Client.Get<Object>("/sys/mfa/method/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27788,7 +27893,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mfa/method", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/mfa/method/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27845,7 +27950,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/namespaces", requestOptions);
+            var response = this.Client.Get<Object>("/sys/namespaces/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -27903,7 +28008,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/namespaces", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/namespaces/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -27960,7 +28065,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/policies/egp", requestOptions);
+            var response = this.Client.Get<Object>("/sys/policies/egp/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28018,7 +28123,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/egp", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/egp/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28075,7 +28180,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/policies/rgp", requestOptions);
+            var response = this.Client.Get<Object>("/sys/policies/rgp/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28133,7 +28238,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/rgp", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/rgp/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28190,7 +28295,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/quotas/lease-count", requestOptions);
+            var response = this.Client.Get<Object>("/sys/quotas/lease-count/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28248,7 +28353,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/lease-count", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/lease-count/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -38207,7 +38312,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<UiHeadersListResponse>("/sys/config/ui/headers", requestOptions);
+            var response = this.Client.Get<UiHeadersListResponse>("/sys/config/ui/headers/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -38265,7 +38370,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<UiHeadersListResponse>("/sys/config/ui/headers", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<UiHeadersListResponse>("/sys/config/ui/headers/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -38691,7 +38796,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<VersionHistoryResponse>("/sys/version-history", requestOptions);
+            var response = this.Client.Get<VersionHistoryResponse>("/sys/version-history/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -38749,7 +38854,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<VersionHistoryResponse>("/sys/version-history", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<VersionHistoryResponse>("/sys/version-history/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

@@ -685,12 +685,10 @@ namespace Vault.Api
         VaultResponse<Object> CubbyholeDelete(string path, TimeSpan? wrapTTL = null);
 
         /// <summary>
-        /// Retrieve the secret at the specified location.
+        /// List secret entries at the specified location.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -699,7 +697,22 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CubbyholeRead(string path, string list = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CubbyholeList(string path, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Retrieve the secret at the specified location.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Specifies the path of the secret.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> CubbyholeRead(string path, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Store a secret at the specified location.
@@ -1893,8 +1906,22 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of KvV1ListResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<KvV1ListResponse> KvV1List(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null);
 
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1903,7 +1930,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KvV1Read(string path, string kvV1MountPath = "kv-v1", string list = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KvV1Read(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2009,6 +2036,22 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of KvV2ListMetadataResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<KvV2ListMetadataResponse> KvV2ListMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of KvV2ReadResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2040,8 +2083,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of KvV2ReadMetadataResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2050,7 +2091,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<KvV2ReadMetadataResponse> KvV2ReadMetadata(string path, string kvV2MountPath = "kv-v2", string list = default(string), TimeSpan? wrapTTL = null);
+        VaultResponse<KvV2ReadMetadataResponse> KvV2ReadMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -7109,12 +7150,10 @@ namespace Vault.Api
         Task<VaultResponse<Object>> CubbyholeDeleteAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Retrieve the secret at the specified location.
+        /// List secret entries at the specified location.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7124,7 +7163,23 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CubbyholeListAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Retrieve the secret at the specified location.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Specifies the path of the secret.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> CubbyholeReadAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Store a secret at the specified location.
@@ -8392,8 +8447,23 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (KvV1ListResponse)</returns>
+        Task<VaultResponse<KvV1ListResponse>> KvV1ListAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8403,7 +8473,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KvV1ReadAsync(string path, string kvV1MountPath = "kv-v1", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KvV1ReadAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8523,6 +8593,23 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (KvV2ListMetadataResponse)</returns>
+        Task<VaultResponse<KvV2ListMetadataResponse>> KvV2ListMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (KvV2ReadResponse)</returns>
         Task<VaultResponse<KvV2ReadResponse>> KvV2ReadAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
@@ -8548,8 +8635,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8559,7 +8644,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (KvV2ReadMetadataResponse)</returns>
-        Task<VaultResponse<KvV2ReadMetadataResponse>> KvV2ReadMetadataAsync(string path, string kvV2MountPath = "kv-v2", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<KvV2ReadMetadataResponse>> KvV2ReadMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -13802,7 +13887,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{alicloud_mount_path}/role", requestOptions);
+            var response = this.Client.Get<Object>("/{alicloud_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -13864,7 +13949,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{alicloud_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{alicloud_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15405,7 +15490,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{aws_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{aws_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -15467,7 +15552,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{aws_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{aws_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16950,7 +17035,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{azure_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{azure_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17012,7 +17097,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{azure_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{azure_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18115,7 +18200,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{consul_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{consul_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18177,7 +18262,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{consul_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{consul_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18709,12 +18794,10 @@ namespace Vault.Api
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
         /// <summary>
-        /// Retrieve the secret at the specified location. 
+        /// List secret entries at the specified location. Folders are suffixed with /. The input must be a folder; list on a file will not return a value. The values themselves are not accessible via this command.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18723,7 +18806,138 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CubbyholeRead(string path, string list = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CubbyholeList(string path, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->CubbyholeList");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/cubbyhole/{path}/", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("CubbyholeList", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// List secret entries at the specified location. Folders are suffixed with /. The input must be a folder; list on a file will not return a value. The values themselves are not accessible via this command.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Specifies the path of the secret.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> CubbyholeListAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->CubbyholeList");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/cubbyhole/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("CubbyholeList", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+        /// <summary>
+        /// Retrieve the secret at the specified location. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Specifies the path of the secret.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> CubbyholeRead(string path, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
@@ -18758,14 +18972,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -18787,8 +18993,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18798,7 +19002,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CubbyholeReadAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
@@ -18834,11 +19038,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19704,7 +19903,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{database_mount_path}/config", requestOptions);
+            var response = this.Client.Get<Object>("/{database_mount_path}/config/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19766,7 +19965,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/config", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/config/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19827,7 +20026,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{database_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{database_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -19889,7 +20088,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -19950,7 +20149,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{database_mount_path}/static-roles", requestOptions);
+            var response = this.Client.Get<Object>("/{database_mount_path}/static-roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -20012,7 +20211,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/static-roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{database_mount_path}/static-roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -23999,7 +24198,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcpkms_mount_path}/keys", requestOptions);
+            var response = this.Client.Get<Object>("/{gcpkms_mount_path}/keys/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24061,7 +24260,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcpkms_mount_path}/keys", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcpkms_mount_path}/keys/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25634,7 +25833,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/impersonated-account", requestOptions);
+            var response = this.Client.Get<Object>("/{gcp_mount_path}/impersonated-account/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25696,7 +25895,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/impersonated-account", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/impersonated-account/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25757,7 +25956,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/roleset", requestOptions);
+            var response = this.Client.Get<Object>("/{gcp_mount_path}/roleset/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25819,7 +26018,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/roleset", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/roleset/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25880,7 +26079,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/static-account", requestOptions);
+            var response = this.Client.Get<Object>("/{gcp_mount_path}/static-account/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25942,7 +26141,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/static-account", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/static-account/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28116,7 +28315,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{kubernetes_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{kubernetes_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28178,7 +28377,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{kubernetes_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{kubernetes_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28723,8 +28922,145 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of KvV1ListResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<KvV1ListResponse> KvV1List(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null)
+        {
 
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV1List");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<KvV1ListResponse>("/{kv_v1_mount_path}/{path}/", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("KvV1List", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<KvV1ListResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (KvV1ListResponse)</returns>
+        public async Task<VaultResponse<KvV1ListResponse>> KvV1ListAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV1List");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kv_v1_mount_path", ClientUtils.ParameterToString(kvV1MountPath)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<KvV1ListResponse>("/{kv_v1_mount_path}/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("KvV1List", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<KvV1ListResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28733,7 +29069,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KvV1Read(string path, string kvV1MountPath = "kv-v1", string list = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KvV1Read(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
@@ -28771,14 +29107,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -28801,8 +29129,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28812,7 +29138,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KvV1ReadAsync(string path, string kvV1MountPath = "kv-v1", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KvV1ReadAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
@@ -28851,11 +29177,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/{kv_v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -29694,6 +30015,145 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of KvV2ListMetadataResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<KvV2ListMetadataResponse> KvV2ListMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2ListMetadata");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<KvV2ListMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}/", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("KvV2ListMetadata", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<KvV2ListMetadataResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (KvV2ListMetadataResponse)</returns>
+        public async Task<VaultResponse<KvV2ListMetadataResponse>> KvV2ListMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2ListMetadata");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+
+            requestOptions.PathParameters.Add("kv_v2_mount_path", ClientUtils.ParameterToString(kvV2MountPath)); // path parameter
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<KvV2ListMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("KvV2ListMetadata", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<KvV2ListMetadataResponse>(response.RawContent);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Location of the secret.</param>
+        /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of KvV2ReadResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29944,8 +30404,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of KvV2ReadMetadataResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29954,7 +30412,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<KvV2ReadMetadataResponse> KvV2ReadMetadata(string path, string kvV2MountPath = "kv-v2", string list = default(string), TimeSpan? wrapTTL = null)
+        public VaultResponse<KvV2ReadMetadataResponse> KvV2ReadMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
@@ -29992,14 +30450,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-
-
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            }
 
 
 
@@ -30022,8 +30472,6 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
-
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -30033,7 +30481,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (KvV2ReadMetadataResponse)</returns>
-        public async Task<VaultResponse<KvV2ReadMetadataResponse>> KvV2ReadMetadataAsync(string path, string kvV2MountPath = "kv-v2", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<KvV2ReadMetadataResponse>> KvV2ReadMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
@@ -30072,11 +30520,6 @@ namespace Vault.Api
 
 
 
-
-            if (list != null)
-            {
-                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<KvV2ReadMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -32073,7 +32516,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{ldap_mount_path}/library", requestOptions);
+            var response = this.Client.Get<Object>("/{ldap_mount_path}/library/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32135,7 +32578,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{ldap_mount_path}/library", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{ldap_mount_path}/library/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32329,7 +32772,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{ldap_mount_path}/role", requestOptions);
+            var response = this.Client.Get<Object>("/{ldap_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32391,7 +32834,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{ldap_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{ldap_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32452,7 +32895,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{ldap_mount_path}/static-role", requestOptions);
+            var response = this.Client.Get<Object>("/{ldap_mount_path}/static-role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32514,7 +32957,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{ldap_mount_path}/static-role", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{ldap_mount_path}/static-role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -34162,7 +34605,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{mongodbatlas_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{mongodbatlas_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -34224,7 +34667,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{mongodbatlas_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{mongodbatlas_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -35441,7 +35884,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{nomad_mount_path}/role", requestOptions);
+            var response = this.Client.Get<Object>("/{nomad_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -35503,7 +35946,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{nomad_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{nomad_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -41952,7 +42395,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PkiListCertsResponse>("/{pki_mount_path}/certs", requestOptions);
+            var response = this.Client.Get<PkiListCertsResponse>("/{pki_mount_path}/certs/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -42014,7 +42457,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PkiListCertsResponse>("/{pki_mount_path}/certs", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PkiListCertsResponse>("/{pki_mount_path}/certs/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -42075,7 +42518,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PkiListEabKeysResponse>("/{pki_mount_path}/eab", requestOptions);
+            var response = this.Client.Get<PkiListEabKeysResponse>("/{pki_mount_path}/eab/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -42137,7 +42580,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PkiListEabKeysResponse>("/{pki_mount_path}/eab", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PkiListEabKeysResponse>("/{pki_mount_path}/eab/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -42198,7 +42641,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PkiListIssuersResponse>("/{pki_mount_path}/issuers", requestOptions);
+            var response = this.Client.Get<PkiListIssuersResponse>("/{pki_mount_path}/issuers/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -42260,7 +42703,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PkiListIssuersResponse>("/{pki_mount_path}/issuers", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PkiListIssuersResponse>("/{pki_mount_path}/issuers/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -42321,7 +42764,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PkiListKeysResponse>("/{pki_mount_path}/keys", requestOptions);
+            var response = this.Client.Get<PkiListKeysResponse>("/{pki_mount_path}/keys/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -42383,7 +42826,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PkiListKeysResponse>("/{pki_mount_path}/keys", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PkiListKeysResponse>("/{pki_mount_path}/keys/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -42444,7 +42887,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PkiListRevokedCertsResponse>("/{pki_mount_path}/certs/revoked", requestOptions);
+            var response = this.Client.Get<PkiListRevokedCertsResponse>("/{pki_mount_path}/certs/revoked/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -42506,7 +42949,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PkiListRevokedCertsResponse>("/{pki_mount_path}/certs/revoked", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PkiListRevokedCertsResponse>("/{pki_mount_path}/certs/revoked/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -42567,7 +43010,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<PkiListRolesResponse>("/{pki_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<PkiListRolesResponse>("/{pki_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -42629,7 +43072,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<PkiListRolesResponse>("/{pki_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<PkiListRolesResponse>("/{pki_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -56388,7 +56831,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{rabbitmq_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{rabbitmq_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -56450,7 +56893,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{rabbitmq_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{rabbitmq_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -57959,7 +58402,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{ssh_mount_path}/roles", requestOptions);
+            var response = this.Client.Get<Object>("/{ssh_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -58021,7 +58464,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{ssh_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{ssh_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -59748,7 +60191,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{terraform_mount_path}/role", requestOptions);
+            var response = this.Client.Get<Object>("/{terraform_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -59810,7 +60253,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{terraform_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{terraform_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -60812,7 +61255,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{totp_mount_path}/keys", requestOptions);
+            var response = this.Client.Get<Object>("/{totp_mount_path}/keys/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -60874,7 +61317,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{totp_mount_path}/keys", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{totp_mount_path}/keys/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -64574,7 +65017,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{transit_mount_path}/keys", requestOptions);
+            var response = this.Client.Get<Object>("/{transit_mount_path}/keys/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -64636,7 +65079,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{transit_mount_path}/keys", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<Object>("/{transit_mount_path}/keys/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

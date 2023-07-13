@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AliasCreate**](IdentityApi.md#aliascreate) | **POST** /identity/alias | Create a new alias.
 [**AliasDeleteById**](IdentityApi.md#aliasdeletebyid) | **DELETE** /identity/alias/id/{id} | 
-[**AliasListById**](IdentityApi.md#aliaslistbyid) | **GET** /identity/alias/id | List all the alias IDs.
+[**AliasListById**](IdentityApi.md#aliaslistbyid) | **GET** /identity/alias/id/ | List all the alias IDs.
 [**AliasReadById**](IdentityApi.md#aliasreadbyid) | **GET** /identity/alias/id/{id} | 
 [**AliasUpdateById**](IdentityApi.md#aliasupdatebyid) | **POST** /identity/alias/id/{id} | 
 [**EntityBatchDelete**](IdentityApi.md#entitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
@@ -15,9 +15,9 @@ Method | HTTP request | Description
 [**EntityDeleteAliasById**](IdentityApi.md#entitydeletealiasbyid) | **DELETE** /identity/entity-alias/id/{id} | 
 [**EntityDeleteById**](IdentityApi.md#entitydeletebyid) | **DELETE** /identity/entity/id/{id} | 
 [**EntityDeleteByName**](IdentityApi.md#entitydeletebyname) | **DELETE** /identity/entity/name/{name} | 
-[**EntityListAliasesById**](IdentityApi.md#entitylistaliasesbyid) | **GET** /identity/entity-alias/id | List all the alias IDs.
-[**EntityListById**](IdentityApi.md#entitylistbyid) | **GET** /identity/entity/id | List all the entity IDs
-[**EntityListByName**](IdentityApi.md#entitylistbyname) | **GET** /identity/entity/name | List all the entity names
+[**EntityListAliasesById**](IdentityApi.md#entitylistaliasesbyid) | **GET** /identity/entity-alias/id/ | List all the alias IDs.
+[**EntityListById**](IdentityApi.md#entitylistbyid) | **GET** /identity/entity/id/ | List all the entity IDs
+[**EntityListByName**](IdentityApi.md#entitylistbyname) | **GET** /identity/entity/name/ | List all the entity names
 [**EntityLookUp**](IdentityApi.md#entitylookup) | **POST** /identity/lookup/entity | Query entities based on various properties.
 [**EntityMerge**](IdentityApi.md#entitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
 [**EntityReadAliasById**](IdentityApi.md#entityreadaliasbyid) | **GET** /identity/entity-alias/id/{id} | 
@@ -31,9 +31,9 @@ Method | HTTP request | Description
 [**GroupDeleteAliasById**](IdentityApi.md#groupdeletealiasbyid) | **DELETE** /identity/group-alias/id/{id} | 
 [**GroupDeleteById**](IdentityApi.md#groupdeletebyid) | **DELETE** /identity/group/id/{id} | 
 [**GroupDeleteByName**](IdentityApi.md#groupdeletebyname) | **DELETE** /identity/group/name/{name} | 
-[**GroupListAliasesById**](IdentityApi.md#grouplistaliasesbyid) | **GET** /identity/group-alias/id | List all the group alias IDs.
-[**GroupListById**](IdentityApi.md#grouplistbyid) | **GET** /identity/group/id | List all the group IDs.
-[**GroupListByName**](IdentityApi.md#grouplistbyname) | **GET** /identity/group/name | 
+[**GroupListAliasesById**](IdentityApi.md#grouplistaliasesbyid) | **GET** /identity/group-alias/id/ | List all the group alias IDs.
+[**GroupListById**](IdentityApi.md#grouplistbyid) | **GET** /identity/group/id/ | List all the group IDs.
+[**GroupListByName**](IdentityApi.md#grouplistbyname) | **GET** /identity/group/name/ | 
 [**GroupLookUp**](IdentityApi.md#grouplookup) | **POST** /identity/lookup/group | Query groups based on various properties.
 [**GroupReadAliasById**](IdentityApi.md#groupreadaliasbyid) | **GET** /identity/group-alias/id/{id} | 
 [**GroupReadById**](IdentityApi.md#groupreadbyid) | **GET** /identity/group/id/{id} | 
@@ -53,12 +53,12 @@ Method | HTTP request | Description
 [**MfaDeletePingIdMethod**](IdentityApi.md#mfadeletepingidmethod) | **DELETE** /identity/mfa/method/pingid/{method_id} | Delete the given MFA method
 [**MfaDeleteTotpMethod**](IdentityApi.md#mfadeletetotpmethod) | **DELETE** /identity/mfa/method/totp/{method_id} | Delete the given MFA method
 [**MfaGenerateTotpSecret**](IdentityApi.md#mfageneratetotpsecret) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
-[**MfaListDuoMethods**](IdentityApi.md#mfalistduomethods) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
-[**MfaListLoginEnforcements**](IdentityApi.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement | List login enforcements
-[**MfaListMethods**](IdentityApi.md#mfalistmethods) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
-[**MfaListOktaMethods**](IdentityApi.md#mfalistoktamethods) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
-[**MfaListPingIdMethods**](IdentityApi.md#mfalistpingidmethods) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
-[**MfaListTotpMethods**](IdentityApi.md#mfalisttotpmethods) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
+[**MfaListDuoMethods**](IdentityApi.md#mfalistduomethods) | **GET** /identity/mfa/method/duo/ | List MFA method configurations for the given MFA method
+[**MfaListLoginEnforcements**](IdentityApi.md#mfalistloginenforcements) | **GET** /identity/mfa/login-enforcement/ | List login enforcements
+[**MfaListMethods**](IdentityApi.md#mfalistmethods) | **GET** /identity/mfa/method/ | List MFA method configurations for all MFA methods
+[**MfaListOktaMethods**](IdentityApi.md#mfalistoktamethods) | **GET** /identity/mfa/method/okta/ | List MFA method configurations for the given MFA method
+[**MfaListPingIdMethods**](IdentityApi.md#mfalistpingidmethods) | **GET** /identity/mfa/method/pingid/ | List MFA method configurations for the given MFA method
+[**MfaListTotpMethods**](IdentityApi.md#mfalisttotpmethods) | **GET** /identity/mfa/method/totp/ | List MFA method configurations for the given MFA method
 [**MfaReadDuoMethod**](IdentityApi.md#mfareadduomethod) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
 [**MfaReadLoginEnforcement**](IdentityApi.md#mfareadloginenforcement) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
 [**MfaReadMethod**](IdentityApi.md#mfareadmethod) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
@@ -79,12 +79,12 @@ Method | HTTP request | Description
 [**OidcDeleteScope**](IdentityApi.md#oidcdeletescope) | **DELETE** /identity/oidc/scope/{name} | 
 [**OidcGenerateToken**](IdentityApi.md#oidcgeneratetoken) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
 [**OidcIntrospect**](IdentityApi.md#oidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
-[**OidcListAssignments**](IdentityApi.md#oidclistassignments) | **GET** /identity/oidc/assignment | 
-[**OidcListClients**](IdentityApi.md#oidclistclients) | **GET** /identity/oidc/client | 
-[**OidcListKeys**](IdentityApi.md#oidclistkeys) | **GET** /identity/oidc/key | List OIDC keys
-[**OidcListProviders**](IdentityApi.md#oidclistproviders) | **GET** /identity/oidc/provider | 
-[**OidcListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role | List configured OIDC roles
-[**OidcListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope | 
+[**OidcListAssignments**](IdentityApi.md#oidclistassignments) | **GET** /identity/oidc/assignment/ | 
+[**OidcListClients**](IdentityApi.md#oidclistclients) | **GET** /identity/oidc/client/ | 
+[**OidcListKeys**](IdentityApi.md#oidclistkeys) | **GET** /identity/oidc/key/ | List OIDC keys
+[**OidcListProviders**](IdentityApi.md#oidclistproviders) | **GET** /identity/oidc/provider/ | 
+[**OidcListRoles**](IdentityApi.md#oidclistroles) | **GET** /identity/oidc/role/ | List configured OIDC roles
+[**OidcListScopes**](IdentityApi.md#oidclistscopes) | **GET** /identity/oidc/scope/ | 
 [**OidcProviderAuthorize**](IdentityApi.md#oidcproviderauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
 [**OidcProviderAuthorizeWithParameters**](IdentityApi.md#oidcproviderauthorizewithparameters) | **POST** /identity/oidc/provider/{name}/authorize | 
 [**OidcProviderToken**](IdentityApi.md#oidcprovidertoken) | **POST** /identity/oidc/provider/{name}/token | 
@@ -109,7 +109,7 @@ Method | HTTP request | Description
 [**OidcWriteScope**](IdentityApi.md#oidcwritescope) | **POST** /identity/oidc/scope/{name} | 
 [**PersonaCreate**](IdentityApi.md#personacreate) | **POST** /identity/persona | Create a new alias.
 [**PersonaDeleteById**](IdentityApi.md#personadeletebyid) | **DELETE** /identity/persona/id/{id} | 
-[**PersonaListById**](IdentityApi.md#personalistbyid) | **GET** /identity/persona/id | List all the alias IDs.
+[**PersonaListById**](IdentityApi.md#personalistbyid) | **GET** /identity/persona/id/ | List all the alias IDs.
 [**PersonaReadById**](IdentityApi.md#personareadbyid) | **GET** /identity/persona/id/{id} | 
 [**PersonaUpdateById**](IdentityApi.md#personaupdatebyid) | **POST** /identity/persona/id/{id} | 
 

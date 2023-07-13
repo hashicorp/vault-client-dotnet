@@ -57,7 +57,7 @@ Method | HTTP request | Description
 [**LeasesForceRevokeLeaseWithPrefix**](SystemApi.md#leasesforcerevokeleasewithprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
 [**LeasesList**](SystemApi.md#leaseslist) | **GET** /sys/leases | 
 [**LeasesLookUp**](SystemApi.md#leaseslookup) | **GET** /sys/leases/lookup/ | 
-[**LeasesLookUpWithPrefix**](SystemApi.md#leaseslookupwithprefix) | **GET** /sys/leases/lookup/{prefix} | 
+[**LeasesLookUpWithPrefix**](SystemApi.md#leaseslookupwithprefix) | **GET** /sys/leases/lookup/{prefix}/ | 
 [**LeasesReadLease**](SystemApi.md#leasesreadlease) | **POST** /sys/leases/lookup | 
 [**LeasesRenewLease**](SystemApi.md#leasesrenewlease) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
 [**LeasesRenewLeaseWithId**](SystemApi.md#leasesrenewleasewithid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
@@ -84,7 +84,7 @@ Method | HTTP request | Description
 [**MountsReadTuningInformation**](SystemApi.md#mountsreadtuninginformation) | **GET** /sys/mounts/{path}/tune | 
 [**MountsTuneConfigurationParameters**](SystemApi.md#mountstuneconfigurationparameters) | **POST** /sys/mounts/{path}/tune | 
 [**PluginsCatalogListPlugins**](SystemApi.md#pluginscataloglistplugins) | **GET** /sys/plugins/catalog | 
-[**PluginsCatalogListPluginsWithType**](SystemApi.md#pluginscataloglistpluginswithtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
+[**PluginsCatalogListPluginsWithType**](SystemApi.md#pluginscataloglistpluginswithtype) | **GET** /sys/plugins/catalog/{type}/ | List the plugins in the catalog.
 [**PluginsCatalogReadPluginConfiguration**](SystemApi.md#pluginscatalogreadpluginconfiguration) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
 [**PluginsCatalogReadPluginConfigurationWithType**](SystemApi.md#pluginscatalogreadpluginconfigurationwithtype) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
 [**PluginsCatalogRegisterPlugin**](SystemApi.md#pluginscatalogregisterplugin) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
@@ -95,9 +95,8 @@ Method | HTTP request | Description
 [**PoliciesDeleteAclPolicy**](SystemApi.md#policiesdeleteaclpolicy) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
 [**PoliciesDeletePasswordPolicy**](SystemApi.md#policiesdeletepasswordpolicy) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
 [**PoliciesGeneratePasswordFromPasswordPolicy**](SystemApi.md#policiesgeneratepasswordfrompasswordpolicy) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
-[**PoliciesList**](SystemApi.md#policieslist) | **GET** /sys/policy | 
-[**PoliciesListAclPolicies**](SystemApi.md#policieslistaclpolicies) | **GET** /sys/policies/acl | 
-[**PoliciesListPasswordPolicies**](SystemApi.md#policieslistpasswordpolicies) | **GET** /sys/policies/password | List the existing password policies.
+[**PoliciesListAclPolicies**](SystemApi.md#policieslistaclpolicies) | **GET** /sys/policies/acl/ | 
+[**PoliciesListPasswordPolicies**](SystemApi.md#policieslistpasswordpolicies) | **GET** /sys/policies/password/ | List the existing password policies.
 [**PoliciesReadAclPolicy**](SystemApi.md#policiesreadaclpolicy) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
 [**PoliciesReadPasswordPolicy**](SystemApi.md#policiesreadpasswordpolicy) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
 [**PoliciesWriteAclPolicy**](SystemApi.md#policieswriteaclpolicy) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
@@ -118,12 +117,14 @@ Method | HTTP request | Description
 [**QueryTokenSelfCapabilities**](SystemApi.md#querytokenselfcapabilities) | **POST** /sys/capabilities-self | 
 [**RateLimitQuotasConfigure**](SystemApi.md#ratelimitquotasconfigure) | **POST** /sys/quotas/config | 
 [**RateLimitQuotasDelete**](SystemApi.md#ratelimitquotasdelete) | **DELETE** /sys/quotas/rate-limit/{name} | 
-[**RateLimitQuotasList**](SystemApi.md#ratelimitquotaslist) | **GET** /sys/quotas/rate-limit | 
+[**RateLimitQuotasList**](SystemApi.md#ratelimitquotaslist) | **GET** /sys/quotas/rate-limit/ | 
 [**RateLimitQuotasRead**](SystemApi.md#ratelimitquotasread) | **GET** /sys/quotas/rate-limit/{name} | 
 [**RateLimitQuotasReadConfiguration**](SystemApi.md#ratelimitquotasreadconfiguration) | **GET** /sys/quotas/config | 
 [**RateLimitQuotasWrite**](SystemApi.md#ratelimitquotaswrite) | **POST** /sys/quotas/rate-limit/{name} | 
 [**RawDelete**](SystemApi.md#rawdelete) | **DELETE** /sys/raw | Delete the key with given path.
 [**RawDeletePath**](SystemApi.md#rawdeletepath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
+[**RawList**](SystemApi.md#rawlist) | **GET** /sys/raw/ | Return a list keys for a given path prefix.
+[**RawListPath**](SystemApi.md#rawlistpath) | **GET** /sys/raw/{path}/ | Return a list keys for a given path prefix.
 [**RawRead**](SystemApi.md#rawread) | **GET** /sys/raw | Read the value of the key at the given path.
 [**RawReadPath**](SystemApi.md#rawreadpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
 [**RawWrite**](SystemApi.md#rawwrite) | **POST** /sys/raw | Update the value of the key at the given path.
@@ -166,12 +167,12 @@ Method | HTTP request | Description
 [**SystemDeleteQuotasLeaseCountName**](SystemApi.md#systemdeletequotasleasecountname) | **DELETE** /sys/quotas/lease-count/{name} | 
 [**SystemDeleteReplicationPerformancePrimaryPathsFilterId**](SystemApi.md#systemdeletereplicationperformanceprimarypathsfilterid) | **DELETE** /sys/replication/performance/primary/paths-filter/{id} | 
 [**SystemDeleteStorageRaftSnapshotAutoConfigName**](SystemApi.md#systemdeletestorageraftsnapshotautoconfigname) | **DELETE** /sys/storage/raft/snapshot-auto/config/{name} | 
-[**SystemListManagedKeysType**](SystemApi.md#systemlistmanagedkeystype) | **GET** /sys/managed-keys/{type} | 
-[**SystemListMfaMethod**](SystemApi.md#systemlistmfamethod) | **GET** /sys/mfa/method | 
-[**SystemListNamespaces**](SystemApi.md#systemlistnamespaces) | **GET** /sys/namespaces | 
-[**SystemListPoliciesEgp**](SystemApi.md#systemlistpoliciesegp) | **GET** /sys/policies/egp | 
-[**SystemListPoliciesRgp**](SystemApi.md#systemlistpoliciesrgp) | **GET** /sys/policies/rgp | 
-[**SystemListQuotasLeaseCount**](SystemApi.md#systemlistquotasleasecount) | **GET** /sys/quotas/lease-count | 
+[**SystemListManagedKeysType**](SystemApi.md#systemlistmanagedkeystype) | **GET** /sys/managed-keys/{type}/ | 
+[**SystemListMfaMethod**](SystemApi.md#systemlistmfamethod) | **GET** /sys/mfa/method/ | 
+[**SystemListNamespaces**](SystemApi.md#systemlistnamespaces) | **GET** /sys/namespaces/ | 
+[**SystemListPoliciesEgp**](SystemApi.md#systemlistpoliciesegp) | **GET** /sys/policies/egp/ | 
+[**SystemListPoliciesRgp**](SystemApi.md#systemlistpoliciesrgp) | **GET** /sys/policies/rgp/ | 
+[**SystemListQuotasLeaseCount**](SystemApi.md#systemlistquotasleasecount) | **GET** /sys/quotas/lease-count/ | 
 [**SystemListStorageRaftSnapshotAutoConfig**](SystemApi.md#systemliststorageraftsnapshotautoconfig) | **GET** /sys/storage/raft/snapshot-auto/config/ | 
 [**SystemReadConfigControlGroup**](SystemApi.md#systemreadconfigcontrolgroup) | **GET** /sys/config/control-group | 
 [**SystemReadConfigGroupPolicyApplication**](SystemApi.md#systemreadconfiggrouppolicyapplication) | **GET** /sys/config/group-policy-application | 
@@ -257,11 +258,11 @@ Method | HTTP request | Description
 [**SystemWriteStorageRaftSnapshotAutoConfigName**](SystemApi.md#systemwritestorageraftsnapshotautoconfigname) | **POST** /sys/storage/raft/snapshot-auto/config/{name} | 
 [**UiHeadersConfigure**](SystemApi.md#uiheadersconfigure) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
 [**UiHeadersDeleteConfiguration**](SystemApi.md#uiheadersdeleteconfiguration) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
-[**UiHeadersList**](SystemApi.md#uiheaderslist) | **GET** /sys/config/ui/headers | Return a list of configured UI headers.
+[**UiHeadersList**](SystemApi.md#uiheaderslist) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
 [**UiHeadersReadConfiguration**](SystemApi.md#uiheadersreadconfiguration) | **GET** /sys/config/ui/headers/{header} | Return the given UI header&#x27;s configuration
 [**Unseal**](SystemApi.md#unseal) | **POST** /sys/unseal | Unseal the Vault.
 [**Unwrap**](SystemApi.md#unwrap) | **POST** /sys/wrapping/unwrap | 
-[**VersionHistory**](SystemApi.md#versionhistory) | **GET** /sys/version-history | Returns map of historical version change entries
+[**VersionHistory**](SystemApi.md#versionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
 [**Wrap**](SystemApi.md#wrap) | **POST** /sys/wrapping/wrap | 
 
 
@@ -10006,98 +10007,6 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="policieslist"></a>
-# **PoliciesList**
-
-> PoliciesListResponse PoliciesList (string list = default(string), TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PoliciesListExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
-
-            try
-            {
-                
-
-                PoliciesListResponse result = apiInstance.PoliciesList(string list = default(string), TimeSpan? wrapTTL = null);
-
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.PoliciesList: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
-
-
-### Return type
-
-[**PoliciesListResponse**](PoliciesListResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="policieslistaclpolicies"></a>
 # **PoliciesListAclPolicies**
 
@@ -12672,10 +12581,204 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+<a name="rawlist"></a>
+# **RawList**
+
+> RawListResponse RawList (TimeSpan? wrapTTL = null)
+
+Return a list keys for a given path prefix.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class RawListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+                // Return a list keys for a given path prefix.
+                
+
+                RawListResponse result = apiInstance.RawList(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.RawList: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+[**RawListResponse**](RawListResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+<a name="rawlistpath"></a>
+# **RawListPath**
+
+> RawListPathResponse RawListPath (string path, TimeSpan? wrapTTL = null)
+
+Return a list keys for a given path prefix.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class RawListPathExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var path = "path_example";  // string | 
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+                // Return a list keys for a given path prefix.
+                
+
+                RawListPathResponse result = apiInstance.RawListPath(string path, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.RawListPath: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**|  | 
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+[**RawListPathResponse**](RawListPathResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 <a name="rawread"></a>
 # **RawRead**
 
-> RawReadResponse RawRead (string list = default(string), TimeSpan? wrapTTL = null)
+> RawReadResponse RawRead (TimeSpan? wrapTTL = null)
 
 Read the value of the key at the given path.
 
@@ -12707,11 +12810,6 @@ namespace Example
             
             
             
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
 
             try
             {
@@ -12719,7 +12817,7 @@ namespace Example
                 // Read the value of the key at the given path.
                 
 
-                RawReadResponse result = apiInstance.RawRead(string list = default(string), TimeSpan? wrapTTL = null);
+                RawReadResponse result = apiInstance.RawRead(TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12734,10 +12832,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
+This endpoint does not need any parameter.
 
 
 ### Return type
@@ -12769,7 +12864,7 @@ No authorization required
 <a name="rawreadpath"></a>
 # **RawReadPath**
 
-> RawReadPathResponse RawReadPath (string path, string list = default(string), TimeSpan? wrapTTL = null)
+> RawReadPathResponse RawReadPath (string path, TimeSpan? wrapTTL = null)
 
 Read the value of the key at the given path.
 
@@ -12806,11 +12901,6 @@ namespace Example
             
             
             
-            
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-            
-            
-            
 
             try
             {
@@ -12818,7 +12908,7 @@ namespace Example
                 // Read the value of the key at the given path.
                 
 
-                RawReadPathResponse result = apiInstance.RawReadPath(string path, string list = default(string), TimeSpan? wrapTTL = null);
+                RawReadPathResponse result = apiInstance.RawReadPath(string path, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12837,7 +12927,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**|  | 
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 
 ### Return type
