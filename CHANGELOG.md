@@ -8,6 +8,10 @@ and this project adheres to
 
 ## Unreleased ([diff][unreleased-diff])
 
+## [0.2.0][] ([diff][0.2.0-diff]) - 2023-07-17
+
+## [0.1.0][] ([diff][0.1.0-diff]) - 2023-03-14
+
 ## [0.1.0-beta][] ([diff][0.1.0-beta-diff]) - 2023-02-08
 
 ### Added
