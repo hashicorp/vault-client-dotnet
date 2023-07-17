@@ -18,10 +18,20 @@ and this project adheres to
 
 [unreleased-diff]:
   https://github.com/hashicorp/vault-client-dotnet/compare/0.1.0-beta...HEAD
+[0.2.0-diff]:
+  https://github.com/hashicorp/vault-client-dotnet/commits/0.2.0
+[0.1.0-diff]:
+  https://github.com/hashicorp/vault-client-dotnet/commits/0.1.0
 [0.1.0-beta-diff]:
   https://github.com/hashicorp/vault-client-dotnet/commits/0.1.0-beta
 
 <!-- releases -->
+
+[0.2.0]:
+  https://github.com/hashicorp/vault-client-dotnet/releases/tag/0.2.0
+
+[0.1.0]:
+  https://github.com/hashicorp/vault-client-dotnet/releases/tag/0.1.0
 
 [0.1.0-beta]:
   https://github.com/hashicorp/vault-client-dotnet/releases/tag/0.1.0-beta
