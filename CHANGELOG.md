@@ -10,6 +10,14 @@ and this project adheres to
 
 ## [0.2.0][] ([diff][0.2.0-diff]) - 2023-07-17
 
+### Added
+- Updated ReadMe & examples
+- Regenerate with new OpenAPI Operation IDs
+
+### Fixed
+- Fixed symbol package format when publishing package
+- Fixing warnings during code generation
+
 ## [0.1.0][] ([diff][0.1.0-diff]) - 2023-03-14
 
 ## [0.1.0-beta][] ([diff][0.1.0-beta-diff]) - 2023-02-08
