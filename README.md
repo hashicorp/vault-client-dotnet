@@ -40,13 +40,13 @@ provided install commands below.
 Using Powershell:
 
 ```shell-session
- Install-Package HashiCorp.Vault -Version "0.1.0"
+ Install-Package HashiCorp.Vault -Version "0.2.0"
 ```
 
 Using Nuget CLI:
 
 ```shell-session
- nuget install HashiCorp.Vault -Version "0.1.0"
+ nuget install HashiCorp.Vault -Version "0.2.0"
 ```
 
 > _**Note**_: You can find the latest package version in the Release tab in
@@ -55,7 +55,7 @@ Using Nuget CLI:
 You can add the package to your .Net project using the following command:
 
 ```shell-session
-dotnet add package Hashicorp.Vault -version "0.1.0-beta"
+dotnet add package Hashicorp.Vault -version "0.2.0"
 ```
 
 ### Frameworks supported
