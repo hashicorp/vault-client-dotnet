@@ -56,8 +56,7 @@ Method | HTTP request | Description
 [**LeasesCount**](SystemApi.md#leasescount) | **GET** /sys/leases/count | 
 [**LeasesForceRevokeLeaseWithPrefix**](SystemApi.md#leasesforcerevokeleasewithprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
 [**LeasesList**](SystemApi.md#leaseslist) | **GET** /sys/leases | 
-[**LeasesLookUp**](SystemApi.md#leaseslookup) | **GET** /sys/leases/lookup/ | 
-[**LeasesLookUpWithPrefix**](SystemApi.md#leaseslookupwithprefix) | **GET** /sys/leases/lookup/{prefix}/ | 
+[**LeasesLookUp**](SystemApi.md#leaseslookup) | **GET** /sys/leases/lookup/{prefix}/ | 
 [**LeasesReadLease**](SystemApi.md#leasesreadlease) | **POST** /sys/leases/lookup | 
 [**LeasesRenewLease**](SystemApi.md#leasesrenewlease) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
 [**LeasesRenewLeaseWithId**](SystemApi.md#leasesrenewleasewithid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
@@ -121,14 +120,10 @@ Method | HTTP request | Description
 [**RateLimitQuotasRead**](SystemApi.md#ratelimitquotasread) | **GET** /sys/quotas/rate-limit/{name} | 
 [**RateLimitQuotasReadConfiguration**](SystemApi.md#ratelimitquotasreadconfiguration) | **GET** /sys/quotas/config | 
 [**RateLimitQuotasWrite**](SystemApi.md#ratelimitquotaswrite) | **POST** /sys/quotas/rate-limit/{name} | 
-[**RawDelete**](SystemApi.md#rawdelete) | **DELETE** /sys/raw | Delete the key with given path.
-[**RawDeletePath**](SystemApi.md#rawdeletepath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
-[**RawList**](SystemApi.md#rawlist) | **GET** /sys/raw/ | Return a list keys for a given path prefix.
-[**RawListPath**](SystemApi.md#rawlistpath) | **GET** /sys/raw/{path}/ | Return a list keys for a given path prefix.
-[**RawRead**](SystemApi.md#rawread) | **GET** /sys/raw | Read the value of the key at the given path.
-[**RawReadPath**](SystemApi.md#rawreadpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
-[**RawWrite**](SystemApi.md#rawwrite) | **POST** /sys/raw | Update the value of the key at the given path.
-[**RawWritePath**](SystemApi.md#rawwritepath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
+[**RawDelete**](SystemApi.md#rawdelete) | **DELETE** /sys/raw/{path} | Delete the key with given path.
+[**RawList**](SystemApi.md#rawlist) | **GET** /sys/raw/{path}/ | Return a list keys for a given path prefix.
+[**RawRead**](SystemApi.md#rawread) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
+[**RawWrite**](SystemApi.md#rawwrite) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
 [**ReadHealthStatus**](SystemApi.md#readhealthstatus) | **GET** /sys/health | Returns the health status of Vault.
 [**ReadInitializationStatus**](SystemApi.md#readinitializationstatus) | **GET** /sys/init | Returns the initialization status of Vault.
 [**ReadSanitizedConfigurationState**](SystemApi.md#readsanitizedconfigurationstate) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
@@ -6158,7 +6153,7 @@ No authorization required
 <a name="leaseslookup"></a>
 # **LeasesLookUp**
 
-> LeasesLookUpResponse LeasesLookUp (TimeSpan? wrapTTL = null)
+> LeasesLookUpResponse LeasesLookUp (string prefix, TimeSpan? wrapTTL = null)
 
 
 
@@ -6191,6 +6186,11 @@ namespace Example
             
             
             
+            var prefix = "prefix_example";  // string | The path to list leases under. Example: \"aws/creds/deploy\"
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
             
             
@@ -6200,7 +6200,7 @@ namespace Example
             {
                 
 
-                LeasesLookUpResponse result = apiInstance.LeasesLookUp(TimeSpan? wrapTTL = null);
+                LeasesLookUpResponse result = apiInstance.LeasesLookUp(string prefix, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -6218,110 +6218,13 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-
-### Return type
-
-[**LeasesLookUpResponse**](LeasesLookUpResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="leaseslookupwithprefix"></a>
-# **LeasesLookUpWithPrefix**
-
-> LeasesLookUpWithPrefixResponse LeasesLookUpWithPrefix (string prefix, TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class LeasesLookUpWithPrefixExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var prefix = "prefix_example";  // string | The path to list leases under. Example: \"aws/creds/deploy\"
-            
-            
-            
-            
-            var list = "true";  // string | Must be set to `true`
-            
-            
-            
-
-            try
-            {
-                
-
-                LeasesLookUpWithPrefixResponse result = apiInstance.LeasesLookUpWithPrefix(string prefix, TimeSpan? wrapTTL = null);
-
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.LeasesLookUpWithPrefix: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
  **prefix** | **string**| The path to list leases under. Example: \&quot;aws/creds/deploy\&quot; | 
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
 
 ### Return type
 
-[**LeasesLookUpWithPrefixResponse**](LeasesLookUpWithPrefixResponse.md)
+[**LeasesLookUpResponse**](LeasesLookUpResponse.md)
 
 ### Authorization
 
@@ -12408,7 +12311,7 @@ No authorization required
 <a name="rawdelete"></a>
 # **RawDelete**
 
-> void RawDelete (TimeSpan? wrapTTL = null)
+> void RawDelete (string path, TimeSpan? wrapTTL = null)
 
 Delete the key with given path.
 
@@ -12440,90 +12343,6 @@ namespace Example
             
             
             
-
-            try
-            {
-                
-                // Delete the key with given path.
-                
-
-                apiInstance.RawDelete(TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.RawDelete: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **204** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="rawdeletepath"></a>
-# **RawDeletePath**
-
-> void RawDeletePath (string path, TimeSpan? wrapTTL = null)
-
-Delete the key with given path.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class RawDeletePathExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            
-            
-            
             
             var path = "path_example";  // string | 
             
@@ -12536,11 +12355,11 @@ namespace Example
                 // Delete the key with given path.
                 
 
-                apiInstance.RawDeletePath(string path, TimeSpan? wrapTTL = null);
+                apiInstance.RawDelete(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.RawDeletePath: " + e.Message );
+                Debug.Print("Exception when calling System.RawDelete: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
             }
         }
@@ -12584,7 +12403,7 @@ No authorization required
 <a name="rawlist"></a>
 # **RawList**
 
-> RawListResponse RawList (TimeSpan? wrapTTL = null)
+> RawListResponse RawList (string path, TimeSpan? wrapTTL = null)
 
 Return a list keys for a given path prefix.
 
@@ -12617,6 +12436,11 @@ namespace Example
             
             
             
+            var path = "path_example";  // string | 
+            
+            
+            
+            
             var list = "true";  // string | Must be set to `true`
             
             
@@ -12628,7 +12452,7 @@ namespace Example
                 // Return a list keys for a given path prefix.
                 
 
-                RawListResponse result = apiInstance.RawList(TimeSpan? wrapTTL = null);
+                RawListResponse result = apiInstance.RawList(string path, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12646,6 +12470,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **path** | **string**|  | 
  **list** | **string**| Must be set to &#x60;true&#x60; | 
 
 
@@ -12675,110 +12500,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="rawlistpath"></a>
-# **RawListPath**
-
-> RawListPathResponse RawListPath (string path, TimeSpan? wrapTTL = null)
-
-Return a list keys for a given path prefix.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class RawListPathExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var path = "path_example";  // string | 
-            
-            
-            
-            
-            var list = "true";  // string | Must be set to `true`
-            
-            
-            
-
-            try
-            {
-                
-                // Return a list keys for a given path prefix.
-                
-
-                RawListPathResponse result = apiInstance.RawListPath(string path, TimeSpan? wrapTTL = null);
-
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.RawListPath: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **string**|  | 
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-
-### Return type
-
-[**RawListPathResponse**](RawListPathResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="rawread"></a>
 # **RawRead**
 
-> RawReadResponse RawRead (TimeSpan? wrapTTL = null)
+> RawReadResponse RawRead (string path, TimeSpan? wrapTTL = null)
 
 Read the value of the key at the given path.
 
@@ -12810,6 +12535,11 @@ namespace Example
             
             
             
+            
+            var path = "path_example";  // string | 
+            
+            
+            
 
             try
             {
@@ -12817,7 +12547,7 @@ namespace Example
                 // Read the value of the key at the given path.
                 
 
-                RawReadResponse result = apiInstance.RawRead(TimeSpan? wrapTTL = null);
+                RawReadResponse result = apiInstance.RawRead(string path, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12832,7 +12562,10 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**|  | 
 
 
 ### Return type
@@ -12861,104 +12594,10 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-<a name="rawreadpath"></a>
-# **RawReadPath**
-
-> RawReadPathResponse RawReadPath (string path, TimeSpan? wrapTTL = null)
-
-Read the value of the key at the given path.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class RawReadPathExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var path = "path_example";  // string | 
-            
-            
-            
-
-            try
-            {
-                
-                // Read the value of the key at the given path.
-                
-
-                RawReadPathResponse result = apiInstance.RawReadPath(string path, TimeSpan? wrapTTL = null);
-
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.RawReadPath: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **path** | **string**|  | 
-
-
-### Return type
-
-[**RawReadPathResponse**](RawReadPathResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 <a name="rawwrite"></a>
 # **RawWrite**
 
-> void RawWrite (RawWriteRequest rawWriteRequest, TimeSpan? wrapTTL = null)
+> void RawWrite (string path, RawWriteRequest rawWriteRequest, TimeSpan? wrapTTL = null)
 
 Update the value of the key at the given path.
 
@@ -12991,6 +12630,11 @@ namespace Example
             
             
             
+            var path = "path_example";  // string | 
+            
+            
+            
+            
             
             var rawWriteRequest = new RawWriteRequest(); // RawWriteRequest | 
             
@@ -13002,7 +12646,7 @@ namespace Example
                 // Update the value of the key at the given path.
                 
 
-                apiInstance.RawWrite(RawWriteRequest rawWriteRequest, TimeSpan? wrapTTL = null);
+                apiInstance.RawWrite(string path, RawWriteRequest rawWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13018,105 +12662,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rawWriteRequest** | [**RawWriteRequest**](RawWriteRequest.md)|  | 
-
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: , 
- - **Accept**: Not defined
-
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-
-| **200** | OK |  -  |
-
-
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-<a name="rawwritepath"></a>
-# **RawWritePath**
-
-> void RawWritePath (string path, RawWritePathRequest rawWritePathRequest, TimeSpan? wrapTTL = null)
-
-Update the value of the key at the given path.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-
-using System.Net.Http;
-
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class RawWritePathExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            
-            
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            
-            
-            
-            
-            var path = "path_example";  // string | 
-            
-            
-            
-            
-            
-            var rawWritePathRequest = new RawWritePathRequest(); // RawWritePathRequest | 
-            
-            
-
-            try
-            {
-                
-                // Update the value of the key at the given path.
-                
-
-                apiInstance.RawWritePath(string path, RawWritePathRequest rawWritePathRequest, TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.RawWritePath: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
  **path** | **string**|  | 
- **rawWritePathRequest** | [**RawWritePathRequest**](RawWritePathRequest.md)|  | 
+ **rawWriteRequest** | [**RawWriteRequest**](RawWriteRequest.md)|  | 
 
 
 ### Return type
