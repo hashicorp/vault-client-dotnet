@@ -56,6 +56,15 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'AllowRoleExtKeyUsage'
+        /// </summary>
+        [Fact]
+        public void AllowRoleExtKeyUsageTest()
+        {
+            // TODO unit test for the property 'AllowRoleExtKeyUsage'
+        }
+
+        /// <summary>
         /// Test the property 'AllowedIssuers'
         /// </summary>
         [Fact]
