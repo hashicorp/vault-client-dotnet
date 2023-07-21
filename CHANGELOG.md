@@ -29,11 +29,11 @@ and this project adheres to
 <!-- diffs -->
 
 [unreleased-diff]:
-  https://github.com/hashicorp/vault-client-dotnet/compare/0.1.0-beta...HEAD
+  https://github.com/hashicorp/vault-client-dotnet/compare/0.2.0...HEAD
 [0.2.0-diff]:
-  https://github.com/hashicorp/vault-client-dotnet/commits/0.2.0
+  https://github.com/hashicorp/vault-client-dotnet/compare/0.1.0...0.2.0
 [0.1.0-diff]:
-  https://github.com/hashicorp/vault-client-dotnet/commits/0.1.0
+  https://github.com/hashicorp/vault-client-dotnet/compare/0.1.0-beta...0.1.0
 [0.1.0-beta-diff]:
   https://github.com/hashicorp/vault-client-dotnet/commits/0.1.0-beta
 
