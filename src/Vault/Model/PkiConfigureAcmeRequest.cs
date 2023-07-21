@@ -34,6 +34,8 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiConfigureAcmeRequest" /> class.
         /// </summary>
 
+        /// <param name="AllowRoleExtKeyUsage">whether the ExtKeyUsage field from a role is used, defaults to false meaning that certificate will be signed with ServerAuth. (default to false).</param>
+
         /// <param name="AllowedIssuers">which issuers are allowed for use with ACME; by default, this will only be the primary (default) issuer.</param>
 
         /// <param name="AllowedRoles">which roles are allowed for use with ACME; by default via &#x27;*&#x27;, these will be all roles including sign-verbatim; when concrete role names are specified, any default_directory_policy role must be included to allow usage of the default acme directories under /pki/acme/directory and /pki/issuer/:issuer_id/acme/directory..</param>
@@ -47,8 +49,10 @@ namespace Vault.Model
         /// <param name="Enabled">whether ACME is enabled, defaults to false meaning that clusters will by default not get ACME support (default to false).</param>
 
 
-        public PkiConfigureAcmeRequest(List<string> AllowedIssuers = default(List<string>), List<string> AllowedRoles = default(List<string>), string DefaultDirectoryPolicy = "sign-verbatim", string DnsResolver = "", string EabPolicy = "always-required", bool Enabled = false)
+        public PkiConfigureAcmeRequest(bool AllowRoleExtKeyUsage = false, List<string> AllowedIssuers = default(List<string>), List<string> AllowedRoles = default(List<string>), string DefaultDirectoryPolicy = "sign-verbatim", string DnsResolver = "", string EabPolicy = "always-required", bool Enabled = false)
         {
+
+            this.AllowRoleExtKeyUsage = AllowRoleExtKeyUsage;
 
             this.AllowedIssuers = AllowedIssuers;
 
@@ -69,6 +73,15 @@ namespace Vault.Model
             this.Enabled = Enabled;
 
         }
+
+        /// <summary>
+        /// whether the ExtKeyUsage field from a role is used, defaults to false meaning that certificate will be signed with ServerAuth.
+        /// </summary>
+        /// <value>whether the ExtKeyUsage field from a role is used, defaults to false meaning that certificate will be signed with ServerAuth.</value>
+        [DataMember(Name = "allow_role_ext_key_usage", EmitDefaultValue = true)]
+
+        public bool AllowRoleExtKeyUsage { get; set; }
+
 
         /// <summary>
         /// which issuers are allowed for use with ACME; by default, this will only be the primary (default) issuer
@@ -134,6 +147,7 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiConfigureAcmeRequest {\n");
+            sb.Append("  AllowRoleExtKeyUsage: ").Append(AllowRoleExtKeyUsage).Append("\n");
             sb.Append("  AllowedIssuers: ").Append(AllowedIssuers).Append("\n");
             sb.Append("  AllowedRoles: ").Append(AllowedRoles).Append("\n");
             sb.Append("  DefaultDirectoryPolicy: ").Append(DefaultDirectoryPolicy).Append("\n");
@@ -175,6 +189,11 @@ namespace Vault.Model
                 return false;
             }
             return
+                (
+                    this.AllowRoleExtKeyUsage == input.AllowRoleExtKeyUsage ||
+
+                    this.AllowRoleExtKeyUsage.Equals(input.AllowRoleExtKeyUsage)
+                ) &&
                 (
                     this.AllowedIssuers == input.AllowedIssuers ||
                     this.AllowedIssuers != null &&
@@ -223,6 +242,8 @@ namespace Vault.Model
             {
                 int hashCode = 41;
 
+
+                hashCode = (hashCode * 59) + this.AllowRoleExtKeyUsage.GetHashCode();
                 if (this.AllowedIssuers != null)
                 {
                     hashCode = (hashCode * 59) + this.AllowedIssuers.GetHashCode();
