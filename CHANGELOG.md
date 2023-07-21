@@ -14,6 +14,12 @@ and this project adheres to
 - Updated ReadMe & examples
 - Regenerate with new OpenAPI Operation IDs
 
+### Changed
+- Very extensive API changes as a result of ongoing development and
+  regeneration from updated OpenAPI spec;
+  [fuget.org](https://www.fuget.org/packages/HashiCorp.Vault/0.2.0/lib/netstandard2.0/diff/0.1.0/)
+  calculates 8830 additions, 3477 removals
+
 ### Fixed
 - Fixed symbol package format when publishing package
 - Fixing warnings during code generation
