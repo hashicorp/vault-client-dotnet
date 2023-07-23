@@ -40,12 +40,10 @@ namespace Vault.Model
 
         /// <param name="Encoding">Encoding.</param>
 
-        /// <param name="Path">Path.</param>
-
         /// <param name="Value">Value.</param>
 
 
-        public RawWriteRequest(bool Compressed = default(bool), string CompressionType = default(string), string Encoding = default(string), string Path = default(string), string Value = default(string))
+        public RawWriteRequest(bool Compressed = default(bool), string CompressionType = default(string), string Encoding = default(string), string Value = default(string))
         {
 
             this.Compressed = Compressed;
@@ -53,8 +51,6 @@ namespace Vault.Model
             this.CompressionType = CompressionType;
 
             this.Encoding = Encoding;
-
-            this.Path = Path;
 
             this.Value = Value;
 
@@ -85,14 +81,6 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Gets or Sets Path
-        /// </summary>
-        [DataMember(Name = "path", EmitDefaultValue = false)]
-
-        public string Path { get; set; }
-
-
-        /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "value", EmitDefaultValue = false)]
@@ -113,7 +101,6 @@ namespace Vault.Model
             sb.Append("  Compressed: ").Append(Compressed).Append("\n");
             sb.Append("  CompressionType: ").Append(CompressionType).Append("\n");
             sb.Append("  Encoding: ").Append(Encoding).Append("\n");
-            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -168,12 +155,6 @@ namespace Vault.Model
 
                 ) &&
                 (
-                    this.Path == input.Path ||
-                    (this.Path != null &&
-                    this.Path.Equals(input.Path))
-
-                ) &&
-                (
                     this.Value == input.Value ||
                     (this.Value != null &&
                     this.Value.Equals(input.Value))
@@ -202,11 +183,6 @@ namespace Vault.Model
                 if (this.Encoding != null)
                 {
                     hashCode = (hashCode * 59) + this.Encoding.GetHashCode();
-                }
-
-                if (this.Path != null)
-                {
-                    hashCode = (hashCode * 59) + this.Path.GetHashCode();
                 }
 
                 if (this.Value != null)
