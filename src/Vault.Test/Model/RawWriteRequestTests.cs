@@ -83,15 +83,6 @@ namespace Vault.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Path'
-        /// </summary>
-        [Fact]
-        public void PathTest()
-        {
-            // TODO unit test for the property 'Path'
-        }
-
-        /// <summary>
         /// Test the property 'Value'
         /// </summary>
         [Fact]
