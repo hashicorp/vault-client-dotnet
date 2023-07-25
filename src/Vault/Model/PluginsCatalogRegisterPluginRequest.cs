@@ -42,12 +42,10 @@ namespace Vault.Model
 
         /// <param name="Sha256">The SHA256 sum of the executable used in the command field. This should be HEX encoded..</param>
 
-        /// <param name="Type">The type of the plugin, may be auth, secret, or database.</param>
-
         /// <param name="_Version">The semantic version of the plugin to use..</param>
 
 
-        public PluginsCatalogRegisterPluginRequest(List<string> Args = default(List<string>), string Command = default(string), List<string> Env = default(List<string>), string Sha256 = default(string), string Type = default(string), string _Version = default(string))
+        public PluginsCatalogRegisterPluginRequest(List<string> Args = default(List<string>), string Command = default(string), List<string> Env = default(List<string>), string Sha256 = default(string), string _Version = default(string))
         {
 
             this.Args = Args;
@@ -57,8 +55,6 @@ namespace Vault.Model
             this.Env = Env;
 
             this.Sha256 = Sha256;
-
-            this.Type = Type;
 
             this._Version = _Version;
 
@@ -101,15 +97,6 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The type of the plugin, may be auth, secret, or database
-        /// </summary>
-        /// <value>The type of the plugin, may be auth, secret, or database</value>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
-
-        public string Type { get; set; }
-
-
-        /// <summary>
         /// The semantic version of the plugin to use.
         /// </summary>
         /// <value>The semantic version of the plugin to use.</value>
@@ -132,7 +119,6 @@ namespace Vault.Model
             sb.Append("  Command: ").Append(Command).Append("\n");
             sb.Append("  Env: ").Append(Env).Append("\n");
             sb.Append("  Sha256: ").Append(Sha256).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -194,12 +180,6 @@ namespace Vault.Model
 
                 ) &&
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
-
-                ) &&
-                (
                     this._Version == input._Version ||
                     (this._Version != null &&
                     this._Version.Equals(input._Version))
@@ -236,11 +216,6 @@ namespace Vault.Model
                 if (this.Sha256 != null)
                 {
                     hashCode = (hashCode * 59) + this.Sha256.GetHashCode();
-                }
-
-                if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
                 }
 
                 if (this._Version != null)

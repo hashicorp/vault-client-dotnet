@@ -1,4 +1,4 @@
-# Vault.Model.AppRoleListRolesResponse
+# Vault.Model.StandardListResponse
 
 ## Properties
 

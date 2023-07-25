@@ -38,10 +38,8 @@ namespace Vault.Model
 
         /// <param name="Format">Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;. (default to &quot;base64&quot;).</param>
 
-        /// <param name="Urlbytes">The number of bytes to generate (POST URL parameter).</param>
 
-
-        public GenerateRandomWithSourceRequest(int Bytes = 32, string Format = "base64", string Urlbytes = default(string))
+        public GenerateRandomWithSourceRequest(int Bytes = 32, string Format = "base64")
         {
 
             this.Bytes = Bytes;
@@ -49,8 +47,6 @@ namespace Vault.Model
             // use default value if no "Format" provided
             this.Format = Format ?? "base64";
 
-
-            this.Urlbytes = Urlbytes;
 
         }
 
@@ -72,15 +68,6 @@ namespace Vault.Model
         public string Format { get; set; }
 
 
-        /// <summary>
-        /// The number of bytes to generate (POST URL parameter)
-        /// </summary>
-        /// <value>The number of bytes to generate (POST URL parameter)</value>
-        [DataMember(Name = "urlbytes", EmitDefaultValue = false)]
-
-        public string Urlbytes { get; set; }
-
-
 
 
         /// <summary>
@@ -93,7 +80,6 @@ namespace Vault.Model
             sb.Append("class GenerateRandomWithSourceRequest {\n");
             sb.Append("  Bytes: ").Append(Bytes).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
-            sb.Append("  Urlbytes: ").Append(Urlbytes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,12 +125,6 @@ namespace Vault.Model
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
 
-                ) &&
-                (
-                    this.Urlbytes == input.Urlbytes ||
-                    (this.Urlbytes != null &&
-                    this.Urlbytes.Equals(input.Urlbytes))
-
                 );
 
         }
@@ -164,11 +144,6 @@ namespace Vault.Model
                 if (this.Format != null)
                 {
                     hashCode = (hashCode * 59) + this.Format.GetHashCode();
-                }
-
-                if (this.Urlbytes != null)
-                {
-                    hashCode = (hashCode * 59) + this.Urlbytes.GetHashCode();
                 }
 
                 return hashCode;

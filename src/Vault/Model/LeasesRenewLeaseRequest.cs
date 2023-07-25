@@ -38,17 +38,13 @@ namespace Vault.Model
 
         /// <param name="LeaseId">The lease identifier to renew. This is included with a lease..</param>
 
-        /// <param name="UrlLeaseId">The lease identifier to renew. This is included with a lease..</param>
 
-
-        public LeasesRenewLeaseRequest(string Increment = default(string), string LeaseId = default(string), string UrlLeaseId = default(string))
+        public LeasesRenewLeaseRequest(string Increment = default(string), string LeaseId = default(string))
         {
 
             this.Increment = Increment;
 
             this.LeaseId = LeaseId;
-
-            this.UrlLeaseId = UrlLeaseId;
 
         }
 
@@ -70,15 +66,6 @@ namespace Vault.Model
         public string LeaseId { get; set; }
 
 
-        /// <summary>
-        /// The lease identifier to renew. This is included with a lease.
-        /// </summary>
-        /// <value>The lease identifier to renew. This is included with a lease.</value>
-        [DataMember(Name = "url_lease_id", EmitDefaultValue = false)]
-
-        public string UrlLeaseId { get; set; }
-
-
 
 
         /// <summary>
@@ -91,7 +78,6 @@ namespace Vault.Model
             sb.Append("class LeasesRenewLeaseRequest {\n");
             sb.Append("  Increment: ").Append(Increment).Append("\n");
             sb.Append("  LeaseId: ").Append(LeaseId).Append("\n");
-            sb.Append("  UrlLeaseId: ").Append(UrlLeaseId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,12 +124,6 @@ namespace Vault.Model
                     (this.LeaseId != null &&
                     this.LeaseId.Equals(input.LeaseId))
 
-                ) &&
-                (
-                    this.UrlLeaseId == input.UrlLeaseId ||
-                    (this.UrlLeaseId != null &&
-                    this.UrlLeaseId.Equals(input.UrlLeaseId))
-
                 );
 
         }
@@ -166,11 +146,6 @@ namespace Vault.Model
                 if (this.LeaseId != null)
                 {
                     hashCode = (hashCode * 59) + this.LeaseId.GetHashCode();
-                }
-
-                if (this.UrlLeaseId != null)
-                {
-                    hashCode = (hashCode * 59) + this.UrlLeaseId.GetHashCode();
                 }
 
                 return hashCode;

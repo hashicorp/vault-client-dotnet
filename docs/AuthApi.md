@@ -355,7 +355,7 @@ No authorization required
 <a name="alicloudlistauthroles"></a>
 # **AliCloudListAuthRoles**
 
-> void AliCloudListAuthRoles (string alicloudMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AliCloudListAuthRoles (string alicloudMountPath, TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -404,7 +404,9 @@ namespace Example
                 // Lists all the roles that are registered with Vault.
                 
 
-                apiInstance.AliCloudListAuthRoles(string alicloudMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AliCloudListAuthRoles(string alicloudMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -426,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -435,7 +437,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -2109,7 +2111,7 @@ No authorization required
 <a name="approlelistroles"></a>
 # **AppRoleListRoles**
 
-> AppRoleListRolesResponse AppRoleListRoles (string approleMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AppRoleListRoles (string approleMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -2156,7 +2158,7 @@ namespace Example
             {
                 
 
-                AppRoleListRolesResponse result = apiInstance.AppRoleListRoles(string approleMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AppRoleListRoles(string approleMountPath, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -2180,7 +2182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppRoleListRolesResponse**](AppRoleListRolesResponse.md)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -2207,7 +2209,7 @@ No authorization required
 <a name="approlelistsecretids"></a>
 # **AppRoleListSecretIds**
 
-> AppRoleListSecretIdsResponse AppRoleListSecretIds (string roleName, string approleMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AppRoleListSecretIds (string roleName, string approleMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -2259,7 +2261,7 @@ namespace Example
             {
                 
 
-                AppRoleListSecretIdsResponse result = apiInstance.AppRoleListSecretIds(string roleName, string approleMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AppRoleListSecretIds(string roleName, string approleMountPath, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -2284,7 +2286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppRoleListSecretIdsResponse**](AppRoleListSecretIdsResponse.md)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7411,7 +7413,7 @@ No authorization required
 <a name="awslistauthroles"></a>
 # **AwsListAuthRoles**
 
-> void AwsListAuthRoles (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListAuthRoles (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -7458,7 +7460,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListAuthRoles(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListAuthRoles(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7480,7 +7484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7489,7 +7493,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7507,7 +7511,7 @@ No authorization required
 <a name="awslistcertificateconfigurations"></a>
 # **AwsListCertificateConfigurations**
 
-> void AwsListCertificateConfigurations (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListCertificateConfigurations (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -7554,7 +7558,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListCertificateConfigurations(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListCertificateConfigurations(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7576,7 +7582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7585,7 +7591,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7603,7 +7609,7 @@ No authorization required
 <a name="awslistidentityaccesslist"></a>
 # **AwsListIdentityAccessList**
 
-> void AwsListIdentityAccessList (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListIdentityAccessList (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -7650,7 +7656,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListIdentityAccessList(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListIdentityAccessList(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7672,7 +7680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7681,7 +7689,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7699,7 +7707,7 @@ No authorization required
 <a name="awslistidentitywhitelist"></a>
 # **AwsListIdentityWhitelist**
 
-> void AwsListIdentityWhitelist (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListIdentityWhitelist (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -7746,7 +7754,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListIdentityWhitelist(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListIdentityWhitelist(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7768,7 +7778,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7777,7 +7787,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7795,7 +7805,7 @@ No authorization required
 <a name="awslistroletagblacklists"></a>
 # **AwsListRoleTagBlacklists**
 
-> void AwsListRoleTagBlacklists (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListRoleTagBlacklists (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -7842,7 +7852,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListRoleTagBlacklists(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListRoleTagBlacklists(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7864,7 +7876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7873,7 +7885,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7891,7 +7903,7 @@ No authorization required
 <a name="awslistroletagdenylists"></a>
 # **AwsListRoleTagDenyLists**
 
-> void AwsListRoleTagDenyLists (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListRoleTagDenyLists (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -7938,7 +7950,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListRoleTagDenyLists(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListRoleTagDenyLists(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7960,7 +7974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7969,7 +7983,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7987,7 +8001,7 @@ No authorization required
 <a name="awsliststsrolerelationships"></a>
 # **AwsListStsRoleRelationships**
 
-> void AwsListStsRoleRelationships (string awsMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AwsListStsRoleRelationships (string awsMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -8034,7 +8048,9 @@ namespace Example
             {
                 
 
-                apiInstance.AwsListStsRoleRelationships(string awsMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AwsListStsRoleRelationships(string awsMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -8056,7 +8072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -8065,7 +8081,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -10645,7 +10661,7 @@ No authorization required
 <a name="azurelistauthroles"></a>
 # **AzureListAuthRoles**
 
-> void AzureListAuthRoles (string azureMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse AzureListAuthRoles (string azureMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -10692,7 +10708,9 @@ namespace Example
             {
                 
 
-                apiInstance.AzureListAuthRoles(string azureMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AzureListAuthRoles(string azureMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -10714,7 +10732,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -10723,7 +10741,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -11791,7 +11809,7 @@ No authorization required
 <a name="certlistcertificates"></a>
 # **CertListCertificates**
 
-> void CertListCertificates (string certMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse CertListCertificates (string certMountPath, TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
 
@@ -11840,7 +11858,9 @@ namespace Example
                 // Manage trusted certificates used for authentication.
                 
 
-                apiInstance.CertListCertificates(string certMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.CertListCertificates(string certMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -11862,7 +11882,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -11871,7 +11891,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -11889,7 +11909,7 @@ No authorization required
 <a name="certlistcrls"></a>
 # **CertListCrls**
 
-> void CertListCrls (string certMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse CertListCrls (string certMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -11936,7 +11956,9 @@ namespace Example
             {
                 
 
-                apiInstance.CertListCrls(string certMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.CertListCrls(string certMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -11958,7 +11980,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -11967,7 +11989,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -12857,7 +12879,7 @@ No authorization required
 <a name="cloudfoundrylistroles"></a>
 # **CloudFoundryListRoles**
 
-> void CloudFoundryListRoles (string cfMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse CloudFoundryListRoles (string cfMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -12904,7 +12926,9 @@ namespace Example
             {
                 
 
-                apiInstance.CloudFoundryListRoles(string cfMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.CloudFoundryListRoles(string cfMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -12926,7 +12950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -12935,7 +12959,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -13629,7 +13653,7 @@ No authorization required
 <a name="githublistteams"></a>
 # **GithubListTeams**
 
-> void GithubListTeams (string githubMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse GithubListTeams (string githubMountPath, TimeSpan? wrapTTL = null)
 
 Read mappings for teams
 
@@ -13678,7 +13702,9 @@ namespace Example
                 // Read mappings for teams
                 
 
-                apiInstance.GithubListTeams(string githubMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.GithubListTeams(string githubMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -13700,7 +13726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -13709,7 +13735,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -13727,7 +13753,7 @@ No authorization required
 <a name="githublistusers"></a>
 # **GithubListUsers**
 
-> void GithubListUsers (string githubMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse GithubListUsers (string githubMountPath, TimeSpan? wrapTTL = null)
 
 Read mappings for users
 
@@ -13776,7 +13802,9 @@ namespace Example
                 // Read mappings for users
                 
 
-                apiInstance.GithubListUsers(string githubMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.GithubListUsers(string githubMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -13798,7 +13826,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -13807,7 +13835,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -14817,7 +14845,7 @@ No authorization required
 <a name="googlecloudlistroles"></a>
 # **GoogleCloudListRoles**
 
-> void GoogleCloudListRoles (string gcpMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse GoogleCloudListRoles (string gcpMountPath, TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -14866,7 +14894,9 @@ namespace Example
                 // Lists all the roles that are registered with Vault.
                 
 
-                apiInstance.GoogleCloudListRoles(string gcpMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.GoogleCloudListRoles(string gcpMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -14888,7 +14918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -14897,7 +14927,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -16011,11 +16041,13 @@ No authorization required
 <a name="jwtlistroles"></a>
 # **JwtListRoles**
 
-> void JwtListRoles (string jwtMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse JwtListRoles (string jwtMountPath, TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
 
-CodegenOperation{responseHeaders=[], hasAuthMethods=false, hasConsumes=false, hasProduces=false, hasParams=true, hasOptionalParams=false, hasRequiredParams=true, returnTypeIsPrimitive=false, returnSimpleType=false, subresourceOperation=false, isMap=false, returnProperty=null, isArray=false, isMultipart=false, isResponseBinary=false, isResponseFile=false, isResponseFile=false, hasReference=false, hasDefaultResponse=false, hasErrorResponseObject=false, isRestfulIndex=false, isRestfulShow=false, isRestfulCreate=false, isRestfulUpdate=false, isRestfulDestroy=false, isRestful=false, isDeprecated=false, isCallbackRequest=false, uniqueItems='false, path='/auth/{jwt_mount_path}/role/', operationId='JwtListRoles', returnType='null', httpMethod='GET', returnBaseType='null', returnContainer='null', summary='Lists all the roles registered with the backend.', unescapedNotes='The list will contain the names of the roles.', notes='The list will contain the names of the roles.', baseName='Auth', defaultResponse='null', discriminator=null, consumes=null, produces=null, prioritizedContentTypes=null, servers=[], bodyParam=null, allParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='jwt_mount_path', paramName='jwtMountPath', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Path that the backend was mounted at', unescapedDescription='Path that the backend was mounted at', baseType='null', defaultValue='"jwt"', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"\"jwt\""', jsonSchema='{
+CodegenOperation{responseHeaders=[], hasAuthMethods=false, hasConsumes=false, hasProduces=true, hasParams=true, hasOptionalParams=false, hasRequiredParams=true, returnTypeIsPrimitive=false, returnSimpleType=true, subresourceOperation=false, isMap=false, returnProperty=CodegenProperty{openApiType='StandardListResponse', baseName='response', complexType='StandardListResponse', getter='getResponse', setter='setResponse', description='null', dataType='StandardListResponse', datatypeWithEnum='StandardListResponse', dataFormat='null', name='Response', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.response;', baseType='StandardListResponse', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "$ref" : "#/components/schemas/StandardListResponse"
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=false, isModel=true, isContainer=false, isString=false, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=false, isInnerEnum=false, isEnumRef=false, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=null, allowableValues=null, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='Response', nameInSnakeCase='RESPONSE', enumName='null', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=#/components/schemas/StandardListResponse, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, isArray=false, isMultipart=false, isResponseBinary=false, isResponseFile=false, isResponseFile=false, hasReference=true, hasDefaultResponse=false, hasErrorResponseObject=false, isRestfulIndex=false, isRestfulShow=false, isRestfulCreate=false, isRestfulUpdate=false, isRestfulDestroy=false, isRestful=false, isDeprecated=false, isCallbackRequest=false, uniqueItems='false, path='/auth/{jwt_mount_path}/role/', operationId='JwtListRoles', returnType='StandardListResponse', httpMethod='GET', returnBaseType='StandardListResponse', returnContainer='StandardListResponse', summary='Lists all the roles registered with the backend.', unescapedNotes='The list will contain the names of the roles.', notes='The list will contain the names of the roles.', baseName='Auth', defaultResponse='null', discriminator=null, consumes=null, produces=[{mediaType=application/json}], prioritizedContentTypes=null, servers=[], bodyParam=null, allParams=[CodegenParameter{isFormParam=false, isQueryParam=false, isPathParam=true, isHeaderParam=false, isCookieParam=false, isBodyParam=false, isContainer=false, isCollectionFormatMulti=false, isPrimitiveType=true, isModel=false, isExplode=false, baseName='jwt_mount_path', paramName='jwtMountPath', dataType='string', datatypeWithEnum='null', dataFormat='null', collectionFormat='null', description='Path that the backend was mounted at', unescapedDescription='Path that the backend was mounted at', baseType='null', defaultValue='"jwt"', enumDefaultValue='null', enumName='null', style='simple', deepObject='false', allowEmptyValue='false', example='"\"jwt\""', jsonSchema='{
   "name" : "jwt_mount_path",
   "in" : "path",
   "description" : "Path that the backend was mounted at",
@@ -16131,9 +16163,49 @@ CodegenOperation{responseHeaders=[], hasAuthMethods=false, hasConsumes=false, ha
     name: auth
     description: null
     externalDocs: null
-}], responses=[CodegenResponse{headers=[], code='200', is1xx='false', is2xx='true', is3xx='false', is4xx='false', is5xx='false', message='OK', examples=null, dataType='null', baseType='null', containerType='null', hasHeaders=false, isString=false, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isEmail=false, isModel=false, isFreeFormObject=false, isAnyType=false, isDefault=false, simpleType=true, primitiveType=true, isMap=false, isArray=false, isBinary=false, isFile=false, schema=null, jsonSchema='{
-  "description" : "OK"
-}', vendorExtensions={}, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, maxItems=null, minItems=null, maxLength=null, minLength=null, exclusiveMinimum=false, exclusiveMaximum=false, minimum='null', maximum='null', pattern='null', multipleOf='null', items='null', additionalProperties='null', vars='[]', requiredVars='[]', isNull='false, hasValidation='false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, responseHeaders=[], content=null, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], callbacks=[], imports=[], examples=null, requestBodyExamples=null, externalDocs=null, vendorExtensions={}, nickname='JwtListRoles', operationIdOriginal='jwt-list-roles', operationIdLowerCase='jwtlistroles', operationIdCamelCase='JwtListRoles', operationIdSnakeCase='jwt_list_roles'}
+}], responses=[CodegenResponse{headers=[], code='200', is1xx='false', is2xx='true', is3xx='false', is4xx='false', is5xx='false', message='OK', examples=null, dataType='StandardListResponse', baseType='StandardListResponse', containerType='null', hasHeaders=false, isString=false, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isEmail=false, isModel=true, isFreeFormObject=false, isAnyType=false, isDefault=false, simpleType=false, primitiveType=false, isMap=false, isArray=false, isBinary=false, isFile=false, schema=class Schema {
+    type: null
+    format: null
+    $ref: #/components/schemas/StandardListResponse
+    description: null
+    title: null
+    multipleOf: null
+    maximum: null
+    exclusiveMaximum: null
+    minimum: null
+    exclusiveMinimum: null
+    maxLength: null
+    minLength: null
+    pattern: null
+    maxItems: null
+    minItems: null
+    uniqueItems: null
+    maxProperties: null
+    minProperties: null
+    required: null
+    not: null
+    properties: null
+    additionalProperties: null
+    nullable: null
+    readOnly: null
+    writeOnly: null
+    example: null
+    externalDocs: null
+    deprecated: null
+    discriminator: null
+    xml: null
+}, jsonSchema='{
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/StandardListResponse"
+      }
+    }
+  }
+}', vendorExtensions={}, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, maxItems=null, minItems=null, maxLength=null, minLength=null, exclusiveMinimum=false, exclusiveMaximum=false, minimum='null', maximum='null', pattern='null', multipleOf='null', items='null', additionalProperties='null', vars='[]', requiredVars='[]', isNull='false, hasValidation='false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, responseHeaders=[], content={application/json=CodegenMediaType{schema=CodegenProperty{openApiType='StandardListResponse', baseName='SchemaFor200ResponseBodyApplicationJson', complexType='StandardListResponse', getter='getSchemaFor200ResponseBodyApplicationJson', setter='setSchemaFor200ResponseBodyApplicationJson', description='null', dataType='StandardListResponse', datatypeWithEnum='StandardListResponse', dataFormat='null', name='SchemaFor200ResponseBodyApplicationJson', min='null', max='null', defaultValue='null', defaultValueWithParam=' = data.SchemaFor200ResponseBodyApplicationJson;', baseType='StandardListResponse', containerType='null', title='null', unescapedDescription='null', maxLength=null, minLength=null, pattern='null', example='null', jsonSchema='{
+  "$ref" : "#/components/schemas/StandardListResponse"
+}', minimum='null', maximum='null', exclusiveMinimum=false, exclusiveMaximum=false, required=false, deprecated=false, hasMoreNonReadOnly=false, isPrimitiveType=false, isModel=true, isContainer=false, isString=false, isNumeric=false, isInteger=false, isShort=false, isLong=false, isUnboundedInteger=false, isNumber=false, isFloat=false, isDouble=false, isDecimal=false, isByteArray=false, isBinary=false, isFile=false, isBoolean=false, isDate=false, isDateTime=false, isUuid=false, isUri=false, isEmail=false, isFreeFormObject=false, isArray=false, isMap=false, isEnum=false, isInnerEnum=false, isEnumRef=false, isAnyType=false, isReadOnly=false, isWriteOnly=false, isNullable=false, isSelfReference=false, isCircularReference=false, isDiscriminator=false, isNew=false, _enum=null, allowableValues=null, items=null, additionalProperties=null, vars=[], requiredVars=[], mostInnerItems=null, vendorExtensions={}, hasValidation=false, isInherited=false, discriminatorValue='null', nameInCamelCase='SchemaFor200ResponseBodyApplicationJson', nameInSnakeCase='SCHEMA_FOR200_RESPONSE_BODY_APPLICATION_JSON', enumName='null', maxItems=null, minItems=null, maxProperties=null, minProperties=null, uniqueItems=false, uniqueItemsBoolean=null, multipleOf=null, isXmlAttribute=false, xmlPrefix='null', xmlName='null', xmlNamespace='null', isXmlWrapped=false, isNull=false, getAdditionalPropertiesIsAnyType=false, getHasVars=false, getHasRequired=false, getHasDiscriminatorWithNonEmptyMapping=false, composedSchemas=null, hasMultipleTypes=false, requiredVarsMap=null, ref=#/components/schemas/StandardListResponse, schemaIsFromAdditionalProperties=false, isBooleanSchemaTrue=false, isBooleanSchemaFalse=false, format=null, dependentRequired=null, contains=null}, encoding=null}}, requiredVarsMap=null, ref=null, schemaIsFromAdditionalProperties=false}], callbacks=[], imports=[StandardListResponse], examples=[{contentType=application/json, example={\n  \"keys\" : [ \"keys\", \"keys\" ]\n}, statusCode=200}], requestBodyExamples=null, externalDocs=null, vendorExtensions={}, nickname='JwtListRoles', operationIdOriginal='jwt-list-roles', operationIdLowerCase='jwtlistroles', operationIdCamelCase='JwtListRoles', operationIdSnakeCase='jwt_list_roles'}
 
 ### Example
 ```csharp
@@ -16180,7 +16252,9 @@ namespace Example
                 // Lists all the roles registered with the backend.
                 
 
-                apiInstance.JwtListRoles(string jwtMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.JwtListRoles(string jwtMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -16202,7 +16276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -16211,7 +16285,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -18419,7 +18493,7 @@ No authorization required
 <a name="kerberoslistgroups"></a>
 # **KerberosListGroups**
 
-> void KerberosListGroups (string kerberosMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse KerberosListGroups (string kerberosMountPath, TimeSpan? wrapTTL = null)
 
 
 
@@ -18466,7 +18540,9 @@ namespace Example
             {
                 
 
-                apiInstance.KerberosListGroups(string kerberosMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.KerberosListGroups(string kerberosMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -18488,7 +18564,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -18497,7 +18573,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -19183,7 +19259,7 @@ No authorization required
 <a name="kuberneteslistauthroles"></a>
 # **KubernetesListAuthRoles**
 
-> void KubernetesListAuthRoles (string kubernetesMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse KubernetesListAuthRoles (string kubernetesMountPath, TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
 
@@ -19232,7 +19308,9 @@ namespace Example
                 // Lists all the roles registered with the backend.
                 
 
-                apiInstance.KubernetesListAuthRoles(string kubernetesMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.KubernetesListAuthRoles(string kubernetesMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -19254,7 +19332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -19263,7 +19341,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -19963,7 +20041,7 @@ No authorization required
 <a name="ldaplistgroups"></a>
 # **LdapListGroups**
 
-> void LdapListGroups (string ldapMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse LdapListGroups (string ldapMountPath, TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -20012,7 +20090,9 @@ namespace Example
                 // Manage additional groups for users allowed to authenticate.
                 
 
-                apiInstance.LdapListGroups(string ldapMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.LdapListGroups(string ldapMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -20034,7 +20114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -20043,7 +20123,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -20061,7 +20141,7 @@ No authorization required
 <a name="ldaplistusers"></a>
 # **LdapListUsers**
 
-> void LdapListUsers (string ldapMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse LdapListUsers (string ldapMountPath, TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -20110,7 +20190,9 @@ namespace Example
                 // Manage users allowed to authenticate.
                 
 
-                apiInstance.LdapListUsers(string ldapMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.LdapListUsers(string ldapMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -20132,7 +20214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -20141,7 +20223,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -21041,7 +21123,7 @@ No authorization required
 <a name="ocilistroles"></a>
 # **OciListRoles**
 
-> void OciListRoles (string ociMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse OciListRoles (string ociMountPath, TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -21090,7 +21172,9 @@ namespace Example
                 // Lists all the roles that are registered with Vault.
                 
 
-                apiInstance.OciListRoles(string ociMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OciListRoles(string ociMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -21112,7 +21196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -21121,7 +21205,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -21827,7 +21911,7 @@ No authorization required
 <a name="oktalistgroups"></a>
 # **OktaListGroups**
 
-> void OktaListGroups (string oktaMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse OktaListGroups (string oktaMountPath, TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -21876,7 +21960,9 @@ namespace Example
                 // Manage users allowed to authenticate.
                 
 
-                apiInstance.OktaListGroups(string oktaMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OktaListGroups(string oktaMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -21898,7 +21984,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -21907,7 +21993,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -21925,7 +22011,7 @@ No authorization required
 <a name="oktalistusers"></a>
 # **OktaListUsers**
 
-> void OktaListUsers (string oktaMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse OktaListUsers (string oktaMountPath, TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -21974,7 +22060,9 @@ namespace Example
                 // Manage additional groups for users allowed to authenticate.
                 
 
-                apiInstance.OktaListUsers(string oktaMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OktaListUsers(string oktaMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -21996,7 +22084,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -22005,7 +22093,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -22911,7 +22999,7 @@ No authorization required
 <a name="radiuslistusers"></a>
 # **RadiusListUsers**
 
-> void RadiusListUsers (string radiusMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse RadiusListUsers (string radiusMountPath, TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -22960,7 +23048,9 @@ namespace Example
                 // Manage users allowed to authenticate.
                 
 
-                apiInstance.RadiusListUsers(string radiusMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.RadiusListUsers(string radiusMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -22982,7 +23072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -22991,7 +23081,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -23875,7 +23965,7 @@ No authorization required
 <a name="tokenlistaccessors"></a>
 # **TokenListAccessors**
 
-> void TokenListAccessors (TimeSpan? wrapTTL = null)
+> StandardListResponse TokenListAccessors (TimeSpan? wrapTTL = null)
 
 List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
 
@@ -23919,7 +24009,9 @@ namespace Example
                 // List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
                 
 
-                apiInstance.TokenListAccessors(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.TokenListAccessors(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -23940,7 +24032,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -23949,7 +24041,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -23967,7 +24059,7 @@ No authorization required
 <a name="tokenlistroles"></a>
 # **TokenListRoles**
 
-> void TokenListRoles (TimeSpan? wrapTTL = null)
+> StandardListResponse TokenListRoles (TimeSpan? wrapTTL = null)
 
 This endpoint lists configured roles.
 
@@ -24011,7 +24103,9 @@ namespace Example
                 // This endpoint lists configured roles.
                 
 
-                apiInstance.TokenListRoles(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.TokenListRoles(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -24032,7 +24126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -24041,7 +24135,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -25327,7 +25421,7 @@ No authorization required
 <a name="userpasslistusers"></a>
 # **UserpassListUsers**
 
-> void UserpassListUsers (string userpassMountPath, TimeSpan? wrapTTL = null)
+> StandardListResponse UserpassListUsers (string userpassMountPath, TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -25376,7 +25470,9 @@ namespace Example
                 // Manage users allowed to authenticate.
                 
 
-                apiInstance.UserpassListUsers(string userpassMountPath, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.UserpassListUsers(string userpassMountPath, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -25398,7 +25494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -25407,7 +25503,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 

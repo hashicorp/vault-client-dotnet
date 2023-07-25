@@ -40,7 +40,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="alicloudMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -48,7 +48,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Authenticates an RAM entity with Vault.
@@ -330,7 +330,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="approleMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of AppRoleListRolesResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -338,7 +338,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<AppRoleListRolesResponse> AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -346,7 +346,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of AppRoleListSecretIdsResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -354,7 +354,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<AppRoleListSecretIdsResponse> AppRoleListSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AppRoleListSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1205,7 +1205,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1213,14 +1213,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1228,14 +1228,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListCertificateConfigurations(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListCertificateConfigurations(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1243,14 +1243,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1258,14 +1258,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListIdentityWhitelist(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListIdentityWhitelist(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1273,14 +1273,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListRoleTagBlacklists(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListRoleTagBlacklists(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1288,14 +1288,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListRoleTagDenyLists(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListRoleTagDenyLists(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1303,7 +1303,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsListStsRoleRelationships(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AwsListStsRoleRelationships(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1737,7 +1737,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1745,7 +1745,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1926,7 +1926,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="certMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1934,14 +1934,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CertListCertificates(string certMountPath = "cert", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> CertListCertificates(string certMountPath = "cert", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="certMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1949,7 +1949,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CertListCrls(string certMountPath = "cert", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> CertListCrls(string certMountPath = "cert", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2100,7 +2100,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cfMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2108,7 +2108,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2227,7 +2227,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2235,14 +2235,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GithubListTeams(string githubMountPath = "github", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> GithubListTeams(string githubMountPath = "github", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Read mappings for users
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2250,7 +2250,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GithubListUsers(string githubMountPath = "github", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> GithubListUsers(string githubMountPath = "github", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2420,7 +2420,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2428,7 +2428,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2531,7 +2531,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2539,7 +2539,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> JwtListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> JwtListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
@@ -2705,7 +2705,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2713,7 +2713,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2831,7 +2831,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2839,7 +2839,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
@@ -2958,7 +2958,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ldapMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2966,14 +2966,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> LdapListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> LdapListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ldapMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2981,7 +2981,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> LdapListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> LdapListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Log in with a username and password.
@@ -3133,7 +3133,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ociMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3141,7 +3141,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OciListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> OciListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Authenticates to Vault using OCI credentials
@@ -3261,7 +3261,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3269,14 +3269,14 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3284,7 +3284,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Log in with a username and password.
@@ -3437,7 +3437,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="radiusMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3445,7 +3445,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Log in with a username and password.
@@ -3593,7 +3593,7 @@ namespace Vault.Api
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#x27;sudo&#x27; capability in addition to &#x27;list&#x27;.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3601,13 +3601,13 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenListAccessors(TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> TokenListAccessors(TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// This endpoint lists configured roles.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3615,7 +3615,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenListRoles(TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> TokenListRoles(TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -3831,7 +3831,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="userpassMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3839,7 +3839,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Log in with a username and password.
@@ -3966,8 +3966,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Authenticates an RAM entity with Vault.
@@ -4274,8 +4274,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (AppRoleListRolesResponse)</returns>
-        Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -4291,8 +4291,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (AppRoleListSecretIdsResponse)</returns>
-        Task<VaultResponse<AppRoleListSecretIdsResponse>> AppRoleListSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AppRoleListSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5203,8 +5203,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5219,8 +5219,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListCertificateConfigurationsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListCertificateConfigurationsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5235,8 +5235,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5251,8 +5251,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListIdentityWhitelistAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListIdentityWhitelistAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5267,8 +5267,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListRoleTagBlacklistsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListRoleTagBlacklistsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5283,8 +5283,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListRoleTagDenyListsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListRoleTagDenyListsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5299,8 +5299,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsListStsRoleRelationshipsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AwsListStsRoleRelationshipsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5769,8 +5769,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5970,8 +5970,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CertListCertificatesAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> CertListCertificatesAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -5986,8 +5986,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CertListCrlsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> CertListCrlsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6155,8 +6155,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6290,8 +6290,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GithubListTeamsAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> GithubListTeamsAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Read mappings for users
@@ -6306,8 +6306,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GithubListUsersAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> GithubListUsersAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6495,8 +6495,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6613,8 +6613,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> JwtListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> JwtListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
@@ -6798,8 +6798,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6932,8 +6932,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
@@ -7067,8 +7067,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LdapListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> LdapListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -7083,8 +7083,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LdapListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> LdapListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Log in with a username and password.
@@ -7253,8 +7253,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OciListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> OciListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Authenticates to Vault using OCI credentials
@@ -7389,8 +7389,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -7405,8 +7405,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Log in with a username and password.
@@ -7576,8 +7576,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Log in with a username and password.
@@ -7742,8 +7742,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenListAccessorsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> TokenListAccessorsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// This endpoint lists configured roles.
@@ -7757,8 +7757,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenListRolesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> TokenListRolesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -7996,8 +7996,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Log in with a username and password.
@@ -8299,7 +8299,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="alicloudMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8307,7 +8307,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
         {
 
 
@@ -8324,7 +8324,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8345,7 +8345,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{alicloud_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{alicloud_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -8353,7 +8353,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -8370,8 +8370,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -8389,7 +8389,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -8407,7 +8407,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{alicloud_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{alicloud_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -8415,7 +8415,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Authenticates an RAM entity with Vault. 
@@ -10719,7 +10719,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="approleMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of AppRoleListRolesResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -10727,7 +10727,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<AppRoleListRolesResponse> AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
 
 
@@ -10765,7 +10765,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<AppRoleListRolesResponse>("/auth/{approle_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{approle_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10773,7 +10773,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<AppRoleListRolesResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -10790,8 +10790,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (AppRoleListRolesResponse)</returns>
-        public async Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -10827,7 +10827,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<AppRoleListRolesResponse>("/auth/{approle_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{approle_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10835,7 +10835,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<AppRoleListRolesResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -10843,7 +10843,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of AppRoleListSecretIdsResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -10851,7 +10851,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<AppRoleListSecretIdsResponse> AppRoleListSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AppRoleListSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'roleName' is set
@@ -10896,7 +10896,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<AppRoleListSecretIdsResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -10904,7 +10904,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<AppRoleListSecretIdsResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -10922,8 +10922,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (AppRoleListSecretIdsResponse)</returns>
-        public async Task<VaultResponse<AppRoleListSecretIdsResponse>> AppRoleListSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AppRoleListSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'roleName' is set
@@ -10966,7 +10966,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<AppRoleListSecretIdsResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -10974,7 +10974,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<AppRoleListSecretIdsResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -18014,7 +18014,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18022,7 +18022,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18039,7 +18039,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18060,7 +18060,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18068,7 +18068,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18085,8 +18085,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18104,7 +18104,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18122,7 +18122,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18130,14 +18130,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18145,7 +18145,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListCertificateConfigurations(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListCertificateConfigurations(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18162,7 +18162,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18183,7 +18183,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/config/certificates/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/config/certificates/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18191,7 +18191,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18208,8 +18208,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListCertificateConfigurationsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListCertificateConfigurationsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18227,7 +18227,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18245,7 +18245,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/config/certificates/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/config/certificates/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18253,14 +18253,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18268,7 +18268,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18285,7 +18285,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18306,7 +18306,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/identity-accesslist/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/identity-accesslist/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18314,7 +18314,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18331,8 +18331,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18350,7 +18350,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18368,7 +18368,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/identity-accesslist/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/identity-accesslist/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18376,14 +18376,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18391,7 +18391,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListIdentityWhitelist(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListIdentityWhitelist(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18408,7 +18408,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18429,7 +18429,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/identity-whitelist/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/identity-whitelist/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18437,7 +18437,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18454,8 +18454,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListIdentityWhitelistAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListIdentityWhitelistAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18473,7 +18473,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18491,7 +18491,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/identity-whitelist/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/identity-whitelist/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18499,14 +18499,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18514,7 +18514,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListRoleTagBlacklists(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListRoleTagBlacklists(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18531,7 +18531,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18552,7 +18552,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/roletag-blacklist/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/roletag-blacklist/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18560,7 +18560,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18577,8 +18577,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListRoleTagBlacklistsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListRoleTagBlacklistsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18596,7 +18596,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18614,7 +18614,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/roletag-blacklist/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/roletag-blacklist/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18622,14 +18622,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18637,7 +18637,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListRoleTagDenyLists(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListRoleTagDenyLists(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18654,7 +18654,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18675,7 +18675,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/roletag-denylist/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/roletag-denylist/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18683,7 +18683,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18700,8 +18700,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListRoleTagDenyListsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListRoleTagDenyListsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18719,7 +18719,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18737,7 +18737,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/roletag-denylist/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/roletag-denylist/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18745,14 +18745,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18760,7 +18760,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsListStsRoleRelationships(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AwsListStsRoleRelationships(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
 
 
@@ -18777,7 +18777,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18798,7 +18798,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{aws_mount_path}/config/sts/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{aws_mount_path}/config/sts/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18806,7 +18806,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -18823,8 +18823,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsListStsRoleRelationshipsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AwsListStsRoleRelationshipsAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -18842,7 +18842,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18860,7 +18860,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/config/sts/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{aws_mount_path}/config/sts/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18868,7 +18868,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -22359,7 +22359,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22367,7 +22367,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null)
         {
 
 
@@ -22384,7 +22384,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22405,7 +22405,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{azure_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{azure_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22413,7 +22413,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -22430,8 +22430,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -22449,7 +22449,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -22467,7 +22467,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{azure_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{azure_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22475,7 +22475,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -23898,7 +23898,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="certMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23906,7 +23906,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CertListCertificates(string certMountPath = "cert", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> CertListCertificates(string certMountPath = "cert", TimeSpan? wrapTTL = null)
         {
 
 
@@ -23923,7 +23923,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -23944,7 +23944,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{cert_mount_path}/certs/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{cert_mount_path}/certs/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -23952,7 +23952,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -23969,8 +23969,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CertListCertificatesAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> CertListCertificatesAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -23988,7 +23988,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24006,7 +24006,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cert_mount_path}/certs/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{cert_mount_path}/certs/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24014,14 +24014,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="certMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -24029,7 +24029,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CertListCrls(string certMountPath = "cert", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> CertListCrls(string certMountPath = "cert", TimeSpan? wrapTTL = null)
         {
 
 
@@ -24046,7 +24046,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24067,7 +24067,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{cert_mount_path}/crls/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{cert_mount_path}/crls/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -24075,7 +24075,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -24092,8 +24092,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CertListCrlsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> CertListCrlsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -24111,7 +24111,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -24129,7 +24129,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cert_mount_path}/crls/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{cert_mount_path}/crls/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -24137,7 +24137,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -25329,7 +25329,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cfMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -25337,7 +25337,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null)
         {
 
 
@@ -25354,7 +25354,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -25375,7 +25375,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{cf_mount_path}/roles/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{cf_mount_path}/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -25383,7 +25383,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -25400,8 +25400,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -25419,7 +25419,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -25437,7 +25437,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cf_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{cf_mount_path}/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -25445,7 +25445,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -26374,7 +26374,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26382,7 +26382,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GithubListTeams(string githubMountPath = "github", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> GithubListTeams(string githubMountPath = "github", TimeSpan? wrapTTL = null)
         {
 
 
@@ -26399,7 +26399,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -26420,7 +26420,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{github_mount_path}/map/teams/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{github_mount_path}/map/teams/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26428,7 +26428,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -26445,8 +26445,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GithubListTeamsAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> GithubListTeamsAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -26464,7 +26464,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -26482,7 +26482,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{github_mount_path}/map/teams/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{github_mount_path}/map/teams/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26490,14 +26490,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Read mappings for users 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26505,7 +26505,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GithubListUsers(string githubMountPath = "github", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> GithubListUsers(string githubMountPath = "github", TimeSpan? wrapTTL = null)
         {
 
 
@@ -26522,7 +26522,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -26543,7 +26543,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{github_mount_path}/map/users/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{github_mount_path}/map/users/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -26551,7 +26551,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -26568,8 +26568,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GithubListUsersAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> GithubListUsersAsync(string githubMountPath = "github", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -26587,7 +26587,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -26605,7 +26605,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{github_mount_path}/map/users/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{github_mount_path}/map/users/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -26613,7 +26613,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -27980,7 +27980,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27988,7 +27988,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
 
 
@@ -28005,7 +28005,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -28026,7 +28026,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{gcp_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{gcp_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28034,7 +28034,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -28051,8 +28051,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -28070,7 +28070,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -28088,7 +28088,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{gcp_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{gcp_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28096,7 +28096,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -28892,7 +28892,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28900,7 +28900,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> JwtListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> JwtListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
         {
 
 
@@ -28917,7 +28917,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -28938,7 +28938,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{jwt_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{jwt_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28946,7 +28946,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -28963,8 +28963,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> JwtListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> JwtListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -28982,7 +28982,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -29000,7 +29000,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{jwt_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{jwt_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29008,7 +29008,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token. 
@@ -30311,7 +30311,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -30319,7 +30319,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
         {
 
 
@@ -30336,7 +30336,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -30357,7 +30357,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{kerberos_mount_path}/groups/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{kerberos_mount_path}/groups/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -30365,7 +30365,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -30382,8 +30382,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -30401,7 +30401,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -30419,7 +30419,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{kerberos_mount_path}/groups/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{kerberos_mount_path}/groups/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -30427,7 +30427,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -31340,7 +31340,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -31348,7 +31348,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
         {
 
 
@@ -31365,7 +31365,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -31386,7 +31386,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{kubernetes_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{kubernetes_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -31394,7 +31394,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -31411,8 +31411,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -31430,7 +31430,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -31448,7 +31448,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{kubernetes_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{kubernetes_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -31456,7 +31456,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault. 
@@ -32385,7 +32385,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ldapMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -32393,7 +32393,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> LdapListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> LdapListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
         {
 
 
@@ -32410,7 +32410,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -32431,7 +32431,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{ldap_mount_path}/groups/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{ldap_mount_path}/groups/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32439,7 +32439,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -32456,8 +32456,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LdapListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> LdapListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -32475,7 +32475,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -32493,7 +32493,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{ldap_mount_path}/groups/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{ldap_mount_path}/groups/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32501,14 +32501,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ldapMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -32516,7 +32516,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> LdapListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> LdapListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
         {
 
 
@@ -32533,7 +32533,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -32554,7 +32554,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{ldap_mount_path}/users/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{ldap_mount_path}/users/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -32562,7 +32562,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -32579,8 +32579,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LdapListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> LdapListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -32598,7 +32598,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -32616,7 +32616,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{ldap_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{ldap_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -32624,7 +32624,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Log in with a username and password. 
@@ -33832,7 +33832,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ociMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -33840,7 +33840,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OciListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> OciListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null)
         {
 
 
@@ -33857,7 +33857,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -33878,7 +33878,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{oci_mount_path}/role/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{oci_mount_path}/role/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -33886,7 +33886,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -33903,8 +33903,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OciListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> OciListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -33922,7 +33922,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -33940,7 +33940,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{oci_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{oci_mount_path}/role/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -33948,7 +33948,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Authenticates to Vault using OCI credentials 
@@ -34893,7 +34893,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -34901,7 +34901,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
         {
 
 
@@ -34918,7 +34918,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -34939,7 +34939,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{okta_mount_path}/groups/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{okta_mount_path}/groups/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -34947,7 +34947,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -34964,8 +34964,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -34983,7 +34983,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -35001,7 +35001,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{okta_mount_path}/groups/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{okta_mount_path}/groups/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -35009,14 +35009,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -35024,7 +35024,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
         {
 
 
@@ -35041,7 +35041,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -35062,7 +35062,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{okta_mount_path}/users/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{okta_mount_path}/users/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -35070,7 +35070,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -35087,8 +35087,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -35106,7 +35106,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -35124,7 +35124,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{okta_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{okta_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -35132,7 +35132,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Log in with a username and password. 
@@ -36356,7 +36356,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="radiusMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -36364,7 +36364,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
         {
 
 
@@ -36381,7 +36381,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -36402,7 +36402,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{radius_mount_path}/users/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{radius_mount_path}/users/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -36410,7 +36410,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -36427,8 +36427,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -36446,7 +36446,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -36464,7 +36464,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{radius_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{radius_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -36472,7 +36472,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Log in with a username and password. 
@@ -37657,7 +37657,7 @@ namespace Vault.Api
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#x27;sudo&#x27; capability in addition to &#x27;list&#x27;. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -37665,7 +37665,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenListAccessors(TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> TokenListAccessors(TimeSpan? wrapTTL = null)
         {
 
 
@@ -37682,7 +37682,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -37700,7 +37700,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/token/accessors/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/token/accessors/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -37708,7 +37708,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -37724,8 +37724,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenListAccessorsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> TokenListAccessorsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -37743,7 +37743,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -37758,7 +37758,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/token/accessors/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/token/accessors/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -37766,13 +37766,13 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// This endpoint lists configured roles. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -37780,7 +37780,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenListRoles(TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> TokenListRoles(TimeSpan? wrapTTL = null)
         {
 
 
@@ -37797,7 +37797,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -37815,7 +37815,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/token/roles/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/token/roles/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -37823,7 +37823,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -37839,8 +37839,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenListRolesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> TokenListRolesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -37858,7 +37858,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -37873,7 +37873,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/token/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/token/roles/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -37881,7 +37881,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         ///  
@@ -39587,7 +39587,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="userpassMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -39595,7 +39595,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
         {
 
 
@@ -39612,7 +39612,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -39633,7 +39633,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{userpass_mount_path}/users/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/auth/{userpass_mount_path}/users/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -39641,7 +39641,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -39658,8 +39658,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
 
@@ -39677,7 +39677,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -39695,7 +39695,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{userpass_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/auth/{userpass_mount_path}/users/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -39703,7 +39703,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
         /// <summary>
         /// Log in with a username and password. 

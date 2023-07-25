@@ -5031,7 +5031,7 @@ No authorization required
 <a name="internalgenerateopenapidocument"></a>
 # **InternalGenerateOpenApiDocument**
 
-> void InternalGenerateOpenApiDocument (bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null)
+> void InternalGenerateOpenApiDocument (string context = default(string), bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null)
 
 
 
@@ -5064,6 +5064,11 @@ namespace Example
             
             
             
+            var context = "context_example";  // string | Context string appended to every operationId (optional) 
+            
+            
+            
+            
             var genericMountPaths = false;  // bool? | Use generic mount paths (optional)  (default to false)
             
             
@@ -5073,7 +5078,7 @@ namespace Example
             {
                 
 
-                apiInstance.InternalGenerateOpenApiDocument(bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
+                apiInstance.InternalGenerateOpenApiDocument(string context = default(string), bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5089,6 +5094,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **context** | **string**| Context string appended to every operationId | [optional] 
  **genericMountPaths** | **bool?**| Use generic mount paths | [optional] [default to false]
 
 
@@ -5121,7 +5127,7 @@ No authorization required
 <a name="internalgenerateopenapidocumentwithparameters"></a>
 # **InternalGenerateOpenApiDocumentWithParameters**
 
-> void InternalGenerateOpenApiDocumentWithParameters (InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null)
+> void InternalGenerateOpenApiDocumentWithParameters (InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -5158,17 +5164,12 @@ namespace Example
             var internalGenerateOpenApiDocumentWithParametersRequest = new InternalGenerateOpenApiDocumentWithParametersRequest(); // InternalGenerateOpenApiDocumentWithParametersRequest | 
             
             
-            
-            var genericMountPaths = false;  // bool? | Use generic mount paths (optional)  (default to false)
-            
-            
-            
 
             try
             {
                 
 
-                apiInstance.InternalGenerateOpenApiDocumentWithParameters(InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
+                apiInstance.InternalGenerateOpenApiDocumentWithParameters(InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5185,7 +5186,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **internalGenerateOpenApiDocumentWithParametersRequest** | [**InternalGenerateOpenApiDocumentWithParametersRequest**](InternalGenerateOpenApiDocumentWithParametersRequest.md)|  | 
- **genericMountPaths** | **bool?**| Use generic mount paths | [optional] [default to false]
 
 
 ### Return type
@@ -10005,7 +10005,7 @@ No authorization required
 <a name="policieslistpasswordpolicies"></a>
 # **PoliciesListPasswordPolicies**
 
-> PoliciesListPasswordPoliciesResponse PoliciesListPasswordPolicies (TimeSpan? wrapTTL = null)
+> StandardListResponse PoliciesListPasswordPolicies (TimeSpan? wrapTTL = null)
 
 List the existing password policies.
 
@@ -10049,7 +10049,7 @@ namespace Example
                 // List the existing password policies.
                 
 
-                PoliciesListPasswordPoliciesResponse result = apiInstance.PoliciesListPasswordPolicies(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.PoliciesListPasswordPolicies(TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -10072,7 +10072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PoliciesListPasswordPoliciesResponse**](PoliciesListPasswordPoliciesResponse.md)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -11947,7 +11947,7 @@ No authorization required
 <a name="ratelimitquotaslist"></a>
 # **RateLimitQuotasList**
 
-> RateLimitQuotasListResponse RateLimitQuotasList (TimeSpan? wrapTTL = null)
+> StandardListResponse RateLimitQuotasList (TimeSpan? wrapTTL = null)
 
 
 
@@ -11989,7 +11989,7 @@ namespace Example
             {
                 
 
-                RateLimitQuotasListResponse result = apiInstance.RateLimitQuotasList(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.RateLimitQuotasList(TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12012,7 +12012,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RateLimitQuotasListResponse**](RateLimitQuotasListResponse.md)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -12403,7 +12403,7 @@ No authorization required
 <a name="rawlist"></a>
 # **RawList**
 
-> RawListResponse RawList (string path, TimeSpan? wrapTTL = null)
+> StandardListResponse RawList (string path, TimeSpan? wrapTTL = null)
 
 Return a list keys for a given path prefix.
 
@@ -12452,7 +12452,7 @@ namespace Example
                 // Return a list keys for a given path prefix.
                 
 
-                RawListResponse result = apiInstance.RawList(string path, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.RawList(string path, TimeSpan? wrapTTL = null);
 
                 Debug.WriteLine(result);
             }
@@ -12476,7 +12476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RawListResponse**](RawListResponse.md)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -16624,7 +16624,7 @@ No authorization required
 <a name="systemlistmanagedkeystype"></a>
 # **SystemListManagedKeysType**
 
-> void SystemListManagedKeysType (string type, TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListManagedKeysType (string type, TimeSpan? wrapTTL = null)
 
 
 
@@ -16671,7 +16671,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListManagedKeysType(string type, TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListManagedKeysType(string type, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -16693,7 +16695,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -16702,7 +16704,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -16720,7 +16722,7 @@ No authorization required
 <a name="systemlistmfamethod"></a>
 # **SystemListMfaMethod**
 
-> void SystemListMfaMethod (TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListMfaMethod (TimeSpan? wrapTTL = null)
 
 
 
@@ -16762,7 +16764,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListMfaMethod(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListMfaMethod(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -16783,7 +16787,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -16792,7 +16796,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -16810,7 +16814,7 @@ No authorization required
 <a name="systemlistnamespaces"></a>
 # **SystemListNamespaces**
 
-> void SystemListNamespaces (TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListNamespaces (TimeSpan? wrapTTL = null)
 
 
 
@@ -16852,7 +16856,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListNamespaces(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListNamespaces(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -16873,7 +16879,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -16882,7 +16888,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -16900,7 +16906,7 @@ No authorization required
 <a name="systemlistpoliciesegp"></a>
 # **SystemListPoliciesEgp**
 
-> void SystemListPoliciesEgp (TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListPoliciesEgp (TimeSpan? wrapTTL = null)
 
 
 
@@ -16942,7 +16948,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListPoliciesEgp(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListPoliciesEgp(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -16963,7 +16971,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -16972,7 +16980,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -16990,7 +16998,7 @@ No authorization required
 <a name="systemlistpoliciesrgp"></a>
 # **SystemListPoliciesRgp**
 
-> void SystemListPoliciesRgp (TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListPoliciesRgp (TimeSpan? wrapTTL = null)
 
 
 
@@ -17032,7 +17040,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListPoliciesRgp(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListPoliciesRgp(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -17053,7 +17063,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -17062,7 +17072,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -17080,7 +17090,7 @@ No authorization required
 <a name="systemlistquotasleasecount"></a>
 # **SystemListQuotasLeaseCount**
 
-> void SystemListQuotasLeaseCount (TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListQuotasLeaseCount (TimeSpan? wrapTTL = null)
 
 
 
@@ -17122,7 +17132,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListQuotasLeaseCount(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListQuotasLeaseCount(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -17143,7 +17155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -17152,7 +17164,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -17170,7 +17182,7 @@ No authorization required
 <a name="systemliststorageraftsnapshotautoconfig"></a>
 # **SystemListStorageRaftSnapshotAutoConfig**
 
-> void SystemListStorageRaftSnapshotAutoConfig (TimeSpan? wrapTTL = null)
+> StandardListResponse SystemListStorageRaftSnapshotAutoConfig (TimeSpan? wrapTTL = null)
 
 
 
@@ -17212,7 +17224,9 @@ namespace Example
             {
                 
 
-                apiInstance.SystemListStorageRaftSnapshotAutoConfig(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.SystemListStorageRaftSnapshotAutoConfig(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -17233,7 +17247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -17242,7 +17256,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -20414,7 +20428,7 @@ No authorization required
 <a name="systemwritenamespacesapilocklock"></a>
 # **SystemWriteNamespacesApiLockLock**
 
-> void SystemWriteNamespacesApiLockLock (SystemWriteNamespacesApiLockLockRequest systemWriteNamespacesApiLockLockRequest, TimeSpan? wrapTTL = null)
+> void SystemWriteNamespacesApiLockLock (TimeSpan? wrapTTL = null)
 
 
 
@@ -20446,17 +20460,12 @@ namespace Example
             
             
             
-            
-            
-            var systemWriteNamespacesApiLockLockRequest = new SystemWriteNamespacesApiLockLockRequest(); // SystemWriteNamespacesApiLockLockRequest | 
-            
-            
 
             try
             {
                 
 
-                apiInstance.SystemWriteNamespacesApiLockLock(SystemWriteNamespacesApiLockLockRequest systemWriteNamespacesApiLockLockRequest, TimeSpan? wrapTTL = null);
+                apiInstance.SystemWriteNamespacesApiLockLock(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20469,10 +20478,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **systemWriteNamespacesApiLockLockRequest** | [**SystemWriteNamespacesApiLockLockRequest**](SystemWriteNamespacesApiLockLockRequest.md)|  | 
+This endpoint does not need any parameter.
 
 
 ### Return type
@@ -20485,7 +20491,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: , 
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -20594,7 +20600,7 @@ No authorization required
 <a name="systemwritenamespacesapilockunlock"></a>
 # **SystemWriteNamespacesApiLockUnlock**
 
-> void SystemWriteNamespacesApiLockUnlock (SystemWriteNamespacesApiLockUnlockRequest systemWriteNamespacesApiLockUnlockRequest, TimeSpan? wrapTTL = null)
+> void SystemWriteNamespacesApiLockUnlock (TimeSpan? wrapTTL = null)
 
 
 
@@ -20626,17 +20632,12 @@ namespace Example
             
             
             
-            
-            
-            var systemWriteNamespacesApiLockUnlockRequest = new SystemWriteNamespacesApiLockUnlockRequest(); // SystemWriteNamespacesApiLockUnlockRequest | 
-            
-            
 
             try
             {
                 
 
-                apiInstance.SystemWriteNamespacesApiLockUnlock(SystemWriteNamespacesApiLockUnlockRequest systemWriteNamespacesApiLockUnlockRequest, TimeSpan? wrapTTL = null);
+                apiInstance.SystemWriteNamespacesApiLockUnlock(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20649,10 +20650,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **systemWriteNamespacesApiLockUnlockRequest** | [**SystemWriteNamespacesApiLockUnlockRequest**](SystemWriteNamespacesApiLockUnlockRequest.md)|  | 
+This endpoint does not need any parameter.
 
 
 ### Return type
@@ -20665,7 +20663,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: , 
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -24932,7 +24930,7 @@ No authorization required
 <a name="wrap"></a>
 # **Wrap**
 
-> void Wrap (TimeSpan? wrapTTL = null)
+> void Wrap (Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null)
 
 
 
@@ -24964,12 +24962,17 @@ namespace Example
             
             
             
+            
+            
+            var requestBody = new Dictionary<string, Object>(); // Dictionary<string, Object> | 
+            
+            
 
             try
             {
                 
 
-                apiInstance.Wrap(TimeSpan? wrapTTL = null);
+                apiInstance.Wrap(Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24982,7 +24985,10 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestBody** | [**Dictionary&lt;string, Object&gt;**](Object.md)|  | 
 
 
 ### Return type
@@ -24995,7 +25001,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: 
  - **Accept**: Not defined
 
 
