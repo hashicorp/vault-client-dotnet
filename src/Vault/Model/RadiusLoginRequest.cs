@@ -36,17 +36,13 @@ namespace Vault.Model
 
         /// <param name="Password">Password for this user..</param>
 
-        /// <param name="Urlusername">Username to be used for login. (URL parameter).</param>
-
         /// <param name="Username">Username to be used for login. (POST request body).</param>
 
 
-        public RadiusLoginRequest(string Password = default(string), string Urlusername = default(string), string Username = default(string))
+        public RadiusLoginRequest(string Password = default(string), string Username = default(string))
         {
 
             this.Password = Password;
-
-            this.Urlusername = Urlusername;
 
             this.Username = Username;
 
@@ -59,15 +55,6 @@ namespace Vault.Model
         [DataMember(Name = "password", EmitDefaultValue = false)]
 
         public string Password { get; set; }
-
-
-        /// <summary>
-        /// Username to be used for login. (URL parameter)
-        /// </summary>
-        /// <value>Username to be used for login. (URL parameter)</value>
-        [DataMember(Name = "urlusername", EmitDefaultValue = false)]
-
-        public string Urlusername { get; set; }
 
 
         /// <summary>
@@ -90,7 +77,6 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class RadiusLoginRequest {\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
-            sb.Append("  Urlusername: ").Append(Urlusername).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,12 +120,6 @@ namespace Vault.Model
 
                 ) &&
                 (
-                    this.Urlusername == input.Urlusername ||
-                    (this.Urlusername != null &&
-                    this.Urlusername.Equals(input.Urlusername))
-
-                ) &&
-                (
                     this.Username == input.Username ||
                     (this.Username != null &&
                     this.Username.Equals(input.Username))
@@ -161,11 +141,6 @@ namespace Vault.Model
                 if (this.Password != null)
                 {
                     hashCode = (hashCode * 59) + this.Password.GetHashCode();
-                }
-
-                if (this.Urlusername != null)
-                {
-                    hashCode = (hashCode * 59) + this.Urlusername.GetHashCode();
                 }
 
                 if (this.Username != null)

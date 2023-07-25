@@ -38,17 +38,13 @@ namespace Vault.Model
 
         /// <param name="Force">If set and a key by the given name exists, force the restore operation and override the key. (default to false).</param>
 
-        /// <param name="Name">If set, this will be the name of the restored key..</param>
 
-
-        public TransitRestoreKeyRequest(string Backup = default(string), bool Force = false, string Name = default(string))
+        public TransitRestoreKeyRequest(string Backup = default(string), bool Force = false)
         {
 
             this.Backup = Backup;
 
             this.Force = Force;
-
-            this.Name = Name;
 
         }
 
@@ -70,15 +66,6 @@ namespace Vault.Model
         public bool Force { get; set; }
 
 
-        /// <summary>
-        /// If set, this will be the name of the restored key.
-        /// </summary>
-        /// <value>If set, this will be the name of the restored key.</value>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-
-        public string Name { get; set; }
-
-
 
 
         /// <summary>
@@ -91,7 +78,6 @@ namespace Vault.Model
             sb.Append("class TransitRestoreKeyRequest {\n");
             sb.Append("  Backup: ").Append(Backup).Append("\n");
             sb.Append("  Force: ").Append(Force).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,12 +123,6 @@ namespace Vault.Model
                     this.Force == input.Force ||
 
                     this.Force.Equals(input.Force)
-                ) &&
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-
                 );
 
         }
@@ -164,11 +144,6 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.Force.GetHashCode();
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-
                 return hashCode;
             }
         }

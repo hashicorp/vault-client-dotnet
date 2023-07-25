@@ -40,10 +40,8 @@ namespace Vault.Model
 
         /// <param name="Input">The base64-encoded input data.</param>
 
-        /// <param name="Urlalgorithm">Algorithm to use (POST URL parameter).</param>
 
-
-        public GenerateHashRequest(string Algorithm = "sha2-256", string Format = "hex", string Input = default(string), string Urlalgorithm = default(string))
+        public GenerateHashRequest(string Algorithm = "sha2-256", string Format = "hex", string Input = default(string))
         {
 
             // use default value if no "Algorithm" provided
@@ -55,8 +53,6 @@ namespace Vault.Model
 
 
             this.Input = Input;
-
-            this.Urlalgorithm = Urlalgorithm;
 
         }
 
@@ -87,15 +83,6 @@ namespace Vault.Model
         public string Input { get; set; }
 
 
-        /// <summary>
-        /// Algorithm to use (POST URL parameter)
-        /// </summary>
-        /// <value>Algorithm to use (POST URL parameter)</value>
-        [DataMember(Name = "urlalgorithm", EmitDefaultValue = false)]
-
-        public string Urlalgorithm { get; set; }
-
-
 
 
         /// <summary>
@@ -109,7 +96,6 @@ namespace Vault.Model
             sb.Append("  Algorithm: ").Append(Algorithm).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
-            sb.Append("  Urlalgorithm: ").Append(Urlalgorithm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -162,12 +148,6 @@ namespace Vault.Model
                     (this.Input != null &&
                     this.Input.Equals(input.Input))
 
-                ) &&
-                (
-                    this.Urlalgorithm == input.Urlalgorithm ||
-                    (this.Urlalgorithm != null &&
-                    this.Urlalgorithm.Equals(input.Urlalgorithm))
-
                 );
 
         }
@@ -195,11 +175,6 @@ namespace Vault.Model
                 if (this.Input != null)
                 {
                     hashCode = (hashCode * 59) + this.Input.GetHashCode();
-                }
-
-                if (this.Urlalgorithm != null)
-                {
-                    hashCode = (hashCode * 59) + this.Urlalgorithm.GetHashCode();
                 }
 
                 return hashCode;

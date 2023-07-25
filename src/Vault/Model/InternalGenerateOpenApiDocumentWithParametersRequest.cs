@@ -36,11 +36,15 @@ namespace Vault.Model
 
         /// <param name="Context">Context string appended to every operationId.</param>
 
+        /// <param name="GenericMountPaths">Use generic mount paths (default to false).</param>
 
-        public InternalGenerateOpenApiDocumentWithParametersRequest(string Context = default(string))
+
+        public InternalGenerateOpenApiDocumentWithParametersRequest(string Context = default(string), bool GenericMountPaths = false)
         {
 
             this.Context = Context;
+
+            this.GenericMountPaths = GenericMountPaths;
 
         }
 
@@ -51,6 +55,15 @@ namespace Vault.Model
         [DataMember(Name = "context", EmitDefaultValue = false)]
 
         public string Context { get; set; }
+
+
+        /// <summary>
+        /// Use generic mount paths
+        /// </summary>
+        /// <value>Use generic mount paths</value>
+        [DataMember(Name = "generic_mount_paths", EmitDefaultValue = true)]
+
+        public bool GenericMountPaths { get; set; }
 
 
 
@@ -64,6 +77,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class InternalGenerateOpenApiDocumentWithParametersRequest {\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
+            sb.Append("  GenericMountPaths: ").Append(GenericMountPaths).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,6 +118,11 @@ namespace Vault.Model
                     (this.Context != null &&
                     this.Context.Equals(input.Context))
 
+                ) &&
+                (
+                    this.GenericMountPaths == input.GenericMountPaths ||
+
+                    this.GenericMountPaths.Equals(input.GenericMountPaths)
                 );
 
         }
@@ -123,6 +142,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.Context.GetHashCode();
                 }
 
+
+                hashCode = (hashCode * 59) + this.GenericMountPaths.GetHashCode();
                 return hashCode;
             }
         }

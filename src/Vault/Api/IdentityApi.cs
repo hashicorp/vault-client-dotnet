@@ -4,6 +4,7 @@
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Vault.Client;
@@ -1234,6 +1235,24 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+
+        /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
+
+        /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
+
+        /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
+
+        /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
+
+        /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
+
+        /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
+
+        /// <param name="clientId">The ID of the requesting client. (optional)</param>
+
+        /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
+
+        /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1242,7 +1261,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OidcProviderAuthorize(string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OidcProviderAuthorize(string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2947,6 +2966,24 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+
+        /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
+
+        /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
+
+        /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
+
+        /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
+
+        /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
+
+        /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
+
+        /// <param name="clientId">The ID of the requesting client. (optional)</param>
+
+        /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
+
+        /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2956,7 +2993,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OidcProviderAuthorizeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OidcProviderAuthorizeAsync(string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -13187,6 +13224,9 @@ namespace Vault.Api
 
 
 
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
 
             if (allowedClientId != null)
             {
@@ -13195,9 +13235,6 @@ namespace Vault.Api
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "allowed_client_id", allowedClientId));
 
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
 
 
 
@@ -13258,14 +13295,14 @@ namespace Vault.Api
 
 
 
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
 
             if (allowedClientId != null)
             {
                 requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "allowed_client_id", allowedClientId));
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
-
-
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -13512,6 +13549,24 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+
+        /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
+
+        /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
+
+        /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
+
+        /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
+
+        /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
+
+        /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
+
+        /// <param name="clientId">The ID of the requesting client. (optional)</param>
+
+        /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
+
+        /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13520,7 +13575,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OidcProviderAuthorize(string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OidcProviderAuthorize(string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'name' is set
@@ -13555,6 +13610,78 @@ namespace Vault.Api
 
 
 
+
+            if (codeChallengeMethod != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "code_challenge_method", codeChallengeMethod));
+
+            }
+
+            if (scope != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "scope", scope));
+
+            }
+
+            if (state != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "state", state));
+
+            }
+
+            if (redirectUri != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "redirect_uri", redirectUri));
+
+            }
+
+            if (codeChallenge != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "code_challenge", codeChallenge));
+
+            }
+
+            if (maxAge != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "max_age", maxAge));
+
+            }
+
+            if (clientId != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "client_id", clientId));
+
+            }
+
+            if (responseType != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "response_type", responseType));
+
+            }
+
+            if (nonce != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "nonce", nonce));
+
+            }
 
 
 
@@ -13576,6 +13703,24 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+
+        /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
+
+        /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
+
+        /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
+
+        /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
+
+        /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
+
+        /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
+
+        /// <param name="clientId">The ID of the requesting client. (optional)</param>
+
+        /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
+
+        /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -13585,7 +13730,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OidcProviderAuthorizeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OidcProviderAuthorizeAsync(string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'name' is set
@@ -13621,6 +13766,51 @@ namespace Vault.Api
 
 
 
+
+            if (codeChallengeMethod != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "code_challenge_method", codeChallengeMethod));
+            }
+
+            if (scope != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "scope", scope));
+            }
+
+            if (state != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "state", state));
+            }
+
+            if (redirectUri != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "redirect_uri", redirectUri));
+            }
+
+            if (codeChallenge != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "code_challenge", codeChallenge));
+            }
+
+            if (maxAge != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "max_age", maxAge));
+            }
+
+            if (clientId != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "client_id", clientId));
+            }
+
+            if (responseType != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "response_type", responseType));
+            }
+
+            if (nonce != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "nonce", nonce));
+            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
 

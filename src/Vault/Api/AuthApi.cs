@@ -4,6 +4,7 @@
 // Code generated with OpenAPI Generator (https://openapi-generator.tech); DO NOT EDIT.
 
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Vault.Client;

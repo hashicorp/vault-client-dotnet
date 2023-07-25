@@ -1565,7 +1565,7 @@ No authorization required
 <a name="awsgeneratecredentials"></a>
 # **AwsGenerateCredentials**
 
-> void AwsGenerateCredentials (string name, string awsMountPath, TimeSpan? wrapTTL = null)
+> void AwsGenerateCredentials (string name, string awsMountPath, string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -1607,12 +1607,27 @@ namespace Example
             
             
             
+            
+            var roleArn = "roleArn_example";  // string | ARN of role to assume when credential_type is assumed_role (optional) 
+            
+            
+            
+            
+            var ttl = "\"3600\"";  // string | Lifetime of the returned credentials in seconds (optional)  (default to "3600")
+            
+            
+            
+            
+            var roleSessionName = "roleSessionName_example";  // string | Session name to use when assuming role. Max chars: 64 (optional) 
+            
+            
+            
 
             try
             {
                 
 
-                apiInstance.AwsGenerateCredentials(string name, string awsMountPath, TimeSpan? wrapTTL = null);
+                apiInstance.AwsGenerateCredentials(string name, string awsMountPath, string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1630,6 +1645,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role | 
  **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+ **roleArn** | **string**| ARN of role to assume when credential_type is assumed_role | [optional] 
+ **ttl** | **string**| Lifetime of the returned credentials in seconds | [optional] [default to &quot;3600&quot;]
+ **roleSessionName** | **string**| Session name to use when assuming role. Max chars: 64 | [optional] 
 
 
 ### Return type
@@ -1763,7 +1781,7 @@ No authorization required
 <a name="awsgeneratestscredentials"></a>
 # **AwsGenerateStsCredentials**
 
-> void AwsGenerateStsCredentials (string name, string awsMountPath, TimeSpan? wrapTTL = null)
+> void AwsGenerateStsCredentials (string name, string awsMountPath, string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -1805,12 +1823,27 @@ namespace Example
             
             
             
+            
+            var roleArn = "roleArn_example";  // string | ARN of role to assume when credential_type is assumed_role (optional) 
+            
+            
+            
+            
+            var ttl = "\"3600\"";  // string | Lifetime of the returned credentials in seconds (optional)  (default to "3600")
+            
+            
+            
+            
+            var roleSessionName = "roleSessionName_example";  // string | Session name to use when assuming role. Max chars: 64 (optional) 
+            
+            
+            
 
             try
             {
                 
 
-                apiInstance.AwsGenerateStsCredentials(string name, string awsMountPath, TimeSpan? wrapTTL = null);
+                apiInstance.AwsGenerateStsCredentials(string name, string awsMountPath, string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1828,6 +1861,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role | 
  **awsMountPath** | **string**| Path that the backend was mounted at | [default to &quot;aws&quot;]
+ **roleArn** | **string**| ARN of role to assume when credential_type is assumed_role | [optional] 
+ **ttl** | **string**| Lifetime of the returned credentials in seconds | [optional] [default to &quot;3600&quot;]
+ **roleSessionName** | **string**| Session name to use when assuming role. Max chars: 64 | [optional] 
 
 
 ### Return type
@@ -4757,7 +4793,7 @@ No authorization required
 <a name="cubbyholewrite"></a>
 # **CubbyholeWrite**
 
-> void CubbyholeWrite (string path, TimeSpan? wrapTTL = null)
+> void CubbyholeWrite (string path, Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null)
 
 Store a secret at the specified location.
 
@@ -4794,6 +4830,11 @@ namespace Example
             
             
             
+            
+            
+            var requestBody = new Dictionary<string, Object>(); // Dictionary<string, Object> | 
+            
+            
 
             try
             {
@@ -4801,7 +4842,7 @@ namespace Example
                 // Store a secret at the specified location.
                 
 
-                apiInstance.CubbyholeWrite(string path, TimeSpan? wrapTTL = null);
+                apiInstance.CubbyholeWrite(string path, Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4818,6 +4859,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Specifies the path of the secret. | 
+ **requestBody** | [**Dictionary&lt;string, Object&gt;**](Object.md)|  | 
 
 
 ### Return type
@@ -4830,7 +4872,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: , 
  - **Accept**: Not defined
 
 

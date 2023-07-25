@@ -34,7 +34,7 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="TokenLookUpRequest" /> class.
         /// </summary>
 
-        /// <param name="Token">Token to lookup (POST request body).</param>
+        /// <param name="Token">Token to lookup.</param>
 
 
         public TokenLookUpRequest(string Token = default(string))
@@ -45,9 +45,9 @@ namespace Vault.Model
         }
 
         /// <summary>
-        /// Token to lookup (POST request body)
+        /// Token to lookup
         /// </summary>
-        /// <value>Token to lookup (POST request body)</value>
+        /// <value>Token to lookup</value>
         [DataMember(Name = "token", EmitDefaultValue = false)]
 
         public string Token { get; set; }
