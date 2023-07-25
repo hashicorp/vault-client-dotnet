@@ -23,15 +23,15 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// JwtOidcCallbackWithParametersRequest
+    /// JwtOidcCallbackFormPostRequest
     /// </summary>
-    [DataContract(Name = "JwtOidcCallbackWithParametersRequest")]
-    public partial class JwtOidcCallbackWithParametersRequest : IEquatable<JwtOidcCallbackWithParametersRequest>, IValidatableObject
+    [DataContract(Name = "JwtOidcCallbackFormPostRequest")]
+    public partial class JwtOidcCallbackFormPostRequest : IEquatable<JwtOidcCallbackFormPostRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="JwtOidcCallbackWithParametersRequest" /> class.
+        /// Initializes a new instance of the <see cref="JwtOidcCallbackFormPostRequest" /> class.
         /// </summary>
 
         /// <param name="ClientNonce">ClientNonce.</param>
@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="State">State.</param>
 
 
-        public JwtOidcCallbackWithParametersRequest(string ClientNonce = default(string), string Code = default(string), string IdToken = default(string), string State = default(string))
+        public JwtOidcCallbackFormPostRequest(string ClientNonce = default(string), string Code = default(string), string IdToken = default(string), string State = default(string))
         {
 
             this.ClientNonce = ClientNonce;
@@ -97,7 +97,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class JwtOidcCallbackWithParametersRequest {\n");
+            sb.Append("class JwtOidcCallbackFormPostRequest {\n");
             sb.Append("  ClientNonce: ").Append(ClientNonce).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  IdToken: ").Append(IdToken).Append("\n");
@@ -122,15 +122,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as JwtOidcCallbackWithParametersRequest);
+            return this.Equals(input as JwtOidcCallbackFormPostRequest);
         }
 
         /// <summary>
-        /// Returns true if JwtOidcCallbackWithParametersRequest instances are equal
+        /// Returns true if JwtOidcCallbackFormPostRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of JwtOidcCallbackWithParametersRequest to be compared</param>
+        /// <param name="input">Instance of JwtOidcCallbackFormPostRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(JwtOidcCallbackWithParametersRequest input)
+        public bool Equals(JwtOidcCallbackFormPostRequest input)
         {
             if (input == null)
             {

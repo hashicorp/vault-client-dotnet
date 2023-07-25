@@ -23,25 +23,25 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// GoogleCloudGenerateStaticAccountKeyWithParametersRequest
+    /// GoogleCloudGenerateRolesetKeyRequest
     /// </summary>
-    [DataContract(Name = "GoogleCloudGenerateStaticAccountKeyWithParametersRequest")]
-    public partial class GoogleCloudGenerateStaticAccountKeyWithParametersRequest : IEquatable<GoogleCloudGenerateStaticAccountKeyWithParametersRequest>, IValidatableObject
+    [DataContract(Name = "GoogleCloudGenerateRolesetKeyRequest")]
+    public partial class GoogleCloudGenerateRolesetKeyRequest : IEquatable<GoogleCloudGenerateRolesetKeyRequest>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GoogleCloudGenerateStaticAccountKeyWithParametersRequest" /> class.
+        /// Initializes a new instance of the <see cref="GoogleCloudGenerateRolesetKeyRequest" /> class.
         /// </summary>
 
-        /// <param name="KeyAlgorithm">Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot; (default to &quot;KEY_ALG_RSA_2048&quot;).</param>
+        /// <param name="KeyAlgorithm">Private key algorithm for service account key - defaults to KEY_ALG_RSA_2048\&quot; (default to &quot;KEY_ALG_RSA_2048&quot;).</param>
 
-        /// <param name="KeyType">Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot; (default to &quot;TYPE_GOOGLE_CREDENTIALS_FILE&quot;).</param>
+        /// <param name="KeyType">Private key type for service account key - defaults to TYPE_GOOGLE_CREDENTIALS_FILE\&quot; (default to &quot;TYPE_GOOGLE_CREDENTIALS_FILE&quot;).</param>
 
         /// <param name="Ttl">Lifetime of the service account key.</param>
 
 
-        public GoogleCloudGenerateStaticAccountKeyWithParametersRequest(string KeyAlgorithm = "KEY_ALG_RSA_2048", string KeyType = "TYPE_GOOGLE_CREDENTIALS_FILE", string Ttl = default(string))
+        public GoogleCloudGenerateRolesetKeyRequest(string KeyAlgorithm = "KEY_ALG_RSA_2048", string KeyType = "TYPE_GOOGLE_CREDENTIALS_FILE", string Ttl = default(string))
         {
 
             // use default value if no "KeyAlgorithm" provided
@@ -57,18 +57,18 @@ namespace Vault.Model
         }
 
         /// <summary>
-        /// Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot;
+        /// Private key algorithm for service account key - defaults to KEY_ALG_RSA_2048\&quot;
         /// </summary>
-        /// <value>Private key algorithm for service account key. Defaults to KEY_ALG_RSA_2048.\&quot;</value>
+        /// <value>Private key algorithm for service account key - defaults to KEY_ALG_RSA_2048\&quot;</value>
         [DataMember(Name = "key_algorithm", EmitDefaultValue = false)]
 
         public string KeyAlgorithm { get; set; }
 
 
         /// <summary>
-        /// Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot;
+        /// Private key type for service account key - defaults to TYPE_GOOGLE_CREDENTIALS_FILE\&quot;
         /// </summary>
-        /// <value>Private key type for service account key. Defaults to TYPE_GOOGLE_CREDENTIALS_FILE.\&quot;</value>
+        /// <value>Private key type for service account key - defaults to TYPE_GOOGLE_CREDENTIALS_FILE\&quot;</value>
         [DataMember(Name = "key_type", EmitDefaultValue = false)]
 
         public string KeyType { get; set; }
@@ -92,7 +92,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GoogleCloudGenerateStaticAccountKeyWithParametersRequest {\n");
+            sb.Append("class GoogleCloudGenerateRolesetKeyRequest {\n");
             sb.Append("  KeyAlgorithm: ").Append(KeyAlgorithm).Append("\n");
             sb.Append("  KeyType: ").Append(KeyType).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
@@ -116,15 +116,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GoogleCloudGenerateStaticAccountKeyWithParametersRequest);
+            return this.Equals(input as GoogleCloudGenerateRolesetKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if GoogleCloudGenerateStaticAccountKeyWithParametersRequest instances are equal
+        /// Returns true if GoogleCloudGenerateRolesetKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GoogleCloudGenerateStaticAccountKeyWithParametersRequest to be compared</param>
+        /// <param name="input">Instance of GoogleCloudGenerateRolesetKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GoogleCloudGenerateStaticAccountKeyWithParametersRequest input)
+        public bool Equals(GoogleCloudGenerateRolesetKeyRequest input)
         {
             if (input == null)
             {

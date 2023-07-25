@@ -1115,6 +1115,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="googleCloudGenerateRolesetKeyRequest"></param>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1125,40 +1126,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetAccessTokenWithParameters(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParametersRequest"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateRolesetKeyWithParameters(string roleset, GoogleCloudGenerateRolesetKeyWithParametersRequest googleCloudGenerateRolesetKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GoogleCloudGenerateRolesetKey(string roleset, GoogleCloudGenerateRolesetKeyRequest googleCloudGenerateRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1180,6 +1148,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="googleCloudGenerateStaticAccountKeyRequest"></param>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1190,40 +1159,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudGenerateStaticAccountAccessTokenWithParameters(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateStaticAccountKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateStaticAccountKeyWithParametersRequest"></param>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> GoogleCloudGenerateStaticAccountKeyWithParameters(string name, GoogleCloudGenerateStaticAccountKeyWithParametersRequest googleCloudGenerateStaticAccountKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GoogleCloudGenerateStaticAccountKey(string name, GoogleCloudGenerateStaticAccountKeyRequest googleCloudGenerateStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1920,7 +1856,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of KvV1ListResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1928,7 +1864,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<KvV1ListResponse> KvV1List(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> KvV1List(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -1950,6 +1886,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -1960,7 +1897,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KvV1Write(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KvV1Write(string path, Dictionary<string, Object> requestBody, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Configure backend level settings that are applied to every key in the key-value store.
@@ -2008,7 +1945,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KvV2DeleteMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KvV2DeleteMetadataAndAllVersions(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -2050,7 +1987,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of KvV2ListMetadataResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2058,7 +1995,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<KvV2ListMetadataResponse> KvV2ListMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null);
+        VaultResponse<StandardListResponse> KvV2List(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -7619,6 +7556,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="googleCloudGenerateRolesetKeyRequest"></param>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -7630,42 +7568,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessTokenWithParametersAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParametersRequest"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyWithParametersAsync(string roleset, GoogleCloudGenerateRolesetKeyWithParametersRequest googleCloudGenerateRolesetKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyAsync(string roleset, GoogleCloudGenerateRolesetKeyRequest googleCloudGenerateRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -7688,6 +7591,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="googleCloudGenerateStaticAccountKeyRequest"></param>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -7699,42 +7603,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountAccessTokenWithParametersAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountKeyAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateStaticAccountKeyWithParametersRequest"></param>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountKeyWithParametersAsync(string name, GoogleCloudGenerateStaticAccountKeyWithParametersRequest googleCloudGenerateStaticAccountKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountKeyAsync(string name, GoogleCloudGenerateStaticAccountKeyRequest googleCloudGenerateStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8482,8 +8351,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (KvV1ListResponse)</returns>
-        Task<VaultResponse<KvV1ListResponse>> KvV1ListAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> KvV1ListAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8506,6 +8375,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -8517,7 +8387,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KvV1WriteAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KvV1WriteAsync(string path, Dictionary<string, Object> requestBody, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Configure backend level settings that are applied to every key in the key-value store.
@@ -8568,7 +8438,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KvV2DeleteMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KvV2DeleteMetadataAndAllVersionsAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -8620,8 +8490,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (KvV2ListMetadataResponse)</returns>
-        Task<VaultResponse<KvV2ListMetadataResponse>> KvV2ListMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        Task<VaultResponse<StandardListResponse>> KvV2ListAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -13349,7 +13219,6 @@ namespace Vault.Api
             set { _exceptionFactory = value; }
         }
 
-
         /// <summary>
         ///  
         /// </summary>
@@ -13480,6 +13349,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -13597,6 +13467,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
@@ -13730,6 +13601,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate an API key or STS credential using the given role&#x27;s configuration.&#x27; 
         /// </summary>
@@ -13863,6 +13735,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List the existing roles in this backend. 
         /// </summary>
@@ -13986,6 +13859,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14103,6 +13977,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
@@ -14236,6 +14111,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read, write and reference policies and roles that API keys or STS credentials can be made for. 
         /// </summary>
@@ -14382,6 +14258,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14512,6 +14389,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14642,6 +14520,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
@@ -14775,6 +14654,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14908,6 +14788,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15092,6 +14973,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15238,6 +15120,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15422,6 +15305,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15568,6 +15452,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List the existing roles in this backend 
         /// </summary>
@@ -15691,6 +15576,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15808,6 +15694,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
@@ -15941,6 +15828,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16058,6 +15946,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16191,6 +16080,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AwsReadStaticCredsNameResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16324,6 +16214,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AwsReadStaticRolesNameResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16441,6 +16332,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read, write and reference IAM policies that access keys can be made for. 
         /// </summary>
@@ -16587,6 +16479,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16733,6 +16626,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AwsWriteStaticRolesNameResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16863,6 +16757,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16980,6 +16875,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
@@ -17113,6 +17009,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List existing roles. 
         /// </summary>
@@ -17236,6 +17133,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17353,6 +17251,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
@@ -17486,6 +17385,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17619,6 +17519,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17736,6 +17637,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the Vault roles used to generate Azure credentials. 
         /// </summary>
@@ -17882,6 +17784,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18012,6 +17915,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18145,6 +18049,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18278,6 +18183,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18401,6 +18307,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18518,6 +18425,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18651,6 +18559,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -18797,6 +18706,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Deletes the secret at the specified location. 
         /// </summary>
@@ -18922,6 +18832,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List secret entries at the specified location. Folders are suffixed with /. The input must be a folder; list on a file will not return a value. The values themselves are not accessible via this command.
         /// </summary>
@@ -19053,6 +18964,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Retrieve the secret at the specified location. 
         /// </summary>
@@ -19178,6 +19090,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Store a secret at the specified location. 
         /// </summary>
@@ -19316,6 +19229,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -19462,6 +19376,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -19595,6 +19510,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -19728,6 +19644,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the static roles that can be created with this backend. 
         /// </summary>
@@ -19861,6 +19778,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Request database credentials for a certain role. 
         /// </summary>
@@ -19994,6 +19912,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configure connection details to a database plugin. 
         /// </summary>
@@ -20117,6 +20036,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -20240,6 +20160,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the static roles that can be created with this backend. 
         /// </summary>
@@ -20363,6 +20284,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -20496,6 +20418,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -20629,6 +20552,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the static roles that can be created with this backend. 
         /// </summary>
@@ -20762,6 +20686,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Request database credentials for a certain static role. These credentials are rotated periodically. 
         /// </summary>
@@ -20895,6 +20820,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Resets a database plugin. 
         /// </summary>
@@ -21028,6 +20954,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21161,6 +21088,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21294,6 +21222,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -21440,6 +21369,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the static roles that can be created with this backend. 
         /// </summary>
@@ -21586,6 +21516,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21716,6 +21647,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21849,6 +21781,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21982,6 +21915,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -22115,6 +22049,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -22248,6 +22183,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -22304,7 +22240,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/roleset/{roleset}/token", requestOptions);
+            var response = this.Client.Post<Object>("/{gcp_mount_path}/roleset/{roleset}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22371,7 +22307,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22381,10 +22317,12 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="googleCloudGenerateRolesetKeyRequest"></param>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -22395,140 +22333,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetAccessTokenWithParameters(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetAccessTokenWithParameters");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{gcp_mount_path}/roleset/{roleset}/token", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessTokenWithParameters", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetAccessTokenWithParametersAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetAccessTokenWithParameters");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/roleset/{roleset}/token", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetAccessTokenWithParameters", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GoogleCloudGenerateRolesetKey(string roleset, GoogleCloudGenerateRolesetKeyRequest googleCloudGenerateRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'roleset' is set
@@ -22536,143 +22341,9 @@ namespace Vault.Api
                 throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKey");
 
 
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/roleset/{roleset}/key", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyAsync(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKey");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("roleset", ClientUtils.ParameterToString(roleset)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/roleset/{roleset}/key", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParametersRequest"></param>
-        /// <param name="roleset">Required. Name of the role set.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateRolesetKeyWithParameters(string roleset, GoogleCloudGenerateRolesetKeyWithParametersRequest googleCloudGenerateRolesetKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'roleset' is set
-            if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters");
-
-
-            // verify the required parameter 'googleCloudGenerateRolesetKeyWithParametersRequest' is set
-            if (googleCloudGenerateRolesetKeyWithParametersRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateRolesetKeyWithParametersRequest' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters");
+            // verify the required parameter 'googleCloudGenerateRolesetKeyRequest' is set
+            if (googleCloudGenerateRolesetKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateRolesetKeyRequest' when calling Secrets->GoogleCloudGenerateRolesetKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22706,7 +22377,7 @@ namespace Vault.Api
 
 
 
-            requestOptions.Data = googleCloudGenerateRolesetKeyWithParametersRequest;
+            requestOptions.Data = googleCloudGenerateRolesetKeyRequest;
 
 
             // make the HTTP request
@@ -22714,7 +22385,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKeyWithParameters", response);
+                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey", response);
                 if (exception != null) throw exception;
             }
 
@@ -22726,7 +22397,7 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateRolesetKeyWithParametersRequest"></param>
+        /// <param name="googleCloudGenerateRolesetKeyRequest"></param>
         /// <param name="roleset">Required. Name of the role set.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -22738,17 +22409,17 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyWithParametersAsync(string roleset, GoogleCloudGenerateRolesetKeyWithParametersRequest googleCloudGenerateRolesetKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GoogleCloudGenerateRolesetKeyAsync(string roleset, GoogleCloudGenerateRolesetKeyRequest googleCloudGenerateRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'roleset' is set
             if (roleset == null)
-                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters");
+                throw new VaultApiException(400, "Missing required parameter 'roleset' when calling Secrets->GoogleCloudGenerateRolesetKey");
 
 
-            // verify the required parameter 'googleCloudGenerateRolesetKeyWithParametersRequest' is set
-            if (googleCloudGenerateRolesetKeyWithParametersRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateRolesetKeyWithParametersRequest' when calling Secrets->GoogleCloudGenerateRolesetKeyWithParameters");
+            // verify the required parameter 'googleCloudGenerateRolesetKeyRequest' is set
+            if (googleCloudGenerateRolesetKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateRolesetKeyRequest' when calling Secrets->GoogleCloudGenerateRolesetKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22781,18 +22452,19 @@ namespace Vault.Api
 
 
 
-            requestOptions.Data = googleCloudGenerateRolesetKeyWithParametersRequest;
+            requestOptions.Data = googleCloudGenerateRolesetKeyRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/roleset/{roleset}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKeyWithParameters", response);
+                Exception exception = this.ExceptionFactory("GoogleCloudGenerateRolesetKey", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -22849,7 +22521,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/static-account/{name}/token", requestOptions);
+            var response = this.Client.Post<Object>("/{gcp_mount_path}/static-account/{name}/token", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -22916,7 +22588,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -22926,10 +22598,12 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="googleCloudGenerateStaticAccountKeyRequest"></param>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -22940,140 +22614,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateStaticAccountAccessTokenWithParameters(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountAccessTokenWithParameters");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{gcp_mount_path}/static-account/{name}/token", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountAccessTokenWithParameters", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountAccessTokenWithParametersAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountAccessTokenWithParameters");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/static-account/{name}/token", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountAccessTokenWithParameters", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateStaticAccountKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GoogleCloudGenerateStaticAccountKey(string name, GoogleCloudGenerateStaticAccountKeyRequest googleCloudGenerateStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'name' is set
@@ -23081,143 +22622,9 @@ namespace Vault.Api
                 throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountKey");
 
 
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/{gcp_mount_path}/static-account/{name}/key", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountKeyAsync(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountKey");
-
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-
-            requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
-
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/{gcp_mount_path}/static-account/{name}/key", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateStaticAccountKeyWithParametersRequest"></param>
-        /// <param name="name">Required. Name of the static account.</param>
-        /// <param name="gcpMountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> GoogleCloudGenerateStaticAccountKeyWithParameters(string name, GoogleCloudGenerateStaticAccountKeyWithParametersRequest googleCloudGenerateStaticAccountKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
-        {
-
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountKeyWithParameters");
-
-
-            // verify the required parameter 'googleCloudGenerateStaticAccountKeyWithParametersRequest' is set
-            if (googleCloudGenerateStaticAccountKeyWithParametersRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateStaticAccountKeyWithParametersRequest' when calling Secrets->GoogleCloudGenerateStaticAccountKeyWithParameters");
+            // verify the required parameter 'googleCloudGenerateStaticAccountKeyRequest' is set
+            if (googleCloudGenerateStaticAccountKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateStaticAccountKeyRequest' when calling Secrets->GoogleCloudGenerateStaticAccountKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23251,7 +22658,7 @@ namespace Vault.Api
 
 
 
-            requestOptions.Data = googleCloudGenerateStaticAccountKeyWithParametersRequest;
+            requestOptions.Data = googleCloudGenerateStaticAccountKeyRequest;
 
 
             // make the HTTP request
@@ -23259,7 +22666,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountKeyWithParameters", response);
+                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountKey", response);
                 if (exception != null) throw exception;
             }
 
@@ -23271,7 +22678,7 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="googleCloudGenerateStaticAccountKeyWithParametersRequest"></param>
+        /// <param name="googleCloudGenerateStaticAccountKeyRequest"></param>
         /// <param name="name">Required. Name of the static account.</param>
         /// <param name="gcpMountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -23283,17 +22690,17 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountKeyWithParametersAsync(string name, GoogleCloudGenerateStaticAccountKeyWithParametersRequest googleCloudGenerateStaticAccountKeyWithParametersRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GoogleCloudGenerateStaticAccountKeyAsync(string name, GoogleCloudGenerateStaticAccountKeyRequest googleCloudGenerateStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountKeyWithParameters");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->GoogleCloudGenerateStaticAccountKey");
 
 
-            // verify the required parameter 'googleCloudGenerateStaticAccountKeyWithParametersRequest' is set
-            if (googleCloudGenerateStaticAccountKeyWithParametersRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateStaticAccountKeyWithParametersRequest' when calling Secrets->GoogleCloudGenerateStaticAccountKeyWithParameters");
+            // verify the required parameter 'googleCloudGenerateStaticAccountKeyRequest' is set
+            if (googleCloudGenerateStaticAccountKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'googleCloudGenerateStaticAccountKeyRequest' when calling Secrets->GoogleCloudGenerateStaticAccountKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23326,18 +22733,19 @@ namespace Vault.Api
 
 
 
-            requestOptions.Data = googleCloudGenerateStaticAccountKeyWithParametersRequest;
+            requestOptions.Data = googleCloudGenerateStaticAccountKeyRequest;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/{gcp_mount_path}/static-account/{name}/key", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountKeyWithParameters", response);
+                Exception exception = this.ExceptionFactory("GoogleCloudGenerateStaticAccountKey", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -23468,6 +22876,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -23614,6 +23023,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Decrypt a ciphertext value using a named key 
         /// </summary>
@@ -23760,6 +23170,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -23877,6 +23288,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
@@ -24010,6 +23422,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -24143,6 +23556,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Encrypt a plaintext value using a named key 
         /// </summary>
@@ -24289,6 +23703,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List named keys 
         /// </summary>
@@ -24412,6 +23827,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -24529,6 +23945,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
@@ -24662,6 +24079,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -24795,6 +24213,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Re-encrypt existing ciphertext data to a new version 
         /// </summary>
@@ -24941,6 +24360,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Register an existing crypto key in Google Cloud KMS 
         /// </summary>
@@ -25087,6 +24507,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Retrieve the public key associated with the named key 
         /// </summary>
@@ -25220,6 +24641,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Rotate a crypto key to a new primary version 
         /// </summary>
@@ -25353,6 +24775,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Signs a message or digest using a named key 
         /// </summary>
@@ -25499,6 +24922,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -25632,6 +25056,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Verify a signature using a named key 
         /// </summary>
@@ -25778,6 +25203,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Interact with crypto keys in Vault and Google Cloud KMS 
         /// </summary>
@@ -25924,6 +25350,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26047,6 +25474,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26170,6 +25598,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26293,6 +25722,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26410,6 +25840,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26543,6 +25974,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26676,6 +26108,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26809,6 +26242,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26942,6 +26376,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27075,6 +26510,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27192,6 +26628,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27325,6 +26762,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27471,6 +26909,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27617,6 +27056,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27763,6 +27203,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27880,6 +27321,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28010,6 +27452,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28127,6 +27570,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28260,6 +27704,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28406,6 +27851,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28529,6 +27975,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28646,6 +28093,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28779,6 +28227,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28925,6 +28374,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29058,13 +28508,14 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of KvV1ListResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29072,7 +28523,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<KvV1ListResponse> KvV1List(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> KvV1List(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
@@ -29117,7 +28568,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<KvV1ListResponse>("/{kv_v1_mount_path}/{path}/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/{kv_v1_mount_path}/{path}/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29125,7 +28576,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<KvV1ListResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -29143,8 +28594,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (KvV1ListResponse)</returns>
-        public async Task<VaultResponse<KvV1ListResponse>> KvV1ListAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> KvV1ListAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
@@ -29187,7 +28638,7 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<KvV1ListResponse>("/{kv_v1_mount_path}/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/{kv_v1_mount_path}/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29195,8 +28646,9 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<KvV1ListResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29330,10 +28782,12 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -29344,13 +28798,17 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KvV1Write(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KvV1Write(string path, Dictionary<string, Object> requestBody, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV1Write");
 
+
+            // verify the required parameter 'requestBody' is set
+            if (requestBody == null)
+                throw new VaultApiException(400, "Missing required parameter 'requestBody' when calling Secrets->KvV1Write");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29360,7 +28818,7 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-
+                "",
             };
 
             // to determine the Accept header
@@ -29383,6 +28841,8 @@ namespace Vault.Api
 
 
 
+
+            requestOptions.Data = requestBody;
 
 
             // make the HTTP request
@@ -29402,6 +28862,7 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV1MountPath">Path that the backend was mounted at</param>
         /// <param name="wrapTTL">
@@ -29413,13 +28874,17 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KvV1WriteAsync(string path, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KvV1WriteAsync(string path, Dictionary<string, Object> requestBody, string kvV1MountPath = "kv-v1", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV1Write");
 
+
+            // verify the required parameter 'requestBody' is set
+            if (requestBody == null)
+                throw new VaultApiException(400, "Missing required parameter 'requestBody' when calling Secrets->KvV1Write");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29430,7 +28895,7 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-
+                "",
             };
 
             // to determine the Accept header
@@ -29452,6 +28917,7 @@ namespace Vault.Api
 
 
 
+            requestOptions.Data = requestBody;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/{kv_v1_mount_path}/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -29463,6 +28929,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configure backend level settings that are applied to every key in the key-value store. 
         /// </summary>
@@ -29593,6 +29060,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29726,6 +29194,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29740,12 +29209,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KvV2DeleteMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KvV2DeleteMetadataAndAllVersions(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2DeleteMetadata");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2DeleteMetadataAndAllVersions");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -29786,7 +29255,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("KvV2DeleteMetadata", response);
+                Exception exception = this.ExceptionFactory("KvV2DeleteMetadataAndAllVersions", response);
                 if (exception != null) throw exception;
             }
 
@@ -29809,12 +29278,12 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KvV2DeleteMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KvV2DeleteMetadataAndAllVersionsAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2DeleteMetadata");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2DeleteMetadataAndAllVersions");
 
 
 
@@ -29853,12 +29322,13 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("KvV2DeleteMetadata", response);
+                Exception exception = this.ExceptionFactory("KvV2DeleteMetadataAndAllVersions", response);
                 if (exception != null) throw exception;
             }
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30005,6 +29475,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30151,13 +29622,14 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvV2MountPath">Path that the backend was mounted at</param>
-        /// <returns>VaultResponse of KvV2ListMetadataResponse</returns>
+        /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -30165,12 +29637,12 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<KvV2ListMetadataResponse> KvV2ListMetadata(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null)
+        public VaultResponse<StandardListResponse> KvV2List(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2ListMetadata");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2List");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -30210,15 +29682,15 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = this.Client.Get<KvV2ListMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}/", requestOptions);
+            var response = this.Client.Get<StandardListResponse>("/{kv_v2_mount_path}/metadata/{path}/", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("KvV2ListMetadata", response);
+                Exception exception = this.ExceptionFactory("KvV2List", response);
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<KvV2ListMetadataResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
 
 
@@ -30236,13 +29708,13 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse (KvV2ListMetadataResponse)</returns>
-        public async Task<VaultResponse<KvV2ListMetadataResponse>> KvV2ListMetadataAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (StandardListResponse)</returns>
+        public async Task<VaultResponse<StandardListResponse>> KvV2ListAsync(string path, string kvV2MountPath = "kv-v2", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2ListMetadata");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->KvV2List");
 
 
 
@@ -30280,16 +29752,17 @@ namespace Vault.Api
 
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<KvV2ListMetadataResponse>("/{kv_v2_mount_path}/metadata/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<StandardListResponse>("/{kv_v2_mount_path}/metadata/{path}/", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("KvV2ListMetadata", response);
+                Exception exception = this.ExceptionFactory("KvV2List", response);
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<KvV2ListMetadataResponse>(response.RawContent);
+            return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30423,6 +29896,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<KvV2ReadResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Read the backend level settings. 
         /// </summary>
@@ -30540,6 +30014,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<KvV2ReadConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30673,6 +30148,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<KvV2ReadMetadataResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30806,6 +30282,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<KvV2ReadSubkeysResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30952,6 +30429,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31098,6 +30576,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<KvV2WriteResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31244,6 +30723,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31374,6 +30854,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31491,6 +30972,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31624,6 +31106,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31757,6 +31240,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Check service accounts in to the library. 
         /// </summary>
@@ -31903,6 +31387,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Check a service account out from the library. 
         /// </summary>
@@ -32049,6 +31534,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Check the status of the service accounts in a library set. 
         /// </summary>
@@ -32182,6 +31668,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update a library set. 
         /// </summary>
@@ -32328,6 +31815,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete a library set. 
         /// </summary>
@@ -32461,6 +31949,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Check service accounts in to the library. 
         /// </summary>
@@ -32607,6 +32096,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32730,6 +32220,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Read a library set. 
         /// </summary>
@@ -32863,6 +32354,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32986,6 +32478,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33109,6 +32602,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33226,6 +32720,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33359,6 +32854,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33492,6 +32988,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33625,6 +33122,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33758,6 +33256,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33875,6 +33374,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34008,6 +33508,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34154,6 +33655,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34300,6 +33802,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34430,6 +33933,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
@@ -34563,6 +34067,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34696,6 +34201,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List the existing roles in this backend 
         /// </summary>
@@ -34819,6 +34325,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34936,6 +34443,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
@@ -35069,6 +34577,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles used to generate MongoDB Atlas Programmatic API Keys. 
         /// </summary>
@@ -35215,6 +34724,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35345,6 +34855,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35475,6 +34986,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35592,6 +35104,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35709,6 +35222,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35842,6 +35356,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35975,6 +35490,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36098,6 +35614,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36215,6 +35732,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36332,6 +35850,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36465,6 +35984,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36611,6 +36131,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36741,6 +36262,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36871,6 +36393,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureAutoTidyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37001,6 +36524,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureCaResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37131,6 +36655,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureClusterResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37261,6 +36786,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureCrlResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37391,6 +36917,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureIssuersResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37521,6 +37048,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureKeysResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37651,6 +37179,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiConfigureUrlsResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37781,6 +37310,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiCrossSignIntermediateResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37914,6 +37444,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38047,6 +37578,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38180,6 +37712,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38313,6 +37846,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38430,6 +37964,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38547,6 +38082,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateEabKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38680,6 +38216,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForIssuerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38829,6 +38366,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForIssuerAndRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38962,6 +38500,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateEabKeyForRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39092,6 +38631,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateExportedKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39238,6 +38778,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateIntermediateResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39368,6 +38909,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateInternalKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39498,6 +39040,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateKmsKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39644,6 +39187,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiGenerateRootResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39774,6 +39318,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiImportKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -39920,6 +39465,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssueWithRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40082,6 +39628,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerIssueWithRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40215,6 +39762,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerReadCrlResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40348,6 +39896,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerReadCrlDeltaResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40481,6 +40030,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerReadCrlDeltaDerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40614,6 +40164,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerReadCrlDeltaPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40747,6 +40298,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerReadCrlDerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -40880,6 +40432,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerReadCrlPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41026,6 +40579,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerResignCrlsResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41172,6 +40726,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerSignIntermediateResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41318,6 +40873,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerSignRevocationListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41464,6 +41020,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerSignSelfIssuedResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41610,6 +41167,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerSignVerbatimResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41772,6 +41330,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerSignVerbatimWithRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -41934,6 +41493,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuerSignWithRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42080,6 +41640,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuersGenerateIntermediateResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42226,6 +41787,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuersGenerateRootResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42356,6 +41918,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuersImportBundleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42486,6 +42049,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiIssuersImportCertResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42609,6 +42173,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42732,6 +42297,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiListEabKeysResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42855,6 +42421,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiListIssuersResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -42978,6 +42545,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiListKeysResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43101,6 +42669,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43224,6 +42793,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43341,6 +42911,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43474,6 +43045,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43591,6 +43163,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43708,6 +43281,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43825,6 +43399,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -43942,6 +43517,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadAutoTidyConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44059,6 +43635,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCaChainPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44176,6 +43753,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCaDerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44293,6 +43871,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCaPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44426,6 +44005,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCertResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44543,6 +44123,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCertCaChainResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44660,6 +44241,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCertCrlResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44777,6 +44359,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCertDeltaCrlResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -44910,6 +44493,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCertRawDerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45043,6 +44627,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCertRawPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45160,6 +44745,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadClusterConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45277,6 +44863,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCrlConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45394,6 +44981,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCrlDeltaResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45511,6 +45099,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCrlDeltaPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45628,6 +45217,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCrlDerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45745,6 +45335,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadCrlPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -45878,6 +45469,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadIssuerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46011,6 +45603,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadIssuerDerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46144,6 +45737,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46277,6 +45871,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46426,6 +46021,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46575,6 +46171,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46708,6 +46305,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadIssuerJsonResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46841,6 +46439,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadIssuerPemResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -46958,6 +46557,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadIssuersConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47091,6 +46691,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47208,6 +46809,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadKeysConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47341,6 +46943,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47474,6 +47077,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47607,6 +47211,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47724,6 +47329,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReadUrlsConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47854,6 +47460,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiReplaceRootResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -47984,6 +47591,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRevokeResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48117,6 +47725,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRevokeIssuerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48247,6 +47856,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRevokeWithKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48377,6 +47987,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRootSignIntermediateResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48507,6 +48118,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRootSignSelfIssuedResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48624,6 +48236,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRotateCrlResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48741,6 +48354,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRotateDeltaCrlResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -48887,6 +48501,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiRotateRootResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49017,6 +48632,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiSetSignedIntermediateResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49147,6 +48763,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiSignVerbatimResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49293,6 +48910,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiSignVerbatimWithRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49439,6 +49057,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiSignWithRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49569,6 +49188,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49686,6 +49306,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiTidyCancelResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49803,6 +49424,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiTidyStatusResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -49949,6 +49571,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50095,6 +49718,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50257,6 +49881,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50387,6 +50012,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50517,6 +50143,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50663,6 +50290,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50809,6 +50437,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -50955,6 +50584,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -51085,6 +50715,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -51215,6 +50846,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -51361,6 +50993,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiWriteIssuerResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -51523,6 +51156,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -51685,6 +51319,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -51863,6 +51498,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52009,6 +51645,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52155,6 +51792,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52317,6 +51955,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52479,6 +52118,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52641,6 +52281,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52787,6 +52428,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -52933,6 +52575,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -53111,6 +52754,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -53289,6 +52933,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -53483,6 +53128,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -53645,6 +53291,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -53807,6 +53454,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -53985,6 +53633,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -54163,6 +53812,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -54341,6 +53991,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -54503,6 +54154,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -54665,6 +54317,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -54811,6 +54464,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiWriteKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -54957,6 +54611,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PkiWriteRoleResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -55119,6 +54774,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -55281,6 +54937,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -55459,6 +55116,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -55605,6 +55263,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -55751,6 +55410,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -55913,6 +55573,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -56075,6 +55736,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -56237,6 +55899,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -56383,6 +56046,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -56529,6 +56193,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API. 
         /// </summary>
@@ -56659,6 +56324,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -56789,6 +56455,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -56922,6 +56589,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -57045,6 +56713,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -57162,6 +56831,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -57295,6 +56965,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Request RabbitMQ credentials for a certain role. 
         /// </summary>
@@ -57428,6 +57099,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the roles that can be created with this backend. 
         /// </summary>
@@ -57574,6 +57246,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -57704,6 +57377,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -57834,6 +57508,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -57951,6 +57626,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the &#x27;roles&#x27; that can be created with this backend. 
         /// </summary>
@@ -58084,6 +57760,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -58201,6 +57878,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Creates a credential for establishing SSH connection with the remote host. 
         /// </summary>
@@ -58347,6 +58025,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -58493,6 +58172,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the &#x27;roles&#x27; that can be created with this backend. 
         /// </summary>
@@ -58616,6 +58296,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List all the roles associated with the given IP address. 
         /// </summary>
@@ -58746,6 +58427,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -58863,6 +58545,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Retrieve the public key. 
         /// </summary>
@@ -58980,6 +58663,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the &#x27;roles&#x27; that can be created with this backend. 
         /// </summary>
@@ -59113,6 +58797,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -59230,6 +58915,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Request signing an SSH key using a certain role with the provided details. 
         /// </summary>
@@ -59376,6 +59062,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// This endpoint removes the stored host keys used for the removed Dynamic Key feature, if present. 
         /// </summary>
@@ -59493,6 +59180,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Validate the OTP provided by Vault SSH Agent. 
         /// </summary>
@@ -59623,6 +59311,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the &#x27;roles&#x27; that can be created with this backend. 
         /// </summary>
@@ -59769,6 +59458,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -59899,6 +59589,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60016,6 +59707,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60149,6 +59841,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60282,6 +59975,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60405,6 +60099,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60522,6 +60217,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60655,6 +60351,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60788,6 +60485,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -60934,6 +60632,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -61080,6 +60779,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -61213,6 +60913,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -61346,6 +61047,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Manage the keys that can be created with this backend. 
         /// </summary>
@@ -61469,6 +61171,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -61602,6 +61305,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -61748,6 +61452,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Backup the named key 
         /// </summary>
@@ -61881,6 +61586,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Securely export named encryption or signing key 
         /// </summary>
@@ -62030,6 +61736,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Securely export named encryption or signing key 
         /// </summary>
@@ -62195,6 +61902,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configures a new cache of the specified size 
         /// </summary>
@@ -62325,6 +62033,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configure a named encryption key 
         /// </summary>
@@ -62471,6 +62180,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -62601,6 +62311,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -62747,6 +62458,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Decrypt a ciphertext value using a named key 
         /// </summary>
@@ -62893,6 +62605,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -63026,6 +62739,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Encrypt a plaintext value or a batch of plaintext blocks using a named key 
         /// </summary>
@@ -63172,6 +62886,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Export named encryption or signing key 
         /// </summary>
@@ -63321,6 +63036,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Export named encryption or signing key 
         /// </summary>
@@ -63486,6 +63202,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate a data key 
         /// </summary>
@@ -63648,6 +63365,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate an HMAC for input data using the named key 
         /// </summary>
@@ -63794,6 +63512,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate an HMAC for input data using the named key 
         /// </summary>
@@ -63956,6 +63675,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -64086,6 +63806,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -64232,6 +63953,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -64378,6 +64100,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate random bytes 
         /// </summary>
@@ -64540,6 +64263,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
@@ -64670,6 +64394,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate a hash sum for input data 
         /// </summary>
@@ -64816,6 +64541,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Imports an externally-generated key into a new transit key 
         /// </summary>
@@ -64962,6 +64688,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Imports an externally-generated key into an existing imported key 
         /// </summary>
@@ -65108,6 +64835,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Managed named encryption keys 
         /// </summary>
@@ -65231,6 +64959,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the size of the active cache 
         /// </summary>
@@ -65348,6 +65077,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -65481,6 +65211,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -65598,6 +65329,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the public key to use for wrapping imported keys 
         /// </summary>
@@ -65715,6 +65447,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Restore the named key 
         /// </summary>
@@ -65861,6 +65594,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Restore the named key 
         /// </summary>
@@ -65991,6 +65725,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Rewrap ciphertext 
         /// </summary>
@@ -66137,6 +65872,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Rotate named encryption key 
         /// </summary>
@@ -66283,6 +66019,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate a signature for input data using the named key 
         /// </summary>
@@ -66429,6 +66166,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate a signature for input data using the named key 
         /// </summary>
@@ -66591,6 +66329,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Trim key versions of a named key 
         /// </summary>
@@ -66737,6 +66476,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key 
         /// </summary>
@@ -66883,6 +66623,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Verify a signature or HMAC for input data created using the named key 
         /// </summary>
@@ -67045,5 +66786,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
     }
 }
