@@ -23,21 +23,21 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiListRolesResponse
+    /// StandardListResponse
     /// </summary>
-    [DataContract(Name = "PkiListRolesResponse")]
-    public partial class PkiListRolesResponse : IEquatable<PkiListRolesResponse>, IValidatableObject
+    [DataContract(Name = "StandardListResponse")]
+    public partial class StandardListResponse : IEquatable<StandardListResponse>, IValidatableObject
     {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiListRolesResponse" /> class.
+        /// Initializes a new instance of the <see cref="StandardListResponse" /> class.
         /// </summary>
 
-        /// <param name="Keys">List of roles.</param>
+        /// <param name="Keys">Keys.</param>
 
 
-        public PkiListRolesResponse(List<string> Keys = default(List<string>))
+        public StandardListResponse(List<string> Keys = default(List<string>))
         {
 
             this.Keys = Keys;
@@ -45,9 +45,8 @@ namespace Vault.Model
         }
 
         /// <summary>
-        /// List of roles
+        /// Gets or Sets Keys
         /// </summary>
-        /// <value>List of roles</value>
         [DataMember(Name = "keys", EmitDefaultValue = false)]
 
         public List<string> Keys { get; set; }
@@ -62,7 +61,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiListRolesResponse {\n");
+            sb.Append("class StandardListResponse {\n");
             sb.Append("  Keys: ").Append(Keys).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +83,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiListRolesResponse);
+            return this.Equals(input as StandardListResponse);
         }
 
         /// <summary>
-        /// Returns true if PkiListRolesResponse instances are equal
+        /// Returns true if StandardListResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiListRolesResponse to be compared</param>
+        /// <param name="input">Instance of StandardListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiListRolesResponse input)
+        public bool Equals(StandardListResponse input)
         {
             if (input == null)
             {

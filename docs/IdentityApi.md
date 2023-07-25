@@ -301,7 +301,7 @@ No authorization required
 <a name="aliaslistbyid"></a>
 # **AliasListById**
 
-> void AliasListById (TimeSpan? wrapTTL = null)
+> StandardListResponse AliasListById (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -345,7 +345,9 @@ namespace Example
                 // List all the alias IDs.
                 
 
-                apiInstance.AliasListById(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.AliasListById(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -366,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -375,7 +377,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -1125,7 +1127,7 @@ No authorization required
 <a name="entitylistaliasesbyid"></a>
 # **EntityListAliasesById**
 
-> void EntityListAliasesById (TimeSpan? wrapTTL = null)
+> StandardListResponse EntityListAliasesById (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -1169,7 +1171,9 @@ namespace Example
                 // List all the alias IDs.
                 
 
-                apiInstance.EntityListAliasesById(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.EntityListAliasesById(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -1190,7 +1194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -1199,7 +1203,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -1217,7 +1221,7 @@ No authorization required
 <a name="entitylistbyid"></a>
 # **EntityListById**
 
-> void EntityListById (TimeSpan? wrapTTL = null)
+> StandardListResponse EntityListById (TimeSpan? wrapTTL = null)
 
 List all the entity IDs
 
@@ -1261,7 +1265,9 @@ namespace Example
                 // List all the entity IDs
                 
 
-                apiInstance.EntityListById(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.EntityListById(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -1282,7 +1288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -1291,7 +1297,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -1309,7 +1315,7 @@ No authorization required
 <a name="entitylistbyname"></a>
 # **EntityListByName**
 
-> void EntityListByName (TimeSpan? wrapTTL = null)
+> StandardListResponse EntityListByName (TimeSpan? wrapTTL = null)
 
 List all the entity names
 
@@ -1353,7 +1359,9 @@ namespace Example
                 // List all the entity names
                 
 
-                apiInstance.EntityListByName(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.EntityListByName(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -1374,7 +1382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -1383,7 +1391,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -2595,7 +2603,7 @@ No authorization required
 <a name="grouplistaliasesbyid"></a>
 # **GroupListAliasesById**
 
-> void GroupListAliasesById (TimeSpan? wrapTTL = null)
+> StandardListResponse GroupListAliasesById (TimeSpan? wrapTTL = null)
 
 List all the group alias IDs.
 
@@ -2639,7 +2647,9 @@ namespace Example
                 // List all the group alias IDs.
                 
 
-                apiInstance.GroupListAliasesById(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.GroupListAliasesById(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -2660,7 +2670,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -2669,7 +2679,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -2687,7 +2697,7 @@ No authorization required
 <a name="grouplistbyid"></a>
 # **GroupListById**
 
-> void GroupListById (TimeSpan? wrapTTL = null)
+> StandardListResponse GroupListById (TimeSpan? wrapTTL = null)
 
 List all the group IDs.
 
@@ -2731,7 +2741,9 @@ namespace Example
                 // List all the group IDs.
                 
 
-                apiInstance.GroupListById(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.GroupListById(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -2752,7 +2764,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -2761,7 +2773,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -2779,7 +2791,7 @@ No authorization required
 <a name="grouplistbyname"></a>
 # **GroupListByName**
 
-> void GroupListByName (TimeSpan? wrapTTL = null)
+> StandardListResponse GroupListByName (TimeSpan? wrapTTL = null)
 
 
 
@@ -2821,7 +2833,9 @@ namespace Example
             {
                 
 
-                apiInstance.GroupListByName(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.GroupListByName(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -2842,7 +2856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -2851,7 +2865,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -4623,7 +4637,7 @@ No authorization required
 <a name="mfalistduomethods"></a>
 # **MfaListDuoMethods**
 
-> void MfaListDuoMethods (TimeSpan? wrapTTL = null)
+> StandardListResponse MfaListDuoMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -4667,7 +4681,9 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MfaListDuoMethods(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.MfaListDuoMethods(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4688,7 +4704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -4697,7 +4713,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -4715,7 +4731,7 @@ No authorization required
 <a name="mfalistloginenforcements"></a>
 # **MfaListLoginEnforcements**
 
-> void MfaListLoginEnforcements (TimeSpan? wrapTTL = null)
+> StandardListResponse MfaListLoginEnforcements (TimeSpan? wrapTTL = null)
 
 List login enforcements
 
@@ -4759,7 +4775,9 @@ namespace Example
                 // List login enforcements
                 
 
-                apiInstance.MfaListLoginEnforcements(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.MfaListLoginEnforcements(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4780,7 +4798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -4789,7 +4807,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -4807,7 +4825,7 @@ No authorization required
 <a name="mfalistmethods"></a>
 # **MfaListMethods**
 
-> void MfaListMethods (TimeSpan? wrapTTL = null)
+> StandardListResponse MfaListMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for all MFA methods
 
@@ -4851,7 +4869,9 @@ namespace Example
                 // List MFA method configurations for all MFA methods
                 
 
-                apiInstance.MfaListMethods(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.MfaListMethods(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4872,7 +4892,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -4881,7 +4901,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -4899,7 +4919,7 @@ No authorization required
 <a name="mfalistoktamethods"></a>
 # **MfaListOktaMethods**
 
-> void MfaListOktaMethods (TimeSpan? wrapTTL = null)
+> StandardListResponse MfaListOktaMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -4943,7 +4963,9 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MfaListOktaMethods(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.MfaListOktaMethods(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4964,7 +4986,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -4973,7 +4995,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -4991,7 +5013,7 @@ No authorization required
 <a name="mfalistpingidmethods"></a>
 # **MfaListPingIdMethods**
 
-> void MfaListPingIdMethods (TimeSpan? wrapTTL = null)
+> StandardListResponse MfaListPingIdMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -5035,7 +5057,9 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MfaListPingIdMethods(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.MfaListPingIdMethods(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -5056,7 +5080,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -5065,7 +5089,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -5083,7 +5107,7 @@ No authorization required
 <a name="mfalisttotpmethods"></a>
 # **MfaListTotpMethods**
 
-> void MfaListTotpMethods (TimeSpan? wrapTTL = null)
+> StandardListResponse MfaListTotpMethods (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -5127,7 +5151,9 @@ namespace Example
                 // List MFA method configurations for the given MFA method
                 
 
-                apiInstance.MfaListTotpMethods(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.MfaListTotpMethods(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -5148,7 +5174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -5157,7 +5183,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7035,7 +7061,7 @@ No authorization required
 <a name="oidclistassignments"></a>
 # **OidcListAssignments**
 
-> void OidcListAssignments (TimeSpan? wrapTTL = null)
+> StandardListResponse OidcListAssignments (TimeSpan? wrapTTL = null)
 
 
 
@@ -7077,7 +7103,9 @@ namespace Example
             {
                 
 
-                apiInstance.OidcListAssignments(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OidcListAssignments(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7098,7 +7126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7107,7 +7135,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7125,7 +7153,7 @@ No authorization required
 <a name="oidclistclients"></a>
 # **OidcListClients**
 
-> void OidcListClients (TimeSpan? wrapTTL = null)
+> StandardListResponse OidcListClients (TimeSpan? wrapTTL = null)
 
 
 
@@ -7167,7 +7195,9 @@ namespace Example
             {
                 
 
-                apiInstance.OidcListClients(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OidcListClients(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7188,7 +7218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7197,7 +7227,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7215,7 +7245,7 @@ No authorization required
 <a name="oidclistkeys"></a>
 # **OidcListKeys**
 
-> void OidcListKeys (TimeSpan? wrapTTL = null)
+> StandardListResponse OidcListKeys (TimeSpan? wrapTTL = null)
 
 List OIDC keys
 
@@ -7259,7 +7289,9 @@ namespace Example
                 // List OIDC keys
                 
 
-                apiInstance.OidcListKeys(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OidcListKeys(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7280,7 +7312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7289,7 +7321,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7307,7 +7339,7 @@ No authorization required
 <a name="oidclistproviders"></a>
 # **OidcListProviders**
 
-> void OidcListProviders (string allowedClientId = default(string), TimeSpan? wrapTTL = null)
+> StandardListResponse OidcListProviders (string allowedClientId = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -7354,7 +7386,9 @@ namespace Example
             {
                 
 
-                apiInstance.OidcListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OidcListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7376,7 +7410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7385,7 +7419,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7403,7 +7437,7 @@ No authorization required
 <a name="oidclistroles"></a>
 # **OidcListRoles**
 
-> void OidcListRoles (TimeSpan? wrapTTL = null)
+> StandardListResponse OidcListRoles (TimeSpan? wrapTTL = null)
 
 List configured OIDC roles
 
@@ -7447,7 +7481,9 @@ namespace Example
                 // List configured OIDC roles
                 
 
-                apiInstance.OidcListRoles(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OidcListRoles(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7468,7 +7504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7477,7 +7513,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7495,7 +7531,7 @@ No authorization required
 <a name="oidclistscopes"></a>
 # **OidcListScopes**
 
-> void OidcListScopes (TimeSpan? wrapTTL = null)
+> StandardListResponse OidcListScopes (TimeSpan? wrapTTL = null)
 
 
 
@@ -7537,7 +7573,9 @@ namespace Example
             {
                 
 
-                apiInstance.OidcListScopes(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.OidcListScopes(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -7558,7 +7596,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -7567,7 +7605,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
@@ -7585,7 +7623,7 @@ No authorization required
 <a name="oidcproviderauthorize"></a>
 # **OidcProviderAuthorize**
 
-> void OidcProviderAuthorize (string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null)
+> void OidcProviderAuthorize (string name, string clientId = default(string), string codeChallenge = default(string), string codeChallengeMethod = default(string), int? maxAge = default(int?), string nonce = default(string), string redirectUri = default(string), string responseType = default(string), string scope = default(string), string state = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -7623,7 +7661,37 @@ namespace Example
             
             
             
+            var clientId = "clientId_example";  // string | The ID of the requesting client. (optional) 
+            
+            
+            
+            
+            var codeChallenge = "codeChallenge_example";  // string | The code challenge derived from the code verifier. (optional) 
+            
+            
+            
+            
             var codeChallengeMethod = "\"plain\"";  // string | The method that was used to derive the code challenge. The following methods are supported: 'S256', 'plain'. Defaults to 'plain'. (optional)  (default to "plain")
+            
+            
+            
+            
+            var maxAge = 56;  // int? | The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional) 
+            
+            
+            
+            
+            var nonce = "nonce_example";  // string | The value that will be returned in the ID token nonce claim after a token exchange. (optional) 
+            
+            
+            
+            
+            var redirectUri = "redirectUri_example";  // string | The redirection URI to which the response will be sent. (optional) 
+            
+            
+            
+            
+            var responseType = "responseType_example";  // string | The OIDC authentication flow to be used. The following response types are supported: 'code' (optional) 
             
             
             
@@ -7637,42 +7705,12 @@ namespace Example
             
             
             
-            
-            var redirectUri = "redirectUri_example";  // string | The redirection URI to which the response will be sent. (optional) 
-            
-            
-            
-            
-            var codeChallenge = "codeChallenge_example";  // string | The code challenge derived from the code verifier. (optional) 
-            
-            
-            
-            
-            var maxAge = 56;  // int? | The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional) 
-            
-            
-            
-            
-            var clientId = "clientId_example";  // string | The ID of the requesting client. (optional) 
-            
-            
-            
-            
-            var responseType = "responseType_example";  // string | The OIDC authentication flow to be used. The following response types are supported: 'code' (optional) 
-            
-            
-            
-            
-            var nonce = "nonce_example";  // string | The value that will be returned in the ID token nonce claim after a token exchange. (optional) 
-            
-            
-            
 
             try
             {
                 
 
-                apiInstance.OidcProviderAuthorize(string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.OidcProviderAuthorize(string name, string clientId = default(string), string codeChallenge = default(string), string codeChallengeMethod = default(string), int? maxAge = default(int?), string nonce = default(string), string redirectUri = default(string), string responseType = default(string), string scope = default(string), string state = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7689,15 +7727,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
+ **clientId** | **string**| The ID of the requesting client. | [optional] 
+ **codeChallenge** | **string**| The code challenge derived from the code verifier. | [optional] 
  **codeChallengeMethod** | **string**| The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. | [optional] [default to &quot;plain&quot;]
+ **maxAge** | **int?**| The allowable elapsed time in seconds since the last time the end-user was actively authenticated. | [optional] 
+ **nonce** | **string**| The value that will be returned in the ID token nonce claim after a token exchange. | [optional] 
+ **redirectUri** | **string**| The redirection URI to which the response will be sent. | [optional] 
+ **responseType** | **string**| The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; | [optional] 
  **scope** | **string**| A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. | [optional] 
  **state** | **string**| The value used to maintain state between the authentication request and client. | [optional] 
- **redirectUri** | **string**| The redirection URI to which the response will be sent. | [optional] 
- **codeChallenge** | **string**| The code challenge derived from the code verifier. | [optional] 
- **maxAge** | **int?**| The allowable elapsed time in seconds since the last time the end-user was actively authenticated. | [optional] 
- **clientId** | **string**| The ID of the requesting client. | [optional] 
- **responseType** | **string**| The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; | [optional] 
- **nonce** | **string**| The value that will be returned in the ID token nonce claim after a token exchange. | [optional] 
 
 
 ### Return type
@@ -9845,7 +9883,7 @@ No authorization required
 <a name="personalistbyid"></a>
 # **PersonaListById**
 
-> void PersonaListById (TimeSpan? wrapTTL = null)
+> StandardListResponse PersonaListById (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -9889,7 +9927,9 @@ namespace Example
                 // List all the alias IDs.
                 
 
-                apiInstance.PersonaListById(TimeSpan? wrapTTL = null);
+                StandardListResponse result = apiInstance.PersonaListById(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -9910,7 +9950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardListResponse**](StandardListResponse.md)
 
 ### Authorization
 
@@ -9919,7 +9959,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
