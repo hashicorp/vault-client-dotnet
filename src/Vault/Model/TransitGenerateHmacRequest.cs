@@ -42,10 +42,8 @@ namespace Vault.Model
 
         /// <param name="KeyVersion">The version of the key to use for generating the HMAC. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key..</param>
 
-        /// <param name="Urlalgorithm">Algorithm to use (POST URL parameter).</param>
 
-
-        public TransitGenerateHmacRequest(string Algorithm = "sha2-256", List<Object> BatchInput = default(List<Object>), string Input = default(string), int KeyVersion = default(int), string Urlalgorithm = default(string))
+        public TransitGenerateHmacRequest(string Algorithm = "sha2-256", List<Object> BatchInput = default(List<Object>), string Input = default(string), int KeyVersion = default(int))
         {
 
             // use default value if no "Algorithm" provided
@@ -57,8 +55,6 @@ namespace Vault.Model
             this.Input = Input;
 
             this.KeyVersion = KeyVersion;
-
-            this.Urlalgorithm = Urlalgorithm;
 
         }
 
@@ -98,15 +94,6 @@ namespace Vault.Model
         public int KeyVersion { get; set; }
 
 
-        /// <summary>
-        /// Algorithm to use (POST URL parameter)
-        /// </summary>
-        /// <value>Algorithm to use (POST URL parameter)</value>
-        [DataMember(Name = "urlalgorithm", EmitDefaultValue = false)]
-
-        public string Urlalgorithm { get; set; }
-
-
 
 
         /// <summary>
@@ -121,7 +108,6 @@ namespace Vault.Model
             sb.Append("  BatchInput: ").Append(BatchInput).Append("\n");
             sb.Append("  Input: ").Append(Input).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
-            sb.Append("  Urlalgorithm: ").Append(Urlalgorithm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -179,12 +165,6 @@ namespace Vault.Model
                     this.KeyVersion == input.KeyVersion ||
 
                     this.KeyVersion.Equals(input.KeyVersion)
-                ) &&
-                (
-                    this.Urlalgorithm == input.Urlalgorithm ||
-                    (this.Urlalgorithm != null &&
-                    this.Urlalgorithm.Equals(input.Urlalgorithm))
-
                 );
 
         }
@@ -216,11 +196,6 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.KeyVersion.GetHashCode();
-                if (this.Urlalgorithm != null)
-                {
-                    hashCode = (hashCode * 59) + this.Urlalgorithm.GetHashCode();
-                }
-
                 return hashCode;
             }
         }

@@ -129,8 +129,6 @@ namespace Vault.Model
 
         /// <param name="RemoveRootsFromChain">Whether or not to remove self-signed CA certificates in the output of the ca_chain field. (default to false).</param>
 
-        /// <param name="Role">The desired role with configuration for this request.</param>
-
         /// <param name="SerialNumber">The Subject&#x27;s requested serial number, if any. See RFC 4519 Section 2.31 &#x27;serialNumber&#x27; for a description of this field. If you want more than one, specify alternative names in the alt_names map using OID 2.5.4.5. This has no impact on the final certificate&#x27;s Serial Number field..</param>
 
         /// <param name="SignatureBits">The number of bits to use in the signature algorithm; accepts 256 for SHA-2-256, 384 for SHA-2-384, and 512 for SHA-2-512. Defaults to 0 to automatically detect based on key length (SHA-2-256 for RSA keys, and matching the curve size for NIST P-Curves). (default to 0).</param>
@@ -144,7 +142,7 @@ namespace Vault.Model
         /// <param name="UserIds">The requested user_ids value to place in the subject, if any, in a comma-delimited list. Restricted by allowed_user_ids. Any values are added with OID 0.9.2342.19200300.100.1.1..</param>
 
 
-        public PkiIssuerSignVerbatimRequest(string AltNames = default(string), string CommonName = default(string), string Csr = "", bool ExcludeCnFromSans = false, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), List<string> KeyUsage = default(List<string>), string NotAfter = default(string), List<string> OtherSans = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, bool RemoveRootsFromChain = false, string Role = default(string), string SerialNumber = default(string), int SignatureBits = 0, string Ttl = default(string), List<string> UriSans = default(List<string>), bool UsePss = false, List<string> UserIds = default(List<string>))
+        public PkiIssuerSignVerbatimRequest(string AltNames = default(string), string CommonName = default(string), string Csr = "", bool ExcludeCnFromSans = false, List<string> ExtKeyUsage = default(List<string>), List<string> ExtKeyUsageOids = default(List<string>), FormatEnum? Format = FormatEnum.Pem, List<string> IpSans = default(List<string>), List<string> KeyUsage = default(List<string>), string NotAfter = default(string), List<string> OtherSans = default(List<string>), PrivateKeyFormatEnum? PrivateKeyFormat = PrivateKeyFormatEnum.Der, bool RemoveRootsFromChain = false, string SerialNumber = default(string), int SignatureBits = 0, string Ttl = default(string), List<string> UriSans = default(List<string>), bool UsePss = false, List<string> UserIds = default(List<string>))
         {
 
             this.AltNames = AltNames;
@@ -174,8 +172,6 @@ namespace Vault.Model
             this.PrivateKeyFormat = PrivateKeyFormat;
 
             this.RemoveRootsFromChain = RemoveRootsFromChain;
-
-            this.Role = Role;
 
             this.SerialNumber = SerialNumber;
 
@@ -291,15 +287,6 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The desired role with configuration for this request
-        /// </summary>
-        /// <value>The desired role with configuration for this request</value>
-        [DataMember(Name = "role", EmitDefaultValue = false)]
-
-        public string Role { get; set; }
-
-
-        /// <summary>
         /// The Subject&#x27;s requested serial number, if any. See RFC 4519 Section 2.31 &#x27;serialNumber&#x27; for a description of this field. If you want more than one, specify alternative names in the alt_names map using OID 2.5.4.5. This has no impact on the final certificate&#x27;s Serial Number field.
         /// </summary>
         /// <value>The Subject&#x27;s requested serial number, if any. See RFC 4519 Section 2.31 &#x27;serialNumber&#x27; for a description of this field. If you want more than one, specify alternative names in the alt_names map using OID 2.5.4.5. This has no impact on the final certificate&#x27;s Serial Number field.</value>
@@ -376,7 +363,6 @@ namespace Vault.Model
             sb.Append("  OtherSans: ").Append(OtherSans).Append("\n");
             sb.Append("  PrivateKeyFormat: ").Append(PrivateKeyFormat).Append("\n");
             sb.Append("  RemoveRootsFromChain: ").Append(RemoveRootsFromChain).Append("\n");
-            sb.Append("  Role: ").Append(Role).Append("\n");
             sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
             sb.Append("  SignatureBits: ").Append(SignatureBits).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
@@ -493,12 +479,6 @@ namespace Vault.Model
                     this.RemoveRootsFromChain.Equals(input.RemoveRootsFromChain)
                 ) &&
                 (
-                    this.Role == input.Role ||
-                    (this.Role != null &&
-                    this.Role.Equals(input.Role))
-
-                ) &&
-                (
                     this.SerialNumber == input.SerialNumber ||
                     (this.SerialNumber != null &&
                     this.SerialNumber.Equals(input.SerialNumber))
@@ -598,11 +578,6 @@ namespace Vault.Model
                 hashCode = (hashCode * 59) + this.PrivateKeyFormat.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.RemoveRootsFromChain.GetHashCode();
-                if (this.Role != null)
-                {
-                    hashCode = (hashCode * 59) + this.Role.GetHashCode();
-                }
-
                 if (this.SerialNumber != null)
                 {
                     hashCode = (hashCode * 59) + this.SerialNumber.GetHashCode();

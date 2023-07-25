@@ -38,17 +38,13 @@ namespace Vault.Model
 
         /// <param name="Sync">Whether or not to perform the revocation synchronously (default to true).</param>
 
-        /// <param name="UrlLeaseId">The lease identifier to renew. This is included with a lease..</param>
 
-
-        public LeasesRevokeLeaseRequest(string LeaseId = default(string), bool Sync = true, string UrlLeaseId = default(string))
+        public LeasesRevokeLeaseRequest(string LeaseId = default(string), bool Sync = true)
         {
 
             this.LeaseId = LeaseId;
 
             this.Sync = Sync;
-
-            this.UrlLeaseId = UrlLeaseId;
 
         }
 
@@ -70,15 +66,6 @@ namespace Vault.Model
         public bool Sync { get; set; }
 
 
-        /// <summary>
-        /// The lease identifier to renew. This is included with a lease.
-        /// </summary>
-        /// <value>The lease identifier to renew. This is included with a lease.</value>
-        [DataMember(Name = "url_lease_id", EmitDefaultValue = false)]
-
-        public string UrlLeaseId { get; set; }
-
-
 
 
         /// <summary>
@@ -91,7 +78,6 @@ namespace Vault.Model
             sb.Append("class LeasesRevokeLeaseRequest {\n");
             sb.Append("  LeaseId: ").Append(LeaseId).Append("\n");
             sb.Append("  Sync: ").Append(Sync).Append("\n");
-            sb.Append("  UrlLeaseId: ").Append(UrlLeaseId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,12 +123,6 @@ namespace Vault.Model
                     this.Sync == input.Sync ||
 
                     this.Sync.Equals(input.Sync)
-                ) &&
-                (
-                    this.UrlLeaseId == input.UrlLeaseId ||
-                    (this.UrlLeaseId != null &&
-                    this.UrlLeaseId.Equals(input.UrlLeaseId))
-
                 );
 
         }
@@ -164,11 +144,6 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.Sync.GetHashCode();
-                if (this.UrlLeaseId != null)
-                {
-                    hashCode = (hashCode * 59) + this.UrlLeaseId.GetHashCode();
-                }
-
                 return hashCode;
             }
         }

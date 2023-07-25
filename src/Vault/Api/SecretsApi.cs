@@ -215,6 +215,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -223,7 +229,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsGenerateCredentials(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AwsGenerateCredentials(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -248,6 +254,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -256,7 +268,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AwsGenerateStsCredentials(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AwsGenerateStsCredentials(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -718,6 +730,7 @@ namespace Vault.Api
         /// Store a secret at the specified location.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -727,7 +740,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CubbyholeWrite(string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CubbyholeWrite(string path, Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// 
@@ -6650,6 +6663,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6659,7 +6678,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsGenerateCredentialsAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AwsGenerateCredentialsAsync(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -6685,6 +6704,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6694,7 +6719,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AwsGenerateStsCredentialsAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AwsGenerateStsCredentialsAsync(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -7185,6 +7210,7 @@ namespace Vault.Api
         /// Store a secret at the specified location.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7195,7 +7221,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CubbyholeWriteAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CubbyholeWriteAsync(string path, Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -14887,6 +14913,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14895,7 +14927,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsGenerateCredentials(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AwsGenerateCredentials(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'name' is set
@@ -14933,6 +14965,30 @@ namespace Vault.Api
 
 
 
+
+            if (roleArn != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_arn", roleArn));
+
+            }
+
+            if (ttl != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "ttl", ttl));
+
+            }
+
+            if (roleSessionName != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_session_name", roleSessionName));
+
+            }
 
 
 
@@ -14955,6 +15011,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -14964,7 +15026,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsGenerateCredentialsAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AwsGenerateCredentialsAsync(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'name' is set
@@ -15003,6 +15065,21 @@ namespace Vault.Api
 
 
 
+
+            if (roleArn != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_arn", roleArn));
+            }
+
+            if (ttl != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "ttl", ttl));
+            }
+
+            if (roleSessionName != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_session_name", roleSessionName));
+            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/{aws_mount_path}/creds/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -15166,6 +15243,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15174,7 +15257,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AwsGenerateStsCredentials(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AwsGenerateStsCredentials(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'name' is set
@@ -15212,6 +15295,30 @@ namespace Vault.Api
 
 
 
+
+            if (roleArn != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_arn", roleArn));
+
+            }
+
+            if (ttl != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "ttl", ttl));
+
+            }
+
+            if (roleSessionName != null)
+            {
+
+
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_session_name", roleSessionName));
+
+            }
 
 
 
@@ -15234,6 +15341,12 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
+
+        /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
+
+        /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
+
+        /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15243,7 +15356,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AwsGenerateStsCredentialsAsync(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AwsGenerateStsCredentialsAsync(string name, string awsMountPath = "aws", string roleArn = default(string), string ttl = default(string), string roleSessionName = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'name' is set
@@ -15282,6 +15395,21 @@ namespace Vault.Api
 
 
 
+
+            if (roleArn != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_arn", roleArn));
+            }
+
+            if (ttl != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "ttl", ttl));
+            }
+
+            if (roleSessionName != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "role_session_name", roleSessionName));
+            }
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/{aws_mount_path}/sts/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
@@ -19053,6 +19181,7 @@ namespace Vault.Api
         /// Store a secret at the specified location. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -19062,13 +19191,17 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CubbyholeWrite(string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CubbyholeWrite(string path, Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null)
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->CubbyholeWrite");
 
+
+            // verify the required parameter 'requestBody' is set
+            if (requestBody == null)
+                throw new VaultApiException(400, "Missing required parameter 'requestBody' when calling Secrets->CubbyholeWrite");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19078,7 +19211,7 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-
+                "",
             };
 
             // to determine the Accept header
@@ -19098,6 +19231,8 @@ namespace Vault.Api
 
 
 
+
+            requestOptions.Data = requestBody;
 
 
             // make the HTTP request
@@ -19117,6 +19252,7 @@ namespace Vault.Api
         /// Store a secret at the specified location. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestBody"></param>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19127,13 +19263,17 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CubbyholeWriteAsync(string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CubbyholeWriteAsync(string path, Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             // verify the required parameter 'path' is set
             if (path == null)
                 throw new VaultApiException(400, "Missing required parameter 'path' when calling Secrets->CubbyholeWrite");
 
+
+            // verify the required parameter 'requestBody' is set
+            if (requestBody == null)
+                throw new VaultApiException(400, "Missing required parameter 'requestBody' when calling Secrets->CubbyholeWrite");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19144,7 +19284,7 @@ namespace Vault.Api
             }
 
             string[] _contentTypes = new string[] {
-
+                "",
             };
 
             // to determine the Accept header
@@ -19163,6 +19303,7 @@ namespace Vault.Api
 
 
 
+            requestOptions.Data = requestBody;
             // make the HTTP request
             var response = await this.AsynchronousClient.PostAsync<Object>("/cubbyhole/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
 

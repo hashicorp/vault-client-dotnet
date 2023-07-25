@@ -54,10 +54,8 @@ namespace Vault.Model
 
         /// <param name="SignatureAlgorithm">The signature algorithm to use for signing. Currently only applies to RSA key types. Options are &#x27;pss&#x27; or &#x27;pkcs1v15&#x27;. Defaults to &#x27;pss&#x27;.</param>
 
-        /// <param name="Urlalgorithm">Hash algorithm to use (POST URL parameter).</param>
 
-
-        public TransitSignRequest(string Algorithm = "sha2-256", List<Object> BatchInput = default(List<Object>), string Context = default(string), string HashAlgorithm = "sha2-256", string Input = default(string), int KeyVersion = default(int), string MarshalingAlgorithm = "asn1", bool Prehashed = default(bool), string SaltLength = "auto", string SignatureAlgorithm = default(string), string Urlalgorithm = default(string))
+        public TransitSignRequest(string Algorithm = "sha2-256", List<Object> BatchInput = default(List<Object>), string Context = default(string), string HashAlgorithm = "sha2-256", string Input = default(string), int KeyVersion = default(int), string MarshalingAlgorithm = "asn1", bool Prehashed = default(bool), string SaltLength = "auto", string SignatureAlgorithm = default(string))
         {
 
             // use default value if no "Algorithm" provided
@@ -87,8 +85,6 @@ namespace Vault.Model
 
 
             this.SignatureAlgorithm = SignatureAlgorithm;
-
-            this.Urlalgorithm = Urlalgorithm;
 
         }
 
@@ -182,15 +178,6 @@ namespace Vault.Model
         public string SignatureAlgorithm { get; set; }
 
 
-        /// <summary>
-        /// Hash algorithm to use (POST URL parameter)
-        /// </summary>
-        /// <value>Hash algorithm to use (POST URL parameter)</value>
-        [DataMember(Name = "urlalgorithm", EmitDefaultValue = false)]
-
-        public string Urlalgorithm { get; set; }
-
-
 
 
         /// <summary>
@@ -211,7 +198,6 @@ namespace Vault.Model
             sb.Append("  Prehashed: ").Append(Prehashed).Append("\n");
             sb.Append("  SaltLength: ").Append(SaltLength).Append("\n");
             sb.Append("  SignatureAlgorithm: ").Append(SignatureAlgorithm).Append("\n");
-            sb.Append("  Urlalgorithm: ").Append(Urlalgorithm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -304,12 +290,6 @@ namespace Vault.Model
                     (this.SignatureAlgorithm != null &&
                     this.SignatureAlgorithm.Equals(input.SignatureAlgorithm))
 
-                ) &&
-                (
-                    this.Urlalgorithm == input.Urlalgorithm ||
-                    (this.Urlalgorithm != null &&
-                    this.Urlalgorithm.Equals(input.Urlalgorithm))
-
                 );
 
         }
@@ -366,11 +346,6 @@ namespace Vault.Model
                 if (this.SignatureAlgorithm != null)
                 {
                     hashCode = (hashCode * 59) + this.SignatureAlgorithm.GetHashCode();
-                }
-
-                if (this.Urlalgorithm != null)
-                {
-                    hashCode = (hashCode * 59) + this.Urlalgorithm.GetHashCode();
                 }
 
                 return hashCode;

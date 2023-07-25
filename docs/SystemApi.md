@@ -5031,7 +5031,7 @@ No authorization required
 <a name="internalgenerateopenapidocument"></a>
 # **InternalGenerateOpenApiDocument**
 
-> void InternalGenerateOpenApiDocument (bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null)
+> void InternalGenerateOpenApiDocument (bool? genericMountPaths = default(bool?), string context = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -5068,12 +5068,17 @@ namespace Example
             
             
             
+            
+            var context = "context_example";  // string | Context string appended to every operationId (optional) 
+            
+            
+            
 
             try
             {
                 
 
-                apiInstance.InternalGenerateOpenApiDocument(bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
+                apiInstance.InternalGenerateOpenApiDocument(bool? genericMountPaths = default(bool?), string context = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5090,6 +5095,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **genericMountPaths** | **bool?**| Use generic mount paths | [optional] [default to false]
+ **context** | **string**| Context string appended to every operationId | [optional] 
 
 
 ### Return type
@@ -5121,7 +5127,7 @@ No authorization required
 <a name="internalgenerateopenapidocumentwithparameters"></a>
 # **InternalGenerateOpenApiDocumentWithParameters**
 
-> void InternalGenerateOpenApiDocumentWithParameters (InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null)
+> void InternalGenerateOpenApiDocumentWithParameters (InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -5158,17 +5164,12 @@ namespace Example
             var internalGenerateOpenApiDocumentWithParametersRequest = new InternalGenerateOpenApiDocumentWithParametersRequest(); // InternalGenerateOpenApiDocumentWithParametersRequest | 
             
             
-            
-            var genericMountPaths = false;  // bool? | Use generic mount paths (optional)  (default to false)
-            
-            
-            
 
             try
             {
                 
 
-                apiInstance.InternalGenerateOpenApiDocumentWithParameters(InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, bool? genericMountPaths = default(bool?), TimeSpan? wrapTTL = null);
+                apiInstance.InternalGenerateOpenApiDocumentWithParameters(InternalGenerateOpenApiDocumentWithParametersRequest internalGenerateOpenApiDocumentWithParametersRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5185,7 +5186,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **internalGenerateOpenApiDocumentWithParametersRequest** | [**InternalGenerateOpenApiDocumentWithParametersRequest**](InternalGenerateOpenApiDocumentWithParametersRequest.md)|  | 
- **genericMountPaths** | **bool?**| Use generic mount paths | [optional] [default to false]
 
 
 ### Return type
@@ -7893,7 +7893,7 @@ No authorization required
 <a name="monitor"></a>
 # **Monitor**
 
-> void Monitor (string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null)
+> void Monitor (string logLevel = default(string), string logFormat = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -7926,12 +7926,12 @@ namespace Example
             
             
             
-            var logFormat = "\"standard\"";  // string | Output format of logs. Supported values are \"standard\" and \"json\". The default is \"standard\". (optional)  (default to "standard")
-            
-            
-            
-            
             var logLevel = "logLevel_example";  // string | Log level to view system logs at. Currently supported values are \"trace\", \"debug\", \"info\", \"warn\", \"error\". (optional) 
+            
+            
+            
+            
+            var logFormat = "\"standard\"";  // string | Output format of logs. Supported values are \"standard\" and \"json\". The default is \"standard\". (optional)  (default to "standard")
             
             
             
@@ -7940,7 +7940,7 @@ namespace Example
             {
                 
 
-                apiInstance.Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null);
+                apiInstance.Monitor(string logLevel = default(string), string logFormat = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7956,8 +7956,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logFormat** | **string**| Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. | [optional] [default to &quot;standard&quot;]
  **logLevel** | **string**| Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. | [optional] 
+ **logFormat** | **string**| Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. | [optional] [default to &quot;standard&quot;]
 
 
 ### Return type
@@ -20414,7 +20414,7 @@ No authorization required
 <a name="systemwritenamespacesapilocklock"></a>
 # **SystemWriteNamespacesApiLockLock**
 
-> void SystemWriteNamespacesApiLockLock (SystemWriteNamespacesApiLockLockRequest systemWriteNamespacesApiLockLockRequest, TimeSpan? wrapTTL = null)
+> void SystemWriteNamespacesApiLockLock (TimeSpan? wrapTTL = null)
 
 
 
@@ -20446,17 +20446,12 @@ namespace Example
             
             
             
-            
-            
-            var systemWriteNamespacesApiLockLockRequest = new SystemWriteNamespacesApiLockLockRequest(); // SystemWriteNamespacesApiLockLockRequest | 
-            
-            
 
             try
             {
                 
 
-                apiInstance.SystemWriteNamespacesApiLockLock(SystemWriteNamespacesApiLockLockRequest systemWriteNamespacesApiLockLockRequest, TimeSpan? wrapTTL = null);
+                apiInstance.SystemWriteNamespacesApiLockLock(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20469,10 +20464,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **systemWriteNamespacesApiLockLockRequest** | [**SystemWriteNamespacesApiLockLockRequest**](SystemWriteNamespacesApiLockLockRequest.md)|  | 
+This endpoint does not need any parameter.
 
 
 ### Return type
@@ -20485,7 +20477,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: , 
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -20594,7 +20586,7 @@ No authorization required
 <a name="systemwritenamespacesapilockunlock"></a>
 # **SystemWriteNamespacesApiLockUnlock**
 
-> void SystemWriteNamespacesApiLockUnlock (SystemWriteNamespacesApiLockUnlockRequest systemWriteNamespacesApiLockUnlockRequest, TimeSpan? wrapTTL = null)
+> void SystemWriteNamespacesApiLockUnlock (TimeSpan? wrapTTL = null)
 
 
 
@@ -20626,17 +20618,12 @@ namespace Example
             
             
             
-            
-            
-            var systemWriteNamespacesApiLockUnlockRequest = new SystemWriteNamespacesApiLockUnlockRequest(); // SystemWriteNamespacesApiLockUnlockRequest | 
-            
-            
 
             try
             {
                 
 
-                apiInstance.SystemWriteNamespacesApiLockUnlock(SystemWriteNamespacesApiLockUnlockRequest systemWriteNamespacesApiLockUnlockRequest, TimeSpan? wrapTTL = null);
+                apiInstance.SystemWriteNamespacesApiLockUnlock(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20649,10 +20636,7 @@ namespace Example
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **systemWriteNamespacesApiLockUnlockRequest** | [**SystemWriteNamespacesApiLockUnlockRequest**](SystemWriteNamespacesApiLockUnlockRequest.md)|  | 
+This endpoint does not need any parameter.
 
 
 ### Return type
@@ -20665,7 +20649,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: , 
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -24932,7 +24916,7 @@ No authorization required
 <a name="wrap"></a>
 # **Wrap**
 
-> void Wrap (TimeSpan? wrapTTL = null)
+> void Wrap (Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null)
 
 
 
@@ -24964,12 +24948,17 @@ namespace Example
             
             
             
+            
+            
+            var requestBody = new Dictionary<string, Object>(); // Dictionary<string, Object> | 
+            
+            
 
             try
             {
                 
 
-                apiInstance.Wrap(TimeSpan? wrapTTL = null);
+                apiInstance.Wrap(Dictionary<string, Object> requestBody, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24982,7 +24971,10 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestBody** | [**Dictionary&lt;string, Object&gt;**](Object.md)|  | 
 
 
 ### Return type
@@ -24995,7 +24987,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: 
  - **Accept**: Not defined
 
 

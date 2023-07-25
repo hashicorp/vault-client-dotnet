@@ -38,20 +38,14 @@ namespace Vault.Model
 
         /// <param name="Format">Encoding format to use. Can be \&quot;hex\&quot; or \&quot;base64\&quot;. Defaults to \&quot;base64\&quot;. (default to &quot;base64&quot;).</param>
 
-        /// <param name="Source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;. (default to &quot;platform&quot;).</param>
 
-
-        public GenerateRandomWithBytesRequest(int Bytes = 32, string Format = "base64", string Source = "platform")
+        public GenerateRandomWithBytesRequest(int Bytes = 32, string Format = "base64")
         {
 
             this.Bytes = Bytes;
 
             // use default value if no "Format" provided
             this.Format = Format ?? "base64";
-
-
-            // use default value if no "Source" provided
-            this.Source = Source ?? "platform";
 
 
         }
@@ -74,15 +68,6 @@ namespace Vault.Model
         public string Format { get; set; }
 
 
-        /// <summary>
-        /// Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.
-        /// </summary>
-        /// <value>Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</value>
-        [DataMember(Name = "source", EmitDefaultValue = false)]
-
-        public string Source { get; set; }
-
-
 
 
         /// <summary>
@@ -95,7 +80,6 @@ namespace Vault.Model
             sb.Append("class GenerateRandomWithBytesRequest {\n");
             sb.Append("  Bytes: ").Append(Bytes).Append("\n");
             sb.Append("  Format: ").Append(Format).Append("\n");
-            sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,12 +125,6 @@ namespace Vault.Model
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
 
-                ) &&
-                (
-                    this.Source == input.Source ||
-                    (this.Source != null &&
-                    this.Source.Equals(input.Source))
-
                 );
 
         }
@@ -166,11 +144,6 @@ namespace Vault.Model
                 if (this.Format != null)
                 {
                     hashCode = (hashCode * 59) + this.Format.GetHashCode();
-                }
-
-                if (this.Source != null)
-                {
-                    hashCode = (hashCode * 59) + this.Source.GetHashCode();
                 }
 
                 return hashCode;

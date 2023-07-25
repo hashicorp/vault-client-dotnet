@@ -7585,7 +7585,7 @@ No authorization required
 <a name="oidcproviderauthorize"></a>
 # **OidcProviderAuthorize**
 
-> void OidcProviderAuthorize (string name, TimeSpan? wrapTTL = null)
+> void OidcProviderAuthorize (string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -7622,12 +7622,57 @@ namespace Example
             
             
             
+            
+            var codeChallengeMethod = "\"plain\"";  // string | The method that was used to derive the code challenge. The following methods are supported: 'S256', 'plain'. Defaults to 'plain'. (optional)  (default to "plain")
+            
+            
+            
+            
+            var scope = "scope_example";  // string | A space-delimited, case-sensitive list of scopes to be requested. The 'openid' scope is required. (optional) 
+            
+            
+            
+            
+            var state = "state_example";  // string | The value used to maintain state between the authentication request and client. (optional) 
+            
+            
+            
+            
+            var redirectUri = "redirectUri_example";  // string | The redirection URI to which the response will be sent. (optional) 
+            
+            
+            
+            
+            var codeChallenge = "codeChallenge_example";  // string | The code challenge derived from the code verifier. (optional) 
+            
+            
+            
+            
+            var maxAge = 56;  // int? | The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional) 
+            
+            
+            
+            
+            var clientId = "clientId_example";  // string | The ID of the requesting client. (optional) 
+            
+            
+            
+            
+            var responseType = "responseType_example";  // string | The OIDC authentication flow to be used. The following response types are supported: 'code' (optional) 
+            
+            
+            
+            
+            var nonce = "nonce_example";  // string | The value that will be returned in the ID token nonce claim after a token exchange. (optional) 
+            
+            
+            
 
             try
             {
                 
 
-                apiInstance.OidcProviderAuthorize(string name, TimeSpan? wrapTTL = null);
+                apiInstance.OidcProviderAuthorize(string name, string codeChallengeMethod = default(string), string scope = default(string), string state = default(string), string redirectUri = default(string), string codeChallenge = default(string), int? maxAge = default(int?), string clientId = default(string), string responseType = default(string), string nonce = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7644,6 +7689,15 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the provider | 
+ **codeChallengeMethod** | **string**| The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. | [optional] [default to &quot;plain&quot;]
+ **scope** | **string**| A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. | [optional] 
+ **state** | **string**| The value used to maintain state between the authentication request and client. | [optional] 
+ **redirectUri** | **string**| The redirection URI to which the response will be sent. | [optional] 
+ **codeChallenge** | **string**| The code challenge derived from the code verifier. | [optional] 
+ **maxAge** | **int?**| The allowable elapsed time in seconds since the last time the end-user was actively authenticated. | [optional] 
+ **clientId** | **string**| The ID of the requesting client. | [optional] 
+ **responseType** | **string**| The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; | [optional] 
+ **nonce** | **string**| The value that will be returned in the ID token nonce claim after a token exchange. | [optional] 
 
 
 ### Return type
