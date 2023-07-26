@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudGenerateStaticAccountKeyWithParametersRequest
+# Vault.Model.GoogleCloudGenerateStaticAccountKeyRequest
 
 ## Properties
 

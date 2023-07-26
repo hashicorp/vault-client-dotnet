@@ -618,9 +618,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="context">Context string appended to every operationId (optional)</param>
-
         /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1049,7 +1047,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -1080,9 +1077,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4412,9 +4407,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="context">Context string appended to every operationId (optional)</param>
-
         /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4872,7 +4865,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4905,9 +4897,7 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7844,7 +7834,6 @@ namespace Vault.Api
             set { _exceptionFactory = value; }
         }
 
-
         /// <summary>
         ///  
         /// </summary>
@@ -7983,6 +7972,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AuditingCalculateHashResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Disable the audit device at the given path. 
         /// </summary>
@@ -8108,6 +8098,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Disable auditing of the given request header. 
         /// </summary>
@@ -8233,6 +8224,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Enable a new audit device at the supplied path. 
         /// </summary>
@@ -8371,6 +8363,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Enable auditing of a header. 
         /// </summary>
@@ -8509,6 +8502,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List the enabled audit devices. 
         /// </summary>
@@ -8618,6 +8612,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List the request headers that are configured to be audited. 
         /// </summary>
@@ -8727,6 +8722,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AuditingListRequestHeadersResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List the information for the given request header. 
         /// </summary>
@@ -8852,6 +8848,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Disable the auth method at the given auth path 
         /// </summary>
@@ -8977,6 +8974,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
         /// </summary>
@@ -9115,6 +9113,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -9224,6 +9223,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the configuration of the auth engine at the given path. 
         /// </summary>
@@ -9349,6 +9349,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AuthReadConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Reads the given auth path&#x27;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
@@ -9474,6 +9475,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<AuthReadTuningInformationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
@@ -9612,6 +9614,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
         /// </summary>
@@ -9721,6 +9724,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<CollectHostInformationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
         /// </summary>
@@ -9830,6 +9834,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configure the CORS settings. 
         /// </summary>
@@ -9952,6 +9957,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Remove any CORS settings. 
         /// </summary>
@@ -10061,6 +10067,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Return the current CORS settings. 
         /// </summary>
@@ -10170,6 +10177,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<CorsReadConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Decodes the encoded token with the otp. 
         /// </summary>
@@ -10292,6 +10300,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -10414,6 +10423,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -10523,6 +10533,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<EncryptionKeyReadRotationConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -10632,6 +10643,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Provides information about the backend encryption key. 
         /// </summary>
@@ -10741,6 +10753,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -10863,6 +10876,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<GenerateHashResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11001,6 +11015,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<GenerateHashWithAlgorithmResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11123,6 +11138,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<GenerateRandomResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11261,6 +11277,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<GenerateRandomWithBytesResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11399,6 +11416,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<GenerateRandomWithSourceResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11553,6 +11571,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<GenerateRandomWithSourceAndBytesResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Check the HA status of a Vault cluster 
         /// </summary>
@@ -11662,6 +11681,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<HaStatusResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Initialize a new Vault. The Vault must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using Vault HSM.
         /// </summary>
@@ -11784,6 +11804,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period. 
         /// </summary>
@@ -11906,6 +11927,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
         /// </summary>
@@ -12015,6 +12037,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the client count tracking configuration. 
         /// </summary>
@@ -12124,6 +12147,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Report the client count metrics, for this namespace and all child namespaces. 
         /// </summary>
@@ -12233,6 +12257,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Report the number of clients for this month, for this namespace and all child namespaces. 
         /// </summary>
@@ -12342,6 +12367,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -12451,6 +12477,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalCountEntitiesResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -12564,6 +12591,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -12673,13 +12701,12 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalCountTokensResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="context">Context string appended to every operationId (optional)</param>
-
         /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -12753,9 +12780,7 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="context">Context string appended to every operationId (optional)</param>
-
         /// <param name="genericMountPaths">Use generic mount paths (optional, default to false)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -12816,6 +12841,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -12938,6 +12964,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Expose the route entry and mount entry tables present in the router 
         /// </summary>
@@ -13063,6 +13090,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Lists enabled feature flags. 
         /// </summary>
@@ -13172,6 +13200,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalUiListEnabledFeatureFlagsResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Lists all enabled and visible auth and secrets mounts. 
         /// </summary>
@@ -13281,6 +13310,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalUiListEnabledVisibleMountsResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -13390,6 +13420,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalUiListNamespacesResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Return information about the given mount. 
         /// </summary>
@@ -13515,6 +13546,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalUiReadMountInformationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Backwards compatibility is not guaranteed for this API 
         /// </summary>
@@ -13624,6 +13656,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<InternalUiReadResultantAclResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the high availability status and current leader instance of Vault. 
         /// </summary>
@@ -13733,6 +13766,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<LeaderStatusResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -13842,6 +13876,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<LeasesCountResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately Unlike &#x60;/sys/leases/revoke-prefix&#x60;, this path ignores backend errors encountered during revocation. This is potentially very dangerous and should only be used in specific emergency situations where errors in the backend or the connected backend service prevent normal revocation.  By ignoring these errors, Vault abdicates responsibility for ensuring that the issued credentials or secrets are properly revoked and/or cleaned up. Access to this endpoint should be tightly controlled.
         /// </summary>
@@ -13967,6 +14002,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14076,6 +14112,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<LeasesListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14207,6 +14244,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<LeasesLookUpResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14329,6 +14367,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<LeasesReadLeaseResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
@@ -14451,6 +14490,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
@@ -14589,6 +14629,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
@@ -14711,6 +14752,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Revokes a lease immediately. 
         /// </summary>
@@ -14849,6 +14891,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#x27; path property) generated under a given prefix immediately. 
         /// </summary>
@@ -14987,6 +15030,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15096,6 +15140,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the available and enabled experiments 
         /// </summary>
@@ -15205,6 +15250,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Report the locked user count metrics, for this namespace and all child namespaces. 
         /// </summary>
@@ -15314,6 +15360,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Unlocks the user with given mount_accessor and alias_identifier 
         /// </summary>
@@ -15455,6 +15502,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the log level for all existing loggers. 
         /// </summary>
@@ -15564,6 +15612,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the log level for a single logger. 
         /// </summary>
@@ -15689,6 +15738,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Revert the all loggers to use log level provided in config. 
         /// </summary>
@@ -15798,6 +15848,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Revert a single logger to use log level provided in config. 
         /// </summary>
@@ -15923,6 +15974,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Modify the log level for all existing loggers. 
         /// </summary>
@@ -16045,6 +16097,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Modify the log level of a single logger. 
         /// </summary>
@@ -16183,11 +16236,11 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -16253,7 +16306,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16309,6 +16361,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token 
         /// </summary>
@@ -16431,13 +16484,12 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -16511,9 +16563,7 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16574,6 +16624,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Disable the mount point specified at the given path. 
         /// </summary>
@@ -16699,6 +16750,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Enable a new secrets engine at the given path. 
         /// </summary>
@@ -16837,6 +16889,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16946,6 +16999,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the configuration of the secret engine at the given path. 
         /// </summary>
@@ -17071,6 +17125,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<MountsReadConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17196,6 +17251,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<MountsReadTuningInformationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17334,6 +17390,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17443,6 +17500,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PluginsCatalogListPluginsResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List the plugins in the catalog. 
         /// </summary>
@@ -17574,6 +17632,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PluginsCatalogListPluginsWithTypeResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
         /// </summary>
@@ -17699,6 +17758,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PluginsCatalogReadPluginConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Return the configuration data for the plugin with the given name. 
         /// </summary>
@@ -17840,6 +17900,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PluginsCatalogReadPluginConfigurationWithTypeResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
@@ -17978,6 +18039,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
@@ -18132,6 +18194,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Remove the plugin with the given name. 
         /// </summary>
@@ -18257,6 +18320,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Remove the plugin with the given name. 
         /// </summary>
@@ -18398,6 +18462,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Reload mounted plugin backends. Either the plugin name (&#x60;plugin&#x60;) or the desired plugin backend mounts (&#x60;mounts&#x60;) must be provided, but not both. In the case that the plugin name is provided, all mounted paths that use that plugin backend will be reloaded.  If (&#x60;scope&#x60;) is provided and is (&#x60;global&#x60;), the plugin(s) are reloaded globally.
         /// </summary>
@@ -18520,6 +18585,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PluginsReloadBackendsResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the ACL policy with the given name. 
         /// </summary>
@@ -18645,6 +18711,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete a password policy. 
         /// </summary>
@@ -18770,6 +18837,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate a password from an existing password policy. 
         /// </summary>
@@ -18895,6 +18963,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PoliciesGeneratePasswordFromPasswordPolicyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -19010,6 +19079,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PoliciesListAclPoliciesResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List the existing password policies. 
         /// </summary>
@@ -19125,6 +19195,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Retrieve information about the named ACL policy. 
         /// </summary>
@@ -19250,6 +19321,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PoliciesReadAclPolicyResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Retrieve an existing password policy. 
         /// </summary>
@@ -19375,6 +19447,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<PoliciesReadPasswordPolicyResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Add a new or update an existing ACL policy. 
         /// </summary>
@@ -19513,6 +19586,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Add a new or update an existing password policy. 
         /// </summary>
@@ -19651,6 +19725,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
@@ -19760,6 +19835,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the running program&#x27;s command line. Returns the running program&#x27;s command line, with arguments separated by NUL bytes.
         /// </summary>
@@ -19869,6 +19945,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload. Returns a pprof-formatted cpu profile payload. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified.
         /// </summary>
@@ -19978,6 +20055,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the execution trace in binary form. Returns  the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified.
         /// </summary>
@@ -20087,6 +20165,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns stack traces of all current goroutines. Returns stack traces of all current goroutines.
         /// </summary>
@@ -20196,6 +20275,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns an HTML page listing the available profiles. Returns an HTML page listing the available  profiles. This should be mainly accessed via browsers or applications that can  render pages.
         /// </summary>
@@ -20305,6 +20385,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns a sampling of all past memory allocations. Returns a sampling of all past memory allocations.
         /// </summary>
@@ -20414,6 +20495,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns a sampling of memory allocations of live object. Returns a sampling of memory allocations of live object.
         /// </summary>
@@ -20523,6 +20605,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns stack traces of holders of contended mutexes Returns stack traces of holders of contended mutexes
         /// </summary>
@@ -20632,6 +20715,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the program counters listed in the request. Returns the program counters listed in the request.
         /// </summary>
@@ -20741,6 +20825,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads Returns stack traces that led to the creation of new OS threads
         /// </summary>
@@ -20850,6 +20935,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -20972,6 +21058,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21094,6 +21181,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21216,6 +21304,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21338,6 +21427,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21463,6 +21553,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21578,6 +21669,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21703,6 +21795,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RateLimitQuotasReadResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21812,6 +21905,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RateLimitQuotasReadConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -21950,6 +22044,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the key with given path. 
         /// </summary>
@@ -22075,6 +22170,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Return a list keys for a given path prefix. 
         /// </summary>
@@ -22206,6 +22302,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Read the value of the key at the given path. 
         /// </summary>
@@ -22331,6 +22428,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RawReadResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Update the value of the key at the given path. 
         /// </summary>
@@ -22469,6 +22567,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the health status of Vault. 
         /// </summary>
@@ -22578,6 +22677,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns the initialization status of Vault. 
         /// </summary>
@@ -22687,6 +22787,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
         /// </summary>
@@ -22796,6 +22897,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Look up wrapping properties for the given token. 
         /// </summary>
@@ -22918,6 +23020,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<ReadWrappingPropertiesResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Cancels any in-progress rekey. This clears the rekey settings as well as any progress made. This must be called to change the parameters of the rekey. Note: verification is still a part of a rekey. If rekeying is canceled during the verification flow, the current unseal keys remain valid.
         /// </summary>
@@ -23027,6 +23130,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Initializes a new rekey attempt. Only a single rekey attempt can take place at a time, and changing the parameters of a rekey requires canceling and starting a new rekey, which will also provide a new nonce.
         /// </summary>
@@ -23149,6 +23253,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyAttemptInitializeResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt. 
         /// </summary>
@@ -23258,6 +23363,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyAttemptReadProgressResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault. 
         /// </summary>
@@ -23380,6 +23486,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyAttemptUpdateResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys. 
         /// </summary>
@@ -23489,6 +23596,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -23598,6 +23706,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys. 
         /// </summary>
@@ -23707,6 +23816,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyReadBackupKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -23816,6 +23926,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyReadBackupRecoveryKeyResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Cancel any in-progress rekey verification operation. This clears any progress made and resets the nonce. Unlike a &#x60;DELETE&#x60; against &#x60;sys/rekey/init&#x60;, this only resets the current verification operation, not the entire rekey atttempt.
         /// </summary>
@@ -23925,6 +24036,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyVerificationCancelResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt. 
         /// </summary>
@@ -24034,6 +24146,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyVerificationReadProgressResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation. 
         /// </summary>
@@ -24156,6 +24269,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RekeyVerificationUpdateResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Reload the given subsystem 
         /// </summary>
@@ -24281,6 +24395,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Initiate a mount migration 
         /// </summary>
@@ -24403,6 +24518,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RemountResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Check status of a mount migration 
         /// </summary>
@@ -24528,6 +24644,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RemountStatusResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -24650,6 +24767,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Cancels any in-progress root generation attempt. 
         /// </summary>
@@ -24759,6 +24877,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Initializes a new root generation attempt. Only a single root generation attempt can take place at a time. One (and only one) of otp or pgp_key are required.
         /// </summary>
@@ -24881,6 +25000,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RootTokenGenerationInitializeResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Read the configuration and progress of the current root generation attempt. 
         /// </summary>
@@ -24990,6 +25110,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RootTokenGenerationReadProgressResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt. If the threshold number of unseal key shares is reached, Vault will complete the root generation and issue the new token. Otherwise, this API must be called multiple times until that threshold is met. The attempt nonce must be provided with each call.
         /// </summary>
@@ -25112,6 +25233,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<RootTokenGenerationUpdateResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Seal the Vault. 
         /// </summary>
@@ -25221,6 +25343,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Check the seal status of a Vault. 
         /// </summary>
@@ -25330,6 +25453,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<SealStatusResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Cause the node to give up active status. This endpoint forces the node to give up active status. If the node does not have active status, this endpoint does nothing. Note that the node will sleep for ten seconds before attempting to grab the active lock again, but if no standby nodes grab the active lock in the interim, the same node may become the active node again.
         /// </summary>
@@ -25439,6 +25563,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -25548,6 +25673,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -25689,6 +25815,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -25814,6 +25941,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -25939,6 +26067,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26064,6 +26193,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26189,6 +26319,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26314,6 +26445,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26439,6 +26571,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26564,6 +26697,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26689,6 +26823,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26814,6 +26949,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -26939,6 +27075,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27070,6 +27207,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27185,6 +27323,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27300,6 +27439,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27415,6 +27555,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27530,6 +27671,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27645,6 +27787,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27760,6 +27903,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27869,6 +28013,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -27978,6 +28123,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28087,6 +28233,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28228,6 +28375,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28353,6 +28501,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28478,6 +28627,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28603,6 +28753,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28728,6 +28879,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28853,6 +29005,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -28978,6 +29131,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29087,6 +29241,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29212,6 +29367,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29337,6 +29493,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29462,6 +29619,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29571,6 +29729,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29680,6 +29839,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29805,6 +29965,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -29930,6 +30091,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30055,6 +30217,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30164,6 +30327,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30273,6 +30437,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30382,6 +30547,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30507,6 +30673,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30632,6 +30799,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30741,6 +30909,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30850,6 +31019,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -30959,6 +31129,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31068,6 +31239,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31209,6 +31381,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31350,6 +31523,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31475,6 +31649,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31600,6 +31775,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31725,6 +31901,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31850,6 +32027,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -31975,6 +32153,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32100,6 +32279,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32209,6 +32389,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32334,6 +32515,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32443,6 +32625,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32568,6 +32751,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32693,6 +32877,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32818,6 +33003,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -32943,6 +33129,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33068,6 +33255,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33177,6 +33365,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33286,6 +33475,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33395,6 +33585,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33504,6 +33695,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33613,6 +33805,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33738,6 +33931,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33847,6 +34041,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -33956,6 +34151,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34065,6 +34261,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34174,6 +34371,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34283,6 +34481,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34392,6 +34591,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34501,6 +34701,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34610,6 +34811,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34719,6 +34921,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34828,6 +35031,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -34937,6 +35141,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35062,6 +35267,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35171,6 +35377,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35280,6 +35487,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35389,6 +35597,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35498,6 +35707,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35607,6 +35817,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35716,6 +35927,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35825,6 +36037,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -35934,6 +36147,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36043,6 +36257,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36152,6 +36367,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36261,6 +36477,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36370,6 +36587,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36479,6 +36697,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36588,6 +36807,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36697,6 +36917,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36806,6 +37027,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -36915,6 +37137,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37024,6 +37247,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37133,6 +37357,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -37258,6 +37483,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Configure the values to be returned for the UI header. 
         /// </summary>
@@ -37396,6 +37622,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Remove a UI header. 
         /// </summary>
@@ -37521,6 +37748,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Return a list of configured UI headers. 
         /// </summary>
@@ -37636,6 +37864,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<UiHeadersListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Return the given UI header&#x27;s configuration 
         /// </summary>
@@ -37761,6 +37990,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<UiHeadersReadConfigurationResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Unseal the Vault. 
         /// </summary>
@@ -37883,6 +38113,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<UnsealResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38005,6 +38236,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Returns map of historical version change entries 
         /// </summary>
@@ -38120,6 +38352,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<VersionHistoryResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -38242,5 +38475,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
     }
 }

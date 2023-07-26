@@ -1,4 +1,4 @@
-# Vault.Model.GoogleCloudGenerateRolesetKeyWithParametersRequest
+# Vault.Model.GoogleCloudGenerateRolesetKeyRequest
 
 ## Properties
 

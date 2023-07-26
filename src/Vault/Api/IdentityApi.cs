@@ -1190,7 +1190,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
@@ -1235,23 +1234,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2918,7 +2908,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2966,23 +2955,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3489,7 +3469,6 @@ namespace Vault.Api
             set { _exceptionFactory = value; }
         }
 
-
         /// <summary>
         /// Create a new alias. 
         /// </summary>
@@ -3612,6 +3591,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -3737,6 +3717,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
@@ -3852,6 +3833,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -3977,6 +3959,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -4115,6 +4098,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete all of the entities provided 
         /// </summary>
@@ -4237,6 +4221,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create a new entity 
         /// </summary>
@@ -4359,6 +4344,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create a new alias. 
         /// </summary>
@@ -4481,6 +4467,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -4606,6 +4593,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -4731,6 +4719,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -4856,6 +4845,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
@@ -4971,6 +4961,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List all the entity IDs 
         /// </summary>
@@ -5086,6 +5077,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List all the entity names 
         /// </summary>
@@ -5201,6 +5193,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Query entities based on various properties. 
         /// </summary>
@@ -5323,6 +5316,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Merge two or more entities together 
         /// </summary>
@@ -5445,6 +5439,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -5570,6 +5565,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -5695,6 +5691,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -5820,6 +5817,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -5958,6 +5956,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -6096,6 +6095,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -6234,6 +6234,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -6356,6 +6357,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Creates a new group alias, or updates an existing one. 
         /// </summary>
@@ -6478,6 +6480,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -6603,6 +6606,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -6728,6 +6732,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -6853,6 +6858,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List all the group alias IDs. 
         /// </summary>
@@ -6968,6 +6974,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List all the group IDs. 
         /// </summary>
@@ -7083,6 +7090,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -7198,6 +7206,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Query groups based on various properties. 
         /// </summary>
@@ -7320,6 +7329,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -7445,6 +7455,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -7570,6 +7581,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -7695,6 +7707,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -7833,6 +7846,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -7971,6 +7985,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -8109,6 +8124,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity 
         /// </summary>
@@ -8231,6 +8247,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
@@ -8353,6 +8370,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create the given MFA method 
         /// </summary>
@@ -8475,6 +8493,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create the given MFA method 
         /// </summary>
@@ -8597,6 +8616,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create the given MFA method 
         /// </summary>
@@ -8719,6 +8739,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create the given MFA method 
         /// </summary>
@@ -8841,6 +8862,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the given MFA method 
         /// </summary>
@@ -8966,6 +8988,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete a login enforcement 
         /// </summary>
@@ -9091,6 +9114,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the given MFA method 
         /// </summary>
@@ -9216,6 +9240,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the given MFA method 
         /// </summary>
@@ -9341,6 +9366,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Delete the given MFA method 
         /// </summary>
@@ -9466,6 +9492,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity. 
         /// </summary>
@@ -9588,6 +9615,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
@@ -9703,6 +9731,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List login enforcements 
         /// </summary>
@@ -9818,6 +9847,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List MFA method configurations for all MFA methods 
         /// </summary>
@@ -9933,6 +9963,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
@@ -10048,6 +10079,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
@@ -10163,6 +10195,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List MFA method configurations for the given MFA method 
         /// </summary>
@@ -10278,6 +10311,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
@@ -10403,6 +10437,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the current login enforcement 
         /// </summary>
@@ -10528,6 +10563,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type 
         /// </summary>
@@ -10653,6 +10689,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
@@ -10778,6 +10815,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
@@ -10903,6 +10941,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Read the current configuration for the given MFA method 
         /// </summary>
@@ -11028,6 +11067,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update the configuration for the given MFA method 
         /// </summary>
@@ -11166,6 +11206,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update the configuration for the given MFA method 
         /// </summary>
@@ -11304,6 +11345,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update the configuration for the given MFA method 
         /// </summary>
@@ -11442,6 +11484,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Update the configuration for the given MFA method 
         /// </summary>
@@ -11580,6 +11623,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create or update a login enforcement 
         /// </summary>
@@ -11718,6 +11762,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11840,6 +11885,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -11965,6 +12011,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -12090,6 +12137,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
@@ -12215,6 +12263,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -12340,6 +12389,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
@@ -12465,6 +12515,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -12590,6 +12641,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Generate an OIDC token 
         /// </summary>
@@ -12715,6 +12767,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Verify the authenticity of an OIDC token 
         /// </summary>
@@ -12837,6 +12890,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -12952,6 +13006,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -13067,6 +13122,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List OIDC keys 
         /// </summary>
@@ -13182,11 +13238,11 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
@@ -13255,7 +13311,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13314,6 +13369,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         /// List configured OIDC roles 
         /// </summary>
@@ -13429,6 +13485,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -13544,28 +13601,20 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13703,23 +13752,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13822,6 +13862,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -13960,6 +14001,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14098,6 +14140,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14223,6 +14266,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14348,6 +14392,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14473,6 +14518,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14582,6 +14628,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
@@ -14707,6 +14754,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Query OIDC configurations 
         /// </summary>
@@ -14816,6 +14864,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -14941,6 +14990,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15066,6 +15116,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15191,6 +15242,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Retrieve public keys 
         /// </summary>
@@ -15300,6 +15352,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
@@ -15425,6 +15478,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15550,6 +15604,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Rotate a named OIDC key. 
         /// </summary>
@@ -15688,6 +15743,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15826,6 +15882,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -15964,6 +16021,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// CRUD operations for OIDC keys. 
         /// </summary>
@@ -16102,6 +16160,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16240,6 +16299,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// CRUD operations on OIDC Roles 
         /// </summary>
@@ -16378,6 +16438,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16516,6 +16577,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// Create a new alias. 
         /// </summary>
@@ -16638,6 +16700,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -16763,6 +16826,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         /// List all the alias IDs. 
         /// </summary>
@@ -16878,6 +16942,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<StandardListResponse>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17003,6 +17068,7 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
         /// <summary>
         ///  
         /// </summary>
@@ -17141,5 +17207,6 @@ namespace Vault.Api
 
             return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
+
     }
 }

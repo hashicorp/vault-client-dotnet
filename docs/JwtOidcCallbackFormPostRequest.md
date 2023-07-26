@@ -1,10 +1,13 @@
-# Vault.Model.KvV1ListResponse
+# Vault.Model.JwtOidcCallbackFormPostRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Keys** | **List&lt;string&gt;** |  | [optional] 
+**ClientNonce** | **string** |  | [optional] 
+**Code** | **string** |  | [optional] 
+**IdToken** | **string** |  | [optional] 
+**State** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
