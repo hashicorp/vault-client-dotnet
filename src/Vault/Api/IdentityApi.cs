@@ -1190,7 +1190,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
@@ -1235,23 +1234,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2918,7 +2908,6 @@ namespace Vault.Api
         /// 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2966,23 +2955,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13263,7 +13243,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of StandardListResponse</returns>
         /// <param name="wrapTTL">
@@ -13332,7 +13311,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13629,23 +13607,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13783,23 +13752,14 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
-
         /// <param name="clientId">The ID of the requesting client. (optional)</param>
-
         /// <param name="codeChallenge">The code challenge derived from the code verifier. (optional)</param>
-
         /// <param name="codeChallengeMethod">The method that was used to derive the code challenge. The following methods are supported: &#x27;S256&#x27;, &#x27;plain&#x27;. Defaults to &#x27;plain&#x27;. (optional, default to &quot;plain&quot;)</param>
-
         /// <param name="maxAge">The allowable elapsed time in seconds since the last time the end-user was actively authenticated. (optional)</param>
-
         /// <param name="nonce">The value that will be returned in the ID token nonce claim after a token exchange. (optional)</param>
-
         /// <param name="redirectUri">The redirection URI to which the response will be sent. (optional)</param>
-
         /// <param name="responseType">The OIDC authentication flow to be used. The following response types are supported: &#x27;code&#x27; (optional)</param>
-
         /// <param name="scope">A space-delimited, case-sensitive list of scopes to be requested. The &#x27;openid&#x27; scope is required. (optional)</param>
-
         /// <param name="state">The value used to maintain state between the authentication request and client. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
