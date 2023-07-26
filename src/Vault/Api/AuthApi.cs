@@ -2563,8 +2563,11 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path that the backend was mounted at</param>
+
         /// <param name="clientNonce"> (optional)</param>
+
         /// <param name="code"> (optional)</param>
+
         /// <param name="state"> (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -6642,8 +6645,11 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path that the backend was mounted at</param>
+
         /// <param name="clientNonce"> (optional)</param>
+
         /// <param name="code"> (optional)</param>
+
         /// <param name="state"> (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29310,8 +29316,11 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path that the backend was mounted at</param>
+
         /// <param name="clientNonce"> (optional)</param>
+
         /// <param name="code"> (optional)</param>
+
         /// <param name="state"> (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -29397,8 +29406,11 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path that the backend was mounted at</param>
+
         /// <param name="clientNonce"> (optional)</param>
+
         /// <param name="code"> (optional)</param>
+
         /// <param name="state"> (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header

@@ -25,15 +25,15 @@ namespace {{packageName}}.{{apiPackage}}
         /// {{#if summary}}{{summary}}{{/if}}
         /// </summary>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#if bodyParam}}{{#with bodyParam ~}}
+        {{#if bodyParam}}{{~#with bodyParam ~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
         {{/with}}{{/if ~}}
-        {{#if pathParams}}{{#each pathParams ~}}
+        {{#if pathParams}}{{#each pathParams~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
-        {{#if queryParams}}{{#each queryParams ~}}
+        {{/each ~}}{{/if ~}}
+        {{#if queryParams}}{{#each queryParams ~}}{{#unless required}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
+        {{/unless}}{{/each}}{{/if ~}}
         /// <returns>VaultResponse of {{#with returnType}}{{.}}{{else}}Object(void){{/with}}</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -70,15 +70,15 @@ namespace {{packageName}}.{{apiPackage}}
         /// {{#if summary}}{{summary}}{{/if}}
         /// </summary>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#if bodyParam}}{{#with bodyParam ~}}
+        {{#if bodyParam}}{{~#with bodyParam ~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
         {{/with}}{{/if ~}}
-        {{#if pathParams}}{{#each pathParams ~}}
+        {{#if pathParams}}{{#each pathParams~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
-        {{#if queryParams}}{{#each queryParams ~}}
+        {{/each ~}}{{/if ~}}
+        {{#if queryParams}}{{#each queryParams ~}}{{#unless required}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
+        {{/unless}}{{/each}}{{/if ~}}
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -177,15 +177,15 @@ namespace {{packageName}}.{{apiPackage}}
         /// {{#if summary}}{{summary}}{{/if}} {{#if notes}}{{notes}}{{/if}}
         /// </summary>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#if bodyParam}}{{#with bodyParam ~}}
+        {{#if bodyParam}}{{~#with bodyParam ~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
         {{/with}}{{/if ~}}
-        {{#if pathParams}}{{#each pathParams ~}}
+        {{#if pathParams}}{{#each pathParams~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
-        {{#if queryParams}}{{#each queryParams ~}}
+        {{/each ~}}{{/if ~}}
+        {{#if queryParams}}{{#each queryParams ~}}{{#unless required}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
+        {{/unless}}{{/each}}{{/if ~}}
         /// <returns>VaultResponse of {{#with returnType}}{{.}}{{else}}Object(void){{/with}}</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -287,15 +287,15 @@ namespace {{packageName}}.{{apiPackage}}
         /// {{#if summary}}{{summary}}{{/if}} {{#if notes}}{{notes}}{{/if}}
         /// </summary>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
-        {{#if bodyParam}}{{#with bodyParam ~}}
+        {{#if bodyParam}}{{~#with bodyParam ~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
         {{/with}}{{/if ~}}
-        {{#if pathParams}}{{#each pathParams ~}}
+        {{#if pathParams}}{{#each pathParams~}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
         {{/each ~}}{{/if ~}}
-        {{#if queryParams}}{{#each queryParams ~}}
+        {{#if queryParams}}{{#each queryParams ~}}{{#unless required}}
         /// <param name="{{paramName}}">{{#if description}}{{description}}{{/if}}{{#unless required}} (optional{{#with defaultValue}}, default to {{.}}{{/with}}){{/unless}}{{#if isDeprecated}} (deprecated){{/if}}</param>
-        {{/each}}{{/if ~}}
+        {{/unless}}{{/each}}{{/if ~}}
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
