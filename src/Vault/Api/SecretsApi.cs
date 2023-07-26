@@ -216,11 +216,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -255,11 +252,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -6601,11 +6595,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -6642,11 +6633,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14795,11 +14783,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -14893,11 +14878,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15127,11 +15109,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -15225,11 +15204,8 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="awsMountPath">Path that the backend was mounted at</param>
-
         /// <param name="roleArn">ARN of role to assume when credential_type is assumed_role (optional)</param>
-
         /// <param name="roleSessionName">Session name to use when assuming role. Max chars: 64 (optional)</param>
-
         /// <param name="ttl">Lifetime of the returned credentials in seconds (optional, default to &quot;3600&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
