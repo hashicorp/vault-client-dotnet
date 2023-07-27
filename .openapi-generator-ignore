@@ -8,12 +8,9 @@ src/Vault/Client/IReadableConfiguration.cs
 src/Vault/Client/OpenAPIDateConverter.cs
 src/Vault/Vault.csproj
 
-docs/*2Request.md
-docs/*2Response.md
-docs/*3Request.md
-docs/*3Response.md
-docs/*4Request.md
-docs/*4Response.md
+# We exclude some operations from the generated library by ID. openapi-generator does not have a way for us to do that
+# directly, so we must do it by filename here, and also separately by Handlebars expressions in the
+# partial_filter_operation template.
 
 src/Vault/Model/*2Request.cs
 src/Vault/Model/*2Response.cs
@@ -21,5 +18,16 @@ src/Vault/Model/*3Request.cs
 src/Vault/Model/*3Response.cs
 src/Vault/Model/*4Request.cs
 src/Vault/Model/*4Response.cs
+src/Vault/Model/EnterpriseStub*Request.cs
+src/Vault/Model/EnterpriseStub*Response.cs
+
+docs/*2Request.md
+docs/*2Response.md
+docs/*3Request.md
+docs/*3Response.md
+docs/*4Request.md
+docs/*4Response.md
+docs/EnterpriseStub*Request.md
+docs/EnterpriseStub*Response.md
 
 src/Vault.Test/**

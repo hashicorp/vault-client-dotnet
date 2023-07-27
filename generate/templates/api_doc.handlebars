@@ -7,16 +7,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 {{#with operations ~}}
 {{#each operation ~}}
-{{#not (or (endsWith operationId "2") (endsWith operationId "3") (endsWith operationId "4")) ~}}
-[**{{operationId}}**]({{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{#if summary}}{{summary}}{{/if}}
-{{/not ~}}
-{{/each ~}}
+{{#>partial_filter_operation}}[**{{operationId}}**]({{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{#if summary}}{{summary}}{{/if}}
+{{/partial_filter_operation}}
+{{~/each ~}}
 {{/with ~}}
 
 {{#with operations}}
 {{#each operation ~}}
-{{#not (or (endsWith operationId "2") (endsWith operationId "3") (endsWith operationId "4")) ~}}
-<a name="{{{operationIdLowerCase}}}"></a>
+{{#>partial_filter_operation}}<a name="{{{operationIdLowerCase}}}"></a>
 # **{{{operationId}}}**
 
 > {{#with returnType}}{{.}}{{else}}void{{/with}} {{operationId}} ({{#each pathParams}}{{#with required}}{{{dataType}}} {{paramName}}, {{/with}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#unless required}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/unless}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null)
@@ -138,6 +136,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-api-endpoints) [[Back to Model list]](../{{#if useGenericHost}}../{{/if}}README.md#documentation-for-models) [[Back to README]](../{{#if useGenericHost}}../{{/if}}README.md)
 
-{{/not ~}}
-{{/each ~}}
+{{/partial_filter_operation}}
+{{~/each ~}}
 {{/with ~}}

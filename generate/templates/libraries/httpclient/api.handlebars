@@ -16,9 +16,8 @@ namespace {{packageName}}.{{apiPackage}}
     {{>visibility}} interface {{interfacePrefix}}{{cut classname "Api"}}Sync : IApiAccessor
     {
         #region Synchronous Operations
-
         {{#each operation ~}}
-        {{#not (or (endsWith operationId "2") (endsWith operationId "3") (endsWith operationId "4")) ~}}
+        {{#>partial_filter_operation}}
         /// <summary>
         /// {{#if summary}}{{summary}}{{/if}}
         /// </summary>
@@ -44,9 +43,8 @@ namespace {{packageName}}.{{apiPackage}}
         [Obsolete]
         {{/if ~}}
         VaultResponse<{{#with returnType}}{{{.}}}{{else}}Object{{/with}}> {{operationId}}({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null);
-
-        {{/not ~}}
-        {{/each ~}}
+        {{/partial_filter_operation}}
+        {{~/each}}
         #endregion Synchronous Operations
     }
 
@@ -57,9 +55,8 @@ namespace {{packageName}}.{{apiPackage}}
     {{>visibility}} interface {{interfacePrefix}}{{cut classname "Api"}}Async : IApiAccessor
     {
         #region Asynchronous Operations
-
         {{#each operation ~}}
-        {{#not (or (endsWith operationId "2") (endsWith operationId "3") (endsWith operationId "4")) ~}}
+        {{#>partial_filter_operation}}
         /// <summary>
         /// {{#if summary}}{{summary}}{{/if}}
         /// </summary>
@@ -86,9 +83,8 @@ namespace {{packageName}}.{{apiPackage}}
         [Obsolete]
         {{/if ~}}
         Task<VaultResponse<{{#with returnType}}{{{.}}}{{else}}Object{{/with}}>> {{operationId}}Async({{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{else}}{{{dataType}}} {{paramName}}, {{/endsWith}}{{/each}}{{#with bodyParam}}{{{dataType}}} {{{paramName}}}, {{/with}}{{#each pathParams}}{{#endsWith baseName "_mount_path"}}{{{dataType}}} {{paramName}}{{#if optionalMethodArgument}} = {{#with defaultValue}}{{{.}}}{{/with}}{{/if}}, {{/endsWith}}{{/each}}{{#each queryParams}}{{#unless required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/unless}}{{/each}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        {{/not ~}}
-        {{/each ~}}
+        {{/partial_filter_operation}}
+        {{~/each}}
         #endregion Asynchronous Operations
     }
     {{/if}}
@@ -160,9 +156,8 @@ namespace {{packageName}}.{{apiPackage}}
             }
             set { _exceptionFactory = value; }
         }
-
         {{#each operation ~}}
-        {{#not (or (endsWith operationId "2") (endsWith operationId "3") (endsWith operationId "4")) ~}}
+        {{#>partial_filter_operation}}
         /// <summary>
         /// {{#if summary}}{{summary}}{{/if}} {{#if notes}}{{notes}}{{/if}}
         /// </summary>
@@ -372,8 +367,7 @@ namespace {{packageName}}.{{apiPackage}}
 
             return ClientUtils.ToVaultResponse<{{#with returnType}}{{{.}}}{{else}}Object{{/with}}>(response.RawContent);
         }{{/if}}
-
-        {{/not ~}}
-        {{/each ~}}
+        {{/partial_filter_operation}}
+        {{~/each}}
     }{{/with}}
 }
