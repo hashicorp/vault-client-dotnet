@@ -42,14 +42,10 @@ namespace Vault.Model
 
         /// <param name="IssuingCa">Issuing Certificate Authority.</param>
 
-        /// <param name="PrivateKey">Private key.</param>
-
-        /// <param name="PrivateKeyType">Private key type.</param>
-
         /// <param name="SerialNumber">Serial Number.</param>
 
 
-        public PkiSignVerbatimResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), long Expiration = default(long), string IssuingCa = default(string), string PrivateKey = default(string), string PrivateKeyType = default(string), string SerialNumber = default(string))
+        public PkiSignVerbatimResponse(List<string> CaChain = default(List<string>), string Certificate = default(string), long Expiration = default(long), string IssuingCa = default(string), string SerialNumber = default(string))
         {
 
             this.CaChain = CaChain;
@@ -59,10 +55,6 @@ namespace Vault.Model
             this.Expiration = Expiration;
 
             this.IssuingCa = IssuingCa;
-
-            this.PrivateKey = PrivateKey;
-
-            this.PrivateKeyType = PrivateKeyType;
 
             this.SerialNumber = SerialNumber;
 
@@ -105,24 +97,6 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Private key
-        /// </summary>
-        /// <value>Private key</value>
-        [DataMember(Name = "private_key", EmitDefaultValue = false)]
-
-        public string PrivateKey { get; set; }
-
-
-        /// <summary>
-        /// Private key type
-        /// </summary>
-        /// <value>Private key type</value>
-        [DataMember(Name = "private_key_type", EmitDefaultValue = false)]
-
-        public string PrivateKeyType { get; set; }
-
-
-        /// <summary>
         /// Serial Number
         /// </summary>
         /// <value>Serial Number</value>
@@ -145,8 +119,6 @@ namespace Vault.Model
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  Expiration: ").Append(Expiration).Append("\n");
             sb.Append("  IssuingCa: ").Append(IssuingCa).Append("\n");
-            sb.Append("  PrivateKey: ").Append(PrivateKey).Append("\n");
-            sb.Append("  PrivateKeyType: ").Append(PrivateKeyType).Append("\n");
             sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -207,18 +179,6 @@ namespace Vault.Model
 
                 ) &&
                 (
-                    this.PrivateKey == input.PrivateKey ||
-                    (this.PrivateKey != null &&
-                    this.PrivateKey.Equals(input.PrivateKey))
-
-                ) &&
-                (
-                    this.PrivateKeyType == input.PrivateKeyType ||
-                    (this.PrivateKeyType != null &&
-                    this.PrivateKeyType.Equals(input.PrivateKeyType))
-
-                ) &&
-                (
                     this.SerialNumber == input.SerialNumber ||
                     (this.SerialNumber != null &&
                     this.SerialNumber.Equals(input.SerialNumber))
@@ -252,16 +212,6 @@ namespace Vault.Model
                 if (this.IssuingCa != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuingCa.GetHashCode();
-                }
-
-                if (this.PrivateKey != null)
-                {
-                    hashCode = (hashCode * 59) + this.PrivateKey.GetHashCode();
-                }
-
-                if (this.PrivateKeyType != null)
-                {
-                    hashCode = (hashCode * 59) + this.PrivateKeyType.GetHashCode();
                 }
 
                 if (this.SerialNumber != null)
