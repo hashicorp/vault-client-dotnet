@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **SecretKey** | **string** | AWS Secret Access Key for the account used to make AWS API requests. | [optional] [default to ""]
 **StsEndpoint** | **string** | URL to override the default generated endpoint for making AWS STS API calls. | [optional] [default to ""]
 **StsRegion** | **string** | The region ID for the sts_endpoint, if set. | [optional] [default to ""]
+**UseStsRegionFromClient** | **bool** | Uses the STS region from client requests for making AWS STS API calls. | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

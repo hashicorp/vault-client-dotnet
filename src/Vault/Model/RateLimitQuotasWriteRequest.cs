@@ -36,6 +36,8 @@ namespace Vault.Model
 
         /// <param name="BlockInterval">If set, when a client reaches a rate limit threshold, the client will be prohibited from any further requests until after the &#x27;block_interval&#x27; has elapsed..</param>
 
+        /// <param name="Inheritable">Whether all child namespaces can inherit this namespace quota..</param>
+
         /// <param name="Interval">The duration to enforce rate limiting for (default &#x27;1s&#x27;)..</param>
 
         /// <param name="Path">Path of the mount or namespace to apply the quota. A blank path configures a global quota. For example namespace1/ adds a quota to a full namespace, namespace1/auth/userpass adds a quota to userpass in namespace1..</param>
@@ -47,10 +49,12 @@ namespace Vault.Model
         /// <param name="Type">Type of the quota rule..</param>
 
 
-        public RateLimitQuotasWriteRequest(string BlockInterval = default(string), string Interval = default(string), string Path = default(string), float Rate = default(float), string Role = default(string), string Type = default(string))
+        public RateLimitQuotasWriteRequest(string BlockInterval = default(string), bool Inheritable = default(bool), string Interval = default(string), string Path = default(string), float Rate = default(float), string Role = default(string), string Type = default(string))
         {
 
             this.BlockInterval = BlockInterval;
+
+            this.Inheritable = Inheritable;
 
             this.Interval = Interval;
 
@@ -71,6 +75,15 @@ namespace Vault.Model
         [DataMember(Name = "block_interval", EmitDefaultValue = false)]
 
         public string BlockInterval { get; set; }
+
+
+        /// <summary>
+        /// Whether all child namespaces can inherit this namespace quota.
+        /// </summary>
+        /// <value>Whether all child namespaces can inherit this namespace quota.</value>
+        [DataMember(Name = "inheritable", EmitDefaultValue = true)]
+
+        public bool Inheritable { get; set; }
 
 
         /// <summary>
@@ -129,6 +142,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class RateLimitQuotasWriteRequest {\n");
             sb.Append("  BlockInterval: ").Append(BlockInterval).Append("\n");
+            sb.Append("  Inheritable: ").Append(Inheritable).Append("\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Rate: ").Append(Rate).Append("\n");
@@ -174,6 +188,11 @@ namespace Vault.Model
                     (this.BlockInterval != null &&
                     this.BlockInterval.Equals(input.BlockInterval))
 
+                ) &&
+                (
+                    this.Inheritable == input.Inheritable ||
+
+                    this.Inheritable.Equals(input.Inheritable)
                 ) &&
                 (
                     this.Interval == input.Interval ||
@@ -222,6 +241,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.BlockInterval.GetHashCode();
                 }
 
+
+                hashCode = (hashCode * 59) + this.Inheritable.GetHashCode();
                 if (this.Interval != null)
                 {
                     hashCode = (hashCode * 59) + this.Interval.GetHashCode();
