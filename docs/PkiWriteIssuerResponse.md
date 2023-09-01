@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **KeyId** | **string** | Key Id | [optional] 
 **LeafNotAfterBehavior** | **string** | Leaf Not After Behavior | [optional] 
 **ManualChain** | **List&lt;string&gt;** | Manual Chain | [optional] 
-**OcspServers** | **List&lt;string&gt;** | OSCP Servers | [optional] 
+**OcspServers** | **List&lt;string&gt;** | OCSP Servers | [optional] 
 **RevocationSignatureAlgorithm** | **string** | Revocation Signature Alogrithm | [optional] 
 **RevocationTime** | **int** |  | [optional] 
 **RevocationTimeRfc3339** | **string** |  | [optional] 

@@ -54,7 +54,7 @@ namespace Vault.Model
 
         /// <param name="ManualChain">Manual Chain.</param>
 
-        /// <param name="OcspServers">OSCP Servers.</param>
+        /// <param name="OcspServers">OCSP Servers.</param>
 
         /// <param name="RevocationSignatureAlgorithm">Revocation Signature Alogrithm.</param>
 
@@ -195,9 +195,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// OSCP Servers
+        /// OCSP Servers
         /// </summary>
-        /// <value>OSCP Servers</value>
+        /// <value>OCSP Servers</value>
         [DataMember(Name = "ocsp_servers", EmitDefaultValue = false)]
 
         public List<string> OcspServers { get; set; }
