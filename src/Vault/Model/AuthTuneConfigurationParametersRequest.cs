@@ -52,7 +52,7 @@ namespace Vault.Model
 
         /// <param name="PassthroughRequestHeaders">A list of headers to whitelist and pass from the request to the plugin..</param>
 
-        /// <param name="PluginVersion">The semantic version of the plugin to use..</param>
+        /// <param name="PluginVersion">The semantic version of the plugin to use, or image tag if oci_image is provided..</param>
 
         /// <param name="TokenType">The type of token to issue (service or batch)..</param>
 
@@ -170,9 +170,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The semantic version of the plugin to use.
+        /// The semantic version of the plugin to use, or image tag if oci_image is provided.
         /// </summary>
-        /// <value>The semantic version of the plugin to use.</value>
+        /// <value>The semantic version of the plugin to use, or image tag if oci_image is provided.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
 
         public string PluginVersion { get; set; }

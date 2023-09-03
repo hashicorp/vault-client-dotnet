@@ -46,7 +46,7 @@ namespace Vault.Model
 
         /// <param name="PluginName">Name of the plugin to mount based from the name registered in the plugin catalog..</param>
 
-        /// <param name="PluginVersion">The semantic version of the plugin to use..</param>
+        /// <param name="PluginVersion">The semantic version of the plugin to use, or image tag if oci_image is provided..</param>
 
         /// <param name="SealWrap">Whether to turn on seal wrapping for the mount. (default to false).</param>
 
@@ -131,9 +131,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The semantic version of the plugin to use.
+        /// The semantic version of the plugin to use, or image tag if oci_image is provided.
         /// </summary>
-        /// <value>The semantic version of the plugin to use.</value>
+        /// <value>The semantic version of the plugin to use, or image tag if oci_image is provided.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
 
         public string PluginVersion { get; set; }

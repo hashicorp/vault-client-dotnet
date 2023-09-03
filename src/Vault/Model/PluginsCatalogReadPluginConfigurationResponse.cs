@@ -44,12 +44,14 @@ namespace Vault.Model
 
         /// <param name="Name">The name of the plugin.</param>
 
-        /// <param name="Sha256">The SHA256 sum of the executable used in the command field. This should be HEX encoded..</param>
+        /// <param name="OciImage">The name of the OCI image to be run, without the tag or SHA256. Must already be present on the machine..</param>
 
-        /// <param name="_Version">The semantic version of the plugin to use..</param>
+        /// <param name="Sha256">The SHA256 sum of the executable or container to be run. This should be HEX encoded..</param>
+
+        /// <param name="_Version">The semantic version of the plugin to use, or image tag if oci_image is provided..</param>
 
 
-        public PluginsCatalogReadPluginConfigurationResponse(List<string> Args = default(List<string>), bool Builtin = default(bool), string Command = default(string), string DeprecationStatus = default(string), string Name = default(string), string Sha256 = default(string), string _Version = default(string))
+        public PluginsCatalogReadPluginConfigurationResponse(List<string> Args = default(List<string>), bool Builtin = default(bool), string Command = default(string), string DeprecationStatus = default(string), string Name = default(string), string OciImage = default(string), string Sha256 = default(string), string _Version = default(string))
         {
 
             this.Args = Args;
@@ -61,6 +63,8 @@ namespace Vault.Model
             this.DeprecationStatus = DeprecationStatus;
 
             this.Name = Name;
+
+            this.OciImage = OciImage;
 
             this.Sha256 = Sha256;
 
@@ -112,18 +116,27 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The SHA256 sum of the executable used in the command field. This should be HEX encoded.
+        /// The name of the OCI image to be run, without the tag or SHA256. Must already be present on the machine.
         /// </summary>
-        /// <value>The SHA256 sum of the executable used in the command field. This should be HEX encoded.</value>
+        /// <value>The name of the OCI image to be run, without the tag or SHA256. Must already be present on the machine.</value>
+        [DataMember(Name = "oci_image", EmitDefaultValue = false)]
+
+        public string OciImage { get; set; }
+
+
+        /// <summary>
+        /// The SHA256 sum of the executable or container to be run. This should be HEX encoded.
+        /// </summary>
+        /// <value>The SHA256 sum of the executable or container to be run. This should be HEX encoded.</value>
         [DataMember(Name = "sha256", EmitDefaultValue = false)]
 
         public string Sha256 { get; set; }
 
 
         /// <summary>
-        /// The semantic version of the plugin to use.
+        /// The semantic version of the plugin to use, or image tag if oci_image is provided.
         /// </summary>
-        /// <value>The semantic version of the plugin to use.</value>
+        /// <value>The semantic version of the plugin to use, or image tag if oci_image is provided.</value>
         [DataMember(Name = "version", EmitDefaultValue = false)]
 
         public string _Version { get; set; }
@@ -144,6 +157,7 @@ namespace Vault.Model
             sb.Append("  Command: ").Append(Command).Append("\n");
             sb.Append("  DeprecationStatus: ").Append(DeprecationStatus).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OciImage: ").Append(OciImage).Append("\n");
             sb.Append("  Sha256: ").Append(Sha256).Append("\n");
             sb.Append("  _Version: ").Append(_Version).Append("\n");
             sb.Append("}\n");
@@ -211,6 +225,12 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.OciImage == input.OciImage ||
+                    (this.OciImage != null &&
+                    this.OciImage.Equals(input.OciImage))
+
+                ) &&
+                (
                     this.Sha256 == input.Sha256 ||
                     (this.Sha256 != null &&
                     this.Sha256.Equals(input.Sha256))
@@ -255,6 +275,11 @@ namespace Vault.Model
                 if (this.Name != null)
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
+
+                if (this.OciImage != null)
+                {
+                    hashCode = (hashCode * 59) + this.OciImage.GetHashCode();
                 }
 
                 if (this.Sha256 != null)

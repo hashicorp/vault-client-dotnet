@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **MaxLeaseTtl** | **int** | The max lease TTL for this mount. | [optional] 
 **Options** | **Object** | The options to pass into the backend. Should be a json object with string keys and values. | [optional] 
 **PassthroughRequestHeaders** | **List&lt;string&gt;** |  | [optional] 
-**PluginVersion** | **string** | The semantic version of the plugin to use. | [optional] 
+**PluginVersion** | **string** | The semantic version of the plugin to use, or image tag if oci_image is provided. | [optional] 
 **TokenType** | **string** | The type of token to issue (service or batch). | [optional] 
 **UserLockoutCounterResetDuration** | **long** |  | [optional] 
 **UserLockoutDisable** | **bool** |  | [optional] 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Local** | **bool** | Mark the mount as a local mount, which is not replicated and is unaffected by replication. | [optional] [default to false]
 **Options** | **Object** | The options to pass into the backend. Should be a json object with string keys and values. | [optional] 
 **PluginName** | **string** | Name of the plugin to mount based from the name registered in the plugin catalog. | [optional] 
-**PluginVersion** | **string** | The semantic version of the plugin to use. | [optional] 
+**PluginVersion** | **string** | The semantic version of the plugin to use, or image tag if oci_image is provided. | [optional] 
 **SealWrap** | **bool** | Whether to turn on seal wrapping for the mount. | [optional] [default to false]
 **Type** | **string** | The type of the backend. Example: \&quot;passthrough\&quot; | [optional] 
 
