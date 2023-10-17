@@ -40,14 +40,18 @@ namespace Vault.Model
 
         /// <param name="DbName">Name of the database this role acts on..</param>
 
-        /// <param name="RotationPeriod">Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;..</param>
+        /// <param name="RotationPeriod">Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;. Mutually exclusive with \&quot;rotation_schedule.\&quot;.</param>
+
+        /// <param name="RotationSchedule">Schedule for automatic credential rotation of the given username. Mutually exclusive with \&quot;rotation_period.\&quot;.</param>
 
         /// <param name="RotationStatements">Specifies the database statements to be executed to rotate the accounts credentials. Not every plugin type will support this functionality. See the plugin&#x27;s API page for more information on support and formatting for this parameter..</param>
+
+        /// <param name="RotationWindow">The window of time in which rotations are allowed to occur starting from a given \&quot;rotation_schedule\&quot;. Requires \&quot;rotation_schedule\&quot; to be specified.</param>
 
         /// <param name="Username">Name of the static user account for Vault to manage. Requires \&quot;rotation_period\&quot; to be specified.</param>
 
 
-        public DatabaseWriteStaticRoleRequest(Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), string RotationPeriod = default(string), List<string> RotationStatements = default(List<string>), string Username = default(string))
+        public DatabaseWriteStaticRoleRequest(Object CredentialConfig = default(Object), string CredentialType = "password", string DbName = default(string), string RotationPeriod = default(string), string RotationSchedule = default(string), List<string> RotationStatements = default(List<string>), string RotationWindow = default(string), string Username = default(string))
         {
 
             this.CredentialConfig = CredentialConfig;
@@ -60,7 +64,11 @@ namespace Vault.Model
 
             this.RotationPeriod = RotationPeriod;
 
+            this.RotationSchedule = RotationSchedule;
+
             this.RotationStatements = RotationStatements;
+
+            this.RotationWindow = RotationWindow;
 
             this.Username = Username;
 
@@ -94,12 +102,21 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;.
+        /// Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;. Mutually exclusive with \&quot;rotation_schedule.\&quot;
         /// </summary>
-        /// <value>Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;.</value>
+        /// <value>Period for automatic credential rotation of the given username. Not valid unless used with \&quot;username\&quot;. Mutually exclusive with \&quot;rotation_schedule.\&quot;</value>
         [DataMember(Name = "rotation_period", EmitDefaultValue = false)]
 
         public string RotationPeriod { get; set; }
+
+
+        /// <summary>
+        /// Schedule for automatic credential rotation of the given username. Mutually exclusive with \&quot;rotation_period.\&quot;
+        /// </summary>
+        /// <value>Schedule for automatic credential rotation of the given username. Mutually exclusive with \&quot;rotation_period.\&quot;</value>
+        [DataMember(Name = "rotation_schedule", EmitDefaultValue = false)]
+
+        public string RotationSchedule { get; set; }
 
 
         /// <summary>
@@ -109,6 +126,15 @@ namespace Vault.Model
         [DataMember(Name = "rotation_statements", EmitDefaultValue = false)]
 
         public List<string> RotationStatements { get; set; }
+
+
+        /// <summary>
+        /// The window of time in which rotations are allowed to occur starting from a given \&quot;rotation_schedule\&quot;. Requires \&quot;rotation_schedule\&quot; to be specified
+        /// </summary>
+        /// <value>The window of time in which rotations are allowed to occur starting from a given \&quot;rotation_schedule\&quot;. Requires \&quot;rotation_schedule\&quot; to be specified</value>
+        [DataMember(Name = "rotation_window", EmitDefaultValue = false)]
+
+        public string RotationWindow { get; set; }
 
 
         /// <summary>
@@ -134,7 +160,9 @@ namespace Vault.Model
             sb.Append("  CredentialType: ").Append(CredentialType).Append("\n");
             sb.Append("  DbName: ").Append(DbName).Append("\n");
             sb.Append("  RotationPeriod: ").Append(RotationPeriod).Append("\n");
+            sb.Append("  RotationSchedule: ").Append(RotationSchedule).Append("\n");
             sb.Append("  RotationStatements: ").Append(RotationStatements).Append("\n");
+            sb.Append("  RotationWindow: ").Append(RotationWindow).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -196,10 +224,22 @@ namespace Vault.Model
 
                 ) &&
                 (
+                    this.RotationSchedule == input.RotationSchedule ||
+                    (this.RotationSchedule != null &&
+                    this.RotationSchedule.Equals(input.RotationSchedule))
+
+                ) &&
+                (
                     this.RotationStatements == input.RotationStatements ||
                     this.RotationStatements != null &&
                     input.RotationStatements != null &&
                     this.RotationStatements.SequenceEqual(input.RotationStatements)
+                ) &&
+                (
+                    this.RotationWindow == input.RotationWindow ||
+                    (this.RotationWindow != null &&
+                    this.RotationWindow.Equals(input.RotationWindow))
+
                 ) &&
                 (
                     this.Username == input.Username ||
@@ -240,9 +280,19 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.RotationPeriod.GetHashCode();
                 }
 
+                if (this.RotationSchedule != null)
+                {
+                    hashCode = (hashCode * 59) + this.RotationSchedule.GetHashCode();
+                }
+
                 if (this.RotationStatements != null)
                 {
                     hashCode = (hashCode * 59) + this.RotationStatements.GetHashCode();
+                }
+
+                if (this.RotationWindow != null)
+                {
+                    hashCode = (hashCode * 59) + this.RotationWindow.GetHashCode();
                 }
 
                 if (this.Username != null)

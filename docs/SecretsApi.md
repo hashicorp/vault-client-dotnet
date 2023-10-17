@@ -371,6 +371,7 @@ Method | HTTP request | Description
 [**TransitEncrypt**](SecretsApi.md#transitencrypt) | **POST** /{transit_mount_path}/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
 [**TransitExportKey**](SecretsApi.md#transitexportkey) | **GET** /{transit_mount_path}/export/{type}/{name} | Export named encryption or signing key
 [**TransitExportKeyVersion**](SecretsApi.md#transitexportkeyversion) | **GET** /{transit_mount_path}/export/{type}/{name}/{version} | Export named encryption or signing key
+[**TransitGenerateCsrForKey**](SecretsApi.md#transitgeneratecsrforkey) | **POST** /{transit_mount_path}/keys/{name}/csr | 
 [**TransitGenerateDataKey**](SecretsApi.md#transitgeneratedatakey) | **POST** /{transit_mount_path}/datakey/{plaintext}/{name} | Generate a data key
 [**TransitGenerateHmac**](SecretsApi.md#transitgeneratehmac) | **POST** /{transit_mount_path}/hmac/{name} | Generate an HMAC for input data using the named key
 [**TransitGenerateHmacWithAlgorithm**](SecretsApi.md#transitgeneratehmacwithalgorithm) | **POST** /{transit_mount_path}/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
@@ -391,6 +392,7 @@ Method | HTTP request | Description
 [**TransitRestoreKey**](SecretsApi.md#transitrestorekey) | **POST** /{transit_mount_path}/restore | Restore the named key
 [**TransitRewrap**](SecretsApi.md#transitrewrap) | **POST** /{transit_mount_path}/rewrap/{name} | Rewrap ciphertext
 [**TransitRotateKey**](SecretsApi.md#transitrotatekey) | **POST** /{transit_mount_path}/keys/{name}/rotate | Rotate named encryption key
+[**TransitSetCertificateForKey**](SecretsApi.md#transitsetcertificateforkey) | **POST** /{transit_mount_path}/keys/{name}/set-certificate | 
 [**TransitSign**](SecretsApi.md#transitsign) | **POST** /{transit_mount_path}/sign/{name} | Generate a signature for input data using the named key
 [**TransitSignWithAlgorithm**](SecretsApi.md#transitsignwithalgorithm) | **POST** /{transit_mount_path}/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
 [**TransitTrimKey**](SecretsApi.md#transittrimkey) | **POST** /{transit_mount_path}/keys/{name}/trim | Trim key versions of a named key
@@ -36242,6 +36244,107 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="transitgeneratecsrforkey"></a>
+# **TransitGenerateCsrForKey**
+
+> void TransitGenerateCsrForKey (string name, string transitMountPath, TransitGenerateCsrForKeyRequest transitGenerateCsrForKeyRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class TransitGenerateCsrForKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            var transitMountPath = "\"transit\"";  // string | Path that the backend was mounted at (default to "transit")
+            
+            
+            
+            
+            
+            var transitGenerateCsrForKeyRequest = new TransitGenerateCsrForKeyRequest(); // TransitGenerateCsrForKeyRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.TransitGenerateCsrForKey(string name, string transitMountPath, TransitGenerateCsrForKeyRequest transitGenerateCsrForKeyRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.TransitGenerateCsrForKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the key | 
+ **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
+ **transitGenerateCsrForKeyRequest** | [**TransitGenerateCsrForKeyRequest**](TransitGenerateCsrForKeyRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="transitgeneratedatakey"></a>
 # **TransitGenerateDataKey**
 
@@ -38225,6 +38328,107 @@ Name | Type | Description  | Notes
  **name** | **string**| Name of the key | 
  **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
  **transitRotateKeyRequest** | [**TransitRotateKeyRequest**](TransitRotateKeyRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="transitsetcertificateforkey"></a>
+# **TransitSetCertificateForKey**
+
+> void TransitSetCertificateForKey (string name, string transitMountPath, TransitSetCertificateForKeyRequest transitSetCertificateForKeyRequest, TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class TransitSetCertificateForKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | Name of the key
+            
+            
+            
+            
+            var transitMountPath = "\"transit\"";  // string | Path that the backend was mounted at (default to "transit")
+            
+            
+            
+            
+            
+            var transitSetCertificateForKeyRequest = new TransitSetCertificateForKeyRequest(); // TransitSetCertificateForKeyRequest | 
+            
+            
+
+            try
+            {
+                
+
+                apiInstance.TransitSetCertificateForKey(string name, string transitMountPath, TransitSetCertificateForKeyRequest transitSetCertificateForKeyRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.TransitSetCertificateForKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the key | 
+ **transitMountPath** | **string**| Path that the backend was mounted at | [default to &quot;transit&quot;]
+ **transitSetCertificateForKeyRequest** | [**TransitSetCertificateForKeyRequest**](TransitSetCertificateForKeyRequest.md)|  | 
 
 
 ### Return type

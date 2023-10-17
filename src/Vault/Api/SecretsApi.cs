@@ -5959,6 +5959,23 @@ namespace Vault.Api
         VaultResponse<Object> TransitExportKeyVersion(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitGenerateCsrForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> TransitGenerateCsrForKey(string name, TransitGenerateCsrForKeyRequest transitGenerateCsrForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
+
+        /// <summary>
         /// Generate a data key
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -6288,6 +6305,23 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> TransitRotateKey(string name, TransitRotateKeyRequest transitRotateKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitSetCertificateForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> TransitSetCertificateForKey(string name, TransitSetCertificateForKeyRequest transitSetCertificateForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
 
         /// <summary>
         /// Generate a signature for input data using the named key
@@ -12693,6 +12727,24 @@ namespace Vault.Api
         Task<VaultResponse<Object>> TransitExportKeyVersionAsync(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitGenerateCsrForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> TransitGenerateCsrForKeyAsync(string name, TransitGenerateCsrForKeyRequest transitGenerateCsrForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// Generate a data key
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -13042,6 +13094,24 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> TransitRotateKeyAsync(string name, TransitRotateKeyRequest transitRotateKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitSetCertificateForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> TransitSetCertificateForKeyAsync(string name, TransitSetCertificateForKeyRequest transitSetCertificateForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Generate a signature for input data using the named key
@@ -63180,6 +63250,153 @@ namespace Vault.Api
         }
 
         /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitGenerateCsrForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> TransitGenerateCsrForKey(string name, TransitGenerateCsrForKeyRequest transitGenerateCsrForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->TransitGenerateCsrForKey");
+
+
+            // verify the required parameter 'transitGenerateCsrForKeyRequest' is set
+            if (transitGenerateCsrForKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'transitGenerateCsrForKeyRequest' when calling Secrets->TransitGenerateCsrForKey");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = transitGenerateCsrForKeyRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{transit_mount_path}/keys/{name}/csr", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitGenerateCsrForKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitGenerateCsrForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> TransitGenerateCsrForKeyAsync(string name, TransitGenerateCsrForKeyRequest transitGenerateCsrForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->TransitGenerateCsrForKey");
+
+
+            // verify the required parameter 'transitGenerateCsrForKeyRequest' is set
+            if (transitGenerateCsrForKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'transitGenerateCsrForKeyRequest' when calling Secrets->TransitGenerateCsrForKey");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+            requestOptions.Data = transitGenerateCsrForKeyRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{transit_mount_path}/keys/{name}/csr", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitGenerateCsrForKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+        /// <summary>
         /// Generate a data key 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -65990,6 +66207,153 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("TransitRotateKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitSetCertificateForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> TransitSetCertificateForKey(string name, TransitSetCertificateForKeyRequest transitSetCertificateForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->TransitSetCertificateForKey");
+
+
+            // verify the required parameter 'transitSetCertificateForKeyRequest' is set
+            if (transitSetCertificateForKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'transitSetCertificateForKeyRequest' when calling Secrets->TransitSetCertificateForKey");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+
+
+            requestOptions.Data = transitSetCertificateForKeyRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{transit_mount_path}/keys/{name}/set-certificate", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitSetCertificateForKey", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="transitSetCertificateForKeyRequest"></param>
+        /// <param name="name">Name of the key</param>
+        /// <param name="transitMountPath">Path that the backend was mounted at</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> TransitSetCertificateForKeyAsync(string name, TransitSetCertificateForKeyRequest transitSetCertificateForKeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Secrets->TransitSetCertificateForKey");
+
+
+            // verify the required parameter 'transitSetCertificateForKeyRequest' is set
+            if (transitSetCertificateForKeyRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'transitSetCertificateForKeyRequest' when calling Secrets->TransitSetCertificateForKey");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("transit_mount_path", ClientUtils.ParameterToString(transitMountPath)); // path parameter
+
+
+
+            requestOptions.Data = transitSetCertificateForKeyRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{transit_mount_path}/keys/{name}/set-certificate", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("TransitSetCertificateForKey", response);
                 if (exception != null) throw exception;
             }
 

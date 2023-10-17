@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ExternalEntropyAccess** | **bool** |  | [optional] 
 **Local** | **bool** | Mark the mount as a local mount, which is not replicated and is unaffected by replication. | [optional] [default to false]
 **Options** | **Object** | The options to pass into the backend. Should be a json object with string keys and values. | [optional] 
-**PluginVersion** | **string** | The semantic version of the plugin to use. | [optional] 
+**PluginVersion** | **string** | The semantic version of the plugin to use, or image tag if oci_image is provided. | [optional] 
 **RunningPluginVersion** | **string** |  | [optional] 
 **RunningSha256** | **string** |  | [optional] 
 **SealWrap** | **bool** | Whether to turn on seal wrapping for the mount. | [optional] [default to false]

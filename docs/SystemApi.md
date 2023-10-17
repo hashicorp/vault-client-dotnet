@@ -91,6 +91,10 @@ Method | HTTP request | Description
 [**PluginsCatalogRemovePlugin**](SystemApi.md#pluginscatalogremoveplugin) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
 [**PluginsCatalogRemovePluginWithType**](SystemApi.md#pluginscatalogremovepluginwithtype) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
 [**PluginsReloadBackends**](SystemApi.md#pluginsreloadbackends) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
+[**PluginsRuntimesCatalogListPluginsRuntimes**](SystemApi.md#pluginsruntimescataloglistpluginsruntimes) | **GET** /sys/plugins/runtimes/catalog/ | 
+[**PluginsRuntimesCatalogReadPluginRuntimeConfiguration**](SystemApi.md#pluginsruntimescatalogreadpluginruntimeconfiguration) | **GET** /sys/plugins/runtimes/catalog/{type}/{name} | Return the configuration data for the plugin runtime with the given name.
+[**PluginsRuntimesCatalogRegisterPluginRuntime**](SystemApi.md#pluginsruntimescatalogregisterpluginruntime) | **POST** /sys/plugins/runtimes/catalog/{type}/{name} | Register a new plugin runtime, or updates an existing one with the supplied name.
+[**PluginsRuntimesCatalogRemovePluginRuntime**](SystemApi.md#pluginsruntimescatalogremovepluginruntime) | **DELETE** /sys/plugins/runtimes/catalog/{type}/{name} | Remove the plugin runtime with the given name.
 [**PoliciesDeleteAclPolicy**](SystemApi.md#policiesdeleteaclpolicy) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
 [**PoliciesDeletePasswordPolicy**](SystemApi.md#policiesdeletepasswordpolicy) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
 [**PoliciesGeneratePasswordFromPasswordPolicy**](SystemApi.md#policiesgeneratepasswordfrompasswordpolicy) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
@@ -8010,6 +8014,396 @@ No authorization required
 | **200** | OK |  -  |
 
 | **202** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pluginsruntimescataloglistpluginsruntimes"></a>
+# **PluginsRuntimesCatalogListPluginsRuntimes**
+
+> PluginsRuntimesCatalogListPluginsRuntimesResponse PluginsRuntimesCatalogListPluginsRuntimes (TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PluginsRuntimesCatalogListPluginsRuntimesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var list = "true";  // string | Must be set to `true`
+            
+            
+            
+
+            try
+            {
+                
+
+                PluginsRuntimesCatalogListPluginsRuntimesResponse result = apiInstance.PluginsRuntimesCatalogListPluginsRuntimes(TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.PluginsRuntimesCatalogListPluginsRuntimes: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+
+### Return type
+
+[**PluginsRuntimesCatalogListPluginsRuntimesResponse**](PluginsRuntimesCatalogListPluginsRuntimesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pluginsruntimescatalogreadpluginruntimeconfiguration"></a>
+# **PluginsRuntimesCatalogReadPluginRuntimeConfiguration**
+
+> PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse PluginsRuntimesCatalogReadPluginRuntimeConfiguration (string name, string type, TimeSpan? wrapTTL = null)
+
+Return the configuration data for the plugin runtime with the given name.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PluginsRuntimesCatalogReadPluginRuntimeConfigurationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of the plugin runtime
+            
+            
+            
+            
+            var type = "type_example";  // string | The type of the plugin runtime
+            
+            
+            
+
+            try
+            {
+                
+                // Return the configuration data for the plugin runtime with the given name.
+                
+
+                PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse result = apiInstance.PluginsRuntimesCatalogReadPluginRuntimeConfiguration(string name, string type, TimeSpan? wrapTTL = null);
+
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.PluginsRuntimesCatalogReadPluginRuntimeConfiguration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the plugin runtime | 
+ **type** | **string**| The type of the plugin runtime | 
+
+
+### Return type
+
+[**PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse**](PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pluginsruntimescatalogregisterpluginruntime"></a>
+# **PluginsRuntimesCatalogRegisterPluginRuntime**
+
+> void PluginsRuntimesCatalogRegisterPluginRuntime (string name, string type, PluginsRuntimesCatalogRegisterPluginRuntimeRequest pluginsRuntimesCatalogRegisterPluginRuntimeRequest, TimeSpan? wrapTTL = null)
+
+Register a new plugin runtime, or updates an existing one with the supplied name.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PluginsRuntimesCatalogRegisterPluginRuntimeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of the plugin runtime
+            
+            
+            
+            
+            var type = "type_example";  // string | The type of the plugin runtime
+            
+            
+            
+            
+            
+            var pluginsRuntimesCatalogRegisterPluginRuntimeRequest = new PluginsRuntimesCatalogRegisterPluginRuntimeRequest(); // PluginsRuntimesCatalogRegisterPluginRuntimeRequest | 
+            
+            
+
+            try
+            {
+                
+                // Register a new plugin runtime, or updates an existing one with the supplied name.
+                
+
+                apiInstance.PluginsRuntimesCatalogRegisterPluginRuntime(string name, string type, PluginsRuntimesCatalogRegisterPluginRuntimeRequest pluginsRuntimesCatalogRegisterPluginRuntimeRequest, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.PluginsRuntimesCatalogRegisterPluginRuntime: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the plugin runtime | 
+ **type** | **string**| The type of the plugin runtime | 
+ **pluginsRuntimesCatalogRegisterPluginRuntimeRequest** | [**PluginsRuntimesCatalogRegisterPluginRuntimeRequest**](PluginsRuntimesCatalogRegisterPluginRuntimeRequest.md)|  | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: , 
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
+
+
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pluginsruntimescatalogremovepluginruntime"></a>
+# **PluginsRuntimesCatalogRemovePluginRuntime**
+
+> void PluginsRuntimesCatalogRemovePluginRuntime (string name, string type, TimeSpan? wrapTTL = null)
+
+Remove the plugin runtime with the given name.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+
+using System.Net.Http;
+
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PluginsRuntimesCatalogRemovePluginRuntimeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            
+            
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            
+            
+            
+            
+            var name = "name_example";  // string | The name of the plugin runtime
+            
+            
+            
+            
+            var type = "type_example";  // string | The type of the plugin runtime
+            
+            
+            
+
+            try
+            {
+                
+                // Remove the plugin runtime with the given name.
+                
+
+                apiInstance.PluginsRuntimesCatalogRemovePluginRuntime(string name, string type, TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.PluginsRuntimesCatalogRemovePluginRuntime: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the plugin runtime | 
+ **type** | **string**| The type of the plugin runtime | 
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+
+| **200** | OK |  -  |
 
 
 

@@ -1320,6 +1320,69 @@ namespace Vault.Api
         VaultResponse<PluginsReloadBackendsResponse> PluginsReloadBackends(PluginsReloadBackendsRequest pluginsReloadBackendsRequest, TimeSpan? wrapTTL = null);
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of PluginsRuntimesCatalogListPluginsRuntimesResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PluginsRuntimesCatalogListPluginsRuntimesResponse> PluginsRuntimesCatalogListPluginsRuntimes(TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Return the configuration data for the plugin runtime with the given name.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <returns>VaultResponse of PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse> PluginsRuntimesCatalogReadPluginRuntimeConfiguration(string name, string type, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Register a new plugin runtime, or updates an existing one with the supplied name.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginsRuntimesCatalogRegisterPluginRuntimeRequest"></param>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PluginsRuntimesCatalogRegisterPluginRuntime(string name, string type, PluginsRuntimesCatalogRegisterPluginRuntimeRequest pluginsRuntimesCatalogRegisterPluginRuntimeRequest, TimeSpan? wrapTTL = null);
+
+        /// <summary>
+        /// Remove the plugin runtime with the given name.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PluginsRuntimesCatalogRemovePluginRuntime(string name, string type, TimeSpan? wrapTTL = null);
+
+        /// <summary>
         /// Delete the ACL policy with the given name.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
@@ -3706,6 +3769,73 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (PluginsReloadBackendsResponse)</returns>
         Task<VaultResponse<PluginsReloadBackendsResponse>> PluginsReloadBackendsAsync(PluginsReloadBackendsRequest pluginsReloadBackendsRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PluginsRuntimesCatalogListPluginsRuntimesResponse)</returns>
+        Task<VaultResponse<PluginsRuntimesCatalogListPluginsRuntimesResponse>> PluginsRuntimesCatalogListPluginsRuntimesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Return the configuration data for the plugin runtime with the given name.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse)</returns>
+        Task<VaultResponse<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse>> PluginsRuntimesCatalogReadPluginRuntimeConfigurationAsync(string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Register a new plugin runtime, or updates an existing one with the supplied name.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginsRuntimesCatalogRegisterPluginRuntimeRequest"></param>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PluginsRuntimesCatalogRegisterPluginRuntimeAsync(string name, string type, PluginsRuntimesCatalogRegisterPluginRuntimeRequest pluginsRuntimesCatalogRegisterPluginRuntimeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Remove the plugin runtime with the given name.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PluginsRuntimesCatalogRemovePluginRuntimeAsync(string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete the ACL policy with the given name.
@@ -15588,6 +15718,561 @@ namespace Vault.Api
             }
 
             return ClientUtils.ToVaultResponse<PluginsReloadBackendsResponse>(response.RawContent);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of PluginsRuntimesCatalogListPluginsRuntimesResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PluginsRuntimesCatalogListPluginsRuntimesResponse> PluginsRuntimesCatalogListPluginsRuntimes(TimeSpan? wrapTTL = null)
+        {
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<PluginsRuntimesCatalogListPluginsRuntimesResponse>("/sys/plugins/runtimes/catalog/", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogListPluginsRuntimes", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PluginsRuntimesCatalogListPluginsRuntimesResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PluginsRuntimesCatalogListPluginsRuntimesResponse)</returns>
+        public async Task<VaultResponse<PluginsRuntimesCatalogListPluginsRuntimesResponse>> PluginsRuntimesCatalogListPluginsRuntimesAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<PluginsRuntimesCatalogListPluginsRuntimesResponse>("/sys/plugins/runtimes/catalog/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogListPluginsRuntimes", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PluginsRuntimesCatalogListPluginsRuntimesResponse>(response.RawContent);
+        }
+
+        /// <summary>
+        /// Return the configuration data for the plugin runtime with the given name. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <returns>VaultResponse of PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse> PluginsRuntimesCatalogReadPluginRuntimeConfiguration(string name, string type, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PluginsRuntimesCatalogReadPluginRuntimeConfiguration");
+
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PluginsRuntimesCatalogReadPluginRuntimeConfiguration");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Get<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse>("/sys/plugins/runtimes/catalog/{type}/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogReadPluginRuntimeConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Return the configuration data for the plugin runtime with the given name. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse (PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse)</returns>
+        public async Task<VaultResponse<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse>> PluginsRuntimesCatalogReadPluginRuntimeConfigurationAsync(string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PluginsRuntimesCatalogReadPluginRuntimeConfiguration");
+
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PluginsRuntimesCatalogReadPluginRuntimeConfiguration");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse>("/sys/plugins/runtimes/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogReadPluginRuntimeConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<PluginsRuntimesCatalogReadPluginRuntimeConfigurationResponse>(response.RawContent);
+        }
+
+        /// <summary>
+        /// Register a new plugin runtime, or updates an existing one with the supplied name. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginsRuntimesCatalogRegisterPluginRuntimeRequest"></param>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PluginsRuntimesCatalogRegisterPluginRuntime(string name, string type, PluginsRuntimesCatalogRegisterPluginRuntimeRequest pluginsRuntimesCatalogRegisterPluginRuntimeRequest, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PluginsRuntimesCatalogRegisterPluginRuntime");
+
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PluginsRuntimesCatalogRegisterPluginRuntime");
+
+
+            // verify the required parameter 'pluginsRuntimesCatalogRegisterPluginRuntimeRequest' is set
+            if (pluginsRuntimesCatalogRegisterPluginRuntimeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pluginsRuntimesCatalogRegisterPluginRuntimeRequest' when calling System->PluginsRuntimesCatalogRegisterPluginRuntime");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+
+
+            requestOptions.Data = pluginsRuntimesCatalogRegisterPluginRuntimeRequest;
+
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/sys/plugins/runtimes/catalog/{type}/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogRegisterPluginRuntime", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Register a new plugin runtime, or updates an existing one with the supplied name. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginsRuntimesCatalogRegisterPluginRuntimeRequest"></param>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PluginsRuntimesCatalogRegisterPluginRuntimeAsync(string name, string type, PluginsRuntimesCatalogRegisterPluginRuntimeRequest pluginsRuntimesCatalogRegisterPluginRuntimeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PluginsRuntimesCatalogRegisterPluginRuntime");
+
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PluginsRuntimesCatalogRegisterPluginRuntime");
+
+
+            // verify the required parameter 'pluginsRuntimesCatalogRegisterPluginRuntimeRequest' is set
+            if (pluginsRuntimesCatalogRegisterPluginRuntimeRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pluginsRuntimesCatalogRegisterPluginRuntimeRequest' when calling System->PluginsRuntimesCatalogRegisterPluginRuntime");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "",
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+            requestOptions.Data = pluginsRuntimesCatalogRegisterPluginRuntimeRequest;
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/sys/plugins/runtimes/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogRegisterPluginRuntime", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+        /// <summary>
+        /// Remove the plugin runtime with the given name. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PluginsRuntimesCatalogRemovePluginRuntime(string name, string type, TimeSpan? wrapTTL = null)
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PluginsRuntimesCatalogRemovePluginRuntime");
+
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PluginsRuntimesCatalogRemovePluginRuntime");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+
+
+
+            // make the HTTP request
+            var response = this.Client.Delete<Object>("/sys/plugins/runtimes/catalog/{type}/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogRemovePluginRuntime", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Remove the plugin runtime with the given name. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin runtime</param>
+        /// <param name="type">The type of the plugin runtime</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PluginsRuntimesCatalogRemovePluginRuntimeAsync(string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PluginsRuntimesCatalogRemovePluginRuntime");
+
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PluginsRuntimesCatalogRemovePluginRuntime");
+
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.DeleteAsync<Object>("/sys/plugins/runtimes/catalog/{type}/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PluginsRuntimesCatalogRemovePluginRuntime", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
         /// <summary>

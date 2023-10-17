@@ -48,7 +48,7 @@ namespace Vault.Model
 
         /// <param name="Options">The options to pass into the backend. Should be a json object with string keys and values..</param>
 
-        /// <param name="PluginVersion">The semantic version of the plugin to use..</param>
+        /// <param name="PluginVersion">The semantic version of the plugin to use, or image tag if oci_image is provided..</param>
 
         /// <param name="RunningPluginVersion">RunningPluginVersion.</param>
 
@@ -153,9 +153,9 @@ namespace Vault.Model
 
 
         /// <summary>
-        /// The semantic version of the plugin to use.
+        /// The semantic version of the plugin to use, or image tag if oci_image is provided.
         /// </summary>
-        /// <value>The semantic version of the plugin to use.</value>
+        /// <value>The semantic version of the plugin to use, or image tag if oci_image is provided.</value>
         [DataMember(Name = "plugin_version", EmitDefaultValue = false)]
 
         public string PluginVersion { get; set; }

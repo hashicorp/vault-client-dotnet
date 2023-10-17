@@ -36,6 +36,8 @@ namespace Vault.Model
 
         /// <param name="BlockInterval">BlockInterval.</param>
 
+        /// <param name="Inheritable">Inheritable.</param>
+
         /// <param name="Interval">Interval.</param>
 
         /// <param name="Name">Name.</param>
@@ -49,10 +51,12 @@ namespace Vault.Model
         /// <param name="Type">Type.</param>
 
 
-        public RateLimitQuotasReadResponse(int BlockInterval = default(int), int Interval = default(int), string Name = default(string), string Path = default(string), float Rate = default(float), string Role = default(string), string Type = default(string))
+        public RateLimitQuotasReadResponse(int BlockInterval = default(int), bool Inheritable = default(bool), int Interval = default(int), string Name = default(string), string Path = default(string), float Rate = default(float), string Role = default(string), string Type = default(string))
         {
 
             this.BlockInterval = BlockInterval;
+
+            this.Inheritable = Inheritable;
 
             this.Interval = Interval;
 
@@ -74,6 +78,14 @@ namespace Vault.Model
         [DataMember(Name = "block_interval", EmitDefaultValue = false)]
 
         public int BlockInterval { get; set; }
+
+
+        /// <summary>
+        /// Gets or Sets Inheritable
+        /// </summary>
+        [DataMember(Name = "inheritable", EmitDefaultValue = true)]
+
+        public bool Inheritable { get; set; }
 
 
         /// <summary>
@@ -135,6 +147,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class RateLimitQuotasReadResponse {\n");
             sb.Append("  BlockInterval: ").Append(BlockInterval).Append("\n");
+            sb.Append("  Inheritable: ").Append(Inheritable).Append("\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
@@ -180,6 +193,11 @@ namespace Vault.Model
                     this.BlockInterval == input.BlockInterval ||
 
                     this.BlockInterval.Equals(input.BlockInterval)
+                ) &&
+                (
+                    this.Inheritable == input.Inheritable ||
+
+                    this.Inheritable.Equals(input.Inheritable)
                 ) &&
                 (
                     this.Interval == input.Interval ||
@@ -230,6 +248,8 @@ namespace Vault.Model
 
 
                 hashCode = (hashCode * 59) + this.BlockInterval.GetHashCode();
+
+                hashCode = (hashCode * 59) + this.Inheritable.GetHashCode();
 
                 hashCode = (hashCode * 59) + this.Interval.GetHashCode();
                 if (this.Name != null)

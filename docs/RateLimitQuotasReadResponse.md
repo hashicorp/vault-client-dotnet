@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BlockInterval** | **int** |  | [optional] 
+**Inheritable** | **bool** |  | [optional] 
 **Interval** | **int** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Path** | **string** |  | [optional] 

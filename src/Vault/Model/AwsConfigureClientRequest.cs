@@ -52,8 +52,10 @@ namespace Vault.Model
 
         /// <param name="StsRegion">The region ID for the sts_endpoint, if set. (default to &quot;&quot;).</param>
 
+        /// <param name="UseStsRegionFromClient">Uses the STS region from client requests for making AWS STS API calls. (default to false).</param>
 
-        public AwsConfigureClientRequest(string AccessKey = "", List<string> AllowedStsHeaderValues = default(List<string>), string Endpoint = "", string IamEndpoint = "", string IamServerIdHeaderValue = "", int MaxRetries = -1, string SecretKey = "", string StsEndpoint = "", string StsRegion = "")
+
+        public AwsConfigureClientRequest(string AccessKey = "", List<string> AllowedStsHeaderValues = default(List<string>), string Endpoint = "", string IamEndpoint = "", string IamServerIdHeaderValue = "", int MaxRetries = -1, string SecretKey = "", string StsEndpoint = "", string StsRegion = "", bool UseStsRegionFromClient = false)
         {
 
             // use default value if no "AccessKey" provided
@@ -87,6 +89,8 @@ namespace Vault.Model
             // use default value if no "StsRegion" provided
             this.StsRegion = StsRegion ?? "";
 
+
+            this.UseStsRegionFromClient = UseStsRegionFromClient;
 
         }
 
@@ -171,6 +175,15 @@ namespace Vault.Model
         public string StsRegion { get; set; }
 
 
+        /// <summary>
+        /// Uses the STS region from client requests for making AWS STS API calls.
+        /// </summary>
+        /// <value>Uses the STS region from client requests for making AWS STS API calls.</value>
+        [DataMember(Name = "use_sts_region_from_client", EmitDefaultValue = true)]
+
+        public bool UseStsRegionFromClient { get; set; }
+
+
 
 
         /// <summary>
@@ -190,6 +203,7 @@ namespace Vault.Model
             sb.Append("  SecretKey: ").Append(SecretKey).Append("\n");
             sb.Append("  StsEndpoint: ").Append(StsEndpoint).Append("\n");
             sb.Append("  StsRegion: ").Append(StsRegion).Append("\n");
+            sb.Append("  UseStsRegionFromClient: ").Append(UseStsRegionFromClient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -277,6 +291,11 @@ namespace Vault.Model
                     (this.StsRegion != null &&
                     this.StsRegion.Equals(input.StsRegion))
 
+                ) &&
+                (
+                    this.UseStsRegionFromClient == input.UseStsRegionFromClient ||
+
+                    this.UseStsRegionFromClient.Equals(input.UseStsRegionFromClient)
                 );
 
         }
@@ -333,6 +352,8 @@ namespace Vault.Model
                     hashCode = (hashCode * 59) + this.StsRegion.GetHashCode();
                 }
 
+
+                hashCode = (hashCode * 59) + this.UseStsRegionFromClient.GetHashCode();
                 return hashCode;
             }
         }

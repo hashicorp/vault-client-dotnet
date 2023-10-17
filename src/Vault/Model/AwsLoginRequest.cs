@@ -34,7 +34,7 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="AwsLoginRequest" /> class.
         /// </summary>
 
-        /// <param name="IamHttpRequestMethod">HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request. Currently, POST is the only supported value.</param>
+        /// <param name="IamHttpRequestMethod">HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request..</param>
 
         /// <param name="IamRequestBody">Base64-encoded request body when auth_type is iam. This must match the request body included in the signature..</param>
 
@@ -77,9 +77,9 @@ namespace Vault.Model
         }
 
         /// <summary>
-        /// HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request. Currently, POST is the only supported value
+        /// HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request.
         /// </summary>
-        /// <value>HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request. Currently, POST is the only supported value</value>
+        /// <value>HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request.</value>
         [DataMember(Name = "iam_http_request_method", EmitDefaultValue = false)]
 
         public string IamHttpRequestMethod { get; set; }
